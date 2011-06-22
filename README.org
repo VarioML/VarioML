@@ -23,7 +23,7 @@ You can suggest improvements by entering an Issue, or if you see a technical imp
 
 This same process can be used to create a new schema for a specific research or clinical use.
 
-<hr/>
+** 
 
 VarioML has received funding from the European Community's Seventh Framework Programme (FP7/2007-2013) 
 under grant agreement number 200754 - the GEN2PHEN project.
