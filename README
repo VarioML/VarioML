@@ -1,0 +1,20 @@
+This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of Variation Data (http://varioml.org).
+
+These are shared here so biomedical researchers, clinicians, and bioinformaticians can:
+- always have the current and canonical version of the data standard schemas and tools
+- fork and modify a schema to adapt it to a specific research or clinical need   
+- log and track issues, and contributed improvements
+
+Source schema, examples, and validation tools are grouped by implementation format of VarioML, with each format serving a large segment of biomedical users. E.g: the cafe_variome directory contains schema, examples, and validation tools for the the Cafe Variome format, which facilitates the exchange of sequence variant data from diagnostic laboratories to diverse third parties (http://www.cafevariome.org/).
+
+You can suggest improvements by entering an Issue, or if you see a technical improvement you can make yourself, by:
+- cloning the repository
+- making your changes
+- checking your changes using validation tools such as those collected here: http://varioml.org/val.htm
+- sending a pull request (http://help.github.com/pull-requests/)
+
+This same process can be used to create a new schema for a specific research or clinical use.
+
+-----------------------------------------------------
+VarioML has received funding from the European Community's Seventh Framework Programme (FP7/2007-2013) 
+under grant agreement number 200754 - the GEN2PHEN project.
