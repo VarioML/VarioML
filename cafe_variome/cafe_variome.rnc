@@ -1,0 +1,21 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+default namespace vml = "http://varioml.org/xml/1.0"
+
+namespace local = ""
+
+
+include "lsdb.rnc" { start |= notAllowed }
+
+## Relax NGC schema for Cafe variome
+## Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+##
+start = cafe_variome 
+
+
+## Variant report
+cafe_variome = element cafe_variome {
+    VmlSubmission
+    , variant*
+    , VmlAnnotatable
+    , VmlForeignNodes
+}

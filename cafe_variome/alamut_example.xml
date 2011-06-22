@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:cafe_variome.rnc" type="application/relax-ng-compact-syntax"?>
+<cafe_variome xmlns="http://varioml.org/xml/1.0">
+
+    <source id="sourceid0001" uri="http://alamut.com">
+        <name>Alamut Database</name>        
+        <contact>
+            <name>Contact person..</name>
+        </contact>
+    </source>
+    
+    <!-- EXAMPLE 1    -->
+    
+    <variant id="{5a4a5af9-693c-4771-a6ad-2cd2d851e7fe}" type="DNA"> <!-- version number should be given as a suffix?--> 
+
+        <gene  source="HGNC" accession="COL1A1"/> <!-- symbols used. HGNC-ID for id numbers (not agreed yet) -->
+        <ref_seq accession="GRCh37:17"/> <!-- standard accession number for chromosome sequences ?-->        
+        <name scheme="HGVS">g.48270186_48270188del</name>
+        
+        <!-- panels and panel members having the variant: -->
+        <panel type="family" id="1">
+            <individual id="1"/>            
+            <!-- properties which are common to all panel members (individuals) are given here-->
+            <organism term="homo sapiens"/>
+            <comment><text>COMMENT TEXT...</text></comment>                        
+            <creation_date>2011-06-02T10:45:20</creation_date>
+            <modification_date>2011-06-02T10:45:37</modification_date>
+        </panel>
+
+        <variant_type source="SO" accession="0000159" term="deletion"/>
+
+        <!-- we can have more than one pathogenicity statements. Statement can have reference to a panel it is based on
+        -->
+        <pathogenicity term="Non-pathogenic" panel_ref="1"> <!-- terms are not yet standardized -->
+            <phenotype source="OMIM" accession="166210" term="osteogenesis imperfecta, type-1"/>
+            <comment><text content_type="text/html"><![CDATA[HTML TEXT HERE]]></text></comment>            
+        </pathogenicity>
+        
+        
+        <seq_changes><!-- sequence consequences -->
+            <variant type="AA">
+                <ref_seq accession="NM_000088.3"/>
+                <name scheme="HGVS">p.Glu615_Ala616delinsAsp</name>
+            </variant>
+        </seq_changes>
+
+        <aliases> <!-- We give name on coding DNA reference here: -->
+            <variant type="DNA">
+                <ref_seq accession="NM_000088.3"/>
+                <name scheme="HGVS">c.1845_1847del</name>
+            </variant>
+        </aliases>
+        
+        <!-- explicit location (optional)-->
+        <location>
+            <ref_seq accession="GRCh37"/>
+            <chr>17</chr>
+            <start>48270186</start>
+            <end>48270188</end>
+        </location>        
+        
+        <protocol_id accession="CMGS_VGKL_5"/> <!-- check this. what is classification index ? -->
+        
+    </variant> 
+    
+    <!-- EXAMPLE 2 -->
+    
+    <variant id="{09b3d78f-39c7-42e0-b5a1-9894e28d69f0}" type="DNA">        
+        <gene  source="HGNC" accession="COL1A1"/> 
+        <ref_seq accession="GRCh37:17"/>        
+        <name scheme="HGVS">g.48270179_48270180del</name>
+        <panel><organism term="homo sapiens"/></panel>
+
+        <!--  http://www.sequenceontology.org/miso/current_release/term/SO:0001059 -->
+        <variant_type source="SO" accession="0000159" term="deletion"/>
+
+        <pathogenicity term="Non-pathogenic"> 
+            <phenotype source="OMIM" accession="166210" term="osteogenesis imperfecta, type-1"/>
+        </pathogenicity>
+        
+        <seq_changes>
+            <variant type="AA">
+                <ref_seq accession="NM_000088.3"/>
+                <name scheme="HGVS">p.Gln619GlyfsX14</name>
+            </variant>
+        </seq_changes>
+        
+        <aliases> 
+            <variant type="DNA">
+                <ref_seq accession="NM_000088.3"/>
+                <name scheme="HGVS">c.1853_1854del</name>
+            </variant>
+        </aliases>
+        
+        <protocol_id accession="CMGS_VGKL_5"/> 
+        
+    </variant>
+    
+    <variant id="{e9d7b1ec-49c6-4cb6-b429-3b7a3506a2c3}">
+
+        <gene  source="HGNC" accession="COL1A1"/> 
+        <ref_seq accession="GRCh37:17"/>        
+        <name scheme="HGVS"></name>
+
+        <panel type="family" id="0001">
+            <individual id="0001"/>
+            <organism term="homo sapiens"/>            
+        </panel>
+        
+        <panel type="family" id="0002">
+            <individual id="0002"/>
+            <organism term="homo sapiens"/>            
+        </panel>
+        
+        <variant_type source="SO" accession="1000002" term="substitution"/>
+        
+        <pathogenicity term="Not known"/> <!-- refrs to what? not in given panels?-->
+        
+        <protocol_id accession="CMGS_VGKL_5"/> 
+        
+    </variant>
+    <db_xref source="cafevariome" accession="1111"/> <!-- submissiom id -->
+</cafe_variome>

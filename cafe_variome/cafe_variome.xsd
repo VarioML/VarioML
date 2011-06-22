@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
+  <xs:include schemaLocation="lsdb.xsd"/>
+  <xs:element name="cafe_variome">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSubmission">
+          <xs:sequence>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
+            <xs:group ref="vml:VmlAnnotatable"/>
+            <xs:group ref="vml:VmlForeignNodes"/>
+          </xs:sequence>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

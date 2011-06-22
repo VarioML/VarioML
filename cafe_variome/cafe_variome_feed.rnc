@@ -1,0 +1,37 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+default namespace vml = "http://gen2phen.org/varioml/2.2"
+
+namespace local = ""
+namespace atom="http://www.w3.org/2005/Atom"
+namespace asbatch="http://atomserver.org/namespaces/1.0/batch"
+
+include "lsdb.rnc" { start |= notAllowed }
+
+## Relax NGC schema for Cafe rouge
+## Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+##
+start = feed 
+
+
+## Variant feed
+feed = 
+element atom:feed {
+    element atom:entry { 
+        element atom:content {
+            attribute type { xsd:string},
+            element vml:cafe_variome {
+                VmlSubmission
+                , variant+
+                , VmlAnnotatable
+                , VmlForeignNodes            
+            }
+        },
+        element asbatch:operation { 
+            attribute type { xsd:string}
+        },
+        element atom:link { 
+            attribute href { xsd:string},
+            attribute rel { xsd:string}
+        }
+    }
+}

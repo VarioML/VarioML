@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:cafe_variome.rnc" type="compact"?> 
+<cafe_variome xmlns="http://varioml.org/xml/1.0"> 
+    <source id="leicester_lab">
+        <name>leicester_lab</name> 
+        <url>http://www.le.ac.uk/genetics</url>  
+        <contact>
+            <name>Owen Lancaster</name>
+            <email>ol8@leicester.ac.uk</email>
+        </contact>
+    </source>
+ 
+    <variant type="cDNA">
+    
+        <gene source="HGNC" accession="COL1A1" />
+            <ref_seq accession="NG_007400.1" />
+            <name scheme="HGVS">c.579delT</name>
+            <pathogenicity term="Pathogenic">
+                <phenotype term="Osteogenesis Imperfecta"/>
+                <evidence_code term="experimental evidence" source="ECO"/>
+            </pathogenicity>
+            <genetic_origin term="paternal">
+                <evidence_code term="inferred"/>            
+            </genetic_origin>
+            
+            <location>
+                <ref_seq accession="build36"/>
+                <chr>12</chr>
+                <start>11111</start>
+                <end>11111</end>            
+            </location>
+            
+            <sharing_policy type="openAccess">
+                <embargo_end_date>2002-12-12</embargo_end_date>
+                <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/" term="Creative commons"/>
+            </sharing_policy> 
+            
+            <comment >
+                <text>Variant inherited from affected father</text>
+            </comment>        
+        </variant>    
+        
+</cafe_variome>
