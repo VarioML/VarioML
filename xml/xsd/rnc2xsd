@@ -1,0 +1,8 @@
+#!/bin/bash
+#. ~/.bash_aliases
+#add the alias into your environment and use source command to execute the script:
+#alias trang='java -jar /opt/apps/xml/trang/trang.jar'
+
+#included main schema file is compiled automatically
+#trang -I rnc -O xsd ../lsdb_main/lsdb.rnc  lsdb.xsd
+trang -I rnc -O xsd ../cafe_variome/cafe_variome.rnc  cafe_variome.xsd

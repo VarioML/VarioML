@@ -5,7 +5,7 @@ namespace local = ""
 namespace atom="http://www.w3.org/2005/Atom"
 namespace asbatch="http://atomserver.org/namespaces/1.0/batch"
 
-include "lsdb.rnc" { start |= notAllowed }
+include "../lsdb_main/lsdb.rnc" { start |= notAllowed }
 
 ## Relax NGC schema for Cafe rouge
 ## Contact: Juha.Muilu (juha.muilu@helsinki.fi)

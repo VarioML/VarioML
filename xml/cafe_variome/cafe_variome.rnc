@@ -4,7 +4,7 @@ default namespace vml = "http://varioml.org/xml/1.0"
 namespace local = ""
 
 
-include "lsdb.rnc" { start |= notAllowed }
+include "../lsdb_main/lsdb.rnc" { start |= notAllowed }
 
 ## Relax NGC schema for Cafe variome
 ## Contact: Juha.Muilu (juha.muilu@helsinki.fi)

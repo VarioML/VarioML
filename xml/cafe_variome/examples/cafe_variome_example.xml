@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?oxygen RNGSchema="file:cafe_variome.rnc" type="compact"?> 
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
 <cafe_variome xmlns="http://varioml.org/xml/1.0"> 
     <source id="leicester_lab">
         <name>leicester_lab</name> 

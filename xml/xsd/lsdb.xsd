@@ -1,0 +1,1955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - File: $Id: $
+  - Made with Trang: http://www.thaiopensource.com/relaxng/trang.html
+  - notes: http://books.xmlschemata.org/relaxng/relax-CHP-13-SECT-1.html
+  
+  - This program is free software; you can redistribute it and/or
+  - modify it under the terms of the GNU General Public License.
+  - See  http://www.gnu.org/copyleft/gpl.html
+  
+  new name space http://varioml.org/xml/1.0
+  
+  IMPORTANT NOTE
+    DO NOT USE THE RELAX SCHEMA DIRECTLY. Finalized formats for different use cases will be defined separately 
+    using Schematron schema definition language.
+    Contact Juha.Muilu@helsinki.fi for details.
+  
+  TODO mark non-text nodes as empty
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
+  <!--
+       0===0
+        O=o
+         O		============================================
+        o=O		V a r i o M L
+       0===0		Relax NGC schema for LSDB data transfer
+       0===0		Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+        O=o		============================================
+         O
+        o=O
+       0===0
+       0===0 
+  -->
+  <xs:element name="lsdb">
+    <xs:annotation>
+      <xs:documentation>[% INSERT lsdb.txt %] </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlLsdb">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlLsdb">
+    <xs:annotation>
+      <xs:documentation>[% INSERT lsdb.txt %] </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlSubmission">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:group ref="vml:VmlAnnotatable"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	VmlSubmission
+    (=)	===============================
+  -->
+  <xs:complexType name="VmlSubmission">
+    <xs:annotation>
+      <xs:documentation>[% INSERT submission.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:created"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:source">
+        <xs:annotation>
+          <xs:documentation>Source(s) of submission</xs:documentation>
+        </xs:annotation>
+      </xs:group>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="schema_version" type="xs:decimal"/>
+    <xs:attribute name="submissionid_type" type="xs:string"/>
+  </xs:complexType>
+  <xs:element name="created" type="xs:dateTime">
+    <xs:annotation>
+      <xs:documentation>Submission/creation time stamp</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!--
+    (=)	===============================
+     X	Abstract observation target
+    (=)	===============================
+  -->
+  <xs:group name="VmlAbstractObservationTarget">
+    <xs:annotation>
+      <xs:documentation>[% INSERT abstract_observation_target.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:original_id"/>
+      <xs:element minOccurs="0" ref="vml:role"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:relationship">
+        <xs:annotation>
+          <xs:documentation>role in relationship,  subject type e.g index case...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" ref="vml:organism">
+        <xs:annotation>
+          <xs:documentation>relationship with other targets</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" ref="vml:strain"/>
+      <xs:element minOccurs="0" ref="vml:cultivar"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:phenotype"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:population"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_group"/>
+      <xs:group minOccurs="0" ref="vml:source"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlAbstractObservationTarget">
+    <xs:annotation>
+      <xs:documentation>[% INSERT abstract_observation_target.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Individual
+    (=)	===============================
+  -->
+  <xs:element name="individual">
+    <xs:annotation>
+      <xs:documentation>[% INSERT individual.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlIndividual">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlIndividual">
+    <xs:annotation>
+      <xs:documentation>[% INSERT individual.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:gender"/>
+      <xs:element minOccurs="0" ref="vml:dob"/>
+      <xs:group ref="vml:VmlAbstractObservationTarget"/>
+      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
+      <xs:element minOccurs="0" ref="vml:creation_date"/>
+      <xs:element minOccurs="0" ref="vml:modification_date"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlAbstractObservationTarget"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Panel
+    (=)	===============================
+  -->
+  <xs:element name="panel">
+    <xs:annotation>
+      <xs:documentation>[% INSERT panel.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlPanel">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlPanel">
+    <xs:annotation>
+      <xs:documentation>[% INSERT panel.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
+      <xs:group ref="vml:VmlAbstractObservationTarget"/>
+      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
+      <xs:element minOccurs="0" ref="vml:creation_date"/>
+      <xs:element minOccurs="0" ref="vml:modification_date"/>
+    </xs:sequence>
+    <xs:attribute name="size" type="xs:integer"/>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="family"/>
+          <xs:enumeration value="extended family"/>
+          <xs:enumeration value="population"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attributeGroup ref="vml:VmlAbstractObservationTarget"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Observation (NOT USED)
+    (=)	===============================
+  -->
+  <xs:element name="observations">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observations.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlObservations"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    this is experimental and should not be used. preference is 
+    to embed features inside observation targets
+  -->
+  <xs:group name="VmlObservations">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observations.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="vml:panel"/>
+        <xs:element ref="vml:individual"/>
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:phenotype"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_group"/>
+      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
+      <xs:element minOccurs="0" ref="vml:creation_date"/>
+      <xs:element minOccurs="0" ref="vml:modification_date"/>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	Consent
+    (=)	===============================
+  -->
+  <xs:element name="consent">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consent.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlConsent">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlConsent">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consent.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	SampleID
+    (=)	===============================
+  -->
+  <xs:element name="sample">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sample.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSample">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlSample">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sample.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Gender
+    (=)	===============================
+  -->
+  <xs:element name="gender">
+    <xs:annotation>
+      <xs:documentation>[% INSERT gender.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlGender">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlGender">
+    <xs:annotation>
+      <xs:documentation>[% INSERT gender.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="vml:description"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+    <xs:attribute name="code" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="0"/>
+          <xs:enumeration value="1"/>
+          <xs:enumeration value="2"/>
+          <xs:enumeration value="9"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Role (role of subject in study or in group or family relationship)
+    (=)	===============================
+  -->
+  <xs:element name="role">
+    <xs:annotation>
+      <xs:documentation>[% INSERT role.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlRoleType">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlRoleType">
+    <xs:annotation>
+      <xs:documentation>[% INSERT subject_type.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Description
+     X    Subject type: "Index case", "Relative of index case", "Partner of index case" 
+    (=)	===============================
+  -->
+  <xs:group name="description">
+    <xs:annotation>
+      <xs:documentation>[% INSERT description.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlDescription">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlDescription">
+    <xs:annotation>
+      <xs:documentation>[% INSERT description.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Original ID
+    (=)	===============================
+  -->
+  <xs:element name="original_id">
+    <xs:annotation>
+      <xs:documentation>[% INSERT original_id.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlOriginalId">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlOriginalId">
+    <xs:annotation>
+      <xs:documentation>[% INSERT original_id.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Submitter id
+    (=)	===============================
+  -->
+  <xs:element name="submitter_id">
+    <xs:annotation>
+      <xs:documentation>[% INSERT submitter_id.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSubmitterId">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlSubmitterId">
+    <xs:annotation>
+      <xs:documentation>[% INSERT submitter_id.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Variant
+    (=)	===============================
+  -->
+  <xs:group name="variant">
+    <xs:sequence>
+      <xs:element name="variant">
+        <xs:annotation>
+          <xs:documentation>[% INSERT variant.txt %]  </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlVariant">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlVariant">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:gene"/>
+      <xs:element minOccurs="0" ref="vml:ref_seq"/>
+      <xs:group minOccurs="0" ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:panel"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
+      <xs:element minOccurs="0" ref="vml:original_id"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:exon"/>
+      <xs:element minOccurs="0" ref="vml:sequence"/>
+      <xs:element minOccurs="0" ref="vml:genotype"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:consequence"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:pathogenicity"/>
+      <xs:element minOccurs="0" ref="vml:sample"/>
+      <xs:element minOccurs="0" ref="vml:tissue"/>
+      <xs:element minOccurs="0" ref="vml:variant_detection"/>
+      <xs:element minOccurs="0" ref="vml:restriction_site"/>
+      <xs:element minOccurs="0" ref="vml:tissue_distribution"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:genetic_origin"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:frequency">
+        <xs:annotation>
+          <xs:documentation>Frequency in other populations (related frequency).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" ref="vml:seq_changes"/>
+      <xs:element minOccurs="0" ref="vml:aliases"/>
+      <xs:group minOccurs="0" ref="vml:source"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:location"/>
+      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
+      <xs:element minOccurs="0" ref="vml:creation_date"/>
+      <xs:element minOccurs="0" ref="vml:modification_date"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="DNA"/>
+          <xs:enumeration value="cDNA"/>
+          <xs:enumeration value="RNA"/>
+          <xs:enumeration value="AA"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="genotypic">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="true"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="subcellular_part">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="nucleus"/>
+          <xs:enumeration value="mitochondrial"/>
+          <xs:enumeration value="chloroplast"/>
+          <xs:enumeration value="other"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="copy_count" type="xs:float"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Consequent_variant
+    (=)	===============================
+  -->
+  <xs:complexType name="VmlConsequentVariant">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consequent_variant.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:ref_seq"/>
+      <xs:group ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
+      <xs:element minOccurs="0" ref="vml:original_id"/>
+      <xs:element minOccurs="0" ref="vml:sequence"/>
+      <xs:element minOccurs="0" ref="vml:genotype"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:consequence"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:pathogenicity"/>
+      <xs:element minOccurs="0" ref="vml:variant_detection"/>
+      <xs:element minOccurs="0" ref="vml:tissue_distribution"/>
+      <xs:element minOccurs="0" ref="vml:seq_changes"/>
+      <xs:element minOccurs="0" ref="vml:aliases"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:location"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="cDNA"/>
+          <xs:enumeration value="RNA"/>
+          <xs:enumeration value="AA"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Consequent_variantS
+    (=)	===============================
+  -->
+  <xs:group name="VmlConsequentVariants">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consequent_variants.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="variant">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlConsequentVariant">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	sequence changes 
+    (=)	===============================
+  -->
+  <xs:element name="seq_changes">
+    <xs:annotation>
+      <xs:documentation>[% INSERT seq_changes.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlConsequentVariants"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    (=)	===============================
+     X	Related_variants
+    (=)	===============================
+  -->
+  <xs:group name="VmlRelatedVariants">
+    <xs:annotation>
+      <xs:documentation>[% INSERT related_variants.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group maxOccurs="unbounded" ref="vml:variant"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	Aliases
+    (=)	===============================
+  -->
+  <xs:element name="aliases">
+    <xs:annotation>
+      <xs:documentation>[% INSERT aliases.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlRelatedVariants"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    (=)	===============================
+     X	Variant name
+    (=)	===============================
+  -->
+  <xs:group name="name">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:annotation>
+          <xs:documentation>[% INSERT variant_name.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+          <xs:attributeGroup ref="vml:VmlName"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlName">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_name.txt %] </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="scheme"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Sequence
+    (=)	===============================
+  -->
+  <xs:element name="sequence">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sequence.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlSequence"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="VmlSequence">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sequence.txt %] </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="vml:reference"/>
+      <xs:element name="variant" type="xs:string"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="reference" type="xs:string"/>
+  <!--
+    (=)	===============================
+     X	Genotype
+    (=)	===============================
+  -->
+  <xs:element name="genotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT genotype.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlGenotype"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="VmlGenotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT genotype.txt %] </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="vml:call"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="call" type="xs:string"/>
+  <!--
+    (=)	===============================
+     X	Reference sequence
+    (=)	===============================
+  -->
+  <xs:element name="ref_seq">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ref_seq.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlRefSeq">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlRefSeq">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ref_seq.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Protocol identifier
+    (=)	===============================
+  -->
+  <xs:element name="protocol_id">
+    <xs:annotation>
+      <xs:documentation>[% INSERT protocol_id.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlProtocolId">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlProtocolId">
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Gene
+    (=)	===============================
+  -->
+  <xs:element name="gene">
+    <xs:annotation>
+      <xs:documentation>[% INSERT gene.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlGene">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlGene">
+    <xs:annotation>
+      <xs:documentation>[% INSERT gene.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="vml:VmlDbXRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dob" type="vml:VmlDobDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT dob.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="VmlDobDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT modification_date.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="vml:VmlDate"/>
+  </xs:simpleType>
+  <!--
+    (=)	===============================
+     X	Mod and Create Date
+    (=)	===============================
+  -->
+  <xs:element name="modification_date" type="vml:VmlModificationDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT modification_date.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="VmlModificationDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT modification_date.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="vml:VmlDate"/>
+  </xs:simpleType>
+  <xs:element name="creation_date" type="vml:VmlCreationDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT creation_date.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="VmlCreationDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT creation_date.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="vml:VmlDate"/>
+  </xs:simpleType>
+  <xs:element name="variant_type">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_type.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlVariantType">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlVariantType">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="variant_class">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlVariantClass">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlVariantClass">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="organism">
+    <xs:annotation>
+      <xs:documentation>[% INSERT organism.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlOrganism">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlOrganism">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="strain">
+    <xs:annotation>
+      <xs:documentation>[% INSERT strain.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlStrain">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlStrain">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="cultivar">
+    <xs:annotation>
+      <xs:documentation>[% INSERT cultivar.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlCultivar">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlCultivar">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="tissue">
+    <xs:annotation>
+      <xs:documentation>[% INSERT tissue.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlTissue">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlTissue">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="tissue_distribution">
+    <xs:annotation>
+      <xs:documentation>[% INSERT tissue_distribution.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlTissueDistribution">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlTissueDistribution">
+    <xs:annotation>
+      <xs:documentation>[% INSERT tissue_distribution.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="sequence_region">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sequence_region.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSequenceRegion">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlSequenceRegion">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sequence_region.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="relationship">
+    <xs:annotation>
+      <xs:documentation>relationships .. NOT NEEDED
+[% INSERT relationship.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlRelationship">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlRelationship">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:panel"/>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Restriction site ontology term
+    (=)	===============================
+  -->
+  <xs:element name="restriction_site">
+    <xs:annotation>
+      <xs:documentation>[% INSERT restriction_site.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlRestrictionSite">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlRestrictionSite">
+    <xs:annotation>
+      <xs:documentation>[% INSERT restriction_site.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Exon
+    (=)	===============================
+  -->
+  <xs:element name="exon">
+    <xs:annotation>
+      <xs:documentation>[% INSERT exon.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="vml:VmlExon"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="VmlExon">
+    <xs:annotation>
+      <xs:documentation>[% INSERT exon.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="source"/>
+    <xs:attribute name="accession"/>
+    <xs:attribute name="transcript_ref"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Consequence of mutation
+    (=)	===============================
+  -->
+  <xs:element name="consequence">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consequence.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlConsequence">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlConsequence">
+    <xs:annotation>
+      <xs:documentation>[% INSERT consequence.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Genetic origin
+    (=)	===============================
+  -->
+  <xs:element name="genetic_origin">
+    <xs:annotation>
+      <xs:documentation>[% INSERT genetic_origin.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlGenetic_origin">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlGenetic_origin">
+    <xs:annotation>
+      <xs:documentation>[% INSERT genetic_origin.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="vml:genetic_source"/>
+      <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Genetic source
+    (=)	===============================
+  -->
+  <xs:group name="genetic_source">
+    <xs:sequence>
+      <xs:element name="source" type="vml:VmlGeneticSource">
+        <xs:annotation>
+          <xs:documentation>[% INSERT genetic_source.txt %]</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlGeneticSource">
+    <xs:annotation>
+      <xs:documentation>[% INSERT genetic_origin.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:population"/>
+      <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Location
+    (=)	===============================
+  -->
+  <xs:element name="location">
+    <xs:annotation>
+      <xs:documentation>[% INSERT location.txt %] 
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlLocation"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="VmlLocation">
+    <xs:annotation>
+      <xs:documentation>[% INSERT location.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="vml:ref_seq"/>
+      <xs:element minOccurs="0" ref="vml:chr"/>
+      <xs:element ref="vml:start"/>
+      <xs:element minOccurs="0" ref="vml:end"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="chr" type="xs:string"/>
+  <xs:element name="start" type="xs:integer"/>
+  <xs:element name="end" type="xs:integer"/>
+  <!--
+    (=)	===============================
+     X	Sharing policy
+    (=)	===============================
+  -->
+  <xs:element name="sharing_policy">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sharing_policy.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSharingPolicy">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- see documentation: http://wiki.surffoundation.nl/display/standards/info-eu-repo/#info-eu-repo-AccessRights -->
+  <xs:complexType name="VmlSharingPolicy">
+    <xs:annotation>
+      <xs:documentation>[% INSERT sharing_policy.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:embargo_end_date"/>
+      <xs:element minOccurs="0" ref="vml:use_permission"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="closedAccess"/>
+          <xs:enumeration value="embargoedAccess"/>
+          <xs:enumeration value="restrictedAccess"/>
+          <xs:enumeration value="openAccess"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Embargo date
+    (=)	===============================
+  -->
+  <xs:element name="embargo_end_date" type="vml:VmlEmbargo_end_date">
+    <xs:annotation>
+      <xs:documentation>[% INSERT embargo_end_date.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VmlEmbargo_end_date">
+    <xs:annotation>
+      <xs:documentation>[% INSERT embargo_end_date.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:date">
+        <xs:attribute name="is_undefined">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="true"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Use permission
+    (=)	===============================
+  -->
+  <xs:element name="use_permission">
+    <xs:annotation>
+      <xs:documentation>[% INSERT use_permission.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlUsePermission">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlUsePermission">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Pathogenicity
+    (=)	===============================
+    Vmlpathogenicity.attlist &= attribute type {'Non-pathogenic'|'Not Known'|'Pathogenic'|'Probably Not Pathogenic'|'Probably Pathogenic'}
+  -->
+  <xs:group name="pathogenicity">
+    <xs:sequence>
+      <xs:element name="pathogenicity">
+        <xs:annotation>
+          <xs:documentation>[% INSERT pathogenicity.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlPathogenicity">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlPathogenicity">
+    <xs:annotation>
+      <xs:documentation>[% INSERT pathogenicity.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:phenotype"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:factor"/>
+      <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    </xs:sequence>
+    <xs:attribute name="scope">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="individual"/>
+          <xs:enumeration value="family"/>
+          <xs:enumeration value="population"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="panel_ref" type="vml:VmlId"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Factor
+    (=)	===============================
+  -->
+  <xs:group name="factor">
+    <xs:sequence>
+      <xs:element name="pathogenicity">
+        <xs:annotation>
+          <xs:documentation>[% INSERT factor.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlFactor">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlFactor">
+    <xs:annotation>
+      <xs:documentation>[% INSERT pathogenicity.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Haplotype group id
+    (=)	===============================
+  -->
+  <xs:element name="variant_group">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_group.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlVariantGroup">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    ..
+    this is experimental
+  -->
+  <xs:complexType name="VmlVariantGroup">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_group.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:group_type"/>
+      <xs:group maxOccurs="unbounded" ref="vml:variant"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:frequency"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:pathogenicity"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="orientation">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="cis"/>
+          <xs:enumeration value="trans"/>
+          <xs:enumeration value="unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Variant detection
+    (=)	===============================
+  -->
+  <xs:element name="variant_detection" type="vml:VmlVariantDetection">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_detection.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VmlVariantDetection">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_detection.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:protocol_id"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+      <xs:group ref="vml:VmlForeignNodes"/>
+    </xs:sequence>
+    <xs:attribute name="template" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="DNA"/>
+          <xs:enumeration value="RNA"/>
+          <xs:enumeration value="cDNA"/>
+          <xs:enumeration value="AA"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="technique" use="required"/>
+    <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+  </xs:complexType>
+  <!-- VmlVariantDetection.attlist &= attribute type {'ARMS'|'CF20'|'CF29'|'CSCE'|'DGGE'|'dHPLC'|'Heteroduplex analysis'|'Loss of heterozygosity analysis'|'Meta-PCR'|'MLPA'|'MS-PCR'|'Multiplex PCR'|'Not Known'|'Not Specified'|'PCR-PAGE'|'PTT'|'RNA'|'Sequencing'|'SNPlex'|'SSCP'|'SSCP/Heteroduplex'} -->
+  <!--
+    (=)	===============================
+     X	Database cross reference
+    (=)	===============================
+  -->
+  <xs:element name="db_xref">
+    <xs:annotation>
+      <xs:documentation>[% INSERT db_xref.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlDbXRef">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    (=)	===============================
+     X	Phenotype of individual
+    (=)	===============================
+  -->
+  <xs:element name="phenotype" type="vml:VmlPhenotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT phenotype.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VmlPhenotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT phenotype.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:inheritance_pattern"/>
+      <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+      <xs:group ref="vml:VmlForeignNodes"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+  </xs:complexType>
+  <xs:element name="inheritance_pattern">
+    <xs:annotation>
+      <xs:documentation>[% INSERT inheritance_pattern.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlInheritancePattern">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlInheritancePattern">
+    <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Frequency (of rare allele)
+    (=)	===============================
+  -->
+  <xs:element name="frequency">
+    <xs:annotation>
+      <xs:documentation>[% INSERT frequency.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlFrequency">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlFrequency">
+    <xs:annotation>
+      <xs:documentation>[% INSERT frequency.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:population"/>
+      <xs:element ref="vml:frequency_value"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attribute name="samples" type="xs:int"/>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="allele"/>
+          <xs:enumeration value="carrier"/>
+          <xs:enumeration value="genotype"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:element name="frequency_value" abstract="true"/>
+  <xs:element name="freq" substitutionGroup="vml:frequency_value" type="xs:decimal"/>
+  <xs:element name="counts" substitutionGroup="vml:frequency_value" type="xs:int"/>
+  <xs:element name="category" substitutionGroup="vml:frequency_value">
+    <xs:complexType>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+      <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    (=)	===============================
+     X	Population ontology term
+    (=)	===============================
+  -->
+  <xs:element name="population">
+    <xs:annotation>
+      <xs:documentation>[% INSERT population.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlPopulation">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlPopulation">
+    <xs:annotation>
+      <xs:documentation>[% INSERT population.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlEvidenceOntologyTerm">
+      <xs:annotation>
+        <xs:documentation>population defined as ontology term</xs:documentation>
+      </xs:annotation>
+    </xs:group>
+    <xs:attribute name="type" use="required">
+      <xs:annotation>
+        <xs:documentation>type of population</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="region"/>
+          <xs:enumeration value="nationality"/>
+          <xs:enumeration value="ethnic"/>
+          <xs:enumeration value="race"/>
+          <xs:enumeration value="organism"/>
+          <xs:enumeration value="group"/>
+          <xs:enumeration value="primary_language"/>
+          <xs:enumeration value="language_family"/>
+          <xs:enumeration value="other"/>
+          <xs:enumeration value="unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Evidence code
+    (=)	===============================
+  -->
+  <xs:element name="evidence_code">
+    <xs:annotation>
+      <xs:documentation>[% INSERT evidence_code.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlEvidenceCode">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlEvidenceCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:score"/>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Score
+    (=)	===============================
+  -->
+  <xs:element name="score">
+    <xs:annotation>
+      <xs:documentation>[% INSERT score.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlScore">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlScore">
+    <xs:sequence>
+      <xs:element ref="vml:value"/>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <xs:element name="value" type="xs:float"/>
+  <!--
+    (=)	===============================
+     X	GroupType
+    (=)	===============================
+  -->
+  <xs:element name="group_type">
+    <xs:annotation>
+      <xs:documentation>[% INSERT group_type.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlGroupType">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlGroupType">
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Annotatable
+    (=)	===============================
+  -->
+  <xs:group name="VmlAnnotatable">
+    <xs:annotation>
+      <xs:documentation>[% INSERT annotatable.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:db_xref"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:comment"/>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	Observation
+    (=)	===============================
+  -->
+  <xs:group name="VmlObservation">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observation.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:evidence_code"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:protocol_id"/>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	Annotated observation !
+    (=)	===============================
+  -->
+  <xs:group name="VmlAnnotatedObservation">
+    <xs:annotation>
+      <xs:documentation>Not implemented- order of elements is not set.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group ref="vml:VmlObservation"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <!-- VmlGenomic_observation = VmlIdentifiable, VmlAnnotatedObservation -->
+  <!--
+    (=)	===============================
+     X	Ontology term
+    (=)	===============================
+  -->
+  <xs:group name="VmlOntologyTerm">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ontology_term.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group ref="vml:VmlOntology"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlOntologyTerm">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ontology_term.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="vml:VmlOntology"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Evidence ontology term
+    (=)	===============================
+  -->
+  <xs:group name="VmlEvidenceOntologyTerm">
+    <xs:annotation>
+      <xs:documentation>[% INSERT evidence_ontology_term.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group ref="vml:VmlOntology"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlEvidenceOntologyTerm">
+    <xs:annotation>
+      <xs:documentation>[% INSERT evidence_ontology_term.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="vml:VmlOntology"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Comments
+    (=)	===============================
+  -->
+  <xs:element name="comment" type="vml:VmlComment">
+    <xs:annotation>
+      <xs:documentation>[% INSERT comment.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VmlComment">
+    <xs:annotation>
+      <xs:documentation>[% INSERT comment.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:text"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attribute name="source"/>
+    <xs:attribute name="accession"/>
+    <xs:attribute name="uri" type="vml:VmlUri"/>
+    <xs:attribute name="term"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	Text
+    (=)	===============================
+  -->
+  <xs:element name="text">
+    <xs:annotation>
+      <xs:documentation>[% INSERT text.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="vml:VmlText"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="VmlText">
+    <xs:annotation>
+      <xs:documentation>[% INSERT text.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="content_type"/>
+    <xs:attribute name="lang"/>
+    <xs:attribute name="encoding"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Source
+    (=)	===============================
+  -->
+  <xs:group name="source">
+    <xs:sequence>
+      <xs:element name="source">
+        <xs:annotation>
+          <xs:documentation>[% INSERT source.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlSource">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlSource">
+    <xs:annotation>
+      <xs:documentation>[% INSERT source.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:url"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:contact"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:acknowledgement"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="version"/>
+    <xs:attribute name="date" type="xs:date"/>
+  </xs:complexType>
+  <xs:element name="url" type="xs:string"/>
+  <!--
+    (=)	===============================
+     X	Contact
+    (=)	===============================
+  -->
+  <xs:element name="contact">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlContact">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlContact">
+    <xs:annotation>
+      <xs:documentation>[% INSERT contact.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:url"/>
+      <xs:element minOccurs="0" ref="vml:address"/>
+      <xs:element minOccurs="0" ref="vml:phone"/>
+      <xs:element minOccurs="0" ref="vml:fax"/>
+      <xs:element minOccurs="0" ref="vml:email"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+    <xs:attribute name="role" type="xs:string"/>
+  </xs:complexType>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="phone" type="xs:string"/>
+  <xs:element name="fax" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="acknowledgement">
+    <xs:annotation>
+      <xs:documentation>[% INSERT acknowledgement.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="vml:VmlAcknowledgement"/>
+        <xs:group ref="vml:VmlForeignNodes"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="VmlAcknowledgement">
+    <xs:annotation>
+      <xs:documentation>[% INSERT acknowledgement.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" ref="vml:grant_number"/>
+      <xs:group ref="vml:VmlAnnotatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="grant_number" type="vml:VmlDbXRef"/>
+  <!--
+    (=)	===============================
+     X	Basic types
+    (=)	===============================
+  -->
+  <!-- DATE -->
+  <xs:simpleType name="VmlDate">
+    <xs:annotation>
+      <xs:documentation>[% INSERT date.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:gYear xs:gYearMonth xs:date xs:dateTime"/>
+  </xs:simpleType>
+  <!-- URI -->
+  <xs:simpleType name="VmlUri">
+    <xs:annotation>
+      <xs:documentation>[% INSERT uri.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <!-- URL -->
+  <xs:simpleType name="Vmlurl">
+    <xs:annotation>
+      <xs:documentation>[% INSERT url.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <!-- ID -->
+  <xs:simpleType name="VmlId">
+    <xs:annotation>
+      <xs:documentation>[% INSERT id.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <!-- ACCESSION -->
+  <xs:simpleType name="VmlAccession">
+    <xs:annotation>
+      <xs:documentation>[% INSERT accession.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <!-- NAME -->
+  <xs:simpleType name="VmlNameStr">
+    <xs:annotation>
+      <xs:documentation>[% INSERT name.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <!-- AtomEmailAddress -->
+  <xs:complexType name="VmlDbXRef">
+    <xs:annotation>
+      <xs:documentation>[% INSERT AtomEmailAddress.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlAnnotatable"/>
+    <xs:attribute name="source"/>
+    <xs:attribute name="accession" use="required"/>
+    <xs:attribute name="name"/>
+    <xs:attribute name="uri" type="vml:VmlUri"/>
+  </xs:complexType>
+  <xs:group name="VmlOntology">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ontology_class.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlOntology">
+    <xs:annotation>
+      <xs:documentation>[% INSERT ontology_class.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="source"/>
+    <xs:attribute name="accession"/>
+    <xs:attribute name="uri" type="vml:VmlUri"/>
+    <xs:attribute name="term" use="required"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="VmlIdentifiable">
+    <xs:annotation>
+      <xs:documentation>[% INSERT identifiable.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="id" type="vml:VmlId"/>
+    <xs:attribute name="uri" type="vml:VmlUri"/>
+  </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Foreign Nodes
+    (=)	===============================
+    See:
+      http://books.xmlschemata.org/relaxng/relax-CHP-11-SECT-4.html
+    
+  -->
+  <xs:group name="VmlForeignNodes">
+    <xs:annotation>
+      <xs:documentation>[% INSERT foreign.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:VmlForeignElements"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlForeignNodes">
+    <xs:annotation>
+      <xs:documentation>[% INSERT foreign.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="vml:VmlForeignAttributes"/>
+  </xs:attributeGroup>
+  <xs:group name="VmlAnything">
+    <xs:annotation>
+      <xs:documentation>[% INSERT anything.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlAnything">
+    <xs:annotation>
+      <xs:documentation>[% INSERT anything.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:anyAttribute processContents="skip"/>
+  </xs:attributeGroup>
+  <xs:group name="VmlForeignElements">
+    <xs:annotation>
+      <xs:documentation>[% INSERT foreign.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="skip"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="VmlForeignAttributes">
+    <xs:annotation>
+      <xs:documentation>[% INSERT foreign.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:anyAttribute namespace="##other" processContents="skip"/>
+  </xs:attributeGroup>
+</xs:schema>
+<!--
+  tccggtcggcattttgttctgagagggagagacggaacgagagagagacacacacagggctccttccc
+  schema editor: myles.byrne@helsinki.fi
+  cccgccctcccccctccctccgtcggtaccgactcacccgacaccaccaagccgcagggagggacgcc
+-->

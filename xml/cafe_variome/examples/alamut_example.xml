@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:cafe_variome.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="file:../cafe_variome.rnc" type="application/relax-ng-compact-syntax"?>
 <cafe_variome xmlns="http://varioml.org/xml/1.0">
 
     <source id="sourceid0001" uri="http://alamut.com">
