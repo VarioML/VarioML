@@ -1,0 +1,10 @@
+<lsdb>
+   <source>
+      <name>Database</name>
+      <db_xref accession="xyz" source="test"/>
+      <contact>
+         <name>Juha Muilu</name>
+         <address>Osoite 17</address>
+      </contact>
+   </source>
+</lsdb>
