@@ -30,7 +30,7 @@ import org.w3c.dom.NodeList;
 
 /**
  * 
- * Quick and dirty code generator for XML data.
+ * Quick and dirty code generator for XML data based on XML instances.
  * 
  * App generates code for SimpleXML ((http://simple.sourceforge.net/) from XML instances 
  *

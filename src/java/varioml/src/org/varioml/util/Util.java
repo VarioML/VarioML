@@ -29,10 +29,14 @@ public class Util {
 		File f = new File( xmlFile );
 		if ( ! f.exists() ) {
 			final URL url = Util.class.getResource(xmlFile);
-			try {
-				f = new File( url.toURI());
-			} catch (URISyntaxException e) {
-				fatal(Util.class,"Error in URI: "+xmlFile);
+			if ( url != null ) {
+				try {
+					f = new File( url.toURI());
+				} catch (URISyntaxException e) {
+					fatal(Util.class,"Error in URI: "+xmlFile);
+				}
+			} else {
+				fatal(Util.class,"File not found"+xmlFile);				
 			}
 			
 		}
