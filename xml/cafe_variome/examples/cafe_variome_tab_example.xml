@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
+<!-- 
+Submitter ID
+
+Author name  role of submittor ? Can be curator as well
+Could parental orgin be renamed to genetic origin
+Source URL ???
+
+-->
+<cafe_variome xmlns="http://varioml.org/xml/1.0" >
+    <source id="Laboratory ID" >
+       
+        <name>leicester_lab</name>
+        <url>http://www.le.ac.uk/genetics</url>
+        <contact>
+            <name>Author Name</name>
+            <email>ol8@leicester.ac.uk</email>
+        </contact>
+    </source>
+
+    <!-- Variant
+        id = local unique ID for variant observation
+        type = reference template used for naming the variant (DNA,cDNA, RNA and AA)
+        copy_count = number of observed copies. 1 = one autosomal sister chromosome (or one male nonautosomal X/Y), 2 = both autosomal sister chromosomes.  
+    -->
+    <variant type="cDNA" id="Variant ID" copy_count="1"> 
+        <gene source="HGNC" accession="COL1A1"/>
+        <ref_seq accession="NG_007400.1"/>
+        <name scheme="HGVS">c.579delT</name>
+        
+        <!-- observation target (has optional type attribute with values: family, population and individual
+            This is an abstraction which can be something between individual, group of individuals or a population sample.
+        -->
+        <panel>                         
+            <!-- optional list of actual subjects/individuals which are part of the panel-->
+            <individual>
+                <gender code="1"/>
+                <!-- anonymized local subject id -->
+                <original_id accession="abcde123567"/>
+                <role term="Index case"/> <!-- role of subject  -->
+            </individual>
+            <!-- Population and phenotype characteristics which are common to all panel members. 
+                 We give the information here and not as properties of individual to avoid unnecessary nesting and repetition.
+                 Individual level information can be given also, but it is not yet agreed on: -->
+            <phenotype term="Osteogenesis imperfecta"/><!-- note that the phenotype(s) given here is not necessary consequence of the variant-->
+            <population type="ethnic" term="japanise"/><!-- there can be also more than one populations terms with types like race, region...-->            
+        </panel>
+        
+        <!-- Explicit causal relationship between variant and phenotype can be given here (optional).
+            In this example we are using terms defined in LOVD (thus the source of them is LOVD)
+            There can be more than one pathogenicity entries.
+        -->
+        <pathogenicity source="LOVD" term="pathogenic">
+            <phenotype term="Osteogenesis imperfecta"/>
+            <!-- optional evidence code. Term is from ECO evidence ontology  -->
+            <evidence_code term="experimental evidence" source="ECO"/>
+        </pathogenicity>
+ 
+        <!-- optional detection method(s) are listed here: -->
+        <variant_detection technique="sequencing" template="DNA"/> 
+        <genetic_origin term="paternal"> <!--maternal, de novo, de novo on paternal allele, parent #1 or #2 (phase) -->
+            <evidence_code term="inferred"/><!-- values like inferred, confirmed (or some ECO terms)-->
+        </genetic_origin>
+
+        <!-- optional location on chrmosome sequence. E.g. 
+            http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/human/data/index.shtml -->
+        <location>
+            <!-- ref_seq is DBXref.. all attributes of DbXRefs are given here as an example -->
+            <ref_seq accession="NC_000017.10" source="GRC" name="GRCh37:17">
+                <!-- <db_xref accession="CM000679.1" source="genbank"/> DBXRefs can have also aliases, but these can be omitted in CV-->
+            </ref_seq>
+            <chr>17</chr>
+            <start>11111</start>
+            <end>11111</end>
+        </location>
+        <sharing_policy type="openAccess">
+            <embargo_end_date>2002-12-12</embargo_end_date>
+            <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/"
+                term="Creative commons"/>
+        </sharing_policy>
+        
+        <!--publications as list of dbxrefs -->
+        <db_xref source="pubmed" accession="12345"/>
+        <db_xref source="doi" accession="ISSTA.2002.1048560" uri="http://dx.doi.org/10.1109/ISSTA.2002.1048560"/>
+        
+        <comment>
+            <text>Variant inherited from affected father</text>
+        </comment>
+
+    </variant>
+
+</cafe_variome>
