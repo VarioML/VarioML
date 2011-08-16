@@ -44,8 +44,14 @@ public class HTMLDocumentGenerator {
 		p("       <title>" + title + "</title>");
 		p("       <style type=\"text/css\">table { border:2px; border-collapse:collapse; }</style>");
 		// p("       <style type=\"text/css\">th { border:1px; border-collapse:collapse; bgcolor:aliceblue;}</style>");
+		p("     <link rel=\"stylesheet\" href=\"_files/xmlns-style.css\" type=\"text/css\">");
+		p("     <link rel=\"stylesheet\" href=\"_files/style.css\" type=\"text/css\">");
+		p("     <link rel=\"stylesheet\" href=\"_files/style2.css\" type=\"text/css\">");
 		p("     </head>");
 		p("    <body>");
+		p("    <H1>VarioML Documentation</H1>");
+		p("    <p> ~ contents here ~ </p>");
+		p("    <hr/>");	
 	}
 
 	public void HTMLEnd() {
@@ -121,7 +127,7 @@ public class HTMLDocumentGenerator {
 			//todo: improve this... type etc.
 			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
 		}
-		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</h2>");
+		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</div>");
 
 	}
 
