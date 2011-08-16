@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.soap.Node;
 
 import org.varioml.util.RNGMetadataAPI;
 import org.varioml.util.Util;
@@ -53,9 +56,10 @@ public class HTMLDocumentGenerator {
 	public void generate(MetaData data) {
 		String type = getType( data.patternList);
 		if ( type.length() >0 ) {
-			type = " (<a name='"+type+"'<em>"+type+"</em></a>)";
-		}
+			type = " (<a name='"+type+"'><em>"+type+"</em></a>)";
+		} 
 		p("     <h2 class='header'>" + data.name +type
+
 				+ "</h2>");
 
 		List<MetaData> props = data.properties;
@@ -89,6 +93,7 @@ public class HTMLDocumentGenerator {
 			p("         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>");
 			for (MetaData d : props) {
 				if (d.nodeType == MetaData.XML_ELEMENT) {
+					
 					if (!d.isChoiceGroup) {
 						String typeStr = "<em>string</em>";//todo: the guess
 						if ( d.patternList.size()> 0) {
@@ -100,10 +105,10 @@ public class HTMLDocumentGenerator {
 						;
 
 					} else {
-
+						
 						p("         <tr><td>" + "" + "</td><td>" + "<em>choice</em>" + "</td><td>"
 								+ RNGMetadataAPI.cardinToString(d.min, d.max) + "</td><td>"
-								+ RNGMetadataAPI.propertiesToString(d) + "</td></tr>");
+								+ (d.properties.size()> 0 ? RNGMetadataAPI.propertiesToString(d):"<em>Foreign XML nodes</em>") + "</td></tr>");
 						;
 
 					}
@@ -114,9 +119,9 @@ public class HTMLDocumentGenerator {
 		}
 		if ( data.hasTextNode ) {
 			//todo: improve this... type etc.
-			p("</p><d class='text'>text node </d>") ;
+			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
 		}
-		p("     </p><div class='doc' <h3>Documentation</h3>" + data.documentation + "</h2>");
+		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</h2>");
 
 	}
 
@@ -129,9 +134,14 @@ public class HTMLDocumentGenerator {
 	}
 
 	public static void main(String[] args) throws Exception {
-		if (args.length == 0)
-			Util.fatal(HTMLDocumentGenerator.class, "Relax RNG file is missing");
-		RNGMetadataAPI app = RNGMetadataAPI.createInstance(args[0]);
+		if (args.length  < 2)
+			Util.fatal(HTMLDocumentGenerator.class, "Usage: java  -jar VarioML.jar file-in.rng[,file..] file-out.html");
+		List<String> argsStr = new ArrayList<String>();
+		for ( int  i = 0 ; i < args.length-1 ; i++) {
+			System.err.println( args[i]);
+			argsStr.add(args[i]);
+		}
+		RNGMetadataAPI app = RNGMetadataAPI.createInstance(argsStr.toArray( new String[args.length-1]));
 
 		// MetaData data =
 		// app.parseAndCreateMetadata("grammar/define/element[@name='variant']");
@@ -144,12 +154,12 @@ public class HTMLDocumentGenerator {
 		//
 		// }
 
-		HTMLDocumentGenerator gener = new HTMLDocumentGenerator("tmp.html");
+		HTMLDocumentGenerator gener = new HTMLDocumentGenerator(args[ args.length - 1]);
 		gener.HTMLHeader("VarioML");
 
-		NodeList nodes = app.findAllXMLNodes("grammar/define/element");
-		for (int i = 0; i < nodes.getLength(); i++) {
-			MetaData data = app.createMetaDataObject(nodes.item(i), true);
+		List<org.w3c.dom.Node> nodes = app.findAllXMLNodesOrDie("grammar/define/element");
+		for (int i = 0; i < nodes.size(); i++) {
+			MetaData data = app.createMetaDataObject(nodes.get(i), true);
 			gener.generate(data);
 
 		}

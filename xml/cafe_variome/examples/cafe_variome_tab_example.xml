@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
-<!-- 
-Submitter ID
-
-Author name  role of submittor ? Can be curator as well
-Could parental orgin be renamed to genetic origin
-Source URL ???
-
+<!--
+    http://www.cafevariome.org/docs/cafevariome_tab_delimited.txt
 -->
 <cafe_variome xmlns="http://varioml.org/xml/1.0" >
-    <source id="Laboratory ID" >
+    <source id="Laboratory ID"  >
        
         <name>leicester_lab</name>
         <url>http://www.le.ac.uk/genetics</url>
-        <contact>
+        <contact>            
             <name>Author Name</name>
             <email>ol8@leicester.ac.uk</email>
+            <db_xref source="orcid" accession="122323"/>
         </contact>
+        <db_xref></db_xref>
     </source>
 
     <!-- Variant
@@ -33,7 +30,7 @@ Source URL ???
             This is an abstraction which can be something between individual, group of individuals or a population sample.
         -->
         <panel>                         
-            <!-- optional list of actual subjects/individuals which are part of the panel-->
+            <!-- optional list of actual subjects/individuals who are part of the panel-->
             <individual>
                 <gender code="1"/>
                 <!-- anonymized local subject id -->
@@ -59,7 +56,7 @@ Source URL ???
  
         <!-- optional detection method(s) are listed here: -->
         <variant_detection technique="sequencing" template="DNA"/> 
-        <genetic_origin term="paternal"> <!--maternal, de novo, de novo on paternal allele, parent #1 or #2 (phase) -->
+        <genetic_origin term="paternal"> <!--somatic, maternal, de novo, de novo on paternal allele, parent #1 or #2 (phase) -->
             <evidence_code term="inferred"/><!-- values like inferred, confirmed (or some ECO terms)-->
         </genetic_origin>
 

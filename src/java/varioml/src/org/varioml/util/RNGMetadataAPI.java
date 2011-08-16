@@ -2,8 +2,6 @@ package org.varioml.util;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
@@ -16,7 +14,6 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.varioml.util.RNGMetadataAPI.MetaData;
 import org.varioml.util.RNGMetadataAPI.MetaData.NodeType;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -25,9 +22,9 @@ import org.w3c.dom.NodeList;
 
 public class RNGMetadataAPI {
 
-	final private Document doc;
+	final private List<Document> documents;
 	final private XPath xpath;
-	final private String file;
+	final private String[] files;
 
 	private TreeMap<String, String> grammaPatternDocumentation = new TreeMap<String, String>();
 
@@ -60,14 +57,14 @@ public class RNGMetadataAPI {
 		public List<String> choiceList = new ArrayList<String>();
 		public List<String> choiceGroupList = new ArrayList<String>();
 		public List<String> patternList = new ArrayList<String>();
-		public String dataType = "string"; //fix: guess for a default
+		public String dataType = "string"; // fix: guess for a default
 		public String documentation = "";
 		public List<MetaData> properties = new ArrayList<RNGMetadataAPI.MetaData>();
 		public boolean isEmpty = false; // text node todo: chekc implementation
 										// of text nodex (non empty element)
 		public boolean isChoiceGroup = false;
 		public String pathName;
-		
+
 		public MetaData(String name) {
 			this.name = name;
 			this.isRootNode = true;
@@ -86,7 +83,8 @@ public class RNGMetadataAPI {
 		}
 
 		public void addProperty(MetaData property) {
-			if ( property == null ) Util.fatal(RNGMetadataAPI.class, "property is null");
+			if (property == null)
+				Util.fatal(RNGMetadataAPI.class, "property is null");
 			properties.add(property);
 		}
 
@@ -116,38 +114,49 @@ public class RNGMetadataAPI {
 					+ patterns;
 		}
 
+		public void addAllProperty(List<MetaData> prop) {
+			// TODO Auto-generated method stub
+			properties.addAll(prop);
+		}
+
 	}
 
-	private RNGMetadataAPI(Document doc, XPath xpath, String file) {
-		this.doc = doc;
+	private RNGMetadataAPI(List<Document> documents, XPath xpath, String files[]) {
+		this.documents = documents;
 		this.xpath = xpath;
-		this.file = file;
+		this.files = files;
 	}
 
 	public String checkType(String type) {
 		return type;
 	}
 
-	public static RNGMetadataAPI createInstance(String file) {
-
+	public static RNGMetadataAPI createInstance(String file[]) {
 		XPathFactory xfac = XPathFactory.newInstance();
 		XPath xpath = xfac.newXPath();
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		Document doc = null;
-		File _file = Util.findFile(file);
-		if (!_file.exists()) {
-			Util.fatal(RNGMetadataAPI.class, "file " + file + " do not exist");
+		List<Document> docs = new ArrayList();
+		// dbf.setNamespaceAware(true);
+		for (String fileName : file) {
+			//System.err.println(fileName);
+			File _file = Util.findFile(fileName);
+			if (!_file.exists()) {
+				Util.fatal(RNGMetadataAPI.class, "file " + fileName + " do not exist");
+			}
+			try {
+
+				DocumentBuilder db = dbf.newDocumentBuilder();
+				Document doc = db.parse(_file);
+				docs.add(doc);
+				
+			} catch (Exception ex) {
+				Util.fatal(RNGMetadataAPI.class, ex);
+			}
+
+			
 		}
-		try {
 
-			DocumentBuilder db = dbf.newDocumentBuilder();
-			doc = db.parse(file);
-
-		} catch (Exception ex) {
-			Util.fatal(RNGMetadataAPI.class, ex);
-		}
-
-		return new RNGMetadataAPI(doc, xpath, file);
+		return new RNGMetadataAPI(docs, xpath, file);
 
 	}
 
@@ -156,31 +165,45 @@ public class RNGMetadataAPI {
 		NodeList result = null;
 		try {
 			XPathExpression expr = xpath.compile(expression);
-			result = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+			for ( int ix= 0 ; ix < documents.size() && (result == null || result.getLength() == 0) ; ix++) {
+				Document doc = documents.get( ix);
+				result = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+			}
 		} catch (XPathExpressionException e) {
 			Util.fatal(RNGMetadataAPI.class, e);
 		}
 
 		if (result == null || result.getLength() == 0)
-			Util.fatal(RNGMetadataAPI.class, "xml file " + file + " don't have element " + expression);
+			Util.fatal(RNGMetadataAPI.class, " xml element " + expression+" not found");
 		return result.item(0);
 	}
 
-	public NodeList findAllXMLNodes(String expression) {
+	public List<Node> findAllXMLNodes(String expression) {
 
-		NodeList result = null;
+		List<Node> result = new ArrayList<Node>();
 		try {
 			XPathExpression expr = xpath.compile(expression);
-			result = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+			for( int ix = 0 ; ix < documents.size() ; ix ++) { 
+				NodeList _r = (NodeList) expr.evaluate(documents.get(ix), XPathConstants.NODESET);
+				for( int rx = 0 ;  rx < _r.getLength() ; rx++) {
+					result.add( _r.item( rx));
+				}
+			}
 		} catch (XPathExpressionException e) {
 			Util.fatal(RNGMetadataAPI.class, e);
 		}
+		return result;
+	}
+	
+	public List<Node> findAllXMLNodesOrDie(String expression) {
 
-		if (result == null)
-			Util.fatal(RNGMetadataAPI.class, "Error processing xml file " + file + ". null returned " + expression);
+		List<Node> result = findAllXMLNodes(expression);
+		if (result.size() == 0)
+			Util.fatal(RNGMetadataAPI.class, "XML expression not found " + expression);
 		return result;
 	}
 
+	
 	public Node findDefinitionNode(Node nd) {
 
 		if (!nd.getNodeName().equals("ref"))
@@ -192,6 +215,38 @@ public class RNGMetadataAPI {
 			Util.fatal(RNGMetadataAPI.class, "Definition of " + defName + " not found");
 
 		return node;
+	}
+
+	public List<Node> findAllReferencingNodes(Node nd) {
+
+		if (!nd.getNodeName().equals("define"))
+			Util.fatal(RNGMetadataAPI.class, "Wrong XML element. Got '" + nd.getNodeName() + "' but 'define' was expected");
+
+		String defName = getAttrValue("name", nd);
+		List<Node> nodes = findAllXMLNodesOrDie("//ref[@name='" + defName + "']");
+		return nodes;
+	}
+	
+	public NodeType findTypeOfParentNode( Node node) {
+		//todo: clean the code
+		if ( node.getParentNode().getNodeName().equals("element")) {
+			return MetaData.XML_ELEMENT ;
+		}
+		if ( node.getParentNode().getNodeName().equals("attribute")) {
+			return MetaData.XML_ATTRIBUTE ;
+		}
+		if  ( node.getParentNode().getNodeName().equals("define")){ 
+			Node _n = findAllReferencingNodes( node.getParentNode()).get( 0);
+			if ( _n.getParentNode().getNodeName().equals("element")) {
+				return MetaData.XML_ELEMENT ;
+			}
+			if ( _n.getParentNode().getNodeName().equals("attribute")) {
+				return MetaData.XML_ATTRIBUTE ;
+			}
+			return null;
+		}
+		return null; 
+		
 	}
 
 	/**
@@ -213,7 +268,7 @@ public class RNGMetadataAPI {
 			if (nod.getNodeType() != Node.TEXT_NODE && nod.getNodeType() != Node.COMMENT_NODE) {
 
 				if (nod.getNodeName().equals("ref")) {
-					//todo: we can have infinite loop
+					// todo: we can have infinite loop
 					List<Node> newNodes = getAllNonTextChildElements(findDefinitionNode(nod));
 					nodes.add(nod); // note that we add reference node <ref
 									// name='xxx'> also into the list
@@ -248,28 +303,33 @@ public class RNGMetadataAPI {
 		return nodes;
 	}
 
-	public MetaData createProperty(Node nd) {
+	public List<MetaData> createProperty(Node nd) {
 
-		MetaData prop = null;
+		List<MetaData> propList = new ArrayList<RNGMetadataAPI.MetaData>();
 
 		if (nd.getNodeName().equals("ref")) {
 			// todo: check
-			Util.fatal(RNGMetadataAPI.class, "do not know how to create property from ref... should not come here");
+			Node newNode = findDefinitionNode(nd);
+			propList.add(createMetaDataObject(newNode, false));
+			Util.log(RNGMetadataAPI.class, "New feature part of GROUP-thing. Node=" + nodeToString(nd));
+
 		} else if (nd.getNodeName().equals("define")) {
 			// todo: check
-			Util.fatal(RNGMetadataAPI.class, "do not know how to create property from define... should not come here");
+			Util.log(RNGMetadataAPI.class, "do not know how to create property from define... should not come here");
 
 		} else if (nd.getNodeName().equals("attribute")) {
 
-			prop = createMetaDataObject(nd, false);
+			MetaData prop = createMetaDataObject(nd, false);
 			prop.min = 1;
 			prop.max = 1;
+			propList.add(prop);
 
 		} else if (nd.getNodeName().equals("element")) {
 
-			prop = createMetaDataObject(nd, false);
+			MetaData prop = createMetaDataObject(nd, false);
 			prop.min = 1;
 			prop.max = 1;
+			propList.add(prop);
 			// todo: check cardinality
 
 			// } else if (nd.getNodeName().equals("data")) {
@@ -277,7 +337,8 @@ public class RNGMetadataAPI {
 			//
 		} else if (nd.getNodeName().equals("choice")) {
 
-			prop = createMetaDataObject(nd, false);
+			MetaData prop = createMetaDataObject(nd, false);
+			propList.add(prop);
 			// Util.fatal(RNGMetadataAPI2.class,"Choice group not implemented. ")
 			// ;
 
@@ -289,32 +350,47 @@ public class RNGMetadataAPI {
 		} else if (nd.getNodeName().equals("optional")) {
 			Node _node = getTheOnlyChildEACNode2(nd); // getTheOnlyChildNode(nd,
 														// Node.ELEMENT_NODE);
-			prop = createMetaDataObject(_node, false);
+			MetaData prop = createMetaDataObject(_node, false);
 			prop.min = 0;
 			prop.max = 1;
+			propList.add(prop);
 
 		} else if (nd.getNodeName().equals("zeroOrMore")) {
 
 			Node _node = getTheOnlyChildEACNode2(nd); // getTheOnlyChildNode(nd,
 														// Node.ELEMENT_NODE);
-			prop = createMetaDataObject(_node, false);
+			MetaData prop = createMetaDataObject(_node, false);
 			prop.min = 0;
 			prop.max = MetaData.UNDEFINED;
+			propList.add(prop);
 
 		} else if (nd.getNodeName().equals("oneOrMore")) {
 
 			Node _node = getTheOnlyChildEACNode2(nd); // getTheOnlyChildNode(nd,
 														// Node.ELEMENT_NODE);
-			prop = createMetaDataObject(_node, false);
+			MetaData prop = createMetaDataObject(_node, false);
 			prop.min = 1;
 			prop.max = MetaData.UNDEFINED;
+			propList.add(prop);
 
+		} else if (nd.getNodeName().equals("group")) {
+
+			List<Node> kids = getAllNonTextChildElements(nd);
+			for (Node kid : kids) {
+				// todo: not tested
+
+				List<MetaData> prop = createProperty(kid);
+				for (MetaData md : prop) {
+					propList.add(md);
+				}
+
+			}
 		} else {
 
 			Util.fatal(RNGMetadataAPI.class, "Unknown node " + nd.getNodeName());
 		}
 
-		return prop;
+		return propList;
 	}
 
 	/**
@@ -348,16 +424,16 @@ public class RNGMetadataAPI {
 
 		MetaData.NodeType type = null;
 		boolean isChoiceGroup = false;
-		
+
 		// todo: add choice group
 		if (node.getNodeName().equals("attribute")) {
-			
+
 			type = MetaData.XML_ATTRIBUTE;
-			
+
 		} else if (node.getNodeName().equals("element")) {
 
 			type = MetaData.XML_ELEMENT;
-		
+
 		} else if (node.getNodeName().equals("choice")) {
 
 			type = MetaData.XML_ELEMENT;
@@ -367,34 +443,35 @@ public class RNGMetadataAPI {
 			_meta.nodeType = MetaData.XML_ELEMENT; //
 			_meta.isChoiceGroup = true;
 			List<Node> kids = getAllNonTextChildElements(node);
-			
+
 			for (Node k : kids) {
-				System.err.println(" ==== " + nodeToString(k));
+				//System.err.println(" ==== " + nodeToString(k));
 				if (k.getNodeName().equals("element")) {
-					MetaData prop = createProperty(k);
-					
-					_meta.addProperty(prop);
+					List<MetaData> prop = createProperty(k);
+
+					_meta.addAllProperty(prop);
 				}
 
 			}
-			return  _meta;
+			return _meta;
 		} else {
-			Util.fatal(RNGMetadataAPI.class, "cannot create node for " + node.getNodeName());
+			Util.fatal(RNGMetadataAPI.class, "cannot create node for " + node.getNodeName() + " node " + nodeToString(node)
+					+ " parent=" + nodeToString(node.getParentNode()));
 		}
-		
-		
-		List<Node> kids = getAllNonTextChildElements(node);		
+
+		List<Node> kids = getAllNonTextChildElements(node);
 
 		Node aName = node.getAttributes().getNamedItem("name");
 		MetaData mdata;
-		
-		if ( aName == null ) { 
-			
-			mdata = new MetaData("ANYNAME", type, 0, 1);// optional.. anonymous choice
-			
+
+		if (aName == null) {
+
+			mdata = new MetaData("ANYNAME", type, 0, 1);// optional.. anonymous
+														// choice
+
 		} else {
-			
-			mdata = new MetaData(getAttrValue("name", node), type, 0, 1);		
+
+			mdata = new MetaData(getAttrValue("name", node), type, 0, 1);
 		}
 
 		mdata.isChoiceGroup = isChoiceGroup;
@@ -404,8 +481,8 @@ public class RNGMetadataAPI {
 
 			for (Node kid : propertyKids) {
 				if (kid.getNodeType() != Node.COMMENT_NODE) {
-					MetaData prop = createProperty(kid);
-					mdata.addProperty(prop);
+					List<MetaData> prop = createProperty(kid);
+					mdata.addAllProperty(prop);
 				}
 			}
 
@@ -418,11 +495,11 @@ public class RNGMetadataAPI {
 	 */
 
 	public String getAttrValue(String name, Node node) {
+		
 		Node aName = node.getAttributes().getNamedItem(name);
 		if (aName == null || aName.getNodeValue() == null || aName.getNodeValue().length() == 0)
-			Util.fatal(RNGMetadataAPI.class, "element " + node.getNodeName() + " do not have attribute " + name +
-					" node="+nodeToString(node)+
-					" parentNode="+nodeToString(node.getParentNode()));
+			Util.fatal(RNGMetadataAPI.class, "element " + node.getNodeName() + " do not have attribute " + name + " node="
+					+ nodeToString(node) + " parentNode=" + nodeToString(node.getParentNode()));
 		return aName.getNodeValue();
 	}
 
@@ -554,6 +631,10 @@ public class RNGMetadataAPI {
 
 					String datType = getAttrValue("type", nd);
 					data.dataType = datType;
+					if ( findTypeOfParentNode(nd)== MetaData.XML_ELEMENT) { 
+						System.err.println(">> TEST "+nodeToString( nd));
+						data.hasTextNode = true; //todo: check this and change name
+					}
 
 				} else if (nd.getNodeName().equals("text")) {
 					data.hasTextNode = true;
@@ -566,7 +647,7 @@ public class RNGMetadataAPI {
 					String value = txt.getNodeValue();
 					if (value == null || value.length() == 0)
 						Util.fatal(RNGMetadataAPI.class, "value is empty missing");
-					//data.value = value; // todo: check
+					// data.value = value; // todo: check
 					data.addChoice(value); //
 
 				} else if (nd.getNodeName().equals("choice") && hasNamedChild("value", nd)) {
@@ -669,14 +750,14 @@ public class RNGMetadataAPI {
 
 	public static void main(String[] args) throws Exception {
 
-		RNGMetadataAPI app = createInstance("lsdb.rng");
+		RNGMetadataAPI app = createInstance( new String[]{"lsdb.rng"});
 
 		MetaData data = app.parseAndCreateMetadata("grammar/define/element[@name='frequency']");
 		app.printMetaData(data);
-		NodeList nodes = app.findAllXMLNodes("grammar/define/element");
-		for (int i = 0; i < nodes.getLength(); i++) {
+		List<Node> nodes = app.findAllXMLNodesOrDie("grammar/define/element");
+		for (int i = 0; i < nodes.size(); i++) {
 			System.out.println("  ");
-			app.printMetaData(app.createMetaDataObject(nodes.item(i), true));
+			app.printMetaData(app.createMetaDataObject(nodes.get(i), true));
 			System.out.println("  ");
 			System.out.println("  ");
 		}
@@ -686,7 +767,7 @@ public class RNGMetadataAPI {
 
 	public static String propertiesToString(MetaData d) {
 
-		List<MetaData> lst = d.properties ;
+		List<MetaData> lst = d.properties;
 		String s = "";
 		if (lst.size() > 0) {
 			s = lst.get(0).name;
