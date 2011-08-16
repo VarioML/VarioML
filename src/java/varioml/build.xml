@@ -35,6 +35,7 @@
         </java>
         <java jar="VarioML.jar" fork="true">
             <arg file="cafe_variome.rng"/>
+            <arg file="lsdb.rng"/>
             <arg file="cafe_variome.html"/>
         </java>
     </target>
