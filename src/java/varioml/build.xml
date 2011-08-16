@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="VarioML" default="run" basedir=".">
+    <target name ="makejar" description="Create a jar for the project">
+        <jar jarfile="VarioML.jar"    basedir="bin">
+            <fileset dir="bin">  
+                <include name="*.class"/>
+            </fileset>
+            <zipgroupfileset dir="lib" includes="*.jar" /> 
+            <manifest>
+                <attribute name="Main-Class" value="org.varioml.doc.HTMLDocumentGenerator"/>
+            </manifest>
+            
+        </jar>
+    </target>
+    
+    <target name="run" depends="makejar">
+        <java jar="VarioML.jar" fork="true"  >
+            <arg file="lsdb.rng"/>
+            <arg file="lsdb.html"/>
+        </java>
+        <java jar="VarioML.jar" fork="true"  >
+            <arg file="cafe_variome.rng"/>
+            <arg file="cafe_variome.html"/>
+        </java>
+    </target>
+</project>
