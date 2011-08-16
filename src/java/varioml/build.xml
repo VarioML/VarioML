@@ -3,12 +3,17 @@
 
     <target name="compile">
         <mkdir dir="bin"/>
-        <javac destdir="bin" >
-            <src path="src"/>
+        
+        <javac destdir="bin" srcdir="src">
+            <classpath >
+                <fileset dir="lib">
+                    <include name="*.jar"/>
+                </fileset>                
+            </classpath>
         </javac>
+        
     </target>
-    
-    
+
     <target name="makejar" description="Create a jar for the project" depends="compile">
 
         <jar jarfile="VarioML.jar" basedir="bin">
