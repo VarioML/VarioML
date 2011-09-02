@@ -11,12 +11,11 @@ import org.simpleframework.xml.Root;
 @Namespace(reference="http://www.w3.org/2001/XMLSchema-instance",prefix="xsi")
 })
 
-@org.simpleframework.xml.Order(elements={"created","source","individual","db_xref","comment"})
-public class Lsdb {
-	//xml-element used for code generation: //lsdb
+@org.simpleframework.xml.Order(elements={"created","source","variant","db_xref","comment"})
+public class CafeVariome {
+	//xml-element used for code generation: //cafe_variome
 
-	public Lsdb(  ) {
-		super();
+	public CafeVariome(  ) {
 	}
  
 	// ===========-- id --===========
@@ -79,6 +78,16 @@ public class Lsdb {
 		return this._attr_xmlnsXsi;
 	}
  
+	// ===========-- xsi:schemaLocation --===========
+	@org.simpleframework.xml.Attribute(required=false,name="xsi:schemaLocation")
+	private String _attr_xsiSchemaLocation ;
+	public void setXsiSchemaLocationAttr( String attr_xsiSchemaLocation) { 
+		this._attr_xsiSchemaLocation = attr_xsiSchemaLocation ;
+	}
+	public String getXsiSchemaLocationAttr() { 
+		return this._attr_xsiSchemaLocation;
+	}
+ 
 	// ===========-- created --===========
 	@org.simpleframework.xml.Element(required=false,name="created") 
 	private org.varioml.util.VarioDateTime _created ;
@@ -105,20 +114,20 @@ public class Lsdb {
 		this._source.add( item);
 	}
  
-	// ===========-- individual --===========
-	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="individual") 
-	private List<Individual> _individual ;
-	public void setIndividualList( List<Individual> individual) { 
-		this._individual = individual ;
+	// ===========-- variant --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="variant") 
+	private List<Variant> _variant ;
+	public void setVariantList( List<Variant> variant) { 
+		this._variant = variant ;
 	}
-	public List<Individual> getIndividualList()  { 
-		return this._individual;
+	public List<Variant> getVariantList()  { 
+		return this._variant;
 	}
-	public void addIndividual(Individual item ) { 
-		if ( this._individual == null ) { 
-			this._individual = new ArrayList<Individual>();
+	public void addVariant(Variant item ) { 
+		if ( this._variant == null ) { 
+			this._variant = new ArrayList<Variant>();
 		}
-		this._individual.add( item);
+		this._variant.add( item);
 	}
  
 	// ===========-- db_xref --===========

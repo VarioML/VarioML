@@ -1,10 +1,14 @@
 package org.varioml.util;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+import org.simpleframework.xml.Serializer;
+import org.varioml.data.Lsdb;
+import org.varioml.data.Source;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -76,4 +80,16 @@ public class XMLUtil {
 	}
 
 
+	public static void write(Object cls, String fileName) {
+		
+		final Serializer ser = Util.createSerializer();	
+		final File fileOut = new File(fileName);
+		try {
+			ser.write(cls, fileOut);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Util.fatal(XMLUtil.class, e.getMessage());
+		}
+
+	}
 }

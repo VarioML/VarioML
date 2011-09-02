@@ -672,7 +672,15 @@ public class GenerateSimpleXMLCode {
 			 } 
 		};  
 		
-		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
+		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("cafe_variome_all.xml");
+		xu.printExampleElements(typeMap);
+		xu.generateCode("org.varioml.data.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
+			{put("source","Source");};
+		})); // size=8 2011-08-29 20:37:47
+		if ( true ) return;
+		
+		
+		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 		xu.printExampleElements(typeMap);
 
 		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
