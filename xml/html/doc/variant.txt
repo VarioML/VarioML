@@ -1,0 +1,43 @@
+
+Variant. Typically has the following information:
+
+* type - DNA,cDNA,RNA,AA   
+* gene 
+* ref_seq - reference sequence 
+* name - name of variant, preferrably using the HGVS nomenclature  
+* consequence - consequence (list of consequences) of the variant using for example sequence or variation ontology 
+* pathogenicity 
+* phenotype - known phenotypic consequence 
+* variant_detection - variant detection method 
+* restriction_site - site of restriction enzyme
+* seq_changes - effects of variant on overlapping sequence levels/features 
+* aliases - alternative representations of the variant 
+
+**Example:**
+
+
+     	<variant diploid_count='1'>
+     		<gene source='HGNC' accession='AIRE'/>
+     		<ref_seq source='IDRefSeq' accession='D0003' />
+     		<name scheme='HGVS'>g.4707AT</name>
+     		<exon>e1</exon>
+     		<consequence term='A point mutation in the exon 1 altering initiation codon in HSR domain '/>
+     		<seq_changes>
+     			<variant type='RNA'>
+     				<ref_seq source='IDRefSeq' accession='C0003' />
+     				<name scheme='HGVS'>r.1au</name>
+     				<consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/>
+     				<seq_changes>
+     					<variant type='AA'>
+     						<ref_seq source='UniProt' accession='O43918' />
+     						<name scheme='HGVS'>p.Met1Leu</name>
+     					</variant>
+     				</seq_changes>
+     			</variant>
+     		</seq_changes>
+     	</variant>
+     
+     
+
+
+

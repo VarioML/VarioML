@@ -1,0 +1,2 @@
+
+Abstract element which has annotations (i.e. db_xrefs and comments)

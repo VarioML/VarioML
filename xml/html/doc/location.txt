@@ -1,0 +1,20 @@
+
+Location of variant on a reference sequence/genomic build
+
+**Example:**
+
+     <location>
+       <ref_seq source="embl" accession="ABC1023345"/>
+       <start>111111</start>
+       <end>111112</end>
+     </location>
+     
+     <location>
+       <ref_seq accession="build36"/>
+       <chr>21</chr>
+       <start>111111</start>
+       <end>111112</end>
+     </location>
+     
+
+

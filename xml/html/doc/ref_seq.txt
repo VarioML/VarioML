@@ -1,0 +1,10 @@
+
+Database cross reference for reference sequence.
+
+Can include other database cross-references and annotations.
+
+
+**Example:**
+
+     <ref_seq source="genbank" accession="NG_007088.1"/>
+

@@ -1,0 +1,45 @@
+
+Single data submission batch element for individual data. The batch contains:
+
+* id,uri - optional submission attributes   
+* created - optional timestamp when data submission batch was created   
+* source - information on source(s) of submission. Submitting source
+* list of individuals
+
+
+**Example:**
+
+     <lsdb xmlns="http://gen2phen.org/varioml/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:dc="example.org" xsi:noNamespaceSchemaLocation="lsdb.xsd">
+         <created>2000-01-12T12:13:14Z</created>
+         <source id="AIREbase" version="1.2" uri="http://www.uta.fi/imt/bioinfo/AIREbase/">
+             <name>DatabaseXYZ</name>
+             <url>http://www.uta.fi/imt/bioinfo/AIREbase/</url>
+             <contact>
+                 <name>Matti Meikäläinen</name>
+                 <address>Institute for Molecular Medicine</address>
+             </contact>
+             <acknowledgement>
+                 <name>European Union</name>
+                 <grant_number accession="23230001"/>
+             </acknowledgement>
+         </source>
+     
+         <individual id="xyz">
+             <gender code="2"/>
+             <variant>
+                 <ref_seq accession="xyz"></ref_seq>
+                 <name scheme="HGVS">c.1343GT</name>
+             </variant>
+         </individual>
+     
+         <individual id="abce">
+             <gender code="2"/>
+             <variant>
+                 <ref_seq accession="xyz"></ref_seq>
+                 <name scheme="HGVS">c.1343GC</name>
+             </variant>
+         </individual>
+         
+     </lsdb>
+     

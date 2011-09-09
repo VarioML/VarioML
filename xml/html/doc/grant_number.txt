@@ -1,0 +1,10 @@
+
+Grant number
+
+**Example:**
+
+     <acknowledgement>
+     	<name>EU</name>
+     	<grant_number accession="00001"/>
+     </acknowledgement>
+     

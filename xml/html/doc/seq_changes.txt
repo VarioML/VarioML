@@ -1,0 +1,12 @@
+
+Related sequence changes on overlapping sequence levels and features. 
+
+
+Element has recursive list of sequence variants of type RNA or AA. The Sub-variant element differ from the main variant element in a following way:
+
+
+*  type has only values RNA and AA  
+*  ref_seq is optional 
+*  gene is missing 
+
+

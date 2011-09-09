@@ -1,0 +1,13 @@
+
+Name of variant
+
+
+
+Element has following optional attributes:
+**scheme** - naming scheme, which should typically be HGVS.
+
+**Example:** 
+
+     <name type="DNA" scheme="HGVS">
+          c.755G\A
+     </name>

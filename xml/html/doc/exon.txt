@@ -1,0 +1,9 @@
+
+Exon has optional attributes **source**, **accession**, and
+**transcript_ref**, which can be used for crossreference purposes. Exon number is given in text node.
+
+
+**Example:**
+
+     <exon>01</exon>   
+

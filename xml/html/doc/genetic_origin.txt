@@ -1,0 +1,27 @@
+
+Genetic origin of variation. Has following information:
+
+* term - ontology term for origin of variant (denovo, sporadic, inherited)   
+* source - parental origin of variation (paternal, maternal) 
+* evidence code - evidence code for the observation
+* list of individuals
+* Genetic origin and source are evidence ontology terms.
+* Controlled vocabulary terms for genetic origin:
+* inherited
+* sporadic
+* de novo
+
+*N.B: Standardization of this list is pending.* See:
+[lsdb-controlled-vocabulary-terms
+](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms)
+
+
+**Example:** 
+
+     <genetic_origin term="inherited">
+        <source term="paternal"/>
+        <evidence_code term="inferred"/>                                
+     </genetic_origin>
+     
+
+

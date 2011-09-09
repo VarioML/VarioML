@@ -1,0 +1,6 @@
+
+Abstract class for identifiables 
+
+*id - unqiue id
+*uri - uri of the identifiable    
+

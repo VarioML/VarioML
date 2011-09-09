@@ -1,0 +1,12 @@
+
+Reference and variant sequence strings. Accession number of reference sequence is given in ref_seq element (see the variant)
+
+
+**Example:**
+
+     <sequence>
+         <reference>atttgatcgttc</reference>
+         <variant>atttgGtcgttc</variant>
+     </sequence>
+     
+     

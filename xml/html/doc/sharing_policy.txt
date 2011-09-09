@@ -1,0 +1,13 @@
+
+Data sharing policy. Following access policy types are used:
+closedAccess,embargoedAccess,restrictedAccess and openAccess
+
+Adopted from [OpenAIRE specification](http://wiki.surffoundation.nl/display/standards/info-eu-repo/#info-eu-repo-AccessRights)  
+
+**Example:**
+
+        <sharing_policy type="openAccess">
+            <embargo_end_date>2002-12-12</embargo_end_date>
+            <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/" term="Creative commons"/>
+        </sharing_policy>
+

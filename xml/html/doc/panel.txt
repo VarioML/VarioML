@@ -1,0 +1,54 @@
+
+Panel. Unspecified group of individuals. Has following information besides properties inherited from AbstractObservation target:
+
+*frequency - frequency of given variant or variant set 
+*individuals - list of individuals beloning to the panel
+
+
+**Example:**
+
+Frequency for existence of two alleles.
+
+        <panel>
+             <frequency samples="224" type="allele">
+                 <freq>0.763</freq>
+             </frequency>
+             <population type="group" term="El Salvadorans"/>
+             <population type="ethnic" term="Mestizo">
+                 <comment><text>Amerindian and European descent</text></comment>
+             </population>
+             <variant>
+                 <ref_seq accession="NM_000777"/>
+                 <name>g.6986AG</name>                                    
+             </variant>
+             <variant>
+                 <ref_seq accession="NM_000777"/>
+                 <name>g.1289TG</name>                                    
+             </variant>
+         </panel>
+  
+
+
+Note also that also variant specific frequency can be given as usual:
+
+         <panel>      
+             <population type="group" term="Yorubans"/>
+             <population type="region" term="Nigeria"/>
+             <variant>
+                 <ref_seq accession="NM_000777"/>
+                 <name>g.6986AG</name>                                                
+                 <frequency samples="50" type="allele"> 
+                     <freq>0.06</freq>
+                 </frequency>
+             </variant>
+         </panel>
+
+
+
+
+**Usage of the format must be agreed on separately.**
+
+
+
+
+

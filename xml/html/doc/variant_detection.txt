@@ -1,0 +1,53 @@
+
+Techniques used to detect the variant.
+
+Variant detection method. Element has attributes: 
+
+* sequence template, which can be either DNA, RNA, cDNA or AA
+* detection technique
+
+Optional element protocol_id (of type DbXRef) has reference to actual detection protocol.
+
+Controlled vocabulary terms for detection techniques:
+
+* **Not Known:** The information has not been recorded or provided
+* **Not Specified:** Test information cannot be determined
+* **ARMS
+* **BESS:** Base Excision Sequence Scanning
+* **CF20:** CF Common Mutation Test
+* **CF29:** Analysis of 29 mutations using the Elucigene CF29 kit
+* **CMC:** Chemical Mismatch Cleavage
+* **CSCE:** Conformation sensitive capillary electrophoresis
+* **DGGE:** Denaturing-Gradient Gel-Electrophoresis
+* **DHPLC:** Denaturing High-Performance Liquid Chromatography
+* **DOVAM:** Detection Of Virtually All Mutations (SSCA variant)
+* **DSCA:** Double-Strand DNA Conformation Analysis
+* **HD:** HeteroDuplex analysis
+* **IHC:** Immuno-Histo-Chemistry
+* **Loss of heterozygosity analysis
+* **mPCR:** multiplex PCR
+* **Meta-PCR
+* **MS-PCR:** Mutagenically separated PCR
+* **MAPH:** Multiplex Amplifiable Probe Hybridisation
+* **MLPA:** Multiplex Ligation-dependent Probe Amplification
+* **NGS:** Next Generation Sequencing
+* **PAGE:** Poly-Acrylamide Gel-Electrophoresis
+* **PCR:** Polymerase Chain Reaction
+* **PTT:** Protein Truncation Test
+* **RT-PCR:** Reverse Transcription and PCR
+* **RNA:** RNA work performed
+* **SEQ:** SEQuencing
+* **SNPlex:** The SNPlex™ Genotyping System from ABI
+* **Southern:** Southern Blotting
+* **SSCA:** Single-Strand DNA Conformation Analysis (SSCP)
+* **SSCP/Heteroduplex
+* **Western:** Western Blotting
+
+*Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
+
+**Example:** 
+
+     <variant_detection template="DNA" technique="DHPLC"/>
+
+
+

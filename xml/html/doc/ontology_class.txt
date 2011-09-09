@@ -1,0 +1,25 @@
+
+Ontology class. Supertype for ontology terms (most of the VarioML elements are ontology or evidence ontology terms) 
+
+
+*source - name (abbreviation) of system where term is defined e.g. SO (sequence ontology)
+*accession - accession number of term
+*term - ontology term
+*uri  - uri of the term
+*dbx_ref  - database cross-references
+*comment  - comments
+
+
+
+**Example:**
+
+
+     <phenotype term='Autoimmune polyglandular syndrome type 1' accession='240300' source='OMIM'>
+     	<db_xref accession="12345" source="pubmed"/>
+         <comment term='symptom'><text>Hypoparathyroidism</text></comment>
+         <comment term='symptom'><text>Addison's disease</text></comment>
+         <comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+         <comment term='symptom'><text>Malabsorption</text></comment>
+         <comment term='symptom'><text>Chronic active hepatitis</text></comment>
+     </phenotype>
+

@@ -1,0 +1,22 @@
+
+Contains information on data source. Typically specifies the source database, although the system, organization, or institution from which data is exported can also be used. 
+
+In the LSDB XML format there can be more than one source, so that information on original data providers can be included. 
+
+Element is re-used from the 
+[LRG specification](http://www.lrg-sequence.org). 
+
+**Example:**
+
+     <source id="dmudb">   
+     	<name>DMuDB, NGRL, Manchester</name> 
+     	<url>http://www.ngrl.org.uk/Manchester/projects/informatics/dmudb</url>  
+     	<contact>
+     		<name>Glen Dobson</name>
+     		<address>NGRL, Genetic Medicine, St Mary's Hospital, Oxford Road, Manchester M13 9WL</address>
+     		<phone>(+44) 0000 000 0000</phone>
+     		<fax>(+44) 0000 000 0000</fax>
+     		<email>example@nnn.nn.nnn</email>
+     	</contact>
+     </source>
+     

@@ -1,0 +1,16 @@
+
+Tissue distribution
+
+Controlled vocabulary terms for tissue distribution:
+
+* constitutional
+* mosaic
+* mosaic in germline
+
+*Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
+
+**Example:**
+
+     <tissue_distribution term="mosaic"/>
+
+

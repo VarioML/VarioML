@@ -1,0 +1,16 @@
+
+Gender of individual. Gender code is stored in the attribute 
+**'code'**. Possible values are iso5218 codes: 0,1,2 and 9 ('unknown','male','female' and 'not applicable').
+
+
+Description of gender (code: 9) can be stored into optional
+**'description'** sub-element, which is of type #type_LSDB.Evidence_ontology_term" Evidence_ontology_term.
+
+
+
+**Example:** 
+	
+    <gender code='9'>
+        <description term="XX-male"/>
+    </gender>
+

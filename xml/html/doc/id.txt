@@ -1,0 +1,8 @@
+
+Unique identifier which applies to various elements and contexts in the LSDB schema. 
+
+
+
+Can be local or assigned by a consortium.
+
+

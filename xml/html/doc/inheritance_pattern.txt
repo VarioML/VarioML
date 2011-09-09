@@ -1,0 +1,20 @@
+
+Inheritance pattern of the phenotype. Possible values for the term:  
+
+* familial  
+* familial, consanguineous parents  
+* familial, autosomal dominant 
+* familial, autosomal recessive  
+* familial, Xlinked  
+* sporadic  
+* sporadic, consanguineous parents  
+* sporadic, consanguineous parents (1st degree)  
+* sporadic, consanguineous parents (2nd degree)  
+* sporadic, consanguineous parents (3rd degree)  
+* sporadic, nonconsanguineous parents  
+* sporadic, consanguinity parents?  
+* sporadic? (parents not tested)  
+
+See: [lsdb-controlled-vocabulary-terms
+](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms)
+ 

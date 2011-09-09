@@ -1,0 +1,10 @@
+
+Date when submitted information was modified.
+
+**Example:**
+
+     <modification_date>2001</modification_date>
+     <modification_date>2001-09</modification_date>
+     <modification_date>2001-09-10</modification_date>
+     
+

@@ -1,0 +1,41 @@
+
+Actual frequency is stored in a subelement depending on value type. This type can be: decimal number, number of cases, or categorized value. 
+
+
+Frequency has the optional attribute 'samples', which can hold information on sample size. Typically this is the number of chromosomes. The calculation method type should be cross-referenced using protocol_id. 
+
+
+Frequency type can be either "allele" or "carrier", with optional subelements: 
+
+
+* population
+* Evidence_ontology_term-type 
+* evidence code 
+* protocol id
+* comment
+
+**Examples:** 
+
+
+     <frequency samples="1000" >
+     	<population type="nationality" term="Finnish"/>
+     	<freq>0.2</freq>
+     </frequency> 
+     
+     <frequency><freq>0.1</freq></frequency>
+     					
+     <frequency samples="1000">
+     	<cases>11</cases>
+     </frequency>
+     
+     <frequency>
+     	<population type="region" term="Sweden"/>
+     	<category term="exist"/>
+     </frequency>      
+     			  
+     <frequency samples="1111">
+     	<population type="ethnic" term="Caucasian"/>
+     	<freq>0.12</freq>
+     	<evidence_code source="sampling_ontology" accession="abcd" term="random"/>
+     </frequency>
+     

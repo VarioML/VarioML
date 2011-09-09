@@ -1,0 +1,2 @@
+
+Define foreign nodes for extensions.

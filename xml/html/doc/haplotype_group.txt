@@ -1,0 +1,2 @@
+
+Haplotype group id. Can be used for marking up alleles which are on same phase.
