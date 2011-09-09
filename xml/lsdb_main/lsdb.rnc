@@ -265,7 +265,7 @@ VmlVariant =
     name?,
     panel*,
     variant_type*, # overlap with the class. should not used until role is clear
-    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. Also terms under SO:0001059 sequence alteration    
+    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration    
     original_id?,
     exon*,
     sequence?,
