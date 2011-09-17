@@ -1,0 +1,1072 @@
+# - File: $Id: $
+# - Made with Trang: http://www.thaiopensource.com/relaxng/trang.html
+# - notes: http://books.xmlschemata.org/relaxng/relax-CHP-13-SECT-1.html
+#
+# - This program is free software; you can redistribute it and/or
+# - modify it under the terms of the GNU General Public License.
+# - See  http://www.gnu.org/copyleft/gpl.html
+#
+# NORMALIZED VERSION
+#
+# name space http://varioml.org/xml/N/0.1
+#
+
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+default namespace vml = "http://varioml.org/xml/N/0.1"
+namespace local = ""
+namespace xhtml = "http://www.w3.org/1999/xhtml"
+
+#    0===0
+#     O=o
+#      O		============================================
+#     o=O		V a r i o M L
+#    0===0		Relax NGC schema for LSDB data transfer
+#    0===0		Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+#     O=o		============================================
+#      O
+#     o=O
+#    0===0
+#    0===0 
+
+
+start = lsdb 
+
+lsdb = 
+
+# (=)	===============================
+#  X	VmlLsdb
+# (=)	===============================
+## [% INSERT lsdb.txt %] 
+element lsdb {
+    VmlLsdb,
+    VmlForeignNodes
+}
+## [% INSERT lsdb.txt %] 
+VmlLsdb = 
+    VmlSubmission,
+    individual+,
+    VmlAnnotatable
+
+# (=)	===============================
+#  X	VmlSubmission
+# (=)	===============================
+## [% INSERT submission.txt %]
+VmlSubmission = 
+    VmlIdentifiable,
+    attribute schema_version { xsd:decimal }? ,
+    attribute submissionid_type { xsd:string}?,
+    ## Submission/creation time stamp
+    element created { xsd:dateTime }? ,    
+    ## Source(s) of submission
+    source* 
+
+# (=)	===============================
+#  X	Abstract observation target
+# (=)	===============================
+## [% INSERT abstract_observation_target.txt %]
+VmlAbstractObservationTarget = 
+    VmlIdentifiable,
+    original_id?, 
+#    , consent ?
+    role?, ## role in relationship,  subject type e.g index case...
+    relationship*, ## relationship with other targets
+    organism?,
+    strain?,
+    cultivar?,
+    phenotype*,
+    population*,
+    genotype*,
+    source?,
+    VmlAnnotatable
+
+# (=)	===============================
+#  X	Individual
+# (=)	===============================
+individual = 
+## [% INSERT individual.txt %]
+element individual { 
+    ## Individual information. (Variant report of individual)
+    VmlIndividual,
+    VmlForeignNodes,empty
+}
+## [% INSERT individual.txt %]
+VmlIndividual = 
+    gender?,
+    dob?,
+    VmlAbstractObservationTarget,
+    sharing_policy?, 
+    creation_date?,
+    modification_date?
+
+# (=)	===============================
+#  X	Panel
+# (=)	===============================
+panel = 
+## [% INSERT panel.txt %]
+element panel  { 
+    VmlPanel,
+    VmlForeignNodes
+}
+## [% INSERT panel.txt %]
+VmlPanel = 
+    attribute size { xsd:integer }?,
+    attribute type  {'sample'|'family'|'extended family'|'population'}?,
+    individual*,
+    VmlAbstractObservationTarget, 
+    sharing_policy?,
+    creation_date?,
+    modification_date?
+
+
+# (=)	===============================
+#  X	Observation (NOT USED)
+# (=)	===============================
+observations = 
+## [% INSERT observations.txt %]
+element observations  { 
+    VmlObservations,
+    VmlForeignNodes
+}
+## [% INSERT observations.txt %]
+# this is experimental and should not be used. preference is 
+# to embed features inside observation targets
+VmlObservations =
+    (panel|individual)?, # observation target
+    phenotype*, # observations
+    genotype*,
+    sharing_policy?,
+    creation_date?,
+    modification_date?
+
+# (=)	===============================
+#  X	Consent
+# (=)	===============================
+consent = 
+## [% INSERT consent.txt %]  
+element consent {
+    VmlConsent,
+    VmlForeignNodes
+}
+## [% INSERT consent.txt %]  
+VmlConsent =
+    VmlDbXRef
+
+
+# (=)	===============================
+#  X	SampleID
+# (=)	===============================
+sampleid = 
+## [% INSERT sample.txt %]  
+element sample {
+    VmlSample,
+    VmlForeignNodes
+}
+## [% INSERT sample.txt %]  
+VmlSample =
+    VmlDbXRef
+
+# (=)	===============================
+#  X	Gender
+# (=)	===============================
+gender =  
+## [% INSERT gender.txt %]
+element gender { 
+    VmlGender,
+    VmlForeignNodes
+}
+
+## [% INSERT gender.txt %]
+VmlGender = 
+    attribute code { '0' | '1' | '2' | '9' },
+    description?,
+    VmlAnnotatable
+
+# (=)	===============================
+#  X	Role (role of subject in study or in group or family relationship)
+# (=)	===============================
+role =  
+## [% INSERT role.txt %]
+element role { 
+    VmlRoleType,
+    VmlForeignNodes
+}
+
+## [% INSERT subject_type.txt %]
+VmlRoleType = 
+    VmlOntologyTerm
+# (=)	===============================
+#  X	Description
+#  X    Subject type: "Index case", "Relative of index case", "Partner of index case" 
+# (=)	===============================
+## [% INSERT description.txt %]
+
+
+description = element description {
+    VmlDescription,
+    VmlForeignNodes    
+}
+## [% INSERT description.txt %]
+VmlDescription = 
+    VmlEvidenceOntologyTerm
+
+
+# (=)	===============================
+#  X	Original ID
+# (=)	===============================
+original_id = 
+## [% INSERT original_id.txt %]  
+element original_id {
+    VmlOriginalId,
+    VmlForeignNodes
+}
+## [% INSERT original_id.txt %]  
+VmlOriginalId = 
+    VmlDbXRef
+
+# (=)	===============================
+#  X	Submitter id
+# (=)	===============================
+submitter_id = 
+## [% INSERT submitter_id.txt %]  
+element submitter_id { 
+      VmlSubmitterId
+    , VmlForeignNodes 
+}
+## [% INSERT submitter_id.txt %]  
+VmlSubmitterId =
+    VmlDbXRef
+
+# (=)	===============================
+#  X	Genotype
+# (=)	===============================
+genotype = 
+## [% INSERT genotype.txt %]
+element genotype { 
+    VmlGenotype, 
+    VmlForeignNodes    
+}
+## [% INSERT genotype.txt %] 
+VmlGenotype =  
+    VmlIdentifiable,
+    attribute subcellular_part {'nucleus'|'mitochondrial'|'chloroplast'|'other'}?, # part of panel
+    gene?,
+    ref_seq?,
+    panel*,
+    allele+,
+    consequence*,
+    pathogenicity*,
+    sequence?,
+    tissue?, # part of panel
+    variant_detection?, 
+    restriction_site?, 
+    frequency*  ,  
+    tissue_distribution?, # part of panel ?
+    sharing_policy?,
+    creation_date?,
+    modification_date?,
+    VmlAnnotatedObservation
+
+
+# (=)	===============================
+#  X	Allele
+# (=)	===============================
+allele = 
+## [% INSERT allele.txt %]  
+element allele { 
+    VmlAllele,
+    VmlForeignNodes
+}
+## [% INSERT allele.txt %]  
+VmlAllele =  
+    VmlIdentifiable,
+    variant*, # rename to variant actual variation 
+    VmlAnnotatedObservation
+    
+
+# (=)	===============================
+#  X	variant event 
+# (=)	===============================
+variant = 
+## [% INSERT variant.txt %]
+element variant { 
+    VmlVariant,
+    VmlForeignNodes 
+}
+
+# (=)	===============================
+#  X	Variant event. Single co-occurring genomic variantion event which are
+#  X    part of same variant
+# (=)	===============================
+## [% INSERT variant.txt %]  
+VmlVariant =  
+    VmlIdentifiable,
+    name,
+    variant_type*, # same as dbSNP variant class
+    exon*,  
+    #consequence*,
+    genetic_origin*,    
+    seq_changes?,
+    aliases?,
+    location*,
+    VmlAnnotatedObservation
+
+# (=)	===============================
+#  X	Consequent_variant (rename basic variant)
+# (=)	===============================
+## [% INSERT consequent_variant.txt %]  
+VmlConsequentVariant =  
+    VmlIdentifiable,
+    attribute type {'cDNA'|'RNA'|'AA'}?,
+    ref_seq?,
+    name,         
+    variant_type*, # same as variant class
+    variant_detection?,
+    seq_changes?,
+    aliases?,
+    location*,
+    VmlAnnotatedObservation
+
+# (=)	===============================
+#  X	Consequent_variantS
+# (=)	===============================
+## [% INSERT consequent_variants.txt %]
+VmlConsequentVariants = 
+    element variant {
+        VmlConsequentVariant,
+        VmlForeignNodes
+    }+,
+    VmlAnnotatedObservation
+
+# (=)	===============================
+#  X	sequence changes 
+# (=)	===============================
+seq_changes = 
+## [% INSERT seq_changes.txt %]
+element seq_changes { 
+    VmlConsequentVariants,
+    VmlForeignNodes 
+}
+
+# (=)	===============================
+#  X	Related_variants
+# (=)	===============================
+## [% INSERT related_variants.txt %]
+VmlRelatedVariants = 
+    variant+, 
+    VmlAnnotatedObservation
+    
+# (=)	===============================
+#  X	Aliases
+# (=)	===============================
+aliases = 
+## [% INSERT aliases.txt %]
+element aliases { 
+    VmlRelatedVariants, 
+    VmlForeignNodes
+}
+
+
+# (=)	===============================
+#  X	Variant name
+# (=)	===============================
+name = 
+## [% INSERT variant_name.txt %]
+element name { 
+    VmlName
+}
+## [% INSERT variant_name.txt %] 
+VmlName = 
+    attribute scheme {  text }? , 
+    text
+
+
+# (=)	===============================
+#  X	Sequence
+# (=)	===============================
+sequence = 
+## [% INSERT sequence.txt %]
+element sequence { 
+     VmlSequence,  
+     VmlForeignNodes
+}
+## [% INSERT sequence.txt %] 
+VmlSequence = 
+     element reference {  text }, element variant { text } ,  
+     VmlAnnotatable
+
+
+
+# (=)	===============================
+#  X	Reference sequence
+# (=)	===============================
+ref_seq = 
+## [% INSERT ref_seq.txt %]
+element ref_seq { 
+    VmlRefSeq, 
+    VmlForeignNodes 
+}
+## [% INSERT ref_seq.txt %]
+VmlRefSeq =
+    VmlDbXRef
+
+# (=)	===============================
+#  X	Protocol identifier
+# (=)	===============================
+protocol_id = 
+## [% INSERT protocol_id.txt %]
+element protocol_id {
+    VmlProtocolId, 
+    VmlForeignNodes 
+}
+VmlProtocolId =
+    VmlDbXRef
+
+# (=)	===============================
+#  X	Gene
+# (=)	===============================
+gene = 
+## [% INSERT gene.txt %]
+element gene { 
+    VmlGene, 
+    VmlForeignNodes    
+}
+## [% INSERT gene.txt %]
+VmlGene=
+    VmlDbXRef
+
+
+dob = 
+# date of birth
+## [% INSERT dob.txt %]
+element dob {
+   VmlDobDate
+}
+## [% INSERT modification_date.txt %]
+VmlDobDate =
+   VmlDate
+
+# (=)	===============================
+#  X	Mod and Create Date
+# (=)	===============================
+
+modification_date = 
+## [% INSERT modification_date.txt %]
+element modification_date {
+   VmlModificationDate
+}
+## [% INSERT modification_date.txt %]
+VmlModificationDate =
+   VmlDate
+    
+creation_date = 
+## [% INSERT creation_date.txt %]
+element creation_date { 
+    VmlCreationDate
+}
+## [% INSERT creation_date.txt %]
+VmlCreationDate =
+    VmlDate
+
+variant_type = 
+## [% INSERT variant_type.txt %]
+element variant_type { 
+    VmlVariantType, 
+    VmlForeignNodes
+}
+VmlVariantType =
+    VmlOntologyTerm
+
+variant_class = 
+#-- [% INSERT variant_class.txt %]
+element variant_class { 
+    VmlVariantClass, 
+    VmlForeignNodes
+}
+VmlVariantClass =
+    VmlOntologyTerm
+
+organism = 
+## [% INSERT organism.txt %]
+element organism { 
+    VmlOrganism, 
+    VmlForeignNodes
+}
+VmlOrganism =
+    VmlOntologyTerm
+
+strain = 
+## [% INSERT strain.txt %]
+element strain { 
+    VmlStrain, 
+    VmlForeignNodes
+}
+VmlStrain =
+    VmlOntologyTerm
+
+
+cultivar = 
+## [% INSERT cultivar.txt %]
+element cultivar { 
+    VmlCultivar, 
+    VmlForeignNodes
+}
+VmlCultivar =
+    VmlOntologyTerm
+
+tissue = 
+## [% INSERT tissue.txt %]
+element tissue { 
+    VmlTissue, 
+    VmlForeignNodes
+}
+VmlTissue =
+    VmlOntologyTerm
+
+
+tissue_distribution = 
+## [% INSERT tissue_distribution.txt %]
+element tissue_distribution { 
+    VmlTissueDistribution, 
+    VmlForeignNodes
+}
+## [% INSERT tissue_distribution.txt %]
+VmlTissueDistribution =
+    VmlOntologyTerm
+    
+sequence_region = 
+## [% INSERT sequence_region.txt %]
+element sequence_region { 
+    VmlSequenceRegion, 
+    VmlForeignNodes
+}
+## [% INSERT sequence_region.txt %]
+VmlSequenceRegion =
+    VmlOntologyTerm
+
+
+relationship = 
+## relationships .. NOT NEEDED
+## [% INSERT relationship.txt %]
+element relationship { 
+    VmlRelationship, 
+    VmlForeignNodes
+}
+VmlRelationship =
+    individual*,
+    panel*
+    ,VmlOntologyTerm
+
+# (=)	===============================
+#  X	Restriction site ontology term
+# (=)	===============================
+restriction_site  = 
+## [% INSERT restriction_site.txt %]
+element restriction_site { 
+    VmlRestrictionSite, 
+    VmlForeignNodes 
+}
+## [% INSERT restriction_site.txt %]
+VmlRestrictionSite =
+    VmlOntologyTerm
+
+# (=)	===============================
+#  X	Exon
+# (=)	===============================
+exon  = 
+## [% INSERT exon.txt %]
+element exon { 
+    VmlExon
+}
+## [% INSERT exon.txt %]
+VmlExon = 
+    attribute source { text }?, 
+    attribute accession { text }?, 
+    attribute transcript_ref { text }?, 
+    text
+
+# (=)	===============================
+#  X	Consequence of mutation
+# (=)	===============================
+consequence  = 
+## [% INSERT consequence.txt %]
+# Vmlconsequence.attlist &= attribute type {'Complex frameshift'|'Exon deletion'|'Exon duplication'|'Frameshift'|'In-frame deletion'|'In-frame duplication'|'In-frame insertion'|'Intronic variant'|'Missense'|'Nonsense'|'Out of frame deletion'|'Out of frame duplication'|'Out of frame insertion'|'Silent'|'Splice site variant'}
+element consequence { 
+    VmlConsequence, 
+    VmlForeignNodes 
+}
+## [% INSERT consequence.txt %]
+VmlConsequence = 
+    VmlEvidenceOntologyTerm
+
+
+# (=)	===============================
+#  X	Genetic origin
+# (=)	===============================
+genetic_origin  = 
+## [% INSERT genetic_origin.txt %]
+element genetic_origin { 
+    VmlGenetic_origin,
+    VmlForeignNodes 
+}
+## [% INSERT genetic_origin.txt %]
+VmlGenetic_origin =
+    genetic_source?,
+    VmlEvidenceOntologyTerm 
+
+# (=)	===============================
+#  X	Genetic source
+# (=)	===============================
+genetic_source  = 
+## [% INSERT genetic_source.txt %]
+element source { 
+    VmlGeneticSource
+}
+## [% INSERT genetic_origin.txt %]
+VmlGeneticSource =
+    population*,    
+    VmlEvidenceOntologyTerm
+
+
+# (=)	===============================
+#  X	Location
+# (=)	===============================
+location = 
+## [% INSERT location.txt %] 
+## 
+element location {
+    VmlLocation, 
+    VmlForeignNodes 
+}
+
+## [% INSERT location.txt %]
+
+VmlLocation =
+    ref_seq,
+    element chr { xsd:string}?,
+    element start { xsd:integer}, 
+    element end { xsd:integer }?
+
+# (=)	===============================
+#  X	Sharing policy
+# (=)	===============================
+sharing_policy = 
+## [% INSERT sharing_policy.txt %]
+element sharing_policy {
+    VmlSharingPolicy,
+    VmlForeignNodes
+}
+## [% INSERT sharing_policy.txt %]
+# see documentation: http://wiki.surffoundation.nl/display/standards/info-eu-repo/#info-eu-repo-AccessRights
+VmlSharingPolicy =
+      attribute type { 'closedAccess'|'embargoedAccess'|'restrictedAccess'|'openAccess'}, 
+      embargo_end_date?,
+      use_permission?,
+      VmlAnnotatable
+
+
+# (=)	===============================
+#  X	Embargo date
+# (=)	===============================
+embargo_end_date = 
+## [% INSERT embargo_end_date.txt %]
+element embargo_end_date {
+     VmlEmbargo_end_date
+}
+## [% INSERT embargo_end_date.txt %]
+VmlEmbargo_end_date =
+      xsd:date,
+      attribute is_undefined { 'true'}?   
+
+# (=)	===============================
+#  X	Use permission
+# (=)	===============================
+use_permission = 
+## [% INSERT use_permission.txt %]
+element use_permission { 
+    VmlUsePermission,
+    VmlForeignNodes
+}    
+VmlUsePermission =
+    VmlOntologyTerm
+
+# (=)	===============================
+#  X	Pathogenicity
+# (=)	===============================
+# Vmlpathogenicity.attlist &= attribute type {'Non-pathogenic'|'Not Known'|'Pathogenic'|'Probably Not Pathogenic'|'Probably Pathogenic'}
+    
+pathogenicity  = 
+## [% INSERT pathogenicity.txt %]
+element pathogenicity { 
+    VmlPathogenicity,
+    VmlForeignNodes 
+ }
+## [% INSERT pathogenicity.txt %]
+VmlPathogenicity =
+    attribute scope { 'individual' | 'family'| 'population' }?,
+    attribute panel_ref { VmlId}?, 
+    phenotype*, factor*,
+    VmlEvidenceOntologyTerm
+
+
+# (=)	===============================
+#  X	Factor
+# (=)	===============================
+    
+factor  = 
+## [% INSERT factor.txt %]
+element pathogenicity { 
+    VmlFactor,
+    VmlForeignNodes 
+ }
+## [% INSERT pathogenicity.txt %]
+VmlFactor =
+    VmlEvidenceOntologyTerm
+
+
+# (=)	===============================
+#  X	Haplotype group id
+# (=)	===============================
+variant_group  = 
+## [% INSERT variant_group.txt %]
+element variant_group {
+    VmlVariantGroup,
+    VmlForeignNodes 
+}
+## [% INSERT variant_group.txt %]
+# ..
+# this is experimental
+VmlVariantGroup = 
+    VmlIdentifiable ,
+    attribute orientation {'cis'|'trans'|'unknown'}?,
+    group_type?,
+    variant+,
+    frequency*,
+    pathogenicity*,
+    VmlAnnotatedObservation
+
+# (=)	===============================
+#  X	Variant detection
+# (=)	===============================
+variant_detection =  
+## [% INSERT variant_detection.txt %]
+element variant_detection { 
+    VmlVariantDetection
+}
+## [% INSERT variant_detection.txt %]
+VmlVariantDetection = 
+    attribute template { 'DNA'| 'RNA'| 'cDNA' | 'AA'},
+    attribute technique { text},
+    protocol_id?, 
+    VmlAnnotatable, 
+    VmlForeignNodes
+# VmlVariantDetection.attlist &= attribute type {'ARMS'|'CF20'|'CF29'|'CSCE'|'DGGE'|'dHPLC'|'Heteroduplex analysis'|'Loss of heterozygosity analysis'|'Meta-PCR'|'MLPA'|'MS-PCR'|'Multiplex PCR'|'Not Known'|'Not Specified'|'PCR-PAGE'|'PTT'|'RNA'|'Sequencing'|'SNPlex'|'SSCP'|'SSCP/Heteroduplex'}
+
+
+# (=)	===============================
+#  X	Database cross reference
+# (=)	===============================
+db_xref = 
+## [% INSERT db_xref.txt %]
+element db_xref { 
+    VmlDbXRef,
+    VmlForeignNodes 
+}
+
+# (=)	===============================
+#  X	Phenotype of individual
+# (=)	===============================
+phenotype = 
+## [% INSERT phenotype.txt %]
+element phenotype { 
+    VmlPhenotype
+}
+## [% INSERT phenotype.txt %]
+VmlPhenotype = 
+    inheritance_pattern?,
+    VmlEvidenceOntologyTerm,
+    VmlForeignNodes
+
+inheritance_pattern = 
+## [% INSERT inheritance_pattern.txt %]
+element inheritance_pattern { 
+    VmlInheritancePattern,
+    VmlForeignNodes
+}
+VmlInheritancePattern =
+    VmlEvidenceOntologyTerm
+    
+
+# (=)	===============================
+#  X	Frequency (of rare allele)
+# (=)	===============================
+frequency  = 
+## [% INSERT frequency.txt %]
+element frequency { 
+    VmlFrequency,
+    VmlForeignNodes
+}
+## [% INSERT frequency.txt %]
+VmlFrequency = 
+    attribute samples { xsd:int}?,
+    attribute type { 'allele'|'carrier'|'genotype' }?,
+    population*,
+    frequency_value,
+    VmlAnnotatedObservation
+    
+frequency_value =  freq_as_number | freq_as_counts | freq_as_category 
+## Frequency as a number
+freq_as_number = element freq { xsd:decimal }
+## Number of cases
+freq_as_counts = element counts { xsd:int }
+## Frequency as a category
+freq_as_category = element category { VmlOntologyTerm }
+
+
+# (=)	===============================
+#  X	Population ontology term
+# (=)	===============================
+population = 
+## [% INSERT population.txt %]
+element population {
+    VmlPopulation,
+    VmlForeignNodes
+}
+## [% INSERT population.txt %]
+VmlPopulation = 
+    ## type of population
+    attribute type {'region' |'nationality'|'ethnic'| 'race'|'organism'|'group'|'primary_language'|'language_family'|'other'|'unknown'},
+    ## population defined as ontology term
+    VmlEvidenceOntologyTerm 
+
+
+# (=)	===============================
+#  X	Evidence code
+# (=)	===============================
+evidence_code = 
+## [% INSERT evidence_code.txt %]
+element evidence_code { 
+    VmlEvidenceCode,
+    VmlForeignNodes 
+}
+VmlEvidenceCode =
+    score*   
+    ,VmlOntologyTerm
+
+
+# (=)	===============================
+#  X	Score
+# (=)	===============================
+score = 
+## [% INSERT score.txt %]
+element score { 
+    VmlScore,
+    VmlForeignNodes 
+}
+VmlScore =
+      element value {xsd:float }
+      ,VmlOntologyTerm
+
+
+# (=)	===============================
+#  X	GroupType
+# (=)	===============================
+group_type = 
+## [% INSERT group_type.txt %]
+element group_type { 
+    VmlGroupType,
+    VmlForeignNodes 
+}
+VmlGroupType =
+      VmlOntologyTerm
+
+
+# (=)	===============================
+#  X	Annotatable
+# (=)	===============================
+## [% INSERT annotatable.txt %]
+VmlAnnotatable = db_xref* , comment*
+
+# (=)	===============================
+#  X	Observation
+# (=)	===============================
+## [% INSERT observation.txt %]
+VmlObservation = evidence_code* , protocol_id*
+
+# (=)	===============================
+#  X	Annotated observation !
+# (=)	===============================
+## Not implemented- order of elements is not set.
+VmlAnnotatedObservation  =  VmlObservation, VmlAnnotatable
+# VmlGenomic_observation = VmlIdentifiable, VmlAnnotatedObservation
+
+# (=)	===============================
+#  X	Ontology term
+# (=)	===============================
+## [% INSERT ontology_term.txt %]
+ VmlOntologyTerm = VmlOntology, VmlAnnotatable
+
+# (=)	===============================
+#  X	Evidence ontology term
+# (=)	===============================
+## [% INSERT evidence_ontology_term.txt %]
+VmlEvidenceOntologyTerm = VmlOntology, VmlAnnotatedObservation 
+
+# (=)	===============================
+#  X	Comments
+# (=)	===============================
+comment = 
+## [% INSERT comment.txt %]
+element comment { 
+    VmlComment
+}
+## [% INSERT comment.txt %]
+VmlComment = 
+      attribute source { text }? 
+    , attribute accession { text}?
+    , attribute uri { VmlUri}?
+    , attribute term { text}?
+    , comment_text*
+    , VmlAnnotatedObservation
+
+
+# (=)	===============================
+#  X	Text
+# (=)	===============================
+comment_text = 
+## [% INSERT text.txt %]
+element text { 
+    VmlText
+}
+## [% INSERT text.txt %]
+VmlText =
+    attribute content_type { text}?,
+    attribute lang { text}?,
+    attribute encoding { text}?,
+    text
+
+
+# (=)	===============================
+#  X	Source
+# (=)	===============================
+source =  
+## [% INSERT source.txt %]
+element source {
+      VmlSource
+    , VmlForeignNodes
+}
+
+## [% INSERT source.txt %]
+VmlSource = 
+      VmlIdentifiable
+    , attribute version { text}?
+    , attribute date { xsd:date}?
+    , element name { text }
+    , element url { text }*
+    , contact*
+    , acknowledgement*
+    , VmlAnnotatable
+
+# (=)	===============================
+#  X	Contact
+# (=)	===============================
+## [% INSERT contact.txt %]
+contact =  element contact {
+        VmlContact
+      , VmlForeignNodes      
+       } 
+## [% INSERT contact.txt %]
+VmlContact =
+         element name { text }
+      , element url { text }*
+      , element address { text }?
+      , element phone { text }?
+      , element fax { text} ?
+      , element email { text }?
+      , attribute role { string}? # curator etc.
+      , VmlAnnotatable
+
+acknowledgement = 
+## [% INSERT acknowledgement.txt %]  
+element acknowledgement { 
+      VmlAcknowledgement
+    , VmlForeignNodes
+}
+## [% INSERT acknowledgement.txt %]  
+VmlAcknowledgement = 
+       element name { text }
+     , element grant_number { VmlDbXRef }?
+     , VmlAnnotatable
+
+
+# (=)	===============================
+#  X	Basic types
+# (=)	===============================
+
+# DATE
+## [% INSERT date.txt %]  
+VmlDate  = xsd:gYear | xsd:gYearMonth| xsd:date| xsd:dateTime
+
+# URI
+## [% INSERT uri.txt %]  
+VmlUri = xsd:anyURI
+
+# URL
+## [% INSERT url.txt %]  
+Vmlurl = xsd:anyURI
+
+# ID
+## [% INSERT id.txt %]  
+VmlId = xsd:string
+
+# ACCESSION
+## [% INSERT accession.txt %]  
+VmlAccession = xsd:string
+
+# NAME
+## [% INSERT name.txt %]  
+VmlNameStr = xsd:string
+
+# AtomEmailAddress
+## [% INSERT AtomEmailAddress.txt %]  
+#VmlAtomEmailAddress = xsd:string { pattern = ".+@.+" }
+
+## [% INSERT db_xref.txt %]
+VmlDbXRef =   
+      attribute source { text }? 
+    , attribute accession { text}
+    , attribute name { text}?
+    , attribute uri { VmlUri }? 
+    , VmlAnnotatable
+    
+## [% INSERT ontology_class.txt %]
+VmlOntology   =
+      attribute source { text }? 
+    , attribute accession { text }?
+    , attribute uri { VmlUri}?
+    , attribute term { text }
+    , element description { text }?
+
+## [% INSERT identifiable.txt %]
+VmlIdentifiable = 
+      attribute id { VmlId }?
+    , attribute uri { VmlUri }?
+
+# (=)	===============================
+#  X	Foreign Nodes
+# (=)	===============================
+# See:
+#   http://books.xmlschemata.org/relaxng/relax-CHP-11-SECT-4.html
+#
+## [% INSERT foreign.txt %]  
+VmlForeignNodes =  ( VmlForeignElements | VmlForeignAttributes )*
+## [% INSERT anything.txt %]
+VmlAnything = ( element * { VmlAnything } | attribute * { text } | text )*
+## [% INSERT foreign.txt %]
+VmlForeignElements = element * - (  local:* | vml:*  ) { VmlAnything }*
+## [% INSERT foreign.txt %]
+VmlForeignAttributes = attribute * - (  local:* | vml:*  ) { text }*
+
+
+# tccggtcggcattttgttctgagagggagagacggaacgagagagagacacacacagggctccttccc
+# schema editor: myles.byrne@helsinki.fi
+# cccgccctcccccctccctccgtcggtaccgactcacccgacaccaccaagccgcagggagggacgcc
