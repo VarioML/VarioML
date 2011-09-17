@@ -1,0 +1,12 @@
+
+Source of variant (paternal, maternal). See genetic_origin for more information.
+
+Controlled vocabulary terms for genetic source:
+
+* paternal
+* maternal 
+
+*N.B: Standardization of this list is pending.* See:
+[lsdb-controlled-vocabulary-terms
+](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms)
+

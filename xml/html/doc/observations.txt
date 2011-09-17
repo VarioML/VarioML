@@ -1,0 +1,16 @@
+
+Abstract type. See subtypes for the documentation. Observation which has evidence code and observation protocol (dbxref).
+
+**Example:**
+
+     <genetic_origin term="paternal">
+       <evidence_code term="inferred"/>            
+     </genetic_origin>
+                 
+     <phenotype term="Osteogenesis Imperfecta" >
+       <evidence_code term="assessed by clinician"/>
+       <protocol_id source="protocoldb_xyz" accession="XYZ0001"/>
+     </phenotype>
+     
+
+

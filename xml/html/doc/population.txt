@@ -1,0 +1,30 @@
+
+Information related to population group the individual belongs to. 
+
+Population element has the "type" attribute which indicates the selection criteria of the population, using the values:
+
+
+* ethnic
+* region 
+* race 
+* other 
+* unknown
+
+The attribute is informative: the actual type of population should be defined in the source ontology (if it is used).
+
+**Example:** 
+
+     <population type="ethnic" term="Caucasian"/>                    
+     
+     <population type="ethnic" term="Caucasian"> 
+     	<evidence_code source="example_ontology_term" accession="abcd" term="ethnicity of mother"/>
+     </population>
+     
+     <population type="ethnic" term="Asian" > 
+     	<evidence_code source="example_ontology_term" accession="abcd" term="ethnicity of father"/>
+     </population>
+     
+     <population type="region" term="Ahvenanmaa" source="ISO 3166"  accession="ISO 3166-2:AX"> 
+     	<evidence_code term="place of birth"/>
+     </population>
+     

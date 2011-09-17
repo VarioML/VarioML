@@ -1,0 +1,17 @@
+
+Abstract observation target. Contains information which is common to all observation targets like individuals and panels.
+
+
+
+* id,uri - optional unqiue identifiers   
+* original_id - optional source identifier as used in source system  
+* organism 
+* phenotypes -list of phenotypes 
+* populations - list of population groups target belongs to 
+* variants -list of variants targes has 
+* source - original source of the information
+
+
+
+
+

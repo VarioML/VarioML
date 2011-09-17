@@ -1,0 +1,2 @@
+
+Parental origin of variant, e.g. maternal and paternal. See: [LSDB Controlled Vocabulary terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms)

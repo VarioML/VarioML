@@ -1,0 +1,30 @@
+
+Aliases or alternative legacy definitions (names) of the variant. 
+
+
+
+Element has list of sequence variants (recursive data structure) which can be seen as aliases of the main variant. Typically the variants are annotated against different reference sequences, and/or their name is based on a different naming scheme.
+
+**Example:**
+
+
+       <variant>
+            <ref_seq source="genbank" accession="NG_001337.2"></ref_seq>
+            <name scheme="HGVS">g.22048CG</name>
+            <aliases>
+                <variant>
+                    <ref_seq accession="NG_002335.2"/>
+                    <name>g.1400GC</name>                    
+                </variant>
+                <variant>
+                    <ref_seq accession="NG_007072.2"/>
+                    <name>g.14034GC</name>
+                </variant>
+                <variant>
+                    <ref_seq accession="NG_007088.1"/>
+                    <name>g.28259GC</name>
+                </variant>                
+            </aliases>
+            
+            <db_xref  source="dbsnp" accession="rs13"/>
+        </variant>

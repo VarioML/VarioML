@@ -1,0 +1,32 @@
+
+Individual or patient
+
+
+**Example:**
+
+        <individual>
+             <gender code="2" />
+             <phenotype term="Osteogenesis Imperfecta" >
+             </phenotype>
+             <variant type="cDNA">
+                 <gene source="HGNC" accession="COL1A1" />
+                 <ref_seq accession="NG_007400.1" />
+                 <name scheme="HGVS">c.579delT</name>
+                 <genetic_origin term="paternal">
+                     <evidence_code term="inferred"/>            
+                 </genetic_origin>
+                 <sharing_policy type="openAccess">
+                     <embargo_end_date>2002-12-12</embargo_end_date>
+                     <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/" term="Creative commons"/>
+                 </sharing_policy>
+                             
+                 <comment>
+                     <text>Variant inherited from affected father</text>
+                 </comment>
+                           
+             </variant>
+         </individual>
+     
+
+
+

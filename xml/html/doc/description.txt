@@ -1,0 +1,8 @@
+
+Description of gender. Used when geneder code i 9
+
+**Example:** 
+	
+    <gender code='9'>
+		<description term="XX-male"/>
+	</gender>

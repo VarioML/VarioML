@@ -1,0 +1,10 @@
+
+Abstract data type for database cross references.
+
+
+Can include other database cross-references and annotations.
+
+
+**Examples:** 
+
+      <db_xref source="pubmed" accession="16965330"/>

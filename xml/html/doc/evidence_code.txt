@@ -1,0 +1,18 @@
+
+Evidence code is an ontology term (i.e. has optional source and accession attributes), which provides information related to the validity or the quality of observation. 
+
+dbSNP validation should be used for mutations:
+
+* Not validated (accession=0)
+* Multiple reporting (1)
+* With frequency (2)
+* Both frequency (3)
+* Submitter validation (4)
+
+**Examples:**
+
+     <evidence_code term="inferred"/> 
+     
+     <evidence_code term="confirmed" source="vario"/>
+     
+

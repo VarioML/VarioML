@@ -1,0 +1,9 @@
+
+URI for various elements and contexts in the LSDB schema.
+
+
+
+In context of ontology term:
+Note that the uri should be used only for resolving the ontology term, not for the content of implementing element (e.g. phenotype).
+
+ 

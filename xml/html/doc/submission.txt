@@ -1,0 +1,3 @@
+
+Asbtract submission element. Contains information which is common to all submission entries like lsdb and vreport elements. See the subtypes for documentation.
+

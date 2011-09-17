@@ -1,0 +1,31 @@
+
+Abstract datatype (superclass) for controlled vocabulary terms related to observations. All Evidence_ontology_term elements have:
+
+
+* optional protocol and database crossreferences - list of protocol_id and db_xref elements
+* evidence codes - list of evidence_code-elements
+
+
+In addition of properties inherited from ontology_class (like db_xref and comment)
+
+**Example:**
+
+     <genetic_origin term="inherited">
+        <source term="paternal"/>
+        <evidence_code term="inferred"/>                                
+     </genetic_origin>
+     
+     <phenotype term="Osteogenesis Imperfecta" >
+        <protocol_id accession="observation_methodXYZ" source="protocol_database"/>
+     </phenotype>
+     
+     <phenotype term='Autoimmune polyglandular syndrome type 1'>
+     	<db_xref accession="12345" source="pubmed"/>
+         <comment term='symptom'><text>Hypoparathyroidism</text></comment>
+         <comment term='symptom'><text>Addison's disease</text></comment>
+         <comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+         <comment term='symptom'><text>Malabsorption</text></comment>
+         <comment term='symptom'><text>Chronic active hepatitis</text></comment>
+     </phenotype>
+     
+     

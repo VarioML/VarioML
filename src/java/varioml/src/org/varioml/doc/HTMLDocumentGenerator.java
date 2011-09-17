@@ -127,7 +127,7 @@ public class HTMLDocumentGenerator {
 			//todo: improve this... type etc.
 			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
 		}
-		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</div>");
+		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</div><hr/>");
 
 	}
 

@@ -1,0 +1,22 @@
+
+Database cross reference where **'source'** is the name of the database or system (e.g. HUGO) and **'accession'** is the gene name (e.g.AGA).
+
+HGNC names (symbols) should be used to name genes.
+
+Can include other database cross-references and annotations.
+
+Example source:
+* HGNC
+
+
+Example accession:
+* BRACA2
+
+**Example:** 
+
+     <gene source="HGNC" accession="BRACA2" />
+     
+     <gene source="HGNC" accession="BRACA2">
+     	<db_xref accession="600185" uri="http://www.ncbi.nlm.nih.gov/omim/600185" source="OMIM"/>
+     	<db_xref accession="BRACA2" source="HGNC" uri="http://www.genenames.org/data/hgnc_data.php?hgnc_id=1101"/>
+     </gene>

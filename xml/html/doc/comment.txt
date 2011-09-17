@@ -1,0 +1,41 @@
+Comments are of type Evidence_ontology. The term 'attribute' is optional. See under description of "Evidence_ontology_term data type.
+
+Comments can contain other comments.
+
+**Examples:** 
+
+    	<comment>
+     		<text>simple comment</text>
+     	</comment>
+     	
+     	<comment source="example_ontology" term="example term">
+     		<text>my defined comment</text>
+     	</comment>
+     	
+     	<comment>
+     		<text>whatever</text>
+     		<comment>
+     				<text>my structured comment</text>
+     		</comment>
+     	</comment>
+     		  
+     	<comment>
+     		<text>whatever</text>
+     		<comment>
+     			<text>my complex structured comment</text>
+     			<evidence_code term="something"/>
+     			<db_xref accession="xyz"/>
+     		</comment>
+     	</comment> 
+     	
+     	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+     	 <comment term='symptom'><text>Hypoparathyroidism</text></comment>
+     	 <comment term='symptom'><text>Addison's disease</text></comment>
+     	 <comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+     	 <comment term='symptom'><text>Malabsorption</text></comment>
+     	 <comment term='symptom'><text>Chronic active hepatitis</text></comment>
+     	</phenotype>
+     
+     
+     
+     

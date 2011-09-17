@@ -1,0 +1,216 @@
+&lt;h2VarioML:VREPORT module&lt;/h2
+The VREPORT module extends the available terms to provide a
+simple adaption of the VarioML format for the purpose of making
+variant reports on population frequency levels.
+Where VarioML-XML is individual-centric, for locus specific and
+clinical databases, VREPORT-XML is population-centric, using the #element_panel"Panel class, for variant
+reports on population frequency levels.
+VREPORT extends the VarioML model for use with National and Ethnic Mutation Databases (NEMDBs).
+The VREPORT module schema is available https://svn.gene.le.ac.uk/gen2phen/trunk/data_formats/xml/vreports.rnc"here.
+&lt;h3 tabindex="-1" id="heading_toc_j_22"VREPORT-XML&lt;/h3
+The format differs from the core VarioML ontology in two major ways:
+
+* the main element is renamed **vreport**
+* #element_individual is replaced by <a href=
+"#element_panel">panel</a>.
+
+See examples below:
+
+&lt;h4 tabindex="-1" id="heading_toc_j_23"VREPORT XML
+Example 1&lt;/h4
+VREPORT replaces **individual** with **panel**, which specifies a population of individuals. VREPORT replaces #element_gender"gender and #element_population"population with &lt;a href=
+"#element_frequency"frequency.
+
+
+    <vreport 
+         xmlns="http://gen2phen.org/varioml/2.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation="vreports.xsd"
+         >    
+         <source id="exdb">
+             <name>Example database</name>
+             <contact>
+                 <name>Mr. Example</name>  
+             </contact> 
+         </source> 
+     
+     &lt;span style="background: GREY; color: WHITE;"
+         <panel id="0001">
+             
+             <frequency type="carrier">
+                 <category term="exist"/>
+             </frequency>
+             <population term="Finland" type="region"/>
+             
+             <variant id="1002">
+                 <gene accession="ACLY"/>
+                 <ref_seq accession="n123445"/>
+                 <name scheme="HGVS">c.12345G>A</name> 
+                
+             </variant>
+         </panel>
+         _
+     </vreport>
+     
+
+
+&lt;h4VREPORT NEMDB Example&lt;/h4
+This more complex example shows how VREPORT extends VarioML for use with National and Ethnic Mutation Databases (NEMDBs).
+
+
+<vreport 
+    xmlns="http://gen2phen.org/varioml/2.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="vreports.xsd"
+    > 
+     
+    <source > 
+        <name>FINDbase-PGx</name> 
+        <contact> 
+            <name>George Patrinos</name> 
+        </contact> 
+    </source> 
+    
+    <panel> 
+ 
+        <frequency samples="50" type="allele"> 
+            <freq>0.06</freq> 
+        </frequency> 
+        
+        <population type="group" term="Yorubans"/> 
+        <population type="region" term="Nigeria"/> 
+        <variant> 
+            <gene accession="CYP3A5"/> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+            <db_xref source="dbsnp" accession="rs776746"/> 
+            <comment term="name"><text>CYP3A5*3</text></comment> 
+        </variant> 
+        
+    </panel> 
+
+&lt;span style="background: GREY; color: WHITE;"
+    Note that frequency can also be associated with a set of alleles (the frequency of existence of both alleles at the same time)
+    _
+    
+    <panel> 
+        <frequency samples="224" type="allele"> 
+            <freq>0.763</freq> 
+        </frequency> 
+        <population type="group" term="El Salvadorans"/> 
+        <population type="ethnic" term="Mestizo"> 
+            <comment><text>Amerindian and European descent</text></comment> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.1289T>G</name>                                    
+        </variant> 
+    </panel> 
+ 
+&lt;span style="background: GREY; color: WHITE;"
+        Note that **variant** can also contain a **variant specific frequency**. Usage must be agreed upon on a case-by-case basis when setting up the data transfer protocol. 
+    _
+    
+    <panel>      
+        <population type="group" term="Yorubans"/> 
+        <population type="region" term="Nigeria"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                
+            <frequency samples="50" type="allele"> 
+                <freq>0.06</freq> 
+            </frequency> 
+            
+        </variant> 
+    </panel> 
+    
+ 
+    <panel> 
+        <frequency samples="66" type="allele"> 
+            <freq>0.11</freq> 
+        </frequency>            
+        <population type="group" term="Baka Pygmies"/> 
+        <population type="region" term="Central African Republic"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+    
+    <panel> 
+        <frequency samples="640" type="allele"> 
+            <freq>0.145</freq> 
+        </frequency> 
+        <population type="group" term="South Africans"/> 
+        <population type="region" term="Transkei area of Eastern and Western Cape"/> 
+        <population type="language_family" term="Xhosa"/> 
+        <population type="race" term="Black"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+ 
+    <panel xmlns="http://gen2phen.org/varioml/2.0" > 
+        <frequency samples="196" type="allele"> 
+            <freq>0.145</freq> 
+        </frequency> 
+        <population type="group" term="Malays"/> 
+        <population type="ethnic" term="Singapore Malays mainly from the Malay Archipelago"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+ 
+    <panel> 
+        <frequency samples="222" type="allele"> 
+            <freq>0.64</freq> 
+        </frequency> 
+        <population type="group" term="Brazilians"/> 
+        <population type="ethnic" term="'Pardo'"> 
+            <comment><text>brown/intermediate</text></comment> 
+        </population> 
+        <population type="region" term="Rio de Janeiro"></population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+ 
+    <panel > 
+        <frequency samples="224" type="allele"> 
+            <freq>0.763</freq> 
+        </frequency> 
+        <population type="group" term="El Salvadorans"/> 
+        <population type="ethnic" term="Mestizo"> 
+            <comment><text>Amerindian and European descent</text></comment> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+ 
+    <panel> 
+        <frequency samples="176" type="allele"> 
+            <freq>0.926</freq> 
+        </frequency> 
+        <population type="group" term="Yakuts"/> 
+        <population type="region" term="Village of Cheriktei in the Sakha (Yakutia) Republic"> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name>                                    
+        </variant> 
+    </panel> 
+</vreport>
+
+
+

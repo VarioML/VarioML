@@ -1,0 +1,4 @@
+
+Corresponding variant on RNA or AA levels. Has same content as variant element except gene element is missing and ref_seq is optional.
+
+
