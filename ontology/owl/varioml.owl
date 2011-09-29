@@ -1,11 +1,5 @@
 <?xml version="1.0"?>
 
-<!--
-
-  Extension of pharmacogenomics ontology for VarioML data
-
-  Experimental 
--->
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
@@ -56,6 +50,31 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://varioml.org/ontologies/varioml.owl#coexist -->
+
+    <owl:ObjectProperty rdf:about="http://varioml.org/ontologies/varioml.owl#coexist">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">coexist</rdfs:label>
+        <rdfs:comment>Continuants which co-exist in same bearer</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;isRelatedTo"/>
+        <rdfs:domain rdf:resource="&snap;Continuant"/>
+        <rdfs:range rdf:resource="&snap;Disposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -67,53 +86,73 @@
     <!-- http://ontology.dumontierlab.com/SingleNucleotidePolymorphism -->
 
     <rdf:Description rdf:about="&ontology;SingleNucleotidePolymorphism">
-        <rdfs:subClassOf rdf:resource="http://varioml.org/ontologies/varioml.owl#VML_00005"/>
+        <rdfs:subClassOf rdf:resource="http://varioml.org/ontologies/varioml.owl#Variant"/>
     </rdf:Description>
     
 
 
-    <!-- http://varioml.org/ontologies/varioml.owl#VML_00000 -->
+    <!-- http://varioml.org/ontologies/varioml.owl#Gender -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#VML_00000">
-        <rdfs:label xml:lang="en">individual</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Object"/>
-    </owl:Class>
-    
-
-
-    <!-- http://varioml.org/ontologies/varioml.owl#VML_00001 -->
-
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#VML_00001">
-        <rdfs:label xml:lang="en">panel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Object"/>
-    </owl:Class>
-    
-
-
-    <!-- http://varioml.org/ontologies/varioml.owl#VML_00002 -->
-
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#VML_00002">
+    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Gender">
         <rdfs:label xml:lang="en">gender</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
     </owl:Class>
     
 
 
-    <!-- http://varioml.org/ontologies/varioml.owl#VML_00003 -->
+    <!-- http://varioml.org/ontologies/varioml.owl#Individual -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#VML_00003">
+    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Individual">
+        <rdfs:label xml:lang="en">individual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://varioml.org/ontologies/varioml.owl#Panel -->
+
+    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Panel">
+        <rdfs:label xml:lang="en">panel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://varioml.org/ontologies/varioml.owl#Sequence -->
+
+    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Sequence">
         <rdfs:label xml:lang="en">sequence</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
     
 
 
-    <!-- http://varioml.org/ontologies/varioml.owl#VML_00005 -->
+    <!-- http://varioml.org/ontologies/varioml.owl#Variant -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#VML_00005">
+    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Variant">
         <rdfs:label xml:lang="en">&#39;variant&#39;</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://varioml.org/ontologies/varioml.owl#OBS_00000 -->
+
+    <owl:NamedIndividual rdf:about="http://varioml.org/ontologies/varioml.owl#OBS_00000">
+        <rdf:type rdf:resource="&ontology;Disease"/>
+        <rdfs:label xml:lang="en">TEST_DISEASE</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

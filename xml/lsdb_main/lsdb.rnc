@@ -292,6 +292,33 @@ VmlVariant =
 
 
 # (=)	===============================
+#  X	variant event 
+# (=)	===============================
+event = 
+## [% INSERT event.txt %]
+element event { 
+    VmlVariantEvent,
+    VmlForeignNodes 
+}
+
+# (=)	===============================
+#  X	Variant event. Single co-occurring genomic variantion event which are
+#  X    part of same variant
+# (=)	===============================
+## [% INSERT variant_fragment.txt %]  
+VmlVariantEvent =  
+    VmlIdentifiable,
+    name,
+    variant_class*,
+    exon*,  
+    consequence*,
+    genetic_origin* ,    
+    seq_changes?,
+    aliases?,
+    location*,
+    VmlAnnotatedObservation
+
+# (=)	===============================
 #  X	Consequent_variant
 # (=)	===============================
 ## [% INSERT consequent_variant.txt %]  
