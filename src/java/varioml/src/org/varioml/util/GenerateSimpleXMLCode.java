@@ -676,22 +676,29 @@ public class GenerateSimpleXMLCode {
 		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("new_variant.xml");
 		xu.printExampleElements(typeMap);
 		
-		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
-			{put("name","VariantName");};
-			{put("source","Source");};
-		})); 
-		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
-			{put("name","VariantName");};
-			{put("source","Source");};
-		})); 
+//		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
+//			{put("name","VariantName");};
+//			{put("source","Source");};
+//		})); 
+//		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
+//			{put("name","VariantName");};
+//			{put("source","Source");};
+//		})); 
+//
+//		xu.generateCode("org.varioml.data.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
+//			{put("_","_");};
+//		})); 
+//
+//		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
+//			{put("_","_");};
+//		})); 
+//
+		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
+//		xu.printExampleElements(typeMap);
 
-		xu.generateCode("org.varioml.data.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		})); 
-
-		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		})); 
+		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
+			{put("source","Source");};
+		})); // size=25 2011-06-20 21:40:02		
 
 		if ( true) System.exit(1);
 
