@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","haplotype","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","evidence_code","protocol_id","db_xref","comment"})
 public class Variant {
-	//xml-element used for code generation: //lsdb/individual/variant
+	//xml-element used for code generation: //variant_group/variant
 
 	public Variant(  ) {
 	}
@@ -100,6 +100,22 @@ public class Variant {
 	}
 	public VariantName getName() {
 		return this._name;
+	}
+ 
+	// ===========-- haplotype --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="haplotype") 
+	private List<Haplotype> _haplotype ;
+	public void setHaplotypeList( List<Haplotype> haplotype) { 
+		this._haplotype = haplotype ;
+	}
+	public List<Haplotype> getHaplotypeList()  { 
+		return this._haplotype;
+	}
+	public void addHaplotype(Haplotype item ) { 
+		if ( this._haplotype == null ) { 
+			this._haplotype = new ArrayList<Haplotype>();
+		}
+		this._haplotype.add( item);
 	}
  
 	// ===========-- panel --===========

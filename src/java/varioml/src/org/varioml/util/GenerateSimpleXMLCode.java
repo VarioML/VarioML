@@ -39,7 +39,7 @@ import org.w3c.dom.NodeList;
 @SuppressWarnings("rawtypes")
 public class GenerateSimpleXMLCode {
 
-	boolean overwrite = false;
+	boolean overwrite = true;
 	
 	final private Document doc;
 	final private XPath xpath;
@@ -644,6 +644,7 @@ public class GenerateSimpleXMLCode {
 				put("@size","int");
 				put("@scheme","String");
 				put("@source","String");
+				put("@allele","int");
 				//elements
 				put("date","org.varioml.util.VarioDate");
 				put("source","String");
@@ -671,14 +672,36 @@ public class GenerateSimpleXMLCode {
 				
 			 } 
 		};  
+
+		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("new_variant.xml");
+		xu.printExampleElements(typeMap);
 		
-		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("cafe_variome_all.xml");
+		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
+			{put("name","VariantName");};
+			{put("source","Source");};
+		})); 
+		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
+			{put("name","VariantName");};
+			{put("source","Source");};
+		})); 
+
+		xu.generateCode("org.varioml.data.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); 
+
+		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); 
+
+		if ( true) System.exit(1);
+
+		xu = GenerateSimpleXMLCode.createInstance("cafe_variome_all.xml");
 		xu.printExampleElements(typeMap);
 		xu.generateCode("org.varioml.data.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=8 2011-08-29 20:37:47
 		if ( true ) return;
-		
+
 		
 		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 		xu.printExampleElements(typeMap);
@@ -750,10 +773,10 @@ public class GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.data.Strain","//lsdb/individual/strain",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Variant","//lsdb/individual/variant",x(typeMap,new HashMap<String,String>(){ 
-			{put("name","VariantName");};
-			{put("source","Source");};
-		})); // size=93 2011-06-20 21:40:02
+//		xu.generateCode("org.varioml.data.Variant","//lsdb/individual/variant",x(typeMap,new HashMap<String,String>(){ 
+//			{put("name","VariantName");};
+//			{put("source","Source");};
+//		})); // size=93 2011-06-20 21:40:02
 
 		xu.generateCode("org.varioml.data.VariantName","//lsdb/individual/variant/name",x(typeMap,new HashMap<String,String>(){ 
 			{put(TEXT_NODE,"String");};
@@ -832,9 +855,7 @@ public class GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.data.VariantType","//lsdb/individual/variant/variant_type",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.VariantGroup","//lsdb/individual/variant_group",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		})); // size=34 2011-06-20 21:40:02
+
 		xu.generateCode("org.varioml.data.GroupType","//lsdb/individual/variant_group/group_type",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02

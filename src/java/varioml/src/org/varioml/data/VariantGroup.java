@@ -1,13 +1,19 @@
 package org.varioml.data;
 import java.util.ArrayList;
 import java.util.List;
+import org.simpleframework.xml.Namespace;
+import org.simpleframework.xml.NamespaceList;
 import org.simpleframework.xml.Root;
 
 @Root(strict=true)
+@NamespaceList({
+@Namespace(reference="http://varioml.org/xml/1.0"),
+@Namespace(reference="http://www.w3.org/2001/XMLSchema-instance",prefix="xsi")
+})
 
 @org.simpleframework.xml.Order(elements={"group_type","variant","frequency","pathogenicity","evidence_code","protocol_id","db_xref","comment"})
 public class VariantGroup {
-	//xml-element used for code generation: //lsdb/individual/variant_group
+	//xml-element used for code generation: //variant_group
 
 	public VariantGroup(  ) {
 	}
@@ -40,6 +46,36 @@ public class VariantGroup {
 	}
 	public String getUriAttr() { 
 		return this._attr_uri;
+	}
+ 
+	// ===========-- xmlns --===========
+	@org.simpleframework.xml.Attribute(required=false,name="xmlns")
+	private String _attr_xmlns ;
+	public void setXmlnsAttr( String attr_xmlns) { 
+		this._attr_xmlns = attr_xmlns ;
+	}
+	public String getXmlnsAttr() { 
+		return this._attr_xmlns;
+	}
+ 
+	// ===========-- xmlns:xsi --===========
+	@org.simpleframework.xml.Attribute(required=false,name="xmlns:xsi")
+	private String _attr_xmlnsXsi ;
+	public void setXmlnsXsiAttr( String attr_xmlnsXsi) { 
+		this._attr_xmlnsXsi = attr_xmlnsXsi ;
+	}
+	public String getXmlnsXsiAttr() { 
+		return this._attr_xmlnsXsi;
+	}
+ 
+	// ===========-- xsi:schemaLocation --===========
+	@org.simpleframework.xml.Attribute(required=false,name="xsi:schemaLocation")
+	private String _attr_xsiSchemaLocation ;
+	public void setXsiSchemaLocationAttr( String attr_xsiSchemaLocation) { 
+		this._attr_xsiSchemaLocation = attr_xsiSchemaLocation ;
+	}
+	public String getXsiSchemaLocationAttr() { 
+		return this._attr_xsiSchemaLocation;
 	}
  
 	// ===========-- group_type --===========
