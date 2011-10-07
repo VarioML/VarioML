@@ -15,8 +15,8 @@
 #
 # TODO mark non-text nodes as empty
 #
-# sequence_region renamed to seq_reqion (was not used)
 # haplotype element added into variant
+# variant added into lsdb element
 
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 default namespace vml = "http://varioml.org/xml/1.0"
@@ -51,7 +51,7 @@ element lsdb {
 ## [% INSERT lsdb.txt %] 
 VmlLsdb = 
     VmlSubmission,
-    individual+,
+    individual*,variant*,
     VmlAnnotatable
 
 # (=)	===============================

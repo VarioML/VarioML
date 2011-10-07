@@ -17,8 +17,8 @@
   
   TODO mark non-text nodes as empty
   
-  sequence_region renamed to seq_reqion (was not used)
   haplotype element added into variant
+  variant added into lsdb element
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
   <!--
@@ -54,7 +54,8 @@
     <xs:complexContent>
       <xs:extension base="vml:VmlSubmission">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
           <xs:group ref="vml:VmlAnnotatable"/>
         </xs:sequence>
       </xs:extension>
