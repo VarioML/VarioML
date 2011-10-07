@@ -309,6 +309,7 @@ element haplotype {
 VmlHaplotype =  
     VmlIdentifiable,
     attribute allele {xsd:int}?, # id of alleles (sister chromosomes)
+    variant_event+,
     VmlAnnotatedObservation
 
 

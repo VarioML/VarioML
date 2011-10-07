@@ -544,7 +544,10 @@
     <xs:annotation>
       <xs:documentation>[% INSERT haplotype.txt %]  </xs:documentation>
     </xs:annotation>
-    <xs:group ref="vml:VmlAnnotatedObservation"/>
+    <xs:sequence>
+      <xs:group maxOccurs="unbounded" ref="vml:variant_event"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
     <xs:attributeGroup ref="vml:VmlIdentifiable"/>
     <xs:attribute name="allele" type="xs:int"/>
   </xs:complexType>
