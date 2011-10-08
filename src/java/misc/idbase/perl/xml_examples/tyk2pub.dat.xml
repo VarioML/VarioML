@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='TYK2base' version='1.0' uri='http://bioinf.uta.fi/TYK2base/'>
+	<name>TYK2base</name>
+	<url>http://bioinf.uta.fi/TYK2base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='T0001'>
+	<gender code='1'/>
+	<phenotype term='TYK2 deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Clinically diagnosed as HIES, complex clinical manifestations</text></comment>
+		<comment term='symptom'><text>susceptibility to various types of microorganisms (virus, intracellular and extracellular bacteria and fungi), atopic dermatitis-like skin inflammation starting from 1 month of age, and a high amount of serum IgE (2100 IU/ml), recurrent otitis media, sinusitis, pneumonias, skin abscesses, oral candidiasis, molluscum contagiosum, and herpex simplex infection in skin and mucosa, BCG infection at 22 months and nontyphi salmonella gastroenteritis at 15 years of age.</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TYK2'/>
+		<ref_seq source='IDRefSeq' accession='D0118' />
+		<name scheme='HGVS'>g.11027_11030delGCTT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the FERM domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0118' />
+				<name scheme='HGVS'>r.209_212delgcuu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P29597' />
+						<name scheme='HGVS'>p.Cys70fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='176941' />
+ </individual>
+</lsdb>

@@ -1,0 +1,3409 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='CTSCbase' version='1.0' uri='http://bioinf.uta.fi/CTSCbase/'>
+	<name>CTSCbase</name>
+	<url>http://bioinf.uta.fi/CTSCbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='C0056'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0057'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0058'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0059'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0093'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain ' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0098'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0099'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0100'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1170C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.72c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0112'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Thailand' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1188C&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.90c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys30X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0069'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1194T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.96u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr32X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26278A&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.380a&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His127Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0074'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Mexico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1194T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.96u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr32X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0075'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North Carolina' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1194T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.96u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr32X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0089'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1194T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.96u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr32X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0048'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Puerto Rico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1214G&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.116g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp39Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0049'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Puerto Rico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1214G&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.116g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp39Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0050'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Puerto Rico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1214G&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.116g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp39Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0051'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Puerto Rico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1214G&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.116g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp39Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0084'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1243C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.145c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln49X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0085'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.1243C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 1 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.145c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln49X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0034'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Scotland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.3715_3738delTACCTTCAGAAGCTGGATACAGCA</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.199_222deluaccuucagaagcuggauacagca</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr67_Tyr75del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26356C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.458c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Thr153Ile</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0086'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.3721C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.205c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln69X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0087'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.3721C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.205c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln69X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0076'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Texas' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44514delC</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1141delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu381fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0101'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38190G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.706g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Asp236Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0120'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0121'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26313G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.415g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly139Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0036'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Bengali' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26342_26343insATGT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift insertion mutation in the exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.444_445insaugu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Val149fsX9</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0035'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Egypt' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.26356C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.458c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Thr153Ile</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0073'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29522G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.555g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp185X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0082'>
+	<gender code='2'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29533_29539delCATACAT</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift deletion mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.566_572delcauacau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Thr189fsX10</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0104'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29554T&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.587u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu196Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0105'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29554T&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.587u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu196Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0106'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29554T&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.587u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu196Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0107'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29554T&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.587u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu196Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0037'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS with transgressions of the hyperkeratotic lesions on elbows/knees</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29589dupC</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.622dupc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His208fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0009'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29595C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.628c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg210X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0010'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29595C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.628c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg210X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0060'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29595C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.628c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg210X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0119'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Indian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.29596_29597delGA</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift deletion mutation in the exon 4 leading to a premature stop codon of two new cathepsin C gene mutations in '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.629_630delga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg210fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0038'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Iran' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38188G&gt;A</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.704g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp235X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0054'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38190G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.706g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Asp236Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42621G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.872g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Cys291Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0004'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38229G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.745g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Val249Phe</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0039'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS with transgressions of the hyperkeratotic lesions on elbows/knees</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38232C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.748c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg250X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0090'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38232C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.748c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg250X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0001'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.38239A&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.755a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln252Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0102'>
+	<gender code='9'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272His</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44608A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1235a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr412Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0011'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0040'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0061'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Holland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0062'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Holland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0070'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44514delC</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1141delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu381fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0071'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44514delC</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1141delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu381fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0094'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Belgium' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0095'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Belgium' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42564G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.815g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg272Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0022'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0023'>
+	<gender code='1'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0024'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0025'>
+	<gender code='1'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0026'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0027'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0028'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0029'>
+	<gender code='1'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0030'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0031'>
+	<gender code='2'/>
+	<phenotype term='Haim-Munk syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0032'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0033'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0055'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42606A&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.857a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0012'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42605C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.856c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0013'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42605C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.856c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln286X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0091'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain ' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42629T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.880u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr294His</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0092'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain ' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.42629T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.880u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr294His</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0041'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Vietnam' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44271G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.898g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly300Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44713A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1340a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Glu447Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0006'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0007'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0008'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0043'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Iran' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0052'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0053'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44274G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.901g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0042'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS with transgressions of the hyperkeratotic lesions on elbows/knees</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Iran' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44275G&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.902g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly301Val</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0044'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS and retinitis pigmentosa</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Panama' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44283T&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.910u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr304Asn</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0088'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44285C&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.912c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr304X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0103'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44308A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.935a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gln312Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0083'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44320T&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.947u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Leu316Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44641G&gt;C</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1268g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp423Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0045'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Iran' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44329A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.956a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Glu319Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0068'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44357_44363delTTCTCCA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.984_990deluucucca</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Ser329fsX2</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0002'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0046'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Egypt' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0063'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Martinique' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0064'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Martinique' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0065'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Martinique' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0066'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Martinique' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0067'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Martinique' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44388C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1015c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Arg339Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0015'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44401_44402delCT</name>
+		<exon>e7</exon>
+		<consequence term='a deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1028_1029delcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Ser343X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0005'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44413A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1040a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr347Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0018'>
+	<gender code='1'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44413A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1040a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr347Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0019'>
+	<gender code='2'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44413A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1040a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr347Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0020'>
+	<gender code='2'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44413A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1040a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr347Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0021'>
+	<gender code='2'/>
+	<phenotype term='Prepubertal periodontitis'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44413A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1040a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr347Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0014'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44420delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1047dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Gly350fsX9</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0072'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44429delT</name>
+		<exon>e7</exon>
+		<consequence term='a deletion mutation in the exon 7 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1056delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Tyr352X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44660G&gt;C</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1287g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp429Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0096'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44586C&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1213c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405Asn</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0097'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44586C&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1213c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405Asn</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0122'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44587A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1214a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0116'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Indian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44586_44588delCAT</name>
+		<exon>e7</exon>
+		<consequence term='an inframe deletion in the exon 7 leading to an amino acid change of two new cathepsin C gene mutations in '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1213_1215delcau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0117'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Indian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44586_44588delCAT</name>
+		<exon>e7</exon>
+		<consequence term='an inframe deletion in the exon 7 leading to an amino acid change of two new cathepsin C gene mutations in '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1213_1215delcau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0118'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Indian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44586_44588delCAT</name>
+		<exon>e7</exon>
+		<consequence term='an inframe deletion in the exon 7 leading to an amino acid change of two new cathepsin C gene mutations in '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1213_1215delcau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.His405del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0016'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44659delG</name>
+		<exon>e7</exon>
+		<consequence term='a deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1286delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp429X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0017'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44659delG</name>
+		<exon>e7</exon>
+		<consequence term='a deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1286delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp429X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0047'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.44659G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0022' />
+				<name scheme='HGVS'>r.1286g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P53634' />
+						<name scheme='HGVS'>p.Trp429X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0108'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>Typical PLS and OCA1 albinism</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Egypt' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS2-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0109'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>Typical PLS and OCA1 albinism</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS2-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0110'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>Typical PLS  and OCA1 albinism</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS2-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0111'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>Typical PLS</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS2-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0003'>
+	<gender code='9'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0077'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0078'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0079'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0080'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0081'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0113'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS and OCA1</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordania' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0114'>
+	<gender code='1'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS and OCA1</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordania' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+ <individual id='C0115'>
+	<gender code='2'/>
+	<phenotype term='Papillon-Lefevre syndrome'>
+		<comment term='symptom'><text>PLS</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Jordania' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CTSC'/>
+		<ref_seq source='IDRefSeq' accession='D0022' />
+		<name scheme='HGVS'>g.IVS3-1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='a point mutation in the intron 3 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='602365' />
+ </individual>
+</lsdb>

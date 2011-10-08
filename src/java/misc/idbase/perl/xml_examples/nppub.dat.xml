@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='NPbase' version='1.1' uri='http://bioinf.uta.fi/NPbase/'>
+	<name>NPbase</name>
+	<url>http://bioinf.uta.fi/NPbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='N0010'>
+	<gender code='1'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: recurrent urinary tract  infections, hypouricemia, lymphopenia</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.3957C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to a  premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.70c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg24X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0009'>
+	<gender code='1'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: severe hemolytic anemia,  mycoplasma pneumonia, varicella foster infection, mild  ataxia, motor retardation</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.4059C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to a  premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.172c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg58X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.IVS3+1G&gt;A</name>
+		<exon>i3</exon>
+		<consequence term='point mutation in the intron 3 leading to   aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0013'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.4059C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.172c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg58X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.8091C&gt;G</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.769c&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.His257Asp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0007'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.4068G&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to aberrant  splicing '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.181g&gt;u</name>
+				<consequence term='skipping of exon 2'/>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Val61Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.8023G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an amino  acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.701g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg234Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0001'>
+	<gender code='2'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6146G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to an  amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.265g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Glu89Lys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0003'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6146G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to an amino  acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.265g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Glu89Lys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6711G&gt;C</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an amino  acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.520g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Ala174Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0012'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6427G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.349g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Ala117Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0006'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6461A&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an amino  acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.383a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Asp128Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.8023G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an amino  acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.701g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg234Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0005'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6463_6465delATC</name>
+		<exon>e4</exon>
+		<consequence term='deletion in the exon 4 leading to an amino acid  change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.385_387delauc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Ile129del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.8023G&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an amino  acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.701g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Arg234Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0011'>
+	<gender code='2'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hematological abnormalities Anemia Other clinical features: some psychomotor developmental  delay, extensive mucocutaneous candidiasis, marked  developmental delay, lymphopenia, pancytopenia, hemolytic  anemia, marked hypotonia of her upper and lower  extremities with brisk reflexes. Her tonsils were absent  and lymph nodes were not palpable</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Bahamas' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6658G&gt;C</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an  amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.467g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Gly156Ala</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0004'>
+	<gender code='9'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6760G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an  amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.569g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Gly190Val</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+ <individual id='N0002'>
+	<gender code='2'/>
+	<phenotype term='Purine nucleoside phosphorylase deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respiratory tract infections Sepsis Gastro-intestinal tract manifestations Protracted diarrhea Other clinical features: large lymphoma due to EBV  infection</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.6766A&gt;G</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an amino  acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.575a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Tyr192Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NP'/>
+		<ref_seq source='IDRefSeq' accession='D0064' />
+		<name scheme='HGVS'>g.8052delA</name>
+		<exon>e6</exon>
+		<consequence term='frameshift deletion in the exon 6 leading to a  premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0064' />
+				<name scheme='HGVS'>r.730dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P00491' />
+						<name scheme='HGVS'>p.Lys244fsX17</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='164050' />
+ </individual>
+</lsdb>

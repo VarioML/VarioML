@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"variant","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"variant","consequence","pathogenicity","frequency","evidence_code","protocol_id","db_xref","comment"})
 public class Haplotype {
 	//xml-element used for code generation: //variant_group/variant/haplotype
 
@@ -56,6 +56,54 @@ public class Haplotype {
 			this._variant = new ArrayList<Variant>();
 		}
 		this._variant.add( item);
+	}
+ 
+	// ===========-- consequence --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="consequence") 
+	private List<Consequence> _consequence ;
+	public void setConsequenceList( List<Consequence> consequence) { 
+		this._consequence = consequence ;
+	}
+	public List<Consequence> getConsequenceList()  { 
+		return this._consequence;
+	}
+	public void addConsequence(Consequence item ) { 
+		if ( this._consequence == null ) { 
+			this._consequence = new ArrayList<Consequence>();
+		}
+		this._consequence.add( item);
+	}
+ 
+	// ===========-- pathogenicity --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="pathogenicity") 
+	private List<Pathogenicity> _pathogenicity ;
+	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
+		this._pathogenicity = pathogenicity ;
+	}
+	public List<Pathogenicity> getPathogenicityList()  { 
+		return this._pathogenicity;
+	}
+	public void addPathogenicity(Pathogenicity item ) { 
+		if ( this._pathogenicity == null ) { 
+			this._pathogenicity = new ArrayList<Pathogenicity>();
+		}
+		this._pathogenicity.add( item);
+	}
+ 
+	// ===========-- frequency --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="frequency") 
+	private List<Frequency> _frequency ;
+	public void setFrequencyList( List<Frequency> frequency) { 
+		this._frequency = frequency ;
+	}
+	public List<Frequency> getFrequencyList()  { 
+		return this._frequency;
+	}
+	public void addFrequency(Frequency item ) { 
+		if ( this._frequency == null ) { 
+			this._frequency = new ArrayList<Frequency>();
+		}
+		this._frequency.add( item);
 	}
  
 	// ===========-- evidence_code --===========

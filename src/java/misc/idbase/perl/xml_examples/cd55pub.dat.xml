@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='CD55base ' version='1.0' uri='http://bioinf.uta.fi/CD55base/'>
+	<name>CD55base </name>
+	<url>http://bioinf.uta.fi/CD55base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='D0005'>
+	<gender code='9'/>
+	<phenotype term='DAF deficiency, Inab'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.2023G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the SUSHI1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.261g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Trp87X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0007'>
+	<gender code='2'/>
+	<phenotype term='DAF deficiency, Inab'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.2023G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the SUSHI1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.261g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Trp87X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0009'>
+	<gender code='2'/>
+	<phenotype term='DAF deficiency, Inab'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.5132C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to a premature stop codon in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.508c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Arg170X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0001'>
+	<gender code='9'/>
+	<phenotype term='DAF deficiency, Dr(a-)'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.6250C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.596c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Ser199Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0002'>
+	<gender code='9'/>
+	<phenotype term='DAF deficiency, Dr(a-)'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.6250C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.596c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Ser199Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0003'>
+	<gender code='9'/>
+	<phenotype term='DAF deficiency, Dr(a-)'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.6250C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.596c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Ser199Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0004'>
+	<gender code='2'/>
+	<phenotype term='DAF deficiency, Dr(a-)'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.6250C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change and aberrant splicing in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.596c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Ser199Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0008'>
+	<gender code='2'/>
+	<phenotype term='DAF deficiency, Dr(a-)'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.6250C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to an amino acid change in the SUSHI3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.596c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UNIPROT' accession='DAF_HUMAN' />
+						<name scheme='HGVS'>p.Ser199Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+ <individual id='D0006'>
+	<gender code='2'/>
+	<phenotype term='DAF deficiency, Inab'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CD55'/>
+		<ref_seq source='IDRefSec' accession='CD55_DNA' />
+		<name scheme='HGVS'>g.2025C&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to  aberrant splicing and premature termination'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='GenBank' accession='NM_000574' />
+				<name scheme='HGVS'>r.263c&gt;a,</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='125240' />
+ </individual>
+</lsdb>

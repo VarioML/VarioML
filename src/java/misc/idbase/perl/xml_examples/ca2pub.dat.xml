@@ -1,0 +1,1516 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='CA2base' version='1.0' uri='http://bioinf.uta.fi/CA2base/'>
+	<name>CA2base</name>
+	<url>http://bioinf.uta.fi/CA2base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='C0024'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>two recurrent fractures in his leg and right elbow, osteopetrosis, renal tubular acidosis, intracranial calsicifation, and severe mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2303C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.82c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gln28X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0020'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2320delC</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.99delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asp33fsX11</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0049'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Osteopetrosis, severe renal tubular acidosis, cerebral calcification and moderate to severe mental retardation</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2341T&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.120u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Tyr40X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0021'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='American' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2363_2366delTCTG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.142_145delucug</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Val48fsX8</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0025'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2366_2369delGTTT</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.145_148delguuu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Ser49fsX7</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0022'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Brazilian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2378delC</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.157delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Ala53fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0014'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Egypt' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2412delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.191dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His64fsX26</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0056'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Primary pulmonary hypertension, failure to thrive, psychomotor retardation, sepsis, metabolic acidosis, recurrent pneumonia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Arab' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2412delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.191dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His64fsX26</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0057'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Failure to thrive, developmental delay, hypotonia, recurrent pneumonias, horizontal nystagmus of the right eye, hyperchloremic metabolic acidosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Arab' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2412delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.191dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His64fsX26</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0026'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, learning difficulties</text></comment>
+	</phenotype>
+	<population term='Equador' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.2441_2442delCA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.220_221delca</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asp74fsX26</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0017'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>severe phenotype</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis, cerebral calsification</text></comment>
+	</phenotype>
+	<population term='Czechoslovakia' type='ethnic' />
+	<population term='Gypsy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10719A&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.275a&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gln92Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0045'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Gypsy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10719A&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.275a&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gln92Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0046'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Gypsy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10719A&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.275a&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gln92Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0027'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, cerebral calsification, developmental delay</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Canada' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10724C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.280c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His94Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.11386G&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.430g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gly144Arg</name>
+						<consequence term='G145R in Ref[1]'/>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0028'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, cerebral calsification, developmental delay</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Canada' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10724C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.280c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His94Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.11386G&gt;C</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.430g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gly144Arg</name>
+						<consequence term='G145R in Ref[1]'/>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0029'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>mild osteopetrosis, renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Northern Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10734G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.290g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Trp97X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0001'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Proximal and distal renal tubular acidosis, intermittent apathy, cerebral calsification, more than 12 sceletal fractures</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Belgium' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0002'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to  amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS5-1G&gt;C</name>
+		<exon>i5</exon>
+		<consequence term='a point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0003'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS5-1G&gt;C</name>
+		<exon>i5</exon>
+		<consequence term='a point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0004'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS5-1G&gt;C</name>
+		<exon>i5</exon>
+		<consequence term='a point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0012'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, symmetrical cerebral calsification and severe mental retardation</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0013'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, symmetrical cerebral calsification and severe mental retardation</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0043'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.10763C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.319c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.His107Tyr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0030'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Afghani' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.12842delA</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.505dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Gly169fsX28</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0031'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>renal tubular acidosis, osteopetrosis and mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Southern Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14131_14132insGT</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift insertion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.535_536insgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asp179fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0032'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>renal tubular acidosis, osteopetrosis and mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Southern Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14131_14132insGT</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift insertion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.535_536insgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asp179fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0033'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>renal tubular acidosis, osteopetrosis, cerebral calsification, developmental delay and mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14217delC</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift deletion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.621delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Trp208fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0034'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>renal tubular acidosis, osteopetrosis, cerebral calsification, developmental delay and mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14217delC</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift deletion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.621delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Trp208fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0047'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Blindness, severe growth impairment, mental retardation, conductive hearing loss, calsification of the basal ganglia, distal renal tubular acidosis, nephrocalcinosis, hypercalsinuria, osteopetrosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14216delC</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift deletion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.620delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Trp208fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0048'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Patient has almost identical problems and biochemical profile as his sister (C0047)</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14216delC</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift deletion mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.620delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Trp208fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0035'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>at age 4 mo developmental delay and optic atrophy,  renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Irish Traveller' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.14226_14237delinsCACA</name>
+		<exon>e6</exon>
+		<consequence term='a frame shift indel mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.630_641delinscaca</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Leu211fsX13</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0005'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, cerebral calsification, mild anemia, mild mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0006'>
+	<gender code='2'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, cerebral calsification, mild mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0007'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, cerebral calsification, mild anemia, skeletal fracture, mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0008'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, mild anemia, hepatosplenomegaly, mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0009'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0010'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, cerebral calsification, mild mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0011'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, renal tubular acidosis, mental retardation</text></comment>
+	</phenotype>
+	<population term='Caribbean Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0016'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Leu227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0044'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17669delA</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.679dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Lys227fsX12</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0036'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>renal tubular acidosis, osteopetrosis, cerebral calsification, developmental delay</text></comment>
+	</phenotype>
+	<population term='Asian Indian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17686_17687delGG</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.696_697delgg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Glu233fsX1</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0018'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>severe mental retardation, no renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Mexican' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17743delG</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.753delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asn251fsX14</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0019'>
+	<gender code='1'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>severe mental retardation, no renal tubular acidosis</text></comment>
+	</phenotype>
+	<population term='Mexican' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.17743delG</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J03037' />
+				<name scheme='HGVS'>r.753delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CAH2_HUMAN' />
+						<name scheme='HGVS'>p.Asn251fsX14</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0015'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>osteopetrosis, mental retardation/developmental delay, renal tubular acidosis</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0037'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0038'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0039'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0040'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0041'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0042'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0050'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0051'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0052'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0053'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Kuwaiti' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0054'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Arabian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0055'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Egyptian' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+ <individual id='C0023'>
+	<gender code='9'/>
+	<phenotype term='Osteopetrosis with renal tubular acidosis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CA2'/>
+		<ref_seq source='IDRefSec' accession='CA2_DNA' />
+		<name scheme='HGVS'>g.IVS6+1G&gt;T</name>
+		<exon>i6</exon>
+		<consequence term='a point mutation in the intron 6 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='259730' />
+ </individual>
+</lsdb>

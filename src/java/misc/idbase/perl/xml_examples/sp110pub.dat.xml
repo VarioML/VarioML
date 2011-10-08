@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='SP110base' version='1.0' uri='http://bioinf.uta.fi/SP110base/'>
+	<name>SP110base</name>
+	<url>http://bioinf.uta.fi/SP110base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='S0006'>
+	<gender code='1'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Immunodeficiency &amp; thrombocytopenia</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.4051delC</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.40delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+ <individual id='S0001'>
+	<gender code='2'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Immunodeficiency, thrombocytopenia and hVOD</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.8567delC</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.642delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+ <individual id='S0002'>
+	<gender code='2'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.8567delC</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.642delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+ <individual id='S0003'>
+	<gender code='1'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.8567delC</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.642delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+ <individual id='S0004'>
+	<gender code='2'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.8567delC</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.642delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+ <individual id='S0005'>
+	<gender code='1'/>
+	<phenotype term='syndrome (VODI)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>hVOD</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SP110'/>
+		<ref_seq source='IDRefSeq' accession='D0116' />
+		<name scheme='HGVS'>g.8567delC</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0116' />
+				<name scheme='HGVS'>r.642delc</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='604457' />
+ </individual>
+</lsdb>

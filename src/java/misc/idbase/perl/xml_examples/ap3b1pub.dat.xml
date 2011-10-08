@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='AP3B1base' version='1.0' uri='http://bioinf.uta.fi/AP3B1base/'>
+	<name>AP3B1base</name>
+	<url>http://bioinf.uta.fi/AP3B1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='A0007'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections: Pneumonia</text></comment>
+		<comment term='symptom'><text>Physical findings: Hepatosplenomegaly</text></comment>
+		<comment term='symptom'><text>Neutropenia</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.114127A&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='A point mutation in the exon 8 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0103' />
+				<name scheme='HGVS'>r.904a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Arg302X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0008'>
+	<gender code='2'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections: Fever</text></comment>
+		<comment term='symptom'><text>Physical findings: Lymphadenopathy</text></comment>
+		<comment term='symptom'><text>Neutropenia Others: nystagmus, retinal hypopigmentation, upper respiratory  tract and lymph node infections, urinary tract infection  due to Klebsiella pneumoniae, cutaneous abscesses,  recurrent sinusitis and pneumonia</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.119856_119857delinsTATCAATATC</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift indel mutation in the exon 10 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0103' />
+				<name scheme='HGVS'>r.1063_1064delinsuaucaauauc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Gln355fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.166503dupA</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift duplication mutation in the exon 16 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0103' />
+				<name scheme='HGVS'>r.1789dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Ile597fsX11</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0009'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections: Fever</text></comment>
+		<comment term='symptom'><text>Physical findings: Pancytopenia</text></comment>
+		<comment term='symptom'><text>Neutropenia Others: nystagmus, partial albinism, rash, diarrhea, splenomegaly,  acute otitis and bacterial skin infections</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.119856_119857delinsTATCAATATC</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift indel mutation in the exon 10 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0103' />
+				<name scheme='HGVS'>r.1063_1064delinsuaucaauauc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Gln355fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.166503dupA</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift duplication mutation in the exon 16 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0103' />
+				<name scheme='HGVS'>r.1789dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Ile597fsX11</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0001'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.120045_120107del</name>
+		<exon>e1</exon>
+		<consequence term='an inframe deletion in the exon 11 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1166_1228del</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Lys389del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.166453T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 16 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1739u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Leu580Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0002'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.120045_120107del</name>
+		<exon>e1</exon>
+		<consequence term='an inframe deletion in the exon 11 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1166_1228del</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Lys389del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.166453T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 16 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1739u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Leu580Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0003'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Physical findings: Hepatosplenomegaly</text></comment>
+		<comment term='symptom'><text>Neutropenia Others: Emesis, aspiration, nonspecific interstitial  pneumonitis, gross melena associated with a rotavirus  infection, Enterococcus, Pseudomonas</text></comment>
+	</phenotype>
+	<population term='Houma Indian' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.154404C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 15 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1525c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Arg509X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.179444G&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 18 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1975g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Glu659X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0004'>
+	<gender code='9'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.IVS14+6T&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 14 leading to an amino acid change '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='AP3B1_DNA' />
+		<name scheme='HGVS'>g.154498dupG</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift duplication in the exon 15 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='U81504' />
+				<name scheme='HGVS'>r.1619dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O00203' />
+						<name scheme='HGVS'>p.Ala541fsX24</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0005'>
+	<gender code='2'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Mental retardation Physical findings: Neutropenia Others: coarse facial features, hypopigmentation, splenomegaly, thrombocytopenia, severe dental decay and aggressive periodontitis, recurrent skin abscesses</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.147279..155450del</name>
+		<exon>i1</exon>
+		<consequence term='A deletion of a big part of intron 14,  the complete exon 15, and a small part of intron 15'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+ <individual id='A0006'>
+	<gender code='1'/>
+	<phenotype term='Hermansky-Pudlak syndrome 2 '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections: Pneumonia</text></comment>
+		<comment term='symptom'><text>Mental retardation Physical findings: Neutropenia Others: coarse facial features, hypopigmentation, splenomegaly, thrombocytopenia, severe dental decay and aggressive periodontitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AP3B1'/>
+		<ref_seq source='IDRefSeq' accession='D0103' />
+		<name scheme='HGVS'>g.147279..155450del</name>
+		<exon>i1</exon>
+		<consequence term='A deletion of a big part of intron 14,  the complete exon 15, and a small part of intron 15'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603401' />
+ </individual>
+</lsdb>

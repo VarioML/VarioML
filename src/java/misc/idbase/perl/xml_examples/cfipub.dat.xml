@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='CFIbase' version='1.0' uri='http://bioinf.uta.fi/CFIbase/'>
+	<name>CFIbase</name>
+	<url>http://bioinf.uta.fi/CFIbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='I0005'>
+	<gender code='2'/>
+	<phenotype term='Factor I deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Bacterial infections: Other</text></comment>
+		<comment term='symptom'><text>several infectious episodes during her childhood Other symptoms</text></comment>
+		<comment term='symptom'><text>systemic lupus erythematosus,  glomerulonephritis</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.56497_56498dup</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift duplication mutation in the exon 11 leading to a premature stop codon in the S-PROT domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.1176_1177dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.Trp393fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='217030' />
+ </individual>
+ <individual id='I0006'>
+	<gender code='2'/>
+	<phenotype term='Factor I deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Bacterial infections: Other</text></comment>
+		<comment term='symptom'><text>asymptomatic until 3 yr when she developed a  severe intestinal infection that evolved to sepsis,  which was fatal</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.56497_56498dup</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift duplication mutation in the exon 11 leading to a premature stop codon in the S-PROT domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.1176_1177dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.Trp393fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='217030' />
+ </individual>
+ <individual id='I0003'>
+	<gender code='2'/>
+	<phenotype term='Factor I deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Bacterial infections: Streptococcus pneumoniae</text></comment>
+		<comment term='symptom'><text>meningitis Neisseria meningitidis</text></comment>
+		<comment term='symptom'><text>meningitis Other</text></comment>
+		<comment term='symptom'><text>otitis media</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.42449G&gt;A</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in exon 5 leading to  aberrant splicing '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.772g&gt;a</name>
+				<consequence term='skipping of exon 5'/>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.Ala258Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.56574A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 11 leading to an amino acid change in the S-PROT domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.1253a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.His418Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='217030' />
+ </individual>
+ <individual id='I0001'>
+	<gender code='1'/>
+	<phenotype term='Factor I deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Bacterial infections: Staphylococcus epidermitidis</text></comment>
+		<comment term='symptom'><text>septic arthritis on the  left shoulder Neisseria meningitidis</text></comment>
+		<comment term='symptom'><text>meningitis Other</text></comment>
+		<comment term='symptom'><text>recurrent sinusitis and otitis media</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Scotland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.56574A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 11 leading to an amino acid change in the S-PROT domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.1253a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.His418Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='217030' />
+ </individual>
+ <individual id='I0002'>
+	<gender code='2'/>
+	<phenotype term='Factor I deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Scotland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CFI'/>
+		<ref_seq source='IDRefSec' accession='CFI_DNA' />
+		<name scheme='HGVS'>g.56574A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 11 leading to an amino acid change in the S-PROT domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='J02770' />
+				<name scheme='HGVS'>r.1253a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='CFAI_HUMAN' />
+						<name scheme='HGVS'>p.His418Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='217030' />
+ </individual>
+</lsdb>

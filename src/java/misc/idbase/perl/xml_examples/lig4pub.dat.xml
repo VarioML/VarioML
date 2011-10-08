@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='LIG4base' version='1.1' uri='http://bioinf.uta.fi/lig4base/'>
+	<name>LIG4base</name>
+	<url>http://bioinf.uta.fi/lig4base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='L0009'>
+	<gender code='9'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: Leukaemia, high sensitivity to radiotherapy</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5347G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.833g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Arg278His</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0007'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Developmental/growth delay: Growth retardation Other clinical features: Repeated infections since the 3:rd month of life, including otitis, bronchiolitis, pneumonia and a sepsis caused by S. pneumoniae, lymphocytopenia.</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5353A&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.839a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Gln280Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5785_5789delAAAGA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1271_1275delaaaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Lys424fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0008'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Developmental/growth delay: Growth retardation Other clinical features: B and T cell lymphocytopenia</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5353A&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.839a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Gln280Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5785_5789delAAAGA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1271_1275delaaaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Lys424fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0010'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Developmental/growth delay: Growth retardation Other clinical features: SCID with cellular radiosensitivity, chronic diarrhea, failure to thrive, autoimmune cytopenia, recurrent infections, pneumococcal sepsis two weeks after measles, mumps, and rubella vaccination, severe neutropenia and thrombocytopenia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5359A&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.845a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.His282Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5785_5789delAAAGA</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1271_1275delaaaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Lys424fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0011'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5359A&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.845a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.His282Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5785_5789delAAAGA</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1271_1275delaaaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Lys424fsX19</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0006'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Developmental/growth delay: Growth retardation Skin conditions: Other: Radiosensitivity Other clinical features: T-B-NK+ SCID. In the second year of life she began to suffer from severe infections of the respiratory tract, candidiasis in the diaper region, and subsequent chronic diarrhea and fever, and failure to thrive.</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5811_5813delCAA</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 2 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1297_1299delcaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Gln433del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0004'>
+	<gender code='9'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Facial features: Seckel-like Developmental/growth delay: Developmental delay Primordial dwarfism Mental delay Immunodeficiency: Pancytopenia Skin conditions: Other: multiple psoriasiform erythrodermic, squamous  skin patches Other clinical features: atypical bone maturation</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.5920G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1406g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Gly469Glu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6954C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the BRCT2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.2440c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Arg814X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0001'>
+	<gender code='9'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Facial features Seckel-like Developmental/growth delay Growth retardation Immunodeficiency Pancytopenia Myelodysplasia Sinusitis Skin conditions Photosensitivity Telangiectasia Chronic skin conditions Other clinical features: hypothyroid, type II diabetes, hypogonadism</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6252C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1738c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Arg580X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6954C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the BRCT2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.2440c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Arg814X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0002'>
+	<gender code='2'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Facial features Seckel-like Developmental/growth delay Growth retardation Immunodeficiency Chronic respiratory infections Skin conditions Photosensitivity Psoriasis Other clinical features: hypothyroid, amenorrhea</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6252C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.1738c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Arg580X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6954C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the BRCT2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.2440c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P49917' />
+						<name scheme='HGVS'>p.Arg814X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+ <individual id='L0005'>
+	<gender code='1'/>
+	<phenotype term='LIG4 syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly Developmental/growth delay: Developmental delay Immunodeficiency: Pancytopenia Other clinical features: Acute lymphoplastic leukemia (CNS-III disease), asthma,</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='LIG4'/>
+		<ref_seq source='IDRefSeq' accession='D0054' />
+		<name scheme='HGVS'>g.6954C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon in the BRCT2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0054' />
+				<name scheme='HGVS'>r.2440c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISSPROT' accession='P49917' />
+						<name scheme='HGVS'>p.Arg814X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='601837' />
+ </individual>
+</lsdb>

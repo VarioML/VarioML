@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='MPObase' version='1.0' uri='http://www.uta.fi/imt/bioinfo/MPObase/'>
+	<name>MPObase</name>
+	<url>http://www.uta.fi/imt/bioinfo/MPObase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='M0030'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.3520delA</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.325dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Thr109fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0019'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.3899A&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.518a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Tyr173Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0020'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.3899A&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.518a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Tyr173Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0021'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.3899A&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.518a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Tyr173Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0022'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.3899A&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='a point mutation in the exon 4 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.518a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Tyr173Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0017'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.4311T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.752u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met251Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0027'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.4311T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.752u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met251Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0032'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.4311T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.752u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met251Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0033'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.4311T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.752u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met251Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0036'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.4311T&gt;C</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.752u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met251Thr</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0029'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.5414C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.995c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Ala332Val</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0034'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.5414C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.995c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Ala332Val</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10610T&gt;G</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1715u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Leu572Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0038'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.5531A&gt;G</name>
+		<exon>e7</exon>
+		<consequence term='a point mutation in the exon 7 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1112a&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Asp371Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0024'>
+	<gender code='9'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9896C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1495c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg499Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0023'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9902G&gt;A</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1501g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Gly501Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0018'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0026'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0028'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0035'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0037'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.IVS11-2A&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 11 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0039'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.9953_9966delCCCATGGAACCCAA</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion mutation in the exon 9 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1552_1565delcccauggaacccaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Met519fsX20</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.11675T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 11 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1927u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Trp643Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0001'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0002'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0003'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0004'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0005'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0006'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0007'>
+	<gender code='1'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0008'>
+	<gender code='1'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0009'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0010'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0011'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0012'>
+	<gender code='2'/>
+	<phenotype term='Partial MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0013'>
+	<gender code='9'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0014'>
+	<gender code='9'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0015'>
+	<gender code='9'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0016'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Hispanic' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.10600C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0060' />
+				<name scheme='HGVS'>r.1705c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P05164' />
+						<name scheme='HGVS'>p.Arg569Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0025'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.IVS11-2A&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 11 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+ <individual id='M0031'>
+	<gender code='2'/>
+	<phenotype term='Complete MPO deficiency'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MPO'/>
+		<ref_seq source='IDRefSeq' accession='D0060' />
+		<name scheme='HGVS'>g.IVS11-2A&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 11 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='606989' />
+ </individual>
+</lsdb>

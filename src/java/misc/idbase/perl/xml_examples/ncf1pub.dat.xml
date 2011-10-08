@@ -1,0 +1,1660 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='NCF1base' version='2.01' uri='http://bioinf.uta.fi/NCF1base/'>
+	<name>NCF1base</name>
+	<url>http://bioinf.uta.fi/NCF1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='N0002'>
+	<gender code='9'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.9966delG</name>
+		<exon>e6</exon>
+		<consequence term='deletion in the exon 6 leading to a premature  stop codon in the SH3 1 domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='frameshift deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0004'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0005'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0006'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0007'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0009'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0010'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0011'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0012'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0013'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0014'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0015'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0016'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0017'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0018'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0019'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0020'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0021'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0021'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0022'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0023'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0027'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6278C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0028'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6278C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0029'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6360T&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an amino  acid change in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0031'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS1+1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='point mutation in the intron 1 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0032'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS1+3G&gt;T</name>
+		<exon>i1</exon>
+		<consequence term='point mutation in the intron 1 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0033'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.12263G&gt;A</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an amino  acid change in the SH3 2 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0034'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a premature  stop codon in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4299G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to an amino  acid change in the PX domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0040'>
+	<gender code='9'/>
+	<phenotype term='Moderate chronic granulomatous disease'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0041'>
+	<gender code='9'/>
+	<phenotype term='Moderate chronic granulomatous disease'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6360_6361delinsAA</name>
+		<exon>e4</exon>
+		<consequence term='A complex mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.353_354delinsaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Phe118X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0059'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Two episodes of perianal abscesses, one episode of brain abscess, adenitis and viral meningitis, idiopathic thrombocytopenia resistant to immunoglobulin and steroid therapy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6360_6361delinsAA</name>
+		<exon>e4</exon>
+		<consequence term='A complex mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.353_354delinsaa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Phe118X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0042'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Three episodes of skin infection and protracted pneumonia, Bartolin gland infection</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0043'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Recurrent skin infections, pneumonia</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0044'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Recurrent, pneumonia since age 4 years</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Mexico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0045'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Recurrent, pneumonia since age 7 years, chronic lymphadenitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Mexico' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0046'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Pneumonia due to multiresistant Staphylococcus aureus, liver abscess</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0047'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Recurrent pulmonary infections starting in his first year of life, recurrent skin infections, otitis, sinusitis, and liver abscesses</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0048'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Recurrent respiratory infections, pneumonia, chronic otitis and sinusitis, recurrent tonsillitis and aphthous ulcers</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Brazil' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0049'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Tunisian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0050'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Tunisian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0051'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Tunisian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0052'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Tunisian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0053'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Tunisian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0055'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Anal fistulas, otherwise been well</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6278C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0054'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Prolonged pneumonia with mild clinical symptoms (no coughing), colitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6278C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0056'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Anemia, thrombocytopenia, splenomegaly, cervical septic lymphadenitis, inflammatory bowel disease (leading to a subtotal colon resection), hypertension, myocardial and renal failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6340T&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.333u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Cys111X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0057'>
+	<gender code='1'/>
+	<phenotype term='Mild chronic granulomatous disease'>
+		<comment term='symptom'><text>No overt clinical symptoms of CGD</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6340T&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.333u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Cys111X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0058'>
+	<gender code='1'/>
+	<phenotype term='Mild chronic granulomatous disease'>
+		<comment term='symptom'><text>No overt clinical symptoms of CGD</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.6340T&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.333u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Cys111X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0060'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Bilateral bronchopneumonia of the lower lobes,</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to a premature stop codon in the PX domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.579g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Trp193X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0061'>
+	<gender code='1'/>
+	<phenotype term='Moderate chronic granulomatous disease'>
+		<comment term='symptom'><text>S. aureus dermatitis of the face and recurrent liver abscesses, which needed surgery and antibiotic treatment</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.5779_8636del</name>
+		<exon>i2</exon>
+		<consequence term='A deletion starting in intron 2 and ending in Description     intron 5 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0062'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Ringworm, chest infections, gut inflammation diagnosed as Crohn&apos;s disease, fungal infection of the skin of his buttocks, four episodes of collapse of his left lung and multiple respiratory tract infections, bronchiectasis, perianal abscess and fistula, osteoporosis, lymphopenia</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS7+1G&gt;C</name>
+		<exon>i7</exon>
+		<consequence term='A point mutation in the intron 7 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0063'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Pyelonephritis, Crohn&apos;s disease, perforated eardrum, respiratory tract infections, osteoporosis, retroperitoneal abscess</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS7+1G&gt;C</name>
+		<exon>i7</exon>
+		<consequence term='A point mutation in the intron 7 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0035'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4299G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to an amino  acid change in the PX domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.14972delG</name>
+		<exon>e9</exon>
+		<consequence term='frameshift deletion in the exon 9 leading to a  premature stop codon in the SH3 2 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0036'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10038G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an  amino acid change in the SH3 1 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0064'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Axillary and cervical lymphadenopathies after BCG vaccination, recurrent seizures due to cranial granuloma for which she had craniotomy</text></comment>
+		<comment term='symptom'><text>Aspergillus was grown from the sample</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10038G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.574g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gly192Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0065'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Cervical lymphadenopathies after tonsillitis (or due to tonsil infection)</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10038G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.574g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gly192Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0066'>
+	<gender code='2'/>
+	<phenotype term='Mild chronic granulomatous disease'>
+		<comment term='symptom'><text>No clinical symptoms</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10038G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.574g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gly192Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0067'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Aspergillus granuloma</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10038G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.574g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Gly192Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0024'>
+	<gender code='1'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='point mutation in the exon 7 leading to a  premature stop codon in the SH3 1 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0025'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='point mutation in the exon 7 leading to a  premature stop codon in the SH3 1 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0026'>
+	<gender code='2'/>
+	<phenotype term='deficiency of p47 phox'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='point mutation in the exon 7 leading to a  premature stop codon in the SH3 1 domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0037'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Perinatal abscess, skin infections, episodes of pneumonitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to a premature stop codon in the SH3I domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.579g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Trp193X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0038'>
+	<gender code='2'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to a premature stop codon in the SH3I domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.579g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Trp193X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0039'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Liver abscess,</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to a premature stop codon in the SH3I domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.579g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Trp193X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0062'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Ringworm, chest infections, gut inflammation diagnosed as Crohn&apos;s disease, fungal infection of the skin of his buttocks, four episodes of collapse of his left lung and multiple respiratory tract infections, bronchiectasis, perianal abscess and fistula, osteoporosis, lymphopenia</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS7+1G&gt;C</name>
+		<exon>i7</exon>
+		<consequence term='A point mutation in the intron 7 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0063'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Pyelonephritis, Crohn&apos;s disease, perforated eardrum, respiratory tract infections, osteoporosis, retroperitoneal abscess</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.4249_4250delGT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift deletion mutation in the exon 2 leading to a premature stop codon in the PX domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.75_76delgu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Tyr26fsX25</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS7+1G&gt;C</name>
+		<exon>i7</exon>
+		<consequence term='A point mutation in the intron 7 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+ <individual id='N0068'>
+	<gender code='1'/>
+	<phenotype term='Classical chronic granulomatous disease'>
+		<comment term='symptom'><text>Severe furunculosis of the skin and gastroenteritis, large mediastinal adenopathy proved to be of Mycobacterium tuberculosis etiology, cervical suppurative lymphadenitis and recurrent furunculosis of the face, extremities and back, which required combined surgical excicion and parenteral antibiotics, left upper and lower lobe pneumonia caused by Mycobacterium tuberculosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Dagestan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.IVS2+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='A point mutation in the intron 2 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NCF1'/>
+		<ref_seq source='IDRefSeq' accession='D0099' />
+		<name scheme='HGVS'>g.10506G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='A point mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0099' />
+				<name scheme='HGVS'>r.579g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P14598' />
+						<name scheme='HGVS'>p.Trp193X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='233700' />
+ </individual>
+</lsdb>

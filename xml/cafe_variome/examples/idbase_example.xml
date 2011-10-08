@@ -24,7 +24,7 @@
     <variant type="DNA" id="Variant ID" copy_count="1"> 
         <gene source="HGNC" accession="COL1A1"/>
         <ref_seq accession="NG_007400.1"/>
-        <!-- <name scheme="HGVS">c.579delT;c.522delT</name> we can give full name here if needed-->
+        <!-- <name scheme="HGVS">c.579delT;c.522delT....</name> we can give full name here if needed-->
         <haplotype allele="1">
             <variant>
                 <name>c.579delT</name>
@@ -55,7 +55,22 @@
         <haplotype allele="2">
             <variant><name>c.522delT</name>
             </variant>
+            <variant><name>c.622delT</name>
+            </variant>
+            <variant><name>c.722delT</name>
+            </variant>
         </haplotype>
+        
+        <!-- unphased haplotype -->
+        <haplotype >
+            <variant><name>c.522delT</name>
+            </variant>
+            <variant><name>c.622delT</name>
+            </variant>
+            <variant><name>c.722delT</name>
+            </variant>
+        </haplotype>
+        
         <!-- observation target (has optional type attribute with values: family, population and individual
             This is an abstraction which can be something between individual, group of individuals or a population sample.
         -->

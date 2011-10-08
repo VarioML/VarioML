@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='EVER2base' version='1.0' uri='http://bioinf.uta.fi/EVER2base/'>
+	<name>EVER2base</name>
+	<url>http://bioinf.uta.fi/EVER2base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='E0001'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Persistent flat warts and pityriasis versicolor-like lesions disseminated on the face, neck, and limbs, which started at 8 years of age. He developed a basal cell carcinoma of the forehead and a squamous cell carcinoma of the left temple at 26 years age.</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='EVER2'/>
+		<ref_seq source='IDRefSec' accession='EVER2_DNA' />
+		<name scheme='HGVS'>g.4152delT</name>
+		<exon>e7</exon>
+		<consequence term='a frame shift deletion mutation in the exon 7 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='AY099358' />
+				<name scheme='HGVS'>r.755delu</name>
+				<consequence term='the mutation may be as well 754delT'/>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU68' />
+						<name scheme='HGVS'>p.Phe252fsX31</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605829' />
+ </individual>
+ <individual id='E0002'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='EVER2'/>
+		<ref_seq source='IDRefSec' accession='EVER2_DNA' />
+		<name scheme='HGVS'>g.5179G&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='AY099358' />
+				<name scheme='HGVS'>r.1084g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU68' />
+						<name scheme='HGVS'>p.Glu362X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605829' />
+ </individual>
+ <individual id='E0003'>
+	<gender code='2'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='EVER2'/>
+		<ref_seq source='IDRefSec' accession='EVER2_DNA' />
+		<name scheme='HGVS'>g.5179G&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='AY099358' />
+				<name scheme='HGVS'>r.1084g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU68' />
+						<name scheme='HGVS'>p.Glu362X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605829' />
+ </individual>
+ <individual id='E0004'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='EVER2'/>
+		<ref_seq source='IDRefSec' accession='EVER2_DNA' />
+		<name scheme='HGVS'>g.5179G&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='AY099358' />
+				<name scheme='HGVS'>r.1084g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU68' />
+						<name scheme='HGVS'>p.Glu362X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605829' />
+ </individual>
+</lsdb>

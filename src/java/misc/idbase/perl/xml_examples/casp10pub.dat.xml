@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='CASP10base' version='1.0' uri='http://bioinf.uta.fi/CASP10base/'>
+	<name>CASP10base</name>
+	<url>http://bioinf.uta.fi/CASP10base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='C0001'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune lymphoproliferative syndrome type II, (ALPS2)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Physical findings: Adenopathy</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly</text></comment>
+		<comment term='symptom'><text>Hemolytic anemia</text></comment>
+	</phenotype>
+	<population term='African American' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='CASP10'/>
+		<ref_seq source='IDRefSeq' accession='D0012' />
+		<name scheme='HGVS'>g.25946C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601762' />
+ </individual>
+ <individual id='C0002'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune lymphoproliferative syndrome type II, (ALPS2)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Physical findings: Adenopathy</text></comment>
+		<comment term='symptom'><text>Splenomegaly</text></comment>
+		<comment term='symptom'><text>Hemolytic anemia Others: prolonged fever, elevated sedimentation rate,  reticulocytosis, noninfectious lymphocytic meningitis  followed by optic neuritis indicating a pattern of  disparate inflammatory conditions</text></comment>
+	</phenotype>
+	<population term='Aschenazi Jewish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='CASP10'/>
+		<ref_seq source='IDRefSeq' accession='D0012' />
+		<name scheme='HGVS'>g.27207G&gt;A</name>
+		<exon>e7</exon>
+		<consequence term='point mutation in the exon 7 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601762' />
+ </individual>
+</lsdb>

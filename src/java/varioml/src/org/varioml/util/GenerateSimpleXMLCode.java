@@ -695,7 +695,7 @@ public class GenerateSimpleXMLCode {
 //		})); 
 //
 
-		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
+//		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 ////		xu.printExampleElements(typeMap);
 //
 //		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 

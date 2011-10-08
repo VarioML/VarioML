@@ -310,6 +310,13 @@ VmlHaplotype =
     VmlIdentifiable,
     attribute allele {xsd:int}?, # id of alleles (sister chromosomes)
     variant_event+,
+    consequence*,
+    pathogenicity*,
+#    variant_detection?, for a simplicity we do not use these
+#    restriction_site?,
+#    genetic_origin* ,
+    frequency*  ,  
+    
     VmlAnnotatedObservation
 
 
@@ -791,7 +798,7 @@ VmlFactor =
 
 
 # (=)	===============================
-#  X	Haplotype group id
+#  X
 # (=)	===============================
 variant_group  = 
 ## [% INSERT variant_group.txt %]

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='MYO5Abase' version='1.0' uri='http://bioinf.uta.fi/MYO5Abase/'>
+	<name>MYO5Abase</name>
+	<url>http://bioinf.uta.fi/MYO5Abase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='M0002'>
+	<gender code='2'/>
+	<phenotype term='Griscelli syndrome, type 1 (GS1)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Neurologic defects: Mental retardation</text></comment>
+		<comment term='symptom'><text>Hypotonia</text></comment>
+		<comment term='symptom'><text>Motor development delay</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MYO5A'/>
+		<ref_seq source='IDRefSeq' accession='D0062' />
+		<name scheme='HGVS'>g.153616C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 19 leading to a premature stop codon in the IQ1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0062' />
+				<name scheme='HGVS'>r.2332c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9Y4I1' />
+						<name scheme='HGVS'>p.Arg778X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='160777' />
+ </individual>
+ <individual id='M0001'>
+	<gender code='1'/>
+	<phenotype term='Griscelli syndrome, type 1 (GS1)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='MYO5A'/>
+		<ref_seq source='IDRefSeq' accession='D0062' />
+		<name scheme='HGVS'>g.178684C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 28 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0062' />
+				<name scheme='HGVS'>r.3736c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9Y4I1' />
+						<name scheme='HGVS'>p.Arg1246Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='160777' />
+ </individual>
+</lsdb>

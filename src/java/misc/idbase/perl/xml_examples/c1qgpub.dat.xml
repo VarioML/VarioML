@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='C1QGbase' version='1.0' uri='http://bioinf.uta.fi/C1QGbase/'>
+	<name>C1QGbase</name>
+	<url>http://bioinf.uta.fi/C1QGbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='C0001'>
+	<gender code='1'/>
+	<phenotype term='C1qG deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>umbilical sepsis 10 days after birth</text></comment>
+		<comment term='symptom'><text>erythematous, scaly rash on his cheeks, forehead, hands, buttocs, and knees</text></comment>
+		<comment term='symptom'><text>inflammation of the nailbeds of his fingers and toes</text></comment>
+		<comment term='symptom'><text>at the age of 2, a further rush of both soles, palmar erythema and telangiectasia of the nailfolds of his fingers and toes</text></comment>
+	</phenotype>
+	<population term='India' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C1QG'/>
+		<ref_seq source='IDRefSeq' accession='D0008' />
+		<name scheme='HGVS'>g.1491G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change in the Coll domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0008' />
+				<name scheme='HGVS'>r.100g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P02747' />
+						<name scheme='HGVS'>p.Gly34Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120575' />
+ </individual>
+ <individual id='C0003'>
+	<gender code='9'/>
+	<phenotype term='C1qG deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C1QG'/>
+		<ref_seq source='IDRefSeq' accession='D0008' />
+		<name scheme='HGVS'>g.4618C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to  a premature stop codon in the Coll domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0008' />
+				<name scheme='HGVS'>r.205c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P02747' />
+						<name scheme='HGVS'>p.Arg69X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120575' />
+ </individual>
+ <individual id='C0002'>
+	<gender code='9'/>
+	<phenotype term='C1qG deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C1QG'/>
+		<ref_seq source='IDRefSeq' accession='D0008' />
+		<name scheme='HGVS'>g.4626delC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the Coll domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0008' />
+				<name scheme='HGVS'>r.213delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P02747' />
+						<name scheme='HGVS'>p.Gln74fsX63</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120575' />
+ </individual>
+</lsdb>

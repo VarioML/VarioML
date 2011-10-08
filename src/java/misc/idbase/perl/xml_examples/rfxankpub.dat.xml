@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='RFXANKbase' version='1.0' uri='http://bioinf.uta.fi/RFXANKbase/'>
+	<name>RFXANKbase</name>
+	<url>http://bioinf.uta.fi/RFXANKbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='R0001'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.5932G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0026'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.5932G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0074' />
+				<name scheme='HGVS'>r.304g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O14593' />
+						<name scheme='HGVS'>p.Glu102X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0024'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.6280delT</name>
+		<exon>e6</exon>
+		<consequence term='deletion in the exon 6 leading to a premature  stop codon '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS6-1G&gt;T</name>
+		<exon>i6</exon>
+		<consequence term='point mutation in the intron 6 leading to  skipping of exon 7  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0003'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.6851C&gt;T</name>
+		<exon>e7</exon>
+		<consequence term='point mutation in the exon 7 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0002'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.7390T&gt;C</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0027'>
+	<gender code='1'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Fungal: candida Gastro-intestinal tract manifestations Protracted diarrhea Other clinical features: recurrent pulmonary infections</text></comment>
+	</phenotype>
+	<population term='North African' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS4+1G&gt;C</name>
+		<exon>i4</exon>
+		<consequence term='a point mutation in the intron 4 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0028'>
+	<gender code='2'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Bacterial: pneumonia</text></comment>
+		<comment term='symptom'><text>Salmonella, Campylobacter, Sepsis Gastro-intestinal tract manifestations Protracted diarrhea Other clinical features: a chronic obstructive lung disease with barrel chest and digital clubbing, giardiasis, failure to thrive, malabsorption syndrome with severe osteopenia and iron deficiency anemia</text></comment>
+	</phenotype>
+	<population term='Egyptian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS4+5G&gt;A</name>
+		<exon>i4</exon>
+		<consequence term='a point mutation in the intron 4 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0004'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='North Africa' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0005'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='North Africa' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0006'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Kabylia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0007'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0008'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0009'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Tunisia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0010'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Kabylia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0011'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0012'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0013'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0014'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0015'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0016'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0017'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0018'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Tunisia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0019'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Tunisia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0020'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Kabylia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0021'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0022'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0025'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.IVS5-25GGTATTGCCCGCCTCCTCCTGCCAGG&gt;</name>
+		<exon>i5</exon>
+		<consequence term='deletion in the intron 5 and exon 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+ <individual id='R0023'>
+	<gender code='9'/>
+	<phenotype term='protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='North Africa' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXANK'/>
+		<ref_seq source='IDRefSeq' accession='D0074' />
+		<name scheme='HGVS'>g.6313_6370del</name>
+		<exon>e6</exon>
+		<consequence term='deletion in the exon 6 and intron 6  leading to aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='603200' />
+ </individual>
+</lsdb>

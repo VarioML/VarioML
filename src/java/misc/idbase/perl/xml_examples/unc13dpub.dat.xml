@@ -1,0 +1,823 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='UNC13Dbase' version='1.0' uri='http://bioinf.uta.fi/UNC13Dbase/'>
+	<name>UNC13Dbase</name>
+	<url>http://bioinf.uta.fi/UNC13Dbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='U0020'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.2475_2476delAC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the exon 3 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.177_178delac</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Tyr61fsX9</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.11325_11328delGGAG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 24 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.2346_2349delggag</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg782fsX11</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0003'>
+	<gender code='2'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis</text></comment>
+	</phenotype>
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.2512delC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.214delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Asn73fsX2</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0004'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.2512delC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.214delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Asn73fsX2</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0022'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.4900delT</name>
+		<exon>e8</exon>
+		<consequence term='a frame shift deletion mutation in the exon 8 leading to a premature stop codon in the C2-1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.627delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val210fsX38</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0023'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.4900delT</name>
+		<exon>e8</exon>
+		<consequence term='a frame shift deletion mutation in the exon 8 leading to a premature stop codon in the C2-1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.627delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val210fsX38</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0012'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.4913C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.640c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg214X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to  aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0009'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9+1G&gt;T</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.5401C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.766c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg256X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0010'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9+1G&gt;T</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.5104C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.766c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg256X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0025'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9+1G&gt;T</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.5401C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.766c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg256X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0026'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Netherlands' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.5452C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.817c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg273X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0027'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.5452C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 10 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.817c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg273X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.15103T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 28 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.2672u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Leu891Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0028'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.9056T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 14 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1208u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Leu403Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0017'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to an amino acid change '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10066dupA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift duplication in the exon 19 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1722dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Glu575fsX9</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0007'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Arabia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10215dupT</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 20 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1754dupu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.His586fsX30</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0001'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10283_10294delGTGCAGCGCGCT</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 20 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1822_1833delgugcagcgcgcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val608_Val612del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0002'>
+	<gender code='2'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10283_10294delGTGCAGCGCGCT</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 20 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1822_1833delgugcagcgcgcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val608_Val612del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0005'>
+	<gender code='2'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10283_10294delGTGCAGCGCGCT</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 20 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1822_1833delgugcagcgcgcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val608_Val612del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0006'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.10283_10294delGTGCAGCGCGCT</name>
+		<exon>e2</exon>
+		<consequence term='an inframe deletion in the exon 20 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.1822_1833delgugcagcgcgcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Val608_Val612del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0030'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.11622delG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 24 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.2346delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Glu783fsX11</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0021'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS6+5G&gt;A</name>
+		<exon>i6</exon>
+		<consequence term='a point mutation in the intron 6 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.16911T&gt;G</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 31 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.3131u&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Leu1044Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0031'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.17673C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 32 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0091' />
+				<name scheme='HGVS'>r.3193c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q70J99' />
+						<name scheme='HGVS'>p.Arg1065X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='U0011'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS4-1G&gt;A</name>
+		<exon>i4</exon>
+		<consequence term='a point mutation in the intron 4 leading to an amino acid change '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to  aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0013'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading  to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0014'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to  aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0018'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading  to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0019'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to  aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0024'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS9+1G&gt;T</name>
+		<exon>i9</exon>
+		<consequence term='a point mutation in the intron 9 leading to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0008'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly, cytopenia, hemophagocytosis, CNS involvement</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS15+1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 15 leading to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0029'>
+	<gender code='9'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS17-1G&gt;T</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 17 leading to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0015'>
+	<gender code='2'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to aberrant splicing'/>
+	</variant>
+ </individual>
+ <individual id='U0016'>
+	<gender code='1'/>
+	<phenotype term='Familial hemophagocytic lymphohistiocytosis 3'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='UNC13D'/>
+		<ref_seq source='IDRefSeq' accession='D0091' />
+		<name scheme='HGVS'>g.IVS18+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 18 leading to aberrant splicing'/>
+	</variant>
+ </individual>
+</lsdb>
