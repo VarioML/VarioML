@@ -46,8 +46,28 @@ public class Frequency {
 			this._population = new ArrayList<Population>();
 		}
 		this._population.add( item);
-	}
+	} 
  
+	// ===========-- counts --===========
+	@org.simpleframework.xml.Element(required=false,name="counts") 
+	private int _counts ;
+	public void setCounts( int counts) { 
+		this._counts = counts ;
+	}
+	public int getCounts() {
+		return this._counts;
+	}
+
+	// ===========-- category --===========
+	@org.simpleframework.xml.Element(required=false,name="category") 
+	private FreqCategory _category ;
+	public void setFreqCategory( FreqCategory category) { 
+		this._category = category ;
+	}
+	public FreqCategory getFreqCategory() {
+		return this._category;
+	}
+
 	// ===========-- freq --===========
 	@org.simpleframework.xml.Element(required=false,name="freq") 
 	private double _freq ;

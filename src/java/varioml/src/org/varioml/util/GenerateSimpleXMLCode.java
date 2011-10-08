@@ -39,7 +39,7 @@ import org.w3c.dom.NodeList;
 @SuppressWarnings("rawtypes")
 public class GenerateSimpleXMLCode {
 
-	boolean overwrite = true;
+	boolean overwrite = false;
 	
 	final private Document doc;
 	final private XPath xpath;
@@ -656,7 +656,7 @@ public class GenerateSimpleXMLCode {
 				put("email","String"); 
 				put("address","String");
 				put("description","String"); 
-				put("dob","java.util.Date"); 
+				put("dob","org.varioml.util.VarioDate"); 
 				put("creation_date","org.varioml.util.VarioDate");
 				put("modification_date","org.varioml.util.VarioDate"); 
 				put("call","String");
@@ -666,6 +666,7 @@ public class GenerateSimpleXMLCode {
 				put("end","long");				
 				put("url","String");
 				put("freq","double");
+				put("counts","int");
 				put("name","String"); 
 				put("embargo_end_date","org.varioml.util.VarioDate");
 				put("created","org.varioml.util.VarioDateTime");
@@ -674,7 +675,7 @@ public class GenerateSimpleXMLCode {
 		};  
 
 		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("new_variant.xml");
-		xu.printExampleElements(typeMap);
+//		xu.printExampleElements(typeMap);
 		
 //		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
 //			{put("name","VariantName");};
@@ -693,13 +694,22 @@ public class GenerateSimpleXMLCode {
 //			{put("_","_");};
 //		})); 
 //
+
 		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
-//		xu.printExampleElements(typeMap);
+////		xu.printExampleElements(typeMap);
+//
+//		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
+//			{put("source","Source");};
+//		})); // size=25 2011-06-20 21:40:02		
+//
+//		xu.generateCode("org.varioml.data.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
+//			{put("category","FreqCategory");};
+//		})); // size=25 2011-06-20 21:40:02
+//		xu.generateCode("org.varioml.data.FreqCategory","//lsdb/individual/variant/frequency/category",x(typeMap,new HashMap<String,String>(){ 
+//			{put("_","_");};
+//		})); // size=25 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
-			{put("source","Source");};
-		})); // size=25 2011-06-20 21:40:02		
-
+		
 		if ( true) System.exit(1);
 
 		xu = GenerateSimpleXMLCode.createInstance("cafe_variome_all.xml");
@@ -707,8 +717,11 @@ public class GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.data.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=8 2011-08-29 20:37:47
+
+
 		if ( true ) return;
 
+		
 		
 		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 		xu.printExampleElements(typeMap);
