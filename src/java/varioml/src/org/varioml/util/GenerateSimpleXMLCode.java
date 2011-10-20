@@ -690,10 +690,11 @@ public class GenerateSimpleXMLCode {
 //			{put("_","_");};
 //		})); 
 //
-//		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
-//			{put("_","_");};
-//		})); 
-//
+		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
+			{put("name","VariantName");};
+			{put("source","Source");};
+		})); 
+
 
 //		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 ////		xu.printExampleElements(typeMap);

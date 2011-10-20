@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"variant","consequence","pathogenicity","frequency","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"name","variant","sequence","consequence","pathogenicity","frequency","seq_changes","aliases","source","location","evidence_code","protocol_id","db_xref","comment"})
 public class Haplotype {
 	//xml-element used for code generation: //variant_group/variant/haplotype
 
@@ -42,6 +42,16 @@ public class Haplotype {
 		return this._attr_uri;
 	}
  
+	// ===========-- name --===========
+	@org.simpleframework.xml.Element(required=false,name="name") 
+	private VariantName _name ;
+	public void setName( VariantName name) { 
+		this._name = name ;
+	}
+	public VariantName getName() {
+		return this._name;
+	}
+ 
 	// ===========-- variant --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="variant") 
 	private List<Variant> _variant ;
@@ -56,6 +66,16 @@ public class Haplotype {
 			this._variant = new ArrayList<Variant>();
 		}
 		this._variant.add( item);
+	}
+ 
+	// ===========-- sequence --===========
+	@org.simpleframework.xml.Element(required=false,name="sequence") 
+	private Sequence _sequence ;
+	public void setSequence( Sequence sequence) { 
+		this._sequence = sequence ;
+	}
+	public Sequence getSequence() {
+		return this._sequence;
 	}
  
 	// ===========-- consequence --===========
@@ -104,6 +124,52 @@ public class Haplotype {
 			this._frequency = new ArrayList<Frequency>();
 		}
 		this._frequency.add( item);
+	}
+ 
+	// ===========-- seq_changes --===========
+	@org.simpleframework.xml.Element(required=false,name="seq_changes") 
+	private SeqChanges _seqChanges ;
+	public void setSeqChanges( SeqChanges seqChanges) { 
+		this._seqChanges = seqChanges ;
+	}
+	public SeqChanges getSeqChanges() {
+		return this._seqChanges;
+	}
+ 
+	// ===========-- aliases --===========
+	@org.simpleframework.xml.Element(required=false,name="aliases") 
+	private Aliases _aliases ;
+	public void setAliases( Aliases aliases) { 
+		this._aliases = aliases ;
+	}
+	public Aliases getAliases() {
+		return this._aliases;
+	}
+ 
+	// ===========-- source --===========
+	@org.simpleframework.xml.Element(required=false,name="source") 
+	private Source _source ;
+	public void setSource( Source source) { 
+		this._source = source ;
+	}
+	public Source getSource() {
+		return this._source;
+	}
+ 
+	// ===========-- location --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="location") 
+	private List<Location> _location ;
+	public void setLocationList( List<Location> location) { 
+		this._location = location ;
+	}
+	public List<Location> getLocationList()  { 
+		return this._location;
+	}
+	public void addLocation(Location item ) { 
+		if ( this._location == null ) { 
+			this._location = new ArrayList<Location>();
+		}
+		this._location.add( item);
 	}
  
 	// ===========-- evidence_code --===========
