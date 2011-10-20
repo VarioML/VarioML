@@ -283,7 +283,7 @@ object IDBase {
 	    	return l._2.line
 	    }
 	  })  
-	  assert( false,"feayure "+mol+" "+num+" not found. Feature table="+ft)
+	  assert( false,"feature "+mol+" "+num+" not found. Feature table="+ft)
 	  return null  	    	  
   }
   
@@ -427,6 +427,7 @@ object IDBase {
         		  s match  { 
         		    case Dna() => { 
         		      counter += 1 ;
+        		    	println("  DNA")
         		      val locs = getLocations("dna",counter,ft)
         		      if ( locs != null ) {
 	        		      locs foreach ( (loc)=>{
@@ -436,9 +437,10 @@ object IDBase {
         		      }
         		    }
         		    case cDna() => { 
-
+        		    	println("  CDNA")
         		    }
         		    case rDna() => { 
+        		    	println("  RNA")
         		       counter += 1 
         		      val locs = getLocations("rna",counter,ft)
         		      if ( locs != null ) {
@@ -450,6 +452,7 @@ object IDBase {
         		    }        		    
         		    case AA() => { 
         		      counter += 1 
+        		    	println("  RNA")
         		      val locs = getLocations("aa",counter,ft)
         		      if ( locs != null ) {
 	        		      locs foreach ( (loc)=>{

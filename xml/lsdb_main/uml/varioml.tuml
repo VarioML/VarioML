@@ -1,6 +1,6 @@
 package varioml ;
 import basic_types;
-
+  
 class Submission 
 	/* Identifiable */
 	attribute schema_version : Real;

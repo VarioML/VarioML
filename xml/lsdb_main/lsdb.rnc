@@ -309,14 +309,16 @@ element haplotype {
 VmlHaplotype =  
     VmlIdentifiable,
     attribute allele {xsd:int}?, # id of alleles (sister chromosomes)
+    name?,
     variant_event+,
+    sequence?,
     consequence*,
     pathogenicity*,
-#    variant_detection?, for a simplicity we do not use these
-#    restriction_site?,
-#    genetic_origin* ,
     frequency*  ,  
-    
+    seq_changes?,
+    aliases?,
+    source? ,   
+    location*,    
     VmlAnnotatedObservation
 
 
