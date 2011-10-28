@@ -174,13 +174,17 @@ object IDBase {
           var ft = new FeatureTable(allele)
           var j = i + 1;
           var inLoop = true
-          while (inLoop) {
+          //add all dna/rna/aa features into feature table
+          while (inLoop) {            
             lines(j) match {
+              // mol=dna,rna,aa and num=number e.g. Feature  rna; 2
               case Feature.regex(mol, num) => {
                 var feat = new Feature(mol, num.toInt)
                 ft.add(feat)
                 var k = j + 1
                 var inLoop = true
+                //add corresponding feature elements as strings e.g. Feature /name: initiation codon
+                // string "name: initiation codon" is stored
                 while (inLoop) {
                   lines(k) match {
                     case FeatureElems.regex(text) => {
@@ -209,6 +213,7 @@ object IDBase {
 
           fields foreach ((field) => {
             //todo: optimize... now unnecessary comparisons
+            
             line match {
               case field.regex(text) => {
                 vml.add(field, text.trim())
@@ -286,7 +291,7 @@ object IDBase {
 	  assert( false,"feature "+mol+" "+num+" not found. Feature table="+ft)
 	  return null  	    	  
   }
-  
+   
   def getFeatureProperty(prop: String, mol: String, num: Int, ft: FeatureTable ) : String = { 
     val r = (prop+":"+"""\s+(.+)""").r
     getFeatureLines( mol,num, ft) foreach ( (line) =>{

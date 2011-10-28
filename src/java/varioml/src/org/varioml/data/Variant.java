@@ -9,9 +9,6 @@ import org.simpleframework.xml.Root;
 public class Variant {
 	//xml-element used for code generation: //variant_group/variant
 
-	public Variant(  ) {
-	}
- 
 	// ===========-- copy_count --===========
 	@org.simpleframework.xml.Attribute(required=false,name="copy_count")
 	private double _attr_copyCount ;
