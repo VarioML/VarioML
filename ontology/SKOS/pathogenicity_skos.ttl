@@ -1,38 +1,74 @@
+# Saved by TopBraid on Sun Oct 23 10:30:07 EEST 2011
+# baseURI: http://example.org/pathogenicity
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
 
-@prefix dct: <http://purl.org/dc/terms/>
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-@prefix xs: <http://www.w3.org/2001/XMLSchema>
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>
-@prefix xml: <http://www.w3.org/XML/1998/namespace>
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vml:     <http://varioml.org/vocabulary#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xs:      <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://varioml.org/vocabulary#pathogenicity>
-  rdf:type <http://www.w3.org/2000/01/rdf-schema#Class> ;
-  rdfs:label "Pathogenicity Vocabulary" ;
-  rdfs:comment "This is the vocabulary of descriptions of pathogenicity regarding genetic variants." ;
-  rdfs:seeAlso <http://varioml.org/vocabulary#pathogenicity> ;
-  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://varioml.org/pathogenicity>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , dc: .
 
-<http://varioml.org/vocabulary#pathogenicity>
-  rdf:type <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-  skos:prefLabel "Pathogenicity vocabulary" ;
-  skos:notation "" ;
-  skos:note "This vocabulary provides descriptions of the pathogenciity of a variant." ;
-  skos:definition <http://varioml.org/vocabulary#pathogenicity> ;
-  rdfs:seeAlso <http://varioml.org/vocabulary#pathogenicity> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Non-pathogenic> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Not_known> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Pathogenic> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Probably_not_pathogenic> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Probably_pathogenic> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Causative> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Probably_causative> ;
-  skos:hasTopConcept <http://varioml.org/vocabulary#pathogenicity/Unclassified> .
+# Pathogenicity concept shemes:
+vml:g2p_pathogenicity_terms a skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:title "Gen2phen pathogenicity terms" ;
+      dc:description "Pathogenicity terms developed in gen2phen program based on the LOVD 2.0".
 
-<http://varioml.org/vocabulary#pathogenicity/Non-pathogenic>
-  rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ;
-  rdf:type <http://varioml.org/vocabulary#pathogenicity> ;
-  skos:topConceptOf <http://varioml.org/vocabulary#pathogenicity> ;
-  skos:prefLabel "Normal" ;
-  skos:notation "Non-pathogenic" ;
-  skos:definition "Non-pathogenic: desc" .
+vml:cmgs_pathogenicity_terms a skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:title "CMGS_VGL_5 Pathogenicity terms" ;
+      dc:description "Pathogenicity terms adopted from Alamut. Terms are based on publication "Practice guidelines for the Interpretation and Reporting of Unclassified Variants (UVs) in
+Clinical Molecular Genetics" .
+
+
+# Top concept in concept schemes:
+vml:pathogenecity a skos:TopConcept ;
+      skos:prefLabel "Pathogenecity"@en ;
+      skos:inScheme vml:g2p_pathogenicity_terms
+      skos:inScheme vml:cmgs_pathogenicity_terms .
+
+# G2P concepts
+vml:non_pathogenic a skos:Concept ;
+      skos:prefLabel "Non pathogenic"@en ;
+      skos:hiddenLabel "Non-patogenic"@en ;
+      skos:broader vml:pathogenicity ;
+      skos:inScheme vml:g2p_pathogenicity_terms .
+      
+vml:pathogenic a skos:Concept ;
+      skos:prefLabel "Pathogenic"@en ;
+      skos:broader vml:pathogenicity ;
+      skos:closeMatch vml:certainly_pathogenic ;
+      skos:closeMatch vml:likely_pathogenic ;
+      skos:inScheme vml:g2p_pathogenicity_terms .
+
+# CMGS concepts      
+vml:certainly_pathogenic a skos:Concept ;
+	  skos:prefLabel "Certainly pathogenic"@en ;  	 
+      skos:broader vml:pathogenicity ;
+	  skos:inScheme vml:cmgs_pathogenicity_terms.
+
+vml:likely_pathogenic a skos:Concept ;
+	  skos:prefLabel "Likely to be pathogenic but cannot be formally proven"@en ;
+	  skos:altLabel "Likely pathogenic"@en;
+      skos:broader vml:pathogenicity ;
+	  skos:inScheme vml:cmgs_pathogenicity_terms.
+      	  
+
+#Not suere is this needed... Their is some semantics in order as well. The info
+#can be used e.g in GUI components.
+vml:g2p_pahogenicity_list a skos:OrderedCollection ;
+      skos:memberList (vml:non_pathogenic vml:pathogenic ) .
+      
+vml:cmgs_vgkl_5_list a skos:OrderedCollection ;
+      skos:memberList  (vml:likely_pathogenic vml:certainly_pathogenic  ) .
+ 
