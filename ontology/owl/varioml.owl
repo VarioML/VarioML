@@ -4,23 +4,23 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY ontology "http://ontology.dumontierlab.com/" >
+    <!ENTITY dlontology "http://ontology.dumontierlab.com/" >
     <!ENTITY snap "http://www.ifomis.org/bfo/1.0/snap#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://varioml.org/ontologies/varioml.owl#"
-     xml:base="http://varioml.org/ontologies/varioml.owl"
+<rdf:RDF xmlns="http://purl.org/varioml/owl/"
+     xml:base="http://purl.org/varioml/owl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:snap="http://www.ifomis.org/bfo/1.0/snap#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ontology="http://ontology.dumontierlab.com/">
-    <owl:Ontology rdf:about="http://varioml.org/ontologies/varioml.owl">
-        <owl:imports rdf:resource="&ontology;pharmacogenomics-complex-2.1.owl"/>
+     xmlns:dl="http://ontology.dumontierlab.com/">
+    <owl:Ontology rdf:about="http://purl.org/varioml/owl/">
+        <owl:imports rdf:resource="&dlontology;pharmacogenomics-complex-2.1.owl"/>
     </owl:Ontology>
     
 
@@ -65,7 +65,7 @@
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label xml:lang="en">coexist</rdfs:label>
         <rdfs:comment>Continuants which co-exist in same bearer</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&ontology;isRelatedTo"/>
+        <rdfs:subPropertyOf rdf:resource="&dlontology;isRelatedTo"/>
         <rdfs:domain rdf:resource="&snap;Continuant"/>
         <rdfs:range rdf:resource="&snap;Disposition"/>
     </owl:ObjectProperty>
@@ -85,7 +85,7 @@
 
     <!-- http://ontology.dumontierlab.com/SingleNucleotidePolymorphism -->
 
-    <rdf:Description rdf:about="&ontology;SingleNucleotidePolymorphism">
+    <rdf:Description rdf:about="&dlontology;SingleNucleotidePolymorphism">
         <rdfs:subClassOf rdf:resource="http://varioml.org/ontologies/varioml.owl#Variant"/>
     </rdf:Description>
     
@@ -150,7 +150,7 @@
     <!-- http://varioml.org/ontologies/varioml.owl#OBS_00000 -->
 
     <owl:NamedIndividual rdf:about="http://varioml.org/ontologies/varioml.owl#OBS_00000">
-        <rdf:type rdf:resource="&ontology;Disease"/>
+        <rdf:type rdf:resource="&dlontology;Disease"/>
         <rdfs:label xml:lang="en">TEST_DISEASE</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
