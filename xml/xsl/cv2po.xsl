@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE rdf:RDF [
-<!ENTITY vmo "http://purl.org/varioml/owl/" > 
+<!ENTITY vmo "http://purl.org/varioml/pharm/1.0/" > 
 <!ENTITY vmkb "http://varioml.org/varioml_kb.owl#">
 <!ENTITY PMID "http://purl.org/obo/owl/PMID#" >
 <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -23,7 +23,7 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:vmkb="http://varioml.org/ontology/owl/varioml_kb.owl#"
-    xmlns:vmo="http://purl.org/varioml/owl/"
+    xmlns:vmo="http://purl.org/varioml/pharm/1.0/"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     xmlns:vml="http://varioml.org/xml/1.0"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
