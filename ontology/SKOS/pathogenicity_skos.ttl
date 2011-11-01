@@ -1,5 +1,5 @@
-# Saved by TopBraid on Sun Oct 23 10:30:07 EEST 2011
-# baseURI: http://example.org/pathogenicity
+# Saved by TopBraid on Tue Nov 01 08:23:32 EET 2011
+# baseURI: http://purl.org/varioml/pathogenicity/skos/1.0/
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2004/02/skos/core
 
@@ -9,66 +9,133 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix vml:     <http://varioml.org/vocabulary#> .
+@prefix vml:     <http://purl.org/varioml/pathogenicity/skos/1.0/> .
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xs:      <http://www.w3.org/2001/XMLSchema> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://varioml.org/pathogenicity>
+<http://purl.org/varioml/pathogenicity/skos/1.0/>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.w3.org/2004/02/skos/core> , dc: .
+      owl:imports <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/elements/1.1/> .
 
-# Pathogenicity concept shemes:
-vml:g2p_pathogenicity_terms a skos:ConceptScheme ;
+vml:p_9001
+      rdf:type skos:TopConcept ;
+      skos:inScheme vml:g2p , vml:cmgs_vgl_5 ;
+      skos:prefLabel "Pathogenecity"@en .
+
+# CMGS 5 concept scheme
+#  1 Ð Certainly not pathogenic
+#  2 Ð Unlikely to be pathogenic but cannot be formally proven
+#  3 Ð Likely to be pathogenic but cannot be formally proven
+#  4 - Certainly pathogenic
+#  5 - Unknown
+
+vml:cmgs_vgl_5
+      rdf:type skos:ConceptScheme ;
       dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
-      dc:title "Gen2phen pathogenicity terms" ;
-      dc:description "Pathogenicity terms developed in gen2phen program based on the LOVD 2.0".
+      dc:description "Pathogenicity terms adopted from Alamut. Terms are based on publication 'Practice guidelines for the Interpretation and Reporting of Unclassified Variants (UVs) in Clinical Molecular Genetics'" ;
+      dc:title "CMGS_VGL_5 Pathogenicity terms" .
 
-vml:cmgs_pathogenicity_terms a skos:ConceptScheme ;
+vml:p_0001
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:cmgs_vgl_5 ;
+      skos:prefLabel "Certainly not pathogenic"@en .
+
+vml:p_0002
+      rdf:type skos:Concept ;
+      skos:prefLabel "Unlikely pathogenic"@en ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:cmgs_vgl_5 ;
+      skos:altLabel "Unlikely to be pathogenic but cannot be formally proven"@en .
+
+vml:p_0003
+      rdf:type skos:Concept ;
+      skos:prefLabel "Likely pathogenic"@en ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:cmgs_vgl_5 ;
+      skos:altLabel "Likely to be pathogenic but cannot be formally proven"@en .
+
+vml:p_0004
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:cmgs_vgl_5 ;
+      skos:prefLabel "Certainly pathogenic"@en .
+
+
+vml:p_0005
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:cmgs_vgl_5 ;
+      skos:prefLabel "Unknown"@en .
+
+
+
+vml:cmgs_vgkl_5_list
+      rdf:type skos:OrderedCollection ;
+      skos:memberList (vml:p_0001 vml:p_0002 vml:p_0003 vml:p_0004 vml:p_0005) .
+
+#
+# Gen2pen concept scheme
+#
+# Non-pathogenic
+# Not known
+# Pathogenic
+# Probably not pathogenic
+# Probably pathogenic
+# Unclassified
+
+vml:g2p
+      rdf:type skos:ConceptScheme ;
       dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
-      dc:title "CMGS_VGL_5 Pathogenicity terms" ;
-      dc:description "Pathogenicity terms adopted from Alamut. Terms are based on publication "Practice guidelines for the Interpretation and Reporting of Unclassified Variants (UVs) in
-Clinical Molecular Genetics" .
+      dc:description "Pathogenicity terms developed in gen2phen program based on the LOVD 2.0" ;
+      dc:title "Gen2phen pathogenicity terms" .
+
+vml:p_1001
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:hiddenLabel "Non patogenic"@en ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Non-pathogenic"@en .
 
 
-# Top concept in concept schemes:
-vml:pathogenecity a skos:TopConcept ;
-      skos:prefLabel "Pathogenecity"@en ;
-      skos:inScheme vml:g2p_pathogenicity_terms
-      skos:inScheme vml:cmgs_pathogenicity_terms .
+vml:p_1002
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:hiddenLabel "Not-known"@en ;
+      skos:inScheme vml:g2p ;
+      skos:closeMatch vml:p_0005  ;
+      skos:altLabel "Not known to be pathogenic"@en ;
+      skos:prefLabel "Not known"@en .
 
-# G2P concepts
-vml:non_pathogenic a skos:Concept ;
-      skos:prefLabel "Non pathogenic"@en ;
-      skos:hiddenLabel "Non-patogenic"@en ;
-      skos:broader vml:pathogenicity ;
-      skos:inScheme vml:g2p_pathogenicity_terms .
+vml:p_1003
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:closeMatch vml:p_0004 , vml:p_0003 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Pathogenic"@en .
+
+vml:p_1004
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:prefLabel "Probably not pathogenic"@en ;
+      skos:inScheme vml:g2p .
+
+vml:p_1005
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:prefLabel "Probably pathogenic"@en ;
+      skos:inScheme vml:g2p .
+
+vml:p_1006
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:hiddenLabel "Not-known"@en ;
+      skos:inScheme vml:g2p ;
+      skos:closeMatch vml:p_0005  ;
+      skos:prefLabel "Unclassified"@en .
+
+vml:g2p_list
+      rdf:type skos:OrderedCollection ;
+      skos:memberList (vml:p_1001 vml:p_1002 vml:p_1003 vml:p_1004 vml:p_1005 vml:p_1006) .
       
-vml:pathogenic a skos:Concept ;
-      skos:prefLabel "Pathogenic"@en ;
-      skos:broader vml:pathogenicity ;
-      skos:closeMatch vml:certainly_pathogenic ;
-      skos:closeMatch vml:likely_pathogenic ;
-      skos:inScheme vml:g2p_pathogenicity_terms .
-
-# CMGS concepts      
-vml:certainly_pathogenic a skos:Concept ;
-	  skos:prefLabel "Certainly pathogenic"@en ;  	 
-      skos:broader vml:pathogenicity ;
-	  skos:inScheme vml:cmgs_pathogenicity_terms.
-
-vml:likely_pathogenic a skos:Concept ;
-	  skos:prefLabel "Likely to be pathogenic but cannot be formally proven"@en ;
-	  skos:altLabel "Likely pathogenic"@en;
-      skos:broader vml:pathogenicity ;
-	  skos:inScheme vml:cmgs_pathogenicity_terms.
-      	  
-
-#Not suere is this needed... Their is some semantics in order as well. The info
-#can be used e.g in GUI components.
-vml:g2p_pahogenicity_list a skos:OrderedCollection ;
-      skos:memberList (vml:non_pathogenic vml:pathogenic ) .
-      
-vml:cmgs_vgkl_5_list a skos:OrderedCollection ;
-      skos:memberList  (vml:likely_pathogenic vml:certainly_pathogenic  ) .
- 
