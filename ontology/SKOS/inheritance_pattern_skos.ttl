@@ -1,0 +1,105 @@
+# Saved by TopBraid on Tue Nov 01 08:23:32 EET 2011
+# baseURI: http://purl.org/varioml/inheritance_pattern/skos/1.0/
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vml:     <http://purl.org/varioml/inheritance_pattern/skos/1.0/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xs:      <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+ 
+<http://purl.org/varioml/inheritance_pattern/skos/1.0/>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/elements/1.1/> .
+
+vml:i_9991
+      rdf:type skos:TopConcept ;
+      skos:inScheme vml:g2p  ;
+      skos:prefLabel "Inheritance pattern"@en .
+
+vml:g2p
+      rdf:type skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:description "Inheritance pattern of disease. Vocabulary is developed as part of the Gen2phen program. Content is derived mainly from the LOVD" ;
+      skos:note "We may normalize this in next version, as done with the genetic orgin (by taking Familial/Sporadic out as a separate concept).";
+      dc:title "Inheritance pattern" .
+
+vml:i_0001
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Familial"@en .     
+      
+vml:i_0002
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Familial, consanguineous parents"@en .
+
+vml:i_0003
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Familial, autosomal dominant"@en .
+
+vml:i_0004
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Familial, autosomal recessive"@en .
+      
+vml:i_0005
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Familial, X-linked"@en .
+      
+vml:i_0006
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic"@en .
+
+vml:i_0007
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic, parents not tested"@en .
+      
+vml:i_0008
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic, consanguineous parents"@en .
+
+vml:i_0009
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic, consanguineous parents (1st degree)"@en .
+
+vml:i_0010
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic, consanguineous parents (2st degree)"@en .
+
+vml:i_0011
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sporadic, consanguineous parents (3st degree)"@en .
+
+
+vml:i_0012
+      rdf:type skos:Concept ;
+      skos:broader vml:i_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Non-consanguineous parents"@en .
+      

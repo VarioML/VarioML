@@ -1,0 +1,45 @@
+# Saved by TopBraid on Tue Nov 01 08:23:32 EET 2011
+# baseURI: http://purl.org/varioml/evidence/skos/1.0/
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> . 
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vml:     <http://purl.org/varioml/core/skos/1.0/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xs:      <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/varioml/evidence/skos/1.0/>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/elements/1.1/> .
+
+
+vml:g2p
+      rdf:type skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:description "G2P evidence terms. TBD linked with the GO evidence ontology" ;
+      dc:title "G2P evidence codes" .
+
+
+vml:e_9991
+      rdf:type skos:TopConcept ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Evidence codes"@en .
+
+vml:e_0001
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Inferred"@en .
+
+vml:e_0002
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Confirmed"@en .
+      

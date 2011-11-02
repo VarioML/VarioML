@@ -1,0 +1,170 @@
+# Saved by TopBraid on Tue Nov 01 08:23:32 EET 2011
+# baseURI: http://purl.org/varioml/detection_technique/skos/1.0/
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vml:     <http://purl.org/varioml/detection_technique/skos/1.0/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xs:      <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+ 
+<http://purl.org/varioml/detection_technique/skos/1.0/>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/elements/1.1/> .
+
+
+vml:g2p
+      rdf:type skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:description "DMuDB codes for detection technique" ;
+      dc:title "DMuDB detection techniques" .
+
+vml:d_9991
+      rdf:type skos:TopConcept ;
+      skos:inScheme vml:g2p ;
+      dc:description "Detection technique"@en .
+
+vml:d_0001
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "CF20" ;
+      dc:description "CF Common Mutation Test"@en .
+      
+vml:d_0002
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      dc:prefLabel "CF29" ;
+      dc:description "Analysis of 29 mutations using the Elucigene CF29 kit"@en .
+
+vml:d_0003
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "CSCE" ;
+      dc:description "Conformation sensitive capillary electrophoresis"@en .
+      
+vml:d_0004
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "DGGE" ;
+      dc:description "Denaturing gradient gel electrophoresis"@en .
+      
+vml:d_0005
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "dHPLC" ;
+      dc:description "Denaturing high performance liquid chromatography"@en .
+      
+vml:d_0006
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Heteroduplex analysis" ;
+      dc:description "Heteroduplex analysis"@en .
+
+vml:d_0007
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Loss of heterozygosity analysis" ;
+      dc:description "Loss of heterozygosity analysis"@en .
+      
+vml:d_0008
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Meta-PCR" ;
+      dc:description "Meta-PCR"@en .
+
+vml:d_0009
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "MLPA" ;
+      dc:description "Multiplex ligation-dependent probe amplification"@en .
+      
+vml:d_0010
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "MS-PCR" ;
+      dc:description "Mutagenically separated PCR"@en .
+
+vml:d_0011
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Multiplex PCR" ;
+      dc:description "Multiplex PCR"@en .
+
+vml:d_0012
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Not Known" ;
+      dc:description "Not Known: The information has not been recorded or provided"@en .
+
+vml:d_0013
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Not Specified" ;
+      dc:description "Not Specified: Test information cannot be determined"@en .
+
+
+vml:d_0014
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "PCR PAGE" .
+
+vml:d_0015
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "PTT" ;
+      dc:description "Protein Trucation Test"@en .
+
+vml:d_0016
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "RNA" ;
+      dc:description "RNA: RNA work performed"@en .
+
+vml:d_0017
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Sequencing" ;
+      dc:description "Sequencing"@en .
+
+vml:d_0018
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "SNPlex" ;
+      dc:description "SNPlex: The SNPlexª Genotyping System from ABI"@en .
+
+vml:d_0019
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "SCCP" .
+
+vml:d_0021
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "SCCP/Heteroduplex" .
+      

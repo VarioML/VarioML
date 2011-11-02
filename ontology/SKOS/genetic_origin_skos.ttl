@@ -23,15 +23,16 @@ vml:g2p
       rdf:type skos:ConceptScheme ;
       dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
       dc:description "Genetic origin of mutation. Vocabulary is developed as part of the Gen2phen program. Content is derived mainly from the LOVD'." ;
+      skos:note "Original Genetic origin concept has been normalized into three parts: Type, parental origin and evidence code";
       dc:title "Genetic origin" .
 
-vml:g_9001
+vml:g_9991
       rdf:type skos:TopConcept ;
       skos:inScheme vml:g2p  ;
       skos:description "Genetic origin or type of mutation (de-novo, inherited, somatic)";
       skos:prefLabel "Genetic origin"@en .
 
-vml:g_9002
+vml:g_9992
       rdf:type skos:TopConcept ;
       skos:inScheme vml:g2p  ;
       skos:description "Parental source of mutation (maternal, paternal..) " ;
@@ -44,41 +45,41 @@ vml:g_9002
       
 vml:g_0001
       rdf:type skos:Concept ;
-      skos:broader vml:g_9001 ;
+      skos:broader vml:g_9991 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Inherited"@en .
 
 vml:g_0002
       rdf:type skos:Concept ;
-      skos:broader vml:g_9001 ;
+      skos:broader vml:g_9991 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Somatic"@en .     
 
 vml:g_0003
       rdf:type skos:Concept ;
-      skos:broader vml:g_9001 ;
+      skos:broader vml:g_9991 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "De novo"@en .     
 
 #
-# Parental source
+# Parental origin (source)
 #
 vml:g_0004
       rdf:type skos:Concept ;
-      skos:broader vml:g_9002 ;
+      skos:broader vml:g_9992 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Maternal chromosome"@en .
 
 vml:g_0005
       rdf:type skos:Concept ;
-      skos:broader vml:g_9002 ;
+      skos:broader vml:g_9992 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Paternal chromosome"@en .
 
 
 vml:g_0006
       rdf:type skos:Concept ;
-      skos:broader vml:g_9002 ;
+      skos:broader vml:g_9992 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Either parent"@en .
 
