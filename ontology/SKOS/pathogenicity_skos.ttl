@@ -20,7 +20,7 @@
 
 vml:p_9001
       rdf:type skos:TopConcept ;
-      skos:inScheme vml:g2p , vml:cmgs_vgl_5 ;
+      skos:inScheme vml:g2p , vml:cmgs_vgl_5, vml:acmg_2007 ;
       skos:prefLabel "Pathogenecity"@en .
 
 # CMGS 5 concept scheme
@@ -105,6 +105,7 @@ vml:p_1002
       skos:hiddenLabel "Not-known"@en ;
       skos:inScheme vml:g2p ;
       skos:closeMatch vml:p_0005  ;
+      dc:description "Variant is known but it not reported to be pathogenic" ;
       skos:altLabel "Not known to be pathogenic"@en ;
       skos:prefLabel "Not known"@en .
 
@@ -130,12 +131,68 @@ vml:p_1005
 vml:p_1006
       rdf:type skos:Concept ;
       skos:broader vml:p_9001 ;
-      skos:hiddenLabel "Not-known"@en ;
       skos:inScheme vml:g2p ;
       skos:closeMatch vml:p_0005  ;
+      dc:description "Variant is new and pathogenicity is unclassified" ;
       skos:prefLabel "Unclassified"@en .
 
 vml:g2p_list
       rdf:type skos:OrderedCollection ;
       skos:memberList (vml:p_1001 vml:p_1002 vml:p_1003 vml:p_1004 vml:p_1005 vml:p_1006) .
+      
+      
+vml:acmg_2007
+      rdf:type skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:description "Pathogenicity terms defined in ACMG recommendations for standards for interpretation and reporting of sequence variations: Revisions 2007" ;
+      dc:bibliographicCitation "doi:10.1097/GIM.0b013e31816b5cae" ;
+      dc:title "ACGM pathogenicity terms" .
+
+vml:p_2001
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:acmg_2007 ;
+      skos:closeMatch vml:p_1003; # pathogenic
+#      skos:altLabel "Reported and recognized to be causative";
+      skos:prefLabel "Sequence variation is previously reported and is a recognized cause of the disorder"@en .
+
+vml:p_2002
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:acmg_2007 ;
+      skos:inScheme vml:p_1005; # probably pathogenic
+#      skos:altLabel "Unreported and expected to be causative by type";
+      skos:prefLabel "Sequence variation is previously unreported and is of the type which is expected to cause the disorder"@en .
+
+vml:p_2003
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:acmg_2007 ;
+      skos:closeMatch vml:p_1006 ; # unclassified
+#      skos:altLabel "Unreported and pathogenicity is not known by type";
+      skos:prefLabel "Sequence variation is previously unreported and is of the type which may or may not be causative of the disorder"@en .
+
+vml:p_2004
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:acmg_2007 ;
+      skos:closeMatch vml:p_1004  ; # g2p probably not pathogenic     
+#      skos:altLabel "Unreported and probably not causative";
+      skos:prefLabel "Sequence variation is previously unreported and is probably not causative of disease"@en .
+
+vml:p_2005
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:closeMatch vml:p_1001 ; # g2p non pathogenic
+      skos:inScheme vml:acmg_2007 ;
+ #     skos:altLabel "Reported and recognized to be neutral";
+      skos:prefLabel "Sequence variation is previously reported and is a recognized neutral variant"@en .
+
+vml:p_2006
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9001 ;
+      skos:inScheme vml:acmg_2007 ;
+      skos:closeMatch vml:p_1004  ; # g2p probably not pathogenic     (can we  say this ?)
+  #    skos:altLabel "Not expected to be causative, but is accociated with clinical presentation";
+      skos:prefLabel "Sequence variation is not known or expected to be causative of disease, but is found to be associated with a clinical presentation"@en .
       
