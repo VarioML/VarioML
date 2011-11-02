@@ -18,7 +18,7 @@
       rdf:type owl:Ontology ;
       owl:imports <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/elements/1.1/> .
 
-vml:p_9001
+vml:p_9991
       rdf:type skos:TopConcept ;
       skos:inScheme vml:g2p , vml:cmgs_vgl_5, vml:acmg_2007 ;
       skos:prefLabel "Pathogenecity"@en .
@@ -41,7 +41,7 @@ vml:cmgs_vgl_5
 
 vml:p_0001
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:exactMatch vml:p_1001; # g2p non pathogenic
       skos:inScheme vml:cmgs_vgl_5 ;
       skos:prefLabel "Certainly not pathogenic"@en .
@@ -49,7 +49,7 @@ vml:p_0001
 vml:p_0002
       rdf:type skos:Concept ;
       skos:prefLabel "Unlikely pathogenic"@en ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:exactMatch vml:p_1004; # probably not pathogenic
       skos:inScheme vml:cmgs_vgl_5 ;
       skos:altLabel "Unlikely to be pathogenic but cannot be formally proven"@en .
@@ -57,14 +57,14 @@ vml:p_0002
 vml:p_0003
       rdf:type skos:Concept ;
       skos:prefLabel "Likely pathogenic"@en ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:exactMatch vml:p_1005; # probably pathgenic
       skos:inScheme vml:cmgs_vgl_5 ;
       skos:altLabel "Likely to be pathogenic but cannot be formally proven"@en .
 
 vml:p_0004
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:exactMatch vml:p_1003; # pathogenic
       skos:inScheme vml:cmgs_vgl_5 ;
       skos:prefLabel "Certainly pathogenic"@en .
@@ -72,7 +72,7 @@ vml:p_0004
 
 vml:p_0005
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:cmgs_vgl_5 ;
       skos:closeMatch vml:p_1006, vml:p_1002; # unclassified and not-known
       skos:prefLabel "Unknown"@en .
@@ -101,7 +101,7 @@ vml:g2p
 
 vml:p_1001
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:hiddenLabel "Non patogenic"@en ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Non-pathogenic"@en .
@@ -109,7 +109,7 @@ vml:p_1001
 
 vml:p_1002
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:hiddenLabel "Not-known"@en ;
       skos:inScheme vml:g2p ;
       dc:description "Variant is known but it not reported to be pathogenic" ;
@@ -118,25 +118,25 @@ vml:p_1002
 
 vml:p_1003
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Pathogenic"@en .
 
 vml:p_1004
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:prefLabel "Probably not pathogenic"@en ;
       skos:inScheme vml:g2p .
 
 vml:p_1005
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:prefLabel "Probably pathogenic"@en ;
       skos:inScheme vml:g2p .
 
 vml:p_1006
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:g2p ;
       dc:description "Variant is new and pathogenicity is unclassified" ;
       skos:prefLabel "Unclassified"@en .
@@ -155,7 +155,7 @@ vml:acmg_2007
 
 vml:p_2001
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:acmg_2007 ;
       skos:exactMatch vml:p_1003; # pathogenic
 #      skos:altLabel "Reported and recognized to be causative";
@@ -163,7 +163,7 @@ vml:p_2001
 
 vml:p_2002
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:acmg_2007 ;
       skos:exactMatch vml:p_1005; # probably pathogenic
 #      skos:altLabel "Unreported and expected to be causative by type";
@@ -171,7 +171,7 @@ vml:p_2002
 
 vml:p_2003
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:acmg_2007 ;
       skos:exactMatch vml:p_1006 ; # unclassified
 #      skos:altLabel "Unreported and pathogenicity is not known by type";
@@ -179,7 +179,7 @@ vml:p_2003
 
 vml:p_2004
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:acmg_2007 ;
       skos:closeMatch vml:p_1004  ; # g2p probably not pathogenic     
 #      skos:altLabel "Unreported and probably not causative";
@@ -187,7 +187,7 @@ vml:p_2004
 
 vml:p_2005
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:exactMatch vml:p_1001 ; # g2p non pathogenic
       skos:inScheme vml:acmg_2007 ;
  #     skos:altLabel "Reported and recognized to be neutral";
@@ -195,7 +195,7 @@ vml:p_2005
 
 vml:p_2006
       rdf:type skos:Concept ;
-      skos:broader vml:p_9001 ;
+      skos:broader vml:p_9991 ;
       skos:inScheme vml:acmg_2007 ;
       skos:closeMatch vml:p_1004  ; # g2p probably not pathogenic     (can we  say this ? this not exactMatch )
   #    skos:altLabel "Not expected to be causative, but is accociated with clinical presentation";
