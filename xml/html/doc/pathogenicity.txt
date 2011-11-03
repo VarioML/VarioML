@@ -1,7 +1,9 @@
 
 Pathogenicity of variant.
 
-Pathogenicity has 7 possible values:
+Controlled vocabulary for pathogenicity is sourced from the GEN2PHEN project. See: [VarioML - Pathogenicity](http://www.gen2phen.org/wiki/varioml-pathogenicity).
+
+Pathogenicity has 8 possible values:
 
 * Non-pathogenic
 * Not known
@@ -17,6 +19,19 @@ Pathogenicity has 7 possible values:
 *Causative* is for cases where variant is known to have impact on non disease phenotype.
 
 *Pathogenicity* has new attributes: phenotype, scope (individual, family, population) and score.
+
+**CMGS/VKGL suggested classification**
+
+Via [Alamut](http://www.interactive-biosoftware.com/alamut/doc/CMGS-VKGL-Classification.html):
+
+The [Practice guidelines for the Interpretation and Reporting of Unclassified Variants (UVs) in Clinical Molecular Genetics](http://cmgsweb.shared.hosting.zen.co.uk/BPGs/pdfs%20current%20bpgs/UV%20GUIDELINES%20ratified.pdf) suggest the following classification system:
+
+Class 1 – Certainly not pathogenic
+Class 2 – Unlikely to be pathogenic but cannot be formally proven
+Class 3 – Likely to be pathogenic but cannot be formally proven
+Class 4 - Certainly pathogenic
+
+----------------------
 
 *Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
 

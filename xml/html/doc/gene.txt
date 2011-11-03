@@ -8,7 +8,6 @@ Can include other database cross-references and annotations.
 Example source:
 * HGNC
 
-
 Example accession:
 * BRACA2
 

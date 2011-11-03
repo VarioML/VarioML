@@ -3,6 +3,7 @@ Database cross reference for reference sequence.
 
 Can include other database cross-references and annotations.
 
+Use [Genbank](http://www.ncbi.nlm.nih.gov/genbank/)to source reference sequences.
 
 **Example:**
 
