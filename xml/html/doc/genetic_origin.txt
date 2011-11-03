@@ -1,12 +1,19 @@
 
-Genetic origin of variation. Has following information:
+Genetic origin of variation. 
 
-* term - ontology term for origin of variant (denovo, sporadic, inherited)   
+Genetic origin corresponds to the [Sequence Ontology's variant_origin](http://www.sequenceontology.org/wiki/index.php/Category:SO:0001762_!_variant_origin).
+
+Genetic origin and source are evidence ontology terms.
+
+Genetic origin documents the following information:
+
+* term - ontology term for origin of variant (denovo, sporadic, inherited) 
 * source - parental origin of variation (paternal, maternal) 
 * evidence code - evidence code for the observation
 * list of individuals
-* Genetic origin and source are evidence ontology terms.
-* Controlled vocabulary terms for genetic origin:
+
+**Controlled vocabulary terms for genetic origin:**
+
 * inherited
 * sporadic
 * de novo
@@ -15,7 +22,6 @@ Genetic origin of variation. Has following information:
 [lsdb-controlled-vocabulary-terms
 ](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms)
 
-
 **Example:** 
 
      <genetic_origin term="inherited">
@@ -23,5 +29,3 @@ Genetic origin of variation. Has following information:
         <evidence_code term="inferred"/>                                
      </genetic_origin>
      
-
-

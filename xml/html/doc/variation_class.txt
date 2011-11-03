@@ -1,0 +1,13 @@
+
+Type of variation. 
+
+[Sequence Ontology](http://www.sequenceontology.org/browser/current_release/term/SO:0001059) terms should be used.
+
+Equivalent to the functional class in dbSNP.
+
+*Examples:*
+indel (accession = 1000032)
+deletion (accession = 0000159)
+substitution (accession = 1000002)
+inversion (accession = 1000036)
+
