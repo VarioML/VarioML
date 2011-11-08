@@ -3,22 +3,16 @@ Pathogenicity of variant.
 
 Controlled vocabulary for pathogenicity is sourced from the GEN2PHEN project. See: [VarioML - Pathogenicity](http://www.gen2phen.org/wiki/varioml-pathogenicity).
 
-Pathogenicity has 8 possible values:
+Pathogenicity has 6 possible values:
 
 * Non-pathogenic
 * Not known
 * Pathogenic
 * Probably not pathogenic
 * Probably pathogenic
-* Causative
-* Probably causative
 * Unclassified
 
-*Causative* is added as workaround for cases where mutation do not lead to a disease phenotype (e.g. eye color etc.)
-
-*Causative* is for cases where variant is known to have impact on non disease phenotype.
-
-*Pathogenicity* has new attributes: phenotype, scope (individual, family, population) and score.
+*Pathogenicity* has new attributes: **phenotype**, **scope** *(individual, family, population)* and **score**.
 
 **CMGS/VKGL suggested classification**
 
@@ -33,7 +27,16 @@ Class 4 - Certainly pathogenic
 
 ----------------------
 
-*Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
+*Note [1]: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
+
+*Note [2]: The following controlled terms have been deprecated:
+
+* Causative
+* Probably causative
+
+*Causative* was added as a workaround for cases where a mutation does not lead to a disease phenotype (e.g. eye color etc.)
+
+*Causative* was for cases where the variant is known to have an impact on non-disease phenotypes.
 
 
 
