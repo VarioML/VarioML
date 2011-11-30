@@ -22,8 +22,9 @@ trait MyVariant {
 
 class Feature(val seqType: String, val ref: Int) {
   var line: List[String] = List[String]()
+
   def add(text: String): Unit = {
-    line ::= text
+    line :+= text
   }
   override def toString(): String = {
     var tmp = "[" + seqType + " " + ref + ": "
@@ -81,7 +82,7 @@ class Record() {
     propertyMap.put(key, (if (!v.isDefined) new RecordType(text) else new RecordType(v.get + " " + text)))
   }
   def add(rec: FeatureTable): Unit = {
-    featureTables ::= rec
+    featureTables :+= rec
   }
 
   def getFt(allele: String): FeatureTable = {
@@ -89,10 +90,10 @@ class Record() {
     var _tmp: FeatureTable = null
     for (i <- 0 until featureTables.length; if _tmp == null) {
       if (featureTables(i).allele.equals(allele)) { _tmp = featureTables(i) }
-      all += featureTables(i).allele
+      all += featureTables(i)
     }
-    if ( _tmp == null) { 
-    	throw new Exception("cannot get feature table for allele. Is FeatureHeader mising? " + allele + " (" + all + ")")      
+    if (_tmp == null) {
+      throw new Exception("cannot get feature table for allele. " +allele+" Is FeatureHeader mising?  FeatureTable=" + all )
     }
     return _tmp
   }
@@ -186,7 +187,19 @@ object IDBase {
     if (s.length == 0) return ""
     return s.head + " " + listToString(s.tail)
   }
-  def handleRecord(lines: List[String]): Record = {
+  def handleRecord(aLines: List[String]): Record = {
+
+    var lines = List[String]()
+    var fixed = ""
+    for (i <- 0 until aLines.length) {
+      if (aLines(i).matches("^Feature\\s+dna;\\s+1\\s*")) {
+        if (!aLines(i - 1).matches("^FeatureHeader.+")) {
+          fixed = "FIXED"
+          lines :+= "FeatureHeader   allele; 1"
+        }
+      }
+      lines :+= aLines(i)
+    }
 
     val vml = new Record();
     try {
@@ -198,10 +211,14 @@ object IDBase {
 
           case FeatureHeader.regex(allele) => {
             var ft = new FeatureTable(allele)
+
             var j = i + 1;
-            var inLoop = true
+            var inLoop = j < lines.length && !lines(j).equals(EOR.regex)
+
+            //assert(fixed.equals(""),"CHK "+fixed )
             //add all dna/rna/aa features into feature table
             while (inLoop) {
+              //System.err.println("DEBUG "+lines(j) )
               lines(j) match {
                 // mol=dna,rna,aa and num=number e.g. Feature  rna; 2
                 case Feature.regex(mol, num) => {
@@ -209,20 +226,31 @@ object IDBase {
                   ft.add(feat)
                   var k = j + 1
                   var inLoop = true
+
                   //add corresponding feature elements as strings e.g. Feature /name: initiation codon
                   // string "name: initiation codon" is stored
-                  while (inLoop) {
-                    if (k >= lines.length) {
+                  //System.err.println(" DEBUG+ "+mol+num+" " +lines(i))
 
-                      throw new Exception("Possible problem in feature table. CHECK: " + listToString(lines))
+                  while (inLoop && k < lines.length) {
 
-                    }
+//                    if (k >= lines.length) {
+//
+//                      assert(false, "Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
+//                      throw new Exception("Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
+//
+//                    }
                     lines(k) match {
+                      
                       case FeatureElems.regex(text) => {
+                        //System.err.println("-----DEBUG+" +lines(k)+ " "+text)
                         feat.add(text.trim())
                       }
                       case _ => {
+                        
                         assert(k > (j + 1))
+                        //if ( lines(k).matches("") ) {
+                        //System.err.println("+++++DEBUG+" +lines(k))
+                        //}
                         inLoop = false
                       }
                     }
@@ -232,7 +260,8 @@ object IDBase {
                 }
 
                 case _ => {
-                  if  (j <= (i + 10)) throw new Exception("Possible problem in feature table. CHECK: " + listToString(lines))
+
+                  //Console.err.println("DEBUG ++ OUT "+lines(j)+" "+i+" "+j)
                   ///assert(j > (i + 10)) 10 is took from hat
                   inLoop = false
                 }
@@ -241,6 +270,7 @@ object IDBase {
             }
             vml.add(ft)
           }
+
           case _ => {
 
             // lopp over all fields (regexs) an see do they match the line 
@@ -287,7 +317,7 @@ object IDBase {
       line match {
 
         case EOR.regex() => {
-          val rec: Record = handleRecord(lines.reverse)
+          val rec: Record = handleRecord(lines.reverse) //need to reverse.. should use string buffer
           lines = List[String]()
           if (batch.header == null) {
             batch.header = rec
@@ -394,31 +424,31 @@ object IDBase {
           assert(_start == -1)
           _start = start.toInt
           _end = end.toInt
-          locations ::= (acc, (_start, _end))
+          locations :+= (acc, (_start, _end))
         }
         case IntStart(acc, start) => {
           assert(_start == -1)
           _start = start.toInt
           _end = start.toInt
-          locations ::= (acc, (_start, _end))
+          locations :+= (acc, (_start, _end))
 
         }
         case DbIntRange(db, acc, start, end) => {
           assert(_start == -1)
           _start = start.toInt
           _end = end.toInt
-          locations ::= (db + ":" + acc, (_start, _end))
+          locations :+= (db + ":" + acc, (_start, _end))
 
         }
         case DbIntStart(db, acc, start) => {
           assert(_start == -1)
           _start = start.toInt
           _end = start.toInt
-          locations ::= (db + ":" + acc, (_start, _end))
+          locations :+= (db + ":" + acc, (_start, _end))
         }
         case DbAcc(db, acc) => {
           assert(_start > -1)
-          locations ::= (db + ":" + acc, (_start, _end))
+          locations :+= (db + ":" + acc, (_start, _end))
         }
         case _ => {
           assert(false, "unknown location entry: " + a)
@@ -518,28 +548,28 @@ object IDBase {
         case Dna() => {
 
           val v = createVariant("DNA", s)
-          variantList ::= v
+          variantList :+= v
 
         }
 
         case cDna() => {
 
           val v = createVariant("cDNA", s)
-          cDNAvariantList ::= v
+          cDNAvariantList :+= v
 
         }
 
         case rDna() => {
 
           val v = createConsVariant("RNA", s)
-          RNAvariantList ::= v
+          RNAvariantList :+= v
 
         }
 
         case AA() => {
 
           val v = createConsVariant("AA", s)
-          AAvariantList ::= v
+          AAvariantList :+= v
 
         }
 
@@ -632,6 +662,29 @@ object IDBase {
       }
       counter = variantList.length * 3; // we need to increment like this      
 
+    } else if (variantList.length == 0 && // we have only proteins..
+      RNAvariantList.length == 0 && AAvariantList.length > 0) {
+
+      // we could create dummy AA and RNAss but not done right now
+      for (i <- 0 until AAvariantList.length) {
+
+        val dna = variantList(i)
+        //val rna = RNAvariantList(i)
+        //val aa = AAvariantList(i)
+        counter += 1
+        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
+        val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // rna data should be there still ...
+        val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
+        //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
+        //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+        
+        //
+        variantList +:= createVariant("AA", AAvariantList(i).getName().getString()) 
+
+      }
+      counter = AAvariantList.length * 3; // we need to increment like this      
+
+
     } else {
 
       throw new Exception("Do not undestand how systematic names are grouped.. i.e. how DNA - RNA - AA are related and how they match feature table entries")
@@ -701,12 +754,13 @@ object IDBase {
           val case4 = "\\s*(\\S+.*)".r
 
           var homozygVariant = false
-          var genotypeVariant = false
-          val EMPTY_ARRAY = Array("")
+          var genotypeVariant = false 
+          val EMPTY_ARRAY = Array[String]()
           var systematicNames = (EMPTY_ARRAY, EMPTY_ARRAY)
 
           sysName match {
             case case1(text) => {
+
               val names = parseSysName(text)
               systematicNames = (names, names)
               homozygVariant = true
@@ -723,8 +777,8 @@ object IDBase {
               if (text.indexOf("Allele 2") > -1) {
 
                 val texts = text split "Allele 2:?"
-                if( texts.length != 2) {
-                   throw new Exception("Systematic name is not as it should be: "+_text)
+                if (texts.length != 2) {
+                  throw new Exception("Systematic name is not as it should be: " + _text)
                 }
 
                 val names1 = parseSysName(texts.head)
@@ -741,8 +795,10 @@ object IDBase {
               }
             }
             case case4(text) => {
-              if ( text.indexOf("Allele") > -1) {
-            	  throw new Exception("Unknown systematic name " + sysName + " " + inv.getIdAttr())                
+
+              if (text.indexOf("Allele") > -1) {
+
+                throw new Exception("Unknown systematic name " + sysName + " " + inv.getIdAttr())
               }
               val names = parseSysName(text)
               systematicNames = (names, names)
@@ -750,6 +806,7 @@ object IDBase {
             }
 
             case _ => {
+
               throw new Exception("Unknown systematic name " + sysName + " " + inv.getIdAttr())
             }
           }
@@ -767,16 +824,29 @@ object IDBase {
                   hap1.addVariant(va)
                 })
 
-                if (!homozygVariant) {
+                v.addHaplotype(hap1)
+                
+                if (genotypeVariant) {
+
                   val (v2, c2) = getGenomicVariants(systematicNames._2, rec.getFt("2"), c)
                   val hap2 = new Haplotype()
                   v2 foreach ((va) => {
                     hap2.addVariant(va)
                   })
 
-	                if ( v1.size > 1 && v2.size > 1) {
-	                  Console.err.println("** ++++++++++* Check case: "+inv.getIdAttr())
-	                }
+                  if (v1.size > 1 && v2.size > 1) {
+                    Console.err.println("** ++++++++++* Check case: " + inv.getIdAttr())
+                  }
+                
+                  v.addHaplotype(hap2)
+                  
+                } else if ( homozygVariant) {
+                  
+                  //todo: check is this ok
+                  v.addHaplotype(hap1)
+                  val c = new Comment()
+                  c.addText( new CommentText("homozygous"))
+                  
                 }
 
                 v.setGenotypicAttr(true)
@@ -811,7 +881,7 @@ object IDBase {
 
         case x: Exception => {
 
-          //System.err.println(x.getMessage())
+          System.err.println(x.getMessage())
           failed += 1
         }
 
@@ -837,10 +907,10 @@ object IDBase {
         //println(ft)
       })
     })
-    
-    val vr =toXML(batch)
+
+    val vr = toXML(batch)
     //val vars = vr.getVariantList() 
-    
+
   }
 
   def main(args: Array[String]) {
@@ -856,7 +926,7 @@ object IDBase {
       (files filter (f => """.*\.dat$""".r.findFirstIn(f.getName).isDefined)) foreach ((_file) => {
         if (_file != null && _file.canRead()) {
 
-          println("Reading " + _file.getPath())
+          Console.err.println("======= Reading " + _file.getPath())
           processFile(_file)
 
         } else {
