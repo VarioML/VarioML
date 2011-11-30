@@ -773,10 +773,13 @@ object IDBase {
                   v2 foreach ((va) => {
                     hap2.addVariant(va)
                   })
+
+	                if ( v1.size > 1 && v2.size > 1) {
+	                  Console.err.println("** ++++++++++* Check case: "+inv.getIdAttr())
+	                }
                 }
 
                 v.setGenotypicAttr(true)
-
                 v
               } catch {
 
@@ -808,7 +811,7 @@ object IDBase {
 
         case x: Exception => {
 
-          System.err.println(x.getMessage())
+          //System.err.println(x.getMessage())
           failed += 1
         }
 
@@ -826,7 +829,6 @@ object IDBase {
     val s = scala.io.Source.fromFile(file)
     val batch = parse(s)
 
-    toXML(batch)
     batch.header.propertyMap foreach ((tuple) => {
       //println(tuple._1 + " Value= " + tuple._2)
     })
@@ -835,6 +837,10 @@ object IDBase {
         //println(ft)
       })
     })
+    
+    val vr =toXML(batch)
+    //val vars = vr.getVariantList() 
+    
   }
 
   def main(args: Array[String]) {
