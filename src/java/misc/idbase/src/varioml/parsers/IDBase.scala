@@ -91,7 +91,9 @@ class Record() {
       if (featureTables(i).allele.equals(allele)) { _tmp = featureTables(i) }
       all += featureTables(i).allele
     }
-    assert(_tmp != null, "cannot get feature table for allele >" + allele + "< (" + all + ")")
+    if ( _tmp == null) { 
+    	throw new Exception("cannot get feature table for allele. Is FeatureHeader mising? " + allele + " (" + all + ")")      
+    }
     return _tmp
   }
 
@@ -180,84 +182,96 @@ object IDBase {
     ID, Accession, SystematicName, OriginalCode, Description, Date, RefNumber, RefCrossRef,
     RefAuthors, RefTitle, RefLoc, Sex, Diagnosis, EthnicOrigin, Relative, Symptoms);
 
-  def listToString( s : List[String]) : String = {
-    if ( s.length == 0) return ""
-    return s.head+" "+listToString(s.tail)
+  def listToString(s: List[String]): String = {
+    if (s.length == 0) return ""
+    return s.head + " " + listToString(s.tail)
   }
   def handleRecord(lines: List[String]): Record = {
 
     val vml = new Record();
-    for (i <- 0 until lines.length) {
-      val line = lines(i)
-      //println("LINE "+i+" "+line)
+    try {
+      for (i <- 0 until lines.length) {
+        val line = lines(i)
+        //println("LINE "+i+" "+line)
 
-      line match {
+        line match {
 
-        case FeatureHeader.regex(allele) => {
-          var ft = new FeatureTable(allele)
-          var j = i + 1;
-          var inLoop = true
-          //add all dna/rna/aa features into feature table
-          while (inLoop) {
-            lines(j) match {
-              // mol=dna,rna,aa and num=number e.g. Feature  rna; 2
-              case Feature.regex(mol, num) => {
-                var feat = new Feature(mol, num.toInt)
-                ft.add(feat)
-                var k = j + 1
-                var inLoop = true
-                //add corresponding feature elements as strings e.g. Feature /name: initiation codon
-                // string "name: initiation codon" is stored
-                while (inLoop) {
-                  assert( k < lines.length,"Cannot parse feature table. CHECK record " + listToString(lines))
-                  lines(k) match {
-                    case FeatureElems.regex(text) => {
-                      feat.add(text.trim())
+          case FeatureHeader.regex(allele) => {
+            var ft = new FeatureTable(allele)
+            var j = i + 1;
+            var inLoop = true
+            //add all dna/rna/aa features into feature table
+            while (inLoop) {
+              lines(j) match {
+                // mol=dna,rna,aa and num=number e.g. Feature  rna; 2
+                case Feature.regex(mol, num) => {
+                  var feat = new Feature(mol, num.toInt)
+                  ft.add(feat)
+                  var k = j + 1
+                  var inLoop = true
+                  //add corresponding feature elements as strings e.g. Feature /name: initiation codon
+                  // string "name: initiation codon" is stored
+                  while (inLoop) {
+                    if (k >= lines.length) {
+
+                      throw new Exception("Possible problem in feature table. CHECK: " + listToString(lines))
+
                     }
-                    case _ => {
-                      assert(k > (j + 1))
-                      inLoop = false
+                    lines(k) match {
+                      case FeatureElems.regex(text) => {
+                        feat.add(text.trim())
+                      }
+                      case _ => {
+                        assert(k > (j + 1))
+                        inLoop = false
+                      }
                     }
+                    k += 1
                   }
-                  k += 1
+                  j = k - 2
                 }
-                j = k - 2
-              }
 
-              case _ => {
-                assert(j > (i + 10))
-                inLoop = false
+                case _ => {
+                  if  (j <= (i + 10)) throw new Exception("Possible problem in feature table. CHECK: " + listToString(lines))
+                  ///assert(j > (i + 10)) 10 is took from hat
+                  inLoop = false
+                }
               }
+              j += 1
             }
-            j += 1
+            vml.add(ft)
           }
-          vml.add(ft)
-        }
-        case _ => {
+          case _ => {
 
-          // lopp over all fields (regexs) an see do they match the line 
-          fields foreach ((field) => {
-            //todo: optimize... now unnecessary comparisons.. chk e.g. filter or map function
+            // lopp over all fields (regexs) an see do they match the line 
+            fields foreach ((field) => {
+              //todo: optimize... now unnecessary comparisons.. chk e.g. filter or map function
 
-            line match {
+              line match {
 
-              case field.regex(text) => {
-                vml.add(field, text.trim())
+                case field.regex(text) => {
+                  vml.add(field, text.trim())
+                }
+
+                case _ => {
+                  //                	if ( line.startsWith("Feat")) {
+                  //                	  Console.err.println("!!!!!!  Error in line" +line )
+                  //                	  assert(false)
+                  //                	}
+                  //                }
+                }
               }
 
-              case _ => {
-                //                	if ( line.startsWith("Feat")) {
-                //                	  Console.err.println("!!!!!!  Error in line" +line )
-                //                	  assert(false)
-                //                	}
-                //                }
-              }
-            }
-
-          })
+            })
+          }
         }
+
       }
+    } catch {
 
+      case x: Exception => {
+        System.err.println("CANNOT PARSE ENTRY: " + x.getMessage())
+      }
     }
 
     return vml;
@@ -680,9 +694,11 @@ object IDBase {
         if (sysName != null) {
 
           var allelesStr: String = null
+          //handle different sname entries
           val case1 = "Allele\\s+1\\s+and\\s+Allele\\s+2:?\\s+(\\S+.*)".r
           val case2 = "Allele\\s+1\\s+and\\s+2:?\\s+(\\S+.*)".r
           val case3 = "Allele\\s+1:?\\s+(\\S+.*)".r
+          val case4 = "\\s*(\\S+.*)".r
 
           var homozygVariant = false
           var genotypeVariant = false
@@ -703,11 +719,13 @@ object IDBase {
             }
             case case3(_text) => {
 
-              var text = _text.replaceAll("Allele 1:?","") // we may have other Allele 1s there see adabase.dat A0057
-              if (text.indexOf("Allele 2") > 1) {
+              var text = _text.replaceAll("Allele 1:?", "") // we may have other Allele 1s there see adabase.dat A0057
+              if (text.indexOf("Allele 2") > -1) {
 
                 val texts = text split "Allele 2:?"
-                assert(texts.length == 2)
+                if( texts.length != 2) {
+                   throw new Exception("Systematic name is not as it should be: "+_text)
+                }
 
                 val names1 = parseSysName(texts.head)
                 val names2 = parseSysName(texts.tail.head)
@@ -722,8 +740,17 @@ object IDBase {
 
               }
             }
+            case case4(text) => {
+              if ( text.indexOf("Allele") > -1) {
+            	  throw new Exception("Unknown systematic name " + sysName + " " + inv.getIdAttr())                
+              }
+              val names = parseSysName(text)
+              systematicNames = (names, names)
+              homozygVariant = false
+            }
+
             case _ => {
-              assert(false, "Unknown systematic name " + sysName + " " + inv.getIdAttr())
+              throw new Exception("Unknown systematic name " + sysName + " " + inv.getIdAttr())
             }
           }
 
@@ -732,25 +759,25 @@ object IDBase {
             if (systematicNames._1 != null && systematicNames._2 != null) {
 
               try {
-                  val v = new Variant()
+                val v = new Variant()
 
-                  val hap1 = new Haplotype()
-                  val (v1, c) = getGenomicVariants(systematicNames._1, rec.getFt("1"), 0)
-                  v1 foreach ((va) => {
-                    hap1.addVariant(va)
+                val hap1 = new Haplotype()
+                val (v1, c) = getGenomicVariants(systematicNames._1, rec.getFt("1"), 0)
+                v1 foreach ((va) => {
+                  hap1.addVariant(va)
+                })
+
+                if (!homozygVariant) {
+                  val (v2, c2) = getGenomicVariants(systematicNames._2, rec.getFt("2"), c)
+                  val hap2 = new Haplotype()
+                  v2 foreach ((va) => {
+                    hap2.addVariant(va)
                   })
+                }
 
-                  if ( ! homozygVariant ) {
-	                  val (v2, c2) = getGenomicVariants(systematicNames._2, rec.getFt("2"), c)
-	                  val hap2 = new Haplotype()
-	                  v2 foreach ((va) => {
-	                    hap2.addVariant(va)
-	                  })                    
-                  }
-                  
-                  v.setGenotypicAttr(true)
+                v.setGenotypicAttr(true)
 
-                  v
+                v
               } catch {
 
                 //todo: move exception handling out
