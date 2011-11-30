@@ -1,3 +1,17 @@
-
 * Branch
-New version which will have support for complex variants. Note that we will not change the name space version
+New version which will have support for complex locus spesific variants. Comments are welcome
+
+Proposal is following:
+<variant>
+  ...
+  <genotype>
+      <haplotype allele='1'>
+          <variant>c.12345G>T</variant>
+          <variant>c.123T>C</variant>
+      </haplotype>..
+      ....
+  <genotype>...
+
+All leves can be named using HGVS naming standards
+
+
