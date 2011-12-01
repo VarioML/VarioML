@@ -93,7 +93,7 @@ class Record() {
       all += featureTables(i)
     }
     if (_tmp == null) {
-      throw new Exception("cannot get feature table for allele. " +allele+" Is FeatureHeader mising?  FeatureTable=" + all )
+      throw new Exception("cannot get feature table for allele. " + allele + " Is FeatureHeader mising?  FeatureTable=" + all)
     }
     return _tmp
   }
@@ -233,20 +233,20 @@ object IDBase {
 
                   while (inLoop && k < lines.length) {
 
-//                    if (k >= lines.length) {
-//
-//                      assert(false, "Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
-//                      throw new Exception("Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
-//
-//                    }
+                    //                    if (k >= lines.length) {
+                    //
+                    //                      assert(false, "Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
+                    //                      throw new Exception("Possible problem (1) in feature table." + fixed + " CHECK: " + listToString(lines))
+                    //
+                    //                    }
                     lines(k) match {
-                      
+
                       case FeatureElems.regex(text) => {
                         //System.err.println("-----DEBUG+" +lines(k)+ " "+text)
                         feat.add(text.trim())
                       }
                       case _ => {
-                        
+
                         assert(k > (j + 1))
                         //if ( lines(k).matches("") ) {
                         //System.err.println("+++++DEBUG+" +lines(k))
@@ -463,20 +463,70 @@ object IDBase {
   def parseSysName(text: String): Array[String] = {
 
     var txt = text.replaceAll("\\s+", " ").replace("\\s$", "").replace(",", "")
-    var names = txt.split("\\s+") filter ((v) => v.length() > 0)
+    txt = txt.replace("[", "]") // let's make life bit easier
+    val names = txt.split("""\s+(?=([^\]]*\][^\]]*\])*[^\]]*$)""") filter ((v) => v.length() > 0)
     assert(names.length != 0, " Unknown sys name " + text)
     var error = false
+    var newNames = List[String]()
+    var gt = """([gcrp])\.\]([^\]]+)\]""".r
+    var gt2 = """\]([^\]]+)\]""".r
+    var gt3 = """([gcrp]\..*)""".r
     names foreach ((n) => {
-      if (!n.matches("[gcrp]\\.\\S+")) {
-        Console.err.println("DEBUG: Error in name  " + n + ". Text was " + text)
-        error = true
+
+      n match {
+
+        case gt(x, v) => {
+          var t = v split "\\s*;\\s*"
+          t foreach ((name) => {
+            if (name.matches("^[gcrp]\\..*")) {
+              newNames +:= name
+            } else {
+              if (name.matches("[gcrp]\\..*")) {
+
+                newNames +:= name
+                assert(name.startsWith(x))
+              } else {
+                
+                newNames +:= (x + "." + name)
+              }
+            }
+          })
+
+        }
+        case gt2(v) => {
+
+          var t = v split "\\s*;\\s*"
+          t foreach ((name) => {
+            if (name.matches("^[gcrp]\\.\\S+")) {
+              newNames +:= name
+            } else {
+              //assert(false, "check name " + name)
+              error = true
+            }
+          })
+
+        }
+
+        case gt3(name) => {
+          newNames +:= name
+        }
+        case _ => {
+          error = true
+          //newNames +:= n
+        }
+
       }
+
+    })
+
+    newNames foreach ((c) => {
+      assert(c.indexOf("]") == -1 && c.indexOf("[") == -1, "check name " + c)
     })
 
     if (error) {
       return null //error case todo: throw exception?
     } else {
-      return names
+      return newNames.toArray[String]
     }
 
   }
@@ -524,10 +574,10 @@ object IDBase {
     assert(counterStart >= 0, "counter " + counterStart)
     assert(sysNames.length > 0)
 
-    val Dna = """^g\..+""".r
-    val cDna = """^c\..+""".r
-    val rDna = """^r\..+""".r
-    val AA = """^p\..+""".r
+    val Dna = """^g\..*""".r
+    val cDna = """^c\..*""".r
+    val rDna = """^r\..*""".r
+    val AA = """^p\..*""".r
 
     var variantList: List[Variant] = List[Variant]()
     var cDNAvariantList: List[Variant] = List[Variant]()
@@ -677,13 +727,12 @@ object IDBase {
         val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
         //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
         //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
-        
+
         //
-        variantList +:= createVariant("AA", AAvariantList(i).getName().getString()) 
+        variantList +:= createVariant("AA", AAvariantList(i).getName().getString())
 
       }
       counter = AAvariantList.length * 3; // we need to increment like this      
-
 
     } else {
 
@@ -754,7 +803,7 @@ object IDBase {
           val case4 = "\\s*(\\S+.*)".r
 
           var homozygVariant = false
-          var genotypeVariant = false 
+          var genotypeVariant = false
           val EMPTY_ARRAY = Array[String]()
           var systematicNames = (EMPTY_ARRAY, EMPTY_ARRAY)
 
@@ -825,7 +874,7 @@ object IDBase {
                 })
 
                 v.addHaplotype(hap1)
-                
+
                 if (genotypeVariant) {
 
                   val (v2, c2) = getGenomicVariants(systematicNames._2, rec.getFt("2"), c)
@@ -837,16 +886,16 @@ object IDBase {
                   if (v1.size > 1 && v2.size > 1) {
                     Console.err.println("** ++++++++++* Check case: " + inv.getIdAttr())
                   }
-                
+
                   v.addHaplotype(hap2)
-                  
-                } else if ( homozygVariant) {
-                  
+
+                } else if (homozygVariant) {
+
                   //todo: check is this ok
                   v.addHaplotype(hap1)
                   val c = new Comment()
-                  c.addText( new CommentText("homozygous"))
-                  
+                  c.addText(new CommentText("homozygous"))
+
                 }
 
                 v.setGenotypicAttr(true)
