@@ -280,7 +280,13 @@ object IDBase {
               line match {
 
                 case field.regex(text) => {
-                  vml.add(field, text.trim())
+                  
+                  if ( field == Symptoms ) {
+                	  vml.add(field, text.trim().replaceAll("Others:",""))                                        
+                  } else {
+                	  vml.add(field, text.trim())                    
+                  }
+                  
                 }
 
                 case _ => {
@@ -303,7 +309,6 @@ object IDBase {
         System.err.println("CANNOT PARSE ENTRY: " + x.getMessage())
       }
     }
-
     return vml;
   }
 
@@ -772,10 +777,10 @@ object IDBase {
         panel.addIndividual(inv)
         inv.setIdAttr(rec.get(Accession))
         val pheno = new Phenotype()
-        pheno.setTermAttr(rec.get(Disease)) //NOTE THIS IS FENOTYPE TESTED.. 
+        pheno.setTermAttr(batch.getHeader(Disease)) //NOTE THIS IS FENOTYPE TESTED.. 
         panel.addPhenotype(pheno)
         if (rec.get(OMIM) != null) {
-          pheno.setAccessionAttr(rec.get(OMIM))
+          pheno.setAccessionAttr(batch.getHeader(OMIM))
           pheno.setSourceAttr("OMIM")
         }
         val symptoms = rec.get(Symptoms)
@@ -890,6 +895,9 @@ object IDBase {
 
                   v.addHaplotype(hap2)
 
+                  hap1.setAlleleAttr( 1)
+                  hap2.setAlleleAttr( 2)
+                  
                 } else if (homozygVariant) {
 
                   //todo: check is this ok
@@ -920,6 +928,10 @@ object IDBase {
           }
 
           vari.addPanel(panel)
+          val gene = new Gene()
+          gene.setSourceAttr("HUGO")
+          gene.setAccessionAttr( batch.getHeader(Gene))
+          vari.setGene( gene )
           lsdb.addVariant(vari)
 
         } else {
