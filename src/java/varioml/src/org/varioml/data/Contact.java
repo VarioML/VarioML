@@ -4,6 +4,7 @@ import java.util.List;
 import org.simpleframework.xml.Root;
 
 @Root(strict=true)
+
 @org.simpleframework.xml.Order(elements={"name","url","address","phone","fax","email","db_xref","comment"})
 public class Contact {
 	//xml-element used for code generation: //lsdb/source/contact

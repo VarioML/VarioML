@@ -30,11 +30,11 @@ public class Lsdb {
  
 	// ===========-- schema_version --===========
 	@org.simpleframework.xml.Attribute(required=false,name="schema_version")
-	private float _attr_schemaVersion ;
-	public void setSchemaVersionAttr( float attr_schemaVersion) { 
+	private Float _attr_schemaVersion ;
+	public void setSchemaVersionAttr( Float attr_schemaVersion) { 
 		this._attr_schemaVersion = attr_schemaVersion ;
 	}
-	public float getSchemaVersionAttr() { 
+	public Float getSchemaVersionAttr() { 
 		return this._attr_schemaVersion;
 	}
  

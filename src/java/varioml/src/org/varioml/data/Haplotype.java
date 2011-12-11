@@ -14,11 +14,11 @@ public class Haplotype {
  
 	// ===========-- allele --===========
 	@org.simpleframework.xml.Attribute(required=false,name="allele")
-	private int _attr_allele ;
-	public void setAlleleAttr( int attr_allele) { 
+	private Integer _attr_allele ;
+	public void setAlleleAttr( Integer attr_allele) { 
 		this._attr_allele = attr_allele ;
 	}
-	public int getAlleleAttr() { 
+	public Integer getAlleleAttr() { 
 		return this._attr_allele;
 	}
  

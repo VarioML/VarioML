@@ -2,7 +2,6 @@ package org.varioml.data;
 import java.util.ArrayList;
 import java.util.List;
 import org.simpleframework.xml.Root;
-import org.varioml.util.VarioDate;
 
 @Root(strict=true)
 
@@ -45,11 +44,11 @@ public class Individual {
  
 	// ===========-- dob --===========
 	@org.simpleframework.xml.Element(required=false,name="dob") 
-	private VarioDate _dob ;
-	public void setDob( VarioDate dob) { 
+	private org.varioml.util.VarioDate _dob ;
+	public void setDob( org.varioml.util.VarioDate dob) { 
 		this._dob = dob ;
 	}
-	public VarioDate getDob() {
+	public org.varioml.util.VarioDate getDob() {
 		return this._dob;
 	}
  

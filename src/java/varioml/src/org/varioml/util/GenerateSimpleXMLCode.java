@@ -39,7 +39,7 @@ import org.w3c.dom.NodeList;
 @SuppressWarnings("rawtypes")
 public class GenerateSimpleXMLCode {
 
-	boolean overwrite = false;
+	private boolean overwrite = false;
 	
 	final private Document doc;
 	final private XPath xpath;
@@ -620,36 +620,36 @@ public class GenerateSimpleXMLCode {
 				put("@content_type","String"); 
 				put("@encoding","String"); 
 				put("@lang","String"); 
-				put("@is_undefined","boolean");
+				put("@is_undefined","Boolean");
 				put("@date","org.varioml.util.VarioDate");
 				put("@version","String"); 
 				put("@role","String"); 
-				put("@code","int");
+				put("@code","Integer");
 				put("@orientation","String");
-				put("@samples","int");
+				put("@samples","Integer");
 				put("@type","String"); // chk duplicates
 				put("@scope","String"); // chk duplicates
-				put("@copy_count","double");
-				put("@genotypic","boolean");
+				put("@copy_count","Double");
+				put("@genotypic","Boolean");
 				put("@subcellular_part","String");
 				put("@technique","String");
 				put("@template","String");
 				put("@transcript_ref","String");
-				put("@schema_version","float");
+				put("@schema_version","Float");
 				put("@submissionid_type","String");
 				put("@xmlns","String");
 				put("@xmlns:xsi","String");
 				put("@xsi:schemaLocation","String");
 				put("@panel_ref","String");
-				put("@size","int");
+				put("@size","Integer");
 				put("@scheme","String");
 				put("@source","String");
-				put("@allele","int");
+				put("@allele","Integer");
 				//elements
 				put("date","org.varioml.util.VarioDate");
 				put("source","String");
 				put("text","String");  
-				put("value","double");
+				put("value","Double");
 				put("address","String");
 				put("phone","String"); 
 				put("fax","String");
@@ -662,11 +662,11 @@ public class GenerateSimpleXMLCode {
 				put("call","String");
 				put("reference","String");
 				put("chr","String");
-				put("start","long");
-				put("end","long");				
+				put("start","Long"); 
+				put("end","Long");				
 				put("url","String");
-				put("freq","double");
-				put("counts","int");
+				put("freq","Double");
+				put("counts","Integer");
 				put("name","String"); 
 				put("embargo_end_date","org.varioml.util.VarioDate");
 				put("created","org.varioml.util.VarioDateTime");
@@ -675,16 +675,16 @@ public class GenerateSimpleXMLCode {
 		};  
 
 		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("new_variant.xml");
-//		xu.printExampleElements(typeMap);
+////		xu.printExampleElements(typeMap);
 		
-//		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
-//			{put("name","VariantName");};
-//			{put("source","Source");};
-//		})); 
-//		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
-//			{put("name","VariantName");};
-//			{put("source","Source");};
-//		})); 
+		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
+			{put("name","VariantName");};
+			{put("source","Source");};
+		})); 
+		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
+			{put("name","VariantName");};
+			{put("source","Source");};
+		})); 
 //
 //		xu.generateCode("org.varioml.data.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
 //			{put("_","_");};
@@ -696,20 +696,19 @@ public class GenerateSimpleXMLCode {
 		})); 
 
 
-//		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
-////		xu.printExampleElements(typeMap);
+		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all_new.xml");
+		xu.printExampleElements(typeMap);
 //
-//		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
-//			{put("source","Source");};
-//		})); // size=25 2011-06-20 21:40:02		
-//
-//		xu.generateCode("org.varioml.data.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
-//			{put("category","FreqCategory");};
-//		})); // size=25 2011-06-20 21:40:02
-//		xu.generateCode("org.varioml.data.FreqCategory","//lsdb/individual/variant/frequency/category",x(typeMap,new HashMap<String,String>(){ 
-//			{put("_","_");};
-//		})); // size=25 2011-06-20 21:40:02
+		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
+			{put("source","Source");};
+		})); // size=25 2011-06-20 21:40:02		
 
+
+		xu.generateCode("org.varioml.data.VariantGroup","//lsdb/individual/variant_group",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); 
+
+		
 		
 		if ( true) System.exit(1);
 
@@ -719,17 +718,18 @@ public class GenerateSimpleXMLCode {
 			{put("source","Source");};
 		})); // size=8 2011-08-29 20:37:47
 
+		xu.generateCode("org.varioml.data.FreqCategory","//cafe_variome/variant/frequency/category",x(typeMap,new HashMap<String,String>(){
+	        {put("_","_");};
+		})); // size=15 2011-12-11 19:51:02
 
-		if ( true ) return;
+		if ( false ) return;
 
 		
 		
 		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
 		xu.printExampleElements(typeMap);
 
-		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
-			{put("source","Source");};
-		})); // size=25 2011-06-20 21:40:02		
+
 		xu.generateCode("org.varioml.data.Comment","//lsdb/comment",x(typeMap,new HashMap<String,String>(){ 
 			{put("text","CommentText");};
 		})); // size=25 2011-06-20 21:40:02
@@ -812,9 +812,10 @@ public class GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.data.Exon","//lsdb/individual/variant/exon",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=4 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		})); // size=25 2011-06-20 21:40:02
+//		xu.generateCode("org.varioml.data.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
+//			{put("_","_");}; 
+//    WE need to do this manually since it users choice group		
+//		})); // size=25 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.data.Gene","//lsdb/individual/variant/gene",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02

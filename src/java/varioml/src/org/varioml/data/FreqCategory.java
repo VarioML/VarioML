@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={})
+@org.simpleframework.xml.Order(elements={"description","db_xref","comment"})
 public class FreqCategory {
-	//xml-element used for code generation: //lsdb/individual/variant/frequency/category
+	//xml-element used for code generation: //cafe_variome/variant/frequency/category
 
 	public FreqCategory(  ) {
 	}
@@ -51,46 +51,46 @@ public class FreqCategory {
 	public String getUriAttr() { 
 		return this._attr_uri;
 	}
-	
+ 
 	// ===========-- description --===========
-		@org.simpleframework.xml.Element(required=false,name="description") 
-		private String _description ;
-		public void setDescription( String description) { 
-			this._description = description ;
+	@org.simpleframework.xml.Element(required=false,name="description") 
+	private String _description ;
+	public void setDescription( String description) { 
+		this._description = description ;
+	}
+	public String getDescription() {
+		return this._description;
+	}
+ 
+	// ===========-- db_xref --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="db_xref") 
+	private List<DbXref> _dbXref ;
+	public void setDbXrefList( List<DbXref> dbXref) { 
+		this._dbXref = dbXref ;
+	}
+	public List<DbXref> getDbXrefList()  { 
+		return this._dbXref;
+	}
+	public void addDbXref(DbXref item ) { 
+		if ( this._dbXref == null ) { 
+			this._dbXref = new ArrayList<DbXref>();
 		}
-		public String getDescription() {
-			return this._description;
+		this._dbXref.add( item);
+	}
+ 
+	// ===========-- comment --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="comment") 
+	private List<Comment> _comment ;
+	public void setCommentList( List<Comment> comment) { 
+		this._comment = comment ;
+	}
+	public List<Comment> getCommentList()  { 
+		return this._comment;
+	}
+	public void addComment(Comment item ) { 
+		if ( this._comment == null ) { 
+			this._comment = new ArrayList<Comment>();
 		}
-	 
-		// ===========-- db_xref --===========
-		@org.simpleframework.xml.ElementList(required=false,inline=true,entry="db_xref") 
-		private List<DbXref> _dbXref ;
-		public void setDbXrefList( List<DbXref> dbXref) { 
-			this._dbXref = dbXref ;
-		}
-		public List<DbXref> getDbXrefList()  { 
-			return this._dbXref;
-		}
-		public void addDbXref(DbXref item ) { 
-			if ( this._dbXref == null ) { 
-				this._dbXref = new ArrayList<DbXref>();
-			}
-			this._dbXref.add( item);
-		}
-	 
-		// ===========-- comment --===========
-		@org.simpleframework.xml.ElementList(required=false,inline=true,entry="comment") 
-		private List<Comment> _comment ;
-		public void setCommentList( List<Comment> comment) { 
-			this._comment = comment ;
-		}
-		public List<Comment> getCommentList()  { 
-			return this._comment;
-		}
-		public void addComment(Comment item ) { 
-			if ( this._comment == null ) { 
-				this._comment = new ArrayList<Comment>();
-			}
-			this._comment.add( item);
-		}
+		this._comment.add( item);
+	}
 }

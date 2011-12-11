@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"ref_seq","name","variant_type","original_id","sequence","genotype","consequence","pathogenicity","phenotype","variant_detection","tissue_distribution","seq_changes","aliases","location","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"ref_seq","name","variant_type","original_id","sequence","genotype","consequence","pathogenicity","variant_detection","tissue_distribution","seq_changes","aliases","location","evidence_code","protocol_id","db_xref","comment"})
 public class ConsVariant {
 	//xml-element used for code generation: //lsdb/individual/variant/seq_changes/variant
 
@@ -138,22 +138,6 @@ public class ConsVariant {
 			this._pathogenicity = new ArrayList<Pathogenicity>();
 		}
 		this._pathogenicity.add( item);
-	}
- 
-	// ===========-- phenotype --===========
-	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="phenotype") 
-	private List<Phenotype> _phenotype ;
-	public void setPhenotypeList( List<Phenotype> phenotype) { 
-		this._phenotype = phenotype ;
-	}
-	public List<Phenotype> getPhenotypeList()  { 
-		return this._phenotype;
-	}
-	public void addPhenotype(Phenotype item ) { 
-		if ( this._phenotype == null ) { 
-			this._phenotype = new ArrayList<Phenotype>();
-		}
-		this._phenotype.add( item);
 	}
  
 	// ===========-- variant_detection --===========

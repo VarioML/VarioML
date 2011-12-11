@@ -14,11 +14,11 @@ public class Frequency {
  
 	// ===========-- samples --===========
 	@org.simpleframework.xml.Attribute(required=false,name="samples")
-	private int _attr_samples ;
-	public void setSamplesAttr( int attr_samples) { 
+	private Integer _attr_samples ;
+	public void setSamplesAttr( Integer attr_samples) { 
 		this._attr_samples = attr_samples ;
 	}
-	public int getSamplesAttr() { 
+	public Integer getSamplesAttr() { 
 		return this._attr_samples;
 	}
  
@@ -46,38 +46,39 @@ public class Frequency {
 			this._population = new ArrayList<Population>();
 		}
 		this._population.add( item);
-	} 
+	}
  
-	// ===========-- counts --===========
-	@org.simpleframework.xml.Element(required=false,name="counts") 
-	private int _counts ;
-	public void setCounts( int counts) { 
-		this._counts = counts ;
-	}
-	public int getCounts() {
-		return this._counts;
-	}
+    // ===========-- counts --=========== MANUAL
+    @org.simpleframework.xml.Element(required=false,name="counts")
+    private Integer _counts ;
+    public void setCounts( Integer counts) {
+            this._counts = counts ;
+    }
+    public Integer getCounts() {
+            return this._counts;
+    }
 
-	// ===========-- category --===========
-	@org.simpleframework.xml.Element(required=false,name="category") 
-	private FreqCategory _category ;
-	public void setFreqCategory( FreqCategory category) { 
-		this._category = category ;
-	}
-	public FreqCategory getFreqCategory() {
-		return this._category;
-	}
+    // ===========-- category --=========== MANUAL
+    @org.simpleframework.xml.Element(required=false,name="category")
+    private FreqCategory _category ;
+    public void setFreqCategory( FreqCategory category) {
+            this._category = category ;
+    }
+    public FreqCategory getFreqCategory() {
+            return this._category;
+    }
 
 	// ===========-- freq --===========
 	@org.simpleframework.xml.Element(required=false,name="freq") 
-	private double _freq ;
-	public void setFreq( double freq) { 
+	private Double _freq ;
+	public void setFreq( Double freq) { 
 		this._freq = freq ;
 	}
-	public double getFreq() {
+	public Double getFreq() {
 		return this._freq;
 	}
  
+	
 	// ===========-- evidence_code --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="evidence_code") 
 	private List<EvidenceCode> _evidenceCode ;

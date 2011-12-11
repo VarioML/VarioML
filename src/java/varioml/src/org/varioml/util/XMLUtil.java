@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.simpleframework.xml.Serializer;
 import org.varioml.data.Lsdb;
-import org.varioml.data.Source;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

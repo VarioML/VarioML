@@ -14,11 +14,11 @@ public class EmbargoEndDate {
  
 	// ===========-- is_undefined --===========
 	@org.simpleframework.xml.Attribute(required=false,name="is_undefined")
-	private boolean _attr_isUndefined ;
-	public void setIsUndefinedAttr( boolean attr_isUndefined) { 
+	private Boolean _attr_isUndefined ;
+	public void setIsUndefinedAttr( Boolean attr_isUndefined) { 
 		this._attr_isUndefined = attr_isUndefined ;
 	}
-	public boolean getIsUndefinedAttr() { 
+	public Boolean getIsUndefinedAttr() { 
 		return this._attr_isUndefined;
 	}
 	// =========-- TEXT NODE --=========

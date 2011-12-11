@@ -9,23 +9,26 @@ import org.simpleframework.xml.Root;
 public class Variant {
 	//xml-element used for code generation: //variant_group/variant
 
+	public Variant(  ) {
+	}
+ 
 	// ===========-- copy_count --===========
 	@org.simpleframework.xml.Attribute(required=false,name="copy_count")
-	private double _attr_copyCount ;
-	public void setCopyCountAttr( double attr_copyCount) { 
+	private Double _attr_copyCount ;
+	public void setCopyCountAttr( Double attr_copyCount) { 
 		this._attr_copyCount = attr_copyCount ;
 	}
-	public double getCopyCountAttr() { 
+	public Double getCopyCountAttr() { 
 		return this._attr_copyCount;
 	}
  
 	// ===========-- genotypic --===========
 	@org.simpleframework.xml.Attribute(required=false,name="genotypic")
-	private boolean _attr_genotypic ;
-	public void setGenotypicAttr( boolean attr_genotypic) { 
+	private Boolean _attr_genotypic ;
+	public void setGenotypicAttr( Boolean attr_genotypic) { 
 		this._attr_genotypic = attr_genotypic ;
 	}
-	public boolean getGenotypicAttr() { 
+	public Boolean getGenotypicAttr() { 
 		return this._attr_genotypic;
 	}
  

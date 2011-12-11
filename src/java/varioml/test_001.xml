@@ -1,4 +1,4 @@
-<lsdb schema_version="0.0" xmlns="http://varioml.org/xml/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<lsdb xmlns="http://varioml.org/xml/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <created>2006-05-04T18:13:51.0Z</created>
    <source>
       <name>Test</name>

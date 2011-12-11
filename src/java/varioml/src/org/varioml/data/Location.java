@@ -34,21 +34,21 @@ public class Location {
  
 	// ===========-- start --===========
 	@org.simpleframework.xml.Element(required=false,name="start") 
-	private long _start ;
-	public void setStart( long start) { 
+	private Long _start ;
+	public void setStart( Long start) { 
 		this._start = start ;
 	}
-	public long getStart() {
+	public Long getStart() {
 		return this._start;
 	}
  
 	// ===========-- end --===========
 	@org.simpleframework.xml.Element(required=false,name="end") 
-	private long _end ;
-	public void setEnd( long end) { 
+	private Long _end ;
+	public void setEnd( Long end) { 
 		this._end = end ;
 	}
-	public long getEnd() {
+	public Long getEnd() {
 		return this._end;
 	}
 }
