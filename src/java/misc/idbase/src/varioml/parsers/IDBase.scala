@@ -12,12 +12,16 @@ import scala.util.control.Breaks._
 //
 trait MyVariant {
   def setName(name: VariantName)
+  def getTypeAttr(): String
+  def setRefSeq(ref: RefSeq)
+  def getRefSeq(): RefSeq
   def setTypeAttr(tpe: String)
   def getSeqChanges(): SeqChanges
   def setSeqChanges(v: SeqChanges)
   def getAliases(): Aliases
   def setAliases(v: Aliases)
-
+  def addLocation(l: Location)
+  def addComment(text: Comment)
 }
 
 class Feature(val seqType: String, val ref: Int) {
@@ -280,13 +284,13 @@ object IDBase {
               line match {
 
                 case field.regex(text) => {
-                  
-                  if ( field == Symptoms ) {
-                	  vml.add(field, text.trim().replaceAll("Others:",""))                                        
+
+                  if (field == Symptoms) {
+                    vml.add(field, text.trim().replaceAll("Others:", ""))
                   } else {
-                	  vml.add(field, text.trim())                    
+                    vml.add(field, text.trim())
                   }
-                  
+
                 }
 
                 case _ => {
@@ -387,33 +391,41 @@ object IDBase {
     return null
   }
 
-  def getSomeFeatureProperty(mol: String, num: Int, ft: FeatureTable): String = {
-    val r = ("\\S+:" + """\s+(.+)""").r
+  def getAllFeatureProperty(mol: String, num: Int, ft: FeatureTable): List[(String, String)] = {
+    val r = ("(\\S+):" + """\s+(.+)""").r
+    var lines = List[(String, String)]()
+
     getFeatureLines(mol.toLowerCase(), num, ft) foreach ((line) => {
       line match {
-        case r(text) => {
-          return text
+        case r(prop, text) => {
+          lines +:= (prop, text)
         }
         case _ =>
       }
     })
-    return null
+    return lines
   }
 
   def testSomeFeatureProperty(mol: String, num: Int, ft: FeatureTable) = {
-    if (getSomeFeatureProperty(mol, num, ft) == null) {
+    if (getAllFeatureProperty(mol, num, ft).size == 0) {
       throw new Exception("No features found for " + mol.toLowerCase() + "; " + num + " feture table=" + ft)
     }
   }
 
   /* get locations from feature table */
   def getLocations(mol: String, num: Int, ft: FeatureTable): List[(String, (Int, Int))] = {
-    var locations = List[(String, (Int, Int))]()
     val loc = getFeatureProperty("loc", mol.toLowerCase(), num, ft)
     //assert( loc != null, "Cannot find location entry for: " +mol+" "+num)
     if (loc == null) {
       return null
+    } else {
+      return parseLocations(loc)
     }
+
+  }
+  def parseLocations(loc: String): List[(String, (Int, Int))] = {
+
+    var locations = List[(String, (Int, Int))]()
     val acc = loc split """\s*;\s*"""
     val IntRange = """([\S^:]+):\s+(\d+)\.+(\d+)\s*""".r;
     val IntStart = """([\S^:]+):\s+(\d+)\s*""".r;
@@ -452,11 +464,28 @@ object IDBase {
           locations :+= (db + ":" + acc, (_start, _end))
         }
         case DbAcc(db, acc) => {
-          assert(_start > -1)
-          locations :+= (db + ":" + acc, (_start, _end))
+          //assert(_start > -1," problems in location "+a+" " )
+          val test = """.*\s+(\d+)$""".r
+          val test2 = """.*\s+(\d+)\.\.(\d+)$""".r
+          val test3 = """.*\s+(\d+)-(\d+)$""".r
+          loc match {
+            case test(pos) => {
+              locations :+= (db + ":" + acc, (pos.toInt, pos.toInt))
+            }
+            case test2(pos1, pos2) => {
+              locations :+= (db + ":" + acc, (pos1.toInt, pos2.toInt))
+            }
+            case test3(pos1, pos2) => {
+              locations :+= (db + ":" + acc, (pos1.toInt, pos2.toInt))
+            }
+            case _ => {
+              Console.err.println("Coordinates are missing in location entry: " + a + " line: " + loc)
+            }
+          }
         }
         case _ => {
-          assert(false, "unknown location entry: " + a)
+          Console.err.println("Unknown entry " + a + " line: " + loc)
+          //assert(false, "unknown location entry: " + a)
         }
 
       }
@@ -491,7 +520,7 @@ object IDBase {
                 newNames +:= name
                 assert(name.startsWith(x))
               } else {
-                
+
                 newNames +:= (x + "." + name)
               }
             }
@@ -550,8 +579,8 @@ object IDBase {
     if (typeAttr.equalsIgnoreCase("dna") ||
       typeAttr.equalsIgnoreCase("rna") ||
       typeAttr.equalsIgnoreCase("aa")) {
-      val locs = getSomeFeatureProperty(typeAttr, counter, ft)
-      if (locs == null) {
+      val locs = getAllFeatureProperty(typeAttr, counter, ft)
+      if (locs.size == 0) {
         throw new Exception("feature table probably not OK or counter is out of sync.. No entries found for: " + typeAttr.toLowerCase() + " " + counter + "; Feature table=" + ft)
       }
     }
@@ -571,6 +600,61 @@ object IDBase {
       variant.setAliases(new Aliases())
     }
     return variant.getAliases()
+  }
+
+  def annotate(variant: MyVariant, featureLines: List[(String, String)]) = {
+    if (featureLines.size == 0) {
+      throw new Exception("NO features for variant " + variant.getTypeAttr())
+    }
+    //if (false) {
+
+    featureLines foreach ((line) => {
+      val comment = new Comment()
+      comment.setTermAttr(line._1)
+      val text = new CommentText(line._2)
+      comment.addText(text)
+      variant.addComment(comment)
+
+      line._1 match {
+        case "loc" => {
+          val locs = parseLocations(line._2)
+          locs foreach ((l) => {
+            val refAsDbXref = new RefSeq()
+            val refAsList = l._1 split (":")
+
+            if (refAsList.size > 1) {
+
+              refAsDbXref.setAccessionAttr(refAsList(1))
+              refAsDbXref.setSourceAttr(refAsList(0))
+
+            } else {
+
+              refAsDbXref.setAccessionAttr(l._1)
+
+            }
+
+            //we use this also as a reference sequence 
+            //which is used to give systematic name
+            if (variant.getRefSeq() == null) {
+              variant.setRefSeq(refAsDbXref) //todo: chekc is this ok . at least position should with systematic name
+            }
+            if (l._2._1 > 0 && l._2._2 > 0) {
+              val _loc = new Location()
+              _loc.setRefSeq(refAsDbXref)
+              _loc.setStart(l._2._1)
+              _loc.setEnd(l._2._2)
+              variant.addLocation(_loc)
+            }
+          })
+        }
+
+        case _ => {}
+
+      }
+
+    })
+
+    //}
   }
 
   //dig out genomic variants and corresponding sequence consequences (resulting RNAs and AAs) with their feature details
@@ -651,12 +735,14 @@ object IDBase {
         val rna = RNAvariantList(i)
         val aa = AAvariantList(i)
         counter += 1
-        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
-        val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft)
-        val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft)
+        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
+        val rnaFT = getAllFeatureProperty("RNA", variantList.length + counter, ft)
+        val aaFT = getAllFeatureProperty("AA", variantList.length * 2 + counter, ft)
         getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
         getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
-
+        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+        annotate(rna.asInstanceOf[MyVariant], rnaFT)
+        annotate(aa.asInstanceOf[MyVariant], aaFT)
       }
       counter = variantList.length * 3;
 
@@ -670,11 +756,14 @@ object IDBase {
         //val rna = RNAvariantList(i)
         val aa = AAvariantList(i)
         counter += 1
-        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
+        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
         val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // we should have feature table data for RNAs there anyway
-        val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft)
+        val aaFT = getAllFeatureProperty("AA", variantList.length * 2 + counter, ft)
         getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(aa) // AA added directly into DNA variant
         //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+        //annotate(rna.asInstanceOf[MyVariant],rnaFT)
+        annotate(aa.asInstanceOf[MyVariant], aaFT)
 
       }
       counter = variantList.length * 3; // we need to increment like this
@@ -689,11 +778,14 @@ object IDBase {
         val rna = RNAvariantList(i)
         //val aa = AAvariantList(i)
         counter += 1
-        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
-        val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft)
+        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
+        val rnaFT = getAllFeatureProperty("RNA", variantList.length + counter, ft)
         val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
         getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
         //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+        annotate(rna.asInstanceOf[MyVariant], rnaFT)
+        //annotate(aa.asInstanceOf[MyVariant],aaFT)
 
       }
       counter = variantList.length * 3; // we need to increment like this      
@@ -708,11 +800,14 @@ object IDBase {
         //val rna = RNAvariantList(i)
         //val aa = AAvariantList(i)
         counter += 1
-        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
+        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
         val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // rna data should be there still ...
         val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
         //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
         //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+        //annotate(rna.asInstanceOf[MyVariant],rnaFT)
+        //annotate(aa.asInstanceOf[MyVariant],aaFT)
 
       }
       counter = variantList.length * 3; // we need to increment like this      
@@ -727,11 +822,14 @@ object IDBase {
         //val rna = RNAvariantList(i)
         //val aa = AAvariantList(i)
         counter += 1
-        val dnaFT = testSomeFeatureProperty("DNA", counter, ft)
+        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
         val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // rna data should be there still ...
         val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
         //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
         //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+        //annotate(rna.asInstanceOf[MyVariant],rnaFT)
+        //annotate(aa.asInstanceOf[MyVariant],aaFT)
 
         //
         variantList +:= createVariant("AA", AAvariantList(i).getName().getString())
@@ -760,46 +858,82 @@ object IDBase {
     var ack = new Acknowledgement()
     ack.setName(batch.getHeader(Funding))
     source.addAcknowledgement(ack)
-
     lsdb.addSource(source)
-
     var counter = 0
     var failed = 0
     var noSystematicName = 0
 
+    val patho = new Pathogenicity()
+    patho.setTermAttr("Likely pathogenic")
+    patho.setSourceAttr("cmgs_vgl_5")
+    patho.setAccessionAttr("p_0003")
+    val pheno = new Phenotype()
+    pheno.setTermAttr(batch.getHeader(Disease))
+    //NOTE THIS IS FENOTYPE TESTED.. we put that into panel
+    if (batch.getHeader(OMIM) != null) {
+      pheno.setAccessionAttr(batch.getHeader(OMIM))
+      pheno.setSourceAttr("OMIM")
+    }
+    patho.addPhenotype(pheno)
+
     batch.records foreach ((rec) => {
 
       try {
-        
+
         counter += 1
         val inv = new Individual()
+        val sexStr = rec.get(Sex)
+        val gender = new Gender()
+
+        if (sexStr != null) {
+          if (sexStr.equals("XX")) {
+            gender.setCodeAttr(2)
+          } else if (sexStr.equals("XY")) {
+            gender.setCodeAttr(1)
+          } else {
+            gender.setCodeAttr(9)
+            val desc = new GenderDescription()
+            desc.setTermAttr(sexStr)
+            desc.setSourceAttr("idbase")
+
+          }
+          inv.setGender(gender)
+
+        }
+
         val panel = new Panel()
         panel.addIndividual(inv)
         inv.setIdAttr(rec.get(Accession))
-        val pheno = new Phenotype()
-        pheno.setTermAttr(batch.getHeader(Disease)) //NOTE THIS IS FENOTYPE TESTED.. 
-        panel.addPhenotype(pheno)
-        if (rec.get(OMIM) != null) {
-          pheno.setAccessionAttr(batch.getHeader(OMIM))
-          pheno.setSourceAttr("OMIM")
-        }
         val symptoms = rec.get(Symptoms)
         if (symptoms != null) {
+
           symptoms.split(";") foreach ((s) => {
-            val comment = new Comment()
-            comment.setTermAttr("symptom")
-            val text = new CommentText()
-            text.setString(s.trim)
-            comment.addText(text)
-            pheno.addComment(comment)
+            //symptoms are stored as phenotypes of individual  
+            val symptom = new Phenotype()
+            symptom.setTermAttr(s.trim())
+            symptom.setDescription("Symptom")
+            inv.addPhenotype(symptom)
+
           })
 
+          val diagnosis = rec.get(Diagnosis)
+          if (diagnosis != null) {
+            val pheno = new Phenotype()
+            pheno.setTermAttr(diagnosis)
+            pheno.setDescription("Diagnosis")
+            inv.addPhenotype(pheno)
+
+          }
         }
 
         val sysName = rec.get(SystematicName)
         //get systematic names and try to find corresonding feature table entry
         // like: Feature         dna; 1
-        if (sysName != null) {
+        if (sysName == null) {
+
+          noSystematicName += 1
+
+        } else {
 
           var allelesStr: String = null
           //handle different sname entries
@@ -811,6 +945,7 @@ object IDBase {
           var homozygVariant = false
           var genotypeVariant = false
           val EMPTY_ARRAY = Array[String]()
+
           var systematicNames = (EMPTY_ARRAY, EMPTY_ARRAY)
 
           sysName match {
@@ -871,20 +1006,22 @@ object IDBase {
             if (systematicNames._1 != null && systematicNames._2 != null) {
 
               try {
-                val v = new Variant()
+
+                val thisVariant = new Variant()
 
                 val hap1 = new Haplotype()
                 val (v1, c) = getGenomicVariants(systematicNames._1, rec.getFt("1"), 0)
                 v1 foreach ((va) => {
                   hap1.addVariant(va)
                 })
-
-                v.addHaplotype(hap1)
+                hap1.setAlleleAttr(1)
+                thisVariant.addHaplotype(hap1)
 
                 if (genotypeVariant) {
 
                   val (v2, c2) = getGenomicVariants(systematicNames._2, rec.getFt("2"), c)
                   val hap2 = new Haplotype()
+                  hap2.setAlleleAttr(2)
                   v2 foreach ((va) => {
                     hap2.addVariant(va)
                   })
@@ -893,52 +1030,60 @@ object IDBase {
                     Console.err.println("** ++++++++++* Check case: " + inv.getIdAttr())
                   }
 
-                  v.addHaplotype(hap2)
+                  thisVariant.addHaplotype(hap2)
 
-                  hap1.setAlleleAttr( 1)
-                  hap2.setAlleleAttr( 2)
-                  
                 } else if (homozygVariant) {
 
-                  //todo: check is this ok
-                  v.addHaplotype(hap1)
+                  val hap2 = new Haplotype()
+                  v1 foreach ((va) => {
+                    hap2.addVariant(va)
+                  })
+                  hap2.setAlleleAttr(2)
+                  thisVariant.addHaplotype(hap2)
                   val c = new Comment()
-                  c.addText(new CommentText("homozygous"))
-
+                  c.addText(new CommentText("same as allele 1"))
+                  hap2.addComment(c)
                 }
 
-                v.setGenotypicAttr(true)
-                v
+                thisVariant.setGenotypicAttr(true)
+                thisVariant
+
               } catch {
 
                 //todo: move exception handling out
+                case x: java.lang.IndexOutOfBoundsException => {
+                  x.printStackTrace()
+                  throw new Exception(" CHECK PATIENT=" + inv.getIdAttr() + " " + x.getMessage() + " " + x)
+                }
                 case x: Exception => {
-                  throw new Exception(" CHECK PATIENT=" + inv.getIdAttr() + " " + x.getMessage())
+
+                  throw new Exception(" CHECK PATIENT=" + inv.getIdAttr() + " " + x.getMessage() + " " + x)
                 }
 
               }
 
             } else {
 
-              throw new Exception(" CHECK PATIENT=" + inv.getIdAttr() + ". Cannot parse systematic name: " + sysName + " " + systematicNames._1)
-              return null
+              throw new Exception(" CHECK PATIENT=" + inv.getIdAttr() + ". Cannot parse systematic name: " + sysName)
 
             }
 
           }
 
+          vari.addPathogenicity(patho)
           vari.addPanel(panel)
+          val dec = new Comment()
+          dec.setTermAttr("description")
+          dec.addText(new CommentText(rec.get(Description)))
+          vari.addComment(dec)
           val gene = new Gene()
           gene.setSourceAttr("HUGO")
-          gene.setAccessionAttr( batch.getHeader(Gene))
-          vari.setGene( gene )
+          gene.setAccessionAttr(batch.getHeader(Gene))
+          vari.setGene(gene)
           lsdb.addVariant(vari)
 
-        } else {
-
-          noSystematicName += 1
-
         }
+
       } catch {
 
         case x: Exception => {
@@ -953,13 +1098,23 @@ object IDBase {
 
     println("Individuals " + counter + " ft failed =" + failed + " no systematic name=" + noSystematicName)
 
-    XMLUtil.write(lsdb, "tmp.xml")
     return lsdb
   }
 
-  def processFile(file: java.io.File) = {
+  def processFile(directory: String, file: java.io.File) = {
+
     val s = scala.io.Source.fromFile(file)
     val batch = parse(s)
+    val SEP = java.io.File.separatorChar
+    val dir = new java.io.File(directory)
+    if (!dir.exists()) {
+
+      dir.mkdir()
+
+    } else {
+
+      assert(dir.isDirectory(), directory + " is not directory. remove the file")
+    }
 
     batch.header.propertyMap foreach ((tuple) => {
       //println(tuple._1 + " Value= " + tuple._2)
@@ -972,7 +1127,7 @@ object IDBase {
 
     val cafeVariome = toXML(batch)
     //val vars = vr.getVariantList() 
-    XMLUtil.write( cafeVariome,file.getName()+".xml")
+    XMLUtil.write(cafeVariome, directory + SEP + file.getName() + ".xml")
   }
 
   def main(args: Array[String]) {
@@ -989,8 +1144,7 @@ object IDBase {
         if (_file != null && _file.canRead()) {
 
           Console.err.println("======= Reading " + _file.getPath())
-          processFile(_file)
-          throw new Exception("")
+          processFile("idbase_xml", _file)
 
         } else {
 
@@ -1000,7 +1154,8 @@ object IDBase {
 
     } else {
 
-      processFile(new java.io.File(file))
+      processFile("idbase_xml", new java.io.File(file))
+
     }
 
   }
