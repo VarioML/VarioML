@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='SLC35C1base' version='1.0' uri='http://bioinf.uta.fi/SLC35C1base/'>
+	<name>SLC35C1base</name>
+	<url>http://bioinf.uta.fi/SLC35C1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='A0004'>
+	<gender code='1'/>
+	<phenotype term='Leukocyte adhesion deficiency II (LAD-II)'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Brazilia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SLC35C1'/>
+		<ref_seq source='IDRefSeq' accession='D0036' />
+		<name scheme='HGVS'>g.6022delG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0036' />
+				<name scheme='HGVS'>r.588delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q96A29' />
+						<name scheme='HGVS'>p.Trp196fsX34</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605881' />
+ </individual>
+</lsdb>

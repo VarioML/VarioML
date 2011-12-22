@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='WHNbase' version='1.0' uri='http://bioinf.uta.fi/whnbase/'>
+	<name>WHNbase</name>
+	<url>http://bioinf.uta.fi/whnbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='W0001'>
+	<gender code='2'/>
+	<phenotype term='Date: 21/02/94'>
+		<comment term='symptom'><text>Infections</text></comment>
+		<comment term='symptom'><text>severe Respiratory tract: Intestitial pneumopathy Gastrointestinal tract: Recurrent diarrhea Skin: Erythrodermia. Pyogenic infection Other:  Congenital alopecia of scalp: presence of eye brows: presence of eye lashes: presence Nail dystrophy Leuconychia: presence Koilonychia: presence Thymus: absence Hematological abnormalities:  Anemia, date: 21/02/1994: absence Thrombocytopenia, date: 21/02/1994: absence Neutropenia, date: 21/02/1994: absence</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='WHN'/>
+		<ref_seq source='IDRefSec' accession='AC005726' />
+		<name scheme='HGVS'>g.56561C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon of pedigree: Consanguineous parents. '/>
+	</variant>
+	<db_xref  source='OMIM' accession='600838' />
+ </individual>
+</lsdb>

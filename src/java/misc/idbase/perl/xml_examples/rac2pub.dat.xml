@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='RAC2base' version='1.0' uri='http://bioinf.uta.fi/RAC2base/'>
+	<name>RAC2base</name>
+	<url>http://bioinf.uta.fi/RAC2base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='R0001'>
+	<gender code='1'/>
+	<phenotype term='Neutrophil immunodeficiency syndrome'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other bacterial infections: Pseudomonas aeruginosa</text></comment>
+		<comment term='symptom'><text>Escherichia coli</text></comment>
+		<comment term='symptom'><text>Stenotrophomonas maltophilia</text></comment>
+		<comment term='symptom'><text>Other</text></comment>
+		<comment term='symptom'><text>Enterobacter cloacae Other symptoms: perirectal abscess and failure of the  umbilical stump to involute, recurrent perirectal  abscesses, an infected urachal cyst, a failure to heal  surgical wounds, and the absence of pus in infected areas,  leucocytosis, neutrophilia, hypochromic anemia</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RAC2'/>
+		<ref_seq source='IDRefSeq' accession='D0070' />
+		<name scheme='HGVS'>g.12413G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0070' />
+				<name scheme='HGVS'>r.169g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P15153' />
+						<name scheme='HGVS'>p.Asp57Asn</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='602049' />
+ </individual>
+</lsdb>

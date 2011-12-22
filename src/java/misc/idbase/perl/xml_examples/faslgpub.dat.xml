@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='FASLGbase' version='1.0' uri='http://bioinf.uta.fi/FASLGbase/'>
+	<name>FASLGbase</name>
+	<url>http://bioinf.uta.fi/FASLGbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='T0001'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune lymphoproliferative syndrome, type 1B (ALPS1B) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Physical findings: Systemic lupus erythematosus</text></comment>
+		<comment term='symptom'><text>Leukopenia</text></comment>
+		<comment term='symptom'><text>Others: malar rash, arthritis, serositis, renal disease,  positive LE cell preparation and anti-DNA antibodies,  and a positive antinuclear antibody</text></comment>
+	</phenotype>
+	<population term='American' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='FASLG'/>
+		<ref_seq source='EMBL' accession='Z96050' />
+		<name scheme='HGVS'>g.83392_83475del</name>
+		<exon>e4</exon>
+		<consequence term='deletion in the exon 4 leading to an amino  acid change in the EC domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='134638' />
+ </individual>
+ <individual id='T0002'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune lymphoproliferative syndrome, type 1B (ALPS1B) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Physical findings: Lymphoadenopathy</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly</text></comment>
+		<comment term='symptom'><text>Thrombocytopenia</text></comment>
+		<comment term='symptom'><text>Hemolytic anemia Others: hypergammaglobulinemia, recurrent infections, sepsis</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='FASLG'/>
+		<ref_seq source='EMBL' accession='Z96050' />
+		<name scheme='HGVS'>g.83660C&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='A point mutation in the exon 4 leading to an amino acid change in the EC domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='X89102' />
+				<name scheme='HGVS'>r.740c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='TNF6_HUMAN' />
+						<name scheme='HGVS'>p.Ala247Glu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='134638' />
+ </individual>
+</lsdb>

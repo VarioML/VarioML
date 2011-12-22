@@ -1,0 +1,2112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='SPINK5base' version='1.0' uri='http://bioinf.uta.fi/SPINK5base/'>
+	<name>SPINK5base</name>
+	<url>http://bioinf.uta.fi/SPINK5base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='S0014'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7333C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the KAZ1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.136c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln46X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0002'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0003'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0044'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hay fever, angioedema, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kosovo' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS2+2T&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion in the exon 3 leading to  a premature stop codon in the KAZ1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0045'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, excema-like rashes, hay fever, angioedema, hyper immunoglobulin E, asthma, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kosovo' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS2+2T&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to an amino acid change '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion in the exon 3 leading to  a premature stop codon in the KAZ1 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0046'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, excema-like rashes, hay fever, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0047'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0048'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, excema-like rashes, angioedema, hyper immunoglobulin E, asthma, failure to thrive, recurrent infections</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0049'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0050'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, atopic dermatitis, hyper immunoglobulin E, hypereosinophilia, failure to thrive, recurrent infections, hypernatremic dehydration, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0053'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Erythroderma accompanied by silvery white, exfoliative scaling, accentuated in the area of the elbows, knees, cheeks and scalp, high IgE levels and aminoaciduria</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.7350delT</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 3 leading to a premature stop codon in the KAZ1  domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.153delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln52fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0004'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0020'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Rican' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0021'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Iranian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0036'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata,  excema-like rashes, angioedema, atopic dermatitis, hay fever, hyper immunoglobulin E, hypereosinophilia, urticaria, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0038'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, angio-edema, asthma, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28167C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.649c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg217X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0039'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, angio-edema, hyper immunoglobulin E, recurrent infections, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.9132dupG</name>
+		<exon>e4</exon>
+		<consequence term='a frame shift duplication mutation in the exon 4 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.238dupg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala80fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28167C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.649c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg217X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0015'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23385G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.307g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gly103X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.53418_53427delCTCAGGTGAG</name>
+		<exon>e2</exon>
+		<consequence term='a deletion in the exon 22 and intron 23  leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='unknown' accession='unknown' />
+				<name scheme='HGVS'>r.2108_2117delcucaggugag</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0051'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, eczema-like rashes, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23455_23456delAT</name>
+		<exon>e5</exon>
+		<consequence term='a deletion mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.377_378delau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Tyr126X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0052'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, eczema-like rashes, hyper immunoglobulin E, failure to thrive, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23455_23456delAT</name>
+		<exon>e5</exon>
+		<consequence term='a deletion mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.377_378delau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Tyr126X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0019'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Dominican Republik' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23469_23470insCGTG</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift insertion mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.391_392inscgug</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Leu132fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0022'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='American' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23467_23470dup</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift duplication mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.389_392dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Leu132fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0023'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='American' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23467_23470dup</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift duplication mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.389_392dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Leu132fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0057'>
+	<gender code='2'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23477_23478delTG</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift deletion mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.399_400delug</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala134fsX0</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0058'>
+	<gender code='2'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.23477_23478delTG</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift deletion mutation in the exon 5 leading to a premature stop codon in the KAZ2 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.399_400delug</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Ala134fsX0</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0067'>
+	<gender code='2'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Typical hair shaft defect characteristic by TI, extremely high total IgE and food allergies as atopic features and ichthyosiform erythroderma with eczema resistant to atopic dermatitis therapy</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.26556_26557delGT</name>
+		<exon>e7</exon>
+		<consequence term='A frame shift deletion mutation in the exon 7 leading to a premature stop codon in the KAZ3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.581_582delgu</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0068'>
+	<gender code='2'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Typical hair shaft defect characteristic by TI, extremely high total IgE and food allergies as atopic features and ichthyosiform erythroderma with eczema resistant to atopic dermatitis therapy</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.26556_26557delGT</name>
+		<exon>e7</exon>
+		<consequence term='A frame shift deletion mutation in the exon 7 leading to a premature stop codon in the KAZ3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.581_582delgu</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0040'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hyper immunoglobulin E, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28146C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to  a premature stop codon in the KAZ3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.628c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg210X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0041'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hyper immunoglobulin E, hay fever, asthma, failure to thrive, persistent pruritus, growth retardation</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28146C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to  a premature stop codon in the KAZ3 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.628c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg210X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0064'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Severe, life-long, persistent erythroderma and generalized scaling, recurrent episodes of skin, CIE, respiratory tract and systemic infections culminating repeatedly in life-threatening sepsis, multiple food allergies</text></comment>
+	</phenotype>
+	<population term='Jewish Ashcenazi' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28167C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.649c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg217X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.31334delC</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift deletion in the exon 9 leading to a premature stop codon in the KAZ4 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.691delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln231fsX1</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0024'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Finnish' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.28170C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.652c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg218X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS23+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 23 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0054'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.31358dupT</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift duplication mutation in the exon 9 leading to a premature stop codon in the KAZ4 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.715dupu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Cys239fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0006'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.31363_31364insT</name>
+		<exon>e9</exon>
+		<consequence term='a frame shift insertion mutation in the exon 9 leading to a premature stop codon in the KAZ4 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.720_721insu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg241fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0028'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, angio-edema, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='England' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.36211_36215dup</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift duplication mutation in the exon  12 leading to a premature stop codon in the KAZ5 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1032_1036dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys346fsX30</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.37428C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 13 leading to a premature stop codon in the KAZ6 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1111c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg371X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0007'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.36265_36266delAT</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the  exon 12 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1086_1087delau</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Tyr363fsX5</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0029'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, angio-edema, hay fever, hyper immunoglobulin E,  urticaria, recurrent infections, persistent pruritus,  growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='England' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS2+2T&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to an aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.37428C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 13 leading to a premature stop codon in the KAZ6 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1111c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg371X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0042'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hyper immunoglobulin E, hay fever, asthma, hypereosinophilia, failure to thrive, hypernatremic dehydration, persistent pruritus, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.37428C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 13 leading to a premature stop codon in the KAZ6 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1111c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg371X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.53351_53352delAG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 22 leading to a premature stop codon in the KAZ10 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2041_2042delag</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg681fsX27</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0065'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, which gradually developed into ichtyosis linearis circumflexa, hair shafts showed typical trichorrhexis invaginata, serum IgE levels were elevated. </text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55417C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 23 leading to a premature stop codon in the KAZ11 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2137c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln713X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0066'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Ichthyosiform erythroderma with patchy islands of normal skin, his scalp hairs were sparse, but did not show trichorrhexis invaginata.</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55417C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 23 leading to a premature stop codon in the KAZ11 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2137c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Gln713X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0061'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Exfoliative erythroderma since birth, pneumonia, bronchopneumonia, sinusitis, conjunctivitis, otitis, impetigo, bright erythematous swelling of the face, staphylococcal scalded skin syndrome</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Taiwan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55961A&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 24 leading to a premature stop codon in the KAZ11 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2260a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys754X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0062'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Generalized erythroderma and diffuse scaling, dyspnoea and skin desquamation shortly after birth, interstitial pneumonitis and oxacillin-resistant staphylococcal sepsis, staphylococcal scalded skin syndrome</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Taiwan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55961A&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 24 leading to a premature stop codon in the KAZ11 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2260a&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys754X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0032'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, hyper immunoglobulin E, urticaria, failure to thrive, recurrent infections, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='England' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55964dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon  24 leading to a premature stop codon in the KAZ11 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2263dupa</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0063'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS13+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 13 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Arg790X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0030'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hay fever, hyper immunoglobulin E, urticaria,  failure to thrive, recurrent infections, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North Ireland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys823fsX100</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0031'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hay fever, hyper immunoglobulin E, hypereosinophilia, asthma,  failure to thrive, persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Scotland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys823fsX100</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0025'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Northern European' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.37467_37468delGA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 13 leading to a premature stop codon in the KAZ6 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1150_1151delga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Asn385fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0026'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Northern European' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.37467_37468delGA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 13 leading to a premature stop codon in the KAZ6 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.1150_1151delga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Asn385fsX18</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0001'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.2328G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the end of exon 2 leading  to aberrant splicing '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='unknown' accession='unknown' />
+				<name scheme='HGVS'>r.81g&gt;a</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55959dupG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication in the exon 24 leading to a premature stop codon in the KAZ11 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2258dupg</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0017'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Northern European' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS6-2A&gt;G</name>
+		<exon>i6</exon>
+		<consequence term='a point mutation in the intron 6 leading to an aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.55965dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication in the exon 24 leading to a premature stop codon in the KAZ11 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2264dupa</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0010'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57019C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 25 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2368c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0035'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata,  excema-like rashes, hay fever, hyper immunoglobulin E, failure to thrive, recurrent infections, persistent pruritus, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS17-1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 17 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys823fsX100</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0005'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS4-2A&gt;T</name>
+		<exon>i4</exon>
+		<consequence term='a point mutation in the intron 4 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0011'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Kashmeer' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0012'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Kashmeer' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0013'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Kashmeer' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0043'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, hyper immunoglobulin E, failure to thrive, recurrent infections, hypernatremic dehydration, persistent pruritus, growth retardation, enteropathy</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Pakistan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0059'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication mutation in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0060'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS15-12G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 15 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.57277dupA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift duplication in the exon 26 leading to a premature stop codon in the KAZ12 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2468dupa</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys824fsX3</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0016'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='English' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS20-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 20 leading to an aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.60829delA</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion in the exon 27 leading to a premature stop codon in the KAZ13 domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2579dela</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='Q9NQ38' />
+						<name scheme='HGVS'>p.Lys860fsX63</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0018'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Scottish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS2+2T&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading  to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0034'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata,  excema-like rashes, hyper immunoglobulin E, urticaria,  recurrent infections, hypernatremic dehydration,  persistent pruritus</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS2+5G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 2 leading to  aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS23+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 23 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0055'>
+	<gender code='1'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS15-12G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 15 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0056'>
+	<gender code='2'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS15-12G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 15 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0008'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS20-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 20 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0037'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata,  excema-like rashes, hyper immunoglobulin E, hypereosinophilia, failure to thrive, persistent pruritus, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS20-1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 20 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0027'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Argentinian' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS22+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 22 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0033'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Scaly erythroderma at birth, trichorrhexis invaginata, ichtyosis linearis circumflexa, excema-like rashes, angioedema, hay fever, hyper immunoglobulin E, urticaria, failure to thrive, recurrent infections, persistent pruritus, growth retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='England' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.IVS23+1G&gt;A</name>
+		<exon>i2</exon>
+		<consequence term='a point mutation in the intron 23 leading to aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+ <individual id='S0009'>
+	<gender code='9'/>
+	<phenotype term='Netherton syndrome  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='SPINK5'/>
+		<ref_seq source='IDRefSeq' accession='D0080' />
+		<name scheme='HGVS'>g.56014G&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the end of exon 24  leading to aberrant splicing'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0080' />
+				<name scheme='HGVS'>r.2313g&gt;a</name>
+				<consequence term='skipping of exon 24'/>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605010' />
+ </individual>
+</lsdb>

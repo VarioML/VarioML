@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='STX11base' version='1.0' uri='http://bioinf.uta.fi/STX11base/'>
+	<name>STX11base</name>
+	<url>http://bioinf.uta.fi/STX11base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='S0001'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0002'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0003'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0004'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0005'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0006'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0007'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Val124fsX59</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0011'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Severe psychomotor retardation, hepatosplenomegaly, residual hypertriglyceridaemia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0012'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Severe psychomotor retardation, hepatosplenomegaly</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37465_37472delinsTGG</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift indel mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.369_376delinsugg</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0008'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37898C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.802c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Gln268X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0009'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37898C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.802c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O75558' />
+						<name scheme='HGVS'>p.Gln268X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0013'>
+	<gender code='1'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Jaundice, fever, pneumonia, lymphadenopathy, hepatosplenomegaly</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.37898C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0083' />
+				<name scheme='HGVS'>r.802c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+ <individual id='S0010'>
+	<gender code='2'/>
+	<phenotype term='Familial haemophagocytic lymphohistiocytosis 4 (FHL4) '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Kurdish' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='STX11'/>
+		<ref_seq source='IDRefSeq' accession='D0083' />
+		<name scheme='HGVS'>g.27357..46546del</name>
+		<exon>i1</exon>
+		<consequence term='a large deletion in the intron 1 and the   entire coding region of STX11'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605014' />
+ </individual>
+</lsdb>

@@ -5,30 +5,30 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","haplotype","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","evidence_code","protocol_id","db_xref","comment"})
 public class Variant {
-	//xml-element used for code generation: //lsdb/individual/variant
+	//xml-element used for code generation: //variant_group/variant
 
 	public Variant(  ) {
 	}
  
 	// ===========-- copy_count --===========
 	@org.simpleframework.xml.Attribute(required=false,name="copy_count")
-	private double _attr_copyCount ;
-	public void setCopyCountAttr( double attr_copyCount) { 
+	private Double _attr_copyCount ;
+	public void setCopyCountAttr( Double attr_copyCount) { 
 		this._attr_copyCount = attr_copyCount ;
 	}
-	public double getCopyCountAttr() { 
+	public Double getCopyCountAttr() { 
 		return this._attr_copyCount;
 	}
  
 	// ===========-- genotypic --===========
 	@org.simpleframework.xml.Attribute(required=false,name="genotypic")
-	private boolean _attr_genotypic ;
-	public void setGenotypicAttr( boolean attr_genotypic) { 
+	private Boolean _attr_genotypic ;
+	public void setGenotypicAttr( Boolean attr_genotypic) { 
 		this._attr_genotypic = attr_genotypic ;
 	}
-	public boolean getGenotypicAttr() { 
+	public Boolean getGenotypicAttr() { 
 		return this._attr_genotypic;
 	}
  
@@ -100,6 +100,22 @@ public class Variant {
 	}
 	public VariantName getName() {
 		return this._name;
+	}
+ 
+	// ===========-- haplotype --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="haplotype") 
+	private List<Haplotype> _haplotype ;
+	public void setHaplotypeList( List<Haplotype> haplotype) { 
+		this._haplotype = haplotype ;
+	}
+	public List<Haplotype> getHaplotypeList()  { 
+		return this._haplotype;
+	}
+	public void addHaplotype(Haplotype item ) { 
+		if ( this._haplotype == null ) { 
+			this._haplotype = new ArrayList<Haplotype>();
+		}
+		this._haplotype.add( item);
 	}
  
 	// ===========-- panel --===========

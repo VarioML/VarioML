@@ -1,0 +1,129 @@
+package varioml ;
+import basic_types;
+  
+class Submission 
+	/* Identifiable */
+	attribute schema_version : Real;
+	attribute submissionid_type: String;
+	attribute created : Date ; 
+end;
+
+class Source specializes Annotatable
+	attribute name  : String[1];
+    attribute version : String[0,1] ;
+    attribute date : Date[0,1];
+	attribute url  : String[0,*];
+	attribute contact  : Contact[0,*];
+	attribute acknowledgement  : Acknowledgement[0,*];	
+end; 
+
+association submitting_source
+   role submission: Submission[1];
+   navigable role source : Source[*];
+end;
+
+association submitted_genotypes
+   role submission: Submission[1];
+   navigable role variant : Variant[*];
+end; 
+
+association submitted_targets
+   role submission: Submission[1];
+   navigable role target : Observation_target[*];
+end;
+
+
+abstract class Observation_target specializes Annotatable
+    /* Identifiable */
+    attribute organism : Ontology_term[0,1];
+    attribute strain : Ontology_term[0,1];
+    attribute cultivar : Ontology_term[0,1];
+    attribute phenotype : Evidence_ontology_term[0,*];  
+    attribute population : Ontology_term[0,*]; 
+    attribute sharing_policy: Sharing_policy[0,1];
+    attribute creation_date: Date[0,1];
+    attribute modification_date: Date[0,1];
+     
+end;
+
+association variants
+   navigable role target: Observation_target[1];
+   navigable role variant : Variant[0,*];
+end;
+
+class Individual specializes Observation_target
+	attribute gender: Gender[0,1];
+	attribute dob : Date[0,1];	 
+end;
+
+class Panel specializes Observation_target
+	attribute size : Integer[0,1];
+	attribute \type : String;
+end;
+
+association individuals
+   role panel: Panel[0,*];
+   navigable role individual : Individual[*];
+end;
+
+
+class Variant specializes Abstract_variant
+	/* Identifiable */
+    attribute gene : DbXRef ;
+    attribute ref_seq : DbXRef ; 
+    attribute sharing_policy : Sharing_policy;
+    attribute creation_date : Date[0,1];
+    attribute modification_date : Date[0,1];
+end;
+
+class Variant_event specializes Abstract_variant
+	/* Identifiable */
+    attribute exon : String[0,1];
+    attribute genetic_origin: Ontology_term[0,*];         
+end;
+
+class Haplotype specializes Abstract_variant
+	/* Identifiable */	
+    attribute allele : Integer[0,1] ;
+end;
+
+abstract class Abstract_variant specializes Annotated_observation
+	/* Identifiable */
+    attribute name : Variant_name[0,1] ;
+    attribute variant_type : Ontology_term[0,1] ; /* exon, intron... type of underlying sequence feature */
+    attribute variant_class : Ontology_term[0,1];    
+    attribute consequence: Evidence_ontology_term[0,*]; 
+    attribute pathogenicity: Evidence_ontology_term[0,*];
+    attribute variant_detection : Ontology_term[0,1];
+    attribute frequency : Frequency[0,*];
+    attribute sequence : Sequence[0,1];
+    attribute location : Location [0,*];	
+end;
+ 
+class Consequent_variant specializes Abstract_variant
+	attribute \type: String; 
+	attribute ref_seq : DbXRef[0,*];
+	attribute variant_type : Ontology_term;	
+end;
+
+association seq_changes
+   role caustive_variant: Abstract_variant[1];
+   navigable role seq_change : Consequent_variant[*];
+end;
+
+association aliases
+   role variant: Abstract_variant[1];
+   navigable role \alias : Consequent_variant[*];
+end;
+
+association haplptypes
+   role variant: Variant[1];
+   navigable role haplotype : Haplotype[*];
+end;
+
+association variant_events
+   role variant: Haplotype[1];
+   navigable role variant : Variant_event[1,*];
+end;
+
+end.

@@ -9,6 +9,7 @@ import org.simpleframework.xml.Serializer;
 import org.varioml.data.DbXref;
 import org.varioml.data.Lsdb;
 import org.varioml.data.Source;
+import org.varioml.data.VariantGroup;
 import org.varioml.util.Util;
 import org.varioml.util.VarioDateTime;
 
@@ -48,7 +49,36 @@ public class LsdbTest extends TestCase  {
 		
 	}
 
+
+	public void testParserNew1() throws Exception { 
+
+		final Serializer ser = Util.createSerializer();
+		final File file = Util.findFile("new_variant.xml") ;
 	
+		VariantGroup lsdb = ser.read(VariantGroup.class, file);
+
+		final File fileOut = new File("test_new.xml");
+
+		ser.write(lsdb, fileOut);
+		
+		
+	}
+
+	public void testParserNew2() throws Exception { 
+
+		final Serializer ser = Util.createSerializer();
+		final File file = Util.findFile("lsdb_test_all_new.xml") ;
+		Lsdb lsdb = ser.read(Lsdb.class, file);
+		List<Source> src = lsdb.getSourceList();
+
+
+		final File fileOut = new File("test_new.xml");
+
+		ser.write(lsdb, fileOut);
+		
+		
+	}
+
 	public void testWriter() throws Exception {
 
 		final Serializer ser = Util.createSerializer();
@@ -63,7 +93,7 @@ public class LsdbTest extends TestCase  {
 		//Url url = new Url("http://test1.com");
 		String url = "http://test.com";
 		src.addUrl(url);
-		src.addUrl(url); 
+		src.addUrl(url);  
 		src.addUrl(url);
 		lsdb.setCreated( new VarioDateTime("2006-05-04T18:13:51.0Z"));
 		lsdb.addSource(src);

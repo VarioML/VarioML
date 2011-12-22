@@ -1,0 +1,1568 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='C8Bbase' version='1.0' uri='http://bioinf.uta.fi/C8Bbase/'>
+	<name>C8Bbase</name>
+	<url>http://bioinf.uta.fi/C8Bbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='C0048'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10088C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0049'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10088C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0050'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10088C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0051'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10088C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.271c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Gln91X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0052'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10153delC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.336delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Asn113fsX21</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.14868delC</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift deletion in the exon 5 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.605delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Pro202fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0053'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10153delC</name>
+		<exon>e3</exon>
+		<consequence term='a frame shift deletion mutation in the exon 3 leading to a premature stop codon in the TSP1-1 domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.336delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Asn113fsX21</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.14868delC</name>
+		<exon>e5</exon>
+		<consequence term='a frame shift deletion in the exon 5 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.605delc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Pro202fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0046'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10178C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the LDL-R-A domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.361c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg121X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0047'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10178C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the LDL-R-A domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.361c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg121X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0054'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10178C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the LDL-R-A domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.361c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg121X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0055'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10178C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to  a premature stop codon in the LDL-R-A domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.361c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg121X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0056'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.10178C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to a premature stop codon in the LDL-R-A domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.361c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg121X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0045'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.17378C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='a point mutation in the exon 6 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.820c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg274X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0001'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0002'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0003'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Switzerland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0004'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Switzerland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0005'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P07358' />
+						<name scheme='HGVS'>p.Arg428X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0006'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0007'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Germany' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0008'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0009'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0010'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0011'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0012'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0013'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0014'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0057'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Neisseria meningitis 2 times</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0015'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Neisseria meningitis 2 times</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0016'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Neisseria meningitidis disease</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0017'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0018'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0019'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0020'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0021'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0022'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0023'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0024'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0025'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0026'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0027'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0028'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0029'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0030'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0031'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0032'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0033'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0034'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0035'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0036'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0037'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0038'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0039'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0040'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0041'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0042'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0043'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0044'>
+	<gender code='9'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0058'>
+	<gender code='1'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Neisseria meningitidis disease</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Bosnia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+ <individual id='C0059'>
+	<gender code='2'/>
+	<phenotype term='C8B deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Bosnia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='C8B'/>
+		<ref_seq source='IDRefSeq' accession='D0010' />
+		<name scheme='HGVS'>g.26012C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='a point mutation in the exon 9 leading to  a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0010' />
+				<name scheme='HGVS'>r.1282c&gt;u</name>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='120960' />
+ </individual>
+</lsdb>

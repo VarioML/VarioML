@@ -24,11 +24,11 @@ public class Panel {
  
 	// ===========-- size --===========
 	@org.simpleframework.xml.Attribute(required=false,name="size")
-	private int _attr_size ;
-	public void setSizeAttr( int attr_size) { 
+	private Integer _attr_size ;
+	public void setSizeAttr( Integer attr_size) { 
 		this._attr_size = attr_size ;
 	}
-	public int getSizeAttr() { 
+	public Integer getSizeAttr() { 
 		return this._attr_size;
 	}
  

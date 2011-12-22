@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='TMC6base' version='1.0' uri='http://bioinf.uta.fi/TMC6base/'>
+	<name>TMC6base</name>
+	<url>http://bioinf.uta.fi/TMC6base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='E0001'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.7532C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.280c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Arg94X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0002'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.7532C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.280c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Arg94X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0003'>
+	<gender code='2'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algerian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.7532C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.280c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Arg94X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0007'>
+	<gender code='2'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Flat warts beginning when she was a teenager, Bowen disease in the hand three times, gastric cancer, multiple skin cancers in her face (squamous cell carcinoma and Bowen disease)</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.8737C&gt;A</name>
+		<exon>e8</exon>
+		<consequence term='a point mutation in the exon 8 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.744c&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Tyr248X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.IVS8-2A&gt;T</name>
+		<exon>i8</exon>
+		<consequence term='a point mutation in the intron 8 leading to an amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0004'>
+	<gender code='1'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.14026G&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 14 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.1726g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Glu576X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0005'>
+	<gender code='2'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.14026G&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 14 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.1726g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Glu576X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+ <individual id='E0006'>
+	<gender code='2'/>
+	<phenotype term='Epidermodysplasia verruciformis '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Colombian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TMC6'/>
+		<ref_seq source='IDRefSec' accession='TMC6_DNA' />
+		<name scheme='HGVS'>g.14026G&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 14 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='EMBL' accession='NM_007267' />
+				<name scheme='HGVS'>r.1726g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SWISS-PROT' accession='Q8IU98' />
+						<name scheme='HGVS'>p.Glu576X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605828' />
+ </individual>
+</lsdb>

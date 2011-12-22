@@ -1,4 +1,3 @@
-
 Type of underlying sequence region. 
 
 [Sequence Ontology](http://www.sequenceontology.org/browser/current_release/term/SO:0001411) terms should be used, and designated in the source attribute using "source='SO'"

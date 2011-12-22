@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='TNFSF6base' version='1.0' uri='http://www.uta.fi/imt/bioinfo/TNFSF6base/'>
+	<name>TNFSF6base</name>
+	<url>http://www.uta.fi/imt/bioinfo/TNFSF6base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+</lsdb>

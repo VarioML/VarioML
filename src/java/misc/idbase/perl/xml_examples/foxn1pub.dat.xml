@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='FOXN1base' version='1.0' uri='http://bioinf.uta.fi/foxn1base/'>
+	<name>FOXN1base</name>
+	<url>http://bioinf.uta.fi/foxn1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='W0001'>
+	<gender code='2'/>
+	<phenotype term='Date: 21/02/94'>
+		<comment term='symptom'><text>Infections</text></comment>
+		<comment term='symptom'><text>severe Respiratory tract: Intestitial pneumopathy Gastrointestinal tract: Recurrent diarrhea Skin: Erythrodermia. Pyogenic infection Other:  Congenital alopecia of scalp: presence of eye brows: presence of eye lashes: presence Nail dystrophy Leuconychia: presence Koilonychia: presence Thymus: absence Hematological abnormalities:  Anemia, date: 21/02/1994: absence Thrombocytopenia, date: 21/02/1994: absence Neutropenia, date: 21/02/1994: absence</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='FOXN1'/>
+		<ref_seq source='IDRefSeq' accession='D0034' />
+		<name scheme='HGVS'>g.56561C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon of pedigree: Consanguineous parents. '/>
+	</variant>
+	<db_xref  source='OMIM' accession='600838' />
+ </individual>
+ <individual id='W0002'>
+	<gender code='2'/>
+	<phenotype term='Date: 22/11/91'>
+		<comment term='symptom'><text>Infections</text></comment>
+		<comment term='symptom'><text>severe Respiratory tract: Bronchopneumonia Gastrointestinal tract: Chronic diarrhea Skin: Abscesses Other:  Congenital alopecia of scalp: presence of eye brows: presence of eye lashes: presence Nail dystrophy Leuconychia: presence Koilonychia: presence Thymus: absence Other clinical features: Erithrodermia, lymph node  enlargement, hepatosplenomegaly, failure to thrive,  progressive liver disease Hematological abnormalities:  Anemia, date: 22/11/1991: presence Thrombocytopenia, date: 2/11/91: absence Neutropenia, date: 2/11/91: absence</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='FOXN1'/>
+		<ref_seq source='IDRefSeq' accession='D0034' />
+		<name scheme='HGVS'>g.56561C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon of pedigree: Parents consanguineous. Extended '/>
+	</variant>
+	<db_xref  source='OMIM' accession='600838' />
+ </individual>
+</lsdb>

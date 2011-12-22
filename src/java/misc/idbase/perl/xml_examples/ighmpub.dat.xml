@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='IGHMbase' version='1.0' uri='http://bioinf.uta.fi/IGHMbase/'>
+	<name>IGHMbase</name>
+	<url>http://bioinf.uta.fi/IGHMbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='I0017'>
+	<gender code='2'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: significant enteroviral infection</text></comment>
+	</phenotype>
+	<population term='Argentina' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1255G&gt;A</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to a  premature stop codon in the CH4 domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0012'>
+	<gender code='2'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Bacterial: pneumonia Other clinical features: Pseudomonas sepsis, neutropenia,  failure to thrive, diarrhea, otitis, arthritis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.738_739delAA</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the CH3 domain'/>
+		<consequence term='deletion may be as well g.739_740delAA,  c.1037_1038delAA'/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0013'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: Pseudomonas sepsis, diarrhea,  conjunctivitis, bronchiectasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.738_739delAA</name>
+		<exon>e2</exon>
+		<consequence term='deletion in the exon 2 leading to a  premature stop codon in the CH3 domain'/>
+		<consequence term='deletion may be as well g.739_740delAA,  c.1037_1038delAA'/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0004'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Korea' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1893T&gt;G</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an amino  acid change '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0001'>
+	<gender code='2'/>
+	<phenotype term='Date: 1979'>
+		<comment term='symptom'><text>Other clinical features: chronic enteroviral encephalitis,  mental retardation</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='the change would cause a substitution of S for G  in the secreted form of the mu chain, or K would  be substituted for the wild type E in the  membrane form, or loss of the consensus G at the  -1 position would be expected to markedly reduce  efficient splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0002'>
+	<gender code='1'/>
+	<phenotype term='Date: 1991'>
+		<comment term='symptom'><text>Other clinical features: bronchopneumonia and  gastroenteritis at seven months of age</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='the change would cause a substitution of S for G  in the secreted form of the mu chain, or K would  be substituted for the wild type E in the  membrane form, or loss of the consensus G at the  -1 position would be expected to markedly reduce  efficient splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0003'>
+	<gender code='1'/>
+	<phenotype term='Date: 1991'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='the change would cause a substitution of S for G  in the secreted form of the mu chain, or K would  be substituted for the wild type E in the  membrane form, or loss of the consensus G at the  -1 position would be expected to markedly reduce  efficient splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0005'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Bacterial: pneumonia Other clinical features: Enteroviral infection,  neutropenia</text></comment>
+	</phenotype>
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956delG</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0006'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Bacterial: pneumonia Gastro-intestinal tract manifestations Diarrhea, gastroenteritis Other clinical features: bronchiectasis, rhinopharyngitis,  stomatitis, </text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Sweden' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956delG</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0007'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: recurrent pharyngitis, otitis,  sinusitis, skin infections, recurrent pneumonias,  conjunctivitis, severe blepharoconjunctivitis resulting  some vision loss</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Sweden' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956delG</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0008'>
+	<gender code='9'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: Failure to thrive, neutropenia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Spain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0009'>
+	<gender code='2'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: enteroviral infection</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0010'>
+	<gender code='1'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule  '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+ <individual id='I0011'>
+	<gender code='2'/>
+	<phenotype term='mu heavy-chain deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections:  Bacterial: pneumonia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='IGHM'/>
+		<ref_seq source='EMBL' accession='X57331' />
+		<name scheme='HGVS'>g.1956G&gt;A</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to an  amino acid change'/>
+		<consequence term='This alteration would change the G at this  codon to S in the secreted form of mu heavy chain  and K to E in the membrane form of the molecule '/>
+	</variant>
+	<db_xref  source='OMIM' accession='147020' />
+ </individual>
+</lsdb>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='RFXAPbase' version='1.0' uri='http://bioinf.uta.fi/RFXAPbase/'>
+	<name>RFXAPbase</name>
+	<url>http://bioinf.uta.fi/RFXAPbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='R0006'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Druze' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52509_52510insGCGGGGC</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0007;'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Druze' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52509_52510insGCGGGGC</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0002'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52638C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0005'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52638C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to a  premature stop codon of pedigree:Parents are heterozygous'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0001'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Morocco' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52843delG</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0003'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Algeria' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52843delG</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+ <individual id='R0004'>
+	<gender code='9'/>
+	<phenotype term='Regulatory factor X-associated protein deficiency  '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='North Africa' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='RFXAP'/>
+		<ref_seq source='IDRefSeq' accession='D0075' />
+		<name scheme='HGVS'>g.52843delG</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 1 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='601861' />
+ </individual>
+</lsdb>

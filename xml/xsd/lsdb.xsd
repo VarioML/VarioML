@@ -16,6 +16,9 @@
     Contact Juha.Muilu@helsinki.fi for details.
   
   TODO mark non-text nodes as empty
+  
+  haplotype element added into variant
+  variant added into lsdb element
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
   <!--
@@ -51,7 +54,8 @@
     <xs:complexContent>
       <xs:extension base="vml:VmlSubmission">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
           <xs:group ref="vml:VmlAnnotatable"/>
         </xs:sequence>
       </xs:extension>
@@ -458,6 +462,7 @@
       <xs:element minOccurs="0" ref="vml:gene"/>
       <xs:element minOccurs="0" ref="vml:ref_seq"/>
       <xs:group minOccurs="0" ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:haplotype"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:panel"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
@@ -516,6 +521,96 @@
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="copy_count" type="xs:float"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	haplotype. phased variants 
+    (=)	===============================
+  -->
+  <xs:element name="haplotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT haplotype.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlHaplotype">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlHaplotype">
+    <xs:annotation>
+      <xs:documentation>[% INSERT haplotype.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="vml:name"/>
+      <xs:group maxOccurs="unbounded" ref="vml:variant_event"/>
+      <xs:element minOccurs="0" ref="vml:sequence"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:consequence"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:pathogenicity"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:frequency"/>
+      <xs:element minOccurs="0" ref="vml:seq_changes"/>
+      <xs:element minOccurs="0" ref="vml:aliases"/>
+      <xs:group minOccurs="0" ref="vml:source"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:location"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
+    <xs:attribute name="allele" type="xs:int"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
+     X	variant event 
+    (=)	===============================
+  -->
+  <xs:group name="variant_event">
+    <xs:sequence>
+      <xs:element name="variant">
+        <xs:annotation>
+          <xs:documentation>[% INSERT variant_event.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlVariantEvent">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <!--
+    (=)	===============================
+     X	Variant event. Single co-occurring genomic variantion event which are
+     X    part of same variant
+    (=)	===============================
+  -->
+  <xs:complexType name="VmlVariantEvent">
+    <xs:annotation>
+      <xs:documentation>[% INSERT variant_event.txt %]  </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
+      <xs:element minOccurs="0" ref="vml:original_id"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:exon"/>
+      <xs:element minOccurs="0" ref="vml:sequence"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:consequence"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:pathogenicity"/>
+      <xs:element minOccurs="0" ref="vml:variant_detection"/>
+      <xs:element minOccurs="0" ref="vml:restriction_site"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:genetic_origin"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:frequency"/>
+      <xs:element minOccurs="0" ref="vml:seq_changes"/>
+      <xs:element minOccurs="0" ref="vml:aliases"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:location"/>
+      <xs:group ref="vml:VmlAnnotatedObservation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlIdentifiable"/>
   </xs:complexType>
   <!--
     (=)	===============================
@@ -934,26 +1029,6 @@
     <xs:group ref="vml:VmlOntologyTerm"/>
     <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
   </xs:complexType>
-  <xs:element name="sequence_region">
-    <xs:annotation>
-      <xs:documentation>[% INSERT sequence_region.txt %]</xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="vml:VmlSequenceRegion">
-          <xs:group ref="vml:VmlForeignNodes"/>
-          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="VmlSequenceRegion">
-    <xs:annotation>
-      <xs:documentation>[% INSERT sequence_region.txt %]</xs:documentation>
-    </xs:annotation>
-    <xs:group ref="vml:VmlOntologyTerm"/>
-    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
-  </xs:complexType>
   <xs:element name="relationship">
     <xs:annotation>
       <xs:documentation>relationships .. NOT NEEDED
@@ -1022,6 +1097,32 @@
     <xs:attribute name="accession"/>
     <xs:attribute name="transcript_ref"/>
   </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	not used 
+     X    
+    (=)	===============================
+  -->
+  <xs:element name="seq_region">
+    <xs:annotation>
+      <xs:documentation>[% INSERT seq_region.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlSeqRegion">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlSeqRegion">
+    <xs:annotation>
+      <xs:documentation>[% INSERT seq_region.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+  </xs:complexType>
   <!--
     (=)	===============================
      X	Consequence of mutation
@@ -1293,7 +1394,7 @@
   </xs:complexType>
   <!--
     (=)	===============================
-     X	Haplotype group id
+     X
     (=)	===============================
   -->
   <xs:element name="variant_group">

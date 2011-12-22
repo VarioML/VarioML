@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='LIG1base' version='1.0' uri='http://bioinf.uta.fi/LIG1base/'>
+	<name>LIG1base</name>
+	<url>http://bioinf.uta.fi/LIG1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='L0001'>
+	<gender code='2'/>
+	<phenotype term='DNA ligase I deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Retarded growth, sun-sensitive facial erythema, and severe immunodeficiencies</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG1'/>
+		<ref_seq source='IDRefSeq' accession='D0053' />
+		<name scheme='HGVS'>g.38293G&gt;A</name>
+		<exon>e1</exon>
+		<consequence term='a point mutation in the exon 18 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0053' />
+				<name scheme='HGVS'>r.1696g&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P18858' />
+						<name scheme='HGVS'>p.Glu566Lys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='LIG1'/>
+		<ref_seq source='IDRefSeq' accession='D0053' />
+		<name scheme='HGVS'>g.50060C&gt;T</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 24 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0053' />
+				<name scheme='HGVS'>r.2311c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P18858' />
+						<name scheme='HGVS'>p.Arg771Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='126391' />
+ </individual>
+</lsdb>

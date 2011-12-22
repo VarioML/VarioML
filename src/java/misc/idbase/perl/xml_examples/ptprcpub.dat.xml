@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='PTPRCbase' version='1.0' uri='http://bioinf.uta.fi/PTPRCbase/'>
+	<name>PTPRCbase</name>
+	<url>http://bioinf.uta.fi/PTPRCbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='P0002'>
+	<gender code='2'/>
+	<phenotype term='CD45 deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Infections: Other: rash, pyrexia, pneumonitis, disseminated CMV Physical findings: Lymphadenopathy</text></comment>
+		<comment term='symptom'><text>Hepatosplenomegaly</text></comment>
+		<comment term='symptom'><text>Pancytopenia</text></comment>
+	</phenotype>
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='PTPRC'/>
+		<ref_seq source='IDRefSeq' accession='D0068' />
+		<name scheme='HGVS'>g.71646_71651delATGAGT</name>
+		<exon>e1</exon>
+		<consequence term='an inframe deletion in the exon 11 leading to an amino acid change in the EC domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0068' />
+				<name scheme='HGVS'>r.1082_1087delaugagu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='P08575' />
+						<name scheme='HGVS'>p.His361del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='151460' />
+ </individual>
+ <individual id='P0001'>
+	<gender code='1'/>
+	<phenotype term='CD45 deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other: B-cell lymphoma at 2 years of age</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='PTPRC'/>
+		<ref_seq source='IDRefSeq' accession='D0068' />
+		<name scheme='HGVS'>g.IVS13+1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='a point mutation in the intron 13 leading to an aberrant splicing '/>
+	</variant>
+	<db_xref  source='OMIM' accession='151460' />
+ </individual>
+</lsdb>

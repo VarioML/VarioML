@@ -14,11 +14,11 @@ public class Gender {
  
 	// ===========-- code --===========
 	@org.simpleframework.xml.Attribute(required=false,name="code")
-	private int _attr_code ;
-	public void setCodeAttr( int attr_code) { 
+	private Integer _attr_code ;
+	public void setCodeAttr( Integer attr_code) { 
 		this._attr_code = attr_code ;
 	}
-	public int getCodeAttr() { 
+	public Integer getCodeAttr() { 
 		return this._attr_code;
 	}
  

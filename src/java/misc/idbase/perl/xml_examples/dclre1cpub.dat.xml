@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='DCLRE1Cbase' version='1.0' uri='http://bioinf.uta.fi/DCLRE1Cbase/'>
+	<name>DCLRE1Cbase</name>
+	<url>http://bioinf.uta.fi/DCLRE1Cbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='D0001'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Negroid' type='ethnic' />
+	<population term='Africa' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.49482C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0002'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.49482C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to a  premature stop codon '/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0003'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Greek' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.49482C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to a  premature stop codon '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS10+1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='point mutation in the intron 10 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0013'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.57999_58370del</name>
+		<consequence term='deletion in the exon 5 leading to an amino  acid change'/>
+		<consequence term='deletion of exons 5-8'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0004'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.57999_58156del</name>
+		<consequence term='deletion of the exons 5 and 6 leading to   aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS11+1G&gt;C</name>
+		<exon>i1</exon>
+		<consequence term='point mutation in the intron 11 leading to   aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0014'>
+	<gender code='2'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: Infections at diagnosis</text></comment>
+		<comment term='symptom'><text>PCP, CMV</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.58045G&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0015'>
+	<gender code='1'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: VZV infection</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.59069G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0016'>
+	<gender code='1'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.59069G&gt;A</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to an  amino acid change'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0009'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.61738delG</name>
+		<exon>e9</exon>
+		<consequence term='deletion in the exon 9 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0017'>
+	<gender code='2'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: PCP</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.66440_66720del</name>
+		<consequence term='deletion of exons 10,11 and 12 leading to  a premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0021'>
+	<gender code='2'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respiratory tract infections Gastro-intestinal tract manifestations Protracted diarrhea Cryptosporidium Other clinical features: failure to thrive, cholangitis, liver disease</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.85395_85411delACAAACCCCAGGATGCT</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 14 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0026' />
+				<name scheme='HGVS'>r.1269_1285delacaaaccccaggaugcu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='IDRefSeq' accession='DCLRE1C_PRO' />
+						<name scheme='HGVS'>p.Thr425fsX15</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0018'>
+	<gender code='1'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Gastro-intestinal tract manifestations Protracted diarrhea Hematological abnormalities Anemia Thrombocytopenia Other clinical features: candidiasis, hypogammaglobulinemia</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.85451_85457delTTGTAGA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 14 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0026' />
+				<name scheme='HGVS'>r.1325_1331deluuguaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='IDRefSeq' accession='DCLRE1C_PRO' />
+						<name scheme='HGVS'>p.Asp444fsX10</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0019'>
+	<gender code='2'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respiratory tract infections Hematological abnormalities Anemia Thrombocytopenia Other clinical features: oral candidiasis, lymphocytopenia</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.85451_85457delTTGTAGA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 14 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0026' />
+				<name scheme='HGVS'>r.1325_1331deluuguaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='IDRefSeq' accession='DCLRE1C_PRO' />
+						<name scheme='HGVS'>p.Asp444fsX10</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0020'>
+	<gender code='2'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Other clinical features: recurrent otitis, bronchopneumonia resulting in bronchiectasis, cerebral abscess caused by Toxoplasma gondii infection</text></comment>
+	</phenotype>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.85451_85457delTTGTAGA</name>
+		<exon>e1</exon>
+		<consequence term='a frame shift deletion mutation in the exon 14 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0026' />
+				<name scheme='HGVS'>r.1325_1331deluuguaga</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='IDRefSeq' accession='DCLRE1C_PRO' />
+						<name scheme='HGVS'>p.Asp444fsX10</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0005'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS5+1G&gt;T</name>
+		<exon>i5</exon>
+		<consequence term='point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0006'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS5+1G&gt;T</name>
+		<exon>i5</exon>
+		<consequence term='point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0007'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS5+1G&gt;T</name>
+		<exon>i5</exon>
+		<consequence term='point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+ <individual id='D0008'>
+	<gender code='9'/>
+	<phenotype term='Artemis deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='DCLRE1C'/>
+		<ref_seq source='IDRefSeq' accession='D0026' />
+		<name scheme='HGVS'>g.IVS5+1G&gt;T</name>
+		<exon>i5</exon>
+		<consequence term='point mutation in the intron 5 leading to  aberrant splicing'/>
+	</variant>
+	<db_xref  source='OMIM' accession='605988' />
+ </individual>
+</lsdb>

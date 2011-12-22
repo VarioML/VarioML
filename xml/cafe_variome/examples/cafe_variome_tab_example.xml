@@ -13,7 +13,6 @@
             <email>ol8@leicester.ac.uk</email>
             <db_xref source="orcid" accession="122323"/>
         </contact>
-        <db_xref></db_xref>
     </source>
 
     <!-- Variant
@@ -21,7 +20,7 @@
         type = reference template used for naming the variant (DNA,cDNA, RNA and AA)
         copy_count = number of observed copies. 1 = one autosomal sister chromosome (or one male nonautosomal X/Y), 2 = both autosomal sister chromosomes.  
     -->
-    <variant type="cDNA" id="Variant ID" copy_count="1"> 
+    <variant type="DNA" id="Variant ID" copy_count="1"> 
         <gene source="HGNC" accession="COL1A1"/>
         <ref_seq accession="NG_007400.1"/>
         <name scheme="HGVS">c.579delT</name>

@@ -14,6 +14,9 @@
 #   Contact Juha.Muilu@helsinki.fi for details.
 #
 # TODO mark non-text nodes as empty
+#
+# haplotype element added into variant
+# variant added into lsdb element
 
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 default namespace vml = "http://varioml.org/xml/1.0"
@@ -48,7 +51,7 @@ element lsdb {
 ## [% INSERT lsdb.txt %] 
 VmlLsdb = 
     VmlSubmission,
-    individual+,
+    individual*,variant*,
     VmlAnnotatable
 
 # (=)	===============================
@@ -263,22 +266,23 @@ VmlVariant =
     gene?,
     ref_seq?,
     name?,
+    haplotype*, # haplotypes. Complex variants can be given as a list of phased variants
     panel*,
-    variant_type*, # overlap with the class. should not used until role is clear
-    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration    
-    original_id?,
-    exon*,
-    sequence?,
-    genotype?,
-    consequence*,
-    pathogenicity*,
+    variant_type*, # type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
+    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration
+    original_id?, # identifier user in original database (which is not necessary the same as submittors database)
+    exon*, # exon number
+    sequence?, # reference and observed sequence
+    genotype?, # orginal genotype call (e.g A/T)
+    consequence*, # consequence of mutation on sequence level
+    pathogenicity*, # consequence on phenotypic/disease level
     #phenotype*, # deprecated. use pathogenecity instead
-    sampleid?,
-    tissue?,
+    sampleid?, # identifier of sample
+    tissue?,   # type of tissue
     variant_detection?,
     restriction_site?,
     tissue_distribution?,
-    genetic_origin* ,
+    genetic_origin* , # somatic, de-novo, mother, father...
     ## Frequency in other populations (related frequency).
     frequency*  ,  
     seq_changes?,
@@ -292,27 +296,63 @@ VmlVariant =
 
 
 # (=)	===============================
+#  X	haplotype. phased variants 
+# (=)	===============================
+haplotype = 
+## [% INSERT haplotype.txt %]
+element haplotype { 
+    VmlHaplotype,
+    VmlForeignNodes 
+}
+
+## [% INSERT haplotype.txt %]  
+VmlHaplotype =  
+    VmlIdentifiable,
+    attribute allele {xsd:int}?, # id of alleles (sister chromosomes)
+    name?,
+    variant_event+,
+    sequence?,
+    consequence*,
+    pathogenicity*,
+    frequency*  ,  
+    seq_changes?,
+    aliases?,
+    source? ,   
+    location*,    
+    VmlAnnotatedObservation
+
+
+# (=)	===============================
 #  X	variant event 
 # (=)	===============================
-event = 
-## [% INSERT event.txt %]
-element event { 
+variant_event = 
+## [% INSERT variant_event.txt %]
+element variant { 
     VmlVariantEvent,
-    VmlForeignNodes 
+    VmlForeignNodes     
 }
 
 # (=)	===============================
 #  X	Variant event. Single co-occurring genomic variantion event which are
 #  X    part of same variant
 # (=)	===============================
-## [% INSERT variant_fragment.txt %]  
+## [% INSERT variant_event.txt %]  
 VmlVariantEvent =  
     VmlIdentifiable,
-    name,
-    variant_class*,
-    exon*,  
+#   gene?, gene is defined by the main variant
+#   ref_seq?, we force users to use same reference as defined in main variant
+    name?,
+    variant_type*, # # type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
+    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration  
+    original_id?,
+    exon*,
+    sequence?,
     consequence*,
-    genetic_origin* ,    
+    pathogenicity*,
+    variant_detection?,
+    restriction_site?,
+    genetic_origin* ,
+    frequency*  ,  
     seq_changes?,
     aliases?,
     location*,
@@ -327,9 +367,8 @@ VmlConsequentVariant =
     attribute type {'cDNA'|'RNA'|'AA'}?,
     ref_seq?,
     name,
-    variant_type*, #http://www.ebi.ac.uk/mutations/recommendations/mutevent.html
+    variant_type*, #type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
     original_id?,
-#    , sequence_region*
     sequence ?, 
     genotype?,    
     consequence*,
@@ -495,6 +534,7 @@ element creation_date {
 VmlCreationDate =
     VmlDate
 
+## type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
 variant_type = 
 ## [% INSERT variant_type.txt %]
 element variant_type { 
@@ -561,15 +601,6 @@ element tissue_distribution {
 VmlTissueDistribution =
     VmlOntologyTerm
     
-sequence_region = 
-## [% INSERT sequence_region.txt %]
-element sequence_region { 
-    VmlSequenceRegion, 
-    VmlForeignNodes
-}
-## [% INSERT sequence_region.txt %]
-VmlSequenceRegion =
-    VmlOntologyTerm
 
 
 relationship = 
@@ -611,6 +642,23 @@ VmlExon =
     attribute accession { text }?, 
     attribute transcript_ref { text }?, 
     text
+
+
+# (=)	===============================
+#  X	not used 
+#  X    
+# (=)	===============================
+seq_region  = 
+## [% INSERT seq_region.txt %]
+element seq_region { 
+    VmlSeqRegion, 
+    VmlForeignNodes 
+}
+## [% INSERT seq_region.txt %]
+VmlSeqRegion = 
+    VmlOntologyTerm
+
+
 
 # (=)	===============================
 #  X	Consequence of mutation
@@ -752,7 +800,7 @@ VmlFactor =
 
 
 # (=)	===============================
-#  X	Haplotype group id
+#  X
 # (=)	===============================
 variant_group  = 
 ## [% INSERT variant_group.txt %]

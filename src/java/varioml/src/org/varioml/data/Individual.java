@@ -44,11 +44,11 @@ public class Individual {
  
 	// ===========-- dob --===========
 	@org.simpleframework.xml.Element(required=false,name="dob") 
-	private java.util.Date _dob ;
-	public void setDob( java.util.Date dob) { 
+	private org.varioml.util.VarioDate _dob ;
+	public void setDob( org.varioml.util.VarioDate dob) { 
 		this._dob = dob ;
 	}
-	public java.util.Date getDob() {
+	public org.varioml.util.VarioDate getDob() {
 		return this._dob;
 	}
  

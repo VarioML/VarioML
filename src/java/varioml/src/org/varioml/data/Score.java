@@ -54,11 +54,11 @@ public class Score {
  
 	// ===========-- value --===========
 	@org.simpleframework.xml.Element(required=false,name="value") 
-	private double _value ;
-	public void setValue( double value) { 
+	private Double _value ;
+	public void setValue( Double value) { 
 		this._value = value ;
 	}
-	public double getValue() {
+	public Double getValue() {
 		return this._value;
 	}
  

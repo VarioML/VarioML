@@ -1,0 +1,4312 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='AIREbase' version='1.01' uri='http://www.uta.fi/imt/bioinfo/AIREbase/'>
+	<name>AIREbase</name>
+	<url>http://www.uta.fi/imt/bioinfo/AIREbase/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='A0176'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4707A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 altering initiation codon in HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1a&gt;u</name>
+				<consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Met1Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0177'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4707A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 altering initiation codon in HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1a&gt;u</name>
+				<consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Met1Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0153'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Diabetes  mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active  hepatitis</text></comment>
+		<comment term='symptom'><text>Progressive muscular atrophy</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4749C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.43c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg15Cys</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0042'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4750G&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to amino  acid change in the HSR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  amino acid change in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0104'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Gastritis</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Hungary' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4749_4750ins</name>
+		<exon>e1</exon>
+		<consequence term='frameshift insertion in the exon 1 leading to a  premature stop codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0106'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Hypergonadotrophic hypogonadism</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Austria' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4749_4750ins</name>
+		<exon>e1</exon>
+		<consequence term='frameshift insertion in the exon 1 leading to a  premature stop codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0159'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Addison&apos;s  disease</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4749_4750insACGCCGGCTTCTGAGGCTGCACC</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift insertion mutation in the exon 1 leading to a premature stop codon in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.43_44insacgccggcuucugaggcugcacc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg15fsX4</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0122'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4753C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to an amino  acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0157'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4753C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.47c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Thr16Met</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0158'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4753C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.47c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Thr16Met</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0155'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Pauciarticular juvenile rheumatoid arhtritis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4770_4775delGTGGAC</name>
+		<exon>e1</exon>
+		<consequence term='An inframe deletion in the exon 1 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.64_69delguggac</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Val22_Ser24del</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0046'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Red-cell aplasia</text></comment>
+		<comment term='symptom'><text>Squamous-cell carcinoma of oral mucosa</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4789T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to amino  acid change in the HSR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11846delC</name>
+		<exon>e1</exon>
+		<consequence term='frameshift deletion in the exon 10 leading to  amino acid change in the PRR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0087'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4789T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='point mutation in the exon 1 leading to an amino  acid change in the HSR domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0151'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mild nail candidiasis</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis with elevated serum aminotransferase and immunoglobulin G levels</text></comment>
+		<comment term='symptom'><text>Mycotic paronychia by candida</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4792T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.86u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Leu29Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='A point mutation in the intron 9 leading to an amino acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0152'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Hypoparathyroidism with hypocalcemia and  hyperphosphatemia</text></comment>
+		<comment term='symptom'><text>Mild nail candidiasis</text></comment>
+		<comment term='symptom'><text>Autoimmune  hepatitis with elevated serum aminotransferase and  immunoglobulin G levels</text></comment>
+		<comment term='symptom'><text>Mycotic paronychia by candida</text></comment>
+		<comment term='symptom'><text>Severe pneumonia</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.4792T&gt;C</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 1 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.86u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Leu29Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;C</name>
+		<exon>i9</exon>
+		<consequence term='A point mutation in the intron 9 leading to an amino acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0082'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5315_5350del</name>
+		<exon>e2</exon>
+		<consequence term='inframe deletion in the exon 2 leading to an  amino acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0089'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Arabian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5332_5333insCAGG</name>
+		<exon>e2</exon>
+		<consequence term='insertion in the exon 2 leading to a  premature stop codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0156'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Adrenal failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Sicily' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5354T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.230u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Phe77Ser</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS8+5G&gt;T</name>
+		<exon>i8</exon>
+		<consequence term='A point mutation in the intron 8 leading to an amino acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0101'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Czech' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to an amino  acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0140'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Atrophic gastritis, Tympanic calsifications, Cataract, nephrocalcinosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0141'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Hypogonadism, Autoimmune hepatitis, Malabsorption, Keratitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0142'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Hypogonadism, Atrophic  gastritis, Cataract, Nephrocalcinosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0143'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Cataract</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0144'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Tympanic calsifications, Cataract</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;C</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0145'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis, Tympanic calsifications, Cataract</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11078C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='A point mutation in the exon 9 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1072c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gln358X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0146'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>hypogonadism, Cataract</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11078C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='A point mutation in the exon 9 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1072c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gln358X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0147'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>hypogonadism  (prepubertal age)</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11078C&gt;T</name>
+		<exon>e9</exon>
+		<consequence term='A point mutation in the exon 9 leading to a premature stop codon in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1072c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gln358X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0148'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Atrophic gastritis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis</text></comment>
+		<comment term='symptom'><text>Keratitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5356T&gt;A</name>
+		<exon>e2</exon>
+		<consequence term='A point mutation in the exon 2 leading to an amino acid change in the HSR domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.232u&gt;a</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Trp78Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8459C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the HSR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.755c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Pro252Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0005'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5371A&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='missense mutation in the exon 2 leading to stop  codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0043'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5393A&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='missense mutation in the exon 2 leading to stop  codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0044'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fulminant  hepatic failure</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5393A&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='missense mutation in the exon 2 leading to stop  codon in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0091'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='French Canadian' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5402T&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to an amino  acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0092'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='French Canadian' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5402T&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='point mutation in the exon 2 leading to an amino  acid change in the HSR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0022'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0023'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0024'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0025'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0026'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0027'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0028'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0029'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop codon in  the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='nonsense mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0030'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0031'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0032'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0033'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0034'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0035'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term=' Sardinia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0125'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Keratoconjuctivitis</text></comment>
+	</phenotype>
+	<population term='Egypt' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0164'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Keratopathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Egypt ' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.5785C&gt;T</name>
+		<exon>e3</exon>
+		<consequence term='A point mutation in the exon 3 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.415c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg139X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0088'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Hispanic' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.6270C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS9-1G&gt;A</name>
+		<exon>i9</exon>
+		<consequence term='point mutation in the intron 9 leading to an  amino acid change in the PRR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0160'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.7046delG</name>
+		<exon>e5</exon>
+		<consequence term='A frame shift deletion mutation in the exon 5 leading to a premature stop codon '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.540delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Ile181fsX196</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0010'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.7113C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='nonsense mutation in the exon 5 leading to stop  codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0134'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>hypothyroid autoimmune thyroiditis (hAT)</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies GAD-</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0135'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>hypothyroid autoimmune thyroiditis (hAT)</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies GAD+</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0136'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>hypothyroid autoimmune thyroiditis (hAT)</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies GAD+</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0137'>
+	<gender code='1'/>
+	<phenotype term='Hypothyroid autoimmune thyroiditis (hAT)'>
+		<comment term='symptom'><text>Presence of autoantibodies GAD-</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0138'>
+	<gender code='2'/>
+	<phenotype term='Hypothyroid autoimmune thyroiditis (hAT)'>
+		<comment term='symptom'><text>Presence of autoantibodies GAD-</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0139'>
+	<gender code='2'/>
+	<phenotype term='Hypothyroid autoimmune thyroiditis (hAT)'>
+		<comment term='symptom'><text>Presence of autoantibodies GAD-</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8386G&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to an amino acid change in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.682g&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gly228Trp</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0001'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0002'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0003'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0004'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0006'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.16426A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='terminator mutation in the exon 14'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0007'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Switzerland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0008'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.16426A&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='terminator mutation in the exon 14'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0009'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Finland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0012'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0013'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0014'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0016'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0017'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0020'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0021'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='New Zealand' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0063'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0064'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to  stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0065'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Hashimoto&apos;s thyroiditis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0066'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0067'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to stop  codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0072'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Candidiasis</text></comment>
+		<comment term='symptom'><text>Nail pitting</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies AADC-</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Norway' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11839_11840insA</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 10 leading to stop codon  in the PRR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='nonsense mutation in the exon 6 leading to stop  codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0073'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies AADC-</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+	</phenotype>
+	<population term='Norway' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11839_11840insA</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 10 leading to stop codon  in the PRR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='nonsense mutation in the exon 6 leading to stop  codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0074'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies AADC-</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+	</phenotype>
+	<population term='Norway' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11839_11840insA</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 10 leading to stop codon  in the PRR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='nonsense mutation in the exon 6 leading to stop  codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0083'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to a  premature stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0084'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0085'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0096'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+	</phenotype>
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9892C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an amino  acid change in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0097'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious  anemia</text></comment>
+	</phenotype>
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9892C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an amino  acid change in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0098'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+	</phenotype>
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9892C&gt;T</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an amino  acid change in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0099'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH-</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Czech' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0100'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Keratoconjuctivitis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Czech' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0102'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Hungary' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to a  premature stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0103'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Hungary' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0107'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0108'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH-</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0109'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0110'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH-</text></comment>
+		<comment term='symptom'><text>21OH-</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0111'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0112'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+	</phenotype>
+	<population term='Croatia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0113'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Ectodermal  dystrophy</text></comment>
+		<comment term='symptom'><text>Keratoconjuctivitis</text></comment>
+	</phenotype>
+	<population term='Croatia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0114'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Ectodermal  dystrophy</text></comment>
+		<comment term='symptom'><text>Keratoconjuctivitis</text></comment>
+	</phenotype>
+	<population term='Croatia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0115'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Serbia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0116'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Hypergonadotrophic  hypogonadism</text></comment>
+		<comment term='symptom'><text></text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0117'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0118'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH-</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC+</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0119'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Gastritis</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0120'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0121'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Gastritis</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Ectodermal  dystrophy</text></comment>
+	</phenotype>
+	<population term='Russia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0126'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Autoimmune hepatitis type 1</text></comment>
+	</phenotype>
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0127'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Primary biliary cirrhosis</text></comment>
+	</phenotype>
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0128'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis type 2</text></comment>
+		<comment term='symptom'><text>Thyroiditis</text></comment>
+		<comment term='symptom'><text>Atrophic gastritis</text></comment>
+	</phenotype>
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0129'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0130'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>mosaic of Down&apos;s syndrome (46,  XY/47, XY + 21)</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0132'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Nail dystrophy</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Keratopathy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='point mutation in the exon 6 leading to a  premature stop codon in the SAND domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0161'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia ' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0162'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS5-7CTC&gt;</name>
+		<exon>i5</exon>
+		<consequence term='A deletion in the intron 5 leading to aberrant splicing '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0165'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0166'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+		<comment term='symptom'><text>Keratitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0167'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0168'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0169'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0170'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fahr-like  intracranial calcifications</text></comment>
+		<comment term='symptom'><text>Conjunctivitis</text></comment>
+		<comment term='symptom'><text>Keratitis, Premature ovarian failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0171'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Keratitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0172'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+		<comment term='symptom'><text>Keratitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0173'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Pancreatitis</text></comment>
+		<comment term='symptom'><text>Premature ovarian failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894delCTGTCCCCTCCGC</name>
+		<exon>e8</exon>
+		<consequence term='A frame shift deletion mutation in the exon 8 leading to a premature stop codon in the PHD domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.967_979delcuguccccuccgc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Leu323fsX50</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the PHD domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0175'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+		<comment term='symptom'><text>Conjunctivitis</text></comment>
+		<comment term='symptom'><text>Premature puberty</text></comment>
+		<comment term='symptom'><text>Premature ovarian failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9846delT</name>
+		<exon>e8</exon>
+		<consequence term='A frame shift deletion mutation in the exon 8 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.931delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Cys311fsX66</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0179'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Cataract</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0180'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Deafness</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.8473C&gt;T</name>
+		<exon>e6</exon>
+		<consequence term='A point mutation in the exon 6 leading to a premature stop codon in the SAND domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.769c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg257X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0095'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal failure</text></comment>
+		<comment term='symptom'><text>Autoimmune  thyroiditis</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies AADC+</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Norway' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9816G&gt;A</name>
+		<exon>e8</exon>
+		<consequence term='point mutation in the exon 8 leading to an amino  acid change in the PHD domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0178'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Fahr-like intracranial calcifications</text></comment>
+		<comment term='symptom'><text>Growth hormone deficiency</text></comment>
+		<comment term='symptom'><text>Premature ovarian failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Poland' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9823G&gt;C</name>
+		<exon>e8</exon>
+		<consequence term='A point mutation in the exon 8 leading to an amino acid change in the PHD domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.908g&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Arg303Pro</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0149'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Nephrocalcinosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9846delT</name>
+		<exon>e8</exon>
+		<consequence term='A frame shift deletion mutation in the exon 8 leading to a premature stop codon in the PHD domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.931delu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Cys311fsX66</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0015'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0018'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0019'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0036'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0037'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Ankylosing spondylitis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11861delC</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 10 leading to stop codon in  the PRR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0038'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Autoimmune hepatitis</text></comment>
+		<comment term='symptom'><text>beta-hemolytic  streptococcal septicemia</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11861delC</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 10 leading to stop codon in  the PRR domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='frameshift deletion in the exon 8 leading to  stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0039'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Postanesthetic adrenal crisis with  respiratory arrest</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0040'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0041'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0045'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Keratopathy</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0047'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0048'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0049'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Diabetes  mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0050'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0051'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Systemic varicella infection</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0052'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0053'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Adrenocortical failure</text></comment>
+		<comment term='symptom'><text>Gonadal  failure</text></comment>
+		<comment term='symptom'><text>Diabetes mellitus</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Pernicious anemia</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Keratopathy</text></comment>
+		<comment term='symptom'><text>Intracerebral hemorrhage</text></comment>
+	</phenotype>
+	<population term='Britain' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop codon in  the PHD domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0054'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Vitiligo</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0055'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+		<comment term='symptom'><text>Hypogonadism</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0056'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0057'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0058'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Hashimoto&apos;s thyroiditis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0059'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0060'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0061'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0062'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0075'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0076'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0077'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0078'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0079'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0080'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to stop codon in  the PHD domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0081'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.</name>
+		<exon>e1</exon>
+		<consequence term='complex mutation in the exon 11 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0090'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Asian' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a  premature stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0105'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Gastritis</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Ectodermal  dystrophy</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies 17OH-</text></comment>
+		<comment term='symptom'><text>21OH+</text></comment>
+		<comment term='symptom'><text>SCC-</text></comment>
+	</phenotype>
+	<population term='Hungary' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a premature  stop codon in the PHD domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0124'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Keratoconjuctivitis</text></comment>
+	</phenotype>
+	<population term='Azerbaijan' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a  premature stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0131'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='German' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894del</name>
+		<exon>e8</exon>
+		<consequence term='deletion in the exon 8 leading to a  premature stop codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0133'>
+	<gender code='1'/>
+	<phenotype term='Addisons Disease'>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Presence of autoantibodies SCC+</text></comment>
+		<comment term='symptom'><text>GAD+</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Norway' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9882_9894delCTGTCCCCTCCGC</name>
+		<exon>e8</exon>
+		<consequence term='A frame shift deletion mutation in the exon 8 leading to a premature stop codon in the PHD domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.967_979delcuguccccuccgc</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Leu323fsX50</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0011'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.9884_9885insCCTG</name>
+		<exon>e8</exon>
+		<consequence term='insertion in the exon 8 leading to stop  codon in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0163'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Hypothyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Malabsorption</text></comment>
+		<comment term='symptom'><text>Ectodermal dystrophy</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Slovenia' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11070_11074dup</name>
+		<exon>e9</exon>
+		<consequence term='A frame shift duplication mutation in the exon 9 leading to a premature stop codon in the PRR domain'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1064_1068dup</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Gln358fsX21</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0093'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Allele ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.15091delG</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 13 leading to a premature  stop codon '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11700_11701insC</name>
+		<exon>e1</exon>
+		<consequence term='frameshift insertion in the exon 10 leading to a  premature stop codon in the PRR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0094'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Allele ' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.15091delG</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 13 leading to a premature  stop codon '/>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11700_11701insC</name>
+		<exon>e1</exon>
+		<consequence term='frameshift insertion in the exon 10 leading to a  premature stop codon in the PRR domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0086'>
+	<gender code='9'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='North America' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.11861delC</name>
+		<exon>e1</exon>
+		<consequence term='deletion in the exon 10 leading to a premature  stop codon in the PRR domain '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0068'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous  candidiasis</text></comment>
+		<comment term='symptom'><text>Chronic active hepatitis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.12504_12505insAC</name>
+		<exon>e1</exon>
+		<consequence term='insertion in the exon 11 '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0154'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+	</phenotype>
+	<population term='Mongoloid' type='ethnic' />
+	<population term='Japan' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.12554delinsTT</name>
+		<exon>e1</exon>
+		<consequence term='A frame shift indel mutation in the exon 11 leading to a premature stop codon in the PHD domain '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1344delinsuu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Cys449fsX54</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS11+1G&gt;A</name>
+		<exon>i1</exon>
+		<consequence term='A point mutation in the intron 11 leading to an amino acid change in the PHD domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0150'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+		<comment term='symptom'><text>Enamel hypoplasia</text></comment>
+		<comment term='symptom'><text>Hypogonadism (prepubertal age)</text></comment>
+		<comment term='symptom'><text>Nephrocalcinosis</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.16404C&gt;T</name>
+		<exon>e1</exon>
+		<consequence term='A point mutation in the exon 14 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0003' />
+				<name scheme='HGVS'>r.1616c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='UniProt' accession='O43918' />
+						<name scheme='HGVS'>p.Pro539Leu</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0069'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+		<comment term='symptom'><text>Ovarian  failure</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS3+2T&gt;C</name>
+		<exon>i3</exon>
+		<consequence term='point mutation in the intron 3 '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0070'>
+	<gender code='1'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS3+2T&gt;C</name>
+		<exon>i3</exon>
+		<consequence term='point mutation in the intron 3 '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+ <individual id='A0071'>
+	<gender code='2'/>
+	<phenotype term='Autoimmune polyglandular syndrome type 1'>
+		<comment term='symptom'><text>Hypoparathyroidism</text></comment>
+		<comment term='symptom'><text>Addison&apos;s disease</text></comment>
+		<comment term='symptom'><text>Alopecia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='USA' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='AIRE'/>
+		<ref_seq source='IDRefSeq' accession='D0003' />
+		<name scheme='HGVS'>g.IVS3+2T&gt;C</name>
+		<exon>i3</exon>
+		<consequence term='point mutation in the intron 3 '/>
+	</variant>
+	<db_xref  source='OMIM' accession='240300' />
+ </individual>
+</lsdb>

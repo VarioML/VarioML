@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
+<!--
+    http://www.cafevariome.org/docs/cafevariome_tab_delimited.txt
+-->
+<cafe_variome xmlns="http://varioml.org/xml/1.0" >
+    <source id="idbase" uri="idbase.org" >
+       
+        <name>IDBase - database of ...</name>
+        <url>http://www.uta.fi/imt/bioinfo/AIREbase/</url>
+        <contact>
+            <name>Mauno Vihinen</name>
+            <address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+        </contact>
+        <acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+        <acknowledgement><name>European Union</name></acknowledgement>
+    </source>
+
+    <!-- Variant
+        id = local unique ID for variant observation
+        type = reference template used for naming the variant (DNA,cDNA, RNA and AA)
+        copy_count = number of observed copies. 1 = one autosomal sister chromosome (or one male nonautosomal X/Y), 2 = both autosomal sister chromosomes.  
+    -->
+    <variant type="DNA" id="Variant ID" copy_count="1"> 
+        <gene source="HGNC" accession="COL1A1"/>
+        <ref_seq accession="NG_007400.1"/>
+        <!-- <name scheme="HGVS">c.579delT;c.522delT....</name> we can give full name here if needed-->
+        <haplotype allele="1">
+            <variant>
+                <name>c.579delT</name>
+                <exon>e1</exon>
+                <consequence term='A point mutation in the exon 1 altering initiation codon in HSR domain '/>
+                <variant_detection technique="sequencing" template="DNA"/> 
+                <genetic_origin term="paternal"> <!--somatic, maternal, de novo, de novo on paternal allele, parent #1 or #2 (phase) -->
+                    <evidence_code term="inferred"/><!-- values like inferred, confirmed (or some ECO terms)-->
+                </genetic_origin>                
+                <seq_changes>
+                    <variant type='RNA'>
+                        <ref_seq source='IDRefSeq' accession='C0003' />
+                        <name scheme='HGVS'>r.1a&gt;u</name>
+                        <consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/>
+                        <!-- optional detection method(s) are listed here: -->
+                                                
+                        <seq_changes>
+                            <variant type='AA'>
+                                <ref_seq source='UniProt' accession='O43918' />
+                                <name scheme='HGVS'>p.Met1Leu</name>
+                            </variant>
+                        </seq_changes>
+                    </variant>
+                </seq_changes>                
+            </variant>
+            
+        </haplotype>
+        <haplotype allele="2">
+            <variant><name>c.522delT</name>
+            </variant>
+            <variant><name>c.622delT</name>
+            </variant>
+            <variant><name>c.722delT</name>
+            </variant>
+        </haplotype>
+        
+        <!-- unphased haplotype -->
+        <haplotype >
+            <variant><name>c.522delT</name>
+            </variant>
+            <variant><name>c.622delT</name>
+            </variant>
+            <variant><name>c.722delT</name>
+            </variant>
+        </haplotype>
+        
+        <!-- observation target (has optional type attribute with values: family, population and individual
+            This is an abstraction which can be something between individual, group of individuals or a population sample.
+        -->
+        <panel>                         
+            <!-- optional list of actual subjects/individuals who are part of the panel-->
+            <individual>
+                <gender code='2'/>
+                <phenotype term='Autoimmune polyglandular syndrome type 1'>
+                    <comment term='symptom'><text>Hypoparathyroidism</text></comment>
+                    <comment term='symptom'><text>Addison&apos;s disease</text></comment>
+                    <comment term='symptom'><text>Mucocutaneous candidiasis</text></comment>
+                    <comment term='symptom'><text>Malabsorption</text></comment>
+                    <comment term='symptom'><text>Chronic active hepatitis</text></comment>
+                </phenotype>
+                <population term='Caucasoid' type='ethnic' />
+                <population term='Poland' type='region' />                
+            </individual>
+        </panel>
+        
+        <!-- Explicit causal relationship between variants and phenotype can be given here (optional).
+            In this example we are using terms defined in LOVD (thus the source of them is LOVD)
+            There can be more than one pathogenicity entries.
+        -->
+        <pathogenicity term="pathogenic">
+            <phenotype term="Osteogenesis imperfecta"/>
+            <!-- optional evidence code. Term is from ECO evidence ontology  -->
+            <evidence_code term="experimental evidence" source="ECO"/>
+        </pathogenicity>
+ 
+
+        <!-- optional location on chrmosome sequence. E.g. 
+            http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/human/data/index.shtml -->
+        <location>
+            <!-- ref_seq is DBXref.. all attributes of DbXRefs are given here as an example -->
+            <ref_seq accession="NC_000017.10" source="GRC" name="GRCh37:17">
+                <!-- <db_xref accession="CM000679.1" source="genbank"/> DBXRefs can have also aliases, but these can be omitted in CV-->
+            </ref_seq>
+            <chr>17</chr>
+            <start>11111</start>
+            <end>11111</end>
+        </location>
+        <sharing_policy type="openAccess">
+            <embargo_end_date>2002-12-12</embargo_end_date>
+            <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/"
+                term="Creative commons"/>
+        </sharing_policy>
+        
+        <!--publications as list of dbxrefs -->
+        <db_xref source="pubmed" accession="12345"/>
+        <db_xref source="doi" accession="ISSTA.2002.1048560" uri="http://dx.doi.org/10.1109/ISSTA.2002.1048560"/>
+        
+        <comment>
+            <text>Variant inherited from affected father</text>
+        </comment>
+
+    </variant>
+
+</cafe_variome>

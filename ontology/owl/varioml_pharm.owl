@@ -4,22 +4,25 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY dlontology "http://ontology.dumontierlab.com/" >
+    <!ENTITY dl "http://ontology.dumontierlab.com/" >
     <!ENTITY snap "http://www.ifomis.org/bfo/1.0/snap#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY varioml "http://varioml.org/ontologies/varioml.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
 <rdf:RDF xmlns="http://purl.org/varioml/pharm/1.0/"
+     xml:base="http://purl.org/varioml/pharm/1.0/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:snap="http://www.ifomis.org/bfo/1.0/snap#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dl="http://ontology.dumontierlab.com/">
+     xmlns:dl="http://ontology.dumontierlab.com/"
+     xmlns:varioml="http://varioml.org/ontologies/varioml.owl#">
     <owl:Ontology rdf:about="http://purl.org/varioml/pharm/1.0/">
-        <owl:imports rdf:resource="&dlontology;pharmacogenomics-complex-2.1.owl"/>
+        <owl:imports rdf:resource="&dl;pharmacogenomics-complex-2.1.owl"/>
     </owl:Ontology>
     
 
@@ -57,14 +60,35 @@
     
 
 
+    <!-- http://purl.org/varioml/pharm/1.0/hasFrequency -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/varioml/pharm/1.0/hasFrequency">
+        <rdfs:label xml:lang="en">hasFrequency</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dl;hasQuality"/>
+        <rdfs:range rdf:resource="http://purl.org/varioml/pharm/1.0/Frequency"/>
+        <owl:inverseOf rdf:resource="http://purl.org/varioml/pharm/1.0/isFrequencyOf"/>
+        <rdfs:domain rdf:resource="&snap;Continuant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/varioml/pharm/1.0/isFrequencyOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/varioml/pharm/1.0/isFrequencyOf">
+        <rdfs:label xml:lang="en">isFrequencyOf</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dl;isQualityOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://varioml.org/ontologies/varioml.owl#coexist -->
 
-    <owl:ObjectProperty rdf:about="http://varioml.org/ontologies/varioml.owl#coexist">
+    <owl:ObjectProperty rdf:about="&varioml;coexist">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label xml:lang="en">coexist</rdfs:label>
         <rdfs:comment>Continuants which co-exist in same bearer</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&dlontology;isRelatedTo"/>
+        <rdfs:subPropertyOf rdf:resource="&dl;isRelatedTo"/>
         <rdfs:domain rdf:resource="&snap;Continuant"/>
         <rdfs:range rdf:resource="&snap;Disposition"/>
     </owl:ObjectProperty>
@@ -84,15 +108,24 @@
 
     <!-- http://ontology.dumontierlab.com/SingleNucleotidePolymorphism -->
 
-    <rdf:Description rdf:about="&dlontology;SingleNucleotidePolymorphism">
-        <rdfs:subClassOf rdf:resource="http://varioml.org/ontologies/varioml.owl#Variant"/>
+    <rdf:Description rdf:about="&dl;SingleNucleotidePolymorphism">
+        <rdfs:subClassOf rdf:resource="&varioml;Variant"/>
     </rdf:Description>
+    
+
+
+    <!-- http://purl.org/varioml/pharm/1.0/Frequency -->
+
+    <owl:Class rdf:about="http://purl.org/varioml/pharm/1.0/Frequency">
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+    </owl:Class>
     
 
 
     <!-- http://varioml.org/ontologies/varioml.owl#Gender -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Gender">
+    <owl:Class rdf:about="&varioml;Gender">
         <rdfs:label xml:lang="en">gender</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
     </owl:Class>
@@ -101,7 +134,7 @@
 
     <!-- http://varioml.org/ontologies/varioml.owl#Individual -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Individual">
+    <owl:Class rdf:about="&varioml;Individual">
         <rdfs:label xml:lang="en">individual</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
@@ -110,7 +143,7 @@
 
     <!-- http://varioml.org/ontologies/varioml.owl#Panel -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Panel">
+    <owl:Class rdf:about="&varioml;Panel">
         <rdfs:label xml:lang="en">panel</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
@@ -119,7 +152,7 @@
 
     <!-- http://varioml.org/ontologies/varioml.owl#Sequence -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Sequence">
+    <owl:Class rdf:about="&varioml;Sequence">
         <rdfs:label xml:lang="en">sequence</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
@@ -128,7 +161,7 @@
 
     <!-- http://varioml.org/ontologies/varioml.owl#Variant -->
 
-    <owl:Class rdf:about="http://varioml.org/ontologies/varioml.owl#Variant">
+    <owl:Class rdf:about="&varioml;Variant">
         <rdfs:label xml:lang="en">&#39;variant&#39;</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
@@ -148,13 +181,13 @@
 
     <!-- http://varioml.org/ontologies/varioml.owl#OBS_00000 -->
 
-    <owl:NamedIndividual rdf:about="http://varioml.org/ontologies/varioml.owl#OBS_00000">
-        <rdf:type rdf:resource="&dlontology;Disease"/>
+    <owl:NamedIndividual rdf:about="&varioml;OBS_00000">
+        <rdf:type rdf:resource="&dl;Disease"/>
         <rdfs:label xml:lang="en">TEST_DISEASE</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 

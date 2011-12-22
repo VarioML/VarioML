@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='TNFRSF5base' version='1.0' uri='http://bioinf.uta.fi/TNFRSF5base/'>
+	<name>TNFRSF5base</name>
+	<url>http://bioinf.uta.fi/TNFRSF5base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>Sigrid Juselius Foundation</name></acknowledgement>
+	<acknowledgement><name>EU concerted action 'PL963007'</name></acknowledgement>
+ </source>
+ <individual id='T0002'>
+	<gender code='1'/>
+	<phenotype term='CD40 deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respitratory tract infections Neutropenia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Saudi Arabia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TNFRSF5; CD40'/>
+		<ref_seq source='EMBL' accession='AL035662' />
+		<name scheme='HGVS'>g.58074T&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to an  amino acid change in the EC domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='109535' />
+ </individual>
+ <individual id='T0003'>
+	<gender code='2'/>
+	<phenotype term='CD40 deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respitratory tract infections Evidence for interstitial pneumonia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Saudi Arabia' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TNFRSF5; CD40'/>
+		<ref_seq source='EMBL' accession='AL035662' />
+		<name scheme='HGVS'>g.58074T&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='point mutation in the exon 3 leading to an  amino acid change in the EC domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='109535' />
+ </individual>
+ <individual id='T0001'>
+	<gender code='2'/>
+	<phenotype term='CD40 deficiency'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Lower respitratory tract infections</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TNFRSF5; CD40'/>
+		<ref_seq source='EMBL' accession='AL035662' />
+		<name scheme='HGVS'>g.58855A&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='point mutation in the exon 5 leading to an  amino acid change in the EC domain'/>
+	</variant>
+	<db_xref  source='OMIM' accession='109535' />
+ </individual>
+</lsdb>

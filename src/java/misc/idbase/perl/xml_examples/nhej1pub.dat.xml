@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='NHEJ1base' version='1.0' uri='http://bioinf.uta.fi/NHEJ1base/'>
+	<name>NHEJ1base</name>
+	<url>http://bioinf.uta.fi/NHEJ1base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology, University of Tampere, ,FIN-33014 Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+	<acknowledgement><name>Finnish Academy</name></acknowledgement>
+ </source>
+ <individual id='N0006'>
+	<gender code='9'/>
+	<phenotype term='microcephaly and increased cellular sensitivity to IR'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.13476dupT</name>
+		<exon>e2</exon>
+		<consequence term='A frame shift duplication mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.11dupu</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Glu5fsX42</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='N0001'>
+	<gender code='9'/>
+	<phenotype term='microcephaly and increased cellular sensitivity to IR'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly, growth retardation, chromosomal alterations, urogenital and bone malformations, bacterial and opportunistic infections, autoimmune anemia and thrombocytopenia</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='France' type='region' />
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.13634C&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change '/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.169c&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Arg57Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+	<variant diploid_count='1'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.14333T&gt;C</name>
+		<exon>e3</exon>
+		<consequence term='a point mutation in the exon 3 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.367u&gt;c</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Cys123Arg</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='N0005'>
+	<gender code='9'/>
+	<phenotype term='microcephaly and increased cellular sensitivity to IR'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly, growth retardation, bird-like face, chromosomal alterations, birdlike face, bone marrow aplasia, recurrent respiratory tract infections</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Italy' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.13634C&gt;G</name>
+		<exon>e2</exon>
+		<consequence term='a point mutation in the exon 2 leading to an amino acid change'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.169c&gt;g</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Arg57Gly</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='N0004'>
+	<gender code='9'/>
+	<phenotype term='microcephaly and increased cellular sensitivity to IR'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly, growth retardation, birdlike face, bone malformation, bacterial and opportunistic infections</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.13642delG</name>
+		<exon>e2</exon>
+		<consequence term='a frame shift deletion mutation in the exon 2 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.177delg</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Glu60fsX1</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+ <individual id='N0002'>
+	<gender code='9'/>
+	<phenotype term='microcephaly and increased cellular sensitivity to IR'>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+		<comment term='symptom'><text>Microcephaly, growth retardation, bacterial and opportunistic infections</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='NHEJ1'/>
+		<ref_seq source='IDRefSeq' accession='D0113' />
+		<name scheme='HGVS'>g.25092C&gt;T</name>
+		<exon>e5</exon>
+		<consequence term='a point mutation in the exon 5 leading to a premature stop codon'/>
+		<seq_changes>
+			<variant type='RNA'>
+				<ref_seq source='IDRefSeq' accession='C0113' />
+				<name scheme='HGVS'>r.532c&gt;u</name>
+				<seq_changes>
+					<variant type='AA'>
+						<ref_seq source='SwissProt' accession='NHEJ1_HUMAN' />
+						<name scheme='HGVS'>p.Arg178X</name>
+					</variant>
+				</seq_changes>
+			</variant>
+		</seq_changes>
+	</variant>
+ </individual>
+</lsdb>

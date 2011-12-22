@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lsdb id='submission0001' xmlns='http://gen2phen.org/lsdb/2.0'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:schemaLocation='http://gen2phen.org/lsdb/1.1 
+  file:/Users/muilu/Documents/Dev/SVN_repos/gen2phen/trunk/data_formats/xml/lsdb.xsd'>
+ <source id='TAP2base' version='1.0' uri='http://bioinf.uta.fi/TAP2base/'>
+	<name>TAP2base</name>
+	<url>http://bioinf.uta.fi/TAP2base/</url>
+	<contact>
+		<name>Mauno Vihinen</name>
+		<address>Institute of Medical Technology ,FI-33014 University of Tampere, Finland</address>
+	</contact>
+	<acknowledgement><name>Tampere University Hospital Medical Research Fund</name></acknowledgement>
+	<acknowledgement><name>European Union</name></acknowledgement>
+ </source>
+ <individual id='T0001'>
+	<gender code='1'/>
+	<phenotype term='TAP2 deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TAP2'/>
+		<ref_seq source='IDRefSeq' accession='D0085' />
+		<name scheme='HGVS'>g.42937C&gt;T</name>
+		<exon>e4</exon>
+		<consequence term='point mutation in the exon 4 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='170261' />
+ </individual>
+ <individual id='T0002'>
+	<gender code='2'/>
+	<phenotype term='TAP2 deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TAP2'/>
+		<ref_seq source='IDRefSeq' accession='D0085' />
+		<name scheme='HGVS'>g.45870delA</name>
+		<exon>e6</exon>
+		<consequence term='deletion in the exon 6 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='170261' />
+ </individual>
+ <individual id='T0003'>
+	<gender code='2'/>
+	<phenotype term='TAP2 deficiency '>
+		<comment term='data quality'><text>Information is based on database description. Actual diagnose is missing</text></comment>
+	</phenotype>
+	<population term='Caucasoid' type='ethnic' />
+	<population term='Turkey' type='region' />
+	<variant diploid_count='2'>
+		<gene source='HGNC' accession='TAP2'/>
+		<ref_seq source='IDRefSeq' accession='D0085' />
+		<name scheme='HGVS'>g.45870delA</name>
+		<exon>e6</exon>
+		<consequence term='deletion in the exon 6 leading to a  premature stop codon'/>
+	</variant>
+	<db_xref  source='OMIM' accession='170261' />
+ </individual>
+</lsdb>
