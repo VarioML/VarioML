@@ -44,7 +44,12 @@ end;
 abstract class Annotatable 
 end;
 
-abstract class Annotated_observation specializes Annotatable
+abstract class Annotated_observation specializes Annotatable, Observation
+	attribute evidence_code : Ontology_term[0,*] ;
+end;
+
+abstract class Observation 
+	attribute evidence_code : Ontology_term[0,*] ;
 end;
 
 
