@@ -1,4 +1,5 @@
 # - File: $Id: $
+# - Version 2.0
 # - Made with Trang: http://www.thaiopensource.com/relaxng/trang.html
 # - notes: http://books.xmlschemata.org/relaxng/relax-CHP-13-SECT-1.html
 #
@@ -8,12 +9,6 @@
 #
 # new name space http://varioml.org/xml/1.0
 #
-# IMPORTANT NOTE
-#   DO NOT USE THE RELAX SCHEMA DIRECTLY. Finalized formats for different use cases will be defined separately 
-#   using Schematron schema definition language.
-#   Contact Juha.Muilu@helsinki.fi for details.
-#
-# TODO mark non-text nodes as empty
 #
 # haplotype element added into variant
 # variant added into lsdb element
