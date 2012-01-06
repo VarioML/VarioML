@@ -46,9 +46,10 @@ vml:g_9992
       
 vml:g_0001
       rdf:type skos:Concept ;
-      skos:broader vml:g_0007 ;
+      skos:broader vml:g_9991 ;
+      skos:closeMatch vml:g_9007;
       skos:definition "Inherited mutation";
-      skos:note "Inherited has germline as broader concept, which may not be correct"@en;
+      skos:note "Inherited has germline as closeMatch with inherited"@en;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Inherited"@en .
 
