@@ -42,10 +42,13 @@ vml:g_9992
 #
 # Type of mutation (genetic source)
 #
+
       
 vml:g_0001
       rdf:type skos:Concept ;
-      skos:broader vml:g_9991 ;
+      skos:broader vml:g_0007 ;
+      skos:definition "Inherited mutation";
+      skos:note "Inherited has germline as broader concept, which may not be correct"@en;
       skos:inScheme vml:g2p ;
       skos:prefLabel "Inherited"@en .
 
@@ -60,6 +63,12 @@ vml:g_0003
       skos:broader vml:g_9991 ;
       skos:inScheme vml:g2p ;
       skos:prefLabel "De novo"@en .     
+
+vml:g_0007
+      rdf:type skos:Concept ;
+      skos:broader vml:g_9991 ;
+      skos:inScheme vml:g2p ;
+      skos:prefLabel "Germline"@en .
 
 #
 # Parental origin (source)
