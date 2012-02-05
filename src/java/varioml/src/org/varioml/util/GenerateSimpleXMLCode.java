@@ -39,7 +39,7 @@ import org.w3c.dom.NodeList;
 @SuppressWarnings("rawtypes")
 public class GenerateSimpleXMLCode {
 
-	private boolean overwrite = false;
+	protected  boolean overwrite = false;
 	
 	final private Document doc;
 	final private XPath xpath;
@@ -51,7 +51,7 @@ public class GenerateSimpleXMLCode {
 	final static Class ATTRIBUTE = org.simpleframework.xml.Attribute.class;
 	
 
-	private GenerateSimpleXMLCode(Document doc, XPath xpath, String file) {
+	protected GenerateSimpleXMLCode(Document doc, XPath xpath, String file) {
 		this.doc = doc;
 		this.xpath = xpath;
 		this.file = file;		
