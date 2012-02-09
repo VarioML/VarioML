@@ -1,6 +1,7 @@
 * VarioML
 
-9.2.2012 - JAXB / JSON (basedon Jacson) API implementation is in org.varioml.jaxb folder. Code is not fully tested. 
+**News:
+9.2.2012 - JAXB / JSON (based on Jacson) API implementation is in org.varioml.jaxb folder. Code is not fully tested. 
 
 Note: Version 1.0 is now on separate branch. Main trunc is heading to final 2.0. Only difference between 1.0 and 2.0 is that variant element can have haplotype elements containing variants which are in cis position.
 Namespace will be kept same.
