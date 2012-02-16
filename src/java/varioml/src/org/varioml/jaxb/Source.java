@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_date","_attr_id","_attr_uri","_attr_version","_name","_url","_contact","_acknowledgement","_dbXref","_comment"})
 
 
-public class Source {
+public class Source /**/ /**/ {
 	//xml-element used for code generation: //lsdb/source
 
 	public Source(  ) {

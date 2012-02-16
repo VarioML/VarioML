@@ -9,7 +9,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_isUndefined",})
 
 
-public class EmbargoEndDate {
+public class EmbargoEndDate /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/sharing_policy/embargo_end_date
 
 	public EmbargoEndDate(  ) {

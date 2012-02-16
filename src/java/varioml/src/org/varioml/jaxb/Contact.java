@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_role","_name","_url","_address","_phone","_fax","_email","_dbXref","_comment"})
 
 
-public class Contact {
+public class Contact /**/ /**/ {
 	//xml-element used for code generation: //lsdb/source/contact
 
 	public Contact(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_schemaVersion","_attr_submissionidType","_attr_uri","_attr_xmlns","_attr_xmlnsXsi","_attr_xsiSchemaLocation","_created","_source","_variant","_dbXref","_comment"})
 
 
-public class CafeVariome {
+public class CafeVariome /**/ /**/ {
 	//xml-element used for code generation: //cafe_variome
 
 	public CafeVariome(  ) {

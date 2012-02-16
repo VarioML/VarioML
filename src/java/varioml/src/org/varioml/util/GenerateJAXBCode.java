@@ -235,8 +235,8 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				out.println(  "@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "+attribOrderLine+ orderLine+"})");
 			
 			out.println("");
-			out.println("");
-			out.println("public class "+className+" {") ;
+			out.println(""); /**/ /**/
+			out.println("public class "+className+" /**/ /**/ {") ;
 			out.println("	//xml-element used for code generation: "+xpath);
 			out.println();
 

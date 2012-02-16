@@ -9,7 +9,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_contentType","_attr_encoding","_attr_lang",})
 
 
-public class CommentText {
+public class CommentText /**/ /**/ {
 	//xml-element used for code generation: //lsdb/comment/text
 
 	public CommentText(  ) {

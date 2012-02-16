@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_type","_embargoEndDate","_usePermission","_dbXref","_comment"})
 
 
-public class SharingPolicy {
+public class SharingPolicy /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/sharing_policy
 
 	public SharingPolicy(  ) {

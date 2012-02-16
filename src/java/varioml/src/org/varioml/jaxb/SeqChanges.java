@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_variant","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class SeqChanges {
+public class SeqChanges /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/seq_changes
 
 	public SeqChanges(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_code","_description","_dbXref","_comment"})
 
 
-public class Gender {
+public class Gender /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/gender
 
 	public Gender(  ) {

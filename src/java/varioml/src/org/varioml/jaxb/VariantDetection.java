@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_technique","_attr_template","_protocolId","_dbXref","_comment"})
 
 
-public class VariantDetection {
+public class VariantDetection /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/variant_detection
 
 	public VariantDetection(  ) {

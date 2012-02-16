@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_name","_grantNumber","_dbXref","_comment"})
 
 
-public class Acknowledgement {
+public class Acknowledgement /**/ /**/ {
 	//xml-element used for code generation: //lsdb/source/acknowledgement
 
 	public Acknowledgement(  ) {

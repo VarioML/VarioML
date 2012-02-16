@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_call","_dbXref","_comment"})
 
 
-public class Genotype {
+public class Genotype /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/genotype
 
 	public Genotype(  ) {

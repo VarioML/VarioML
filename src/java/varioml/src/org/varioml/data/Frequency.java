@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"population","freq","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"population","counts","category","freq","evidence_code","protocol_id","db_xref","comment"})
 public class Frequency {
 	//xml-element used for code generation: //lsdb/individual/variant/frequency
 

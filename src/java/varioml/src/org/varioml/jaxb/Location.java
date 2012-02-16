@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_refSeq","_chr","_start","_end"})
 
 
-public class Location {
+public class Location /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/location
 
 	public Location(  ) {

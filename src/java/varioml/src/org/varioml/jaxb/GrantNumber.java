@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_name","_attr_source","_attr_uri","_dbXref","_comment"})
 
 
-public class GrantNumber {
+public class GrantNumber /**/ /**/ {
 	//xml-element used for code generation: //lsdb/source/acknowledgement/grant_number
 
 	public GrantNumber(  ) {

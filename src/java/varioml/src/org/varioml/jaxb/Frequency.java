@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_samples","_attr_type","_population","_counts","_category","_freq","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class Frequency {
+public class Frequency /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/frequency
 
 	public Frequency(  ) {

@@ -9,7 +9,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_transcriptRef",})
 
 
-public class Exon {
+public class Exon /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/exon
 
 	public Exon(  ) {

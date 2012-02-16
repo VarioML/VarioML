@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_allele","_attr_id","_attr_uri","_name","_variant","_sequence","_consequence","_pathogenicity","_frequency","_seqChanges","_aliases","_source","_location","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class Haplotype {
+public class Haplotype /**/ /**/ {
 	//xml-element used for code generation: //variant_group/variant/haplotype
 
 	public Haplotype(  ) {

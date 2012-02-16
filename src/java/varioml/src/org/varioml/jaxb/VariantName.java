@@ -9,7 +9,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_scheme",})
 
 
-public class VariantName {
+public class VariantName /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/name
 
 	public VariantName(  ) {

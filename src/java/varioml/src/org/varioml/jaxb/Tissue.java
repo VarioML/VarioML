@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_uri","_description","_dbXref","_comment"})
 
 
-public class Tissue {
+public class Tissue /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/tissue
 
 	public Tissue(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_panelRef","_attr_scope","_attr_source","_attr_term","_attr_uri","_phenotype","_pathogenicity","_description","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class Pathogenicity {
+public class Pathogenicity /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/pathogenicity
 
 	public Pathogenicity(  ) {

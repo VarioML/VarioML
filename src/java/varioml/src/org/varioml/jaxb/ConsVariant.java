@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_type","_attr_uri","_refSeq","_name","_variantType","_originalId","_sequence","_genotype","_consequence","_pathogenicity","_variantDetection","_tissueDistribution","_seqChanges","_aliases","_location","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class ConsVariant {
+public class ConsVariant /**/ /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/seq_changes/variant
 
 	public ConsVariant(  ) {

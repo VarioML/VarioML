@@ -815,26 +815,26 @@ object IDBase {
     } else if (variantList.length == 0 && // we have only proteins..
       RNAvariantList.length == 0 && AAvariantList.length > 0) {
 
-      // we could create dummy AA and RNAss but not done right now
-      for (i <- 0 until AAvariantList.length) {
-
-        val dna = variantList(i)
-        //val rna = RNAvariantList(i)
-        //val aa = AAvariantList(i)
-        counter += 1
-        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
-        val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // rna data should be there still ...
-        val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
-        //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
-        //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
-        annotate(dna.asInstanceOf[MyVariant], dnaFT)
-        //annotate(rna.asInstanceOf[MyVariant],rnaFT)
-        //annotate(aa.asInstanceOf[MyVariant],aaFT)
-
-        //
-        variantList +:= createVariant("AA", AAvariantList(i).getName().getString())
-
-      }
+    	throw new Exception("We have only amino acid.. check how to handle" ) ;
+    	
+//      for (i <- 0 until AAvariantList.length) {
+//
+//        //val rna = RNAvariantList(i)
+//        //val aa = AAvariantList(i)
+//        counter += 1
+//        val dnaFT = getAllFeatureProperty("DNA", counter, ft)
+//        val rnaFT = testSomeFeatureProperty("RNA", variantList.length + counter, ft) // rna data should be there still ...
+//        val aaFT = testSomeFeatureProperty("AA", variantList.length * 2 + counter, ft) // aa data should be there still??...check
+//        //getSeqChanges(dna.asInstanceOf[MyVariant]).addVariant(rna)
+//        //getSeqChanges(rna.asInstanceOf[MyVariant]).addVariant(aa)
+//        annotate(dna.asInstanceOf[MyVariant], dnaFT)
+//        //annotate(rna.asInstanceOf[MyVariant],rnaFT)
+//        //annotate(aa.asInstanceOf[MyVariant],aaFT)
+//
+//        //
+//        variantList +:= createVariant("AA", AAvariantList(i).getName().getString())
+//
+//      }
       counter = AAvariantList.length * 3; // we need to increment like this      
 
     } else {
