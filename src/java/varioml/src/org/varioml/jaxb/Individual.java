@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_gender","_dob","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
 
 
-public class Individual /**/ /**/ {
+public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	//xml-element used for code generation: //lsdb/individual
 
 	public Individual(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_name","_attr_source","_attr_uri","_dbXref","_comment"})
 
 
-public class RefSeq /**/ /**/ {
+public class RefSeq /**/implements VmlDbXRef /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/ref_seq
 
 	public RefSeq(  ) {

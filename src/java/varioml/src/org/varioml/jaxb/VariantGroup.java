@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_orientation","_attr_uri","_groupType","_variant","_frequency","_pathogenicity","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class VariantGroup /**/ /**/ {
+public class VariantGroup /**/implements VmlFrequency/**/ {
 	//xml-element used for code generation: //lsdb/individual/variant_group
 
 	public VariantGroup(  ) {

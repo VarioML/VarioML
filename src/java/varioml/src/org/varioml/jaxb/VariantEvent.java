@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_name","_variantType","_variantClass","_originalId","_exon","_sequence","_consequence","_pathogenicity","_variantDetection","_restrictionSite","_geneticOrigin","_frequency","_seqChanges","_aliases","_location","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class VariantEvent /**/implements VariantObservation /**/ {
+public class VariantEvent /**/implements VmlDetailedVariantObservation,VmlFrequency/**/ {
 	//xml-element used for code generation: //variant_group/variant/haplotype/variant
 
 	public VariantEvent(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_uri","_inheritancePattern","_description","_evidenceCode","_protocolId","_dbXref","_comment"})
 
 
-public class Phenotype /**/ /**/ {
+public class Phenotype /**/implements VmlSimpleObservation /**/ {
 	//xml-element used for code generation: //lsdb/individual/phenotype
 
 	public Phenotype(  ) {

@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_name","_attr_source","_attr_uri","_dbXref","_comment"})
 
 
-public class Gene /**/ /**/ {
+public class Gene /**/implements VmlDbXRef /**/ {
 	//xml-element used for code generation: //lsdb/individual/variant/gene
 
 	public Gene(  ) {

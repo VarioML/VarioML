@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_uri","_value","_description","_dbXref","_comment"})
 
 
-public class Score /**/ /**/ {
+public class Score /**/implements VmlOntologyTerm /**/ {
 	//xml-element used for code generation: //lsdb/comment/evidence_code/score
 
 	public Score(  ) {
