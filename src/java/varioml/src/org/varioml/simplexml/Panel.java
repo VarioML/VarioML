@@ -268,21 +268,21 @@ public class Panel {
  
 	// ===========-- creation_date --===========
 	@org.simpleframework.xml.Element(required=false,name="creation_date") 
-	private org.varioml.util.VMLDate _creationDate ;
-	public void setCreationDate( org.varioml.util.VMLDate creationDate) { 
+	private org.varioml.util.VarioDate _creationDate ;
+	public void setCreationDate( org.varioml.util.VarioDate creationDate) { 
 		this._creationDate = creationDate ;
 	}
-	public org.varioml.util.VMLDate getCreationDate() {
+	public org.varioml.util.VarioDate getCreationDate() {
 		return this._creationDate;
 	}
  
 	// ===========-- modification_date --===========
 	@org.simpleframework.xml.Element(required=false,name="modification_date") 
-	private org.varioml.util.VMLDate _modificationDate ;
-	public void setModificationDate( org.varioml.util.VMLDate modificationDate) { 
+	private org.varioml.util.VarioDate _modificationDate ;
+	public void setModificationDate( org.varioml.util.VarioDate modificationDate) { 
 		this._modificationDate = modificationDate ;
 	}
-	public org.varioml.util.VMLDate getModificationDate() {
+	public org.varioml.util.VarioDate getModificationDate() {
 		return this._modificationDate;
 	}
 }

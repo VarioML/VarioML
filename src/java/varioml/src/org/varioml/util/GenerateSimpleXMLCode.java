@@ -635,7 +635,7 @@ public class GenerateSimpleXMLCode {
 				put("@lang","String"); 
 				put("@is_undefined","Boolean");
 				put("@coded","Boolean");
-				put("@date","org.varioml.util.VMLDate");
+				put("@date","org.varioml.util.VarioDate");
 				put("@version","String"); 
 				put("@role","String"); 
 				put("@code","Integer");
@@ -662,7 +662,7 @@ public class GenerateSimpleXMLCode {
 				put("@unit","String");
 				put("@allele","Integer");
 				//elements
-				put("date","org.varioml.util.VMLDate");
+				put("date","org.varioml.util.VarioDate");
 				put("source","String");
 				put("text","String");  
 				put("address","String");
@@ -671,9 +671,9 @@ public class GenerateSimpleXMLCode {
 				put("email","String"); 
 				put("address","String");
 				put("description","String"); 
-				put("dob","org.varioml.util.VMLDate"); 
-				put("creation_date","org.varioml.util.VMLDate");
-				put("modification_date","org.varioml.util.VMLDate"); 
+				put("dob","org.varioml.util.VarioDate"); 
+				put("creation_date","org.varioml.util.VarioDate");
+				put("modification_date","org.varioml.util.VarioDate"); 
 				put("call","String");
 				put("reference","String");
 				put("chr","String");
@@ -683,8 +683,8 @@ public class GenerateSimpleXMLCode {
 				put("freq","Double");
 				put("counts","Integer");
 				put("name","String"); 
-				put("embargo_end_date","org.varioml.util.VMLDate");
-				put("created","org.varioml.util.VMLDateTime");
+				put("embargo_end_date","org.varioml.util.VarioDate");
+				put("created","org.varioml.util.VarioDateTime");
 				
 			 } 
 		};  
@@ -702,7 +702,7 @@ public class GenerateSimpleXMLCode {
 		
 		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("templates/lsdb_19.2.2012.xml");
 		xu.generateCode("org.varioml.simplexml.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
-			{put(TEXT_NODE,"org.varioml.util.VMLDate");};
+			{put(TEXT_NODE,"org.varioml.util.VarioDate");};
 		})); // size=2 2011-06-20 21:40:02
 		
 		xu.generateCode("org.varioml.simplexml.ObservationDate","//lsdb/variant/observation_date",x(typeMap,new HashMap<String,String>(){ 

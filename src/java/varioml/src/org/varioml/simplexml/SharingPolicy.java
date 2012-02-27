@@ -24,11 +24,11 @@ public class SharingPolicy {
  
 	// ===========-- embargo_end_date --===========
 	@org.simpleframework.xml.Element(required=false,name="embargo_end_date") 
-	private org.varioml.util.VMLDate _embargoEndDate ;
-	public void setEmbargoEndDate( org.varioml.util.VMLDate embargoEndDate) { 
+	private org.varioml.util.VarioDate _embargoEndDate ;
+	public void setEmbargoEndDate( org.varioml.util.VarioDate embargoEndDate) { 
 		this._embargoEndDate = embargoEndDate ;
 	}
-	public org.varioml.util.VMLDate getEmbargoEndDate() {
+	public org.varioml.util.VarioDate getEmbargoEndDate() {
 		return this._embargoEndDate;
 	}
  

@@ -44,11 +44,11 @@ public class Individual {
  
 	// ===========-- dob --===========
 	@org.simpleframework.xml.Element(required=false,name="dob") 
-	private org.varioml.util.VMLDate _dob ;
-	public void setDob( org.varioml.util.VMLDate dob) { 
+	private org.varioml.util.VarioDate _dob ;
+	public void setDob( org.varioml.util.VarioDate dob) { 
 		this._dob = dob ;
 	}
-	public org.varioml.util.VMLDate getDob() {
+	public org.varioml.util.VarioDate getDob() {
 		return this._dob;
 	}
  
@@ -252,21 +252,21 @@ public class Individual {
  
 	// ===========-- creation_date --===========
 	@org.simpleframework.xml.Element(required=false,name="creation_date") 
-	private org.varioml.util.VMLDate _creationDate ;
-	public void setCreationDate( org.varioml.util.VMLDate creationDate) { 
+	private org.varioml.util.VarioDate _creationDate ;
+	public void setCreationDate( org.varioml.util.VarioDate creationDate) { 
 		this._creationDate = creationDate ;
 	}
-	public org.varioml.util.VMLDate getCreationDate() {
+	public org.varioml.util.VarioDate getCreationDate() {
 		return this._creationDate;
 	}
  
 	// ===========-- modification_date --===========
 	@org.simpleframework.xml.Element(required=false,name="modification_date") 
-	private org.varioml.util.VMLDate _modificationDate ;
-	public void setModificationDate( org.varioml.util.VMLDate modificationDate) { 
+	private org.varioml.util.VarioDate _modificationDate ;
+	public void setModificationDate( org.varioml.util.VarioDate modificationDate) { 
 		this._modificationDate = modificationDate ;
 	}
-	public org.varioml.util.VMLDate getModificationDate() {
+	public org.varioml.util.VarioDate getModificationDate() {
 		return this._modificationDate;
 	}
 }

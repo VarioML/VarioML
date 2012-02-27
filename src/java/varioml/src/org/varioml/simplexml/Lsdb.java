@@ -90,11 +90,11 @@ public class Lsdb {
  
 	// ===========-- created --===========
 	@org.simpleframework.xml.Element(required=false,name="created") 
-	private org.varioml.util.VMLDateTime _created ;
-	public void setCreated( org.varioml.util.VMLDateTime created) { 
+	private org.varioml.util.VarioDateTime _created ;
+	public void setCreated( org.varioml.util.VarioDateTime created) { 
 		this._created = created ;
 	}
-	public org.varioml.util.VMLDateTime getCreated() {
+	public org.varioml.util.VarioDateTime getCreated() {
 		return this._created;
 	}
  

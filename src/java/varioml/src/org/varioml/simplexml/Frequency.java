@@ -31,27 +31,7 @@ public class Frequency {
 	public String getTypeAttr() { 
 		return this._attr_type;
 	}
-
-    // ===========-- category --=========== MANUAL
-    @org.simpleframework.xml.Element(required=false,name="category")
-    private FreqCategory _category ;
-    public void setFreqCategory( FreqCategory category) {
-            this._category = category ;
-    }
-    public FreqCategory getFreqCategory() {
-            return this._category;
-    }
-    // ===========-- freq --===========
-    @org.simpleframework.xml.Element(required=false,name="freq") 
-    private Double _freq ;
-    public void setFreq( Double freq) { 
-            this._freq = freq ;
-    }
-    public Double getFreq() {
-            return this._freq;
-    }
-
-
+ 
 	// ===========-- population --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="population") 
 	private List<Population> _population ;
@@ -77,7 +57,26 @@ public class Frequency {
 	public Integer getCounts() {
 		return this._counts;
 	}
- 
+    // ===========-- category --=========== MANUAL
+    @org.simpleframework.xml.Element(required=false,name="category")
+    private FreqCategory _category ;
+    public void setFreqCategory( FreqCategory category) {
+            this._category = category ;
+    }
+    public FreqCategory getFreqCategory() {
+            return this._category;
+    }
+
+        // ===========-- freq --===========
+        @org.simpleframework.xml.Element(required=false,name="freq") 
+        private Double _freq ;
+        public void setFreq( Double freq) { 
+                this._freq = freq ;
+        }
+        public Double getFreq() {
+                return this._freq;
+        }
+
 	// ===========-- value --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
 	private List<Value> _value ;
