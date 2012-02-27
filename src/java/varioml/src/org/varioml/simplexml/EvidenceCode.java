@@ -7,7 +7,7 @@ import org.simpleframework.xml.Root;
 
 @org.simpleframework.xml.Order(elements={"score","description","db_xref","comment"})
 public class EvidenceCode {
-	//xml-element used for code generation: //lsdb/comment/evidence_code
+	//xml-element used for code generation: //lsdb/variant/evidence_code
 
 	public EvidenceCode(  ) {
 	}

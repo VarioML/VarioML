@@ -23,14 +23,14 @@ public class EmbargoEndDate {
 	}
 	// =========-- TEXT NODE --=========
 	@org.simpleframework.xml.Text(required=false)
-	private org.varioml.util.VarioDate __variodate ;
-	public EmbargoEndDate( org.varioml.util.VarioDate v ) {
-		this.__variodate= v ;
+	private org.varioml.util.VMLDate __vmldate ;
+	public EmbargoEndDate( org.varioml.util.VMLDate v ) {
+		this.__vmldate= v ;
 	}
-	public void setVarioDate( org.varioml.util.VarioDate v ) { 
-		this.__variodate= v ;
+	public void setVMLDate( org.varioml.util.VMLDate v ) { 
+		this.__vmldate= v ;
 	}
-	public org.varioml.util.VarioDate getVarioDate() {
-		return this.__variodate;
+	public org.varioml.util.VMLDate getVMLDate() {
+		return this.__vmldate;
 	}
 }

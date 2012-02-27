@@ -14,11 +14,11 @@ public class Source {
  
 	// ===========-- date --===========
 	@org.simpleframework.xml.Attribute(required=false,name="date")
-	private org.varioml.util.VarioDate _attr_date ;
-	public void setDateAttr( org.varioml.util.VarioDate attr_date) { 
+	private org.varioml.util.VMLDate _attr_date ;
+	public void setDateAttr( org.varioml.util.VMLDate attr_date) { 
 		this._attr_date = attr_date ;
 	}
-	public org.varioml.util.VarioDate getDateAttr() { 
+	public org.varioml.util.VMLDate getDateAttr() { 
 		return this._attr_date;
 	}
  

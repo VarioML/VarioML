@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"population","counts","category","freq","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"population","counts","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
 public class Frequency {
 	//xml-element used for code generation: //lsdb/individual/variant/frequency
 
@@ -31,7 +31,27 @@ public class Frequency {
 	public String getTypeAttr() { 
 		return this._attr_type;
 	}
- 
+
+    // ===========-- category --=========== MANUAL
+    @org.simpleframework.xml.Element(required=false,name="category")
+    private FreqCategory _category ;
+    public void setFreqCategory( FreqCategory category) {
+            this._category = category ;
+    }
+    public FreqCategory getFreqCategory() {
+            return this._category;
+    }
+    // ===========-- freq --===========
+    @org.simpleframework.xml.Element(required=false,name="freq") 
+    private Double _freq ;
+    public void setFreq( Double freq) { 
+            this._freq = freq ;
+    }
+    public Double getFreq() {
+            return this._freq;
+    }
+
+
 	// ===========-- population --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="population") 
 	private List<Population> _population ;
@@ -48,37 +68,32 @@ public class Frequency {
 		this._population.add( item);
 	}
  
-    // ===========-- counts --=========== MANUAL
-    @org.simpleframework.xml.Element(required=false,name="counts")
-    private Integer _counts ;
-    public void setCounts( Integer counts) {
-            this._counts = counts ;
-    }
-    public Integer getCounts() {
-            return this._counts;
-    }
-
-    // ===========-- category --=========== MANUAL
-    @org.simpleframework.xml.Element(required=false,name="category")
-    private FreqCategory _category ;
-    public void setFreqCategory( FreqCategory category) {
-            this._category = category ;
-    }
-    public FreqCategory getFreqCategory() {
-            return this._category;
-    }
-
-	// ===========-- freq --===========
-	@org.simpleframework.xml.Element(required=false,name="freq") 
-	private Double _freq ;
-	public void setFreq( Double freq) { 
-		this._freq = freq ;
+	// ===========-- counts --===========
+	@org.simpleframework.xml.Element(required=false,name="counts") 
+	private Integer _counts ;
+	public void setCounts( Integer counts) { 
+		this._counts = counts ;
 	}
-	public Double getFreq() {
-		return this._freq;
+	public Integer getCounts() {
+		return this._counts;
 	}
  
-	
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
+	}
+ 
 	// ===========-- evidence_code --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="evidence_code") 
 	private List<EvidenceCode> _evidenceCode ;
@@ -109,6 +124,16 @@ public class Frequency {
 			this._protocolId = new ArrayList<ProtocolId>();
 		}
 		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

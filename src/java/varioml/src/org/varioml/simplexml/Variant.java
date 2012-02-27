@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","haplotype","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"gene","ref_seq","name","haplotype","panel","variant_type","variant_class","original_id","exon","sequence","genotype","consequence","pathogenicity","sample","tissue","variant_detection","restriction_site","tissue_distribution","genetic_origin","frequency","seq_changes","aliases","source","location","sharing_policy","creation_date","modification_date","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
 public class Variant {
-	//xml-element used for code generation: //variant_group/variant
+	//xml-element used for code generation: //lsdb/variant
 
 	public Variant(  ) {
 	}
@@ -384,22 +384,38 @@ public class Variant {
  
 	// ===========-- creation_date --===========
 	@org.simpleframework.xml.Element(required=false,name="creation_date") 
-	private org.varioml.util.VarioDate _creationDate ;
-	public void setCreationDate( org.varioml.util.VarioDate creationDate) { 
+	private org.varioml.util.VMLDate _creationDate ;
+	public void setCreationDate( org.varioml.util.VMLDate creationDate) { 
 		this._creationDate = creationDate ;
 	}
-	public org.varioml.util.VarioDate getCreationDate() {
+	public org.varioml.util.VMLDate getCreationDate() {
 		return this._creationDate;
 	}
  
 	// ===========-- modification_date --===========
 	@org.simpleframework.xml.Element(required=false,name="modification_date") 
-	private org.varioml.util.VarioDate _modificationDate ;
-	public void setModificationDate( org.varioml.util.VarioDate modificationDate) { 
+	private org.varioml.util.VMLDate _modificationDate ;
+	public void setModificationDate( org.varioml.util.VMLDate modificationDate) { 
 		this._modificationDate = modificationDate ;
 	}
-	public org.varioml.util.VarioDate getModificationDate() {
+	public org.varioml.util.VMLDate getModificationDate() {
 		return this._modificationDate;
+	}
+ 
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
 	}
  
 	// ===========-- evidence_code --===========
@@ -432,6 +448,16 @@ public class Variant {
 			this._protocolId = new ArrayList<ProtocolId>();
 		}
 		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

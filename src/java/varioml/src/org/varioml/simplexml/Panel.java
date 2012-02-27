@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"individual","original_id","role","relationship","organism","strain","cultivar","phenotype","population","variant","variant_group","source","db_xref","comment","sharing_policy","creation_date","modification_date"})
+@org.simpleframework.xml.Order(elements={"individual","original_id","role","relationship","organism","strain","cultivar","phenotype","observation","population","variant","variant_group","source","db_xref","comment","sharing_policy","creation_date","modification_date"})
 public class Panel {
-	//xml-element used for code generation: //lsdb/individual/variant/panel
+	//xml-element used for code generation: //lsdb/panel
 
 	public Panel(  ) {
 	}
@@ -150,6 +150,22 @@ public class Panel {
 		this._phenotype.add( item);
 	}
  
+	// ===========-- observation --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="observation") 
+	private List<Observation> _observation ;
+	public void setObservationList( List<Observation> observation) { 
+		this._observation = observation ;
+	}
+	public List<Observation> getObservationList()  { 
+		return this._observation;
+	}
+	public void addObservation(Observation item ) { 
+		if ( this._observation == null ) { 
+			this._observation = new ArrayList<Observation>();
+		}
+		this._observation.add( item);
+	}
+ 
 	// ===========-- population --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="population") 
 	private List<Population> _population ;
@@ -252,21 +268,21 @@ public class Panel {
  
 	// ===========-- creation_date --===========
 	@org.simpleframework.xml.Element(required=false,name="creation_date") 
-	private org.varioml.util.VarioDate _creationDate ;
-	public void setCreationDate( org.varioml.util.VarioDate creationDate) { 
+	private org.varioml.util.VMLDate _creationDate ;
+	public void setCreationDate( org.varioml.util.VMLDate creationDate) { 
 		this._creationDate = creationDate ;
 	}
-	public org.varioml.util.VarioDate getCreationDate() {
+	public org.varioml.util.VMLDate getCreationDate() {
 		return this._creationDate;
 	}
  
 	// ===========-- modification_date --===========
 	@org.simpleframework.xml.Element(required=false,name="modification_date") 
-	private org.varioml.util.VarioDate _modificationDate ;
-	public void setModificationDate( org.varioml.util.VarioDate modificationDate) { 
+	private org.varioml.util.VMLDate _modificationDate ;
+	public void setModificationDate( org.varioml.util.VMLDate modificationDate) { 
 		this._modificationDate = modificationDate ;
 	}
-	public org.varioml.util.VarioDate getModificationDate() {
+	public org.varioml.util.VMLDate getModificationDate() {
 		return this._modificationDate;
 	}
 }

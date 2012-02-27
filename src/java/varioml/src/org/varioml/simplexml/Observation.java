@@ -5,11 +5,11 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"value","description","db_xref","comment"})
-public class Score {
-	//xml-element used for code generation: //lsdb/variant/evidence_code/score
+@org.simpleframework.xml.Order(elements={"description","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
+public class Observation {
+	//xml-element used for code generation: //lsdb/individual/observation
 
-	public Score(  ) {
+	public Observation(  ) {
 	}
  
 	// ===========-- accession --===========
@@ -42,6 +42,16 @@ public class Score {
 		return this._attr_term;
 	}
  
+	// ===========-- type --===========
+	@org.simpleframework.xml.Attribute(required=false,name="type")
+	private String _attr_type ;
+	public void setTypeAttr( String attr_type) { 
+		this._attr_type = attr_type ;
+	}
+	public String getTypeAttr() { 
+		return this._attr_type;
+	}
+ 
 	// ===========-- uri --===========
 	@org.simpleframework.xml.Attribute(required=false,name="uri")
 	private String _attr_uri ;
@@ -52,16 +62,6 @@ public class Score {
 		return this._attr_uri;
 	}
  
-	// ===========-- value --===========
-	@org.simpleframework.xml.Element(required=false,name="value") 
-	private Double _value ;
-	public void setValue( Double value) { 
-		this._value = value ;
-	}
-	public Double getValue() {
-		return this._value;
-	}
- 
 	// ===========-- description --===========
 	@org.simpleframework.xml.Element(required=false,name="description") 
 	private String _description ;
@@ -70,6 +70,64 @@ public class Score {
 	}
 	public String getDescription() {
 		return this._description;
+	}
+ 
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
+	}
+ 
+	// ===========-- evidence_code --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="evidence_code") 
+	private List<EvidenceCode> _evidenceCode ;
+	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
+		this._evidenceCode = evidenceCode ;
+	}
+	public List<EvidenceCode> getEvidenceCodeList()  { 
+		return this._evidenceCode;
+	}
+	public void addEvidenceCode(EvidenceCode item ) { 
+		if ( this._evidenceCode == null ) { 
+			this._evidenceCode = new ArrayList<EvidenceCode>();
+		}
+		this._evidenceCode.add( item);
+	}
+ 
+	// ===========-- protocol_id --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="protocol_id") 
+	private List<ProtocolId> _protocolId ;
+	public void setProtocolIdList( List<ProtocolId> protocolId) { 
+		this._protocolId = protocolId ;
+	}
+	public List<ProtocolId> getProtocolIdList()  { 
+		return this._protocolId;
+	}
+	public void addProtocolId(ProtocolId item ) { 
+		if ( this._protocolId == null ) { 
+			this._protocolId = new ArrayList<ProtocolId>();
+		}
+		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

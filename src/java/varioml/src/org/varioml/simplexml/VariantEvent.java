@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"name","variant_type","variant_class","original_id","exon","sequence","consequence","pathogenicity","variant_detection","restriction_site","genetic_origin","frequency","seq_changes","aliases","location","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"name","variant_type","variant_class","original_id","exon","sequence","consequence","pathogenicity","variant_detection","restriction_site","genetic_origin","frequency","seq_changes","aliases","location","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
 public class VariantEvent {
-	//xml-element used for code generation: //variant_group/variant/haplotype/variant
+	//xml-element used for code generation: //lsdb/variant/haplotype/variant
 
 	public VariantEvent(  ) {
 	}
@@ -230,6 +230,22 @@ public class VariantEvent {
 		this._location.add( item);
 	}
  
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
+	}
+ 
 	// ===========-- evidence_code --===========
 	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="evidence_code") 
 	private List<EvidenceCode> _evidenceCode ;
@@ -260,6 +276,16 @@ public class VariantEvent {
 			this._protocolId = new ArrayList<ProtocolId>();
 		}
 		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

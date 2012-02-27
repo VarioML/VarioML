@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"inheritance_pattern","description","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"inheritance_pattern","description","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
 public class Phenotype {
 	//xml-element used for code generation: //lsdb/individual/phenotype
 
@@ -42,6 +42,16 @@ public class Phenotype {
 		return this._attr_term;
 	}
  
+	// ===========-- type --===========
+	@org.simpleframework.xml.Attribute(required=false,name="type")
+	private String _attr_type ;
+	public void setTypeAttr( String attr_type) { 
+		this._attr_type = attr_type ;
+	}
+	public String getTypeAttr() { 
+		return this._attr_type;
+	}
+ 
 	// ===========-- uri --===========
 	@org.simpleframework.xml.Attribute(required=false,name="uri")
 	private String _attr_uri ;
@@ -70,6 +80,22 @@ public class Phenotype {
 	}
 	public String getDescription() {
 		return this._description;
+	}
+ 
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
 	}
  
 	// ===========-- evidence_code --===========
@@ -102,6 +128,16 @@ public class Phenotype {
 			this._protocolId = new ArrayList<ProtocolId>();
 		}
 		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

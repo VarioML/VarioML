@@ -5,11 +5,11 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"value","description","db_xref","comment"})
-public class Score {
-	//xml-element used for code generation: //lsdb/variant/evidence_code/score
+@org.simpleframework.xml.Order(elements={"description","db_xref","comment","value"})
+public class Value {
+	//xml-element used for code generation: //lsdb/variant/value
 
-	public Score(  ) {
+	public Value(  ) {
 	}
  
 	// ===========-- accession --===========
@@ -42,6 +42,16 @@ public class Score {
 		return this._attr_term;
 	}
  
+	// ===========-- unit --===========
+	@org.simpleframework.xml.Attribute(required=false,name="unit")
+	private String _attr_unit ;
+	public void setUnitAttr( String attr_unit) { 
+		this._attr_unit = attr_unit ;
+	}
+	public String getUnitAttr() { 
+		return this._attr_unit;
+	}
+ 
 	// ===========-- uri --===========
 	@org.simpleframework.xml.Attribute(required=false,name="uri")
 	private String _attr_uri ;
@@ -52,14 +62,14 @@ public class Score {
 		return this._attr_uri;
 	}
  
-	// ===========-- value --===========
-	@org.simpleframework.xml.Element(required=false,name="value") 
-	private Double _value ;
-	public void setValue( Double value) { 
-		this._value = value ;
+	// ===========-- val --===========
+	@org.simpleframework.xml.Attribute(required=false,name="val")
+	private String _attr_val ;
+	public void setValAttr( String attr_val) { 
+		this._attr_val = attr_val ;
 	}
-	public Double getValue() {
-		return this._value;
+	public String getValAttr() { 
+		return this._attr_val;
 	}
  
 	// ===========-- description --===========
@@ -102,5 +112,21 @@ public class Score {
 			this._comment = new ArrayList<Comment>();
 		}
 		this._comment.add( item);
+	}
+ 
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
 	}
 }

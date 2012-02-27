@@ -7,7 +7,7 @@ import org.simpleframework.xml.Root;
 
 @org.simpleframework.xml.Order(elements={"db_xref","comment"})
 public class ProtocolId {
-	//xml-element used for code generation: //lsdb/comment/protocol_id
+	//xml-element used for code generation: //lsdb/variant/protocol_id
 
 	public ProtocolId(  ) {
 	}

@@ -365,7 +365,7 @@ public class GenerateSimpleXMLCode {
 		
 		NamedNodeMap att = nod.getAttributes();
 
-		File fileOut = new File("src/org/varioml/data/"+className+".java");
+		File fileOut = new File("src/org/varioml/simplexml/"+className+".java");
 		if ( fileOut.exists())  {
 			if ( overwrite ) {
 				fileOut.delete();
@@ -689,7 +689,7 @@ public class GenerateSimpleXMLCode {
 			 } 
 		};  
 
-		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome_all.xml");
+		GenerateSimpleXMLCode xu2 = GenerateSimpleXMLCode.createInstance("templates/cafe_variome_all.xml");
 		//xu.printExampleElements(typeMap);
 		xu2.generateCode("org.varioml.simplexml.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
@@ -700,7 +700,7 @@ public class GenerateSimpleXMLCode {
 		})); // size=15 2011-12-11 19:51:02
 
 		
-		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("templates/lsdb_19.2.2012.xml");
 		xu.generateCode("org.varioml.simplexml.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
 			{put(TEXT_NODE,"org.varioml.util.VMLDate");};
 		})); // size=2 2011-06-20 21:40:02

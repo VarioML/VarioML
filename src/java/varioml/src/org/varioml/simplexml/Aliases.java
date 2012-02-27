@@ -5,7 +5,7 @@ import org.simpleframework.xml.Root;
 
 @Root(strict=true)
 
-@org.simpleframework.xml.Order(elements={"variant","evidence_code","protocol_id","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"variant","value","evidence_code","protocol_id","observation_date","db_xref","comment"})
 public class Aliases {
 	//xml-element used for code generation: //lsdb/individual/variant/aliases
 
@@ -26,6 +26,22 @@ public class Aliases {
 			this._variant = new ArrayList<Variant>();
 		}
 		this._variant.add( item);
+	}
+ 
+	// ===========-- value --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="value") 
+	private List<Value> _value ;
+	public void setValueList( List<Value> value) { 
+		this._value = value ;
+	}
+	public List<Value> getValueList()  { 
+		return this._value;
+	}
+	public void addValue(Value item ) { 
+		if ( this._value == null ) { 
+			this._value = new ArrayList<Value>();
+		}
+		this._value.add( item);
 	}
  
 	// ===========-- evidence_code --===========
@@ -58,6 +74,16 @@ public class Aliases {
 			this._protocolId = new ArrayList<ProtocolId>();
 		}
 		this._protocolId.add( item);
+	}
+ 
+	// ===========-- observation_date --===========
+	@org.simpleframework.xml.Element(required=false,name="observation_date") 
+	private ObservationDate _observationDate ;
+	public void setObservationDate( ObservationDate observationDate) { 
+		this._observationDate = observationDate ;
+	}
+	public ObservationDate getObservationDate() {
+		return this._observationDate;
 	}
  
 	// ===========-- db_xref --===========

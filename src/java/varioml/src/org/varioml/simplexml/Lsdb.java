@@ -11,7 +11,7 @@ import org.simpleframework.xml.Root;
 @Namespace(reference="http://www.w3.org/2001/XMLSchema-instance",prefix="xsi")
 })
 
-@org.simpleframework.xml.Order(elements={"created","source","individual","variant","db_xref","comment"})
+@org.simpleframework.xml.Order(elements={"created","source","individual","panel","variant","db_xref","comment"})
 public class Lsdb {
 	//xml-element used for code generation: //lsdb
 
@@ -90,11 +90,11 @@ public class Lsdb {
  
 	// ===========-- created --===========
 	@org.simpleframework.xml.Element(required=false,name="created") 
-	private org.varioml.util.VarioDateTime _created ;
-	public void setCreated( org.varioml.util.VarioDateTime created) { 
+	private org.varioml.util.VMLDateTime _created ;
+	public void setCreated( org.varioml.util.VMLDateTime created) { 
 		this._created = created ;
 	}
-	public org.varioml.util.VarioDateTime getCreated() {
+	public org.varioml.util.VMLDateTime getCreated() {
 		return this._created;
 	}
  
@@ -128,6 +128,22 @@ public class Lsdb {
 			this._individual = new ArrayList<Individual>();
 		}
 		this._individual.add( item);
+	}
+ 
+	// ===========-- panel --===========
+	@org.simpleframework.xml.ElementList(required=false,inline=true,entry="panel") 
+	private List<Panel> _panel ;
+	public void setPanelList( List<Panel> panel) { 
+		this._panel = panel ;
+	}
+	public List<Panel> getPanelList()  { 
+		return this._panel;
+	}
+	public void addPanel(Panel item ) { 
+		if ( this._panel == null ) { 
+			this._panel = new ArrayList<Panel>();
+		}
+		this._panel.add( item);
 	}
  
 	// ===========-- variant --===========

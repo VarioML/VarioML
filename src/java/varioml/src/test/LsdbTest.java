@@ -21,7 +21,7 @@ import org.varioml.util.VarioDateTime;
 public class LsdbTest extends TestCase  {
 
 
-	private String fileName = "lsdb_test_all.xml" ;
+	private String fileName = "test_data/lsdb_test_all.xml" ;
 	
 	public void testParser() throws Exception { 
 
@@ -54,7 +54,7 @@ public class LsdbTest extends TestCase  {
 	public void testParserNew1() throws Exception { 
 
 		final Serializer ser = Util.createSerializer();
-		final File file = Util.findFile("new_variant.xml") ;
+		final File file = Util.findFile("test_data/new_variant.xml") ;
 	
 		VariantGroup lsdb = ser.read(VariantGroup.class, file);
 
@@ -68,7 +68,7 @@ public class LsdbTest extends TestCase  {
 	public void testParserNew2() throws Exception { 
 
 		final Serializer ser = Util.createSerializer();
-		final File file = Util.findFile("lsdb_test_all_new.xml") ;
+		final File file = Util.findFile("test_data/lsdb_test_all_new.xml") ;
 		Lsdb lsdb = ser.read(Lsdb.class, file);
 		List<Source> src = lsdb.getSourceList();
 
@@ -108,7 +108,7 @@ public class LsdbTest extends TestCase  {
 	public void testJAXB() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("lsdb.xsd", "lsdb_test_all.xml",org.varioml.jaxb.Lsdb.class);
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "test_data/lsdb_test_all.xml",org.varioml.jaxb.Lsdb.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
@@ -124,7 +124,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("cafe_variome.xsd", "cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("schema/cafe_variome.xsd", "test_data/cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
@@ -140,7 +140,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON2() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("lsdb.xsd", "templates/lsdb_19.2.2012.xml",org.varioml.jaxb.Lsdb.class);
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "templates/lsdb_19.2.2012.xml",org.varioml.jaxb.Lsdb.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
@@ -156,7 +156,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON3() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("cafe_variome.xsd", "cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("schema/cafe_variome.xsd", "test_data/cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
@@ -172,7 +172,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON4() throws Exception { 
 
 		Util util = new Util(); 
-		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb) util.readXML("lsdb.xsd", "lsdb_test_all_new.xml",org.varioml.jaxb.Lsdb.class);
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb) util.readXML("schema/lsdb.xsd", "test_data/lsdb_test_all_new.xml",org.varioml.jaxb.Lsdb.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
@@ -182,6 +182,8 @@ public class LsdbTest extends TestCase  {
 			
 		}
 		util.writeJSON("test_all_full.json", o);
+		Object x = util.readJSON("test_all_full.json",org.varioml.jaxb.Lsdb.class);
+		util.writeXML("schema/lsdb.xsd", "test_all_full2.xml",x);
 		
 	}
 
