@@ -180,17 +180,26 @@ public class GenerateSimpleXMLCode {
 		return c.getElement(name);
 	}
 
+	public HashMap<String, Counter> getElementCountMap() {
+
+		HashMap<String,Counter>  map = new HashMap<String, Counter>();
+		NodeList nodes = doc.getChildNodes();
+		for ( int ix = 0 ; ix< nodes.getLength() ; ix++ ) {
+			//try to find elements which have most of the sub elements
+			fillTheMap( nodes.item(ix), map) ;
+		}
+		return map;
+	}
 	/**
 	 * generate some code for the generator itself
 	 * @param mappings
 	 */
 	public void printExampleElements (HashMap mappings) {
 	
-		HashMap<String,Counter>  map = new HashMap<String, Counter>();
-		NodeList nodes = doc.getChildNodes();
-		for ( int ix = 0 ; ix< nodes.getLength() ; ix++ ) {
-			fillTheMap( nodes.item(ix), map) ;
-		}
+		HashMap<String,Counter>  map = getElementCountMap();
+		
+		
+		//
 		ArrayList<String> paths = new ArrayList<String>();
 		Set<String> keys = map.keySet();
 		for (String key : keys) {
@@ -210,7 +219,7 @@ public class GenerateSimpleXMLCode {
 				continue; // no primitives
 			}
 			String className = className(key);
-			System.out.println("xu.generateCode(\"org.varioml.data."+className+"\",\""+path+"\",x(typeMap,new HashMap<String,String>(){ ");
+			System.out.println("xu.generateCode(\"org.varioml.simplexml."+className+"\",\""+path+"\",x(typeMap,new HashMap<String,String>(){ ");
 			if ( c.getCount() == 1 ) {
 				System.out.println("	{put(\"TEXT_NODE\",\"Text\");};");								
 			} else {
@@ -362,8 +371,10 @@ public class GenerateSimpleXMLCode {
 				fileOut.delete();
 			} else {
 				Util.log(GenerateSimpleXMLCode.class, "File "+fileOut.getPath()+" not over witten");
+				return false;
 			}
 		} 
+		
 		fileOut.createNewFile();
 		PrintStream out = new PrintStream(fileOut);
 
@@ -608,11 +619,13 @@ public class GenerateSimpleXMLCode {
 	}
 	public static void main(String[] args) throws Exception{
 
+		
 		//assign the basic types
 		HashMap<String, String> typeMap = new HashMap<String, String>(){
 			{	
 				//attributes
 				put("@name","String"); 
+				put("@obs","String"); 
 				put("@uri","String"); 
 				put("@id","String");
 				put("@term","String"); 
@@ -621,7 +634,8 @@ public class GenerateSimpleXMLCode {
 				put("@encoding","String"); 
 				put("@lang","String"); 
 				put("@is_undefined","Boolean");
-				put("@date","org.varioml.util.VarioDate");
+				put("@coded","Boolean");
+				put("@date","org.varioml.util.VMLDate");
 				put("@version","String"); 
 				put("@role","String"); 
 				put("@code","Integer");
@@ -643,22 +657,23 @@ public class GenerateSimpleXMLCode {
 				put("@panel_ref","String");
 				put("@size","Integer");
 				put("@scheme","String");
+				put("@val","String");
 				put("@source","String");
+				put("@unit","String");
 				put("@allele","Integer");
 				//elements
-				put("date","org.varioml.util.VarioDate");
+				put("date","org.varioml.util.VMLDate");
 				put("source","String");
 				put("text","String");  
-				put("value","Double");
 				put("address","String");
 				put("phone","String"); 
 				put("fax","String");
 				put("email","String"); 
 				put("address","String");
 				put("description","String"); 
-				put("dob","org.varioml.util.VarioDate"); 
-				put("creation_date","org.varioml.util.VarioDate");
-				put("modification_date","org.varioml.util.VarioDate"); 
+				put("dob","org.varioml.util.VMLDate"); 
+				put("creation_date","org.varioml.util.VMLDate");
+				put("modification_date","org.varioml.util.VMLDate"); 
 				put("call","String");
 				put("reference","String");
 				put("chr","String");
@@ -668,231 +683,235 @@ public class GenerateSimpleXMLCode {
 				put("freq","Double");
 				put("counts","Integer");
 				put("name","String"); 
-				put("embargo_end_date","org.varioml.util.VarioDate");
-				put("created","org.varioml.util.VarioDateTime");
+				put("embargo_end_date","org.varioml.util.VMLDate");
+				put("created","org.varioml.util.VMLDateTime");
 				
 			 } 
 		};  
 
-		GenerateSimpleXMLCode xu = GenerateSimpleXMLCode.createInstance("new_variant.xml");
-////		xu.printExampleElements(typeMap);
+		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome_all.xml");
+		//xu.printExampleElements(typeMap);
+		xu2.generateCode("org.varioml.simplexml.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
+			{put("source","Source");};
+		})); // size=8 2011-08-29 20:37:47
+
+		xu2.generateCode("org.varioml.simplexml.FreqCategory","//cafe_variome/variant/frequency/category",x(typeMap,new HashMap<String,String>(){
+	        {put("_","_");};
+		})); // size=15 2011-12-11 19:51:02
+
 		
-		xu.generateCode("org.varioml.data.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
+		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+		xu.generateCode("org.varioml.simplexml.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
+			{put(TEXT_NODE,"org.varioml.util.VMLDate");};
+		})); // size=2 2011-06-20 21:40:02
+		
+		xu.generateCode("org.varioml.simplexml.ObservationDate","//lsdb/variant/observation_date",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+
+		xu.generateCode("org.varioml.simplexml.Value","//lsdb/variant/value",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+
+		
+		xu.generateCode("org.varioml.simplexml.Observation","//lsdb/individual/observation",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); // 
+		
+		xu.generateCode("org.varioml.simplexml.Variant","//lsdb/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
-		xu.generateCode("org.varioml.data.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.VariantEvent","//lsdb/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
-//
-//		xu.generateCode("org.varioml.data.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
-//			{put("_","_");};
-//		})); 
-//
-		xu.generateCode("org.varioml.data.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
+
+		xu.generateCode("org.varioml.simplexml.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); 
+
+		xu.generateCode("org.varioml.simplexml.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
 
 
-		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all_new.xml");
-		xu.printExampleElements(typeMap);
-//
-		xu.generateCode("org.varioml.data.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=25 2011-06-20 21:40:02		
 
 
-		xu.generateCode("org.varioml.data.VariantGroup","//lsdb/individual/variant_group",x(typeMap,new HashMap<String,String>(){ 
+
+		xu.generateCode("org.varioml.simplexml.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
-		})); 
+		}));
+		
+		//if ( true) System.exit(1);
+
+
+		//if ( false ) return;
 
 		
 		
-		if ( true) System.exit(1);
 
-		xu = GenerateSimpleXMLCode.createInstance("cafe_variome_all.xml");
-		xu.printExampleElements(typeMap);
-		xu.generateCode("org.varioml.data.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
-			{put("source","Source");};
-		})); // size=8 2011-08-29 20:37:47
-
-		xu.generateCode("org.varioml.data.FreqCategory","//cafe_variome/variant/frequency/category",x(typeMap,new HashMap<String,String>(){
-	        {put("_","_");};
-		})); // size=15 2011-12-11 19:51:02
-
-		if ( false ) return;
-
-		
-		
-		xu = GenerateSimpleXMLCode.createInstance("lsdb_test_all.xml");
-		xu.printExampleElements(typeMap);
-
-
-		xu.generateCode("org.varioml.data.Comment","//lsdb/comment",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Comment","//lsdb/comment",x(typeMap,new HashMap<String,String>(){ 
 			{put("text","CommentText");};
 		})); // size=25 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.EvidenceCode","//lsdb/comment/evidence_code",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.EvidenceCode","//lsdb/variant/evidence_code",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=19 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Score","//lsdb/comment/evidence_code/score",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
+		xu.generateCode("org.varioml.simplexml.Score","//lsdb/variant/evidence_code/score",x(typeMap,new HashMap<String,String>(){ 
+			{put("value","Double");};
 		})); // size=17 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.ProtocolId","//lsdb/comment/protocol_id",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.ProtocolId","//lsdb/variant/protocol_id",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.CommentText","//lsdb/comment/text",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.CommentText","//lsdb/comment/text",x(typeMap,new HashMap<String,String>(){ 
 			{put(TEXT_NODE,"String");};
 		})); // size=4 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.DbXref","//lsdb/db_xref",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.DbXref","//lsdb/db_xref",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Individual","//lsdb/individual",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Individual","//lsdb/individual",x(typeMap,new HashMap<String,String>(){ 
 			{put("role","Role");};
 			{put("source","Source");};
 		})); // size=53 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Cultivar","//lsdb/individual/cultivar",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Cultivar","//lsdb/individual/cultivar",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Gender","//lsdb/individual/gender",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Gender","//lsdb/individual/gender",x(typeMap,new HashMap<String,String>(){ 
 			{put("description","GenderDescription");};
 		})); // size=12 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.GenderDescription","//lsdb/individual/gender/description",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.GenderDescription","//lsdb/individual/gender/description",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=23 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Organism","//lsdb/individual/organism",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Organism","//lsdb/individual/organism",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.OriginalId","//lsdb/individual/original_id",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.OriginalId","//lsdb/individual/original_id",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Phenotype","//lsdb/individual/phenotype",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Phenotype","//lsdb/individual/phenotype",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=25 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.InheritancePattern","//lsdb/individual/phenotype/inheritance_pattern",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.InheritancePattern","//lsdb/individual/phenotype/inheritance_pattern",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=23 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Population","//lsdb/individual/population",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Population","//lsdb/individual/population",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=24 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Relationship","//lsdb/individual/relationship",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Relationship","//lsdb/individual/relationship",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=23 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Role","//lsdb/individual/role",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Role","//lsdb/individual/role",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.SharingPolicy","//lsdb/individual/sharing_policy",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.SharingPolicy","//lsdb/individual/sharing_policy",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=14 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
-			{put(TEXT_NODE,"org.varioml.util.VarioDate");};
-		})); // size=2 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.UsePermission","//lsdb/individual/sharing_policy/use_permission",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.UsePermission","//lsdb/individual/sharing_policy/use_permission",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Strain","//lsdb/individual/strain",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Strain","//lsdb/individual/strain",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-//		xu.generateCode("org.varioml.data.Variant","//lsdb/individual/variant",x(typeMap,new HashMap<String,String>(){ 
+//		xu.generateCode("org.varioml.simplexml.Variant","//lsdb/individual/variant",x(typeMap,new HashMap<String,String>(){ 
 //			{put("name","VariantName");};
 //			{put("source","Source");};
 //		})); // size=93 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.data.VariantName","//lsdb/individual/variant/name",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.VariantName","//lsdb/individual/variant/name",x(typeMap,new HashMap<String,String>(){ 
 			{put(TEXT_NODE,"String");};
 		})); // size=93 2011-06-20 21:40:02
 		
-		xu.generateCode("org.varioml.data.Aliases","//lsdb/individual/variant/aliases",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Aliases","//lsdb/individual/variant/aliases",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=21 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Consequence","//lsdb/individual/variant/consequence",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Consequence","//lsdb/individual/variant/consequence",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=23 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Exon","//lsdb/individual/variant/exon",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Exon","//lsdb/individual/variant/exon",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=4 2011-06-20 21:40:02
-//		xu.generateCode("org.varioml.data.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
-//			{put("_","_");}; 
-//    WE need to do this manually since it users choice group		
-//		})); // size=25 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Gene","//lsdb/individual/variant/gene",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Gene","//lsdb/individual/variant/gene",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.GeneticOrigin","//lsdb/individual/variant/genetic_origin",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.GeneticOrigin","//lsdb/individual/variant/genetic_origin",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","GeneticSource");};
 		})); // size=25 2011-06-20 21:40:02
 		
-		xu.generateCode("org.varioml.data.GeneticSource","//lsdb/individual/variant/genetic_origin/source",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.GeneticSource","//lsdb/individual/variant/genetic_origin/source",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // manual
 
-		xu.generateCode("org.varioml.data.Genotype","//lsdb/individual/variant/genotype",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Genotype","//lsdb/individual/variant/genotype",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=11 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Location","//lsdb/individual/variant/location",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Location","//lsdb/individual/variant/location",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=9 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.data.Panel","//lsdb/individual/variant/panel",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=55 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Pathogenicity","//lsdb/individual/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Pathogenicity","//lsdb/individual/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=33 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.RefSeq","//lsdb/individual/variant/ref_seq",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.RefSeq","//lsdb/individual/variant/ref_seq",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.RestrictionSite","//lsdb/individual/variant/restriction_site",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.RestrictionSite","//lsdb/individual/variant/restriction_site",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Sample","//lsdb/individual/variant/sample",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Sample","//lsdb/individual/variant/sample",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
 		
-		xu.generateCode("org.varioml.data.SeqChanges","//lsdb/individual/variant/seq_changes",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.SeqChanges","//lsdb/individual/variant/seq_changes",x(typeMap,new HashMap<String,String>(){ 
 			{put("variant","ConsVariant");};
 		})); // size=21 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.ConsVariant","//lsdb/individual/variant/seq_changes/variant",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.ConsVariant","//lsdb/variant/seq_changes/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); // size=21 2011-06-20 21:40:02
 
 		
-		xu.generateCode("org.varioml.data.Sequence","//lsdb/individual/variant/sequence",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Sequence","//lsdb/individual/variant/sequence",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Tissue","//lsdb/individual/variant/tissue",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Tissue","//lsdb/individual/variant/tissue",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.TissueDistribution","//lsdb/individual/variant/tissue_distribution",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.TissueDistribution","//lsdb/individual/variant/tissue_distribution",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.VariantClass","//lsdb/individual/variant/variant_class",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.VariantClass","//lsdb/individual/variant/variant_class",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.VariantDetection","//lsdb/individual/variant/variant_detection",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.VariantDetection","//lsdb/individual/variant/variant_detection",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.VariantType","//lsdb/individual/variant/variant_type",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.VariantType","//lsdb/individual/variant/variant_type",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.data.GroupType","//lsdb/individual/variant_group/group_type",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.GroupType","//lsdb/individual/variant_group/group_type",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Source","//lsdb/source",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Source","//lsdb/source",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=27 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Acknowledgement","//lsdb/source/acknowledgement",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Acknowledgement","//lsdb/source/acknowledgement",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.GrantNumber","//lsdb/source/acknowledgement/grant_number",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.GrantNumber","//lsdb/source/acknowledgement/grant_number",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.data.Contact","//lsdb/source/contact",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.simplexml.Contact","//lsdb/source/contact",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=24 2011-06-20 21:40:02
+
+	
+
 
 	}
 

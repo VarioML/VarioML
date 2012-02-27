@@ -10,8 +10,6 @@
 # new name space http://varioml.org/xml/1.0
 #
 #
-# haplotype element added into variant
-# variant added into lsdb element
 
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 default namespace vml = "http://varioml.org/xml/1.0"
@@ -46,7 +44,7 @@ element lsdb {
 ## [% INSERT lsdb.txt %] 
 VmlLsdb = 
     VmlSubmission,
-    individual*,variant*,
+    individual*,panel*,variant*,
     VmlAnnotatable
 
 # (=)	===============================
@@ -76,6 +74,7 @@ VmlAbstractObservationTarget =
     strain?,
     cultivar?,
     phenotype*,
+    observation*,
     population*,
     variant*,
     variant_group*,
@@ -137,6 +136,7 @@ VmlObservations =
     (panel|individual)?, # observation target
     phenotype*, # observations
     variant*,
+    observation*,
     variant_group*,
     sharing_policy?,
     creation_date?,
@@ -484,6 +484,21 @@ VmlProtocolId =
     VmlDbXRef
 
 # (=)	===============================
+#  X	Observation date
+# (=)	===============================
+observation_date = 
+## [% INSERT observation_date.txt %]
+element observation_date {
+    VmlObservationDate,
+    VmlForeignNodes
+}
+
+VmlObservationDate =
+    attribute coded { xsd:boolean}?, # date is not real if the value is true. used when date cannot be revealed
+    attribute  date {VmlDate},
+    VmlAnnotatable
+
+# (=)	===============================
 #  X	Gene
 # (=)	===============================
 gene = 
@@ -501,6 +516,7 @@ dob =
 # date of birth
 ## [% INSERT dob.txt %]
 element dob {
+   attribute coded { xsd:boolean}?, # date is not real if the value is true
    VmlDobDate
 }
 ## [% INSERT modification_date.txt %]
@@ -844,18 +860,34 @@ element db_xref {
 }
 
 # (=)	===============================
+#  X	Observations of individual
+# (=)	===============================
+observation = 
+## [% INSERT observation.txt %]
+element observation { 
+    VmlGenericObservation,
+    VmlForeignNodes
+}
+## [% INSERT observation.txt %]
+VmlGenericObservation = 
+    VmlEvidenceOntologyTerm,
+    attribute type {'lifestyle'|'environment'|'relationship'}?
+
+
+# (=)	===============================
 #  X	Phenotype of individual
 # (=)	===============================
 phenotype = 
 ## [% INSERT phenotype.txt %]
 element phenotype { 
-    VmlPhenotype
+    VmlPhenotype,
+    VmlForeignNodes
 }
 ## [% INSERT phenotype.txt %]
-VmlPhenotype = 
+VmlPhenotype =
+    attribute type {'symptom'|'diagnose'}?,    
     inheritance_pattern?,
-    VmlEvidenceOntologyTerm,
-    VmlForeignNodes
+    VmlEvidenceOntologyTerm
 
 inheritance_pattern = 
 ## [% INSERT inheritance_pattern.txt %]
@@ -961,7 +993,7 @@ VmlAnnotatable = db_xref* , comment*
 #  X	Observation
 # (=)	===============================
 ## [% INSERT observation.txt %]
-VmlObservation = evidence_code* , protocol_id*
+VmlObservation = value*, evidence_code* , protocol_id*, observation_date?
 
 # (=)	===============================
 #  X	Annotated observation !
@@ -988,7 +1020,7 @@ VmlEvidenceOntologyTerm = VmlOntology, VmlAnnotatedObservation
 comment = 
 ## [% INSERT comment.txt %]
 element comment { 
-    VmlComment
+    VmlComment # element generic annotations and observations
 }
 ## [% INSERT comment.txt %]
 VmlComment = 
@@ -1015,6 +1047,21 @@ VmlText =
     attribute encoding { text}?,
     text
 
+# (=)	===============================
+#  X	Value/Name value pair
+# (=)	===============================
+value =  # 
+## [% INSERT value.txt %]
+element value { 
+    VmlValue
+   ,VmlForeignNodes
+}
+## [% INSERT value.txt %]
+VmlValue =
+    VmlOntologyTerm,
+    attribute unit {xsd:string},
+    attribute val {xsd:string},
+    value*
 
 # (=)	===============================
 #  X	Source

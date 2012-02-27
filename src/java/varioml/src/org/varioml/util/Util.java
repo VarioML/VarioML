@@ -1,6 +1,10 @@
 package org.varioml.util;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Map;
@@ -14,8 +18,10 @@ import javax.xml.bind.ValidationEventHandler;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
+import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.AnnotationIntrospector;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectReader;
 import org.codehaus.jackson.map.ObjectWriter;
 import org.codehaus.jackson.map.introspect.JacksonAnnotationIntrospector;
 import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
@@ -31,6 +37,8 @@ import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.stream.Style;
+
+import scala.sys.process.ProcessBuilderImpl.FileInput;
 
 public class Util {
 
@@ -89,6 +97,7 @@ public class Util {
 		return f;
 	}
 
+	@Deprecated
 	public static Serializer createSerializer() {
 
 		Style style = new UnderscoreStyle();
@@ -140,16 +149,39 @@ public class Util {
 
 		
 	}
-	
-	public Object readXML(String schemaFile, String xmlFile, Class clz ) {
+
+	public Object readJSON ( String file, Class clz  ) {
+		
+		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
+	    AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
+	    AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary, secondary);
+	    
+		//http://wiki.fasterxml.com/JacksonJAXBAnnotations
+		//http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
+	    ObjectMapper mapper = new ObjectMapper();
+	    // make deserializer use JAXB annotations (only)
+	    mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
+	    mapper.getSerializationConfig().setAnnotationIntrospector(pair);
+
+	    Object o = null;
+	    try {
+			FileInputStream in = new FileInputStream(file);
+			o = mapper.readValue(in,clz);
+			in.close();
+		} catch (Exception e) { 
+			Util.fatal(Util.class,e);
+		}
+	    return o;
+	}
+
+	public Object readXML(String schemaFile, String xmlFile, Class  clz ) {
 		try {
 			//todo: make this configuravle.. .now using JAXB as a default
 			
 			SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI); 
 	        Schema schema = sf.newSchema(new File( schemaFile)); 
-	        
 			JAXBContext context = JAXBContext.newInstance(clz);
-			Marshaller m = context.createMarshaller();
+			//Marshaller m = context.createMarshaller();
 			File file = findFile(xmlFile);
 			Unmarshaller um = context.createUnmarshaller();
 			um.setEventHandler( new MyValidationEventHandler());
@@ -163,7 +195,31 @@ public class Util {
 
 		
 	}
+
+	public void writeXML(String schemaFile, String xmlFile, Object  obj) {
+		try {
+			//todo: make this configuravle.. .now using JAXB as a default
 			
+			SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI); 
+	        Schema schema = sf.newSchema(new File( schemaFile)); 
+			JAXBContext context = JAXBContext.newInstance(obj.getClass());
+			File file = new File(xmlFile);
+			Marshaller m = context.createMarshaller();
+			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			m.setEventHandler( new MyValidationEventHandler());
+			m.setSchema(schema);
+			PrintWriter out = new PrintWriter(file) ;
+			m.marshal(obj, out);
+			out.close();
+
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+
+
+		
+	}
+
 	public static Serializer createSerializer2() {
 
 		Format format = new Format();
@@ -174,11 +230,20 @@ public class Util {
 	}
 
 	public static void log(Class cls, String message) {
-		System.err.println("Fatal error in : " + cls.getName() + " message: " + message);
+		System.err.println("LOG : " + cls.getName() + " message: " + message);
 		System.err.flush();
 
 	}
 
-	
-	
+	public static void main(String[] args) throws Exception {
+
+		Util util = new Util();
+		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("cafe_variome.xsd", "cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
+		util.writeJSON("tmp.json", o);
+		Object x = util.readJSON("tmp.json",org.varioml.jaxb.CafeVariome.class);
+		util.writeXML("cafe_variome.xsd", "tmp.xml",x);
+	}
 }
+	
+	
+

@@ -7,10 +7,10 @@ import java.util.List;
 import junit.framework.TestCase;
 
 import org.simpleframework.xml.Serializer;
-import org.varioml.data.DbXref;
-import org.varioml.data.Lsdb;
-import org.varioml.data.Source;
-import org.varioml.data.VariantGroup;
+import org.varioml.simplexml.DbXref;
+import org.varioml.simplexml.Lsdb;
+import org.varioml.simplexml.Source;
+import org.varioml.simplexml.VariantGroup;
 import org.varioml.util.Util;
 import org.varioml.util.VarioDateTime;
 
@@ -137,5 +137,55 @@ public class LsdbTest extends TestCase  {
 		
 	}
 
+	public void testCafeVariomeJAXBJSON2() throws Exception { 
 
+		Util util = new Util();
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("lsdb.xsd", "templates/lsdb_19.2.2012.xml",org.varioml.jaxb.Lsdb.class);
+		List<org.varioml.jaxb.Source> src = o.getSourceList();
+		if ( src != null ) {
+			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
+				org.varioml.jaxb.Source source = (org.varioml.jaxb.Source) iterator.next();
+				System.err.println(source.getName());
+			}
+			
+		}
+		util.writeJSON("lsdb_full.json", o);
+		
+	}
+
+	public void testCafeVariomeJAXBJSON3() throws Exception { 
+
+		Util util = new Util();
+		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("cafe_variome.xsd", "cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
+		List<org.varioml.jaxb.Source> src = o.getSourceList();
+		if ( src != null ) {
+			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
+				org.varioml.jaxb.Source source = (org.varioml.jaxb.Source) iterator.next();
+				System.err.println(source.getName());
+			}
+			
+		}
+		util.writeJSON("cafe_variome.json", o);
+		
+	}
+
+	public void testCafeVariomeJAXBJSON4() throws Exception { 
+
+		Util util = new Util(); 
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb) util.readXML("lsdb.xsd", "lsdb_test_all_new.xml",org.varioml.jaxb.Lsdb.class);
+		List<org.varioml.jaxb.Source> src = o.getSourceList();
+		if ( src != null ) {
+			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
+				org.varioml.jaxb.Source source = (org.varioml.jaxb.Source) iterator.next();
+				System.err.println(source.getName());
+			}
+			
+		}
+		util.writeJSON("test_all_full.json", o);
+		
+	}
+
+	public static void main(String[] args) {
+		
+	}
 }

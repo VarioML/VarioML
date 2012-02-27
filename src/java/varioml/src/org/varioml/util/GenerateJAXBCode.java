@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,6 +18,7 @@ import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 import org.simpleframework.xml.stream.CamelCaseStyle;
+import org.varioml.util.GenerateSimpleXMLCode.Counter;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -31,33 +34,20 @@ import org.w3c.dom.NodeList;
 @SuppressWarnings("rawtypes")
 public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 	
+	protected HashMap<String,Counter> elementCounts;
+	protected HashMap<String,String> fileGuard = new HashMap<String, String>(); 
 	
 	private GenerateJAXBCode(Document doc, XPath xpath, String file) {
 		super(doc,xpath,file) ;
+		HashMap<String,Counter> map = getElementCountMap() ;
+		Set<String> keys = map.keySet();
+		for (String key : keys) {
+			Counter c = map.get(key);
+			//System.err.println(key+" "+c.getCount()+" "+c.getName());
+		}
+		elementCounts  = map;
 	}
 
-	public static class Counter{ 
-		private String name;
-		private int count;
-		public Counter(String name, int count) {
-			super();
-			this.name = name;
-			this.count = count;
-		}
-		public String getName() {
-			return name;
-		}
-		public int getCount() {
-			return count;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public void setCount(int count) {
-			this.count = count;
-		}
-		
-	}
 	public void printRootHeader ( PrintStream out) {
 		
 		//out.println("import javax.xml.bind.annotation.*;");
@@ -103,17 +93,38 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			Util.fatal(GenerateJAXBCode.class, ex);
 		}
 
+
 		return new GenerateJAXBCode(doc, xpath, file);
 
 	}
 
 	
+	public String paramName ( Map<String,String> typeMap) {
+		String typeName =  typeMap.get(TEXT_NODE);
+		if ( typeName ==  null) {
+			typeName = "String";
+		}
 
+		if ( typeName.contains(".")) {
+			String pks[] = typeName.split("\\.");
+			typeName = pks[pks.length -1 ];
+		}
+		if ( typeName.equals("VMLDate")) { //hack
+			System.err.println("VMLDate changed to Date");
+			typeName = "Date";
+		}
+		return typeName;
+	}
 	
 	//Todo: refactor
 	public boolean generateCode(String file, String xpath, Map<String,String> typeMap, boolean isInterface) throws IOException {
 		boolean res = false;
 
+		if ( fileGuard.containsKey(file)) {
+			Util.fatal(GenerateJAXBCode.class, "File "+file+" already generated in this session");
+		}
+		fileGuard.put(file, "K");
+		
 		overwrite = true;
 		boolean valueName = false; 
 		
@@ -127,6 +138,12 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		String className = filePath[filePath.length-1];
 
 		Node nod = getNode(xpath);
+		Counter cnt = elementCounts.get(nod.getNodeName());
+		if ( countElements(nod) < cnt.getCount())  {
+			Util.log(GenerateJAXBCode.class, "Note: "+cnt.getName()+
+					" is better representative than "+xpath+" for "+file+" counts: " +countElements(nod)+"<"+cnt.getCount());
+		}
+		
 		
 		NamedNodeMap att = nod.getAttributes();
 
@@ -136,6 +153,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				fileOut.delete();
 			} else {
 				Util.log(GenerateJAXBCode.class, "File "+fileOut.getPath()+" not over witten");
+				return false;
 			}
 		} 
 		fileOut.createNewFile();
@@ -225,12 +243,22 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					attribOrderLine = attribOrderLine+",";
 				}
 			}
-			if ( attribOrderLine.length() > 0 ) {
-				attribOrderLine = attribOrderLine +",";
-			}
 
 			if ( orderLine.length() > 0)
 				out.println(  "@javax.xml.bind.annotation.XmlType(propOrder = {  "+orderLine+"})");
+
+			if (  hasTextNode(nod.getChildNodes()) || typeMap.get(TEXT_NODE) != null ) {
+				if  (orderLine.length() > 0) {
+					Util.fatal(GenerateJAXBCode.class, "Cannot have mixed nodes");
+				}
+				String paramName = "__"+paramName(typeMap).toLowerCase();
+				orderLine = "\""+paramName+"\"";
+				System.err.println("Check JSON: "+ orderLine);
+				
+			}
+			if ( attribOrderLine.length() > 0 && orderLine.length() > 0) {
+				attribOrderLine = attribOrderLine +",";
+			}			
 			if ( orderLine.length() > 0 || attribOrderLine.length()>0)
 				out.println(  "@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "+attribOrderLine+ orderLine+"})");
 			
@@ -271,30 +299,44 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			
 			if ( isInterface ) {
 
-				out.println("	// ===========-- "+elName+" --===========");
-				out.println("@Deprecated");
-				out.println("	public void set"+typeName+"Attr( "+realType+" "+paramName+") ;");
-				out.println("	public "+realType+" get"+typeName+"Attr() ; ");
+//				out.println("	// ===========-- "+elName+" --===========");
+//				out.println("	@Deprecated");
+//				out.println("	public void set"+typeName+"Attr( "+realType+" "+paramName+") ;");
+//				out.println("	public "+realType+" get"+typeName+"Attr() ; ");
 
 			} else {
 
 				out.println("	// ===========-- "+elName+" --===========");
 				out.println("	@javax.xml.bind.annotation.XmlAttribute(required=false,name=\""+elName+"\")");
 				out.println("	private "+realType+" _" + paramName+" ;");
-				out.println("@Deprecated");
-				out.println("	public void set"+typeName+"Attr( "+realType+" "+paramName+") { ");
-				out.println("		this._"+paramName+" = "+paramName+" ;");
-				out.println("	}");
-				out.println("@Deprecated");
-				out.println("	public "+realType+" get"+typeName+"Attr() { ");
-				out.println("		return this._"+paramName+";");
-				out.println("	}");
+				
+//				out.println("	@Deprecated");
+//				out.println("	public void set"+typeName+"Attr( "+realType+" "+paramName+") { ");
+//				out.println("		this._"+paramName+" = "+paramName+" ;");
+//				out.println("	}");
+//				out.println(	"@Deprecated");
+//				out.println("	public "+realType+" get"+typeName+"Attr() { ");
+//				out.println("		return this._"+paramName+";");
+//				out.println("	}");
 				
 				//support this
 				out.println("	public void set"+typeName+"( "+realType+" "+paramName+") { ");
 				out.println("		this._"+paramName+" = "+paramName+" ;");
 				out.println("	}");
-				out.println("	public "+realType+" get"+typeName+"() { ");
+				
+				if ( typeName.startsWith("Coded")) {
+					typeName = " isCoded";
+					System.err.println("Method name chnaged to: " + typeName);
+				} else if ( typeName.startsWith("Genotypic")) {
+						typeName = " isGenotypic";
+						System.err.println("Method name chnaged to: " + typeName);
+				} else if ( typeName.startsWith("IsUndefined")) {
+					typeName = " isUndefined";
+					System.err.println("Method name chnaged to: " + typeName);
+				} else {
+					typeName =" get"+typeName ;
+				}
+				out.println("	public "+realType+typeName+"() { ");
 				out.println("		return this._"+paramName+";");
 				out.println("	}");
 
@@ -337,40 +379,31 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 
 				out.println(" ");
 
-				if ( isInterface ) {
 
-					out.println("	// ===========-- "+elName+" --===========");
-					out.println("	public void set"+typeName+"List( List<"+realType+"> "+paramName+") ; ");
-					out.println("	public List<"+realType+"> get"+typeName+"List()  ; ");
-					out.println("	public void add"+typeName+"("+realType+" item ) ; ");
-					
+				out.println("	// ===========-- "+elName+" --===========");
+				//Json lists are in plural
+				if ( elName.endsWith("y")) { 
+					String x= elName.replaceAll("y$", "ie")+"s";
+					out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+x+"\")"); 												
+					System.out.println("CHECK Plural: " + x+" ");
 				} else {
-
-					out.println("	// ===========-- "+elName+" --===========");
-					//Json lists are in plural
-					if ( elName.endsWith("y")) { 
-						String x= elName.replaceAll("y$", "ie")+"s";
-						out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+x+"\")"); 												
-						System.out.println("CHECK Plural: " + x+" ");
-					} else {
-						out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+elName+"s\")"); 						
-					}
-					
-					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")" );
-					out.println("	private List<"+ realType+"> _" + paramName + " ;");
-					out.println("	public void set"+typeName+"List( List<"+realType+"> "+paramName+") { ");
-					out.println("		this._"+paramName+" = "+paramName+" ;");
-					out.println("	}");
-					out.println("	public List<"+realType+"> get"+typeName+"List()  { ");
-					out.println("		return this._"+paramName+";");
-					out.println("	}");
-					out.println("	public void add"+typeName+"("+realType+" item ) { ");
-					out.println("		if ( this._"+paramName+" == null ) { ");
-					out.println("			this._"+paramName+" = new ArrayList<"+realType+">();");
-					out.println("		}");
-					out.println("		this._"+paramName+".add( item);");
-					out.println("	}");
+					out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+elName+"s\")"); 						
 				}
+				
+				out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")" );
+				out.println("	private List<"+ realType+"> _" + paramName + " ;");
+				out.println("	public void set"+typeName+"List( List<"+realType+"> "+paramName+") { ");
+				out.println("		this._"+paramName+" = "+paramName+" ;");
+				out.println("	}");
+				out.println("	public List<"+realType+"> get"+typeName+"List()  { ");
+				out.println("		return this._"+paramName+";");
+				out.println("	}");
+				out.println("	public void add"+typeName+"("+realType+" item ) { ");
+				out.println("		if ( this._"+paramName+" == null ) { ");
+				out.println("			this._"+paramName+" = new ArrayList<"+realType+">();");
+				out.println("		}");
+				out.println("		this._"+paramName+".add( item);");
+				out.println("	}");
 				
 			} else {
 				
@@ -383,88 +416,65 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					usedName = "GeneticSource";
 				}
 				
-				if ( isInterface ) {
-					
-					out.println("	// ===========-- "+elName+" --===========");
-					out.println("	public void set"+usedName+"( "+realType+" "+paramName+") ; ");
-					out.println("	public "+realType+" get"+usedName+"() ;");
+				if ( className.equals("Frequency") && (elName.equals("freq") || elName.equals("category") || elName.equals("counts"))) {
+					//choice group
+
+					out.println("	// ===========-- counts --===========");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"counts\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("	private Integer _counts ;");
+					out.println("	public void setCounts( Integer count) { ");
+					out.println("		this._counts = count ; if ( _category != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
+					out.println("	}");
+					out.println("	public Integer getCounts() {");
+					out.println("		return this._counts;");
+					out.println("	}");
+
+					out.println("	// ===========-- category --===========");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"category\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("	private FreqCategory _category ;");
+					out.println("	public void setCategory( FreqCategory category) { ");
+					out.println("		this._category = category ; if ( _counts != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
+					out.println("	}");
+					out.println("	public FreqCategory getCategory() {");
+					out.println("		return this._category;");
+					out.println("	}");
+
+					out.println("	// ===========-- freq --===========");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"freq\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("	private Double _freq ;");
+					out.println("	public void setCounts( Double freq) { ");
+					out.println("		this._freq = freq ; if ( _category != null || _counts != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
+					out.println("	}");
+					out.println("	public Double  getFreq() {");
+					out.println("		return this._freq;");
+					out.println("	}");
+
+					System.out.println("Frequency done");
 					
 				} else {
-					
-					
-					
-					if ( className.equals("Frequency") && (elName.equals("freq") || elName.equals("category") || elName.equals("counts"))) {
-						//choice group
 
-						out.println("	// ===========-- counts --===========");
-						out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"counts\",namespace=\"http://varioml.org/xml/1.0\")");
-						out.println("	private Integer _counts ;");
-						out.println("	public void setCounts( Integer count) { ");
-						out.println("		this._counts = count ; if ( _category != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
-						out.println("	}");
-						out.println("	public Integer getCounts() {");
-						out.println("		return this._counts;");
-						out.println("	}");
-
-						out.println("	// ===========-- category --===========");
-						out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"category\",namespace=\"http://varioml.org/xml/1.0\")");
-						out.println("	private FreqCategory _category ;");
-						out.println("	public void setCategory( FreqCategory category) { ");
-						out.println("		this._category = category ; if ( _counts != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
-						out.println("	}");
-						out.println("	public FreqCategory getCategory() {");
-						out.println("		return this._category;");
-						out.println("	}");
-
-						out.println("	// ===========-- freq --===========");
-						out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"freq\",namespace=\"http://varioml.org/xml/1.0\")");
-						out.println("	private Double _freq ;");
-						out.println("	public void setCounts( Double freq) { ");
-						out.println("		this._freq = freq ; if ( _category != null || _counts != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
-						out.println("	}");
-						out.println("	public Double  getFreq() {");
-						out.println("		return this._freq;");
-						out.println("	}");
-
-						System.out.println("Frequency done");
-						
-					} else {
-
-						out.println("	// ===========-- "+elName+" --===========");
-						out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")");
-						if ( ! usedName.equals(typeName)) {
-							out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+underStyle.getElement(usedName)+"\")");	
-						}
-						out.println("	private "+realType+" _" + paramName + " ;");
-						out.println("	public void set"+usedName+"( "+realType+" "+paramName+") { ");
-						out.println("		this._"+paramName+" = "+paramName+" ;");
-						out.println("	}");
-						out.println("	public "+realType+" get"+usedName+"() {");
-						out.println("		return this._"+paramName+";");
-						out.println("	}");
-
+					out.println("	// ===========-- "+elName+" --===========");
+					out.println("	@javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")");
+					if ( ! usedName.equals(typeName)) {
+						out.println("	@org.codehaus.jackson.annotate.JsonProperty(\""+underStyle.getElement(usedName)+"\")");	
 					}
+					out.println("	private "+realType+" _" + paramName + " ;");
+					out.println("	public void set"+usedName+"( "+realType+" "+paramName+") { ");
+					out.println("		this._"+paramName+" = "+paramName+" ;");
+					out.println("	}");
+					out.println("	public "+realType+" get"+usedName+"() {");
+					out.println("		return this._"+paramName+";");
+					out.println("	}");
+
 				}
+		
 			}
 			
 		}
 
-		String value = null;
-		boolean hasTextNode = false;
+		boolean hasTextNode = hasTextNode(elem);
 
-		for (int i = 0; i < elem.getLength() && ! hasTextNode; i++) {
-			if (elem.item(i).getNodeType() == Node.TEXT_NODE ) {
-				value = elem.item(i).getNodeValue();
-				if ( value != null ) {
-					value = value.replaceAll("\\s", "");
-					if ( value.length() > 0 ) { 
-						hasTextNode = true;
-					}					
-				}
-				
-			}
-		}
-		
+
 		if ( hasTextNode || typeMap.get(TEXT_NODE) != null ) { 
 
 //			if (valueName) {
@@ -472,22 +482,19 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 //			}
 
 			if ( elements) {
-				System.err.println("Mixed type element "+className+" value >"+value+"<");
+				System.err.println("Check Schema. Mixed type element "+className+" value. ");
 			}
-			String typeName =  typeMap.get(TEXT_NODE);
+			String fullTypeName =  typeMap.get(TEXT_NODE);
+			String typeName  = paramName(typeMap);
 			if ( typeName ==  null) {
 				typeName = "String";
 			}
 
-			String fullTypeName=typeName; //todo: fix to other places as well
-			if ( typeName.contains(".")) {
-				String pks[] = typeName.split("\\.");
-				typeName = pks[pks.length -1 ];
-			}
 			String paramName = "__"+typeName.toLowerCase();
+			
 			out.println("	// =========-- TEXT NODE --=========");
-			out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+typeName.toLowerCase()+"\")");
-			out.println("	@javax.xml.bind.annotation.XmlValue");
+			out.println("	@org.codehaus.jackson.annotate.JsonProperty(\""+typeName.toLowerCase()+"\")");
+			out.println("   @javax.xml.bind.annotation.XmlValue") ;
 			out.println("	private "+fullTypeName+" "+paramName + " ;");
 			out.println("	public "+className+"( "+fullTypeName+" v ) {");
 			out.println("		this."+paramName+"= v ;");
@@ -507,13 +514,35 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		return res;
 	}
 
+	private boolean hasTextNode(NodeList elem) {
+		// TODO Auto-generated method stub
+		boolean hasTextNode = false;
+		String value = null;
+		for (int i = 0; i < elem.getLength() && ! hasTextNode; i++) {
+			if (elem.item(i).getNodeType() == Node.TEXT_NODE ) {
+				value = elem.item(i).getNodeValue();
+				if ( value != null ) {
+					value = value.replaceAll("\\s", "");
+					if ( value.length() > 0 ) { 
+						hasTextNode = true;
+					}					
+				}
+				
+			}
+		}
+		
+		return hasTextNode;
+	}
+
 	public static void main(String[] args) throws Exception{
 
+		
 		//assign the basic types
 		HashMap<String, String> typeMap = new HashMap<String, String>(){
 			{	
 				//attributes
 				put("@name","String"); 
+				put("@obs","String"); 
 				put("@uri","String"); 
 				put("@id","String");
 				put("@term","String"); 
@@ -522,7 +551,8 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				put("@encoding","String"); 
 				put("@lang","String"); 
 				put("@is_undefined","Boolean");
-				put("@date","org.varioml.util.JAXBVarioDate");
+				put("@coded","Boolean");
+				put("@date","org.varioml.util.VMLDate");
 				put("@version","String"); 
 				put("@role","String"); 
 				put("@code","Integer");
@@ -544,22 +574,23 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				put("@panel_ref","String");
 				put("@size","Integer");
 				put("@scheme","String");
+				put("@val","String");
 				put("@source","String");
+				put("@unit","String");
 				put("@allele","Integer");
 				//elements
-				put("date","org.varioml.util.JAXBVarioDate");
+				put("date","org.varioml.util.VMLDate");
 				put("source","String");
 				put("text","String");  
-				put("value","Double");
 				put("address","String");
 				put("phone","String"); 
 				put("fax","String");
 				put("email","String"); 
 				put("address","String");
 				put("description","String"); 
-				put("dob","org.varioml.util.JAXBVarioDate"); 
-				put("creation_date","org.varioml.util.JAXBVarioDate");
-				put("modification_date","org.varioml.util.JAXBVarioDate"); 
+				put("dob","org.varioml.util.VMLDate"); 
+				put("creation_date","org.varioml.util.VMLDate");
+				put("modification_date","org.varioml.util.VMLDate"); 
 				put("call","String");
 				put("reference","String");
 				put("chr","String");
@@ -569,45 +600,63 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				put("freq","Double");
 				put("counts","Integer");
 				put("name","String"); 
-				put("embargo_end_date","org.varioml.util.JAXBVarioDate");
-				put("created","org.varioml.util.JAXBVarioDateTime");
+				put("embargo_end_date","org.varioml.util.VMLDate");
+				put("created","org.varioml.util.VMLDateTime");
 				
 			 } 
 		};  
 
-		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("new_variant.xml");
-////		xu.printExampleElements(typeMap);
+		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome_all.xml");
+		//xu.printExampleElements(typeMap);
+		xu2.generateCode("org.varioml.jaxb.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
+			{put("source","Source");};
+		})); // size=8 2011-08-29 20:37:47
+
+		xu2.generateCode("org.varioml.jaxb.FreqCategory","//cafe_variome/variant/frequency/category",x(typeMap,new HashMap<String,String>(){
+	        {put("_","_");};
+		})); // size=15 2011-12-11 19:51:02
+
 		
-		xu.generateCode("org.varioml.jaxb.Variant","//variant_group/variant",x(typeMap,new HashMap<String,String>(){ 
+		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+		xu.generateCode("org.varioml.jaxb.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
+			{put(TEXT_NODE,"org.varioml.util.VMLDate");};
+		})); // size=2 2011-06-20 21:40:02
+		
+		xu.generateCode("org.varioml.jaxb.ObservationDate","//lsdb/variant/observation_date",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+
+		xu.generateCode("org.varioml.jaxb.Value","//lsdb/variant/value",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+
+		
+		xu.generateCode("org.varioml.jaxb.Observation","//lsdb/individual/observation",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); // 
+		
+		xu.generateCode("org.varioml.jaxb.Variant","//lsdb/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
-		xu.generateCode("org.varioml.jaxb.VariantEvent","//variant_group/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.VariantEvent","//lsdb/variant/haplotype/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
-//
-//		xu.generateCode("org.varioml.jaxb.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
-//			{put("_","_");};
-//		})); 
-//
+
+		xu.generateCode("org.varioml.jaxb.VariantGroup","//variant_group",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); 
+
 		xu.generateCode("org.varioml.jaxb.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); 
 
 
-		xu = GenerateJAXBCode.createInstance("lsdb_test_all_new.xml");
-		//xu.printExampleElements(typeMap);
-//
 		xu.generateCode("org.varioml.jaxb.Lsdb","//lsdb",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=25 2011-06-20 21:40:02		
 
 
-		xu.generateCode("org.varioml.jaxb.VariantGroup","//lsdb/individual/variant_group",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		})); 
 
 		xu.generateCode("org.varioml.jaxb.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
@@ -615,34 +664,22 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		
 		//if ( true) System.exit(1);
 
-		xu = GenerateJAXBCode.createInstance("cafe_variome_all.xml");
-		//xu.printExampleElements(typeMap);
-		xu.generateCode("org.varioml.jaxb.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
-			{put("source","Source");};
-		})); // size=8 2011-08-29 20:37:47
-
-		xu.generateCode("org.varioml.jaxb.FreqCategory","//cafe_variome/variant/frequency/category",x(typeMap,new HashMap<String,String>(){
-	        {put("_","_");};
-		})); // size=15 2011-12-11 19:51:02
 
 		//if ( false ) return;
 
 		
 		
-		xu = GenerateJAXBCode.createInstance("lsdb_test_all.xml");
-		//xu.printExampleElements(typeMap);
-
 
 		xu.generateCode("org.varioml.jaxb.Comment","//lsdb/comment",x(typeMap,new HashMap<String,String>(){ 
 			{put("text","CommentText");};
 		})); // size=25 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.EvidenceCode","//lsdb/comment/evidence_code",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.EvidenceCode","//lsdb/variant/evidence_code",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=19 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.Score","//lsdb/comment/evidence_code/score",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
+		xu.generateCode("org.varioml.jaxb.Score","//lsdb/variant/evidence_code/score",x(typeMap,new HashMap<String,String>(){ 
+			{put("value","Double");};
 		})); // size=17 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.ProtocolId","//lsdb/comment/protocol_id",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.ProtocolId","//lsdb/variant/protocol_id",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.CommentText","//lsdb/comment/text",x(typeMap,new HashMap<String,String>(){ 
@@ -688,9 +725,6 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.jaxb.SharingPolicy","//lsdb/individual/sharing_policy",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=14 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
-			{put(TEXT_NODE,"org.varioml.util.VarioDate");};
-		})); // size=2 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.UsePermission","//lsdb/individual/sharing_policy/use_permission",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=15 2011-06-20 21:40:02
@@ -715,10 +749,6 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.jaxb.Exon","//lsdb/individual/variant/exon",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=4 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");}; 
-//    WE need to do this manually since it users choice group		
-		})); // size=25 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.Gene","//lsdb/individual/variant/gene",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02
@@ -737,7 +767,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			{put("_","_");};
 		})); // size=9 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.jaxb.Panel","//lsdb/individual/variant/panel",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
 		})); // size=55 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.Pathogenicity","//lsdb/individual/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
@@ -756,7 +786,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.jaxb.SeqChanges","//lsdb/individual/variant/seq_changes",x(typeMap,new HashMap<String,String>(){ 
 			{put("variant","ConsVariant");};
 		})); // size=21 2011-06-20 21:40:02
-		xu.generateCode("org.varioml.jaxb.ConsVariant","//lsdb/individual/variant/seq_changes/variant",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.ConsVariant","//lsdb/variant/seq_changes/variant",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
 			{put("source","Source");};
 		})); // size=21 2011-06-20 21:40:02

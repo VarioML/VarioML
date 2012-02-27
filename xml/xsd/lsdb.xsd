@@ -14,6 +14,9 @@
   
   haplotype element added into variant
   variant added into lsdb element
+  unit added into comment text. panel into VmlSubmission. observation_date into observation
+  name valeu pairs added into vmlObservation. Generic observation element made
+  observatuon added into observation target
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
   <!--
@@ -50,6 +53,7 @@
       <xs:extension base="vml:VmlSubmission">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:panel"/>
           <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
           <xs:group ref="vml:VmlAnnotatable"/>
         </xs:sequence>
@@ -107,6 +111,7 @@
       <xs:element minOccurs="0" ref="vml:strain"/>
       <xs:element minOccurs="0" ref="vml:cultivar"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:phenotype"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:observation"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:population"/>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_group"/>
@@ -225,6 +230,7 @@
       </xs:choice>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:phenotype"/>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:variant"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:observation"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_group"/>
       <xs:element minOccurs="0" ref="vml:sharing_policy"/>
       <xs:element minOccurs="0" ref="vml:creation_date"/>
@@ -843,6 +849,29 @@
   </xs:complexType>
   <!--
     (=)	===============================
+     X	Observation date
+    (=)	===============================
+  -->
+  <xs:element name="observation_date">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observation_date.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlObservationDate">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlObservationDate">
+    <xs:group ref="vml:VmlAnnotatable"/>
+    <xs:attribute name="coded" type="xs:boolean"/>
+    <xs:attribute name="date" use="required" type="vml:VmlDate"/>
+  </xs:complexType>
+  <!--
+    (=)	===============================
      X	Gene
     (=)	===============================
   -->
@@ -867,10 +896,17 @@
       <xs:extension base="vml:VmlDbXRef"/>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="dob" type="vml:VmlDobDate">
+  <xs:element name="dob">
     <xs:annotation>
       <xs:documentation>[% INSERT dob.txt %]</xs:documentation>
     </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="vml:VmlDobDate">
+          <xs:attribute name="coded" type="xs:boolean"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
   </xs:element>
   <xs:simpleType name="VmlDobDate">
     <xs:annotation>
@@ -1484,13 +1520,55 @@
   </xs:element>
   <!--
     (=)	===============================
+     X	Observations of individual
+    (=)	===============================
+  -->
+  <xs:element name="observation">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observation.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlGenericObservation">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VmlGenericObservation">
+    <xs:annotation>
+      <xs:documentation>[% INSERT observation.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="lifestyle"/>
+          <xs:enumeration value="environment"/>
+          <xs:enumeration value="relationship"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--
+    (=)	===============================
      X	Phenotype of individual
     (=)	===============================
   -->
-  <xs:element name="phenotype" type="vml:VmlPhenotype">
+  <xs:element name="phenotype">
     <xs:annotation>
       <xs:documentation>[% INSERT phenotype.txt %]</xs:documentation>
     </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlPhenotype">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
   </xs:element>
   <xs:complexType name="VmlPhenotype">
     <xs:annotation>
@@ -1499,10 +1577,16 @@
     <xs:sequence>
       <xs:element minOccurs="0" ref="vml:inheritance_pattern"/>
       <xs:group ref="vml:VmlEvidenceOntologyTerm"/>
-      <xs:group ref="vml:VmlForeignNodes"/>
     </xs:sequence>
+    <xs:attribute name="type">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="symptom"/>
+          <xs:enumeration value="diagnose"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
     <xs:attributeGroup ref="vml:VmlEvidenceOntologyTerm"/>
-    <xs:attributeGroup ref="vml:VmlForeignNodes"/>
   </xs:complexType>
   <xs:element name="inheritance_pattern">
     <xs:annotation>
@@ -1661,12 +1745,11 @@
   </xs:element>
   <xs:complexType name="VmlScore">
     <xs:sequence>
-      <xs:element ref="vml:value"/>
+      <xs:element name="value" type="xs:float"/>
       <xs:group ref="vml:VmlOntologyTerm"/>
     </xs:sequence>
     <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
   </xs:complexType>
-  <xs:element name="value" type="xs:float"/>
   <!--
     (=)	===============================
      X	GroupType
@@ -1713,8 +1796,10 @@
       <xs:documentation>[% INSERT observation.txt %]</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:value"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:evidence_code"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:protocol_id"/>
+      <xs:element minOccurs="0" ref="vml:observation_date"/>
     </xs:sequence>
   </xs:group>
   <!--
@@ -1816,6 +1901,40 @@
     <xs:attribute name="lang"/>
     <xs:attribute name="encoding"/>
   </xs:attributeGroup>
+  <!--
+    (=)	===============================
+     X	Value/Name value pair
+    (=)	===============================
+  -->
+  <xs:group name="value">
+    <xs:sequence>
+      <xs:element name="value">
+        <xs:annotation>
+          <xs:documentation>[% INSERT value.txt %]</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="vml:VmlValue">
+              <xs:group ref="vml:VmlForeignNodes"/>
+              <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VmlValue">
+    <xs:annotation>
+      <xs:documentation>[% INSERT value.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="vml:value"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
+    <xs:attribute name="unit" use="required" type="xs:string"/>
+    <xs:attribute name="val" use="required" type="xs:string"/>
+  </xs:complexType>
   <!--
     (=)	===============================
      X	Source
