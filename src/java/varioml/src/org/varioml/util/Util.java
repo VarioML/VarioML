@@ -2,12 +2,9 @@ package org.varioml.util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Map;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
@@ -18,27 +15,11 @@ import javax.xml.bind.ValidationEventHandler;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.AnnotationIntrospector;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectReader;
 import org.codehaus.jackson.map.ObjectWriter;
 import org.codehaus.jackson.map.introspect.JacksonAnnotationIntrospector;
 import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
-import org.simpleframework.xml.Serializer;
-import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.strategy.Strategy;
-import org.simpleframework.xml.strategy.Type;
-import org.simpleframework.xml.strategy.Value;
-import org.simpleframework.xml.strategy.Visitor;
-import org.simpleframework.xml.strategy.VisitorStrategy;
-import org.simpleframework.xml.stream.Format;
-import org.simpleframework.xml.stream.InputNode;
-import org.simpleframework.xml.stream.NodeMap;
-import org.simpleframework.xml.stream.OutputNode;
-import org.simpleframework.xml.stream.Style;
-
-import scala.sys.process.ProcessBuilderImpl.FileInput;
 
 public class Util {
 
@@ -95,34 +76,6 @@ public class Util {
 		}
 
 		return f;
-	}
-
-	@Deprecated
-	public static Serializer createSerializer() {
-
-		Style style = new UnderscoreStyle();
-		VarioTypeMatcher mat = new VarioTypeMatcher();
-		Format format = new Format(style);
-		Visitor vis = new Visitor() {
-
-			@Override
-			public void write(Type type, NodeMap<OutputNode> node) throws Exception {
-				OutputNode element = node.getNode();
-				OutputNode n = node.get("class") ; // todo: fix the hack. We need to remove simplexml default typing since since do not work with traits
-				if ( n != null && n.getValue().startsWith("varioml.parsers")) { 
-					node.remove("class");
-				}
-			}
-
-			@Override
-			public void read(Type type, NodeMap<InputNode> node) throws Exception {
-
-			}
-		};
-		VisitorStrategy str = new VisitorStrategy(vis);
-		final Serializer ser = new Persister(str, mat, format);
-		return ser;
-
 	}
 
 	public void writeJSON ( String file, Object obj   ) {
@@ -219,16 +172,6 @@ public class Util {
 
 		
 	}
-
-	public static Serializer createSerializer2() {
-
-		Format format = new Format();
-		VarioTypeMatcher mat = new VarioTypeMatcher();
-		final Serializer ser = new Persister(mat, format);
-		return ser;
-
-	}
-
 	public static void log(Class cls, String message) {
 		System.err.println("LOG : " + cls.getName() + " message: " + message);
 		System.err.flush();
