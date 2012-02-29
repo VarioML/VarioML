@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.varioml.jaxb.Value;
+
 
 public class InterfaceGenerator {
 
@@ -133,44 +133,64 @@ public class InterfaceGenerator {
 			+ EOL
 			+ "   public void addLocation(Location item ) ;  " + EOL + "";
 
-	public static final String VARIANT_DETAILS[] = { "getOriginalId", "addExon" };
-	public static final String VARIANT_DETAIL_METHODS = 
-			"	public void setVariantTypeList( List<VariantType> variantType) ;"
-			+ EOL
-			+ "	public List<VariantType> getVariantTypeList() ;"
-			+ EOL
-			+ "	public void addVariantType(VariantType item ) ;"
-			+ EOL
-			+ "	public void setVariantClassList( List<VariantClass> variantClass) ;"
-			+ EOL
-			+ "	public List<VariantClass> getVariantClassList() ;"
-			+ EOL
-			+ "	public void addVariantClass(VariantClass item ) ;"
-			+ EOL
-			+ "	public void setOriginalId( OriginalId originalId) ;"
-			+ EOL
-			+ "	public OriginalId getOriginalId() ;"
-			+ EOL
-			+ "	public void setExonList( List<Exon> exon) ;"
-			+ EOL
-			+ "	public List<Exon> getExonList() ;"
-			+ EOL
-			+ "	public void addExon(Exon item ) ;"
-			+ EOL
-			+ "	public void setVariantDetection( VariantDetection variantDetection) ;"
-			+ EOL
-			+ "	public VariantDetection getVariantDetection() ;"
-			+ EOL
-			+ "	public void setRestrictionSite( RestrictionSite restrictionSite) ;"
-			+ EOL
-			+ "	public RestrictionSite getRestrictionSite() ;"
-			+ EOL
-			+ "	public void setGeneticOriginList( List<GeneticOrigin> geneticOrigin) ;"
-			+ EOL
-			+ "	public List<GeneticOrigin> getGeneticOriginList() ;"
-			+ EOL
-			+ "	public void addGeneticOrigin(GeneticOrigin item ) ;" + EOL + "";
+	
+	public static final String CONS_VARIANT[] = { "setRefSeq", "setVariantTypeList","getTissueDistribution" }; //extend by REPORTING_VARIANT2
+	public static final String CONS_VARIANT_METHODS =
+			"	public  void setType( String attr_type)  ; " 
+					+ EOL +"	public  String getType()  ; " 
+					+ EOL +"	public  void setRefSeq( RefSeq refSeq)  ; " 
+					+ EOL +"	public  RefSeq getRefSeq()  ; "
 
+//					+ EOL +"	public  void setVariantTypeList( List<VariantType> variantType)  ; " 
+//					+ EOL +"	public  List<VariantType> getVariantTypeList()   ; " 
+//					+ EOL +"	public  void addVariantType(VariantType item )  ; " 
+				 
+//					+ EOL +"	public  void setOriginalId( OriginalId originalId)  ; " 
+//					+ EOL +"	public  OriginalId getOriginalId()  ; "
+					+ EOL +"	public  void setSequence( Sequence sequence)  ; " 
+					+ EOL +"	public  Sequence getSequence()  ; "
+					+ EOL +"	public  void setGenotype( Genotype genotype)  ; " 
+					+ EOL +"	public  Genotype getGenotype()  ; "
+				 
+//					+ EOL +"	public  void setVariantDetection( VariantDetection variantDetection)  ; " 
+//					+ EOL +"	public  VariantDetection getVariantDetection()  ; "
+					+ EOL +"	public  void setTissueDistribution( TissueDistribution tissueDistribution)  ; " 
+					+ EOL +"	public  TissueDistribution getTissueDistribution()  ; "
+					+ EOL ;
+	
+
+	public static final String LSDB_VARIANT_SOURCE_INFO_DETAILS[] = { "getVariantClassList", "addExon","addGeneticOrigin" };
+	public static final String LSDB_VARIANT_SOURCE_INFO_DETAILS_METHODS =
+			"	public  void setVariantClassList( List<VariantClass> variantClass)  ; " 
+					+ EOL +"	public  List<VariantClass> getVariantClassList()   ; " 
+					+ EOL +"	public  void addVariantClass(VariantClass item )  ; " 
+
+					+ EOL +"	public  void setExonList( List<Exon> exon)  ; " 
+					+ EOL +"	public  List<Exon> getExonList()   ; " 
+					+ EOL +"	public  void addExon(Exon item )  ; " 
+				 
+				 
+					+ EOL +"	public  void setRestrictionSite( RestrictionSite restrictionSite)  ; " 
+					+ EOL +"	public  RestrictionSite getRestrictionSite()  ; "
+				 
+					+ EOL +"	public  void setGeneticOriginList( List<GeneticOrigin> geneticOrigin)  ; " 
+					+ EOL +"	public  List<GeneticOrigin> getGeneticOriginList()   ; " 
+					+ EOL +"	public  void addGeneticOrigin(GeneticOrigin item )  ; " 
+					+ EOL ;
+
+	public static final String LSDB_VARIANT_SOURCE_INFO[] = { "getOriginalId", "getOriginalId","getVariantDetection" };
+	public static final String LSDB_VARIANT_SOURCE_INFO_METHODS = 
+			"	public  void setVariantTypeList( List<VariantType> variantType)  ; " 
+					+ EOL +"	public  List<VariantType> getVariantTypeList()   ; " 
+					+ EOL +"	public  void addVariantType(VariantType item )  ; " 
+
+					+ EOL +"	public  void setOriginalId( OriginalId originalId)  ; " 
+					+ EOL +"	public  OriginalId getOriginalId()  ; "
+
+					+ EOL +"	public  void setVariantDetection( VariantDetection variantDetection)  ; " 
+					+ EOL +"	public  VariantDetection getVariantDetection()  ; "
+					+ EOL;
+	
 	public static final String FREQUENCEYABLE[] = { "getFrequencyList" };
 	public static final String FREQUENCEYABLE_METHODS = 
 			"   public void setFrequencyList( List<Frequency> frequency) ;  "
@@ -389,8 +409,22 @@ public class InterfaceGenerator {
 		generateCode("VmlVariantObservation",
 				"extends VmlAnnotatable,VmlObservable,VmlIdentifiable",
 				VARIANT_CHARACTERISTIC_METHODS);
-		generateCode("VmlDetailedVariantObservation", "extends VmlVariantObservation",
-				VARIANT_DETAIL_METHODS);
+
+		generateCode("VmlLsdbSourceInfo", "",
+				LSDB_VARIANT_SOURCE_INFO_METHODS);
+
+		generateCode("VmlLsdbSourceInfo2", "",
+				LSDB_VARIANT_SOURCE_INFO_DETAILS_METHODS);
+
+
+		generateCode("VmlVariantEvent", "extends VmlVariantObservation, VmlLsdbSourceInfo, VmlLsdbSourceInfo2,VmlFrequency",
+				"");
+		
+		generateCode("VmlSimpleVariantEvent", "extends VmlVariantObservation,VmlLsdbSourceInfo",
+				CONS_VARIANT_METHODS);
+
+		generateCode("VmlReportingVariant", "extends VmlSimpleVariantEvent,VmlVariantEvent",
+				CONS_VARIANT_METHODS);
 		generateCode("VmlFrequency", "", FREQUENCEYABLE_METHODS);
 
 	}
@@ -424,9 +458,15 @@ public class InterfaceGenerator {
 					if (!c.isInterface()) {
 
 						Method m[] = c.getDeclaredMethods();
-						if (isSame(VARIANT_DETAILS, m)) {
-							System.err.println("Variant: " + c.getName());
-							gen.patchSource(c, "implements VmlDetailedVariantObservation ");
+						if (isSame(LSDB_VARIANT_SOURCE_INFO_DETAILS, m) && isSame(CONS_VARIANT,m) && isSame(LSDB_VARIANT_SOURCE_INFO, m)) {
+							System.err.println("LSDB Reporting Variant: " + c.getName());
+							gen.patchSource(c, "implements VmlReportingVariant ");
+						} else if (isSame(LSDB_VARIANT_SOURCE_INFO_DETAILS, m) && isSame(VARIANT_CHARACTERISTIC,m)) {
+							System.err.println("VariantEvent: " + c.getName());
+							gen.patchSource(c, "implements VmlVariantEvent");
+						} else if (isSame(CONS_VARIANT, m) && isSame(LSDB_VARIANT_SOURCE_INFO,m)) {
+							System.err.println("VmlSimpleVariantEvent (ConsVariant): " + c.getName());
+							gen.patchSource(c, "implements VmlSimpleVariantEvent");
 						} else if (isSame(VARIANT_CHARACTERISTIC, m)) {
 							System.err.println("Variant observation: " + c.getName());
 							gen.patchSource(c, "implements VmlVariantObservation ");
@@ -446,7 +486,7 @@ public class InterfaceGenerator {
 							System.err.println("VmlAnnotatable: " + c.getName());
 							gen.patchSource(c, "implements VmlAnnotatable ");							
 						}
-						if (isSame(FREQUENCEYABLE, m)) {
+						if (isSame(FREQUENCEYABLE, m) && !(isSame(LSDB_VARIANT_SOURCE_INFO_DETAILS, m) && isSame(LSDB_VARIANT_SOURCE_INFO,m))) {
 							System.err.println("Frequencyable: " + c.getName());
 							gen.patchSource(c, "VmlFrequency");
 						}
