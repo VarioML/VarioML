@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_allele","_attr_id","_attr_uri","_name","_variant","_sequence","_consequence","_pathogenicity","_frequency","_seqChanges","_aliases","_source","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
-public class Haplotype /**/implements VmlVariantObservation,VmlFrequency/**/ {
+public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	//xml-element used for code generation: //variant_group/variant/haplotype
 
 	public Haplotype(  ) {
@@ -59,16 +59,16 @@ public class Haplotype /**/implements VmlVariantObservation,VmlFrequency/**/ {
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
-	private List<Variant> _variant ;
-	public void setVariantList( List<Variant> variant) { 
+	private List<VariantEvent> _variant ;
+	public void setVariantList( List<VariantEvent> variant) { 
 		this._variant = variant ;
 	}
-	public List<Variant> getVariantList()  { 
+	public List<VariantEvent> getVariantList()  { 
 		return this._variant;
 	}
-	public void addVariant(Variant item ) { 
+	public void addVariant(VariantEvent item ) { 
 		if ( this._variant == null ) { 
-			this._variant = new ArrayList<Variant>();
+			this._variant = new ArrayList<VariantEvent>();
 		}
 		this._variant.add( item);
 	}
