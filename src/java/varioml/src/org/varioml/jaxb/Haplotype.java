@@ -59,16 +59,16 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
-	private List<VariantEvent> _variant ;
-	public void setVariantList( List<VariantEvent> variant) { 
+	private List<VmlVariantEvent> _variant ;
+	public void setVariantList( List<VmlVariantEvent> variant) { 
 		this._variant = variant ;
 	}
-	public List<VariantEvent> getVariantList()  { 
+	public List<VmlVariantEvent> getVariantList()  { 
 		return this._variant;
 	}
-	public void addVariant(VariantEvent item ) { 
+	public void addVariant(VmlVariantEvent item ) { 
 		if ( this._variant == null ) { 
-			this._variant = new ArrayList<VariantEvent>();
+			this._variant = new ArrayList<VmlVariantEvent>();
 		}
 		this._variant.add( item);
 	}
