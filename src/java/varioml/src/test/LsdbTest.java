@@ -53,7 +53,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON2() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "templates/lsdb_19.2.2012.xml",org.varioml.jaxb.Lsdb.class);
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "templates/panel1.xml",org.varioml.jaxb.Lsdb.class);
 		List<org.varioml.jaxb.Source> src = o.getSourceList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {

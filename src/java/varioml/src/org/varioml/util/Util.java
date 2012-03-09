@@ -185,10 +185,10 @@ public class Util {
 	public static void main(String[] args) throws Exception {
 
 		Util util = new Util();
-		org.varioml.jaxb.CafeVariome o =  (org.varioml.jaxb.CafeVariome)util.readXML("cafe_variome.xsd", "cafe_variome.xml",org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.Panel o =  (org.varioml.jaxb.Panel)util.readXML("lsdb.xsd", "templates/panel1.xml",org.varioml.jaxb.Panel.class);
 		util.writeJSON("tmp.json", o);
-		Object x = util.readJSON("tmp.json",org.varioml.jaxb.CafeVariome.class);
-		util.writeXML("cafe_variome.xsd", "tmp.xml",x);
+		Object x = util.readJSON("tmp.json",org.varioml.jaxb.Panel.class);
+		util.writeXML("lsdb.xsd", "tmp.xml",x);
 		
 	}
 }

@@ -4,14 +4,14 @@ import java.util.List;
 
 @org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
 @org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
-@javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="panel")
-@javax.xml.bind.annotation.XmlType(propOrder = {  "_individual","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_size","_attr_type","_attr_uri","_individual","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
+@javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
+@javax.xml.bind.annotation.XmlType(propOrder = {  "_individual","_gender","_dob","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_size","_attr_type","_attr_uri","_attr_xmlns","_attr_xmlnsXsi","_attr_xsiSchemaLocation","_individual","_gender","_dob","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
 
 
 public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
-	//xml-element used for code generation: //lsdb/panel
+	//xml-element used for code generation: //panel
 
 	public Panel(  ) {
 	}
@@ -56,6 +56,36 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 		return this._attr_uri;
 	}
  
+	// ===========-- xmlns --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xmlns")
+	private String _attr_xmlns ;
+	public void setXmlns( String attr_xmlns) { 
+		this._attr_xmlns = attr_xmlns ;
+	}
+	public String getXmlns() { 
+		return this._attr_xmlns;
+	}
+ 
+	// ===========-- xmlns:xsi --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xmlns:xsi")
+	private String _attr_xmlnsXsi ;
+	public void setXmlnsXsi( String attr_xmlnsXsi) { 
+		this._attr_xmlnsXsi = attr_xmlnsXsi ;
+	}
+	public String getXmlnsXsi() { 
+		return this._attr_xmlnsXsi;
+	}
+ 
+	// ===========-- xsi:schemaLocation --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xsi:schemaLocation")
+	private String _attr_xsiSchemaLocation ;
+	public void setXsiSchemaLocation( String attr_xsiSchemaLocation) { 
+		this._attr_xsiSchemaLocation = attr_xsiSchemaLocation ;
+	}
+	public String getXsiSchemaLocation() { 
+		return this._attr_xsiSchemaLocation;
+	}
+ 
 	// ===========-- individual --===========
    @org.codehaus.jackson.annotate.JsonProperty("individuals")
    @javax.xml.bind.annotation.XmlElement(required=false,name="individual",type=Individual.class,namespace="http://varioml.org/xml/1.0")
@@ -71,6 +101,26 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 			this._individual = new ArrayList<Individual>();
 		}
 		this._individual.add( item);
+	}
+ 
+	// ===========-- gender --===========
+	@javax.xml.bind.annotation.XmlElement(required=false,name="gender",type=Gender.class,namespace="http://varioml.org/xml/1.0")
+	private Gender _gender ;
+	public void setGender( Gender gender) { 
+		this._gender = gender ;
+	}
+	public Gender getGender() {
+		return this._gender;
+	}
+ 
+	// ===========-- dob --===========
+	@javax.xml.bind.annotation.XmlElement(required=false,name="dob",type=org.varioml.util.VMLDate.class,namespace="http://varioml.org/xml/1.0")
+	private org.varioml.util.VMLDate _dob ;
+	public void setDob( org.varioml.util.VMLDate dob) { 
+		this._dob = dob ;
+	}
+	public org.varioml.util.VMLDate getDob() {
+		return this._dob;
 	}
  
 	// ===========-- age --===========

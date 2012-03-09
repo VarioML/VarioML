@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.varioml.jaxb.Age;
+import org.varioml.jaxb.Gender;
 
 
 
@@ -239,8 +240,15 @@ public class InterfaceGenerator {
 
 	public static final String OBSERVATION_TARGET[] = { "getPopulationList", "getStrain" };
 	public static final String OBSERVATION_TARGET_METHODS = 
-
-			"	public void setAge( Age age);"
+			"	public void setGender( Gender gender) ;"
+			+EOL
+			+"	public Gender getGender() ;"
+			+EOL
+			+"	public void setDob( org.varioml.util.VMLDate dob) ;"
+			+EOL
+			+"	public org.varioml.util.VMLDate getDob() ;"
+			+EOL
+			+ "	public void setAge( Age age);"
 			+ EOL
 			+ "	public Age getAge() ;" 
 			+ EOL 					

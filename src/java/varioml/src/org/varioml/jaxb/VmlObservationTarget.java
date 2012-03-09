@@ -3,6 +3,10 @@ package org.varioml.jaxb;
 import java.util.*;
 public interface VmlObservationTarget extends VmlIdentifiable, VmlAnnotatable {
 
+	public void setGender( Gender gender) ;
+	public Gender getGender() ;
+	public void setDob( org.varioml.util.VMLDate dob) ;
+	public org.varioml.util.VMLDate getDob() ;
 	public void setAge( Age age);
 	public Age getAge() ;
 	public void setOriginalId( OriginalId originalId);

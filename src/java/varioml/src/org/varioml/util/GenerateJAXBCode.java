@@ -610,15 +610,15 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			 } 
 		};  
 
-		if ( false) {
+		if ( true ) { // these are removed from the code below
 			System.err.println("Generating");
-			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
-			xu0.generateCode("org.varioml.jaxb.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
-				{put("name","VariantName");};
-				{put("variant","VariantEvent");};
+			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/seq_region1.xml");
+			xu0.generateCode("org.varioml.jaxb.SeqRegion","//seq_region",x(typeMap,new HashMap<String,String>(){ 
+		    })); 
+			xu0.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
 				{put("source","Source");};
-			})); 
-			return ;
+			})); // size=55 2011-06-20 21:40:02
+
 		}
 		
 		if ( false) {
@@ -664,8 +664,8 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.jaxb.Value","//lsdb/variant/value",x(typeMap,new HashMap<String,String>(){ 
 	    })); 
 
-		xu.generateCode("org.varioml.jaxb.SeqRegion","//lsdb/variant/seq_region",x(typeMap,new HashMap<String,String>(){ 
-	    })); 
+//		xu.generateCode("org.varioml.jaxb.SeqRegion","//lsdb/variant/seq_region",x(typeMap,new HashMap<String,String>(){ 
+//	    })); 
 		
 		xu.generateCode("org.varioml.jaxb.Observation","//lsdb/individual/observation",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
@@ -811,9 +811,10 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			{put("_","_");};
 		})); // size=9 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
-			{put("source","Source");};
-		})); // size=55 2011-06-20 21:40:02
+//		xu.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
+//			{put("source","Source");};
+//		})); // size=55 2011-06-20 21:40:02
+
 		xu.generateCode("org.varioml.jaxb.Pathogenicity","//lsdb/individual/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=33 2011-06-20 21:40:02
