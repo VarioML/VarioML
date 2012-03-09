@@ -58,7 +58,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- text --===========
    @org.codehaus.jackson.annotate.JsonProperty("texts")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="text",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="text",type=CommentText.class,namespace="http://varioml.org/xml/1.0")
 	private List<CommentText> _text ;
 	public void setTextList( List<CommentText> text) { 
 		this._text = text ;
@@ -75,7 +75,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- value --===========
    @org.codehaus.jackson.annotate.JsonProperty("values")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="value",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
 		this._value = value ;
@@ -92,7 +92,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- evidence_code --===========
    @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
 		this._evidenceCode = evidenceCode ;
@@ -109,7 +109,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- protocol_id --===========
    @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
 		this._protocolId = protocolId ;
@@ -125,7 +125,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
 	}
  
 	// ===========-- observation_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",type=ObservationDate.class,namespace="http://varioml.org/xml/1.0")
 	private ObservationDate _observationDate ;
 	public void setObservationDate( ObservationDate observationDate) { 
 		this._observationDate = observationDate ;
@@ -136,7 +136,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -153,7 +153,7 @@ public class Comment /**/implements VmlSimpleObservation /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

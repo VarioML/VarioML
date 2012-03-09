@@ -1,9 +1,11 @@
 
-Type of variation. 
+
+Variation class.  Note the difference between variant_type which describes type of underlying sequence region
+See also http://www.jcvi.org/cms/research/projects/variantclassifier. 
+
 
 [Sequence Ontology](http://www.sequenceontology.org/browser/current_release/term/SO:0001059) terms should be used.
 
-Equivalent to the functional class in dbSNP.
 
 *Examples:*
 indel (accession = 1000032)

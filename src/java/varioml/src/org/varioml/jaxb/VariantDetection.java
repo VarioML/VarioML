@@ -37,7 +37,7 @@ public class VariantDetection /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- protocol_id --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private ProtocolId _protocolId ;
 	public void setProtocolId( ProtocolId protocolId) { 
 		this._protocolId = protocolId ;
@@ -48,7 +48,7 @@ public class VariantDetection /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -65,7 +65,7 @@ public class VariantDetection /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

@@ -17,7 +17,7 @@ public class Genotype /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- call --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="call",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="call",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _call ;
 	public void setCall( String call) { 
 		this._call = call ;
@@ -28,7 +28,7 @@ public class Genotype /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -45,7 +45,7 @@ public class Genotype /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

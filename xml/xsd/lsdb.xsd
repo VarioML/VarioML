@@ -11,12 +11,9 @@
   
   new name space http://varioml.org/xml/1.0
   
-  
-  haplotype element added into variant
-  variant added into lsdb element
-  unit added into comment text. panel into VmlSubmission. observation_date into observation
-  name valeu pairs added into vmlObservation. Generic observation element made
-  observatuon added into observation target
+  unit added into location has values feature (e.g. num. of exons) and residue
+  seq_region annotation taken into use , age added into observation target
+  FIXES  put seq_region sub element before annotatable, add gender into the panel (i.e. observation target)
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
   <!--
@@ -96,6 +93,9 @@
       <xs:documentation>[% INSERT abstract_observation_target.txt %]</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element minOccurs="0" ref="vml:gender"/>
+      <xs:element minOccurs="0" ref="vml:dob"/>
+      <xs:element minOccurs="0" ref="vml:age"/>
       <xs:element minOccurs="0" ref="vml:original_id"/>
       <xs:element minOccurs="0" ref="vml:role"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:relationship">
@@ -117,6 +117,9 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_group"/>
       <xs:group minOccurs="0" ref="vml:source"/>
       <xs:group ref="vml:VmlAnnotatable"/>
+      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
+      <xs:element minOccurs="0" ref="vml:creation_date"/>
+      <xs:element minOccurs="0" ref="vml:modification_date"/>
     </xs:sequence>
   </xs:group>
   <xs:attributeGroup name="VmlAbstractObservationTarget">
@@ -147,14 +150,7 @@
     <xs:annotation>
       <xs:documentation>[% INSERT individual.txt %]</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" ref="vml:gender"/>
-      <xs:element minOccurs="0" ref="vml:dob"/>
-      <xs:group ref="vml:VmlAbstractObservationTarget"/>
-      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
-      <xs:element minOccurs="0" ref="vml:creation_date"/>
-      <xs:element minOccurs="0" ref="vml:modification_date"/>
-    </xs:sequence>
+    <xs:group ref="vml:VmlAbstractObservationTarget"/>
     <xs:attributeGroup ref="vml:VmlAbstractObservationTarget"/>
   </xs:complexType>
   <!--
@@ -182,9 +178,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:individual"/>
       <xs:group ref="vml:VmlAbstractObservationTarget"/>
-      <xs:element minOccurs="0" ref="vml:sharing_policy"/>
-      <xs:element minOccurs="0" ref="vml:creation_date"/>
-      <xs:element minOccurs="0" ref="vml:modification_date"/>
     </xs:sequence>
     <xs:attribute name="size" type="xs:integer"/>
     <xs:attribute name="type">
@@ -200,7 +193,7 @@
   </xs:complexType>
   <!--
     (=)	===============================
-     X	Observation (NOT USED)
+     X	Observationsf (NOT USED)
     (=)	===============================
   -->
   <xs:element name="observations">
@@ -465,6 +458,7 @@
       <xs:group minOccurs="0" ref="vml:name"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:haplotype"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:panel"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:seq_region"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
       <xs:element minOccurs="0" ref="vml:original_id"/>
@@ -595,6 +589,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:group minOccurs="0" ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:seq_region"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
       <xs:element minOccurs="0" ref="vml:original_id"/>
@@ -625,7 +620,9 @@
     <xs:sequence>
       <xs:element minOccurs="0" ref="vml:ref_seq"/>
       <xs:group ref="vml:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:seq_region"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_type"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:variant_class"/>
       <xs:element minOccurs="0" ref="vml:original_id"/>
       <xs:element minOccurs="0" ref="vml:sequence"/>
       <xs:element minOccurs="0" ref="vml:genotype"/>
@@ -868,7 +865,8 @@
   <xs:complexType name="VmlObservationDate">
     <xs:group ref="vml:VmlAnnotatable"/>
     <xs:attribute name="coded" type="xs:boolean"/>
-    <xs:attribute name="date" use="required" type="vml:VmlDate"/>
+    <xs:attribute name="date" type="vml:VmlDate"/>
+    <xs:attribute name="age" type="xs:float"/>
   </xs:complexType>
   <!--
     (=)	===============================
@@ -896,24 +894,42 @@
       <xs:extension base="vml:VmlDbXRef"/>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="dob">
+  <!--
+    (=)	===============================
+     X	Date of brith
+    (=)	===============================
+  -->
+  <xs:element name="dob" type="vml:VmlDobDate">
     <xs:annotation>
       <xs:documentation>[% INSERT dob.txt %]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="vml:VmlDobDate">
-          <xs:attribute name="coded" type="xs:boolean"/>
-        </xs:extension>
-      </xs:simpleContent>
-    </xs:complexType>
   </xs:element>
   <xs:simpleType name="VmlDobDate">
     <xs:annotation>
-      <xs:documentation>[% INSERT modification_date.txt %]</xs:documentation>
+      <xs:documentation>[% INSERT dob.txt %]</xs:documentation>
     </xs:annotation>
     <xs:restriction base="vml:VmlDate"/>
   </xs:simpleType>
+  <!--
+    (=)	===============================
+     X	Age
+    (=)	===============================
+  -->
+  <xs:element name="age" type="vml:VmlAge">
+    <xs:annotation>
+      <xs:documentation>[% INSERT age.txt %]</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VmlAge">
+    <xs:annotation>
+      <xs:documentation>[% INSERT age.txt %]</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="coded" type="xs:boolean"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <!--
     (=)	===============================
      X	Mod and Create Date
@@ -1130,7 +1146,7 @@
   </xs:attributeGroup>
   <!--
     (=)	===============================
-     X	not used 
+     X	 
      X    
     (=)	===============================
   -->
@@ -1151,7 +1167,11 @@
     <xs:annotation>
       <xs:documentation>[% INSERT seq_region.txt %]</xs:documentation>
     </xs:annotation>
-    <xs:group ref="vml:VmlOntologyTerm"/>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:seq_region"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:location"/>
+      <xs:group ref="vml:VmlOntologyTerm"/>
+    </xs:sequence>
     <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
   </xs:complexType>
   <!--
@@ -1242,24 +1262,33 @@
 </xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:sequence>
-        <xs:group ref="vml:VmlLocation"/>
-        <xs:group ref="vml:VmlForeignNodes"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+      <xs:complexContent>
+        <xs:extension base="vml:VmlLocation">
+          <xs:group ref="vml:VmlForeignNodes"/>
+          <xs:attributeGroup ref="vml:VmlForeignNodes"/>
+        </xs:extension>
+      </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:group name="VmlLocation">
+  <xs:complexType name="VmlLocation">
     <xs:annotation>
       <xs:documentation>[% INSERT location.txt %]</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element ref="vml:ref_seq"/>
+      <xs:element minOccurs="0" ref="vml:ref_seq"/>
       <xs:element minOccurs="0" ref="vml:chr"/>
       <xs:element ref="vml:start"/>
       <xs:element minOccurs="0" ref="vml:end"/>
     </xs:sequence>
-  </xs:group>
+    <xs:attribute name="unit">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="feature"/>
+          <xs:enumeration value="residue"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
   <xs:element name="chr" type="xs:string"/>
   <xs:element name="start" type="xs:integer"/>
   <xs:element name="end" type="xs:integer"/>

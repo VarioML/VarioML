@@ -10,7 +10,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_allele","_attr_id","_attr_uri","_name","_variant","_sequence","_consequence","_pathogenicity","_frequency","_seqChanges","_aliases","_source","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
-public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
+public class Haplotype /**/implements VmlVariantObservation,VmlFrequency/**/ {
 	//xml-element used for code generation: //variant_group/variant/haplotype
 
 	public Haplotype(  ) {
@@ -47,7 +47,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- name --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="name",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="name",type=VariantName.class,namespace="http://varioml.org/xml/1.0")
 	private VariantName _name ;
 	public void setName( VariantName name) { 
 		this._name = name ;
@@ -58,7 +58,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=VariantEvent.class,namespace="http://varioml.org/xml/1.0")
 	private List<VmlVariantEvent> _variant ;
 	public void setVariantList( List<VmlVariantEvent> variant) { 
 		this._variant = variant ;
@@ -74,7 +74,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- sequence --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="sequence",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="sequence",type=Sequence.class,namespace="http://varioml.org/xml/1.0")
 	private Sequence _sequence ;
 	public void setSequence( Sequence sequence) { 
 		this._sequence = sequence ;
@@ -85,7 +85,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- consequence --===========
    @org.codehaus.jackson.annotate.JsonProperty("consequences")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="consequence",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="consequence",type=Consequence.class,namespace="http://varioml.org/xml/1.0")
 	private List<Consequence> _consequence ;
 	public void setConsequenceList( List<Consequence> consequence) { 
 		this._consequence = consequence ;
@@ -102,7 +102,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- pathogenicity --===========
    @org.codehaus.jackson.annotate.JsonProperty("pathogenicities")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",type=Pathogenicity.class,namespace="http://varioml.org/xml/1.0")
 	private List<Pathogenicity> _pathogenicity ;
 	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
 		this._pathogenicity = pathogenicity ;
@@ -119,7 +119,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- frequency --===========
    @org.codehaus.jackson.annotate.JsonProperty("frequencies")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",type=Frequency.class,namespace="http://varioml.org/xml/1.0")
 	private List<Frequency> _frequency ;
 	public void setFrequencyList( List<Frequency> frequency) { 
 		this._frequency = frequency ;
@@ -135,7 +135,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- seq_changes --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="seq_changes",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="seq_changes",type=SeqChanges.class,namespace="http://varioml.org/xml/1.0")
 	private SeqChanges _seqChanges ;
 	public void setSeqChanges( SeqChanges seqChanges) { 
 		this._seqChanges = seqChanges ;
@@ -145,7 +145,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- aliases --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="aliases",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="aliases",type=Aliases.class,namespace="http://varioml.org/xml/1.0")
 	private Aliases _aliases ;
 	public void setAliases( Aliases aliases) { 
 		this._aliases = aliases ;
@@ -155,7 +155,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- source --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="source",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="source",type=Source.class,namespace="http://varioml.org/xml/1.0")
 	private Source _source ;
 	public void setSource( Source source) { 
 		this._source = source ;
@@ -166,7 +166,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- location --===========
    @org.codehaus.jackson.annotate.JsonProperty("locations")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="location",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="location",type=Location.class,namespace="http://varioml.org/xml/1.0")
 	private List<Location> _location ;
 	public void setLocationList( List<Location> location) { 
 		this._location = location ;
@@ -183,7 +183,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- value --===========
    @org.codehaus.jackson.annotate.JsonProperty("values")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="value",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
 		this._value = value ;
@@ -200,7 +200,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- evidence_code --===========
    @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
 		this._evidenceCode = evidenceCode ;
@@ -217,7 +217,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- protocol_id --===========
    @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
 		this._protocolId = protocolId ;
@@ -233,7 +233,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
 	}
  
 	// ===========-- observation_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",type=ObservationDate.class,namespace="http://varioml.org/xml/1.0")
 	private ObservationDate _observationDate ;
 	public void setObservationDate( ObservationDate observationDate) { 
 		this._observationDate = observationDate ;
@@ -244,7 +244,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -261,7 +261,7 @@ public class Haplotype /**/ implements VmlVariantObservation,VmlFrequency /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

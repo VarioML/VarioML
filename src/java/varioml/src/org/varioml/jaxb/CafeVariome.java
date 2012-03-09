@@ -87,7 +87,7 @@ public class CafeVariome /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- created --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="created",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="created",type=org.varioml.util.VMLDateTime.class,namespace="http://varioml.org/xml/1.0")
 	private org.varioml.util.VMLDateTime _created ;
 	public void setCreated( org.varioml.util.VMLDateTime created) { 
 		this._created = created ;
@@ -98,7 +98,7 @@ public class CafeVariome /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- source --===========
    @org.codehaus.jackson.annotate.JsonProperty("sources")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="source",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="source",type=Source.class,namespace="http://varioml.org/xml/1.0")
 	private List<Source> _source ;
 	public void setSourceList( List<Source> source) { 
 		this._source = source ;
@@ -115,7 +115,7 @@ public class CafeVariome /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
 	private List<Variant> _variant ;
 	public void setVariantList( List<Variant> variant) { 
 		this._variant = variant ;
@@ -132,7 +132,7 @@ public class CafeVariome /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -149,7 +149,7 @@ public class CafeVariome /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

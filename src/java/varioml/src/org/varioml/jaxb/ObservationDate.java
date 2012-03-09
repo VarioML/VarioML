@@ -7,13 +7,23 @@ import java.util.List;
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="observation_date")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_coded","_attr_date","_dbXref","_comment"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_age","_attr_coded","_attr_date","_dbXref","_comment"})
 
 
 public class ObservationDate /**/implements VmlAnnotatable /**/ {
 	//xml-element used for code generation: //lsdb/variant/observation_date
 
 	public ObservationDate(  ) {
+	}
+ 
+	// ===========-- age --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="age")
+	private Float _attr_age ;
+	public void setAge( Float attr_age) { 
+		this._attr_age = attr_age ;
+	}
+	public Float getAge() { 
+		return this._attr_age;
 	}
  
 	// ===========-- coded --===========
@@ -38,7 +48,7 @@ public class ObservationDate /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -55,7 +65,7 @@ public class ObservationDate /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

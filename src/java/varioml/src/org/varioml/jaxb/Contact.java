@@ -27,7 +27,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- name --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="name",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="name",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _name ;
 	public void setName( String name) { 
 		this._name = name ;
@@ -38,7 +38,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- url --===========
    @org.codehaus.jackson.annotate.JsonProperty("urls")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="url",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="url",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private List<String> _url ;
 	public void setUrlList( List<String> url) { 
 		this._url = url ;
@@ -54,7 +54,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- address --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="address",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="address",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _address ;
 	public void setAddress( String address) { 
 		this._address = address ;
@@ -64,7 +64,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- phone --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="phone",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="phone",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _phone ;
 	public void setPhone( String phone) { 
 		this._phone = phone ;
@@ -74,7 +74,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- fax --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="fax",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="fax",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _fax ;
 	public void setFax( String fax) { 
 		this._fax = fax ;
@@ -84,7 +84,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- email --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="email",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="email",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _email ;
 	public void setEmail( String email) { 
 		this._email = email ;
@@ -95,7 +95,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -112,7 +112,7 @@ public class Contact /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

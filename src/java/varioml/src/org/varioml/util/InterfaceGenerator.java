@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.varioml.jaxb.Age;
+
 
 
 public class InterfaceGenerator {
@@ -180,9 +182,17 @@ public class InterfaceGenerator {
 
 	public static final String LSDB_VARIANT_SOURCE_INFO[] = { "getOriginalId", "getOriginalId","getVariantDetection" };
 	public static final String LSDB_VARIANT_SOURCE_INFO_METHODS = 
-			"	public  void setVariantTypeList( List<VariantType> variantType)  ; " 
+						   "	public  void setSeqRegionList( List<SeqRegion> seqRegion)  ; " 
+					+ EOL +"	public  List<SeqRegion> getSeqRegionList()   ; " 
+					+ EOL +"	public  void addSeqRegion(SeqRegion item )  ; " 
+
+			        + EOL +"	public  void setVariantTypeList( List<VariantType> variantType)  ; " 
 					+ EOL +"	public  List<VariantType> getVariantTypeList()   ; " 
 					+ EOL +"	public  void addVariantType(VariantType item )  ; " 
+
+					+ EOL +"	public  void setVariantClassList( List<VariantClass> variantClass)  ; " 
+					+ EOL +"	public  List<VariantClass> getVariantClassList()   ; " 
+					+ EOL +"	public  void addVariantClass(VariantClass item )  ; " 
 
 					+ EOL +"	public  void setOriginalId( OriginalId originalId)  ; " 
 					+ EOL +"	public  OriginalId getOriginalId()  ; "
@@ -229,7 +239,12 @@ public class InterfaceGenerator {
 
 	public static final String OBSERVATION_TARGET[] = { "getPopulationList", "getStrain" };
 	public static final String OBSERVATION_TARGET_METHODS = 
-			"	public void setOriginalId( OriginalId originalId);"
+
+			"	public void setAge( Age age);"
+			+ EOL
+			+ "	public Age getAge() ;" 
+			+ EOL 					
+			+ "	public void setOriginalId( OriginalId originalId);"
 			+ EOL
 			+ "	public OriginalId getOriginalId() ;"
 			+ EOL
@@ -334,8 +349,14 @@ public class InterfaceGenerator {
 
 	}
 
+
 	private void patchSource(Class c, String interfaces) {
+		patchSource(c, interfaces, "","") ;
+	}
+	
+	private void patchSource(Class c, String interfaces, String from, String to) {
 		String name = "src/" + c.getName().replaceAll("\\.", "/") + ".java";
+		
 		String MARK = "/**/";
 		// String test = "+++"+MARK+name+MARK+"////" ;
 		// System.err.println(
@@ -351,7 +372,7 @@ public class InterfaceGenerator {
 			StringBuffer bf = new StringBuffer();
 			while (line != null) {
 
-				if (line.matches("\\s*public\\s+class.+")) {
+				if (line.matches("\\s*public\\s+class.+") && interfaces.length() > 0) {
 					if (interfaces.startsWith("implements")) {
 						// just replace everything between the comments
 						line = line.replaceAll("/\\*\\*/.*/\\*\\*/", "/**/" + interfaces + "/**/");
@@ -379,6 +400,8 @@ public class InterfaceGenerator {
 							System.err.println("NOT FOUND. Line not changed: " + line);
 						}
 					}
+				} else {
+					line = line.replaceAll("([ \\(\\<])"+from+"([ \\)\\>])","$1"+to+"$2");
 				}
 				bf.append(line);
 				line = fr.readLine();
@@ -445,15 +468,15 @@ public class InterfaceGenerator {
 		InterfaceGenerator gen = new InterfaceGenerator();
 		gen.generateInterfaces();
 
+		//String classNameFilter = "Haplotype.java"; //todo: fix hack
 		for (int i = 0; i < filename.length; i++) {
 
 			String f = filename[i];
 			if (f.endsWith(".java")) {
 				String className = build + "." + f.replaceAll(".java$", "");
 				try {
-					Class c = Class.forName(className); // note rember to
-														// compile generated
-														// classes/interfaces
+					Class c = Class.forName(className); // note rember to compile generated
+
 														// first
 					if (!c.isInterface()) {
 
@@ -493,6 +516,12 @@ public class InterfaceGenerator {
 						if (isSame(SHAREABLE, m)) {
 							System.err.println("Shareable: " + c.getName());
 							gen.patchSource(c, "VmlShareable");
+						}
+
+
+						if ( f.equals("Haplotype.java")) {
+							gen.patchSource(c, "", "VariantEvent", "VmlVariantEvent");
+							System.err.println("Class: Haplotype patched" );
 						}
 
 					}

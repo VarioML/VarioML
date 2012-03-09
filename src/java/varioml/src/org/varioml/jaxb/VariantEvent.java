@@ -6,8 +6,8 @@ import java.util.List;
 @org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="variant_event")
-@javax.xml.bind.annotation.XmlType(propOrder = {  "_name","_variantType","_variantClass","_originalId","_exon","_sequence","_consequence","_pathogenicity","_variantDetection","_restrictionSite","_geneticOrigin","_frequency","_seqChanges","_aliases","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_name","_variantType","_variantClass","_originalId","_exon","_sequence","_consequence","_pathogenicity","_variantDetection","_restrictionSite","_geneticOrigin","_frequency","_seqChanges","_aliases","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@javax.xml.bind.annotation.XmlType(propOrder = {  "_name","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_consequence","_pathogenicity","_variantDetection","_restrictionSite","_geneticOrigin","_frequency","_seqChanges","_aliases","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_name","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_consequence","_pathogenicity","_variantDetection","_restrictionSite","_geneticOrigin","_frequency","_seqChanges","_aliases","_location","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
 public class VariantEvent /**/implements VmlVariantEvent/**/ {
@@ -37,7 +37,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- name --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="name",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="name",type=VariantName.class,namespace="http://varioml.org/xml/1.0")
 	private VariantName _name ;
 	public void setName( VariantName name) { 
 		this._name = name ;
@@ -46,9 +46,26 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 		return this._name;
 	}
  
+	// ===========-- seq_region --===========
+   @org.codehaus.jackson.annotate.JsonProperty("seq_regions")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="seq_region",type=SeqRegion.class,namespace="http://varioml.org/xml/1.0")
+	private List<SeqRegion> _seqRegion ;
+	public void setSeqRegionList( List<SeqRegion> seqRegion) { 
+		this._seqRegion = seqRegion ;
+	}
+	public List<SeqRegion> getSeqRegionList()  { 
+		return this._seqRegion;
+	}
+	public void addSeqRegion(SeqRegion item ) { 
+		if ( this._seqRegion == null ) { 
+			this._seqRegion = new ArrayList<SeqRegion>();
+		}
+		this._seqRegion.add( item);
+	}
+ 
 	// ===========-- variant_type --===========
    @org.codehaus.jackson.annotate.JsonProperty("variant_types")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_type",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_type",type=VariantType.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantType> _variantType ;
 	public void setVariantTypeList( List<VariantType> variantType) { 
 		this._variantType = variantType ;
@@ -65,7 +82,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- variant_class --===========
    @org.codehaus.jackson.annotate.JsonProperty("variant_classs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_class",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_class",type=VariantClass.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantClass> _variantClass ;
 	public void setVariantClassList( List<VariantClass> variantClass) { 
 		this._variantClass = variantClass ;
@@ -81,7 +98,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- original_id --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="original_id",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="original_id",type=OriginalId.class,namespace="http://varioml.org/xml/1.0")
 	private OriginalId _originalId ;
 	public void setOriginalId( OriginalId originalId) { 
 		this._originalId = originalId ;
@@ -92,7 +109,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- exon --===========
    @org.codehaus.jackson.annotate.JsonProperty("exons")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="exon",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="exon",type=Exon.class,namespace="http://varioml.org/xml/1.0")
 	private List<Exon> _exon ;
 	public void setExonList( List<Exon> exon) { 
 		this._exon = exon ;
@@ -108,7 +125,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- sequence --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="sequence",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="sequence",type=Sequence.class,namespace="http://varioml.org/xml/1.0")
 	private Sequence _sequence ;
 	public void setSequence( Sequence sequence) { 
 		this._sequence = sequence ;
@@ -119,7 +136,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- consequence --===========
    @org.codehaus.jackson.annotate.JsonProperty("consequences")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="consequence",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="consequence",type=Consequence.class,namespace="http://varioml.org/xml/1.0")
 	private List<Consequence> _consequence ;
 	public void setConsequenceList( List<Consequence> consequence) { 
 		this._consequence = consequence ;
@@ -136,7 +153,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- pathogenicity --===========
    @org.codehaus.jackson.annotate.JsonProperty("pathogenicities")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",type=Pathogenicity.class,namespace="http://varioml.org/xml/1.0")
 	private List<Pathogenicity> _pathogenicity ;
 	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
 		this._pathogenicity = pathogenicity ;
@@ -152,7 +169,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- variant_detection --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="variant_detection",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="variant_detection",type=VariantDetection.class,namespace="http://varioml.org/xml/1.0")
 	private VariantDetection _variantDetection ;
 	public void setVariantDetection( VariantDetection variantDetection) { 
 		this._variantDetection = variantDetection ;
@@ -162,7 +179,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- restriction_site --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="restriction_site",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="restriction_site",type=RestrictionSite.class,namespace="http://varioml.org/xml/1.0")
 	private RestrictionSite _restrictionSite ;
 	public void setRestrictionSite( RestrictionSite restrictionSite) { 
 		this._restrictionSite = restrictionSite ;
@@ -173,7 +190,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- genetic_origin --===========
    @org.codehaus.jackson.annotate.JsonProperty("genetic_origins")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="genetic_origin",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="genetic_origin",type=GeneticOrigin.class,namespace="http://varioml.org/xml/1.0")
 	private List<GeneticOrigin> _geneticOrigin ;
 	public void setGeneticOriginList( List<GeneticOrigin> geneticOrigin) { 
 		this._geneticOrigin = geneticOrigin ;
@@ -190,7 +207,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- frequency --===========
    @org.codehaus.jackson.annotate.JsonProperty("frequencies")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",type=Frequency.class,namespace="http://varioml.org/xml/1.0")
 	private List<Frequency> _frequency ;
 	public void setFrequencyList( List<Frequency> frequency) { 
 		this._frequency = frequency ;
@@ -206,7 +223,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- seq_changes --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="seq_changes",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="seq_changes",type=SeqChanges.class,namespace="http://varioml.org/xml/1.0")
 	private SeqChanges _seqChanges ;
 	public void setSeqChanges( SeqChanges seqChanges) { 
 		this._seqChanges = seqChanges ;
@@ -216,7 +233,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- aliases --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="aliases",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="aliases",type=Aliases.class,namespace="http://varioml.org/xml/1.0")
 	private Aliases _aliases ;
 	public void setAliases( Aliases aliases) { 
 		this._aliases = aliases ;
@@ -227,7 +244,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- location --===========
    @org.codehaus.jackson.annotate.JsonProperty("locations")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="location",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="location",type=Location.class,namespace="http://varioml.org/xml/1.0")
 	private List<Location> _location ;
 	public void setLocationList( List<Location> location) { 
 		this._location = location ;
@@ -244,7 +261,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- value --===========
    @org.codehaus.jackson.annotate.JsonProperty("values")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="value",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
 		this._value = value ;
@@ -261,7 +278,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- evidence_code --===========
    @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
 		this._evidenceCode = evidenceCode ;
@@ -278,7 +295,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- protocol_id --===========
    @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
 		this._protocolId = protocolId ;
@@ -294,7 +311,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
 	}
  
 	// ===========-- observation_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",type=ObservationDate.class,namespace="http://varioml.org/xml/1.0")
 	private ObservationDate _observationDate ;
 	public void setObservationDate( ObservationDate observationDate) { 
 		this._observationDate = observationDate ;
@@ -305,7 +322,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -322,7 +339,7 @@ public class VariantEvent /**/implements VmlVariantEvent/**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

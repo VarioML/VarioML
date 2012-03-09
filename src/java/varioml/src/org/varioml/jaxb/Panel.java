@@ -6,8 +6,8 @@ import java.util.List;
 @org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="panel")
-@javax.xml.bind.annotation.XmlType(propOrder = {  "_individual","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_size","_attr_type","_attr_uri","_individual","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
+@javax.xml.bind.annotation.XmlType(propOrder = {  "_individual","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_size","_attr_type","_attr_uri","_individual","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
 
 
 public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
@@ -58,7 +58,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- individual --===========
    @org.codehaus.jackson.annotate.JsonProperty("individuals")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="individual",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="individual",type=Individual.class,namespace="http://varioml.org/xml/1.0")
 	private List<Individual> _individual ;
 	public void setIndividualList( List<Individual> individual) { 
 		this._individual = individual ;
@@ -73,8 +73,18 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 		this._individual.add( item);
 	}
  
+	// ===========-- age --===========
+	@javax.xml.bind.annotation.XmlElement(required=false,name="age",type=Age.class,namespace="http://varioml.org/xml/1.0")
+	private Age _age ;
+	public void setAge( Age age) { 
+		this._age = age ;
+	}
+	public Age getAge() {
+		return this._age;
+	}
+ 
 	// ===========-- original_id --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="original_id",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="original_id",type=OriginalId.class,namespace="http://varioml.org/xml/1.0")
 	private OriginalId _originalId ;
 	public void setOriginalId( OriginalId originalId) { 
 		this._originalId = originalId ;
@@ -84,7 +94,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- role --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="role",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="role",type=Role.class,namespace="http://varioml.org/xml/1.0")
 	private Role _role ;
 	public void setRole( Role role) { 
 		this._role = role ;
@@ -95,7 +105,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- relationship --===========
    @org.codehaus.jackson.annotate.JsonProperty("relationships")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="relationship",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="relationship",type=Relationship.class,namespace="http://varioml.org/xml/1.0")
 	private List<Relationship> _relationship ;
 	public void setRelationshipList( List<Relationship> relationship) { 
 		this._relationship = relationship ;
@@ -111,7 +121,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- organism --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="organism",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="organism",type=Organism.class,namespace="http://varioml.org/xml/1.0")
 	private Organism _organism ;
 	public void setOrganism( Organism organism) { 
 		this._organism = organism ;
@@ -121,7 +131,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- strain --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="strain",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="strain",type=Strain.class,namespace="http://varioml.org/xml/1.0")
 	private Strain _strain ;
 	public void setStrain( Strain strain) { 
 		this._strain = strain ;
@@ -131,7 +141,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- cultivar --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="cultivar",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="cultivar",type=Cultivar.class,namespace="http://varioml.org/xml/1.0")
 	private Cultivar _cultivar ;
 	public void setCultivar( Cultivar cultivar) { 
 		this._cultivar = cultivar ;
@@ -142,7 +152,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- phenotype --===========
    @org.codehaus.jackson.annotate.JsonProperty("phenotypes")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="phenotype",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="phenotype",type=Phenotype.class,namespace="http://varioml.org/xml/1.0")
 	private List<Phenotype> _phenotype ;
 	public void setPhenotypeList( List<Phenotype> phenotype) { 
 		this._phenotype = phenotype ;
@@ -159,7 +169,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- observation --===========
    @org.codehaus.jackson.annotate.JsonProperty("observations")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="observation",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="observation",type=Observation.class,namespace="http://varioml.org/xml/1.0")
 	private List<Observation> _observation ;
 	public void setObservationList( List<Observation> observation) { 
 		this._observation = observation ;
@@ -176,7 +186,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- population --===========
    @org.codehaus.jackson.annotate.JsonProperty("populations")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="population",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="population",type=Population.class,namespace="http://varioml.org/xml/1.0")
 	private List<Population> _population ;
 	public void setPopulationList( List<Population> population) { 
 		this._population = population ;
@@ -193,7 +203,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
 	private List<Variant> _variant ;
 	public void setVariantList( List<Variant> variant) { 
 		this._variant = variant ;
@@ -210,7 +220,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- variant_group --===========
    @org.codehaus.jackson.annotate.JsonProperty("variant_groups")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_group",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant_group",type=VariantGroup.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantGroup> _variantGroup ;
 	public void setVariantGroupList( List<VariantGroup> variantGroup) { 
 		this._variantGroup = variantGroup ;
@@ -226,7 +236,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- source --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="source",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="source",type=Source.class,namespace="http://varioml.org/xml/1.0")
 	private Source _source ;
 	public void setSource( Source source) { 
 		this._source = source ;
@@ -237,7 +247,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -254,7 +264,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;
@@ -270,7 +280,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- sharing_policy --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="sharing_policy",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="sharing_policy",type=SharingPolicy.class,namespace="http://varioml.org/xml/1.0")
 	private SharingPolicy _sharingPolicy ;
 	public void setSharingPolicy( SharingPolicy sharingPolicy) { 
 		this._sharingPolicy = sharingPolicy ;
@@ -280,7 +290,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- creation_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="creation_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="creation_date",type=org.varioml.util.VMLDate.class,namespace="http://varioml.org/xml/1.0")
 	private org.varioml.util.VMLDate _creationDate ;
 	public void setCreationDate( org.varioml.util.VMLDate creationDate) { 
 		this._creationDate = creationDate ;
@@ -290,7 +300,7 @@ public class Panel /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- modification_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="modification_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="modification_date",type=org.varioml.util.VMLDate.class,namespace="http://varioml.org/xml/1.0")
 	private org.varioml.util.VMLDate _modificationDate ;
 	public void setModificationDate( org.varioml.util.VMLDate modificationDate) { 
 		this._modificationDate = modificationDate ;

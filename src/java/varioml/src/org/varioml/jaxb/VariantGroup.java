@@ -47,7 +47,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
 	}
  
 	// ===========-- group_type --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="group_type",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="group_type",type=GroupType.class,namespace="http://varioml.org/xml/1.0")
 	private GroupType _groupType ;
 	public void setGroupType( GroupType groupType) { 
 		this._groupType = groupType ;
@@ -58,7 +58,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- variant --===========
    @org.codehaus.jackson.annotate.JsonProperty("variants")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
 	private List<Variant> _variant ;
 	public void setVariantList( List<Variant> variant) { 
 		this._variant = variant ;
@@ -75,7 +75,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- frequency --===========
    @org.codehaus.jackson.annotate.JsonProperty("frequencies")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",type=Frequency.class,namespace="http://varioml.org/xml/1.0")
 	private List<Frequency> _frequency ;
 	public void setFrequencyList( List<Frequency> frequency) { 
 		this._frequency = frequency ;
@@ -92,7 +92,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- pathogenicity --===========
    @org.codehaus.jackson.annotate.JsonProperty("pathogenicities")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",type=Pathogenicity.class,namespace="http://varioml.org/xml/1.0")
 	private List<Pathogenicity> _pathogenicity ;
 	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
 		this._pathogenicity = pathogenicity ;
@@ -109,7 +109,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- value --===========
    @org.codehaus.jackson.annotate.JsonProperty("values")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="value",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
 		this._value = value ;
@@ -126,7 +126,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- evidence_code --===========
    @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
 		this._evidenceCode = evidenceCode ;
@@ -143,7 +143,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- protocol_id --===========
    @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
 		this._protocolId = protocolId ;
@@ -159,7 +159,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
 	}
  
 	// ===========-- observation_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="observation_date",type=ObservationDate.class,namespace="http://varioml.org/xml/1.0")
 	private ObservationDate _observationDate ;
 	public void setObservationDate( ObservationDate observationDate) { 
 		this._observationDate = observationDate ;
@@ -170,7 +170,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -187,7 +187,7 @@ public class VariantGroup /**/implements VmlAnnotatable,VmlFrequency/**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

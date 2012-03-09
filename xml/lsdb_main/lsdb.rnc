@@ -9,7 +9,9 @@
 #
 # new name space http://varioml.org/xml/1.0
 #
-#
+# unit added into location has values feature (e.g. num. of exons) and residue
+# seq_region annotation taken into use , age added into observation target
+# FIXES  put seq_region sub element before annotatable, add gender into the panel (i.e. observation target)
 
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 default namespace vml = "http://varioml.org/xml/1.0"
@@ -66,8 +68,11 @@ VmlSubmission =
 ## [% INSERT abstract_observation_target.txt %]
 VmlAbstractObservationTarget = 
     VmlIdentifiable,
+    gender?,
+    dob?,
+    age?,
     original_id?, 
-#    , consent ?
+#    , consent ? .. we use DbXref or comment for that
     role?, ## role in relationship,  subject type e.g index case...
     relationship*, ## relationship with other targets
     organism?,
@@ -79,7 +84,10 @@ VmlAbstractObservationTarget =
     variant*,
     variant_group*,
     source?,
-    VmlAnnotatable
+    VmlAnnotatable,
+    sharing_policy?, # for legacy reason we have this after VmlAnnotatable
+    creation_date?,
+    modification_date?    
 
 # (=)	===============================
 #  X	Individual
@@ -93,12 +101,7 @@ element individual {
 }
 ## [% INSERT individual.txt %]
 VmlIndividual = 
-    gender?,
-    dob?,
-    VmlAbstractObservationTarget,
-    sharing_policy?,
-    creation_date?,
-    modification_date?
+    VmlAbstractObservationTarget
 
 # (=)	===============================
 #  X	Panel
@@ -114,14 +117,11 @@ VmlPanel =
     attribute size { xsd:integer }?,
     attribute type  {'family'|'extended family'|'population'}?,
     individual*,
-    VmlAbstractObservationTarget, 
-    sharing_policy?,
-    creation_date?,
-    modification_date?
+    VmlAbstractObservationTarget 
 
 
 # (=)	===============================
-#  X	Observation (NOT USED)
+#  X	Observationsf (NOT USED)
 # (=)	===============================
 observations = 
 ## [% INSERT observations.txt %]
@@ -263,15 +263,15 @@ VmlVariant =
     name?,
     haplotype*, # haplotypes. Complex variants can be given as a list of phased variants
     panel*,
-    variant_type*, # type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
-    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration
+    seq_region*,  # name of underlying sequence reqion. Use sequence ontology. exon, intron, 3' UTR...
+    variant_type*, # type of mutation. SNP, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite
+    variant_class*, # obsolite. Not used
     original_id?, # identifier user in original database (which is not necessary the same as submittors database)
     exon*, # exon number
     sequence?, # reference and observed sequence
     genotype?, # orginal genotype call (e.g A/T)
     consequence*, # consequence of mutation on sequence level
     pathogenicity*, # consequence on phenotypic/disease level
-    #phenotype*, # deprecated. use pathogenecity instead
     sampleid?, # identifier of sample
     tissue?,   # type of tissue
     variant_detection?,
@@ -337,10 +337,11 @@ VmlVariantEvent =
 #   gene?, gene is defined by the main variant
 #   ref_seq?, we force users to use same reference as defined in main variant
     name?,
-    variant_type*, # # type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
-    variant_class*, #see dbSNP doc: single, insertion, deletion, range, in-del,MNP (mlutip. nuc. poly.),mixed, microsatellite. SO:0001059 sequence alteration  
+    seq_region*,
+    variant_type*, 
+    variant_class*, # obsolite
     original_id?,
-    exon*,
+    exon*, # legacy exon number
     sequence?,
     consequence*,
     pathogenicity*,
@@ -362,7 +363,9 @@ VmlConsequentVariant =
     attribute type {'cDNA'|'RNA'|'AA'}?,
     ref_seq?,
     name,
-    variant_type*, #type of underlying sequence region. Use sequence ontology. exon, intron, 3' UTR... functional class in dbSNP
+    seq_region*,
+    variant_type*, 
+    variant_class*, # oboslite
     original_id?,
     sequence ?, 
     genotype?,    
@@ -494,8 +497,9 @@ element observation_date {
 }
 
 VmlObservationDate =
-    attribute coded { xsd:boolean}?, # date is not real if the value is true. used when date cannot be revealed
-    attribute  date {VmlDate},
+    attribute coded { xsd:boolean}?, # Used when exact date cannot be given
+    attribute  date {VmlDate}?,
+    attribute  age  {xsd:float}?, # age at the time of observation
     VmlAnnotatable
 
 # (=)	===============================
@@ -511,17 +515,34 @@ element gene {
 VmlGene=
     VmlDbXRef
 
+# (=)	===============================
+#  X	Date of brith
+# (=)	===============================
 
 dob = 
 # date of birth
 ## [% INSERT dob.txt %]
 element dob {
-   attribute coded { xsd:boolean}?, # date is not real if the value is true
    VmlDobDate
 }
-## [% INSERT modification_date.txt %]
+## [% INSERT dob.txt %]
 VmlDobDate =
    VmlDate
+
+# (=)	===============================
+#  X	Age
+# (=)	===============================
+
+age = 
+# 
+## [% INSERT age.txt %]
+element age {
+   VmlAge
+}
+## [% INSERT age.txt %]
+VmlAge =
+   attribute coded {xsd:boolean}?, # age is coded. E.g. number of age group
+   xsd:float
 
 # (=)	===============================
 #  X	Mod and Create Date
@@ -656,7 +677,7 @@ VmlExon =
 
 
 # (=)	===============================
-#  X	not used 
+#  X	 
 #  X    
 # (=)	===============================
 seq_region  = 
@@ -667,8 +688,9 @@ element seq_region {
 }
 ## [% INSERT seq_region.txt %]
 VmlSeqRegion = 
+    seq_region*,
+    location*,
     VmlOntologyTerm
-
 
 
 # (=)	===============================
@@ -728,7 +750,7 @@ element location {
 ## [% INSERT location.txt %]
 
 VmlLocation =
-    ref_seq,
+    ref_seq?,attribute unit { 'feature'|'residue'}?,
     element chr { xsd:string}?,
     element start { xsd:integer}, 
     element end { xsd:integer }?

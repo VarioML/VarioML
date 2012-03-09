@@ -27,7 +27,7 @@ public class SharingPolicy /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- embargo_end_date --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="embargo_end_date",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="embargo_end_date",type=org.varioml.util.VMLDate.class,namespace="http://varioml.org/xml/1.0")
 	private org.varioml.util.VMLDate _embargoEndDate ;
 	public void setEmbargoEndDate( org.varioml.util.VMLDate embargoEndDate) { 
 		this._embargoEndDate = embargoEndDate ;
@@ -37,7 +37,7 @@ public class SharingPolicy /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- use_permission --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="use_permission",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="use_permission",type=UsePermission.class,namespace="http://varioml.org/xml/1.0")
 	private UsePermission _usePermission ;
 	public void setUsePermission( UsePermission usePermission) { 
 		this._usePermission = usePermission ;
@@ -48,7 +48,7 @@ public class SharingPolicy /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -65,7 +65,7 @@ public class SharingPolicy /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

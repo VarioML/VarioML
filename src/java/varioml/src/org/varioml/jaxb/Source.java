@@ -57,7 +57,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- name --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="name",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="name",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _name ;
 	public void setName( String name) { 
 		this._name = name ;
@@ -68,7 +68,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- url --===========
    @org.codehaus.jackson.annotate.JsonProperty("urls")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="url",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="url",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private List<String> _url ;
 	public void setUrlList( List<String> url) { 
 		this._url = url ;
@@ -85,7 +85,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- contact --===========
    @org.codehaus.jackson.annotate.JsonProperty("contacts")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="contact",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="contact",type=Contact.class,namespace="http://varioml.org/xml/1.0")
 	private List<Contact> _contact ;
 	public void setContactList( List<Contact> contact) { 
 		this._contact = contact ;
@@ -102,7 +102,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- acknowledgement --===========
    @org.codehaus.jackson.annotate.JsonProperty("acknowledgements")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="acknowledgement",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="acknowledgement",type=Acknowledgement.class,namespace="http://varioml.org/xml/1.0")
 	private List<Acknowledgement> _acknowledgement ;
 	public void setAcknowledgementList( List<Acknowledgement> acknowledgement) { 
 		this._acknowledgement = acknowledgement ;
@@ -119,7 +119,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -136,7 +136,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

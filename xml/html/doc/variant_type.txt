@@ -1,8 +1,9 @@
-Type of underlying sequence region. 
+Type of underlying sequence region.  A region defined by its disposition to be involved in a biological process
+Note the difference between variation_class 
+
 
 [Sequence Ontology](http://www.sequenceontology.org/browser/current_release/term/SO:0001411) terms should be used, and designated in the source attribute using "source='SO'"
 
-Equivalent to the functional class in dbSNP.
 
 **Example:**
 		exon (accession 0000147) 

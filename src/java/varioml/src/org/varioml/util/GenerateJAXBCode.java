@@ -390,7 +390,9 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					out.println("   @org.codehaus.jackson.annotate.JsonProperty(\""+elName+"s\")"); 						
 				}
 				
-				out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")" );
+				out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+
+						"\",type="+realType+".class" +
+						",namespace=\"http://varioml.org/xml/1.0\")" );
 				out.println("	private List<"+ realType+"> _" + paramName + " ;");
 				out.println("	public void set"+typeName+"List( List<"+realType+"> "+paramName+") { ");
 				out.println("		this._"+paramName+" = "+paramName+" ;");
@@ -420,7 +422,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					//choice group
 
 					out.println("	// ===========-- counts --===========");
-					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"counts\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"counts\",type=Integer.class,namespace=\"http://varioml.org/xml/1.0\")");
 					out.println("	private Integer _counts ;");
 					out.println("	public void setCounts( Integer count) { ");
 					out.println("		this._counts = count ; if ( _category != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
@@ -430,7 +432,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					out.println("	}");
 
 					out.println("	// ===========-- category --===========");
-					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"category\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"category\",type=FreqCaregory.class,namespace=\"http://varioml.org/xml/1.0\")");
 					out.println("	private FreqCategory _category ;");
 					out.println("	public void setCategory( FreqCategory category) { ");
 					out.println("		this._category = category ; if ( _counts != null || _freq != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
@@ -440,7 +442,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					out.println("	}");
 
 					out.println("	// ===========-- freq --===========");
-					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"freq\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"freq\",type=Double.class,namespace=\"http://varioml.org/xml/1.0\")");
 					out.println("	private Double _freq ;");
 					out.println("	public void setCounts( Double freq) { ");
 					out.println("		this._freq = freq ; if ( _category != null || _counts != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
@@ -454,7 +456,9 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				} else {
 
 					out.println("	// ===========-- "+elName+" --===========");
-					out.println("	@javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+"\",namespace=\"http://varioml.org/xml/1.0\")");
+					out.println("	@javax.xml.bind.annotation.XmlElement(required=false,name=\""+elName+
+							"\",type="+realType+".class" +
+							",namespace=\"http://varioml.org/xml/1.0\")");
 					if ( ! usedName.equals(typeName)) {
 						out.println("	@org.codehaus.jackson.annotate.JsonProperty(\""+underStyle.getElement(usedName)+"\")");	
 					}
@@ -606,6 +610,20 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			 } 
 		};  
 
+		if ( false) {
+			System.err.println("Generating");
+			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+			xu0.generateCode("org.varioml.jaxb.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
+				{put("name","VariantName");};
+				{put("variant","VariantEvent");};
+				{put("source","Source");};
+			})); 
+			return ;
+		}
+		
+		if ( false) {
+
+		
 		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome_all.xml");
 		//xu.printExampleElements(typeMap);
 		xu2.generateCode("org.varioml.jaxb.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
@@ -616,21 +634,45 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 	        {put("_","_");};
 		})); // size=15 2011-12-11 19:51:02
 
-		
+		}
+
 		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+		if ( true ) {
+
+		xu.generateCode("org.varioml.jaxb.Age","//lsdb/individual/age",x(typeMap,new HashMap<String,String>(){ 
+			{put(TEXT_NODE ,"Float");};
+		})); // 
+
+
+		xu.generateCode("org.varioml.jaxb.ObservationDate","//lsdb/variant/observation_date",
+				x(typeMap,new HashMap<String,String>(){ 
+					{put("@age","Float");};
+	    })); 
+
+		return ; 
+		}
 		xu.generateCode("org.varioml.jaxb.EmbargoEndDate","//lsdb/individual/sharing_policy/embargo_end_date",x(typeMap,new HashMap<String,String>(){ 
 			{put(TEXT_NODE,"org.varioml.util.VMLDate");};
 		})); // size=2 2011-06-20 21:40:02
 		
-		xu.generateCode("org.varioml.jaxb.ObservationDate","//lsdb/variant/observation_date",x(typeMap,new HashMap<String,String>(){ 
-	    })); 
-
-		xu.generateCode("org.varioml.jaxb.Value","//lsdb/variant/value",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.ObservationDate","//lsdb/variant/observation_date",
+				x(typeMap,new HashMap<String,String>(){ 
+					{put("age","Float");};
 	    })); 
 
 		
+		xu.generateCode("org.varioml.jaxb.Value","//lsdb/variant/value",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+
+		xu.generateCode("org.varioml.jaxb.SeqRegion","//lsdb/variant/seq_region",x(typeMap,new HashMap<String,String>(){ 
+	    })); 
+		
 		xu.generateCode("org.varioml.jaxb.Observation","//lsdb/individual/observation",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
+		})); // 
+
+		xu.generateCode("org.varioml.jaxb.Age","//lsdb/individual/age",x(typeMap,new HashMap<String,String>(){ 
+			{put(TEXT_NODE ,"Float");};
 		})); // 
 		
 		xu.generateCode("org.varioml.jaxb.Variant","//lsdb/variant",x(typeMap,new HashMap<String,String>(){ 
@@ -648,6 +690,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 
 		xu.generateCode("org.varioml.jaxb.Haplotype","//variant_group/variant/haplotype",x(typeMap,new HashMap<String,String>(){ 
 			{put("name","VariantName");};
+			{put("variant","VariantEvent");};
 			{put("source","Source");};
 		})); 
 
@@ -749,6 +792,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		xu.generateCode("org.varioml.jaxb.Exon","//lsdb/individual/variant/exon",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=4 2011-06-20 21:40:02
+		
 		xu.generateCode("org.varioml.jaxb.Gene","//lsdb/individual/variant/gene",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=13 2011-06-20 21:40:02

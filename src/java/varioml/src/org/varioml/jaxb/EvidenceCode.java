@@ -58,7 +58,7 @@ public class EvidenceCode /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- score --===========
    @org.codehaus.jackson.annotate.JsonProperty("scores")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="score",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="score",type=Score.class,namespace="http://varioml.org/xml/1.0")
 	private List<Score> _score ;
 	public void setScoreList( List<Score> score) { 
 		this._score = score ;
@@ -74,7 +74,7 @@ public class EvidenceCode /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- description --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="description",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="description",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _description ;
 	public void setDescription( String description) { 
 		this._description = description ;
@@ -85,7 +85,7 @@ public class EvidenceCode /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -102,7 +102,7 @@ public class EvidenceCode /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

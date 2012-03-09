@@ -17,7 +17,7 @@ public class Acknowledgement /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- name --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="name",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="name",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _name ;
 	public void setName( String name) { 
 		this._name = name ;
@@ -27,7 +27,7 @@ public class Acknowledgement /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- grant_number --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="grant_number",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="grant_number",type=GrantNumber.class,namespace="http://varioml.org/xml/1.0")
 	private GrantNumber _grantNumber ;
 	public void setGrantNumber( GrantNumber grantNumber) { 
 		this._grantNumber = grantNumber ;
@@ -38,7 +38,7 @@ public class Acknowledgement /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -55,7 +55,7 @@ public class Acknowledgement /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

@@ -57,7 +57,7 @@ public class Score /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- value --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="value",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Double.class,namespace="http://varioml.org/xml/1.0")
 	private Double _value ;
 	public void setValue( Double value) { 
 		this._value = value ;
@@ -67,7 +67,7 @@ public class Score /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- description --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="description",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="description",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _description ;
 	public void setDescription( String description) { 
 		this._description = description ;
@@ -78,7 +78,7 @@ public class Score /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -95,7 +95,7 @@ public class Score /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

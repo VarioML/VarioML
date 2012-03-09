@@ -58,7 +58,7 @@ public class Relationship /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- individual --===========
    @org.codehaus.jackson.annotate.JsonProperty("individuals")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="individual",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="individual",type=Individual.class,namespace="http://varioml.org/xml/1.0")
 	private List<Individual> _individual ;
 	public void setIndividualList( List<Individual> individual) { 
 		this._individual = individual ;
@@ -75,7 +75,7 @@ public class Relationship /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- panel --===========
    @org.codehaus.jackson.annotate.JsonProperty("panels")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="panel",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="panel",type=Panel.class,namespace="http://varioml.org/xml/1.0")
 	private List<Panel> _panel ;
 	public void setPanelList( List<Panel> panel) { 
 		this._panel = panel ;
@@ -91,7 +91,7 @@ public class Relationship /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- description --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="description",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="description",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _description ;
 	public void setDescription( String description) { 
 		this._description = description ;
@@ -102,7 +102,7 @@ public class Relationship /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -119,7 +119,7 @@ public class Relationship /**/implements VmlOntologyTerm /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;

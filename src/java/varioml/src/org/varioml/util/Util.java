@@ -149,18 +149,23 @@ public class Util {
 		
 	}
 
+	public void writeXML( String xmlFile, Object  obj) {
+		writeXML(null,xmlFile,obj) ;
+	}
 	public void writeXML(String schemaFile, String xmlFile, Object  obj) {
 		try {
 			//todo: make this configuravle.. .now using JAXB as a default
 			
 			SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI); 
-	        Schema schema = sf.newSchema(new File( schemaFile)); 
 			JAXBContext context = JAXBContext.newInstance(obj.getClass());
 			File file = new File(xmlFile);
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			m.setEventHandler( new MyValidationEventHandler());
-			m.setSchema(schema);
+			if ( schemaFile != null) {
+		        Schema schema = sf.newSchema(new File( schemaFile)); 
+				m.setSchema(schema);				
+			}
 			PrintWriter out = new PrintWriter(file) ;
 			m.marshal(obj, out);
 			out.close();
@@ -168,11 +173,10 @@ public class Util {
 		} catch (Exception e) {
 			Util.fatal(Util.class, e);
 		}
-
-
-		
 	}
+	
 	public static void log(Class cls, String message) {
+
 		System.err.println("LOG : " + cls.getName() + " message: " + message);
 		System.err.flush();
 
@@ -185,6 +189,7 @@ public class Util {
 		util.writeJSON("tmp.json", o);
 		Object x = util.readJSON("tmp.json",org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("cafe_variome.xsd", "tmp.xml",x);
+		
 	}
 }
 	

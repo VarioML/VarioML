@@ -17,7 +17,7 @@ public class Sequence /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- reference --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="reference",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="reference",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _reference ;
 	public void setReference( String reference) { 
 		this._reference = reference ;
@@ -27,7 +27,7 @@ public class Sequence /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- variant --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="variant",namespace="http://varioml.org/xml/1.0")
+	@javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
 	private Variant _variant ;
 	public void setVariant( Variant variant) { 
 		this._variant = variant ;
@@ -38,7 +38,7 @@ public class Sequence /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- db_xref --===========
    @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
 		this._dbXref = dbXref ;
@@ -55,7 +55,7 @@ public class Sequence /**/implements VmlAnnotatable /**/ {
  
 	// ===========-- comment --===========
    @org.codehaus.jackson.annotate.JsonProperty("comments")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",namespace="http://varioml.org/xml/1.0")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
 		this._comment = comment ;
