@@ -126,13 +126,13 @@ VmlPanel =
 observations = 
 ## [% INSERT observations.txt %]
 element observations  { 
-    VmlObservations,
+    VmlObservationCombo,
     VmlForeignNodes
 }
 ## [% INSERT observations.txt %]
 # this is experimental and should not be used. preference is 
 # to embed features inside observation targets
-VmlObservations =
+VmlObservationCombo =
     (panel|individual)?, # observation target
     phenotype*, # observations
     variant*,
@@ -211,7 +211,7 @@ description = element description {
 }
 ## [% INSERT description.txt %]
 VmlDescription = 
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 
 # (=)	===============================
@@ -287,7 +287,7 @@ VmlVariant =
     sharing_policy?,
     creation_date?,
     modification_date?,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 
 # (=)	===============================
@@ -314,7 +314,7 @@ VmlHaplotype =
     aliases?,
     source? ,   
     location*,    
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 
 # (=)	===============================
@@ -352,7 +352,7 @@ VmlVariantEvent =
     seq_changes?,
     aliases?,
     location*,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 # (=)	===============================
 #  X	Consequent_variant
@@ -376,7 +376,7 @@ VmlConsequentVariant =
     seq_changes?,
     aliases?,
     location*,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 # (=)	===============================
 #  X	Consequent_variantS
@@ -387,7 +387,7 @@ VmlConsequentVariants =
         VmlConsequentVariant,
         VmlForeignNodes
     }+,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 # (=)	===============================
 #  X	sequence changes 
@@ -405,7 +405,7 @@ element seq_changes {
 ## [% INSERT related_variants.txt %]
 VmlRelatedVariants = 
     variant+, 
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
     
 # (=)	===============================
 #  X	Aliases
@@ -705,7 +705,7 @@ element consequence {
 }
 ## [% INSERT consequence.txt %]
 VmlConsequence = 
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 
 # (=)	===============================
@@ -720,7 +720,7 @@ element genetic_origin {
 ## [% INSERT genetic_origin.txt %]
 VmlGenetic_origin =
     genetic_source?,
-    VmlEvidenceOntologyTerm 
+    VmlObservation 
 
 # (=)	===============================
 #  X	Genetic source
@@ -733,7 +733,7 @@ element source {
 ## [% INSERT genetic_origin.txt %]
 VmlGeneticSource =
     population*,    
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 
 # (=)	===============================
@@ -814,7 +814,7 @@ VmlPathogenicity =
     attribute scope { 'individual' | 'family'| 'population' }?,
     attribute panel_ref { VmlId}?, 
     phenotype*, factor*,
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 
 # (=)	===============================
@@ -823,13 +823,13 @@ VmlPathogenicity =
     
 factor  = 
 ## [% INSERT factor.txt %]
-element pathogenicity { 
+element factor { 
     VmlFactor,
     VmlForeignNodes 
  }
-## [% INSERT pathogenicity.txt %]
+## [% INSERT factor.txt %]
 VmlFactor =
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 
 # (=)	===============================
@@ -851,7 +851,7 @@ VmlVariantGroup =
     variant+,
     frequency*,
     pathogenicity*,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
 
 # (=)	===============================
 #  X	Variant detection
@@ -892,7 +892,7 @@ element observation {
 }
 ## [% INSERT observation.txt %]
 VmlGenericObservation = 
-    VmlEvidenceOntologyTerm,
+    VmlObservation,
     attribute type {'lifestyle'|'environment'|'relationship'}?
 
 
@@ -909,7 +909,7 @@ element phenotype {
 VmlPhenotype =
     attribute type {'symptom'|'diagnose'}?,    
     inheritance_pattern?,
-    VmlEvidenceOntologyTerm
+    VmlObservation
 
 inheritance_pattern = 
 ## [% INSERT inheritance_pattern.txt %]
@@ -918,7 +918,7 @@ element inheritance_pattern {
     VmlForeignNodes
 }
 VmlInheritancePattern =
-    VmlEvidenceOntologyTerm
+    VmlObservation
     
 
 # (=)	===============================
@@ -936,7 +936,7 @@ VmlFrequency =
     attribute type { 'allele'|'carrier'|'genotype' }?,
     population*,
     frequency_value,
-    VmlAnnotatedObservation
+    VmlAnnotatedAbstractObservation
     
 frequency_value =  freq_as_number | freq_as_counts | freq_as_category 
 ## Frequency as a number
@@ -961,7 +961,7 @@ VmlPopulation =
     ## type of population
     attribute type {'region' |'nationality'|'ethnic'| 'race'|'organism'|'group'|'primary_language'|'language_family'|'other'|'unknown'},
     ## population defined as ontology term
-    VmlEvidenceOntologyTerm 
+    VmlObservation 
 
 
 # (=)	===============================
@@ -1015,14 +1015,14 @@ VmlAnnotatable = db_xref* , comment*
 #  X	Observation
 # (=)	===============================
 ## [% INSERT observation.txt %]
-VmlObservation = value*, evidence_code* , protocol_id*, observation_date?
+VmlAbstractObservation = value*, evidence_code* , protocol_id*, observation_date?
 
 # (=)	===============================
 #  X	Annotated observation !
 # (=)	===============================
 ## Not implemented- order of elements is not set.
-VmlAnnotatedObservation  =  VmlObservation, VmlAnnotatable
-# VmlGenomic_observation = VmlIdentifiable, VmlAnnotatedObservation
+VmlAnnotatedAbstractObservation  =  VmlAbstractObservation, VmlAnnotatable
+# VmlGenomic_observation = VmlIdentifiable, VmlAnnotatedAbstractObservation
 
 # (=)	===============================
 #  X	Ontology term
@@ -1034,7 +1034,8 @@ VmlAnnotatedObservation  =  VmlObservation, VmlAnnotatable
 #  X	Evidence ontology term
 # (=)	===============================
 ## [% INSERT evidence_ontology_term.txt %]
-VmlEvidenceOntologyTerm = VmlOntology, VmlAnnotatedObservation 
+
+VmlObservation = VmlOntology, VmlAnnotatedAbstractObservation 
 
 # (=)	===============================
 #  X	Comments
@@ -1051,7 +1052,7 @@ VmlComment =
     , attribute uri { VmlUri}?
     , attribute term { text}?
     , comment_text*
-    , VmlAnnotatedObservation
+    , VmlAnnotatedAbstractObservation
 
 
 # (=)	===============================
@@ -1081,7 +1082,8 @@ element value {
 ## [% INSERT value.txt %]
 VmlValue =
     VmlOntologyTerm,
-    attribute unit {xsd:string},
+    attribute unit {xsd:string}?,
+    attribute type {'integer'|'float'|'text'|'date'|'datetime'}?,
     attribute val {xsd:string},
     value*
 

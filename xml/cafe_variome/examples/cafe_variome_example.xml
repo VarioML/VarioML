@@ -13,9 +13,9 @@
         <gene source="HGNC" accession="COL1A1"/>
         <ref_seq accession="NG_007400.1"/>
         <name scheme="HGVS">c.579delT</name>
-        <pathogenicity term="pathogenic">
-            <phenotype term="Osteogenesis Imperfecta"/>
-            <evidence_code term="experimental evidence" source="ECO"/>
+        <pathogenicity term="pathogenic" scope="family">
+            <phenotype term="Osteogenesis Imperfecta"/>            
+            <evidence_code term="experimental evidence" source="ECO"/>            
         </pathogenicity>
         <genetic_origin term="paternal">
             <evidence_code term="inferred"/>

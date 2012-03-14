@@ -612,19 +612,35 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 
 		if ( true ) { // these are removed from the code below
 			System.err.println("Generating");
-			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/seq_region1.xml");
-			xu0.generateCode("org.varioml.jaxb.SeqRegion","//seq_region",x(typeMap,new HashMap<String,String>(){ 
-		    })); 
-			xu0.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
-				{put("source","Source");};
-			})); // size=55 2011-06-20 21:40:02
+			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/pathogenicity1.xml");
 
+			xu0.generateCode("org.varioml.jaxb.Value","//pathogenicity/factor/value",x(typeMap,new HashMap<String,String>(){ 
+				{put("_","_");};
+			})); // size=33 2011-06-20 21:40:02
+
+			xu0.generateCode("org.varioml.jaxb.Factor","//pathogenicity/factor",x(typeMap,new HashMap<String,String>(){ 
+				{put("_","_");};
+			})); // size=33 2011-06-20 21:40:02
+
+			xu0.generateCode("org.varioml.jaxb.Pathogenicity","//pathogenicity",x(typeMap,new HashMap<String,String>(){ 
+				{put("_","_");};
+			})); // size=33 2011-06-20 21:40:02
+			
+//			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/seq_region1.xml");
+//			xu0.generateCode("org.varioml.jaxb.SeqRegion","//seq_region",x(typeMap,new HashMap<String,String>(){ 
+//		    })); 
+//			xu0.generateCode("org.varioml.jaxb.Panel","//lsdb/panel",x(typeMap,new HashMap<String,String>(){ 
+//				{put("source","Source");};
+//			})); // size=55 2011-06-20 21:40:02
+
+			return;
+			
 		}
 		
 		if ( false) {
 
 		
-		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome_all.xml");
+		GenerateJAXBCode xu2 = GenerateJAXBCode.createInstance("templates/cafe_variome1.xml");
 		//xu.printExampleElements(typeMap);
 		xu2.generateCode("org.varioml.jaxb.CafeVariome","//cafe_variome",x(typeMap,new HashMap<String,String>(){ 
 			{put("source","Source");};
@@ -636,7 +652,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 
 		}
 
-		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb_19.2.2012.xml");
+		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb1.xml");
 		if ( true ) {
 
 		xu.generateCode("org.varioml.jaxb.Age","//lsdb/individual/age",x(typeMap,new HashMap<String,String>(){ 
@@ -815,7 +831,11 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 //			{put("source","Source");};
 //		})); // size=55 2011-06-20 21:40:02
 
-		xu.generateCode("org.varioml.jaxb.Pathogenicity","//lsdb/individual/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
+		xu.generateCode("org.varioml.jaxb.Factor","//lsdb/variant/pathogenicity/factor",x(typeMap,new HashMap<String,String>(){ 
+			{put("_","_");};
+		})); // size=33 2011-06-20 21:40:02
+
+		xu.generateCode("org.varioml.jaxb.Pathogenicity","//lsdb/variant/pathogenicity",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
 		})); // size=33 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.RefSeq","//lsdb/individual/variant/ref_seq",x(typeMap,new HashMap<String,String>(){ 

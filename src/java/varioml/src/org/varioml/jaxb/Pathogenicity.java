@@ -4,14 +4,14 @@ import java.util.List;
 
 @org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
 @org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
-@javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="pathogenicity")
-@javax.xml.bind.annotation.XmlType(propOrder = {  "_phenotype","_pathogenicity","_description","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_panelRef","_attr_scope","_attr_source","_attr_term","_attr_uri","_phenotype","_pathogenicity","_description","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
+@javax.xml.bind.annotation.XmlType(propOrder = {  "_phenotype","_factor","_description","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_panelRef","_attr_scope","_attr_source","_attr_term","_attr_uri","_attr_xmlns","_attr_xmlnsXsi","_attr_xsiSchemaLocation","_phenotype","_factor","_description","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
 public class Pathogenicity /**/implements VmlSimpleObservation /**/ {
-	//xml-element used for code generation: //lsdb/individual/variant/pathogenicity
+	//xml-element used for code generation: //pathogenicity
 
 	public Pathogenicity(  ) {
 	}
@@ -76,6 +76,36 @@ public class Pathogenicity /**/implements VmlSimpleObservation /**/ {
 		return this._attr_uri;
 	}
  
+	// ===========-- xmlns --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xmlns")
+	private String _attr_xmlns ;
+	public void setXmlns( String attr_xmlns) { 
+		this._attr_xmlns = attr_xmlns ;
+	}
+	public String getXmlns() { 
+		return this._attr_xmlns;
+	}
+ 
+	// ===========-- xmlns:xsi --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xmlns:xsi")
+	private String _attr_xmlnsXsi ;
+	public void setXmlnsXsi( String attr_xmlnsXsi) { 
+		this._attr_xmlnsXsi = attr_xmlnsXsi ;
+	}
+	public String getXmlnsXsi() { 
+		return this._attr_xmlnsXsi;
+	}
+ 
+	// ===========-- xsi:schemaLocation --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="xsi:schemaLocation")
+	private String _attr_xsiSchemaLocation ;
+	public void setXsiSchemaLocation( String attr_xsiSchemaLocation) { 
+		this._attr_xsiSchemaLocation = attr_xsiSchemaLocation ;
+	}
+	public String getXsiSchemaLocation() { 
+		return this._attr_xsiSchemaLocation;
+	}
+ 
 	// ===========-- phenotype --===========
    @org.codehaus.jackson.annotate.JsonProperty("phenotypes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="phenotype",type=Phenotype.class,namespace="http://varioml.org/xml/1.0")
@@ -93,21 +123,21 @@ public class Pathogenicity /**/implements VmlSimpleObservation /**/ {
 		this._phenotype.add( item);
 	}
  
-	// ===========-- pathogenicity --===========
-   @org.codehaus.jackson.annotate.JsonProperty("pathogenicities")
-   @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",type=Pathogenicity.class,namespace="http://varioml.org/xml/1.0")
-	private List<Pathogenicity> _pathogenicity ;
-	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
-		this._pathogenicity = pathogenicity ;
+	// ===========-- factor --===========
+   @org.codehaus.jackson.annotate.JsonProperty("factors")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="factor",type=Factor.class,namespace="http://varioml.org/xml/1.0")
+	private List<Factor> _factor ;
+	public void setFactorList( List<Factor> factor) { 
+		this._factor = factor ;
 	}
-	public List<Pathogenicity> getPathogenicityList()  { 
-		return this._pathogenicity;
+	public List<Factor> getFactorList()  { 
+		return this._factor;
 	}
-	public void addPathogenicity(Pathogenicity item ) { 
-		if ( this._pathogenicity == null ) { 
-			this._pathogenicity = new ArrayList<Pathogenicity>();
+	public void addFactor(Factor item ) { 
+		if ( this._factor == null ) { 
+			this._factor = new ArrayList<Factor>();
 		}
-		this._pathogenicity.add( item);
+		this._factor.add( item);
 	}
  
 	// ===========-- description --===========

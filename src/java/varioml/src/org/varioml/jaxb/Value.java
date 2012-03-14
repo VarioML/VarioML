@@ -7,11 +7,11 @@ import java.util.List;
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="value")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_description","_dbXref","_comment","_value"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_unit","_attr_uri","_attr_val","_description","_dbXref","_comment","_value"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_type","_attr_unit","_attr_uri","_attr_val","_description","_dbXref","_comment","_value"})
 
 
 public class Value /**/implements VmlOntologyTerm /**/ {
-	//xml-element used for code generation: //lsdb/variant/value
+	//xml-element used for code generation: //pathogenicity/factor/value
 
 	public Value(  ) {
 	}
@@ -44,6 +44,16 @@ public class Value /**/implements VmlOntologyTerm /**/ {
 	}
 	public String getTerm() { 
 		return this._attr_term;
+	}
+ 
+	// ===========-- type --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="type")
+	private String _attr_type ;
+	public void setType( String attr_type) { 
+		this._attr_type = attr_type ;
+	}
+	public String getType() { 
+		return this._attr_type;
 	}
  
 	// ===========-- unit --===========
