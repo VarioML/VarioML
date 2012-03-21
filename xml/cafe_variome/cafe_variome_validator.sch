@@ -52,12 +52,34 @@
                 test="vml:sharing_policy">Sharing policy of variant is missing</iso:assert> 
             
         </iso:rule>
+
+        <iso:rule context="vml:seq_changes/vml:variant">
+            <!-- here we do not need gene anymore  -->           
+            <iso:assert 
+                test="vml:ref_seq">Reference sequence is missing</iso:assert> 
+            
+            <iso:assert 
+                test="vml:name">Name is missing</iso:assert> 
+                       
+        </iso:rule>
+ 
+        <iso:rule context="vml:aliases/vml:variant">
+            <!-- legacy variants. Only name is needed -->            
+            <iso:assert 
+                test="vml:name">Name is missing</iso:assert> 
+            
+        </iso:rule>
         
         <iso:rule context="vml:variant/vml:name">
             <iso:assert test="not(@scheme) or upper-case(@scheme)='HGVS'">HGVS naming scheme should be used. Found: <iso:value-of select="@scheme"/> </iso:assert>
             <!-- Should use HGVS names only...
             <iso:assert test="starts-with(normalize-space(text()),'g.') or starts-with(normalize-space(text()),'c.') or starts-with(normalize-space(text()),'p.') or starts-with(normalize-space(text()),'r.')"></iso:assert>
             -->
+        </iso:rule>
+  
+        <iso:rule context="vml:location">
+            <iso:assert test="vml:ref_seq">Location must have reference sequence</iso:assert>
+            <!-- start position is given in the relax schema-->
         </iso:rule>
         
         <iso:rule context="vml:sharing_policy">
@@ -72,7 +94,7 @@
         <iso:rule context="vml:variant/vml:panel" >
             <iso:assert test="vml:phenotype or vml:individual" >Panel should have at least phenotype or individual</iso:assert>
             <!-- need to delimit use of panel to avoid misuses -->
-            <iso:assert test="(count(vml:phenotype)+count(vml:individual)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
+            <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
         </iso:rule>
         
         <iso:rule context="vml:variant/vml:panel/vml:individual" >
@@ -102,7 +124,7 @@
     
     <iso:pattern id="cafe_variome.ontology_terms" >
         <!-- we should have atleast the term attribute -->
-        <iso:rule context="vml:genetic_origin|vml:pathogenicity|vml:phenotype|vml:evidence_code|vml:use_permission" >
+        <iso:rule context="vml:genetic_origin|vml:pathogenicity|vml:phenotype|vml:evidence_code|vml:use_permission|vml:variant_type|vml:consequence" >
             <iso:assert test="@term" >Ontology term (genetic_origin, pathogenicity...) should have term-attribute </iso:assert>
         </iso:rule>
         
