@@ -1,10 +1,13 @@
-Type of underlying sequence region.  A region defined by its disposition to be involved in a biological process
-Note the difference between variation_class 
+Type of variation. SNP, microsatellite... Also sequence alteration terms from SO
+http://www.sequenceontology.org/browser/current_release/term/SO:0001059
+
+Note:
+This should not be mixed with classification schemes based on effects of mutations (like missense, alter splicing...) which should go into the consequence element or schemes based on type of underlying sequence (like exon, intron), which should go into seq_region element.
+
+*Examples:*
+indel (accession = 1000032)
+deletion (accession = 0000159)
+substitution (accession = 1000002)
+inversion (accession = 1000036)
 
 
-[Sequence Ontology](http://www.sequenceontology.org/browser/current_release/term/SO:0001411) terms should be used, and designated in the source attribute using "source='SO'"
-
-
-**Example:**
-		exon (accession 0000147) 
-		3'-UTR

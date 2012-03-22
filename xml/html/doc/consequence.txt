@@ -19,6 +19,7 @@ Consequences of mutation on sequence or structural levels.
 
 *Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
 
+See also documentation under the seq_region and variant_type element
 
 **Example:** 
 
