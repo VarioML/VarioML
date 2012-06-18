@@ -21,6 +21,7 @@
 
 vml:g2p
       rdf:type skos:ConceptScheme ;
+      skos:hasTopConcept vml:d_9991 ;
       dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
       dc:description "DMuDB codes for detection technique" ;
       dc:title "DMuDB detection techniques" .

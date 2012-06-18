@@ -1,23 +1,25 @@
 
-Consequences of mutation on sequence or structural levels.
+Consequences of mutation on sequence, structural and molecular levels.
 
 * **Complex frameshift:** Frameshift involving insertions and deletions
 * **Exon deletion:** Deletion encompassing a whole exon or exons, frameshift status unknown
 * **Exon duplication:** Duplication of one of more exons, frameshift status unknown
-* **Frameshift:** Deletion or insertion causing reading frame shift
+* **Frameshift:** Deletion or insertion causing reading frame shift (SO:0000865)
+* **In-frame: ** (SO:0001587)
 * **In-frame deletion:** Deletion of a whole codon or codons.  Can include deletion of one or more exons
 * **In-frame duplication:** A duplication that does not change the reading frame.  Can include one or more exons
 * **In-frame insertion:** An insertion of a whole codon or codons.  Can include one or more exons
 * **Intronic variant:** A variant in an intron which has not been shown to affect splicing
-* **Missense:** Substitution resulting in a change to a different amino acid
-* **Nonsense:** Substitution resulting in a change to a stop codon
+* **Missense:** Substitution resulting in a change to a different amino acid (SO:0001783)
+* **Nonsense:** Substitution resulting in a change to a stop codon (SO:0001587)
 * **Out of frame deletion:** Deletion of part of a codon or number of codons resulting in a frameshift.  Can include one or more exons
 * **Out of frame duplication:** A duplication that changes the reading frame.  Can include one or more exons
 * **Out of frame insertion:** An insertion of part of a codon or number of codons resulting in a frameshift.  Can include one or more exons
 * **Silent:** A nucleotide change that does not change the amino acid
 * **Splice site variant:** A mutation that affects splicing
+* **Synonymous:** (SO:0001588)
 
-*Note: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
+*Note: implementation of fixed vocabulary for this element is still pending.* Sequence ontology and VariO terms are preferred. See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms") also ClinVarDataDictionary (http://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)
 
 See also documentation under the seq_region and variant_type element
 

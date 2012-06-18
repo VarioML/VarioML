@@ -3,7 +3,17 @@ Pathogenicity of variant.
 
 Controlled vocabulary for pathogenicity is sourced from the GEN2PHEN project. See: [VarioML - Pathogenicity](http://www.gen2phen.org/wiki/varioml-pathogenicity).
 
-Pathogenicity has 6 possible values:
+SKOS terms are preferred: http://purl.org/varioml/pathogenicity/skos/1.0/
+
+<pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003">
+</pathigenicity>
+
+<pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" >
+</pathigenicity>
+
+Note that g2p is always used as a source
+
+Examples of the terms:
 
 * Non-pathogenic
 * Not known
