@@ -258,7 +258,7 @@ VmlVariant =
     attribute genotypic {'true'}?,
     attribute subcellular_part {'nucleus'|'mitochondrial'|'chloroplast'|'other'}?,
     attribute copy_count {xsd:float}?,
-    gene?,
+    gene*,
     ref_seq?,
     name?,
     haplotype*, # haplotypes. Complex variants can be given as a list of phased variants
