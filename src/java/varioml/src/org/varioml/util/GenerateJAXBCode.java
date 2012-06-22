@@ -610,7 +610,17 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 			 } 
 		};  
 
-		if ( true ) { // these are removed from the code below
+		if ( true) {
+			GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb1.xml");
+			xu.generateCode("org.varioml.jaxb.Variant","//lsdb/variant",x(typeMap,new HashMap<String,String>(){ 
+				{put("name","VariantName");};
+				{put("source","Source");};
+			})); 
+			return;
+		}
+
+		
+		if ( false ) { // these are removed from the code below
 			System.err.println("Generating");
 			GenerateJAXBCode xu0 = GenerateJAXBCode.createInstance("templates/pathogenicity1.xml");
 
@@ -653,6 +663,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		}
 
 		GenerateJAXBCode xu = GenerateJAXBCode.createInstance("templates/lsdb1.xml");
+
 		if ( true ) {
 
 		xu.generateCode("org.varioml.jaxb.Age","//lsdb/individual/age",x(typeMap,new HashMap<String,String>(){ 

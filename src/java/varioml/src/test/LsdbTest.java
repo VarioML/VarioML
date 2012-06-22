@@ -57,8 +57,8 @@ public class LsdbTest extends TestCase  {
 		List<org.varioml.jaxb.Variant> src = o.getVariantList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
-				org.varioml.jaxb.Source source = (org.varioml.jaxb.Source) iterator.next();
-				System.err.println(source.getName());
+				org.varioml.jaxb.Variant var = (org.varioml.jaxb.Variant) iterator.next();
+				System.err.println(var.getName());
 			}
 			
 		}
