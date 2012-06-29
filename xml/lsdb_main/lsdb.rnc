@@ -940,7 +940,7 @@ VmlFrequency =
     
 frequency_value =  freq_as_number | freq_as_counts | freq_as_category 
 ## Frequency as a number
-freq_as_number = element freq { xsd:decimal }
+freq_as_number = element freq { xsd:float }
 ## Number of cases
 freq_as_counts = element counts { xsd:int }
 ## Frequency as a category
@@ -1174,7 +1174,7 @@ VmlNameStr = xsd:string
 ## [% INSERT db_xref.txt %]
 VmlDbXRef =   
       attribute source { text }? 
-    , attribute accession { text}
+    , attribute accession { text}?
     , attribute name { text}?
     , attribute uri { VmlUri }? 
     , VmlAnnotatable

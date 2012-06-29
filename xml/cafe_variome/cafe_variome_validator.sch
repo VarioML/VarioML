@@ -9,6 +9,7 @@
     <iso:ns prefix='vml' uri='http://varioml.org/xml/1.0'/> 
     
     <!-- Cafe Variome constraints  -->            
+    <iso:let name="V2" value="number(//vml:cafe_variome/@schema_version) = 2" />
     
     <iso:pattern id="cafe_variome.submission.checks">
         
@@ -33,6 +34,7 @@
         </iso:rule>
 
         
+        
     </iso:pattern>
     
     <iso:pattern id="cafe_variome.reporting_variant.checks" >
@@ -47,10 +49,8 @@
             
             <iso:assert 
                 test="vml:name">Name is missing</iso:assert> 
-
             <iso:assert 
                 test="vml:sharing_policy">Sharing policy of variant is missing</iso:assert> 
-            
         </iso:rule>
 
         <iso:rule context="vml:seq_changes/vml:variant">
@@ -79,6 +79,8 @@
   
         <iso:rule context="vml:location">
             <iso:assert test="vml:ref_seq">Location must have reference sequence</iso:assert>
+            <iso:assert test="not(vml:chr)">Location entry should not have chromosome. Chromosome reference sequence should be used insead</iso:assert>
+            <iso:assert test="normalize-space(vml:end) ge normalize-space(vml:start) ">Incorrect location. End shoud be larger or equal than start position</iso:assert>
             <!-- start position is given in the relax schema-->
         </iso:rule>
         
@@ -92,32 +94,44 @@
         </iso:rule>
 
         <iso:rule context="vml:variant/vml:panel" >
+            <!--
             <iso:assert test="vml:phenotype or vml:individual" >Panel should have at least phenotype or individual</iso:assert>
-            <!-- need to delimit use of panel to avoid misuses -->
+            -->
+            <!-- need to delimit use of panel to avoid misuses. We can have only following elements in panel -->
             <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
         </iso:rule>
         
         <iso:rule context="vml:variant/vml:panel/vml:individual" >
-            <iso:assert test="vml:gender" >Individual should have at least gender</iso:assert>
-            <!-- need to delimit use of individual to avoid misuses -->
-            <iso:assert test="count(vml:gender) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
+            <!-- Individual inside panel can have only gender -->
+            <iso:assert test="(count(vml:gender)) = count(child::*)" >Element panel/individual contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
         </iso:rule>
-
+        
+  
         <iso:rule context="vml:variant/vml:variant_detection" >
             <iso:assert test="@technique" >Technique missing in variant detection</iso:assert>
             <iso:assert test="@template" >Template missing in variant detection</iso:assert>
         </iso:rule>
 
         <iso:rule context="vml:variant/vml:frequency" >
-            <!-- this is just place holder.  we no not have additional validation rules for frequencies  -->
+            <!-- this is just place holder.  we no not have additional validation rules for frequencies  -->            
         </iso:rule>
         
     </iso:pattern>
 
     <iso:pattern id="cafe_variome.xrefs" >
         
-        <iso:rule context="vml:ref_seq|vml:gene|vml:db_xref" >
+        <iso:rule context="vml:db_xref" >
+            <iso:assert test="@accession or @uri" >Accession number or URI is missing in database xref (gene or ref_seq)</iso:assert>
+        </iso:rule>
+
+        <iso:rule context="vml:gene" >
+            <iso:assert test="@accession or @uri" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
+            <iso:assert test="not($V2)  or upper-case(@source)='HGNC_SYMBOL' or upper-case(@source)='HGNC'" >Source of gene should be HGNC_Symbol or HGNC</iso:assert>            
+        </iso:rule>
+        
+        <iso:rule context="vml:ref_seq" >
             <iso:assert test="@accession" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
+            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='NCBI_NC' or upper-case(@source)='NCBI_NM' or upper-case(@source)='INSD' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
         </iso:rule>
         
     </iso:pattern>

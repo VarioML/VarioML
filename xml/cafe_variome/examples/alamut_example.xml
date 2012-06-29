@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:../cafe_variome.rnc" type="application/relax-ng-compact-syntax"?>
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
+<?xml-model href="../cafe_variome_validator.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <cafe_variome xmlns="http://varioml.org/xml/1.0">
 
     <source id="sourceid0001" uri="http://alamut.com">
@@ -19,12 +20,10 @@
         
         <!-- panels and panel members having the variant: -->
         <panel type="family" id="1">
-            <individual id="1"/>            
+            <individual id="1">
+            </individual>            
             <!-- properties which are common to all panel members (individuals) are given here-->
             <organism term="homo sapiens"/>
-            <comment><text>COMMENT TEXT...</text></comment>                        
-            <creation_date>2011-06-02T10:45:20</creation_date>
-            <modification_date>2011-06-02T10:45:37</modification_date>
         </panel>
 
         <variant_type source="SO" accession="0000159" term="deletion"/>
@@ -43,7 +42,7 @@
                 <name scheme="HGVS">p.Glu615_Ala616delinsAsp</name>
             </variant>
         </seq_changes>
-
+        
         <aliases> <!-- We give name on coding DNA reference here: -->
             <variant type="DNA">
                 <ref_seq accession="NM_000088.3"/>
@@ -58,7 +57,7 @@
             <start>48270186</start>
             <end>48270188</end>
         </location>        
-        
+        <sharing_policy type="openAccess" />
         <protocol_id accession="CMGS_VGKL_5"/> <!-- check this. what is classification index ? -->
         
     </variant> 
@@ -77,7 +76,6 @@
         <pathogenicity term="Non-pathogenic"> 
             <phenotype source="OMIM" accession="166210" term="osteogenesis imperfecta, type-1"/>
         </pathogenicity>
-        
         <seq_changes>
             <variant type="AA">
                 <ref_seq accession="NM_000088.3"/>
@@ -91,7 +89,7 @@
                 <name scheme="HGVS">c.1853_1854del</name>
             </variant>
         </aliases>
-        
+        <sharing_policy type="openAccess" />        
         <protocol_id accession="CMGS_VGKL_5"/> 
         
     </variant>
@@ -108,13 +106,16 @@
         </panel>
         
         <panel type="family" id="0002">
-            <individual id="0002"/>
+            <individual id="0002">
+                <gender code="1"/>
+            </individual>
             <organism term="homo sapiens"/>            
         </panel>
         
         <variant_type source="SO" accession="1000002" term="substitution"/>
         
         <pathogenicity term="Not known"/> <!-- refrs to what? not in given panels?-->
+        <sharing_policy type="openAccess" />
         
         <protocol_id accession="CMGS_VGKL_5"/> 
         

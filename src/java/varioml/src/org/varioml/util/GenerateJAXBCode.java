@@ -444,7 +444,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 					out.println("	// ===========-- freq --===========");
 					out.println("   @javax.xml.bind.annotation.XmlElement(required=false,name=\"freq\",type=Double.class,namespace=\"http://varioml.org/xml/1.0\")");
 					out.println("	private Double _freq ;");
-					out.println("	public void setCounts( Double freq) { ");
+					out.println("	public void setFreq( Double freq) { ");
 					out.println("		this._freq = freq ; if ( _category != null || _counts != null ) org.varioml.util.Util.fatal(Frequency.class,\" frequency choice group support only one of following: freq,counts and category \");");
 					out.println("	}");
 					out.println("	public Double  getFreq() {");

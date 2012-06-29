@@ -74,7 +74,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	// ===========-- freq --===========
    @javax.xml.bind.annotation.XmlElement(required=false,name="freq",type=Double.class,namespace="http://varioml.org/xml/1.0")
 	private Double _freq ;
-	public void setCounts( Double freq) { 
+	public void setFreq( Double freq) { 
 		this._freq = freq ; if ( _category != null || _counts != null ) org.varioml.util.Util.fatal(Frequency.class," frequency choice group support only one of following: freq,counts and category ");
 	}
 	public Double  getFreq() {
