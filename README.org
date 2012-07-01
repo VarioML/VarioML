@@ -1,6 +1,8 @@
 * VarioML
-
-
+** Important
+- Please let us know if you are planning to use this spescification and tools by sending email to admin user (at address varioml.org). This is important because documentation s not uptodate, some things may change and also we need to ensure that all implementations are consistent and constrained proplery using Schematron   
+- Gene will change to list of genes. One mutation may have impact on more than one genes
+** Background
 This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of Variation Data ([[http://varioml.org/]]).
 
 These are shared here so biomedical researchers, clinicians, and bioinformaticians can:
