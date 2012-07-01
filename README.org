@@ -1,10 +1,10 @@
 * VarioML
 ** Important
-- Please let us know if you are planning to use this spescification and tools by sending email to admin user (at address varioml.org). This is important because documentation is not uptodate, and some things may change. Also, more importantly, we need to ensure that all implementations are consistent and constrained proplery using Schematron   
+- Please let us know if you are planning to use this spescification and tools by sending email to admin user (at address varioml.org). This is important because documentation is not uptodate, and some things may change. Also, more importantly, we need to ensure that all implementations are *consistent and constrained proplery* using Schematron.   
 - Gene will change to list of genes. One mutation may have impact on more than one genes
 ** Background
 This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of LSDB Data ([[http://varioml.org/]]).
-VarioML is desinged for curated LSDB data submissions and application integeration and is focused on individual variant entries. Format may not be suitable for handling bulk high throughput data. For those cases e.g. VCF fomat may be more sutable.
+VarioML is desinged for curated LSDB data submissions and application integeration and is *focused on individual variant entries*. Format may not be suitable for handling bulk high throughput data, in which case e.g. VCF fomat may be more sutable.
 
 These are shared here so biomedical researchers, clinicians, and bioinformaticians can:
 - always have the current and canonical version of the data standard schemas and tools
