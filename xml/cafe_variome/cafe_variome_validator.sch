@@ -9,7 +9,7 @@
     <iso:ns prefix='vml' uri='http://varioml.org/xml/1.0'/> 
     
     <!-- Cafe Variome constraints  -->            
-    <iso:let name="V2" value="number(//vml:cafe_variome/@schema_version) = 2" />
+    <iso:let name="V2" value="number(//vml:cafe_variome/@schema_version) ge 2.0" />
     
     <iso:pattern id="cafe_variome.submission.checks">
         
@@ -33,7 +33,15 @@
                 test="vml:name or vml:email">Contact name or email is missing</iso:assert> 
         </iso:rule>
 
-        
+        <iso:rule context="vml:cafe_variome/vml:source/vml:comment">   
+            <iso:assert test="not(@term='wasDerivedFrom') or @source='opmv'" >'wasDefinedFrom' cannot exist without 'opmv' name space (source)</iso:assert> 
+            <iso:assert test="not(@source='opmv') or @term='wasDerivedFrom'" >opmv (open provenance mode) must have at least one predicate defined (e.g. 'wasDerivedFrom')</iso:assert>  
+            <iso:assert test="not(@source='opmv' and @term='wasDerivedFrom') or not(@uri) or @uri='http://purl.org/net/opmv/ns#wasDerivedFrom'" >URI of wasDerivedFrom predicate was wrong</iso:assert>  
+            <iso:assert test="not(@source='opmv') or vml:db_xref">Database xref is misisng in provenace content (source/comment/@source='opmv') element)</iso:assert>
+            
+            <iso:assert test="not(@term='disclaimer') or @source='g2p'" >'disclaimer cannot exist without 'g2p' name space (source)</iso:assert>             
+            <iso:assert test="not(@term='disclaimer') or vml:text" >'disclaimer cannot exist without text element </iso:assert> 
+        </iso:rule>
         
     </iso:pattern>
     
@@ -51,6 +59,8 @@
                 test="vml:name">Name is missing</iso:assert> 
             <iso:assert 
                 test="vml:sharing_policy">Sharing policy of variant is missing</iso:assert> 
+            
+            <iso:assert test="not($V2) or vml:panel">Panel is missing. Need to identify observation target (individual or panel)</iso:assert>
         </iso:rule>
 
         <iso:rule context="vml:seq_changes/vml:variant">
@@ -99,6 +109,7 @@
             -->
             <!-- need to delimit use of panel to avoid misuses. We can have only following elements in panel -->
             <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
+            <iso:assert test="not($V2) or @id"></iso:assert>
         </iso:rule>
         
         <iso:rule context="vml:variant/vml:panel/vml:individual" >
