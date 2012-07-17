@@ -34,6 +34,29 @@ public class LsdbTest extends TestCase  {
 		
 	}
 
+	public void testEXI() throws Exception { 
+
+		Util util = new Util();
+		org.varioml.jaxb.Lsdb o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "templates/lsdb1.xml",org.varioml.jaxb.Lsdb.class);
+		
+		List<org.varioml.jaxb.Source> src = o.getSourceList();
+		if ( src != null ) {
+			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
+				org.varioml.jaxb.Source source = (org.varioml.jaxb.Source) iterator.next();
+				System.err.println(source.getName());
+			}
+			
+		}
+		util.writeEXI("schema/lsdb.xsd","lsdb_exi_test.exi", o);
+		o =  (org.varioml.jaxb.Lsdb)util.readEXI("schema/lsdb.xsd", "lsdb_exi_test.exi",org.varioml.jaxb.Lsdb.class);
+		util.writeXML("schema/lsdb.xsd","lsdb_exi_test.xml", o);
+		o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "lsdb_exi_test.xml",org.varioml.jaxb.Lsdb.class);
+		util.writeEXI("schema/lsdb.xsd","lsdb_exi_test2.exi", o);
+		
+
+		
+	}
+
 	public void testCafeVariomeJAXBJSON() throws Exception { 
 
 		Util util = new Util();
@@ -95,6 +118,7 @@ public class LsdbTest extends TestCase  {
 			
 		}
 		util.writeJSON("test_all_full.json", o);
+		util.writeXML("test_all_full.xml", o);
 		Object x = util.readJSON("test_all_full.json",org.varioml.jaxb.Lsdb.class);
 		util.writeXML("schema/lsdb.xsd", "test_all_full2.xml",x);
 		
