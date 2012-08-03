@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>varioml_xml</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.ebayopensource.vjet.eclipse.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+               <buildCommand>
+                        <name>com.abstratt.mdd.ui.builder</name>
+                        <arguments>
+                        </arguments>
+                </buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.ebayopensource.vjet.core.nature</nature>
+		<nature>com.abstratt.mdd.ui.nature</nature>
+	</natures>
+</projectDescription>
