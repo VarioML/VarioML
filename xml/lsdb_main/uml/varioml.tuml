@@ -2,6 +2,22 @@ package varioml ;
 
 import basic_types;
 
+class Observation specializes Annotatable
+	attribute value: Value[0,*];
+	attribute evidence_code: Ontology_term[0,*];
+	attribute protocol_id: DbXRef[0,*];	
+	attribute observation_date: Date[0,1];
+end;  
+
+class Observation_target specializes Annotatable
+end;  
+
+class Frequency specializes Observation
+    attribute samples : Integer[0, 1];
+    attribute \type : Frequency_type[0, 1];
+    attribute population : Ontology_term[0, *];
+    attribute freq : Frequency_value[1, *];
+end;
 abstract class Submission
     /* Identifiable */
     attribute schema_version : Real;
@@ -9,9 +25,10 @@ abstract class Submission
     attribute created : Date;
 end;
 
-class Cafe_variome implements Submission
+class Cafe_variome specializes Submission
 end;
 
+(* from the LRG spec  *)
 class Source specializes Annotatable
     attribute name : String[1];
     attribute version : String[0, 1];
@@ -60,7 +77,7 @@ end;
 
 class Panel specializes Abstract_panel
     attribute size : Integer[0, 1];
-    attribute\type : String;
+    attribute \type : String;
 end;
 
 association individuals
@@ -88,10 +105,7 @@ class Haplotype specializes Variant_characteristic
     attribute allele : Integer[0, 1];
 end;
 
-abstract class Observation_target specializes Annotatable
-end;
-
-abstract class Variant_characteristic specializes Observation_target, Observation
+abstract class Variant_characteristic specializes Observation
     /* Identifiable */
     attribute name : Variant_name[0, 1];
     attribute variant_type : Ontology_term[0, 1];
@@ -106,7 +120,7 @@ abstract class Variant_characteristic specializes Observation_target, Observatio
 end;
 
 class Consequent_variant specializes Variant_characteristic
-    attribute\type : String;
+    attribute \type : String;
     attribute ref_seq : DbXRef[0, *];
     attribute variant_type : Ontology_term;
 end;
@@ -118,7 +132,7 @@ end;
 
 association aliases
     role variant : Variant_characteristic[1];
-    navigable role\alias : Consequent_variant[*];
+    navigable role \alias : Consequent_variant[*];
 end;
 
 association haplptypes

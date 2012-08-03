@@ -8,9 +8,13 @@ primitive Real;
 
 primitive Date;
 
-primitive Ontology_term;
+class  Ontology_term
 
-primitive Evidence_ontology_term;
+end;
+
+class Evidence_ontology_term specializes Ontology_term
+  attribute evidence_code: Ontology_term[0,*];
+end;
 
 primitive DbXRef;
 
@@ -45,13 +49,35 @@ end;
 class Contact
 end;
 
+(* place holder for generic values. currenly not used *)
+class Value specializes Ontology_term
+    attribute \type: String ;
+    attribute unit: String[0,1];
+    attribute val: String;
+    attribute value: Value[0,*];
+end;
+
 abstract class Annotatable
 end;
 
 /* Note that naming of classes do not correspond fully naming of Relax schema patterns
 */
-abstract class Observation extends Annotatable
-    attribute evidence_code : Ontology_term[0, *];
+
+class Observation specializes Annotatable
+	attribute value: Value[0,*];
+	attribute evidence_code: Ontology_term[0,*];
+	attribute protocol_id: DbXRef[0,*];	
+	attribute observation_date: Date[0,1];
+end;  
+
+class Observation_target specializes Annotatable
+end;  
+
+class Frequency specializes Observation
+    attribute samples : Integer[0, 1];
+    attribute \type : Frequency_type[0, 1];
+    attribute population : Ontology_term[0, *];
+    attribute freq : Frequency_value[1, *];
 end;
 
 enumeration Panel_type
@@ -61,12 +87,6 @@ enumeration Panel_type
     population
 end;
 
-class Frequency specializes Observation
-    attribute samples : Integer[0, 1];
-    attribute \type : Frequency_type[0, 1];
-    attribute population : Ontology_term[0, *];
-    attribute freq : Frequency_value[1, *];
-end;
 
 class Location
     attribute chr : String;
