@@ -1,18 +1,22 @@
-package basic_types ;
+package basic_types;
 
+primitive Integer;
 
+primitive String;
 
-primitive Integer; 
-primitive String; 
 primitive Real;
+
 primitive Date;
+
 primitive Ontology_term;
+
 primitive Evidence_ontology_term;
+
 primitive DbXRef;
 
-class Variant_name 
-	attribute scheme : String;
-	attribute name : String;	
+class Variant_name
+    attribute scheme : String;
+    attribute name : String;
 end;
 
 class Gender
@@ -21,16 +25,16 @@ end;
 class Frequency_value
 end;
 
-enumeration  Frequency_type
-	allele,carrier,genotype
+enumeration Frequency_type
+    allele, 
+    carrier, 
+    genotype
 end;
 
-
-class Sequence 
-	attribute sequence : String;
-	attribute \reference : String;
+class Sequence
+    attribute sequence : String;
+    attribute \reference : String;
 end;
-
 
 class Sharing_policy
 end;
@@ -41,34 +45,33 @@ end;
 class Contact
 end;
 
-abstract class Annotatable 
+abstract class Annotatable
 end;
 
-abstract class Annotated_observation specializes Annotatable, Observation
-	attribute evidence_code : Ontology_term[0,*] ;
+/* Note that naming of classes do not correspond fully naming of Relax schema patterns
+*/
+abstract class Observation extends Annotatable
+    attribute evidence_code : Ontology_term[0, *];
 end;
 
-abstract class Observation 
-	attribute evidence_code : Ontology_term[0,*] ;
+enumeration Panel_type
+    sample, 
+    family, 
+    extended\ family, 
+    population
 end;
 
-
-enumeration PanelType
-	sample,family,extended\ family,population
+class Frequency specializes Observation
+    attribute samples : Integer[0, 1];
+    attribute \type : Frequency_type[0, 1];
+    attribute population : Ontology_term[0, *];
+    attribute freq : Frequency_value[1, *];
 end;
 
-class Frequency specializes Annotated_observation
-	attribute samples: Integer[0,1];
-	attribute \type: Frequency_type[0,1];
-	attribute population : Ontology_term[0,*];
-	attribute value : Frequency_value[1,*];  
-end;
-
-
-class Location 
-	attribute chr : String;
-	attribute start : Integer;
-	attribute \end : Integer;
+class Location
+    attribute chr : String;
+    attribute start : Integer;
+    attribute \end : Integer;
 end;
 
 end.
