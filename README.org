@@ -17,7 +17,7 @@ More information on VarioML can be found at:
 - *reference*: [[http://varioml.org/]]
 - *wiki*: [[http://www.gen2phen.org/groups/varioml]]
 
-- *Simplified UML model* 
+*Simplified UML model* 
 [[https://raw.github.com/VarioML/VarioML/master/xml/lsdb_main/uml/varioml.jpg]]
 
 ** Improve VarioML 
