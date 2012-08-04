@@ -453,7 +453,7 @@
       <xs:documentation>[% INSERT variant.txt %]  </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" ref="vml:gene"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:gene"/>
       <xs:element minOccurs="0" ref="vml:ref_seq"/>
       <xs:group minOccurs="0" ref="vml:name"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:haplotype"/>

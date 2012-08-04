@@ -2,6 +2,8 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.varioml.util.Util;
+
 @org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
 @org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
@@ -10,7 +12,7 @@ import java.util.List;
 @org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_copyCount","_attr_genotypic","_attr_id","_attr_subcellularPart","_attr_type","_attr_uri","_gene","_refSeq","_name","_haplotype","_panel","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_genotype","_consequence","_pathogenicity","_sample","_tissue","_variantDetection","_restrictionSite","_tissueDistribution","_geneticOrigin","_frequency","_seqChanges","_aliases","_source","_location","_sharingPolicy","_creationDate","_modificationDate","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
-public class Variant /**/implements VmlReportingVariant,VmlShareable/**/ {
+public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	//xml-element used for code generation: //lsdb/variant
 
 	public Variant(  ) {
@@ -77,15 +79,30 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable/**/ {
 	}
  
 	// ===========-- gene --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="gene",type=Gene.class,namespace="http://varioml.org/xml/1.0")
-	private Gene _gene ;
-	public void setGene( Gene gene) { 
+   @org.codehaus.jackson.annotate.JsonProperty("genes")
+   @javax.xml.bind.annotation.XmlElement(required=false,name="gene",type=Gene.class,namespace="http://varioml.org/xml/1.0")
+	private List<Gene> _gene ;
+	public void setGeneList( List<Gene> gene) { 
 		this._gene = gene ;
 	}
-	public Gene getGene() {
+	public List<Gene> getGeneList()  { 
 		return this._gene;
 	}
- 
+	public void addGene(Gene item ) { 
+		if ( this._gene == null ) { 
+			this._gene = new ArrayList<Gene>();
+		}
+		this._gene.add( item);
+	}
+	public void setGene( Gene gene) { 
+		addGene( gene);
+		if ( getGeneList().size() > 1) Util.fatal(Variant.class, "Legacy mathod setGene failed.. Only one gene is expected for the variant (in this legacy case)");
+	}
+	public Gene getGene() { 
+		if ( getGeneList() != null & getGeneList().size()> 1) Util.fatal(Variant.class, "Legacy mathod getGene failed.. Only one gene is expected for the variant (in this legacy case)");
+		return getGeneList() == null ? null : getGeneList().get(0);
+	}
+
 	// ===========-- ref_seq --===========
 	@javax.xml.bind.annotation.XmlElement(required=false,name="ref_seq",type=RefSeq.class,namespace="http://varioml.org/xml/1.0")
 	private RefSeq _refSeq ;

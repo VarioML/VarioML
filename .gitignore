@@ -38,9 +38,8 @@ Thumbs.db
 
 # Eclipse dirs       #
 ######################
-.classpath
-.project
-.settings
-
-
-
+#.classpath
+#.project
+#.settings
+.metadata
+bin
