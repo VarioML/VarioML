@@ -2,8 +2,10 @@ package varioml ;
 
 import basic_types;
 
+(* Composition of ObservOM's\n Observable_feature \
+   and Observed_value *)
 class Observation specializes Annotatable
-	attribute value: Value[0,*];
+	attribute value: Value[0,*];/*generic name value*/
 	attribute evidence_code: Ontology_term[0,*];
 	attribute protocol_id: DbXRef[0,*];	
 	attribute observation_date: Date[0,1];
@@ -28,7 +30,7 @@ end;
 class Cafe_variome specializes Submission
 end;
 
-(* from the LRG spec  *)
+(* Is-a LRG::Source  *)
 class Source specializes Annotatable
     attribute name : String[1];
     attribute version : String[0, 1];
@@ -43,16 +45,12 @@ association submitting_source
     navigable role source : Source[*];
 end;
 
-association submitted_genotypes
-    role submission : Submission[1];
+association submitted_variants
+    role submission : Cafe_variome[1];
     navigable role variant : Variant[*];
 end;
 
-association submitted_targets
-    role submission : Submission[1];
-    navigable role target : Abstract_panel[*];
-end;
-
+(* Is-a PageOM::Abstract_panel *)
 abstract class Abstract_panel specializes Observation_target
     /* Identifiable */
     attribute organism : Ontology_term[0, 1];
@@ -66,7 +64,7 @@ abstract class Abstract_panel specializes Observation_target
 end;
 
 association variants
-    navigable role target : Abstract_panel[1];
+    navigable role panel : Abstract_panel[1];
     navigable role variant : Variant[0, *];
 end;
 
@@ -87,8 +85,13 @@ end;
 
 class Variant specializes Variant_characteristic
     /* Identifiable */
-    attribute gene : DbXRef;
+    attribute gene : DbXRef[0,*];
     attribute ref_seq : DbXRef;
+    attribute exon : Exon[0,1];
+    attribute genotype: Genotype[0,1];
+    attribute restriction_site: Ontology_term[0,1];
+    attribute tissue_distribution : Ontology_term[0,1];
+    attribute tissue: Ontology_term[0,1];
     attribute sharing_policy : Sharing_policy;
     attribute creation_date : Date[0, 1];
     attribute modification_date : Date[0, 1];
@@ -110,23 +113,23 @@ abstract class Variant_characteristic specializes Observation
     attribute name : Variant_name[0, 1];
     attribute variant_type : Ontology_term[0, 1];
     /* exon, intron... type of underlying sequence feature */
-    attribute variant_class : Ontology_term[0, 1];
+    attribute seq_region: Seq_region[0,1];
+    attribute original_id: DbXRef[0,1];
+    attribute sequence: Sequence[0,1];
     attribute consequence : Observation[0, *];
     attribute pathogenicity : Observation[0, *];
     attribute variant_detection : Ontology_term[0, 1];
     attribute frequency : Frequency[0, *];
-    attribute sequence : Sequence[0, 1];
     attribute location : Location[0, *];
 end;
 
 class Consequent_variant specializes Variant_characteristic
     attribute \type : String;
     attribute ref_seq : DbXRef[0, *];
-    attribute variant_type : Ontology_term;
 end;
 
 association seq_changes
-    role caustive_variant : Variant_characteristic[1];
+    role causative_variant : Variant_characteristic[1];
     navigable role seq_change : Consequent_variant[*];
 end;
 
@@ -135,7 +138,7 @@ association aliases
     navigable role \alias : Consequent_variant[*];
 end;
 
-association haplptypes
+association haplotypes
     role variant : Variant[1];
     navigable role haplotype : Haplotype[*];
 end;
