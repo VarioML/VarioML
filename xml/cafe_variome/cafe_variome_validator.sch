@@ -137,12 +137,12 @@
 
         <iso:rule context="vml:gene" >
             <iso:assert test="@accession or @uri" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
-            <iso:assert test="not($V2)  or upper-case(@source)='HGNC_SYMBOL' or upper-case(@source)='HGNC'" >Source of gene should be HGNC_Symbol or HGNC</iso:assert>            
+            <iso:assert test="not($V2)  or upper-case(@source)='HGNC.SYMBOL' or upper-case(@source)='HGNC'" >Source of gene should be HGNC_Symbol or HGNC</iso:assert>            
         </iso:rule>
         
         <iso:rule context="vml:ref_seq" >
             <iso:assert test="@accession" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
-            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='NCBI_NC' or upper-case(@source)='NCBI_NM' or upper-case(@source)='INSD' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
+            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
         </iso:rule>
         
     </iso:pattern>

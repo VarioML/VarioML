@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="lib/jackson-all-1.9.4.jar"/>
 	<classpathentry kind="lib" path="lib/junit-dep-4.9b4.jar"/>
 	<classpathentry kind="lib" path="lib/simple-xml-2.5.3.jar"/>
-	<classpathentry kind="lib" path="lib/exi/exificient.jar"/>
-	<classpathentry kind="lib" path="lib/exi/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="lib/exificient.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

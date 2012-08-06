@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.net.ContentHandler;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -37,7 +36,6 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import com.siemens.ct.exi.EXIFactory;
-import com.siemens.ct.exi.EncodingOptions;
 import com.siemens.ct.exi.GrammarFactory;
 import com.siemens.ct.exi.api.sax.EXIResult;
 import com.siemens.ct.exi.api.sax.EXISource;
@@ -228,14 +226,21 @@ public class Util {
 					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			JAXBContext context = JAXBContext.newInstance(obj.getClass());
 			File file = new File(xmlFile);
+
+			PrintWriter out = new PrintWriter(file);
+
+//			XMLStreamWriter xmlStreamWriter = XMLOutputFactory.newInstance()
+//				     .createXMLStreamWriter(out);
+//			xmlStreamWriter.setPrefix("vm", "http://varioml.org/xml/1.0");
+//			xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		    m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 			m.setEventHandler(new MyValidationEventHandler());
 			if (schemaFile != null) {
 				Schema schema = sf.newSchema(new File(schemaFile));
 				m.setSchema(schema);
 			}
-			PrintWriter out = new PrintWriter(file);
 			m.marshal(obj, out);
 			out.close();
 
@@ -342,12 +347,17 @@ public class Util {
 	public static void main(String[] args) throws Exception {
 
 		Util util = new Util();
-		org.varioml.jaxb.Panel o = (org.varioml.jaxb.Panel) util.readXML(
-				"lsdb.xsd", "templates/panel1.xml",
-				org.varioml.jaxb.Panel.class);
-		util.writeJSON("tmp.json", o);
-		Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
-		util.writeXML("lsdb.xsd", "tmp.xml", x);
+		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util.readXML(
+				"schema/cafe_variome.xsd", "1KG.xml",
+				org.varioml.jaxb.CafeVariome.class);
+		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
+		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util.readXML(
+				"schema/cafe_variome.xsd", "test.xml",
+				org.varioml.jaxb.CafeVariome.class);
+
+		//		util.writeJSON("tmp.json", o);
+//		Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
+//		//util.writeXML("lsdb.xsd", "tmp.xml", x);
 
 	}
 }

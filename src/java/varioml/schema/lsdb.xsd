@@ -1665,7 +1665,7 @@
     </xs:attribute>
   </xs:complexType>
   <xs:element name="frequency_value" abstract="true"/>
-  <xs:element name="freq" substitutionGroup="vml:frequency_value" type="xs:decimal"/>
+  <xs:element name="freq" substitutionGroup="vml:frequency_value" type="xs:float"/>
   <xs:element name="counts" substitutionGroup="vml:frequency_value" type="xs:int"/>
   <xs:element name="category" substitutionGroup="vml:frequency_value">
     <xs:complexType>
@@ -2116,7 +2116,7 @@
     </xs:annotation>
     <xs:group ref="vml:VmlAnnotatable"/>
     <xs:attribute name="source"/>
-    <xs:attribute name="accession" use="required"/>
+    <xs:attribute name="accession"/>
     <xs:attribute name="name"/>
     <xs:attribute name="uri" type="vml:VmlUri"/>
   </xs:complexType>

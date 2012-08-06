@@ -76,7 +76,7 @@ public class LsdbTest extends TestCase  {
 	public void testCafeVariomeJAXBJSON2() throws Exception { 
 
 		Util util = new Util();
-		org.varioml.jaxb.Panel o =  (org.varioml.jaxb.Panel)util.readXML("schema/lsdb.xsd", "templates/panel1.xml",org.varioml.jaxb.Lsdb.class);
+		org.varioml.jaxb.Panel o =  (org.varioml.jaxb.Panel)util.readXML("schema/lsdb.xsd", "templates/panel1.xml",org.varioml.jaxb.Panel.class);
 		List<org.varioml.jaxb.Variant> src = o.getVariantList();
 		if ( src != null ) {
 			for (Iterator iterator = src.iterator(); iterator.hasNext();) {
