@@ -16,7 +16,9 @@ Source schema, examples, and validation tools are grouped by implementation form
 More information on VarioML can be found at:
 - *reference*: [[http://varioml.org/]]
 - *wiki*: [[http://www.gen2phen.org/groups/varioml]]
-- *uml*: [[https://raw.github.com/VarioML/VarioML/master/xml/lsdb_main/uml/varioml.jpg]]
+
+** Simplified UML model
+[[https://raw.github.com/VarioML/VarioML/master/xml/lsdb_main/uml/varioml.jpg]]
 
 ** Improve VarioML 
 
