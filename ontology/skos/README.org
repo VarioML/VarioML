@@ -1,12 +1,12 @@
 SKOS terms for some VarioML ontology terms. Use full URI  name source and name accession pairs. Source is here always "g2p".
 
 
-Example:
+** Example:
 
-<pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003">
-</pathigenicity>
+  <pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003">
+  </pathigenicity>
 
 or
 
-<pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" >
-</pathigenicity>
+  <pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" >
+  </pathigenicity>
