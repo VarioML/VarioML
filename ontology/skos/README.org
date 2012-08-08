@@ -3,7 +3,7 @@ SKOS terms for some VarioML ontology terms. Use full URI  name source and name a
 
 ** Example:
 
-  <pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003">
+  <pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0/#p_0003">
   </pathigenicity>
 
 or
