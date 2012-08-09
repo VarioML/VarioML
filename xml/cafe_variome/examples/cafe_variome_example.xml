@@ -11,19 +11,18 @@
         </contact>
     </source> 
     <variant type="cDNA">
-        <gene source="HGNC" accession="COL1A1"/>
-        <ref_seq accession="NG_007400.1"/>
+        <gene source="hgnc.symbol" accession="COL1A1"/>
+        <ref_seq source="refseq" accession="NG_007400.1"/>
         <name scheme="HGVS">c.579delT</name>
         <panel>
             <individual>
                 <gender code="1"></gender>                
             </individual>
-            <phenotype term="tt"></phenotype>            
         </panel>
 
         <pathogenicity term="pathogenic" scope="family">
             <phenotype term="Osteogenesis Imperfecta"/>            
-            <evidence_code term="experimental evidence" source="ECO"/>            
+            <evidence_code term="experimental evidence" source="obo.eco"/>            
         </pathogenicity>
         <variant_detection technique="CMC" template="DNA">            
         </variant_detection>        
@@ -31,14 +30,7 @@
         <genetic_origin term="paternal">
             <evidence_code term="inferred"/>
         </genetic_origin>
-        
-        <frequency>
-            <freq>0.96</freq>
-        </frequency>
-        <location>
-            <ref_seq accession="asas"></ref_seq>
-            <start>1</start>
-        </location>
+
         <sharing_policy type="embargoedAccess">
             <embargo_end_date>2012-12-12</embargo_end_date>
             <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/"

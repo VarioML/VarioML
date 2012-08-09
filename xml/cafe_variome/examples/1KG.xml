@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
+<?xml-model href="../cafe_variome_validator.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<ns2:cafe_variome schema_version="2.0" xmlns:ns2="http://varioml.org/xml/1.0">
+    <ns2:source version="1" id="ngrl_genomes_data">
+        <ns2:name>NGRL/1000 genomes mutations/phase 1</ns2:name>
+        <ns2:url>http://www.ngrl.org.uk/Manchester</ns2:url>
+        <ns2:contact>
+            <ns2:name>NGRL</ns2:name>
+            <ns2:email>NGRL.contact@cmft.nhs.uk</ns2:email>
+        </ns2:contact>
+        <ns2:comment term="wasDerivedFrom" source="opmv">
+            <ns2:text>1000 genomes/phase 1 - March release</ns2:text>
+            <ns2:db_xref uri="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20110521/"/>
+        </ns2:comment>
+        <ns2:comment term="disclaimer" source="g2p">
+            <ns2:text>This conversion of 1000 genomes data to HGVS nomenclature has been created for clinical use in the analysis of diagnostic variants. All use of 1000 genomes data must be in accordance with the 1000 genomes data release policy (http://www.1000genomes.org/data#DataUse)</ns2:text>
+        </ns2:comment>
+    </ns2:source>
+    <ns2:variant>
+        <ns2:gene source="hgnc.symbol" accession="AGL"/>
+        <ns2:ref_seq source="refseq" accession="NM_000642.2"/>
+        <ns2:name scheme="HGVS">c.-288C&gt;G</ns2:name>
+        <ns2:panel id="1000 genomes samples"/>
+        <ns2:frequency type="allele" samples="2184">
+            <ns2:population type="group" term="All samples"/>
+            <ns2:freq>0.0018</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="492">
+            <ns2:population type="ethnic" term="African" accession="AFR"/>
+            <ns2:freq>0.0061</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="362">
+            <ns2:population type="ethnic" term="Ad Mixed American" accession="AMR"/>
+            <ns2:freq>0.0028</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="194">
+            <ns2:population type="ethnic" term="Luhya in Webuye, Kenya" accession="LWK"/>
+            <ns2:freq>0.0155</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="110">
+            <ns2:population type="ethnic" term="Puerto Ricans from Puerto Rico" accession="PUR"/>
+            <ns2:freq>0.0091</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1050">
+            <ns2:population type="group" term="Males"/>
+            <ns2:freq>0.0029</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1134">
+            <ns2:population type="group" term="Females"/>
+            <ns2:freq>9.0E-4</ns2:freq>
+        </ns2:frequency>
+        <ns2:aliases>
+            <ns2:variant>
+                <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+                <ns2:name scheme="HGVS">g.100315752C&gt;G</ns2:name>
+            </ns2:variant>
+        </ns2:aliases>
+        <ns2:location>
+            <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+            <ns2:start>100315752</ns2:start>
+            <ns2:end>100315752</ns2:end>
+        </ns2:location>
+        <ns2:sharing_policy type="openAccess"/>
+    </ns2:variant>
+    <ns2:variant>
+        <ns2:gene source="hgnc.symbol" accession="AGL"/>
+        <ns2:ref_seq source="refseq" accession="NM_000642.2"/>
+        <ns2:name scheme="HGVS">c.-244C&gt;G</ns2:name>
+        <ns2:panel id="1000 genomes samples"/>
+        <ns2:frequency type="allele" samples="2184">
+            <ns2:population type="group" term="All samples"/>
+            <ns2:freq>0.0060</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="492">
+            <ns2:population type="ethnic" term="African" accession="AFR"/>
+            <ns2:freq>0.0183</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="362">
+            <ns2:population type="ethnic" term="Ad Mixed American" accession="AMR"/>
+            <ns2:freq>0.0028</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="572">
+            <ns2:population type="ethnic" term="East Asian" accession="ASN"/>
+            <ns2:freq>0.0017</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="758">
+            <ns2:population type="ethnic" term="European" accession="EUR"/>
+            <ns2:freq>0.0026</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="170">
+            <ns2:population type="ethnic" term="Utah Residents (CEPH) with Northern and Western European ancestry" accession="CEU"/>
+            <ns2:freq>0.0059</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="186">
+            <ns2:population type="ethnic" term="Finnish in Finland" accession="FIN"/>
+            <ns2:freq>0.0054</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="200">
+            <ns2:population type="ethnic" term="Southern Han Chinese" accession="CHS"/>
+            <ns2:freq>0.0050</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="176">
+            <ns2:population type="ethnic" term="Yoruba in Ibadan, Nigera" accession="YRI"/>
+            <ns2:freq>0.017</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="194">
+            <ns2:population type="ethnic" term="Luhya in Webuye, Kenya" accession="LWK"/>
+            <ns2:freq>0.0258</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="122">
+            <ns2:population type="ethnic" term="Americans of African Ancestry in SW USA " accession="ASW"/>
+            <ns2:freq>0.0082</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="110">
+            <ns2:population type="ethnic" term="Puerto Ricans from Puerto Rico" accession="PUR"/>
+            <ns2:freq>0.0091</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1050">
+            <ns2:population type="group" term="Males"/>
+            <ns2:freq>0.0067</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1134">
+            <ns2:population type="group" term="Females"/>
+            <ns2:freq>0.0053</ns2:freq>
+        </ns2:frequency>
+        <ns2:aliases>
+            <ns2:variant>
+                <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+                <ns2:name scheme="HGVS">g.100315796C&gt;G</ns2:name>
+            </ns2:variant>
+        </ns2:aliases>
+        <ns2:location>
+            <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+            <ns2:start>100315796</ns2:start>
+            <ns2:end>100315796</ns2:end>
+        </ns2:location>
+        <ns2:sharing_policy type="openAccess"/>
+    </ns2:variant>
+    <ns2:variant>
+        <ns2:gene source="hgnc.symbol" accession="AGL"/>
+        <ns2:ref_seq source="refseq" accession="NM_000642.2"/>
+        <ns2:name scheme="HGVS">c.-46G&gt;A</ns2:name>
+        <ns2:panel id="1000 genomes samples"/>
+        <ns2:frequency type="allele" samples="2184">
+            <ns2:population type="group" term="All samples"/>
+            <ns2:freq>5.0E-4</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="492">
+            <ns2:population type="ethnic" term="African" accession="AFR"/>
+            <ns2:freq>0.0020</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="122">
+            <ns2:population type="ethnic" term="Americans of African Ancestry in SW USA " accession="ASW"/>
+            <ns2:freq>0.0082</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1134">
+            <ns2:population type="group" term="Females"/>
+            <ns2:freq>9.0E-4</ns2:freq>
+        </ns2:frequency>
+        <ns2:aliases>
+            <ns2:variant>
+                <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+                <ns2:name scheme="HGVS">g.100316553G&gt;A</ns2:name>
+            </ns2:variant>
+        </ns2:aliases>
+        <ns2:location>
+            <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+            <ns2:start>100316553</ns2:start>
+            <ns2:end>100316553</ns2:end>
+        </ns2:location>
+        <ns2:sharing_policy type="openAccess"/>
+    </ns2:variant>
+    <ns2:variant>
+        <ns2:gene source="hgnc.symbol" accession="AGL"/>
+        <ns2:ref_seq source="refseq" accession="NM_000642.2"/>
+        <ns2:name scheme="HGVS">c.-10A&gt;G</ns2:name>
+        <ns2:panel id="1000 genomes samples"/>
+        <ns2:frequency type="allele" samples="2184">
+            <ns2:population type="group" term="All samples"/>
+            <ns2:freq>0.4299</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="492">
+            <ns2:population type="ethnic" term="African" accession="AFR"/>
+            <ns2:freq>0.248</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="362">
+            <ns2:population type="ethnic" term="Ad Mixed American" accession="AMR"/>
+            <ns2:freq>0.4724</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="572">
+            <ns2:population type="ethnic" term="East Asian" accession="ASN"/>
+            <ns2:freq>0.5262</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="758">
+            <ns2:population type="ethnic" term="European" accession="EUR"/>
+            <ns2:freq>0.4551</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="170">
+            <ns2:population type="ethnic" term="Utah Residents (CEPH) with Northern and Western European ancestry" accession="CEU"/>
+            <ns2:freq>0.4647</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="196">
+            <ns2:population type="ethnic" term="Toscani in Italia" accession="TSI"/>
+            <ns2:freq>0.4031</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="178">
+            <ns2:population type="ethnic" term="British in England and Scotland" accession="GBR"/>
+            <ns2:freq>0.5169</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="186">
+            <ns2:population type="ethnic" term="Finnish in Finland" accession="FIN"/>
+            <ns2:freq>0.4301</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="28">
+            <ns2:population type="ethnic" term="Iberian population in Spain" accession="IBS"/>
+            <ns2:freq>0.5357</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="194">
+            <ns2:population type="ethnic" term="Han Chinese in Bejing, China" accession="CHB"/>
+            <ns2:freq>0.6082</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="178">
+            <ns2:population type="ethnic" term="Japanese in Tokyo, Japan" accession="JPT"/>
+            <ns2:freq>0.4775</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="200">
+            <ns2:population type="ethnic" term="Southern Han Chinese" accession="CHS"/>
+            <ns2:freq>0.49</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="176">
+            <ns2:population type="ethnic" term="Yoruba in Ibadan, Nigera" accession="YRI"/>
+            <ns2:freq>0.2102</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="194">
+            <ns2:population type="ethnic" term="Luhya in Webuye, Kenya" accession="LWK"/>
+            <ns2:freq>0.2268</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="122">
+            <ns2:population type="ethnic" term="Americans of African Ancestry in SW USA " accession="ASW"/>
+            <ns2:freq>0.3361</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="132">
+            <ns2:population type="ethnic" term="Mexican Ancestry from Los Angeles USA" accession="MXL"/>
+            <ns2:freq>0.4545</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="110">
+            <ns2:population type="ethnic" term="Puerto Ricans from Puerto Rico" accession="PUR"/>
+            <ns2:freq>0.4727</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="120">
+            <ns2:population type="ethnic" term="Colombians from Medellin, Colombia" accession="CLM"/>
+            <ns2:freq>0.4917</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1050">
+            <ns2:population type="group" term="Males"/>
+            <ns2:freq>0.4352</ns2:freq>
+        </ns2:frequency>
+        <ns2:frequency type="allele" samples="1134">
+            <ns2:population type="group" term="Females"/>
+            <ns2:freq>0.425</ns2:freq>
+        </ns2:frequency>
+        <ns2:aliases>
+            <ns2:variant>
+                <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+                <ns2:name scheme="HGVS">g.100316589A&gt;G</ns2:name>
+            </ns2:variant>
+        </ns2:aliases>
+        <ns2:location>
+            <ns2:ref_seq source="refseq" accession="NC_000001.10"/>
+            <ns2:start>100316589</ns2:start>
+            <ns2:end>100316589</ns2:end>
+        </ns2:location>
+        <ns2:sharing_policy type="openAccess"/>
+    </ns2:variant>
+</ns2:cafe_variome>
