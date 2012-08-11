@@ -4,13 +4,13 @@
 
 *Important*: 
 - All new implementations should use validation to ensure consistency with the core specification. Contact *admin* at *varioml.org* for help with generating validation scripts using Schematron. 
-- Use standard ontologies for the content, such as the /Sequence Ontology/ ([[http://www.sequenceontology.org/]]) and /VariO/ ([[http://variationontology.org/]]). Some terms are defined using SKOS vocabularies: [[https://github.com/VarioML/VarioML/tree/master/ontology/skos]].
-- Source attributes in database xrefs (such as /gene/ and /ref_seq/) as well as ontology terms should use database abbreviations defined in the */MIRIAM registry/* ([[http://identifiers.org]]). For example, use /hgnc.symbol/ for gene names, /refseq/ for NCBI reference sequences, and /obo.so/ for Sequence Ontology references.
+- Use standard ontologies for the content, such as the /Sequence Ontology/ ([[http://www.sequenceontology.org/]]) and /VariO/ ([[http://variationontology.org/]]). 
+- Some terms are defined using SKOS vocabularies: [[https://github.com/VarioML/VarioML/tree/master/ontology/skos]].
+- Source attributes in database xrefs (such as /gene/ and /ref_seq/) as well as ontology terms should use database abbreviations defined in the /MIRIAM registry/ ([[http://identifiers.org]]). For example, use /hgnc.symbol/ for gene names, /refseq/ for NCBI reference sequences, and /obo.so/ for Sequence Ontology references.
 
 *VarioML is currently implemented in Café Variome ([[http://cafevariome.org]]).*
-
-The specification for this implementation is here: [[http://varioml.org/cafevariome_minspec.htm]].   
-A Schematron implementation is here: [[https://raw.github.com/VarioML/VarioML/master/xml/cafe_variome/cafe_variome_validator.sch]]
+- The specification for this implementation is here: [[http://varioml.org/cafevariome_minspec.htm]].   
+- A Schematron implementation is here: [[https://raw.github.com/VarioML/VarioML/master/xml/cafe_variome/cafe_variome_validator.sch]]
 
 ** Background
 This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of LSDB Data ([[http://varioml.org/]]).
