@@ -4,11 +4,12 @@
 
 *Important*: 
 - All new implementations should use validation to ensure consistency with the core specification. Contact *admin* at *varioml.org* for help with generating validation scripts using Schematron. 
-- Use standard ontologies for the content, such as the Sequence ontology [[http://www.sequenceontology.org/]] and VariO [[http://variationontology.org/]]. Some terms are defined using SKOS vocabularies: [[https://github.com/VarioML/VarioML/tree/master/ontology/skos]].
-- Source attributes in database xrefs (such as /gene/ and /ref_seq/) and ontology terms should use database abbreviations defined in the MIRIAM registry at [[http://identifiers.org]]. For example, use /hgnc.symbol/ for gene names, /refseq/ for NCBI reference sequences, and /obo.so/ for Sequence Ontology references.
+- Use standard ontologies for the content, such as the /Sequence Ontology/ ([[http://www.sequenceontology.org/]]) and /VariO/ ([[http://variationontology.org/]]). Some terms are defined using SKOS vocabularies: [[https://github.com/VarioML/VarioML/tree/master/ontology/skos]].
+- Source attributes in database xrefs (such as /gene/ and /ref_seq/) as well as ontology terms should use database abbreviations defined in the */MIRIAM registry/* ([[http://identifiers.org]]). For example, use /hgnc.symbol/ for gene names, /refseq/ for NCBI reference sequences, and /obo.so/ for Sequence Ontology references.
 
-*VarioML is currently implemented in Café Variome [[http://cafevariome.org]].*
-The specification for this implementation is [[http://varioml.org/cafevariome_minspec.htm]]. 
+*VarioML is currently implemented in Café Variome ([[http://cafevariome.org]]).*
+
+The specification for this implementation is here: [[http://varioml.org/cafevariome_minspec.htm]].   
 A Schematron implementation is here: [[https://raw.github.com/VarioML/VarioML/master/xml/cafe_variome/cafe_variome_validator.sch]]
 
 ** Background
@@ -49,6 +50,6 @@ under grant agreement number 200754 - the GEN2PHEN project.
 - 8.8.2012 EXI (http://www.w3.org/XML/EXI/) binary XML support added. EXI can reduce the size of disk and memory usage by 3-~10 times, already without compression.
 - 9.2.2012: JAXB / JSON (based on Jacson) API implementation is in org.varioml.jaxb folder. Code is not fully tested. SimpleXML implementation will be retired (support is possible though)
 
-- Note: Version 1.0 is now on separate branch. Main trunc is heading to final 2.0. Only difference between 1.0 and 2.0 is that variant element can have haplotype elements containing variants which are in cis position. Namespace will be kept same.
+- Note: Version 1.0 is now on a separate branch. The main trunk is heading towards release 2.0. The only difference between 1.0 and 2.0 is that the /variant/ element can have haplotype elements containing variants which are in the /cis/ position. Namespaces will be kept the same.
 
-- Comments/feedback: admin <> varioml.org. Please send email if you are using the software so that we can accomodate your requirementsi!
+- Comments/feedback: admin <> varioml.org. Please send email if you are using the software so that we can accomodate your requirements!
