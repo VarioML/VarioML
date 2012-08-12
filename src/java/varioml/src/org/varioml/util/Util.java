@@ -45,6 +45,7 @@ import com.siemens.ct.exi.helpers.DefaultEXIFactory;
 
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonGenerator.Feature;
+import de.undercouch.bson4jackson.BsonParser;
 
 public class Util {
 
@@ -124,6 +125,34 @@ public class Util {
 		BsonFactory fac = new BsonFactory();
 		fac.enable(Feature.ENABLE_STREAMING);
 
+		ObjectMapper mapper = new ObjectMapper( fac);
+		// make deserializer use JAXB annotations (only)
+		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
+		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
+		ObjectWriter writer = mapper.defaultPrettyPrintingWriter();
+		File _file = new File(file);
+		try {
+			// make serializer use JAXB annotations (only)
+			// mapper.writeValue(_file, obj);
+			writer.writeValue(_file, obj);
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+
+	}
+
+	public void writeBSON4MONGO(String file, Object obj) {
+		//todo: fix cut and paste code
+		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
+		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
+		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
+				secondary);
+
+		// http://wiki.fasterxml.com/JacksonJAXBAnnotations
+		// http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
+		
+		BsonFactory fac = new BsonFactory();
+		fac.enable(BsonParser.Feature.HONOR_DOCUMENT_LENGTH );
 		ObjectMapper mapper = new ObjectMapper( fac);
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
@@ -416,7 +445,7 @@ public class Util {
 				org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
 		util.writeEXI("schema/cafe_variome.xsd", "test.exi", o);
-		util.writeBSON("test.bson", o);
+		util.writeBSON4MONGO("test.bson", o);
 
 		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util.readXML(
 				"schema/cafe_variome.xsd", "test.xml",
