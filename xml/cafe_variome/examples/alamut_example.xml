@@ -26,7 +26,7 @@
             <organism term="homo sapiens"/>
         </panel>
 
-        <variant_type source="obo.so" accession="0000159" term="deletion"/>
+        <variant_type source="obo.so" accession="SO:0000159" term="deletion"/>
 
         <!-- we can have more than one pathogenicity statements. Statement can have reference to a panel it is based on
         -->
@@ -70,7 +70,7 @@
         <panel><organism term="homo sapiens"/></panel>
 
         <!--  http://www.sequenceontology.org/miso/current_release/term/SO:0001059 -->
-        <variant_type source="obo.so" accession="0000159" term="deletion"/>
+        <variant_type source="obo.so" accession="SO:0000159" term="deletion"/>
 
         <pathogenicity term="Non-pathogenic"> 
             <phenotype source="OMIM" accession="166210" term="osteogenesis imperfecta, type-1"/>

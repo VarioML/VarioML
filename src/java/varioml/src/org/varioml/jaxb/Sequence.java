@@ -27,12 +27,12 @@ public class Sequence /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- variant --===========
-	@javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
-	private Variant _variant ;
-	public void setVariant( Variant variant) { 
+	@javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=String.class,namespace="http://varioml.org/xml/1.0")
+	private String _variant ;
+	public void setVariant( String variant) { 
 		this._variant = variant ;
 	}
-	public Variant getVariant() {
+	public String getVariant() {
 		return this._variant;
 	}
  

@@ -43,6 +43,9 @@ import com.siemens.ct.exi.exceptions.EXIException;
 import com.siemens.ct.exi.grammars.Grammars;
 import com.siemens.ct.exi.helpers.DefaultEXIFactory;
 
+import de.undercouch.bson4jackson.BsonFactory;
+import de.undercouch.bson4jackson.BsonGenerator.Feature;
+
 public class Util {
 
 	public static class MyValidationEventHandler implements
@@ -108,6 +111,65 @@ public class Util {
 		return f;
 	}
 
+	public void writeBSON(String file, Object obj) {
+		//todo: fix cut and paste code
+		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
+		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
+		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
+				secondary);
+
+		// http://wiki.fasterxml.com/JacksonJAXBAnnotations
+		// http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
+		
+		BsonFactory fac = new BsonFactory();
+		fac.enable(Feature.ENABLE_STREAMING);
+
+		ObjectMapper mapper = new ObjectMapper( fac);
+		// make deserializer use JAXB annotations (only)
+		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
+		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
+		ObjectWriter writer = mapper.defaultPrettyPrintingWriter();
+		File _file = new File(file);
+		try {
+			// make serializer use JAXB annotations (only)
+			// mapper.writeValue(_file, obj);
+			writer.writeValue(_file, obj);
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+
+	}
+
+
+
+	public Object readBSON(String file, Class clz) {
+		//todo: fix cut and paste
+		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
+		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
+		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
+				secondary);
+
+		// http://wiki.fasterxml.com/JacksonJAXBAnnotations
+		// http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
+		BsonFactory fac = new BsonFactory();
+		fac.enable(Feature.ENABLE_STREAMING);
+
+		ObjectMapper mapper = new ObjectMapper( fac);
+
+		// make deserializer use JAXB annotations (only)
+		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
+		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
+
+		Object o = null;
+		try {
+			FileInputStream in = new FileInputStream(file);
+			o = mapper.readValue(in, clz);
+			in.close();
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+		return o;
+	}
 	public void writeJSON(String file, Object obj) {
 
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
@@ -157,6 +219,8 @@ public class Util {
 		}
 		return o;
 	}
+
+
 
 	public Object readXML(String schemaFile, String xmlFile, Class clz) {
 		try {
@@ -351,11 +415,19 @@ public class Util {
 				"schema/cafe_variome.xsd", "1KG.xml",
 				org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
+		util.writeEXI("schema/cafe_variome.xsd", "test.exi", o);
+		util.writeBSON("test.bson", o);
+
 		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util.readXML(
 				"schema/cafe_variome.xsd", "test.xml",
 				org.varioml.jaxb.CafeVariome.class);
 
-		//		util.writeJSON("tmp.json", o);
+		org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util.readBSON(
+				"test.bson",
+				org.varioml.jaxb.CafeVariome.class);
+
+		util.writeJSON("tmp.json", o);
+		util.writeJSON("tmp2.json", o2);
 //		Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
 //		//util.writeXML("lsdb.xsd", "tmp.xml", x);
 

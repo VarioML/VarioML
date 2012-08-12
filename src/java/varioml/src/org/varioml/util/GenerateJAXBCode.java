@@ -869,7 +869,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 
 		
 		xu.generateCode("org.varioml.jaxb.Sequence","//lsdb/individual/variant/sequence",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
+			{put("variant","String");};
 		})); // size=13 2011-06-20 21:40:02
 		xu.generateCode("org.varioml.jaxb.Tissue","//lsdb/individual/variant/tissue",x(typeMap,new HashMap<String,String>(){ 
 			{put("_","_");};
