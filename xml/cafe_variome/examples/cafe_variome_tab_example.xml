@@ -50,7 +50,7 @@
         <pathogenicity source="LOVD" term="pathogenic">
             <phenotype term="Osteogenesis imperfecta"/>
             <!-- optional evidence code. Term is from ECO evidence ontology  -->
-            <evidence_code term="experimental evidence" source="ECO"/>
+            <evidence_code term="curator inference" accession=”ECO:0000205” source="obo.eco"/>
         </pathogenicity>
  
         <!-- optional detection method(s) are listed here: -->

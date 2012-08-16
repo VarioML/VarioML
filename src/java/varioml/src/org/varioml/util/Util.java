@@ -113,7 +113,7 @@ public class Util {
 	}
 
 	public void writeBSON(String file, Object obj) {
-		//todo: fix cut and paste code
+		// todo: fix cut and paste code
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -121,11 +121,11 @@ public class Util {
 
 		// http://wiki.fasterxml.com/JacksonJAXBAnnotations
 		// http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
-		
+
 		BsonFactory fac = new BsonFactory();
 		fac.enable(Feature.ENABLE_STREAMING);
 
-		ObjectMapper mapper = new ObjectMapper( fac);
+		ObjectMapper mapper = new ObjectMapper(fac);
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
 		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
@@ -142,7 +142,7 @@ public class Util {
 	}
 
 	public void writeBSON4MONGO(String file, Object obj) {
-		//todo: fix cut and paste code
+		// todo: fix cut and paste code
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -150,10 +150,10 @@ public class Util {
 
 		// http://wiki.fasterxml.com/JacksonJAXBAnnotations
 		// http://ondra.zizka.cz/stranky/programovani/java/jaxb-json-jackson-howto.texy
-		
+
 		BsonFactory fac = new BsonFactory();
-		fac.enable(BsonParser.Feature.HONOR_DOCUMENT_LENGTH );
-		ObjectMapper mapper = new ObjectMapper( fac);
+		fac.enable(BsonParser.Feature.HONOR_DOCUMENT_LENGTH);
+		ObjectMapper mapper = new ObjectMapper(fac);
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
 		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
@@ -169,10 +169,8 @@ public class Util {
 
 	}
 
-
-
 	public Object readBSON(String file, Class clz) {
-		//todo: fix cut and paste
+		// todo: fix cut and paste
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -183,7 +181,7 @@ public class Util {
 		BsonFactory fac = new BsonFactory();
 		fac.enable(Feature.ENABLE_STREAMING);
 
-		ObjectMapper mapper = new ObjectMapper( fac);
+		ObjectMapper mapper = new ObjectMapper(fac);
 
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
@@ -199,6 +197,7 @@ public class Util {
 		}
 		return o;
 	}
+
 	public void writeJSON(String file, Object obj) {
 
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
@@ -249,8 +248,6 @@ public class Util {
 		return o;
 	}
 
-
-
 	public Object readXML(String schemaFile, String xmlFile, Class clz) {
 		try {
 			// todo: make this configuravle.. .now using JAXB as a default
@@ -261,7 +258,7 @@ public class Util {
 			JAXBContext context = JAXBContext.newInstance(clz);
 			// Marshaller m = context.createMarshaller();
 			File file = findFile(xmlFile);
-			Unmarshaller um = context.createUnmarshaller() ;
+			Unmarshaller um = context.createUnmarshaller();
 			um.setEventHandler(new MyValidationEventHandler());
 			um.setSchema(schema);
 			Object o = um.unmarshal(file);
@@ -276,12 +273,12 @@ public class Util {
 		try {
 			// todo: fix this quick hack
 
-//			SchemaFactory sf = SchemaFactory
-//					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-			//Schema schema = sf.newSchema(new File(schemaFile));
+			// SchemaFactory sf = SchemaFactory
+			// .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+			// Schema schema = sf.newSchema(new File(schemaFile));
 			JAXBContext context = JAXBContext.newInstance(clz);
 			// Marshaller m = context.createMarshaller();
-			
+
 			EXIFactory exiFactory = DefaultEXIFactory.newInstance();
 			GrammarFactory grammarFactory = GrammarFactory.newInstance();
 			Grammars g = grammarFactory.createGrammars(schemaFile);
@@ -294,12 +291,11 @@ public class Util {
 			SAXSource exiSource = new SAXSource(new InputSource(exiIS));
 			exiSource.setXMLReader(xmlReader);
 
-			Unmarshaller um = context.createUnmarshaller() ;
+			Unmarshaller um = context.createUnmarshaller();
 			um.setEventHandler(new MyValidationEventHandler());
-			//um.setSchema(schema); 
+			// um.setSchema(schema);
 			Object o = um.unmarshal(exiSource);
-			
-			
+
 			return o;
 		} catch (Exception e) {
 			Util.fatal(Util.class, e);
@@ -322,13 +318,13 @@ public class Util {
 
 			PrintWriter out = new PrintWriter(file);
 
-//			XMLStreamWriter xmlStreamWriter = XMLOutputFactory.newInstance()
-//				     .createXMLStreamWriter(out);
-//			xmlStreamWriter.setPrefix("vm", "http://varioml.org/xml/1.0");
-//			xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+			// XMLStreamWriter xmlStreamWriter = XMLOutputFactory.newInstance()
+			// .createXMLStreamWriter(out);
+			// xmlStreamWriter.setPrefix("vm", "http://varioml.org/xml/1.0");
+			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-		    m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 			m.setEventHandler(new MyValidationEventHandler());
 			if (schemaFile != null) {
 				Schema schema = sf.newSchema(new File(schemaFile));
@@ -362,6 +358,27 @@ public class Util {
 			m.marshal(obj, exiResult);
 			exiOS.close();
 
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+	}
+
+	public void writeEXI(String schemaFile, OutputStream ostream, Object obj) {
+		///todo: cut and paste...
+		try {
+			JAXBContext context = JAXBContext.newInstance(obj.getClass());
+			Marshaller m = context.createMarshaller();
+			m.setEventHandler(new MyValidationEventHandler());
+
+			EXIFactory exiFactory = DefaultEXIFactory.newInstance();
+			GrammarFactory grammarFactory = GrammarFactory.newInstance();
+			Grammars g = grammarFactory.createGrammars(schemaFile);
+			exiFactory.setGrammars(g);
+			// encode
+
+			EXIResult exiResult = new EXIResult(exiFactory);
+			exiResult.setOutputStream(ostream);
+			m.marshal(obj, exiResult);
 		} catch (Exception e) {
 			Util.fatal(Util.class, e);
 		}
@@ -411,7 +428,7 @@ public class Util {
 			OutputStream exiOS = new FileOutputStream(compressedXml);
 			EXIResult exiResult = new EXIResult(exiFactory);
 			exiResult.setOutputStream(exiOS);
-			encode(exiResult.getHandler(),compressedXml);
+			encode(exiResult.getHandler(), compressedXml);
 			exiOS.close();
 
 			// decode
@@ -440,25 +457,24 @@ public class Util {
 	public static void main(String[] args) throws Exception {
 
 		Util util = new Util();
-		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util.readXML(
-				"schema/cafe_variome.xsd", "1KG.xml",
-				org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util
+				.readXML("schema/cafe_variome.xsd", "1KG.xml",
+						org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
 		util.writeEXI("schema/cafe_variome.xsd", "test.exi", o);
 		util.writeBSON4MONGO("test.bson", o);
 
-		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util.readXML(
-				"schema/cafe_variome.xsd", "test.xml",
-				org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
+				.readXML("schema/cafe_variome.xsd", "test.xml",
+						org.varioml.jaxb.CafeVariome.class);
 
-		org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util.readBSON(
-				"test.bson",
-				org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util
+				.readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
 
 		util.writeJSON("tmp.json", o);
 		util.writeJSON("tmp2.json", o2);
-//		Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
-//		//util.writeXML("lsdb.xsd", "tmp.xml", x);
+		// Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
+		// //util.writeXML("lsdb.xsd", "tmp.xml", x);
 
 	}
 }

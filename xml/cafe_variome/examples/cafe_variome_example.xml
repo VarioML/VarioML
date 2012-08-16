@@ -22,7 +22,7 @@
 
         <pathogenicity term="pathogenic" scope="family">
             <phenotype term="Osteogenesis Imperfecta"/>            
-            <evidence_code term="experimental evidence" source="obo.eco"/>            
+            <evidence_code term="curator inference" accession=”ECO:0000205” source="obo.eco"/>            
         </pathogenicity>
         <variant_detection technique="CMC" template="DNA">            
         </variant_detection>        
