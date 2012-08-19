@@ -7,7 +7,7 @@ import java.util.List;
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="value")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_description","_dbXref","_comment","_value"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_type","_attr_unit","_attr_uri","_attr_val","_description","_dbXref","_comment","_value"})
+@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_type","_attr_unit","_attr_uri","_attr_val","_attr_nval","_description","_dbXref","_comment","_value"})
 
 
 public class Value /**/implements VmlOntologyTerm /**/ {
@@ -85,7 +85,17 @@ public class Value /**/implements VmlOntologyTerm /**/ {
 	public String getVal() { 
 		return this._attr_val;
 	}
- 
+
+	// ===========-- nval --===========
+	@javax.xml.bind.annotation.XmlAttribute(required=false,name="nval")
+	private Double _attr_nval ;
+	public void setNval( Double attr_nval) { 
+		this._attr_nval = attr_nval ;
+	}
+	public Double getNval() { 
+		return this._attr_nval;
+	}
+
 	// ===========-- description --===========
 	@javax.xml.bind.annotation.XmlElement(required=false,name="description",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private String _description ;

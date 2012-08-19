@@ -46,6 +46,7 @@ VarioML has received funding from the European Community's Seventh Framework Pro
 under grant agreement number 200754 - the GEN2PHEN project.
 
 ** News
+- 19.8.2012 Population changed to singleton in frequency. Do not have impact in existing XML implementations (property not used)
 - 8.8.2012 Gene has changed to list of genes. One mutation may have impact on more than one genes
 - 8.8.2012 EXI (http://www.w3.org/XML/EXI/) binary XML support added. EXI can reduce the size of disk and memory usage by 3-~10 times, already without compression.
 - 9.2.2012: JAXB / JSON (based on Jacson) API implementation is in org.varioml.jaxb folder. Code is not fully tested. SimpleXML implementation will be retired (support is possible though)

@@ -579,6 +579,7 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 				put("@size","Integer");
 				put("@scheme","String");
 				put("@val","String");
+				put("@nval","Double");
 				put("@source","String");
 				put("@unit","String");
 				put("@allele","Integer");
@@ -727,10 +728,10 @@ public class GenerateJAXBCode  extends GenerateSimpleXMLCode {
 		})); // size=25 2011-06-20 21:40:02		
 
 
-
-		xu.generateCode("org.varioml.jaxb.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
-			{put("_","_");};
-		}));
+//Do not generate Frequency. It is modified by hand
+//		xu.generateCode("org.varioml.jaxb.Frequency","//lsdb/individual/variant/frequency",x(typeMap,new HashMap<String,String>(){ 
+//			{put("_","_");};
+//		}));
 		
 		//if ( true) System.exit(1);
 

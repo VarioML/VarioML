@@ -54,14 +54,14 @@ import de.undercouch.bson4jackson.BsonParser;
 
 public class Util {
 
-	
-	@JsonIgnoreProperties({"_id"})
+	@JsonIgnoreProperties({ "_id" })
 	public static abstract class IgnoreMongoIDMixIn {
-		public IgnoreMongoIDMixIn () {}
+		public IgnoreMongoIDMixIn() {
+		}
 	}
-	
+
 	public final Class IGNORE_ID_FIELD = IgnoreMongoIDMixIn.class;
-	
+
 	public static class MyValidationEventHandler implements
 			ValidationEventHandler {
 
@@ -167,7 +167,8 @@ public class Util {
 		BsonFactory fac = new BsonFactory();
 		fac.enable(BsonParser.Feature.HONOR_DOCUMENT_LENGTH);
 		ObjectMapper mapper = new ObjectMapper(fac);
-		//mapper.getDeserializationConfig().addMixInAnnotations(obj.getClass(), MixIn.class);
+		// mapper.getDeserializationConfig().addMixInAnnotations(obj.getClass(),
+		// MixIn.class);
 
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
@@ -183,16 +184,15 @@ public class Util {
 
 	}
 
-	public ByteArrayOutputStream toBSON4MONGOByteStream( Object obj) {
-		String _res=null;
+	public ByteArrayOutputStream toBSON4MONGOByteStream(Object obj) {
+		String _res = null;
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		writeBSON4MONGO(bos, obj);
 		return bos;
 	}
 
-
-	public byte[] toBSON4MONGO( Object obj) {
-		String _res=null;
+	public byte[] toBSON4MONGO(Object obj) {
+		String _res = null;
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		writeBSON4MONGO(bos, obj);
 		return bos.toByteArray();
@@ -211,7 +211,8 @@ public class Util {
 		BsonFactory fac = new BsonFactory();
 		fac.enable(BsonParser.Feature.HONOR_DOCUMENT_LENGTH);
 		ObjectMapper mapper = new ObjectMapper(fac);
-		//mapper.getDeserializationConfig().addMixInAnnotations(obj.getClass(), MixIn.class);
+		// mapper.getDeserializationConfig().addMixInAnnotations(obj.getClass(),
+		// MixIn.class);
 
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
@@ -257,11 +258,10 @@ public class Util {
 		return o;
 	}
 
-	
 	public Object readBSON(InputStream in, Class clz) {
 		// todo: fix cut and paste
-		
-		//org.codehaus.jackson.map.DeserializationConfig.Feature.¤
+
+		// org.codehaus.jackson.map.DeserializationConfig.Feature.¤
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -290,8 +290,8 @@ public class Util {
 
 	public Object readBSON(InputStream in, Class clz, Class mixIn) {
 		// todo: fix cut and paste
-		
-		//org.codehaus.jackson.map.DeserializationConfig.Feature.¤
+
+		// org.codehaus.jackson.map.DeserializationConfig.Feature.¤
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -303,7 +303,9 @@ public class Util {
 		fac.enable(Feature.ENABLE_STREAMING);
 
 		ObjectMapper mapper = new ObjectMapper(fac);
-		mapper.getDeserializationConfig().addMixInAnnotations(clz, mixIn);
+		if (mixIn != null) {
+			mapper.getDeserializationConfig().addMixInAnnotations(clz, mixIn);
+		}
 		// make deserializer use JAXB annotations (only)
 		mapper.getDeserializationConfig().setAnnotationIntrospector(pair);
 		mapper.getSerializationConfig().setAnnotationIntrospector(pair);
@@ -318,12 +320,20 @@ public class Util {
 		return o;
 	}
 
-	public Object toVarioML( byte[] bytes, Class clz, Class mixIn) {
-		
-		ByteArrayInputStream in  = new ByteArrayInputStream(bytes);
+	public Object toVarioML(byte[] bytes, Class clz, Class mixIn) {
+
+		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
 		return readBSON(in, clz, mixIn);
-		
+
 	}
+
+	public Object toVarioML(byte[] bytes, Class clz) {
+
+		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
+		return readBSON(in, clz, null);
+
+	}
+
 	public void writeJSON(String file, Object obj) {
 
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
@@ -348,6 +358,7 @@ public class Util {
 		}
 
 	}
+
 	public void writeJSON(OutputStream out, Object obj) {
 
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
@@ -371,14 +382,14 @@ public class Util {
 		}
 
 	}
-	
-	public String toJSONString ( Object obj) {
-		String _res=null;
+
+	public String toJSONString(Object obj) {
+		String _res = null;
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		writeJSON(bos, obj);
-		return new String( bos.toByteArray());
+		return new String(bos.toByteArray());
 	}
-	
+
 	public Object readJSON(String file, Class clz) {
 
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
@@ -449,11 +460,12 @@ public class Util {
 
 			Unmarshaller um = context.createUnmarshaller();
 			um.setEventHandler(new MyValidationEventHandler());
-			//um.setSchema(schemaFile);
+			// um.setSchema(schemaFile);
 			Object o = um.unmarshal(exiSource);
 
 			return o;
 		} catch (Exception e) {
+			System.err.println("XML schema may have changed");
 			Util.fatal(Util.class, e);
 			return null;
 		}
@@ -520,7 +532,7 @@ public class Util {
 	}
 
 	public void writeEXI(String schemaFile, OutputStream ostream, Object obj) {
-		///todo: cut and paste...
+		// /todo: cut and paste...
 		try {
 			JAXBContext context = JAXBContext.newInstance(obj.getClass());
 			Marshaller m = context.createMarshaller();
@@ -614,19 +626,24 @@ public class Util {
 
 		Util util = new Util();
 		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util
+				.readXML("schema/cafe_variome.xsd", "1KG.xml",
+						org.varioml.jaxb.CafeVariome.class);
+		util.writeEXI("schema/cafe_variome.xsd", "1KG.exi", o);
+
+		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
 				.readEXI("schema/cafe_variome.xsd", "1KG.exi",
 						org.varioml.jaxb.CafeVariome.class);
-//		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
-//		util.writeEXI("schema/cafe_variome.xsd", "test.exi", o);
-        util.writeBSON4MONGO("test.bson", o);
-//
-//		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
-//				.readXML("schema/cafe_variome.xsd", "test.xml",
-//						org.varioml.jaxb.CafeVariome.class);
-//
+
+		// util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
+		util.writeBSON4MONGO("test.bson", o2);
+		//
+		// org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
+		// .readXML("schema/cafe_variome.xsd", "test.xml",
+		// org.varioml.jaxb.CafeVariome.class);
+		//
 		org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util
 				.readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
-//
+		//
 		util.writeJSON("tmp.json", o);
 		util.writeJSON("tmp2.json", o3);
 		// Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);

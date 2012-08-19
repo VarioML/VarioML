@@ -1649,7 +1649,7 @@
       <xs:documentation>[% INSERT frequency.txt %]</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="vml:population"/>
+      <xs:element minOccurs="0" ref="vml:population"/>
       <xs:element ref="vml:frequency_value"/>
       <xs:group ref="vml:VmlAnnotatedAbstractObservation"/>
     </xs:sequence>
@@ -1965,7 +1965,8 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-    <xs:attribute name="val" use="required" type="xs:string"/>
+    <xs:attribute name="val" type="xs:string"/>
+    <xs:attribute name="nval" type="xs:double"/>
   </xs:complexType>
   <!--
     (=)	===============================

@@ -934,7 +934,7 @@ element frequency {
 VmlFrequency = 
     attribute samples { xsd:int}?,
     attribute type { 'allele'|'carrier'|'genotype' }?,
-    population*,
+    population?,
     frequency_value,
     VmlAnnotatedAbstractObservation
     
@@ -1084,7 +1084,8 @@ VmlValue =
     VmlOntologyTerm,
     attribute unit {xsd:string}?,
     attribute type {'integer'|'float'|'text'|'date'|'datetime'}?,
-    attribute val {xsd:string},
+    attribute val {xsd:string}?,
+    attribute nval {xsd:double}?,
     value*
 
 # (=)	===============================

@@ -39,18 +39,33 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	// ===========-- population --===========
    @org.codehaus.jackson.annotate.JsonProperty("populations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="population",type=Population.class,namespace="http://varioml.org/xml/1.0")
-	private List<Population> _population ;
-	public void setPopulationList( List<Population> population) { 
+	private Population _population ;
+	public void setPopulation( Population population) { 
 		this._population = population ;
 	}
-	public List<Population> getPopulationList()  { 
+	public Population getPopulation()  { 
 		return this._population;
 	}
+	@Deprecated
+	public List<Population> getPopulationList()  { 
+		List<Population> p = new ArrayList<Population>( );
+		p.add(this._population);
+		return p;
+	}
+
+	@Deprecated
 	public void addPopulation(Population item ) { 
-		if ( this._population == null ) { 
-			this._population = new ArrayList<Population>();
+		if ( this._population != null ) { 
+			throw new RuntimeException("Frequency can have only one population element. This has changed in version 2.1");
 		}
-		this._population.add( item);
+		this._population = item;
+	}
+	@Deprecated
+	public void setPopulationList(List<Population> item ) { 
+		if ( item.size() != 1) { 
+			throw new RuntimeException("Frequency can have only one population element (list was zero or more than one). This has changed in version 2.1");
+		}
+		this._population = item.get(0);
 	}
  
 	// ===========-- counts --===========
