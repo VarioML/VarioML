@@ -45,11 +45,16 @@
         http://bio2rdf.org/hgnc:12345
         http://bio2rdf.org/omim:12345
     -->
-    <xsl:variable name="hugo_uri">http://bio2rdf.org/hugo:</xsl:variable>
-    <xsl:variable name="hgnc_uri">http://bio2rdf.org/hgnc:</xsl:variable>
-    <xsl:variable name="uniprot_uri">http://bio2rdf.org/uniprot:</xsl:variable>
-    <xsl:variable name="omim_uri">http://bio2rdf.org/omim:</xsl:variable>
-    <xsl:variable name="refseq_uri">http://bio2rdf.org/refseq:</xsl:variable>
+    <xsl:variable name="hugo_uri">http://identifiers.org/hgnc.symbol:</xsl:variable>
+    <xsl:variable name="b2r_hugo_uri">http://bio2rdf.org/hugo:</xsl:variable>
+    <xsl:variable name="hgnc_uri">http://identifiers.org/hgnc:</xsl:variable>
+    <xsl:variable name="b2r_hgnc_uri">http://bio2rdf.org/hgnc:</xsl:variable>
+    <xsl:variable name="uniprot_uri">http://identifiers.org/uniprot:</xsl:variable>
+    <xsl:variable name="b2r_uniprot_uri">http://bio2rdf.org/uniprot:</xsl:variable>
+    <xsl:variable name="omim_uri">http://identifiers.org/omim:</xsl:variable>
+    <xsl:variable name="b2r_omim_uri">http://bio2rdf.org/omim:</xsl:variable>
+    <xsl:variable name="refseq_uri">http://identifiers.org/refseq:</xsl:variable>
+    <xsl:variable name="b2r_refseq_uri">http://bio2rdf.org/refseq:</xsl:variable>
     <xsl:variable name="genbank_uri">http://bio2rdf.org/genbank:</xsl:variable>
     
     <xsl:template match="/">
@@ -109,10 +114,16 @@
     <xsl:template match="vml:variant">
         
         <xsl:element name="dl:GeneVariant">
+
+            
             <xsl:attribute name="rdf:about">
-                <!-- gene variant is identified by gene accession number and variant name-->
-                <xsl:value-of
-                    select="concat('&vmkb;',vml:gene/@accession,':',encode-for-uri(vml:name))"/>
+                <xsl:call-template name="GenerateLocalURI">
+                    <!-- generate local uri for URI for GeneVariant using URI of variant, if available, gene accnum and variant name-->
+                    <xsl:with-param name="primary" select="@uri"/>
+                    <xsl:with-param name="secondary" select="vml:gene/@accession"/>
+                    <xsl:with-param name="tertiary" select="vml:name"/>
+                </xsl:call-template>
+                
             </xsl:attribute>
             
             <xsl:element name="dl:isVariantOf">
@@ -123,11 +134,15 @@
             </xsl:element>
 
             <xsl:element name="dl:hasPart">
-                <!-- ... and has sequence variant identified by HGVS name as a part of the gene-->
-                <xsl:attribute name="rdf:resource">
-                    <xsl:value-of
-                        select="concat('&vmkb;',vml:ref_seq/@accession,':',encode-for-uri(vml:name))"/>                    
-                </xsl:attribute>
+                <!-- ... GeneVariant has the Variant  as a part -->
+                <xsl:attribute name="rdf:resource">                    
+                    <xsl:call-template name="GenerateLocalURI">
+                        <!-- generate local uri for URI for the Variant using URI of variant, if available, ref_seq accnum and variant name-->
+                        <xsl:with-param name="primary" select="@uri"/>
+                        <xsl:with-param name="secondary" select="vml:ref_seq/@accession"/>
+                        <xsl:with-param name="tertiary" select="vml:name"/>
+                    </xsl:call-template>                    
+               </xsl:attribute>
             </xsl:element>
 
             <xsl:for-each select="vml:pathogenicity/vml:phenotype">
@@ -157,8 +172,12 @@
         <xsl:element name="vmo:Variant">
             <!-- actual mutation  -->
             <xsl:attribute name="rdf:about">
-                <xsl:value-of
-                    select="concat('&vmkb;',vml:ref_seq/@accession,':',encode-for-uri(vml:name))"/>
+                <xsl:call-template name="GenerateLocalURI">
+                    <!-- generate local uri for URI for the Variant using URI of variant, if available, ref_seq accnum and variant name-->
+                    <xsl:with-param name="primary" select="@uri"/>
+                    <xsl:with-param name="secondary" select="vml:ref_seq/@accession"/>
+                    <xsl:with-param name="tertiary" select="vml:name"/>
+                </xsl:call-template>                    
             </xsl:attribute>
             <xsl:call-template name="Comment">
                 <xsl:with-param name="text">Variant</xsl:with-param>
@@ -426,6 +445,20 @@
                         </xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="upper-case(@source) = 'HGNC.SYMBOL'">
+                    <xsl:element name="owl:sameAs">
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($hugo_uri,@accession)"/>
+                        </xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="upper-case(@source) = 'HGNC'">
+                    <xsl:element name="owl:sameAs">
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($hgnc_uri,@accession)"/>
+                        </xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="upper-case(@source) = 'UNIPROT'">
                     <xsl:element name="owl:sameAs">
                         <xsl:attribute name="rdf:resource">
@@ -464,7 +497,25 @@
 
     </xsl:template>
 
-
+    <xsl:template name="GenerateLocalURI">
+        <!--  generate local uris from options -->
+        <xsl:param name="primary"/>
+        <xsl:param name="secondary"/>
+        <xsl:param name="tertiary"/>
+        
+        <xsl:choose>
+            <xsl:when test="primary">
+                <xsl:value-of
+                    select="concat(primary,':',encode-for-uri($secondary))"/>                                                
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of
+                    select="concat('&vmkb;',encode-for-uri($secondary),':',encode-for-uri($tertiary))"/>                        
+            </xsl:otherwise>
+        </xsl:choose>        
+    </xsl:template>
+    
+    
     <xsl:template name="OntologyTerm">
 
         <xsl:param name="type"/>

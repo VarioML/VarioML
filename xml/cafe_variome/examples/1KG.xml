@@ -18,7 +18,7 @@
             <ns2:text>This conversion of 1000 genomes data to HGVS nomenclature has been created for clinical use in the analysis of diagnostic variants. All use of 1000 genomes data must be in accordance with the 1000 genomes data release policy (http://www.1000genomes.org/data#DataUse)</ns2:text>
         </ns2:comment>
     </ns2:source>
-    <ns2:variant>
+    <ns2:variant uri="http:/variant.org/1">
         <ns2:gene source="hgnc.symbol" accession="AGL"/>
         <ns2:ref_seq source="refseq" accession="NM_000642.2"/>
         <ns2:name scheme="HGVS">c.-288C&gt;G</ns2:name>
