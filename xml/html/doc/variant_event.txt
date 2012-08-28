@@ -1,0 +1,2 @@
+
+A variant event is a single genomic variation event, co-occurring with the given variant.
