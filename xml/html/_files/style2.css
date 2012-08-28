@@ -1,4 +1,18 @@
 
+body {
+  padding: 2em 6em 2em 70px;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 88%;
+  color: black;
+  background: #FFFFF;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+   text-align: justify;
+
+}
+
 h2 {
 
 text-decoration:underline;
@@ -6,9 +20,9 @@ text-decoration:underline;
 }
 
 .doc {
-
+  padding: .9em;
   color: #333;
-  background: #C1D2E7;
+  background: #F0F0F5;
   border-radius: .5em;
   overflow: auto;
 
@@ -131,6 +145,8 @@ table {
    margin-bottom: 10px;
    margin-left: 2px;
    margin-right: 2px;
+   background-color: #DFDFE9;
+
 }
 table th, table td {
    font-size: 10pt;
@@ -389,3 +405,27 @@ div.h1 {
 
         white-space: pre;
 } 
+
+div#toc ul {
+  list-style-type: none;
+    font-size: 70%;
+}
+
+  #columns {
+        width: 600px;
+    }
+
+    #columns .column {
+        position: relative;
+        width: 46%;
+        padding: 1%;
+        border: solid 1px #000;
+    }
+
+    #columns .left {
+        float: left;
+    }
+
+    #columns .right {
+        float: right;
+    }
