@@ -1,5 +1,7 @@
 package org.varioml.doc;
 
+//todo solve library problem. xerces implementation do not work with this. Remove xercesImpl.jar from classpath
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
