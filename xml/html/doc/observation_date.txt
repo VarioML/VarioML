@@ -1,0 +1,2 @@
+
+Observation_date captures the date of an observation. A boolean attribute can be used when an exact date cannot be given. An age attribute captures the age of the subject at the time of observation.

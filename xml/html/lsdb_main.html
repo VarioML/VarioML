@@ -6,12 +6,30 @@
      <link rel="stylesheet" href="_files/xmlns-style.css" type="text/css">
      <link rel="stylesheet" href="_files/style.css" type="text/css">
      <link rel="stylesheet" href="_files/style2.css" type="text/css">
+     <script src="_files/toc.js" type="text/javascript"></script>
      </head>
-    <body>
-    <H1>VarioML Documentation</H1>
-    <p> ~ contents here ~ </p>
+  <body onload="generateTOC(document.getElementById('toc'));">
+
+    <table style="border:0; background-color:#ffffff;">
+        <tr><td>
+    <IMG src="_files/g2p_varioml_title.png"></td>
+        <td>
+    <H1>VarioML Schema Reference</H1>
+</td></tr>
+</table>
+For more information, see the <a href="https://github.com/VarioML/VarioML">GitHub repository</a>, 
+<a href="http://www.gen2phen.org/groups/varioml">User wiki</a>, and
+<a href="http://varioml.org">Website</a>.
+<br/>
+
+
+    <!-- div id="toc" style="position:fixed;  left:700px; top:-10px;"-->
+    <div id="toc">
+                        <H3>Contents</H3>
+        </div>
+<br/>
     <hr/>
-     <h2 class='header'>lsdb (<a name='VmlLsdb'<em>VmlLsdb</em></a>)</h2>
+     <h2 class='header'>cafe_variome (<a name='VmlSubmission'><em>VmlSubmission</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -19,6 +37,7 @@
          <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
          <tr><td>schema_version</td><td>decimal</td><td>optional</td><td></td></tr>
+         <tr><td>submissionid_type</td><td>string</td><td>optional</td><td></td></tr>
         </table>
      </div>
      <div class='elements'>
@@ -27,10 +46,36 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>created</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>individual</td><td><a href='#VmlIndividual'>VmlIndividual</a></td><td>one or many</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>zero or many</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+     <h2 class='header'>lsdb (<a name='VmlLsdb'><em>VmlLsdb</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>schema_version</td><td>decimal</td><td>optional</td><td></td></tr>
+         <tr><td>submissionid_type</td><td>string</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>created</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>individual</td><td><a href='#VmlIndividual'>VmlIndividual</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>panel</td><td><a href='#VmlPanel'>VmlPanel</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Single data submission batch element for individual data. The batch contains:</p>
@@ -76,7 +121,7 @@
  &lt;/lsdb&gt;
 </code></pre>
  </div><hr/>
-     <h2 class='header'>individual (<a name='VmlIndividual'<em>VmlIndividual</em></a>)</h2>
+     <h2 class='header'>individual (<a name='VmlIndividual'><em>VmlIndividual</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -89,18 +134,27 @@
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td>gender</td><td><a href='#VmlGender'>VmlGender</a></td><td>mandatory</td><td></td></tr>
+         <tr><td>gender</td><td><a href='#VmlGender'>VmlGender</a></td><td>optional</td><td></td></tr>
+         <tr><td>dob</td><td><a href='#VmlDobDate'>VmlDobDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>age</td><td><a href='#VmlAge'>VmlAge</a></td><td>optional</td><td></td></tr>
          <tr><td>original_id</td><td><a href='#VmlOriginalId'>VmlOriginalId</a></td><td>optional</td><td></td></tr>
+         <tr><td>role</td><td><a href='#VmlRoleType'>VmlRoleType</a></td><td>optional</td><td></td></tr>
+         <tr><td>relationship</td><td><a href='#VmlRelationship'>VmlRelationship</a></td><td>zero or many</td><td></td></tr>
          <tr><td>organism</td><td><a href='#VmlOrganism'>VmlOrganism</a></td><td>optional</td><td></td></tr>
+         <tr><td>strain</td><td><a href='#VmlStrain'>VmlStrain</a></td><td>optional</td><td></td></tr>
+         <tr><td>cultivar</td><td><a href='#VmlCultivar'>VmlCultivar</a></td><td>optional</td><td></td></tr>
          <tr><td>phenotype</td><td><a href='#VmlPhenotype'>VmlPhenotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation</td><td><a href='#VmlGenericObservation'>VmlGenericObservation</a></td><td>zero or many</td><td></td></tr>
          <tr><td>population</td><td><a href='#VmlPopulation'>VmlPopulation</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>one or many</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_group</td><td><a href='#VmlVariantGroup'>VmlVariantGroup</a></td><td>zero or many</td><td></td></tr>
          <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>sharing_policy</td><td><a href='#VmlSharingPolicy'>VmlSharingPolicy</a></td><td>optional</td><td></td></tr>
          <tr><td>creation_date</td><td><a href='#VmlCreationDate'>VmlCreationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>modification_date</td><td><a href='#VmlModificationDate'>VmlModificationDate</a></td><td>optional</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Individual or patient</p>
@@ -129,12 +183,13 @@
      &lt;/individual&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>panel (<a name='VmlPanel'<em>VmlPanel</em></a>)</h2>
+     <h2 class='header'>panel (<a name='VmlPanel'><em>VmlPanel</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>size</td><td>integer</td><td>optional</td><td></td></tr>
+         <tr><td>type</td><td>string</td><td>optional</td><td>family | extended family | population</td></tr>
          <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -144,18 +199,27 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>individual</td><td><a href='#VmlIndividual'>VmlIndividual</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>frequency</td><td><a href='#VmlFrequency'>VmlFrequency</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>gender</td><td><a href='#VmlGender'>VmlGender</a></td><td>optional</td><td></td></tr>
+         <tr><td>dob</td><td><a href='#VmlDobDate'>VmlDobDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>age</td><td><a href='#VmlAge'>VmlAge</a></td><td>optional</td><td></td></tr>
          <tr><td>original_id</td><td><a href='#VmlOriginalId'>VmlOriginalId</a></td><td>optional</td><td></td></tr>
+         <tr><td>role</td><td><a href='#VmlRoleType'>VmlRoleType</a></td><td>optional</td><td></td></tr>
+         <tr><td>relationship</td><td><a href='#VmlRelationship'>VmlRelationship</a></td><td>zero or many</td><td></td></tr>
          <tr><td>organism</td><td><a href='#VmlOrganism'>VmlOrganism</a></td><td>optional</td><td></td></tr>
+         <tr><td>strain</td><td><a href='#VmlStrain'>VmlStrain</a></td><td>optional</td><td></td></tr>
+         <tr><td>cultivar</td><td><a href='#VmlCultivar'>VmlCultivar</a></td><td>optional</td><td></td></tr>
          <tr><td>phenotype</td><td><a href='#VmlPhenotype'>VmlPhenotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation</td><td><a href='#VmlGenericObservation'>VmlGenericObservation</a></td><td>zero or many</td><td></td></tr>
          <tr><td>population</td><td><a href='#VmlPopulation'>VmlPopulation</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>one or many</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_group</td><td><a href='#VmlVariantGroup'>VmlVariantGroup</a></td><td>zero or many</td><td></td></tr>
          <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>sharing_policy</td><td><a href='#VmlSharingPolicy'>VmlSharingPolicy</a></td><td>optional</td><td></td></tr>
          <tr><td>creation_date</td><td><a href='#VmlCreationDate'>VmlCreationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>modification_date</td><td><a href='#VmlModificationDate'>VmlModificationDate</a></td><td>optional</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Panel. Unspecified group of individuals. Has following information besides properties inherited from AbstractObservation target:</p>
@@ -195,13 +259,41 @@
 </code></pre>
 <p><strong>Usage of the format must be agreed on separately.</strong></p>
 </div><hr/>
-     <h2 class='header'>consent (<a name='VmlConsent'<em>VmlConsent</em></a>)</h2>
+     <h2 class='header'>observations (<a name='VmlObservationCombo'><em>VmlObservationCombo</em></a>)</h2>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td></td><td><em>choice</em></td><td>optional</td><td>panel|individual</td></tr>
+         <tr><td>phenotype</td><td><a href='#VmlPhenotype'>VmlPhenotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation</td><td><a href='#VmlGenericObservation'>VmlGenericObservation</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_group</td><td><a href='#VmlVariantGroup'>VmlVariantGroup</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>sharing_policy</td><td><a href='#VmlSharingPolicy'>VmlSharingPolicy</a></td><td>optional</td><td></td></tr>
+         <tr><td>creation_date</td><td><a href='#VmlCreationDate'>VmlCreationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>modification_date</td><td><a href='#VmlModificationDate'>VmlModificationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Abstract type. See subtypes for the documentation. Observation which has evidence code and observation protocol (dbxref).</p>
+<p><strong>Example:</strong></p>
+<pre><code> &lt;genetic_origin term=&quot;paternal&quot;&gt;
+   &lt;evidence_code term=&quot;inferred&quot;/&gt;            
+ &lt;/genetic_origin&gt;
+
+ &lt;phenotype term=&quot;Osteogenesis Imperfecta&quot; &gt;
+   &lt;evidence_code term=&quot;assessed by clinician&quot;/&gt;
+   &lt;protocol_id source=&quot;protocoldb_xyz&quot; accession=&quot;XYZ0001&quot;/&gt;
+ &lt;/phenotype&gt;
+</code></pre>
+</div><hr/>
+     <h2 class='header'>consent (<a name='VmlConsent'><em>VmlConsent</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -212,13 +304,35 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>NOT USED</p>
 <p>Database cross-reference for a consent information (not used currently)</p>
   </div><hr/>
-     <h2 class='header'>gender (<a name='VmlGender'<em>VmlGender</em></a>)</h2>
+     <h2 class='header'>sample (<a name='VmlSample'><em>VmlSample</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Sample</p>
+  </div><hr/>
+     <h2 class='header'>gender (<a name='VmlGender'><em>VmlGender</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -233,7 +347,7 @@
          <tr><td>description</td><td><a href='#VmlDescription'>VmlDescription</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Gender of individual. Gender code is stored in the attribute <strong>'code'</strong>. Possible values are iso5218 codes: 0,1,2 and 9 ('unknown','male','female' and 'not applicable').</p>
@@ -244,7 +358,7 @@
 &lt;/gender&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>description (<a name='VmlDescription'<em>VmlDescription</em></a>)</h2>
+     <h2 class='header'>role (<a name='VmlRoleType'><em>VmlRoleType</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -260,21 +374,46 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
-         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>original_id (<a name='VmlOriginalId'<em>VmlOriginalId</em></a>)</h2>
+     </p><div class='doc'> <h3>Documentation</h3><p>Role</p>
+</div><hr/>
+     <h2 class='header'>description (<a name='VmlDescription'><em>VmlDescription</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+     <h2 class='header'>original_id (<a name='VmlOriginalId'><em>VmlOriginalId</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -285,18 +424,18 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Identifier used by the submitter.</p>
   </div><hr/>
-     <h2 class='header'>submitter_id (<a name='VmlSubmitterId'<em>VmlSubmitterId</em></a>)</h2>
+     <h2 class='header'>submitter_id (<a name='VmlSubmitterId'><em>VmlSubmitterId</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -307,12 +446,12 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Randomized identifier of individual as used by submitter.</p>
   </div><hr/>
-     <h2 class='header'>variant (<a name='VmlVariant'<em>VmlVariant</em></a>)</h2>
+     <h2 class='header'>variant (<a name='VmlVariant'><em>VmlVariant</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -321,25 +460,30 @@
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
          <tr><td>type</td><td>string</td><td>optional</td><td>DNA | cDNA | RNA | AA</td></tr>
          <tr><td>genotypic</td><td>string</td><td>optional</td><td>true</td></tr>
-         <tr><td>subcellular_part</td><td>string</td><td>optional</td><td>nucleus | mitochondrial</td></tr>
-         <tr><td>diploid_count</td><td>float</td><td>optional</td><td></td></tr>
+         <tr><td>subcellular_part</td><td>string</td><td>optional</td><td>nucleus | mitochondrial | chloroplast | other</td></tr>
+         <tr><td>copy_count</td><td>float</td><td>optional</td><td></td></tr>
         </table>
      </div>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td>gene</td><td><a href='#VmlGene'>VmlGene</a></td><td>optional</td><td></td></tr>
-         <tr><td>ref_seq</td><td><a href='#VmlRefSeq'>VmlRefSeq</a></td><td>mandatory</td><td></td></tr>
-         <tr><td>name</td><td><a href='#VmlName'>VmlName</a></td><td>mandatory</td><td></td></tr>
-         <tr><td>variant_type</td><td><a href='#VmlVariantType'>VmlVariantType</a></td><td>optional</td><td></td></tr>
+         <tr><td>gene</td><td><a href='#VmlGene'>VmlGene</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>ref_seq</td><td><a href='#VmlRefSeq'>VmlRefSeq</a></td><td>optional</td><td></td></tr>
+         <tr><td>name</td><td><a href='#VmlName'>VmlName</a></td><td>optional</td><td></td></tr>
+         <tr><td>haplotype</td><td><a href='#VmlHaplotype'>VmlHaplotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>panel</td><td><a href='#VmlPanel'>VmlPanel</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>seq_region</td><td><a href='#VmlSeqRegion'>VmlSeqRegion</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_type</td><td><a href='#VmlVariantType'>VmlVariantType</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_class</td><td><a href='#VmlVariantClass'>VmlVariantClass</a></td><td>zero or many</td><td></td></tr>
          <tr><td>original_id</td><td><a href='#VmlOriginalId'>VmlOriginalId</a></td><td>optional</td><td></td></tr>
          <tr><td>exon</td><td><a href='#VmlExon'>VmlExon</a></td><td>zero or many</td><td></td></tr>
          <tr><td>sequence</td><td><a href='#VmlSequence'>VmlSequence</a></td><td>optional</td><td></td></tr>
          <tr><td>genotype</td><td><a href='#VmlGenotype'>VmlGenotype</a></td><td>optional</td><td></td></tr>
          <tr><td>consequence</td><td><a href='#VmlConsequence'>VmlConsequence</a></td><td>zero or many</td><td></td></tr>
          <tr><td>pathogenicity</td><td><a href='#VmlPathogenicity'>VmlPathogenicity</a></td><td>zero or many</td><td></td></tr>
-         <tr><td>phenotype</td><td><a href='#VmlPhenotype'>VmlPhenotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>sample</td><td><a href='#VmlSample'>VmlSample</a></td><td>optional</td><td></td></tr>
+         <tr><td>tissue</td><td><a href='#VmlTissue'>VmlTissue</a></td><td>optional</td><td></td></tr>
          <tr><td>variant_detection</td><td><a href='#VmlVariantDetection'>VmlVariantDetection</a></td><td>optional</td><td></td></tr>
          <tr><td>restriction_site</td><td><a href='#VmlRestrictionSite'>VmlRestrictionSite</a></td><td>optional</td><td></td></tr>
          <tr><td>tissue_distribution</td><td><a href='#VmlTissueDistribution'>VmlTissueDistribution</a></td><td>optional</td><td></td></tr>
@@ -348,16 +492,17 @@
          <tr><td>seq_changes</td><td><a href='#VmlConsequentVariants'>VmlConsequentVariants</a></td><td>optional</td><td></td></tr>
          <tr><td>aliases</td><td><a href='#VmlRelatedVariants'>VmlRelatedVariants</a></td><td>optional</td><td></td></tr>
          <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>optional</td><td></td></tr>
-         <tr><td>haplotype_group</td><td><a href='#VmlHaplotypeGroup'>VmlHaplotypeGroup</a></td><td>optional</td><td></td></tr>
          <tr><td>location</td><td><a href='#VmlLocation'>VmlLocation</a></td><td>zero or many</td><td></td></tr>
          <tr><td>sharing_policy</td><td><a href='#VmlSharingPolicy'>VmlSharingPolicy</a></td><td>optional</td><td></td></tr>
          <tr><td>creation_date</td><td><a href='#VmlCreationDate'>VmlCreationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>modification_date</td><td><a href='#VmlModificationDate'>VmlModificationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Variant. Typically has the following information:</p>
@@ -397,17 +542,94 @@
     &lt;/variant&gt;
 </code></pre>
   </div><hr/>
-     <h2 class='header'>seq_changes (<a name='VmlConsequentVariants'<em>VmlConsequentVariants</em></a>)</h2>
+     <h2 class='header'>haplotype (<a name='VmlHaplotype'><em>VmlHaplotype</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>allele</td><td>int</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>name</td><td><a href='#VmlName'>VmlName</a></td><td>optional</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariantEvent'>VmlVariantEvent</a></td><td>one or many</td><td></td></tr>
+         <tr><td>sequence</td><td><a href='#VmlSequence'>VmlSequence</a></td><td>optional</td><td></td></tr>
+         <tr><td>consequence</td><td><a href='#VmlConsequence'>VmlConsequence</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>pathogenicity</td><td><a href='#VmlPathogenicity'>VmlPathogenicity</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>frequency</td><td><a href='#VmlFrequency'>VmlFrequency</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>seq_changes</td><td><a href='#VmlConsequentVariants'>VmlConsequentVariants</a></td><td>optional</td><td></td></tr>
+         <tr><td>aliases</td><td><a href='#VmlRelatedVariants'>VmlRelatedVariants</a></td><td>optional</td><td></td></tr>
+         <tr><td>source</td><td><a href='#VmlSource'>VmlSource</a></td><td>optional</td><td></td></tr>
+         <tr><td>location</td><td><a href='#VmlLocation'>VmlLocation</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>Haplotypes. Complex variants can be given as a list of phased variants.</p></div><hr/>
+     <h2 class='header'>variant (<a name='VmlVariantEvent'><em>VmlVariantEvent</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>name</td><td><a href='#VmlName'>VmlName</a></td><td>optional</td><td></td></tr>
+         <tr><td>seq_region</td><td><a href='#VmlSeqRegion'>VmlSeqRegion</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_type</td><td><a href='#VmlVariantType'>VmlVariantType</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_class</td><td><a href='#VmlVariantClass'>VmlVariantClass</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>original_id</td><td><a href='#VmlOriginalId'>VmlOriginalId</a></td><td>optional</td><td></td></tr>
+         <tr><td>exon</td><td><a href='#VmlExon'>VmlExon</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>sequence</td><td><a href='#VmlSequence'>VmlSequence</a></td><td>optional</td><td></td></tr>
+         <tr><td>consequence</td><td><a href='#VmlConsequence'>VmlConsequence</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>pathogenicity</td><td><a href='#VmlPathogenicity'>VmlPathogenicity</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>variant_detection</td><td><a href='#VmlVariantDetection'>VmlVariantDetection</a></td><td>optional</td><td></td></tr>
+         <tr><td>restriction_site</td><td><a href='#VmlRestrictionSite'>VmlRestrictionSite</a></td><td>optional</td><td></td></tr>
+         <tr><td>genetic_origin</td><td><a href='#VmlGenetic_origin'>VmlGenetic_origin</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>frequency</td><td><a href='#VmlFrequency'>VmlFrequency</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>seq_changes</td><td><a href='#VmlConsequentVariants'>VmlConsequentVariants</a></td><td>optional</td><td></td></tr>
+         <tr><td>aliases</td><td><a href='#VmlRelatedVariants'>VmlRelatedVariants</a></td><td>optional</td><td></td></tr>
+         <tr><td>location</td><td><a href='#VmlLocation'>VmlLocation</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>A variant event is a single genomic variation event, co-occurring with the given variant.</p></div><hr/>
+     <h2 class='header'>seq_changes (<a name='VmlConsequentVariants'><em>VmlConsequentVariants</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>variant</td><td><a href='#VmlConsequentVariant'>VmlConsequentVariant</a></td><td>one or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Related sequence changes on overlapping sequence levels and features.</p>
@@ -418,17 +640,19 @@
 <li>gene is missing</li>
 </ul>
 </div><hr/>
-     <h2 class='header'>aliases (<a name='VmlRelatedVariants'<em>VmlRelatedVariants</em></a>)</h2>
+     <h2 class='header'>aliases (<a name='VmlRelatedVariants'><em>VmlRelatedVariants</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>one or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Aliases or alternative legacy definitions (names) of the variant.</p>
@@ -456,7 +680,7 @@
     &lt;/variant&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>name (<a name='VmlName'<em>VmlName</em></a>)</h2>
+     <h2 class='header'>name (<a name='VmlName'><em>VmlName</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -464,7 +688,7 @@
          <tr><td>scheme</td><td>string</td><td>optional</td><td></td></tr>
         </table>
      </div>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3><p>Name of variant</p>
 <p>Element has following optional attributes: <strong>scheme</strong> - naming scheme, which should typically be HGVS.</p>
 <p><strong>Example:</strong></p>
@@ -473,7 +697,7 @@
  &lt;/name&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>sequence (<a name='VmlSequence'<em>VmlSequence</em></a>)</h2>
+     <h2 class='header'>sequence (<a name='VmlSequence'><em>VmlSequence</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
@@ -482,7 +706,7 @@
          <tr><td>variant</td><td><em>string</em></td><td>mandatory</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Reference and variant sequence strings. Accession number of reference sequence is given in ref_seq element (see the variant)</p>
@@ -494,12 +718,12 @@
 </code></pre>
 </div><hr/>
      <h2 class='header'>reference</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
      <h2 class='header'>variant</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>genotype (<a name='VmlGenotype'<em>VmlGenotype</em></a>)</h2>
+     <h2 class='header'>genotype (<a name='VmlGenotype'><em>VmlGenotype</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
@@ -507,21 +731,22 @@
          <tr><td>call</td><td><em>string</em></td><td>mandatory</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Genotype</p>
+<p>Orginal genotype call e.g. A/T</p>
 </div><hr/>
      <h2 class='header'>call</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>ref_seq (<a name='VmlRefSeq'<em>VmlRefSeq</em></a>)</h2>
+     <h2 class='header'>ref_seq (<a name='VmlRefSeq'><em>VmlRefSeq</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -532,22 +757,23 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Database cross reference for reference sequence.</p>
 <p>Can include other database cross-references and annotations.</p>
+<p>Use <a href="http://www.ncbi.nlm.nih.gov/genbank/">Genbank</a>to source reference sequences.</p>
 <p><strong>Example:</strong></p>
 <pre><code> &lt;ref_seq source=&quot;genbank&quot; accession=&quot;NG_007088.1&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>protocol_id (<a name='VmlProtocolId'<em>VmlProtocolId</em></a>)</h2>
+     <h2 class='header'>protocol_id (<a name='VmlProtocolId'><em>VmlProtocolId</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -558,18 +784,39 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Cross-reference to a protocol database.</p>
 </div><hr/>
-     <h2 class='header'>gene (<a name='VmlGene'<em>VmlGene</em></a>)</h2>
+     <h2 class='header'>observation_date (<a name='VmlObservationDate'><em>VmlObservationDate</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>coded</td><td>boolean</td><td>optional</td><td></td></tr>
+         <tr><td>date</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>age</td><td>float</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>Observation_date captures the date of an observation. A boolean attribute can be used when an exact date cannot be given. An age attribute captures the age of the subject at the time of observation.</p></div><hr/>
+     <h2 class='header'>gene (<a name='VmlGene'><em>VmlGene</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -580,7 +827,7 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Database cross reference where <strong>'source'</strong> is the name of the database or system (e.g. HUGO) and <strong>'accession'</strong> is the gene name (e.g.AGA).</p>
@@ -597,12 +844,33 @@
  &lt;/gene&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>modification_date (<a name='VmlModificationDate'<em>VmlModificationDate</em></a>)</h2>
+     <h2 class='header'>dob (<a name='VmlDobDate'><em>VmlDobDate</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td></td><td><em>choice</em></td><td>optional</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>optional</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Date of birth</p>
+</div><hr/>
+     <h2 class='header'>age (<a name='VmlAge'><em>VmlAge</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>coded</td><td>boolean</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+</p><div class='text'><h3>text node of type float </h3></div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>Age at the time of observation.</p></div><hr/>
+     <h2 class='header'>modification_date (<a name='VmlModificationDate'><em>VmlModificationDate</em></a>)</h2>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td></td><td><em>choice</em></td><td>optional</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Date when submitted information was modified.</p>
@@ -612,17 +880,17 @@
  &lt;modification_date&gt;2001-09-10&lt;/modification_date&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>creation_date (<a name='VmlCreationDate'<em>VmlCreationDate</em></a>)</h2>
+     <h2 class='header'>creation_date (<a name='VmlCreationDate'><em>VmlCreationDate</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td></td><td><em>choice</em></td><td>optional</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>optional</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Date when submitted information was created</p>
 </div><hr/>
-     <h2 class='header'>variant_type (<a name='VmlVariantType'<em>VmlVariantType</em></a>)</h2>
+     <h2 class='header'>variant_type (<a name='VmlVariantType'><em>VmlVariantType</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -640,12 +908,14 @@
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>See types of sequence alteration in Sequence Ontology</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Type of variation. SNP, microsatellite... Also sequence alteration terms from SO http://www.sequenceontology.org/browser/current_release/term/SO:0001059</p>
+<p>Note: This should not be mixed with classification schemes based on effects of mutations (like missense, alter splicing...) which should go into the consequence element or schemes based on type of underlying sequence (like exon, intron), which should go into seq_region element.</p>
+<p><em>Examples:</em> indel (accession = 1000032) deletion (accession = 0000159) substitution (accession = 1000002) inversion (accession = 1000036)</p>
 </div><hr/>
-     <h2 class='header'>organism (<a name='VmlOrganism'<em>VmlOrganism</em></a>)</h2>
+     <h2 class='header'>variant_class (<a name='VmlVariantClass'><em>VmlVariantClass</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -663,12 +933,34 @@
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+     <h2 class='header'>organism (<a name='VmlOrganism'><em>VmlOrganism</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Organism</p>
 </div><hr/>
-     <h2 class='header'>tissue_distribution (<a name='VmlTissueDistribution'<em>VmlTissueDistribution</em></a>)</h2>
+     <h2 class='header'>strain (<a name='VmlStrain'><em>VmlStrain</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -686,7 +978,76 @@
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Strain</p>
+</div><hr/>
+     <h2 class='header'>cultivar (<a name='VmlCultivar'><em>VmlCultivar</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Cultivar</p>
+</div><hr/>
+     <h2 class='header'>tissue (<a name='VmlTissue'><em>VmlTissue</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Tissue</p>
+</div><hr/>
+     <h2 class='header'>tissue_distribution (<a name='VmlTissueDistribution'><em>VmlTissueDistribution</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Tissue distribution</p>
@@ -701,7 +1062,7 @@
 <pre><code> &lt;tissue_distribution term=&quot;mosaic&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>sequence_region (<a name='VmlSequenceRegion'<em>VmlSequenceRegion</em></a>)</h2>
+     <h2 class='header'>relationship (<a name='VmlRelationship'><em>VmlRelationship</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -716,15 +1077,18 @@
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>individual</td><td><a href='#VmlIndividual'>VmlIndividual</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>panel</td><td><a href='#VmlPanel'>VmlPanel</a></td><td>zero or many</td><td></td></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Name of the sequence region (not used)</p>
+     </p><div class='doc'> <h3>Documentation</h3>relationships .. NOT NEEDED
+<p>Relationship</p>
 </div><hr/>
-     <h2 class='header'>restriction_site (<a name='VmlRestrictionSite'<em>VmlRestrictionSite</em></a>)</h2>
+     <h2 class='header'>restriction_site (<a name='VmlRestrictionSite'><em>VmlRestrictionSite</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -742,12 +1106,12 @@
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Restriction enzyme site.</p>
 </div><hr/>
-     <h2 class='header'>exon (<a name='VmlExon'<em>VmlExon</em></a>)</h2>
+     <h2 class='header'>exon (<a name='VmlExon'><em>VmlExon</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -757,13 +1121,38 @@
          <tr><td>transcript_ref</td><td>string</td><td>optional</td><td></td></tr>
         </table>
      </div>
-</p><d class='text'>text node </d>
-     </p><div class='doc'> <h3>Documentation</h3><p>Exon has optional attributes <strong>source</strong>, <strong>accession</strong>, and <strong>transcript_ref</strong>, which can be used for crossreference purposes. Exon number is given in text node.</p>
+</p><div class='text'><h3>text node of type string </h3></div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Exon has optional attributes <strong>source</strong>, <strong>accession</strong>, and <strong>transcript_ref</strong>, which can be used for crossreference purposes. Exon number is given in text node. Element is for legacy exons names</p>
 <p><strong>Example:</strong></p>
 <pre><code> &lt;exon&gt;01&lt;/exon&gt;   
 </code></pre>
 </div><hr/>
-     <h2 class='header'>consequence (<a name='VmlConsequence'<em>VmlConsequence</em></a>)</h2>
+     <h2 class='header'>seq_region (<a name='VmlSeqRegion'><em>VmlSeqRegion</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>seq_region</td><td><a href='#VmlSeqRegion'>VmlSeqRegion</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>location</td><td><a href='#VmlLocation'>VmlLocation</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>Sequence_region names the underlying sequence reqion. Sequence Ontology (SO) terms are used to standardise attributes such as <em>exon, intron, 3' UTR</em>, etc.</p></div><hr/>
+     <h2 class='header'>consequence (<a name='VmlConsequence'><em>VmlConsequence</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -779,23 +1168,42 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Consequences of mutation on sequence or structural levels.</p>
-<p>_</p>
-<p>N.B: Standardization of this list into the schema is still pending. See: http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms&quot; lsdb-controlled-vocabulary-terms</p>
-<p>_</p>
-<p><strong><em>Complex frameshift:</em>* Frameshift involving insertions and deletions</strong><em>Exon deletion:</em>* Deletion encompassing a whole exon or exons, frameshift status unknown <strong><em>Exon duplication:</em>* Duplication of one of more exons, frameshift status unknown</strong><em>Frameshift:</em>* Deletion or insertion causing reading frame shift <strong><em>In-frame deletion:</em>* Deletion of a whole codon or codons. Can include deletion of one or more exons</strong><em>In-frame duplication:</em>* A duplication that does not change the reading frame. Can include one or more exons <strong><em>In-frame insertion:</em>* An insertion of a whole codon or codons. Can include one or more exons</strong><em>Intronic variant:</em>* A variant in an intron which has not been shown to affect splicing <strong><em>Missense:</em>* Substitution resulting in a change to a different amino acid</strong><em>Nonsense:</em>* Substitution resulting in a change to a stop codon <strong><em>Out of frame deletion:</em>* Deletion of part of a codon or number of codons resulting in a frameshift. Can include one or more exons</strong><em>Out of frame duplication:</em>* A duplication that changes the reading frame. Can include one or more exons <strong><em>Out of frame insertion:</em>* An insertion of part of a codon or number of codons resulting in a frameshift. Can include one or more exons</strong><em>Silent:</em>* A nucleotide change that does not change the amino acid *<strong>Splice site variant:</strong> A mutation that affects splicing</p>
-<p><em>* Example:</em>* *</p>
-<consequence sourcels="SO" accession="1000071"
-    term="mutation affecting splicing" />
+     </p><div class='doc'> <h3>Documentation</h3><p>Consequences of mutation on sequence, structural and molecular levels.</p>
+<ul>
+<li><strong>Complex frameshift:</strong> Frameshift involving insertions and deletions</li>
+<li><strong>Exon deletion:</strong> Deletion encompassing a whole exon or exons, frameshift status unknown</li>
+<li><strong>Exon duplication:</strong> Duplication of one of more exons, frameshift status unknown</li>
+<li><strong>Frameshift:</strong> Deletion or insertion causing reading frame shift (SO:0000865)</li>
+<li>**In-frame: ** (SO:0001587)</li>
+<li><strong>In-frame deletion:</strong> Deletion of a whole codon or codons. Can include deletion of one or more exons</li>
+<li><strong>In-frame duplication:</strong> A duplication that does not change the reading frame. Can include one or more exons</li>
+<li><strong>In-frame insertion:</strong> An insertion of a whole codon or codons. Can include one or more exons</li>
+<li><strong>Intronic variant:</strong> A variant in an intron which has not been shown to affect splicing</li>
+<li><strong>Missense:</strong> Substitution resulting in a change to a different amino acid (SO:0001783)</li>
+<li><strong>Nonsense:</strong> Substitution resulting in a change to a stop codon (SO:0001587)</li>
+<li><strong>Out of frame deletion:</strong> Deletion of part of a codon or number of codons resulting in a frameshift. Can include one or more exons</li>
+<li><strong>Out of frame duplication:</strong> A duplication that changes the reading frame. Can include one or more exons</li>
+<li><strong>Out of frame insertion:</strong> An insertion of part of a codon or number of codons resulting in a frameshift. Can include one or more exons</li>
+<li><strong>Silent:</strong> A nucleotide change that does not change the amino acid</li>
+<li><strong>Splice site variant:</strong> A mutation that affects splicing</li>
+<li><strong>Synonymous:</strong> (SO:0001588)</li>
+</ul>
+<p><em>Note: implementation of fixed vocabulary for this element is still pending.</em> Sequence ontology and VariO terms are preferred. See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms%22">lsdb-controlled-vocabulary-terms</a> also ClinVarDataDictionary (http://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)</p>
+<p>See also documentation under the seq_region and variant_type element</p>
+<p><strong>Example:</strong></p>
+<pre><code> &lt;consequence source=&quot;SO&quot; accession=&quot;1000071&quot; term=&quot;mutation affecting splicing&quot; /&gt;
+</code></pre>
 </div><hr/>
-     <h2 class='header'>genetic_origin (<a name='VmlGenetic_origin'<em>VmlGenetic_origin</em></a>)</h2>
+     <h2 class='header'>genetic_origin (<a name='VmlGenetic_origin'><em>VmlGenetic_origin</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -812,21 +1220,27 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>source</td><td><a href='#VmlGeneticSource'>VmlGeneticSource</a></td><td>optional</td><td></td></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Genetic origin of variation. Has following information:</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Genetic origin of variation.</p>
+<p>Genetic origin corresponds to the <a href="http://www.sequenceontology.org/wiki/index.php/Category:SO:0001762_!_variant_origin">Sequence Ontology's variant_origin</a>.</p>
+<p>Genetic origin and source are evidence ontology terms.</p>
+<p>Genetic origin documents the following information:</p>
 <ul>
-<li>term - ontology term for origin of variant (denovo, sporadic, inherited)<br /></li>
+<li>term - ontology term for origin of variant (denovo, sporadic, inherited)</li>
 <li>source - parental origin of variation (paternal, maternal)</li>
 <li>evidence code - evidence code for the observation</li>
 <li>list of individuals</li>
-<li>Genetic origin and source are evidence ontology terms.</li>
-<li>Controlled vocabulary terms for genetic origin:</li>
+</ul>
+<p><strong>Controlled vocabulary terms for genetic origin:</strong></p>
+<ul>
 <li>inherited</li>
 <li>sporadic</li>
 <li>de novo</li>
@@ -839,7 +1253,7 @@
  &lt;/genetic_origin&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>source (<a name='VmlGeneticSource'<em>VmlGeneticSource</em></a>)</h2>
+     <h2 class='header'>source (<a name='VmlGeneticSource'><em>VmlGeneticSource</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -856,8 +1270,10 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>population</td><td><a href='#VmlPopulation'>VmlPopulation</a></td><td>zero or many</td><td></td></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
         </table>
@@ -870,16 +1286,23 @@
 </ul>
 <p><em>N.B: Standardization of this list is pending.</em> See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms">lsdb-controlled-vocabulary-terms</a></p>
 </div><hr/>
-     <h2 class='header'>location (<a name='VmlLocation'<em>VmlLocation</em></a>)</h2>
+     <h2 class='header'>location (<a name='VmlLocation'><em>VmlLocation</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>unit</td><td>string</td><td>optional</td><td>feature | residue</td></tr>
+        </table>
+     </div>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td>ref_seq</td><td><a href='#VmlRefSeq'>VmlRefSeq</a></td><td>mandatory</td><td></td></tr>
+         <tr><td>ref_seq</td><td><a href='#VmlRefSeq'>VmlRefSeq</a></td><td>optional</td><td></td></tr>
          <tr><td>chr</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>start</td><td><em>string</em></td><td>mandatory</td><td></td></tr>
          <tr><td>end</td><td><em>string</em></td><td>optional</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Location of variant on a reference sequence/genomic build</p>
@@ -900,8 +1323,9 @@
  
 </div><hr/>
      <h2 class='header'>start</h2>
+</p><div class='text'><h3>text node of type integer </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>sharing_policy (<a name='VmlSharingPolicy'<em>VmlSharingPolicy</em></a>)</h2>
+     <h2 class='header'>sharing_policy (<a name='VmlSharingPolicy'><em>VmlSharingPolicy</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -917,7 +1341,7 @@
          <tr><td>use_permission</td><td><a href='#VmlUsePermission'>VmlUsePermission</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Data sharing policy. Following access policy types are used: closedAccess,embargoedAccess,restrictedAccess and openAccess</p>
@@ -929,7 +1353,7 @@
     &lt;/sharing_policy&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>embargo_end_date (<a name='VmlEmbargo_end_date'<em>VmlEmbargo_end_date</em></a>)</h2>
+     <h2 class='header'>embargo_end_date (<a name='VmlEmbargo_end_date'><em>VmlEmbargo_end_date</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -937,9 +1361,10 @@
          <tr><td>is_undefined</td><td>string</td><td>optional</td><td>true</td></tr>
         </table>
      </div>
+</p><div class='text'><h3>text node of type date </h3></div>
      </p><div class='doc'> <h3>Documentation</h3><p>Embargo end date</p>
 </div><hr/>
-     <h2 class='header'>use_permission (<a name='VmlUsePermission'<em>VmlUsePermission</em></a>)</h2>
+     <h2 class='header'>use_permission (<a name='VmlUsePermission'><em>VmlUsePermission</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -957,7 +1382,7 @@
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Licensing information.</p>
@@ -965,12 +1390,70 @@
 <pre><code> &lt;use_permission accession=&quot;CC0&quot; uri=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot; term=&quot;Creative commons&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>pathogenicity (<a name='VmlPathogenicity'<em>VmlPathogenicity</em></a>)</h2>
+     <h2 class='header'>pathogenicity (<a name='VmlPathogenicity'><em>VmlPathogenicity</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>scope</td><td>string</td><td>optional</td><td>individual | family | population</td></tr>
+         <tr><td>panel_ref</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>phenotype</td><td><a href='#VmlPhenotype'>VmlPhenotype</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>factor</td><td><a href='#VmlFactor'>VmlFactor</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Pathogenicity of variant.</p>
+<p>Controlled vocabulary for pathogenicity is sourced from the GEN2PHEN project. See: <a href="http://www.gen2phen.org/wiki/varioml-pathogenicity">VarioML - Pathogenicity</a>.</p>
+<p>SKOS terms are preferred: http://purl.org/varioml/pathogenicity/skos/1.0/</p>
+<pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003"> </pathigenicity>
+<pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" > </pathigenicity>
+<p>Note that g2p is always used as a source</p>
+<p>Examples of the terms:</p>
+<ul>
+<li>Non-pathogenic</li>
+<li>Not known</li>
+<li>Pathogenic</li>
+<li>Probably not pathogenic</li>
+<li>Probably pathogenic</li>
+<li>Unclassified</li>
+</ul>
+<p><em>Pathogenicity</em> has new attributes: <strong>phenotype</strong>, <strong>scope</strong> <em>(individual, family, population)</em> and <strong>score</strong>.</p>
+<p><strong>CMGS/VKGL suggested classification</strong></p>
+<p>Via <a href="http://www.interactive-biosoftware.com/alamut/doc/CMGS-VKGL-Classification.html">Alamut</a>:</p>
+<p>The <a href="http://cmgsweb.shared.hosting.zen.co.uk/BPGs/pdfs%20current%20bpgs/UV%20GUIDELINES%20ratified.pdf">Practice guidelines for the Interpretation and Reporting of Unclassified Variants (UVs) in Clinical Molecular Genetics</a> suggest the following classification system:</p>
+<p>Class 1 – Certainly not pathogenic Class 2 – Unlikely to be pathogenic but cannot be formally proven Class 3 – Likely to be pathogenic but cannot be formally proven Class 4 - Certainly pathogenic</p>
+<hr />
+<p><em>Note [1]: implementation of fixed vocabulary for this element is still pending.</em> See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms%22">lsdb-controlled-vocabulary-terms</a></p>
+<p>*Note [2]: The following controlled terms have been deprecated:</p>
+<ul>
+<li>Causative</li>
+<li>Probably causative</li>
+</ul>
+<p><em>Causative</em> was added as a workaround for cases where a mutation does not lead to a disease phenotype (e.g. eye color etc.)</p>
+<p><em>Causative</em> was for cases where the variant is known to have an impact on non-disease phenotypes.</p>
+</div><hr/>
+     <h2 class='header'>factor (<a name='VmlFactor'><em>VmlFactor</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
@@ -982,51 +1465,47 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Pathogenicity of variant.</p>
-<p>Pathogenicity has 7 possible values:</p>
-<ul>
-<li>Non-pathogenic</li>
-<li>Not known</li>
-<li>Pathogenic</li>
-<li>Probably not pathogenic</li>
-<li>Probably pathogenic</li>
-<li>Causative</li>
-<li>Probably causative</li>
-<li>Unclassified</li>
-</ul>
-<p><em>Causative</em> is added as workaround for cases where mutation do not lead to a disease phenotype (e.g. eye color etc.)</p>
-<p><em>Causative</em> is for cases where variant is known to have impact on non disease phenotype.</p>
-<p><em>Pathogenicity</em> has new attributes: phenotype, scope (individual, family, population) and score.</p>
-<p><em>Note: implementation of fixed vocabulary for this element is still pending.</em> See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms%22">lsdb-controlled-vocabulary-terms</a></p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Factor</p>
 </div><hr/>
-     <h2 class='header'>haplotype_group (<a name='VmlHaplotypeGroup'<em>VmlHaplotypeGroup</em></a>)</h2>
+     <h2 class='header'>variant_group (<a name='VmlVariantGroup'><em>VmlVariantGroup</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>id</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>orientation</td><td>string</td><td>optional</td><td>cis | trans | unknown</td></tr>
         </table>
      </div>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>group_type</td><td><a href='#VmlGroupType'>VmlGroupType</a></td><td>optional</td><td></td></tr>
+         <tr><td>variant</td><td><a href='#VmlVariant'>VmlVariant</a></td><td>one or many</td><td></td></tr>
+         <tr><td>frequency</td><td><a href='#VmlFrequency'>VmlFrequency</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>pathogenicity</td><td><a href='#VmlPathogenicity'>VmlPathogenicity</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Haplotype group id. Can be used for marking up alleles which are on same phase.</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Variant group</p>
 </div><hr/>
-     <h2 class='header'>variant_detection (<a name='VmlVariantDetection'<em>VmlVariantDetection</em></a>)</h2>
+     <h2 class='header'>variant_detection (<a name='VmlVariantDetection'><em>VmlVariantDetection</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1042,7 +1521,7 @@
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Techniques used to detect the variant.</p>
@@ -1092,13 +1571,13 @@
 <pre><code> &lt;variant_detection template=&quot;DNA&quot; technique=&quot;DHPLC&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>db_xref (<a name='VmlDbXRef'<em>VmlDbXRef</em></a>)</h2>
+     <h2 class='header'>db_xref (<a name='VmlDbXRef'><em>VmlDbXRef</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
-         <tr><td>accession</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>name</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
         </table>
@@ -1109,7 +1588,7 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Abstract data type for database cross references.</p>
@@ -1118,11 +1597,50 @@
 <pre><code>  &lt;db_xref source=&quot;pubmed&quot; accession=&quot;16965330&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>phenotype (<a name='VmlPhenotype'<em>VmlPhenotype</em></a>)</h2>
+     <h2 class='header'>observation (<a name='VmlGenericObservation'><em>VmlGenericObservation</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>type</td><td>string</td><td>optional</td><td>lifestyle | environment | relationship</td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Abstract type. See subtypes for the documentation. Observation which has evidence code and observation protocol (dbxref).</p>
+<p><strong>Example:</strong></p>
+<pre><code> &lt;genetic_origin term=&quot;paternal&quot;&gt;
+   &lt;evidence_code term=&quot;inferred&quot;/&gt;            
+ &lt;/genetic_origin&gt;
+
+ &lt;phenotype term=&quot;Osteogenesis Imperfecta&quot; &gt;
+   &lt;evidence_code term=&quot;assessed by clinician&quot;/&gt;
+   &lt;protocol_id source=&quot;protocoldb_xyz&quot; accession=&quot;XYZ0001&quot;/&gt;
+ &lt;/phenotype&gt;
+</code></pre>
+</div><hr/>
+     <h2 class='header'>phenotype (<a name='VmlPhenotype'><em>VmlPhenotype</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>type</td><td>string</td><td>optional</td><td>symptom | diagnose</td></tr>
          <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
          <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
@@ -1135,11 +1653,13 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>inheritance_pattern</td><td><a href='#VmlInheritancePattern'>VmlInheritancePattern</a></td><td>optional</td><td></td></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Phenotype of individual. Phenotype is evidence ontology term (see evidence_ontology)</p>
@@ -1158,7 +1678,7 @@
  &lt;/phenotype&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>inheritance_pattern (<a name='VmlInheritancePattern'<em>VmlInheritancePattern</em></a>)</h2>
+     <h2 class='header'>inheritance_pattern (<a name='VmlInheritancePattern'><em>VmlInheritancePattern</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1174,11 +1694,13 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Inheritance pattern of the phenotype. Possible values for the term:</p>
@@ -1199,13 +1721,13 @@
 </ul>
 <p>See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms">lsdb-controlled-vocabulary-terms</a></p>
 </div><hr/>
-     <h2 class='header'>frequency (<a name='VmlFrequency'<em>VmlFrequency</em></a>)</h2>
+     <h2 class='header'>frequency (<a name='VmlFrequency'><em>VmlFrequency</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
          <tr><td>samples</td><td>int</td><td>optional</td><td></td></tr>
-         <tr><td>type</td><td>string</td><td>optional</td><td>allele | carrier</td></tr>
+         <tr><td>type</td><td>string</td><td>optional</td><td>allele | carrier | genotype</td></tr>
         </table>
      </div>
      <div class='elements'>
@@ -1214,11 +1736,13 @@
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>population</td><td><a href='#VmlPopulation'>VmlPopulation</a></td><td>optional</td><td></td></tr>
          <tr><td></td><td><em>choice</em></td><td>optional</td><td>freq|counts|category</td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Actual frequency is stored in a subelement depending on value type. This type can be: decimal number, number of cases, or categorized value.</p>
@@ -1256,10 +1780,12 @@
 </code></pre>
 </div><hr/>
      <h2 class='header'>freq</h2>
+</p><div class='text'><h3>text node of type float </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
      <h2 class='header'>counts</h2>
+</p><div class='text'><h3>text node of type int </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>category (<a name='VmlOntologyTerm'<em>VmlOntologyTerm</em></a>)</h2>
+     <h2 class='header'>category (<a name='VmlOntologyTerm'><em>VmlOntologyTerm</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1280,7 +1806,7 @@
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>population (<a name='VmlPopulation'<em>VmlPopulation</em></a>)</h2>
+     <h2 class='header'>population (<a name='VmlPopulation'><em>VmlPopulation</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1297,11 +1823,13 @@
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Information related to population group the individual belongs to.</p>
@@ -1330,7 +1858,7 @@
  &lt;/population&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>evidence_code (<a name='VmlEvidenceCode'<em>VmlEvidenceCode</em></a>)</h2>
+     <h2 class='header'>evidence_code (<a name='VmlEvidenceCode'><em>VmlEvidenceCode</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1345,10 +1873,11 @@
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>score</td><td><a href='#VmlScore'>VmlScore</a></td><td>zero or many</td><td></td></tr>
          <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Evidence code is an ontology term (i.e. has optional source and accession attributes), which provides information related to the validity or the quality of observation.</p>
@@ -1366,7 +1895,57 @@
  &lt;evidence_code term=&quot;confirmed&quot; source=&quot;vario&quot;/&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>comment (<a name='VmlComment'<em>VmlComment</em></a>)</h2>
+     <h2 class='header'>score (<a name='VmlScore'><em>VmlScore</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>value</td><td><em>string</em></td><td>mandatory</td><td></td></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Score</p>
+</div><hr/>
+     <h2 class='header'>value</h2>
+</p><div class='text'><h3>text node of type float </h3></div>
+     </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+     <h2 class='header'>group_type (<a name='VmlGroupType'><em>VmlGroupType</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Group type</p>
+</div><hr/>
+     <h2 class='header'>comment (<a name='VmlComment'><em>VmlComment</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1381,9 +1960,11 @@
        <h3>Elements</h3>
        <table border='1'>
          <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
-         <tr><td>text</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>text</td><td><a href='#VmlText'>VmlText</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
          <tr><td>evidence_code</td><td><a href='#VmlEvidenceCode'>VmlEvidenceCode</a></td><td>zero or many</td><td></td></tr>
          <tr><td>protocol_id</td><td><a href='#VmlProtocolId'>VmlProtocolId</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>observation_date</td><td><a href='#VmlObservationDate'>VmlObservationDate</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
         </table>
@@ -1424,7 +2005,48 @@
     &lt;/phenotype&gt;
 </code></pre>
 </div><hr/>
-     <h2 class='header'>source (<a name='VmlSource'<em>VmlSource</em></a>)</h2>
+     <h2 class='header'>text (<a name='VmlText'><em>VmlText</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>content_type</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>lang</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>encoding</td><td>string</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+</p><div class='text'><h3>text node of type string </h3></div>
+     </p><div class='doc'> <h3>Documentation</h3><p>Text</p>
+</div><hr/>
+     <h2 class='header'>value (<a name='VmlValue'><em>VmlValue</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>source</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>accession</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>uri</td><td>anyURI</td><td>optional</td><td></td></tr>
+         <tr><td>term</td><td>string</td><td>mandatory</td><td></td></tr>
+         <tr><td>unit</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>type</td><td>string</td><td>optional</td><td>integer | float | text | date | datetime</td></tr>
+         <tr><td>val</td><td>string</td><td>optional</td><td></td></tr>
+         <tr><td>nval</td><td>double</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
+     <div class='elements'>
+       <h3>Elements</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>choice group</th></tr>
+         <tr><td>description</td><td><em>string</em></td><td>optional</td><td></td></tr>
+         <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
+         <tr><td>value</td><td><a href='#VmlValue'>VmlValue</a></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
+        </table>
+     </div>
+     </p><div class='doc'> <h3>Documentation</h3>
+<p>A name/value pair can be added to an observation using the <em>value</em> element. E.g. the number of exons, amount of residue, etc.</p></div><hr/>
+     <h2 class='header'>source (<a name='VmlSource'><em>VmlSource</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -1445,7 +2067,7 @@
          <tr><td>acknowledgement</td><td><a href='#VmlAcknowledgement'>VmlAcknowledgement</a></td><td>zero or many</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Contains information on data source. Typically specifies the source database, although the system, organization, or institution from which data is exported can also be used.</p>
@@ -1466,9 +2088,16 @@
 </code></pre>
 </div><hr/>
      <h2 class='header'>name</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>contact (<a name='VmlContact'<em>VmlContact</em></a>)</h2>
+     <h2 class='header'>contact (<a name='VmlContact'><em>VmlContact</em></a>)</h2>
+     <div class='attributes'>
+       <h3>Attributes</h3>
+       <table border='1'>
+         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>
+         <tr><td>role</td><td>string</td><td>optional</td><td></td></tr>
+        </table>
+     </div>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
@@ -1481,14 +2110,14 @@
          <tr><td>email</td><td><em>string</em></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
      <h2 class='header'>name</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-     <h2 class='header'>acknowledgement (<a name='VmlAcknowledgement'<em>VmlAcknowledgement</em></a>)</h2>
+     <h2 class='header'>acknowledgement (<a name='VmlAcknowledgement'><em>VmlAcknowledgement</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
        <table border='1'>
@@ -1497,13 +2126,15 @@
          <tr><td>grant_number</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>optional</td><td></td></tr>
          <tr><td>db_xref</td><td><a href='#VmlDbXRef'>VmlDbXRef</a></td><td>zero or many</td><td></td></tr>
          <tr><td>comment</td><td><a href='#VmlComment'>VmlComment</a></td><td>zero or many</td><td></td></tr>
-         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td></td></tr>
+         <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Acknowledgement.</p>
   </div><hr/>
      <h2 class='header'>name</h2>
-</p><d class='text'>text node </d>
+</p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+
     </body>
-</html>)
+
+</html>

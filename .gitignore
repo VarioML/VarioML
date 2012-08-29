@@ -6,8 +6,6 @@
 *.exe
 *.o
 *.so
-*.tmp
-tmp.*
 
 # Packages #
 ############
@@ -25,22 +23,17 @@ tmp.*
 # Logs and databases #
 ######################
 *.log
-#*.sql
+*.sql
 *.sqlite
 
 # OS generated files #
 ######################
+.DS_Store
 .DS_Store?
 .DS_Store
 ehthumbs.db
+._*
+.Spotlight-V100
+.Trashes
 Icon?
 Thumbs.db
-
-
-# Eclipse dirs       #
-######################
-#.classpath
-#.project
-#.settings
-.metadata
-bin
