@@ -7,7 +7,7 @@ Phenotype of individual. Phenotype is evidence ontology term (see evidence_ontol
 
      <phenotype term='Autoimmune polyglandular syndrome type 1'/>
      
-     <phenotype term='Autoimmune polyglandular syndrome type 1' accession='240300' source='OMIM'>
+     <phenotype term='Autoimmune polyglandular syndrome type 1' accession='240300' source='omim'>
          <evidence_code term="confirmed" source="vario"/>
          <protocol_id accession="observation_method_xyz" source="protocol_database"/>
      	<db_xref accession="12345" source="pubmed"/>

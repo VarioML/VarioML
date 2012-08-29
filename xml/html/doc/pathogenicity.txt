@@ -41,14 +41,4 @@ Class 4 - Certainly pathogenic
 
 *Note [2]: The following controlled terms have been deprecated:
 
-* Causative
-* Probably causative
-
-*Causative* was added as a workaround for cases where a mutation does not lead to a disease phenotype (e.g. eye color etc.)
-
-*Causative* was for cases where the variant is known to have an impact on non-disease phenotypes.
-
-
-
-
-
+Textual values will likely be changing to "Affects function" to cover non disease implications like Eye color. 

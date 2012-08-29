@@ -1,7 +1,6 @@
 
 Panel. Unspecified group of individuals. Has following information besides properties inherited from AbstractObservation target:
 
-*frequency - frequency of given variant or variant set 
 *individuals - list of individuals beloning to the panel
 
 

@@ -1,2 +1,2 @@
 
-Sequence_region names the underlying sequence reqion. Sequence Ontology (SO) terms are used to standardise attributes such as *exon, intron, 3' UTR*, etc.
+Name of the underlying sequence reqion. Sequence Ontology (SO) terms are used to standardise attributes such as *exon, intron, 3' UTR*, etc.

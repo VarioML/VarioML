@@ -1,2 +1,2 @@
 
-Category
+Categorized value for frequency (e.g. less than 100, exist..)

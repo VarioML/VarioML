@@ -29,7 +29,7 @@ Variant. Typically has the following information:
      				<consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/>
      				<seq_changes>
      					<variant type='AA'>
-     						<ref_seq source='UniProt' accession='O43918' />
+     						<ref_seq source='uniprot' accession='O43918' />
      						<name scheme='HGVS'>p.Met1Leu</name>
      					</variant>
      				</seq_changes>

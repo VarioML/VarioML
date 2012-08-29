@@ -195,7 +195,7 @@ element role {
     VmlForeignNodes
 }
 
-## [% INSERT subject_type.txt %]
+## [% INSERT role.txt %]
 VmlRoleType = 
     VmlOntologyTerm
 # (=)	===============================

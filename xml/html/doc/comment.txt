@@ -1,5 +1,6 @@
 Comments are of type Evidence_ontology. The term 'attribute' is optional. See under description of "Evidence_ontology_term data type.
 
+
 Comments can contain other comments.
 
 **Examples:** 

@@ -2,7 +2,7 @@
 Actual frequency is stored in a subelement depending on value type. This type can be: decimal number, number of cases, or categorized value. 
 
 
-Frequency has the optional attribute 'samples', which can hold information on sample size. Typically this is the number of chromosomes. The calculation method type should be cross-referenced using protocol_id. 
+Frequency has the optional attribute 'samples', which can hold information on sample size. Typically this is the number of chromosomes. 
 
 
 Frequency type can be either "allele" or "carrier", with optional subelements: 

@@ -1,2 +1,2 @@
 
-A name/value pair can be added to an observation using the *value* element. E.g. the number of exons, amount of residue, etc.
+A name/value pair can be added to an observation using the *value* element. E.g. the number of exons, residue, etc.

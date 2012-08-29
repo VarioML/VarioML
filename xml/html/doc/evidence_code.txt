@@ -13,6 +13,6 @@ dbSNP validation should be used for mutations:
 
      <evidence_code term="inferred"/> 
      
-     <evidence_code term="confirmed" source="vario"/>
+     <evidence_code term="confirmed" source="obo.vario"/>
      
 
