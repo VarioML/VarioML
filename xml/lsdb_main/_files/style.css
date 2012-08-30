@@ -43,6 +43,7 @@ div.rdf-proplist ul {
 	font-size: 85%;
 }
 
+/*
 div.rdf-proplist h3 {
 	background-color: #bbf;
 	font-size: 100%;
@@ -57,13 +58,16 @@ div.rdf-classlist h3 {
 	padding: 2px;
 }
 
+*/
+
 specterm.h3 {
-/*	foreground-color: #000; */
-	background-color: #bbf;
+/*	foreground-color: #000; 
+	background-color: #bbf; */
 	font-size: 100%%;
 	margin: 0;
 	padding: 2px;
 }
+
 
 .rel-table {
 	border: 1px;

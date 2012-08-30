@@ -7,10 +7,10 @@
      <link rel="stylesheet" href="_files/style.css" type="text/css">
      <link rel="stylesheet" href="_files/style2.css" type="text/css">
      <script src="_files/toc.js" type="text/javascript"></script>
-     </head>
-  <body onload="generateTOC(document.getElementById('toc'));">
 
-    <table style="border:0; background-color:#ffffff;">
+     </head>
+      <body onload="generateTOC(document.getElementById('toc'));">
+     <table style="border:0; background-color:#ffffff;">
         <tr><td>
     <IMG src="_files/g2p_varioml_title.png"></td>
         <td>
@@ -29,7 +29,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
         </div>
 <br/>
     <hr/>
-     <h2 class='header'>cafe_variome (<a name='VmlSubmission'><em>VmlSubmission</em></a>)</h2>
+         <h2 class='header'>cafe_variome (<a name='VmlSubmission'><em>VmlSubmission</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
        <table border='1'>
@@ -53,6 +53,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
+
+
      <h2 class='header'>lsdb (<a name='VmlLsdb'><em>VmlLsdb</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
@@ -223,7 +225,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Panel. Unspecified group of individuals. Has following information besides properties inherited from AbstractObservation target:</p>
-<p><em>frequency - frequency of given variant or variant set</em>individuals - list of individuals beloning to the panel</p>
+<p>*individuals - list of individuals beloning to the panel</p>
 <p><strong>Example:</strong></p>
 <p>Frequency for existence of two alleles.</p>
 <pre><code>    &lt;panel&gt;
@@ -330,7 +332,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Sample</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Local sample id</p>
   </div><hr/>
      <h2 class='header'>gender (<a name='VmlGender'><em>VmlGender</em></a>)</h2>
      <div class='attributes'>
@@ -379,7 +381,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Role</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Role in a group</p>
 </div><hr/>
      <h2 class='header'>description (<a name='VmlDescription'><em>VmlDescription</em></a>)</h2>
      <div class='attributes'>
@@ -533,7 +535,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
                 &lt;consequence term='predicted to change start codon to position c.268, resulting in a frameshift of translation'/&gt;
                 &lt;seq_changes&gt;
                     &lt;variant type='AA'&gt;
-                        &lt;ref_seq source='UniProt' accession='O43918' /&gt;
+                        &lt;ref_seq source='uniprot' accession='O43918' /&gt;
                         &lt;name scheme='HGVS'&gt;p.Met1Leu&lt;/name&gt;
                     &lt;/variant&gt;
                 &lt;/seq_changes&gt;
@@ -575,8 +577,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>Haplotypes. Complex variants can be given as a list of phased variants.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>Haplotypes. Complex variants can be given as a list of phased variants. This element still in testing.</p>
+</div><hr/>
      <h2 class='header'>variant (<a name='VmlVariantEvent'><em>VmlVariantEvent</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
@@ -615,8 +617,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>A variant event is a single genomic variation event, co-occurring with the given variant.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>A variant event is a single genomic variation event, co-occurring with the given variant.</p>
+</div><hr/>
      <h2 class='header'>seq_changes (<a name='VmlConsequentVariants'><em>VmlConsequentVariants</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
@@ -808,8 +810,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>Observation_date captures the date of an observation. A boolean attribute can be used when an exact date cannot be given. An age attribute captures the age of the subject at the time of observation.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>Observation_date captures the date of an observation. A boolean attribute can be used when an exact date cannot be given. An age attribute captures the age of the subject at the time of observation.</p>
+</div><hr/>
      <h2 class='header'>gene (<a name='VmlGene'><em>VmlGene</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
@@ -834,13 +836,13 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
 <p>HGNC names (symbols) should be used to name genes.</p>
 <p>Can include other database cross-references and annotations.</p>
 <p>Example source: * HGNC</p>
-<p>Example accession: * BRACA2</p>
+<p>Example accession: * BRCA2</p>
 <p><strong>Example:</strong></p>
-<pre><code> &lt;gene source=&quot;HGNC&quot; accession=&quot;BRACA2&quot; /&gt;
+<pre><code> &lt;gene source=&quot;HGNC&quot; accession=&quot;BRCA2&quot; /&gt;
 
- &lt;gene source=&quot;HGNC&quot; accession=&quot;BRACA2&quot;&gt;
-    &lt;db_xref accession=&quot;600185&quot; uri=&quot;http://www.ncbi.nlm.nih.gov/omim/600185&quot; source=&quot;OMIM&quot;/&gt;
-    &lt;db_xref accession=&quot;BRACA2&quot; source=&quot;HGNC&quot; uri=&quot;http://www.genenames.org/data/hgnc_data.php?hgnc_id=1101&quot;/&gt;
+ &lt;gene source=&quot;HGNC&quot; accession=&quot;BRCA2&quot;&gt;
+    &lt;db_xref accession=&quot;7581463&quot; uri=&quot;http://identifiers.org/pubmed/600185&quot; source=&quot;pubmed&quot;/&gt;
+    &lt;db_xref accession=&quot;BRCA2&quot; source=&quot;hgnc.symbol&quot; uri=&quot;http://www.identifiers.org/hgnc.symbol/BRCA2&quot;/&gt;
  &lt;/gene&gt;
 </code></pre>
 </div><hr/>
@@ -863,8 +865,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
         </table>
      </div>
 </p><div class='text'><h3>text node of type float </h3></div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>Age at the time of observation.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>Age at the time of observation.</p>
+</div><hr/>
      <h2 class='header'>modification_date (<a name='VmlModificationDate'><em>VmlModificationDate</em></a>)</h2>
      <div class='elements'>
        <h3>Elements</h3>
@@ -1150,8 +1152,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>Sequence_region names the underlying sequence reqion. Sequence Ontology (SO) terms are used to standardise attributes such as <em>exon, intron, 3' UTR</em>, etc.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>Name of the underlying sequence reqion. Sequence Ontology (SO) terms are used to standardise attributes such as <em>exon, intron, 3' UTR</em>, etc.</p>
+</div><hr/>
      <h2 class='header'>consequence (<a name='VmlConsequence'><em>VmlConsequence</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
@@ -1305,7 +1307,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Location of variant on a reference sequence/genomic build</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Location of variant on a reference sequence/genomic build.</p>
 <p><strong>Example:</strong></p>
 <pre><code> &lt;location&gt;
    &lt;ref_seq source=&quot;embl&quot; accession=&quot;ABC1023345&quot;/&gt;
@@ -1313,11 +1315,12 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
    &lt;end&gt;111112&lt;/end&gt;
  &lt;/location&gt;
 
+
+
  &lt;location&gt;
-   &lt;ref_seq accession=&quot;build36&quot;/&gt;
-   &lt;chr&gt;21&lt;/chr&gt;
-   &lt;start&gt;111111&lt;/start&gt;
-   &lt;end&gt;111112&lt;/end&gt;
+    &lt;ref_seq source=&quot;refseq&quot; accession=&quot;NC_000001.10&quot;/&gt;
+    &lt;start&gt;100315752&lt;/ns2:start&gt;
+    &lt;end&gt;100315752&lt;/ns2:end&gt;
  &lt;/location&gt;
 </code></pre>
  
@@ -1441,13 +1444,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
 <p>Class 1 – Certainly not pathogenic Class 2 – Unlikely to be pathogenic but cannot be formally proven Class 3 – Likely to be pathogenic but cannot be formally proven Class 4 - Certainly pathogenic</p>
 <hr />
 <p><em>Note [1]: implementation of fixed vocabulary for this element is still pending.</em> See: <a href="http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms%22">lsdb-controlled-vocabulary-terms</a></p>
-<p>*Note [2]: The following controlled terms have been deprecated:</p>
-<ul>
-<li>Causative</li>
-<li>Probably causative</li>
-</ul>
-<p><em>Causative</em> was added as a workaround for cases where a mutation does not lead to a disease phenotype (e.g. eye color etc.)</p>
-<p><em>Causative</em> was for cases where the variant is known to have an impact on non-disease phenotypes.</p>
+<p>*Note [2]: Textual values will likely be changing to &quot;Affects function&quot; to cover non-disease implications such as <em>Eye color</em>.</p>
 </div><hr/>
      <h2 class='header'>factor (<a name='VmlFactor'><em>VmlFactor</em></a>)</h2>
      <div class='attributes'>
@@ -1474,7 +1471,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Factor</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Possible factors for pathogenicity (under discussion)</p>
 </div><hr/>
      <h2 class='header'>variant_group (<a name='VmlVariantGroup'><em>VmlVariantGroup</em></a>)</h2>
      <div class='attributes'>
@@ -1503,7 +1500,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Variant group</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Variant group (EXPERIMENTAL)</p>
 </div><hr/>
      <h2 class='header'>variant_detection (<a name='VmlVariantDetection'><em>VmlVariantDetection</em></a>)</h2>
      <div class='attributes'>
@@ -1666,7 +1663,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
 <p><strong>Example:</strong></p>
 <pre><code> &lt;phenotype term='Autoimmune polyglandular syndrome type 1'/&gt;
 
- &lt;phenotype term='Autoimmune polyglandular syndrome type 1' accession='240300' source='OMIM'&gt;
+ &lt;phenotype term='Autoimmune polyglandular syndrome type 1' accession='240300' source='omim'&gt;
      &lt;evidence_code term=&quot;confirmed&quot; source=&quot;vario&quot;/&gt;
      &lt;protocol_id accession=&quot;observation_method_xyz&quot; source=&quot;protocol_database&quot;/&gt;
     &lt;db_xref accession=&quot;12345&quot; source=&quot;pubmed&quot;/&gt;
@@ -1746,7 +1743,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
         </table>
      </div>
      </p><div class='doc'> <h3>Documentation</h3><p>Actual frequency is stored in a subelement depending on value type. This type can be: decimal number, number of cases, or categorized value.</p>
-<p>Frequency has the optional attribute 'samples', which can hold information on sample size. Typically this is the number of chromosomes. The calculation method type should be cross-referenced using protocol_id.</p>
+<p>Frequency has the optional attribute 'samples', which can hold information on sample size. Typically this is the number of chromosomes.</p>
 <p>Frequency type can be either &quot;allele&quot; or &quot;carrier&quot;, with optional subelements:</p>
 <ul>
 <li>population</li>
@@ -1892,7 +1889,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
 <p><strong>Examples:</strong></p>
 <pre><code> &lt;evidence_code term=&quot;inferred&quot;/&gt; 
 
- &lt;evidence_code term=&quot;confirmed&quot; source=&quot;vario&quot;/&gt;
+ &lt;evidence_code term=&quot;confirmed&quot; source=&quot;obo.vario&quot;/&gt;
 </code></pre>
 </div><hr/>
      <h2 class='header'>score (<a name='VmlScore'><em>VmlScore</em></a>)</h2>
@@ -1943,7 +1940,7 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3><p>Group type</p>
+     </p><div class='doc'> <h3>Documentation</h3><p>Group type (NOT USED)</p>
 </div><hr/>
      <h2 class='header'>comment (<a name='VmlComment'><em>VmlComment</em></a>)</h2>
      <div class='attributes'>
@@ -2044,8 +2041,8 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
          <tr><td></td><td><em>choice</em></td><td>zero or many</td><td><em>Foreign XML nodes</em></td></tr>
         </table>
      </div>
-     </p><div class='doc'> <h3>Documentation</h3>
-<p>A name/value pair can be added to an observation using the <em>value</em> element. E.g. the number of exons, amount of residue, etc.</p></div><hr/>
+     </p><div class='doc'> <h3>Documentation</h3><p>A name/value pair can be added to an observation using the <em>value</em> element. E.g. the number of exons, residue, etc.</p>
+</div><hr/>
      <h2 class='header'>source (<a name='VmlSource'><em>VmlSource</em></a>)</h2>
      <div class='attributes'>
        <h3>Attributes</h3>
@@ -2134,7 +2131,5 @@ For more information, see the <a href="https://github.com/VarioML/VarioML">GitHu
      <h2 class='header'>name</h2>
 </p><div class='text'><h3>text node of type string </h3></div>
      </p><div class='doc'> <h3>Documentation</h3></div><hr/>
-
     </body>
-
 </html>
