@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
+import java.util.Collections;
 
 import javax.xml.soap.Node;
 
@@ -18,7 +20,15 @@ import org.w3c.dom.NodeList;
 
 public class HTMLDocumentGenerator {
 	private PrintStream out = System.out;
-
+	    public static class ComparatorX implements Comparator {
+                 	public int compare (Object a, Object b) {
+                 		MetaData m=(MetaData) a;
+						MetaData n=(MetaData) b;
+						String type1 = getType(m.patternList);
+						String type2 = getType(n.patternList);
+                 		return type1.compareTo(type2);
+                 	}
+                 }
 	public HTMLDocumentGenerator(String outFile) {
 		File f = new File(outFile);
 		PrintStream str = null;
@@ -46,13 +56,18 @@ public class HTMLDocumentGenerator {
 		p("       <title>" + title + "</title>");
 		p("       <style type=\"text/css\">table { border:2px; border-collapse:collapse; }</style>");
 		// p("       <style type=\"text/css\">th { border:1px; border-collapse:collapse; bgcolor:aliceblue;}</style>");
-		p("     <link rel=\"stylesheet\" href=\"_files/xmlns-style.css\" type=\"text/css\">");
-		p("     <link rel=\"stylesheet\" href=\"_files/style.css\" type=\"text/css\">");
-		p("     <link rel=\"stylesheet\" href=\"_files/style2.css\" type=\"text/css\">");
+		p("     <link rel=\"stylesheet\" href=\"images/xmlns-style.css\" type=\"text/css\">");
+		p("     <link rel=\"stylesheet\" href=\"images/style.css\" type=\"text/css\">");
+		p("     <link rel=\"stylesheet\" href=\"images/style2.css\" type=\"text/css\">");
+		p("     <script src=\"images/toc.js\" type=\"text/javascript\"></script>");
+		p("     <script src=\"images/smooth.pack.js\" type=\"text/javascript\"></script>");
 		p("     </head>");
-		p("    <body>");
-		p("    <H1>VarioML Documentation</H1>");
-		p("    <p> ~ contents here ~ </p>");
+		p("    <body  onload=\"generateTOC(document.getElementById('toc'));\"><a name=\"top\"></a>");
+		p("    <table style=\"border:0; background-color:#ffffff;\"><tr><td>");
+		p("    <IMG src=\"images/g2p_varioml_title.png\"></td>");
+		p("    <td><H1>VarioML Schema Reference</H1></td></tr></table>");
+		p("    For more information, see the <a href=\"https://github.com/VarioML/VarioML\">GitHub repository</a>, <a href=\"http://www.gen2phen.org/groups/varioml\">User wiki</a>, and <a href=\"http://varioml.org\">Website</a>.");
+		p("    <br/><div id=\"toc\"><H3>Contents</H3></div><br/>");
 		p("    <hr/>");	
 	}
 
@@ -63,19 +78,26 @@ public class HTMLDocumentGenerator {
 
 	public void generate(MetaData data) {
 		String type = getType( data.patternList);
+		if ( type == null || !type.startsWith("Vml")) {
+			return;
+		}
 		if ( type.length() >0 ) {
 			type = " (<a name='"+type+"'><em>"+type+"</em></a>)";
 		} 
 		p("     <h2 class='header'>" + data.name +type
 
 				+ "</h2>");
-
+		if ( data.hasTextNode ) {
+			//todo: improve this... type etc.
+			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
+		}
+		p("     </p><div class='doc'>" + data.documentation + "</div>");
 		List<MetaData> props = data.properties;
 		boolean hasAttribs = false;
 		boolean hasElems = false;
 		for (MetaData d : props) {
 			hasAttribs = hasAttribs || d.nodeType == MetaData.XML_ATTRIBUTE;
-			hasElems = hasElems || d.nodeType == MetaData.XML_ELEMENT;
+			hasElems = hasElems || d.nodeType == MetaData.XML_ELEMENT; 
 		}
 		if (hasAttribs) {
 			p("     <div class='attributes'>");
@@ -125,19 +147,14 @@ public class HTMLDocumentGenerator {
 			p("        </table>");
 			p("     </div>");
 		}
-		if ( data.hasTextNode ) {
-			//todo: improve this... type etc.
-			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
-		}
-		p("     </p><div class='doc'> <h3>Documentation</h3>" + data.documentation + "</div><hr/>");
-
+			p("<span style=\"font-size: .75em; float: right;\">[ <a href=\"#top\">top</a> ]</span><br/><hr/>");
 	}
 
-	//get type from the list of name of gramma patterns. Patterns are ordered from top to down
+	//get type from the list of name of grammar patterns. Patterns are ordered from top to down
 	// todo: check .. there can be problems in here...
-	private String getType(List<String> patternList) {
+	static private String getType(List<String> patternList) {
 		if ( patternList.size() == 0) return "";
-		
+				// sort element Names by alpha
 		return patternList.get(0);
 	}
 
@@ -164,15 +181,18 @@ public class HTMLDocumentGenerator {
 
 		HTMLDocumentGenerator gener = new HTMLDocumentGenerator(args[ args.length - 1]);
 		gener.HTMLHeader("VarioML");
-
 		List<org.w3c.dom.Node> nodes = app.findAllXMLNodesOrDie("grammar/define/element");
+		List<MetaData> dataList = new ArrayList<MetaData>();
 		for (int i = 0; i < nodes.size(); i++) {
 			MetaData data = app.createMetaDataObject(nodes.get(i), true);
-			gener.generate(data);
-
+			//gener.generate(data);
+			dataList.add(data);
+		}
+		Collections.sort( dataList, new ComparatorX());
+		for ( int i = 0 ; i < dataList.size(); i++) {
+			gener.generate( dataList.get(i));
 		}
 		gener.HTMLEnd();
-
 	}
 
 }
