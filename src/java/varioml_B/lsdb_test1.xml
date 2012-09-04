@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lsdb xmlns="http://gen2phen.org/varioml/2.2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://gen2phen.org/varioml/2.0 file:lsdb.xsd" id="id1" uri="http://www.oxygenxml.com/" schema_version="2.2">
+    <created>2006-05-04T18:13:51.0Z</created>
+    <source id="id3" uri="http://www.oxygenxml.com/" version="version1" date="2006-05-04">
+        <name>name0</name>
+        <url>url0</url>
+        <contact>
+            <name>name1</name>
+            <url>url1</url>
+            <address>address0</address>
+            <phone>phone0</phone>
+            <fax>fax0</fax>
+            <email>email0</email>
+            <db_xref source="source1" accession="accession1" name="name1" uri="http://www.oxygenxml.com/">
+                <db_xref source="source3" accession="accession3" name="name3" uri="http://www.oxygenxml.com/">
+                    <comment source="source5" accession="accession5" uri="http://www.oxygenxml.com/" term="term1">
+                    </comment>
+                </db_xref>
+                <comment source="source7" accession="accession7" uri="http://www.oxygenxml.com/" term="term3">
+                    <text>text0</text>
+                    <evidence_code source="source9" accession="accession9" uri="http://www.oxygenxml.com/" term="term5">
+                    </evidence_code>
+                    <protocol_id source="source11" accession="accession11" name="name5" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source13" accession="accession13" name="name7" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source15" accession="accession15" uri="http://www.oxygenxml.com/" term="term7">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source17" accession="accession17" uri="http://www.oxygenxml.com/" term="term9">
+                <text>text1</text>
+                <evidence_code source="source19" accession="accession19" uri="http://www.oxygenxml.com/" term="term11">
+                    <description>description0</description>
+                    <db_xref source="source21" accession="accession21" name="name9" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source23" accession="accession23" uri="http://www.oxygenxml.com/" term="term13">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source25" accession="accession25" name="name11" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source27" accession="accession27" name="name13" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source29" accession="accession29" uri="http://www.oxygenxml.com/" term="term15">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source31" accession="accession31" name="name15" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source33" accession="accession33" name="name17" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source35" accession="accession35" uri="http://www.oxygenxml.com/" term="term17">
+                    </comment>
+                </db_xref>
+                <comment source="source37" accession="accession37" uri="http://www.oxygenxml.com/" term="term19">
+                    <text>text2</text>
+                    <evidence_code source="source39" accession="accession39" uri="http://www.oxygenxml.com/" term="term21">
+                    </evidence_code>
+                    <protocol_id source="source41" accession="accession41" name="name19" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source43" accession="accession43" name="name21" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </contact>
+        <acknowledgement>
+            <name>name2</name>
+            <grant_number source="source45" accession="accession45" name="name23" uri="http://www.oxygenxml.com/">
+                <db_xref source="source47" accession="accession47" name="name25" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source49" accession="accession49" name="name27" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source51" accession="accession51" uri="http://www.oxygenxml.com/" term="term23">
+                    </comment>
+                </db_xref>
+                <comment source="source53" accession="accession53" uri="http://www.oxygenxml.com/" term="term25">
+                    <text>text3</text>
+                    <evidence_code source="source55" accession="accession55" uri="http://www.oxygenxml.com/" term="term27">
+                    </evidence_code>
+                    <protocol_id source="source57" accession="accession57" name="name29" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source59" accession="accession59" name="name31" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source61" accession="accession61" uri="http://www.oxygenxml.com/" term="term29">
+                    </comment>
+                </comment>
+            </grant_number>
+            <db_xref source="source63" accession="accession63" name="name33" uri="http://www.oxygenxml.com/">
+                <db_xref source="source65" accession="accession65" name="name35" uri="http://www.oxygenxml.com/">
+                    <comment source="source67" accession="accession67" uri="http://www.oxygenxml.com/" term="term31">
+                    </comment>
+                </db_xref>
+                <comment source="source69" accession="accession69" uri="http://www.oxygenxml.com/" term="term33">
+                    <text>text4</text>
+                    <evidence_code source="source71" accession="accession71" uri="http://www.oxygenxml.com/" term="term35">
+                    </evidence_code>
+                    <protocol_id source="source73" accession="accession73" name="name37" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source75" accession="accession75" name="name39" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source77" accession="accession77" uri="http://www.oxygenxml.com/" term="term37">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source79" accession="accession79" uri="http://www.oxygenxml.com/" term="term39">
+                <text>text5</text>
+                <evidence_code source="source81" accession="accession81" uri="http://www.oxygenxml.com/" term="term41">
+                    <description>description1</description>
+                    <db_xref source="source83" accession="accession83" name="name41" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source85" accession="accession85" uri="http://www.oxygenxml.com/" term="term43">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source87" accession="accession87" name="name43" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source89" accession="accession89" name="name45" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source91" accession="accession91" uri="http://www.oxygenxml.com/" term="term45">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source93" accession="accession93" name="name47" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source95" accession="accession95" name="name49" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source97" accession="accession97" uri="http://www.oxygenxml.com/" term="term47">
+                    </comment>
+                </db_xref>
+                <comment source="source99" accession="accession99" uri="http://www.oxygenxml.com/" term="term49">
+                    <text>text6</text>
+                    <evidence_code source="source101" accession="accession101" uri="http://www.oxygenxml.com/" term="term51">
+                    </evidence_code>
+                    <protocol_id source="source103" accession="accession103" name="name51" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source105" accession="accession105" name="name53" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </acknowledgement>
+        <db_xref source="source107" accession="accession107" name="name55" uri="http://www.oxygenxml.com/">
+            <db_xref source="source109" accession="accession109" name="name57" uri="http://www.oxygenxml.com/">
+                <comment source="source111" accession="accession111" uri="http://www.oxygenxml.com/" term="term53">
+                    <text>text7</text>
+                    <evidence_code source="source113" accession="accession113" uri="http://www.oxygenxml.com/" term="term55">
+                    </evidence_code>
+                    <protocol_id source="source115" accession="accession115" name="name59" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <comment source="source117" accession="accession117" uri="http://www.oxygenxml.com/" term="term57">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source119" accession="accession119" uri="http://www.oxygenxml.com/" term="term59">
+                <text>text8</text>
+                <evidence_code source="source121" accession="accession121" uri="http://www.oxygenxml.com/" term="term61">
+                    <description>description2</description>
+                    <db_xref source="source123" accession="accession123" name="name61" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source125" accession="accession125" uri="http://www.oxygenxml.com/" term="term63">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source127" accession="accession127" name="name63" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source129" accession="accession129" name="name65" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source131" accession="accession131" uri="http://www.oxygenxml.com/" term="term65">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source133" accession="accession133" name="name67" uri="http://www.oxygenxml.com/">
+                    <comment source="source135" accession="accession135" uri="http://www.oxygenxml.com/" term="term67">
+                    </comment>
+                </db_xref>
+                <comment source="source137" accession="accession137" uri="http://www.oxygenxml.com/" term="term69">
+                    <text>text9</text>
+                    <evidence_code source="source139" accession="accession139" uri="http://www.oxygenxml.com/" term="term71">
+                    </evidence_code>
+                    <protocol_id source="source141" accession="accession141" name="name69" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source143" accession="accession143" name="name71" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </db_xref>
+        <comment source="source145" accession="accession145" uri="http://www.oxygenxml.com/" term="term73">
+            <text>text10</text>
+            <evidence_code source="source147" accession="accession147" uri="http://www.oxygenxml.com/" term="term75">
+                <description>description3</description>
+                <db_xref source="source149" accession="accession149" name="name73" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source151" accession="accession151" name="name75" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source153" accession="accession153" uri="http://www.oxygenxml.com/" term="term77">
+                    </comment>
+                </db_xref>
+                <comment source="source155" accession="accession155" uri="http://www.oxygenxml.com/" term="term79">
+                    <text>text11</text>
+                    <evidence_code source="source157" accession="accession157" uri="http://www.oxygenxml.com/" term="term81">
+                    </evidence_code>
+                    <protocol_id source="source159" accession="accession159" name="name77" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source161" accession="accession161" name="name79" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source163" accession="accession163" name="name81" uri="http://www.oxygenxml.com/">
+                <db_xref source="source165" accession="accession165" name="name83" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source167" accession="accession167" name="name85" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source169" accession="accession169" uri="http://www.oxygenxml.com/" term="term83">
+                    </comment>
+                </db_xref>
+                <comment source="source171" accession="accession171" uri="http://www.oxygenxml.com/" term="term85">
+                    <text>text12</text>
+                    <evidence_code source="source173" accession="accession173" uri="http://www.oxygenxml.com/" term="term87">
+                    </evidence_code>
+                    <protocol_id source="source175" accession="accession175" name="name87" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source177" accession="accession177" name="name89" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </protocol_id>
+            <db_xref source="source179" accession="accession179" name="name91" uri="http://www.oxygenxml.com/">
+                <db_xref source="source181" accession="accession181" name="name93" uri="http://www.oxygenxml.com/">
+                    <comment source="source183" accession="accession183" uri="http://www.oxygenxml.com/" term="term89">
+                    </comment>
+                </db_xref>
+                <comment source="source185" accession="accession185" uri="http://www.oxygenxml.com/" term="term91">
+                    <text>text13</text>
+                    <evidence_code source="source187" accession="accession187" uri="http://www.oxygenxml.com/" term="term93">
+                    </evidence_code>
+                    <protocol_id source="source189" accession="accession189" name="name95" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source191" accession="accession191" name="name97" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </db_xref>
+            <comment source="source193" accession="accession193" uri="http://www.oxygenxml.com/" term="term95">
+                <text>text14</text>
+                <evidence_code source="source195" accession="accession195" uri="http://www.oxygenxml.com/" term="term97">
+                    <description>description4</description>
+                    <db_xref source="source197" accession="accession197" name="name99" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source199" accession="accession199" name="name101" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source201" accession="accession201" name="name103" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source203" accession="accession203" name="name105" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source205" accession="accession205" name="name107" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </comment>
+        </comment>
+    </source>
+    <individual id="id5" uri="http://www.oxygenxml.com/">
+        <gender code="0">
+            <description source="source207" accession="accession207" uri="http://www.oxygenxml.com/" term="term99">
+                <description>description5</description>
+                <evidence_code source="source209" accession="accession209" uri="http://www.oxygenxml.com/" term="term101">
+                    <description>description6</description>
+                    <db_xref source="source211" accession="accession211" name="name109" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source213" accession="accession213" uri="http://www.oxygenxml.com/" term="term103">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source215" accession="accession215" name="name111" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source217" accession="accession217" name="name113" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source219" accession="accession219" uri="http://www.oxygenxml.com/" term="term105">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source221" accession="accession221" name="name115" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source223" accession="accession223" name="name117" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source225" accession="accession225" uri="http://www.oxygenxml.com/" term="term107">
+                    </comment>
+                </db_xref>
+                <comment source="source227" accession="accession227" uri="http://www.oxygenxml.com/" term="term109">
+                    <text>text15</text>
+                    <evidence_code source="source229" accession="accession229" uri="http://www.oxygenxml.com/" term="term111">
+                    </evidence_code>
+                    <protocol_id source="source231" accession="accession231" name="name119" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source233" accession="accession233" name="name121" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source235" accession="accession235" uri="http://www.oxygenxml.com/" term="term113">
+                    </comment>
+                </comment>
+            </description>
+            <db_xref source="source237" accession="accession237" name="name123" uri="http://www.oxygenxml.com/">
+                <db_xref source="source239" accession="accession239" name="name125" uri="http://www.oxygenxml.com/">
+                    <comment source="source241" accession="accession241" uri="http://www.oxygenxml.com/" term="term115">
+                    </comment>
+                </db_xref>
+                <comment source="source243" accession="accession243" uri="http://www.oxygenxml.com/" term="term117">
+                    <text>text16</text>
+                    <evidence_code source="source245" accession="accession245" uri="http://www.oxygenxml.com/" term="term119">
+                    </evidence_code>
+                    <protocol_id source="source247" accession="accession247" name="name127" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source249" accession="accession249" name="name129" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source251" accession="accession251" uri="http://www.oxygenxml.com/" term="term121">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source253" accession="accession253" uri="http://www.oxygenxml.com/" term="term123">
+                <text>text17</text>
+                <evidence_code source="source255" accession="accession255" uri="http://www.oxygenxml.com/" term="term125">
+                    <description>description7</description>
+                    <db_xref source="source257" accession="accession257" name="name131" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source259" accession="accession259" uri="http://www.oxygenxml.com/" term="term127">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source261" accession="accession261" name="name133" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source263" accession="accession263" name="name135" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source265" accession="accession265" uri="http://www.oxygenxml.com/" term="term129">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source267" accession="accession267" name="name137" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source269" accession="accession269" name="name139" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source271" accession="accession271" uri="http://www.oxygenxml.com/" term="term131">
+                    </comment>
+                </db_xref>
+                <comment source="source273" accession="accession273" uri="http://www.oxygenxml.com/" term="term133">
+                    <text>text18</text>
+                    <evidence_code source="source275" accession="accession275" uri="http://www.oxygenxml.com/" term="term135">
+                    </evidence_code>
+                    <protocol_id source="source277" accession="accession277" name="name141" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source279" accession="accession279" name="name143" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </gender>
+        <original_id source="source281" accession="accession281" name="name145" uri="http://www.oxygenxml.com/">
+            <db_xref source="source283" accession="accession283" name="name147" uri="http://www.oxygenxml.com/">
+                <db_xref source="source285" accession="accession285" name="name149" uri="http://www.oxygenxml.com/">
+                    <comment source="source287" accession="accession287" uri="http://www.oxygenxml.com/" term="term137">
+                    </comment>
+                </db_xref>
+                <comment source="source289" accession="accession289" uri="http://www.oxygenxml.com/" term="term139">
+                    <text>text19</text>
+                    <evidence_code source="source291" accession="accession291" uri="http://www.oxygenxml.com/" term="term141">
+                    </evidence_code>
+                    <protocol_id source="source293" accession="accession293" name="name151" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source295" accession="accession295" name="name153" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source297" accession="accession297" uri="http://www.oxygenxml.com/" term="term143">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source299" accession="accession299" uri="http://www.oxygenxml.com/" term="term145">
+                <text>text20</text>
+                <evidence_code source="source301" accession="accession301" uri="http://www.oxygenxml.com/" term="term147">
+                    <description>description8</description>
+                    <db_xref source="source303" accession="accession303" name="name155" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source305" accession="accession305" uri="http://www.oxygenxml.com/" term="term149">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source307" accession="accession307" name="name157" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source309" accession="accession309" name="name159" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source311" accession="accession311" uri="http://www.oxygenxml.com/" term="term151">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source313" accession="accession313" name="name161" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source315" accession="accession315" name="name163" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source317" accession="accession317" uri="http://www.oxygenxml.com/" term="term153">
+                    </comment>
+                </db_xref>
+                <comment source="source319" accession="accession319" uri="http://www.oxygenxml.com/" term="term155">
+                    <text>text21</text>
+                    <evidence_code source="source321" accession="accession321" uri="http://www.oxygenxml.com/" term="term157">
+                    </evidence_code>
+                    <protocol_id source="source323" accession="accession323" name="name165" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source325" accession="accession325" name="name167" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </original_id>
+        <organism source="source327" accession="accession327" uri="http://www.oxygenxml.com/" term="term159">
+            <description>description9</description>
+            <db_xref source="source329" accession="accession329" name="name169" uri="http://www.oxygenxml.com/">
+                <db_xref source="source331" accession="accession331" name="name171" uri="http://www.oxygenxml.com/">
+                    <comment source="source333" accession="accession333" uri="http://www.oxygenxml.com/" term="term161">
+                    </comment>
+                </db_xref>
+                <comment source="source335" accession="accession335" uri="http://www.oxygenxml.com/" term="term163">
+                    <text>text22</text>
+                    <evidence_code source="source337" accession="accession337" uri="http://www.oxygenxml.com/" term="term165">
+                    </evidence_code>
+                    <protocol_id source="source339" accession="accession339" name="name173" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source341" accession="accession341" name="name175" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source343" accession="accession343" uri="http://www.oxygenxml.com/" term="term167">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source345" accession="accession345" uri="http://www.oxygenxml.com/" term="term169">
+                <text>text23</text>
+                <evidence_code source="source347" accession="accession347" uri="http://www.oxygenxml.com/" term="term171">
+                    <description>description10</description>
+                    <db_xref source="source349" accession="accession349" name="name177" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source351" accession="accession351" uri="http://www.oxygenxml.com/" term="term173">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source353" accession="accession353" name="name179" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source355" accession="accession355" name="name181" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source357" accession="accession357" uri="http://www.oxygenxml.com/" term="term175">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source359" accession="accession359" name="name183" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source361" accession="accession361" name="name185" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source363" accession="accession363" uri="http://www.oxygenxml.com/" term="term177">
+                    </comment>
+                </db_xref>
+                <comment source="source365" accession="accession365" uri="http://www.oxygenxml.com/" term="term179">
+                    <text>text24</text>
+                    <evidence_code source="source367" accession="accession367" uri="http://www.oxygenxml.com/" term="term181">
+                    </evidence_code>
+                    <protocol_id source="source369" accession="accession369" name="name187" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source371" accession="accession371" name="name189" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </organism>
+        <phenotype source="source373" accession="accession373" uri="http://www.oxygenxml.com/" term="term183">
+            <inheritance_pattern source="source375" accession="accession375" uri="http://www.oxygenxml.com/" term="term185">
+                <description>description11</description>
+                <evidence_code source="source377" accession="accession377" uri="http://www.oxygenxml.com/" term="term187">
+                    <description>description12</description>
+                    <db_xref source="source379" accession="accession379" name="name191" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source381" accession="accession381" uri="http://www.oxygenxml.com/" term="term189">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source383" accession="accession383" name="name193" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source385" accession="accession385" name="name195" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source387" accession="accession387" uri="http://www.oxygenxml.com/" term="term191">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source389" accession="accession389" name="name197" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source391" accession="accession391" name="name199" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source393" accession="accession393" uri="http://www.oxygenxml.com/" term="term193">
+                    </comment>
+                </db_xref>
+                <comment source="source395" accession="accession395" uri="http://www.oxygenxml.com/" term="term195">
+                    <text>text25</text>
+                    <evidence_code source="source397" accession="accession397" uri="http://www.oxygenxml.com/" term="term197">
+                    </evidence_code>
+                    <protocol_id source="source399" accession="accession399" name="name201" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source401" accession="accession401" name="name203" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source403" accession="accession403" uri="http://www.oxygenxml.com/" term="term199">
+                    </comment>
+                </comment>
+            </inheritance_pattern>
+            <description>description13</description>
+            <evidence_code source="source405" accession="accession405" uri="http://www.oxygenxml.com/" term="term201">
+                <description>description14</description>
+                <db_xref source="source407" accession="accession407" name="name205" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source409" accession="accession409" name="name207" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source411" accession="accession411" uri="http://www.oxygenxml.com/" term="term203">
+                    </comment>
+                </db_xref>
+                <comment source="source413" accession="accession413" uri="http://www.oxygenxml.com/" term="term205">
+                    <text>text26</text>
+                    <evidence_code source="source415" accession="accession415" uri="http://www.oxygenxml.com/" term="term207">
+                    </evidence_code>
+                    <protocol_id source="source417" accession="accession417" name="name209" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source419" accession="accession419" name="name211" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source421" accession="accession421" uri="http://www.oxygenxml.com/" term="term209">
+                    </comment>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source423" accession="accession423" name="name213" uri="http://www.oxygenxml.com/">
+                <db_xref source="source425" accession="accession425" name="name215" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source427" accession="accession427" name="name217" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source429" accession="accession429" uri="http://www.oxygenxml.com/" term="term211">
+                    </comment>
+                </db_xref>
+                <comment source="source431" accession="accession431" uri="http://www.oxygenxml.com/" term="term213">
+                    <text>text27</text>
+                    <evidence_code source="source433" accession="accession433" uri="http://www.oxygenxml.com/" term="term215">
+                    </evidence_code>
+                    <protocol_id source="source435" accession="accession435" name="name219" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source437" accession="accession437" name="name221" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source439" accession="accession439" uri="http://www.oxygenxml.com/" term="term217">
+                    </comment>
+                </comment>
+            </protocol_id>
+            <db_xref source="source441" accession="accession441" name="name223" uri="http://www.oxygenxml.com/">
+                <db_xref source="source443" accession="accession443" name="name225" uri="http://www.oxygenxml.com/">
+                    <comment source="source445" accession="accession445" uri="http://www.oxygenxml.com/" term="term219">
+                    </comment>
+                </db_xref>
+                <comment source="source447" accession="accession447" uri="http://www.oxygenxml.com/" term="term221">
+                    <text>text28</text>
+                    <evidence_code source="source449" accession="accession449" uri="http://www.oxygenxml.com/" term="term223">
+                    </evidence_code>
+                    <protocol_id source="source451" accession="accession451" name="name227" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source453" accession="accession453" name="name229" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source455" accession="accession455" uri="http://www.oxygenxml.com/" term="term225">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source457" accession="accession457" uri="http://www.oxygenxml.com/" term="term227">
+                <text>text29</text>
+                <evidence_code source="source459" accession="accession459" uri="http://www.oxygenxml.com/" term="term229">
+                    <description>description15</description>
+                    <db_xref source="source461" accession="accession461" name="name231" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source463" accession="accession463" uri="http://www.oxygenxml.com/" term="term231">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source465" accession="accession465" name="name233" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source467" accession="accession467" name="name235" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source469" accession="accession469" uri="http://www.oxygenxml.com/" term="term233">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source471" accession="accession471" name="name237" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source473" accession="accession473" name="name239" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source475" accession="accession475" uri="http://www.oxygenxml.com/" term="term235">
+                    </comment>
+                </db_xref>
+                <comment source="source477" accession="accession477" uri="http://www.oxygenxml.com/" term="term237">
+                    <text>text30</text>
+                    <evidence_code source="source479" accession="accession479" uri="http://www.oxygenxml.com/" term="term239">
+                    </evidence_code>
+                    <protocol_id source="source481" accession="accession481" name="name241" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source483" accession="accession483" name="name243" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </phenotype>
+        <population type="region" source="source485" accession="accession485" uri="http://www.oxygenxml.com/" term="term241">
+            <description>description16</description>
+            <evidence_code source="source487" accession="accession487" uri="http://www.oxygenxml.com/" term="term243">
+                <description>description17</description>
+                <db_xref source="source489" accession="accession489" name="name245" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source491" accession="accession491" name="name247" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source493" accession="accession493" uri="http://www.oxygenxml.com/" term="term245">
+                    </comment>
+                </db_xref>
+                <comment source="source495" accession="accession495" uri="http://www.oxygenxml.com/" term="term247">
+                    <text>text31</text>
+                    <evidence_code source="source497" accession="accession497" uri="http://www.oxygenxml.com/" term="term249">
+                    </evidence_code>
+                    <protocol_id source="source499" accession="accession499" name="name249" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source501" accession="accession501" name="name251" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source503" accession="accession503" uri="http://www.oxygenxml.com/" term="term251">
+                    </comment>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source505" accession="accession505" name="name253" uri="http://www.oxygenxml.com/">
+                <db_xref source="source507" accession="accession507" name="name255" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source509" accession="accession509" name="name257" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source511" accession="accession511" uri="http://www.oxygenxml.com/" term="term253">
+                    </comment>
+                </db_xref>
+                <comment source="source513" accession="accession513" uri="http://www.oxygenxml.com/" term="term255">
+                    <text>text32</text>
+                    <evidence_code source="source515" accession="accession515" uri="http://www.oxygenxml.com/" term="term257">
+                    </evidence_code>
+                    <protocol_id source="source517" accession="accession517" name="name259" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source519" accession="accession519" name="name261" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source521" accession="accession521" uri="http://www.oxygenxml.com/" term="term259">
+                    </comment>
+                </comment>
+            </protocol_id>
+            <db_xref source="source523" accession="accession523" name="name263" uri="http://www.oxygenxml.com/">
+                <db_xref source="source525" accession="accession525" name="name265" uri="http://www.oxygenxml.com/">
+                    <comment source="source527" accession="accession527" uri="http://www.oxygenxml.com/" term="term261">
+                    </comment>
+                </db_xref>
+                <comment source="source529" accession="accession529" uri="http://www.oxygenxml.com/" term="term263">
+                    <text>text33</text>
+                    <evidence_code source="source531" accession="accession531" uri="http://www.oxygenxml.com/" term="term265">
+                    </evidence_code>
+                    <protocol_id source="source533" accession="accession533" name="name267" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source535" accession="accession535" name="name269" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source537" accession="accession537" uri="http://www.oxygenxml.com/" term="term267">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source539" accession="accession539" uri="http://www.oxygenxml.com/" term="term269">
+                <text>text34</text>
+                <evidence_code source="source541" accession="accession541" uri="http://www.oxygenxml.com/" term="term271">
+                    <description>description18</description>
+                    <db_xref source="source543" accession="accession543" name="name271" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source545" accession="accession545" uri="http://www.oxygenxml.com/" term="term273">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source547" accession="accession547" name="name273" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source549" accession="accession549" name="name275" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source551" accession="accession551" uri="http://www.oxygenxml.com/" term="term275">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source553" accession="accession553" name="name277" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source555" accession="accession555" name="name279" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source557" accession="accession557" uri="http://www.oxygenxml.com/" term="term277">
+                    </comment>
+                </db_xref>
+                <comment source="source559" accession="accession559" uri="http://www.oxygenxml.com/" term="term279">
+                    <text>text35</text>
+                    <evidence_code source="source561" accession="accession561" uri="http://www.oxygenxml.com/" term="term281">
+                    </evidence_code>
+                    <protocol_id source="source563" accession="accession563" name="name281" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source565" accession="accession565" name="name283" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </population>
+        <variant id="id7" uri="http://www.oxygenxml.com/" type="DNA" genotypic="true" subcellular_part="nucleus" copy_count="0">
+            <gene source="source567" accession="accession567" name="name285" uri="http://www.oxygenxml.com/">
+                <db_xref source="source569" accession="accession569" name="name287" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source571" accession="accession571" name="name289" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source573" accession="accession573" uri="http://www.oxygenxml.com/" term="term283">
+                    </comment>
+                </db_xref>
+                <comment source="source575" accession="accession575" uri="http://www.oxygenxml.com/" term="term285">
+                    <text>text36</text>
+                    <evidence_code source="source577" accession="accession577" uri="http://www.oxygenxml.com/" term="term287">
+                    </evidence_code>
+                    <protocol_id source="source579" accession="accession579" name="name291" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source581" accession="accession581" name="name293" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source583" accession="accession583" uri="http://www.oxygenxml.com/" term="term289">
+                    </comment>
+                </comment>
+            </gene>
+            <ref_seq source="source585" accession="accession585" name="name295" uri="http://www.oxygenxml.com/">
+                <db_xref source="source587" accession="accession587" name="name297" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source589" accession="accession589" name="name299" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source591" accession="accession591" uri="http://www.oxygenxml.com/" term="term291">
+                    </comment>
+                </db_xref>
+                <comment source="source593" accession="accession593" uri="http://www.oxygenxml.com/" term="term293">
+                    <text>text37</text>
+                    <evidence_code source="source595" accession="accession595" uri="http://www.oxygenxml.com/" term="term295">
+                    </evidence_code>
+                    <protocol_id source="source597" accession="accession597" name="name301" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source599" accession="accession599" name="name303" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source601" accession="accession601" uri="http://www.oxygenxml.com/" term="term297">
+                    </comment>
+                </comment>
+            </ref_seq>
+            <name scheme="scheme1">
+            </name>
+            <variant_type source="source603" accession="accession603" uri="http://www.oxygenxml.com/" term="term299">
+                <description>description19</description>
+                <db_xref source="source605" accession="accession605" name="name305" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source607" accession="accession607" name="name307" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source609" accession="accession609" uri="http://www.oxygenxml.com/" term="term301">
+                    </comment>
+                </db_xref>
+                <comment source="source611" accession="accession611" uri="http://www.oxygenxml.com/" term="term303">
+                    <text>text38</text>
+                    <evidence_code source="source613" accession="accession613" uri="http://www.oxygenxml.com/" term="term305">
+                    </evidence_code>
+                    <protocol_id source="source615" accession="accession615" name="name309" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source617" accession="accession617" name="name311" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source619" accession="accession619" uri="http://www.oxygenxml.com/" term="term307">
+                    </comment>
+                </comment>
+            </variant_type>
+            <original_id source="source621" accession="accession621" name="name313" uri="http://www.oxygenxml.com/">
+                <db_xref source="source623" accession="accession623" name="name315" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source625" accession="accession625" name="name317" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source627" accession="accession627" uri="http://www.oxygenxml.com/" term="term309">
+                    </comment>
+                </db_xref>
+                <comment source="source629" accession="accession629" uri="http://www.oxygenxml.com/" term="term311">
+                    <text>text39</text>
+                    <evidence_code source="source631" accession="accession631" uri="http://www.oxygenxml.com/" term="term313">
+                    </evidence_code>
+                    <protocol_id source="source633" accession="accession633" name="name319" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source635" accession="accession635" name="name321" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source637" accession="accession637" uri="http://www.oxygenxml.com/" term="term315">
+                    </comment>
+                </comment>
+            </original_id>
+            <exon source="source639" accession="accession639" transcript_ref="transcript_ref1">
+            </exon>
+            <sequence>
+                <reference>reference0</reference>
+                <variant>variant0</variant>
+                <db_xref source="source641" accession="accession641" name="name323" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source643" accession="accession643" name="name325" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source645" accession="accession645" uri="http://www.oxygenxml.com/" term="term317">
+                    </comment>
+                </db_xref>
+                <comment source="source647" accession="accession647" uri="http://www.oxygenxml.com/" term="term319">
+                    <text>text40</text>
+                    <evidence_code source="source649" accession="accession649" uri="http://www.oxygenxml.com/" term="term321">
+                    </evidence_code>
+                    <protocol_id source="source651" accession="accession651" name="name327" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source653" accession="accession653" name="name329" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source655" accession="accession655" uri="http://www.oxygenxml.com/" term="term323">
+                    </comment>
+                </comment>
+            </sequence>
+            <genotype>
+                <call>call0</call>
+                <db_xref source="source657" accession="accession657" name="name331" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source659" accession="accession659" name="name333" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source661" accession="accession661" uri="http://www.oxygenxml.com/" term="term325">
+                    </comment>
+                </db_xref>
+                <comment source="source663" accession="accession663" uri="http://www.oxygenxml.com/" term="term327">
+                    <text>text41</text>
+                    <evidence_code source="source665" accession="accession665" uri="http://www.oxygenxml.com/" term="term329">
+                    </evidence_code>
+                    <protocol_id source="source667" accession="accession667" name="name335" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source669" accession="accession669" name="name337" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source671" accession="accession671" uri="http://www.oxygenxml.com/" term="term331">
+                    </comment>
+                </comment>
+            </genotype>
+            <consequence source="source673" accession="accession673" uri="http://www.oxygenxml.com/" term="term333">
+                <description>description20</description>
+                <evidence_code source="source675" accession="accession675" uri="http://www.oxygenxml.com/" term="term335">
+                    <description>description21</description>
+                    <db_xref source="source677" accession="accession677" name="name339" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source679" accession="accession679" uri="http://www.oxygenxml.com/" term="term337">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source681" accession="accession681" name="name341" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source683" accession="accession683" name="name343" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source685" accession="accession685" uri="http://www.oxygenxml.com/" term="term339">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source687" accession="accession687" name="name345" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source689" accession="accession689" name="name347" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source691" accession="accession691" uri="http://www.oxygenxml.com/" term="term341">
+                    </comment>
+                </db_xref>
+                <comment source="source693" accession="accession693" uri="http://www.oxygenxml.com/" term="term343">
+                    <text>text42</text>
+                    <evidence_code source="source695" accession="accession695" uri="http://www.oxygenxml.com/" term="term345">
+                    </evidence_code>
+                    <protocol_id source="source697" accession="accession697" name="name349" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source699" accession="accession699" name="name351" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source701" accession="accession701" uri="http://www.oxygenxml.com/" term="term347">
+                    </comment>
+                </comment>
+            </consequence>
+            <pathogenicity scope="individual" source="source703" accession="accession703" uri="http://www.oxygenxml.com/" term="term349">
+                <phenotype source="source733" accession="accession733" uri="http://www.oxygenxml.com/" term="term365">
+                    <inheritance_pattern source="source735" accession="accession735" uri="http://www.oxygenxml.com/" term="term367">
+                        <description>description24</description>
+                        <evidence_code source="source737" accession="accession737" uri="http://www.oxygenxml.com/" term="term369">
+                        </evidence_code>
+                        <protocol_id source="source739" accession="accession739" name="name367" uri="http://www.oxygenxml.com/">
+                        </protocol_id>
+                        <db_xref source="source741" accession="accession741" name="name369" uri="http://www.oxygenxml.com/">
+                        </db_xref>
+                        <comment source="source743" accession="accession743" uri="http://www.oxygenxml.com/" term="term371">
+                        </comment>
+                    </inheritance_pattern>
+                    <description>description25</description>
+                    <evidence_code source="source745" accession="accession745" uri="http://www.oxygenxml.com/" term="term373">
+                        <description>description26</description>
+                        <db_xref source="source747" accession="accession747" name="name371" uri="http://www.oxygenxml.com/">
+                        </db_xref>
+                        <comment source="source749" accession="accession749" uri="http://www.oxygenxml.com/" term="term375">
+                        </comment>
+                    </evidence_code>
+                    <protocol_id source="source751" accession="accession751" name="name373" uri="http://www.oxygenxml.com/">
+                        <db_xref source="source753" accession="accession753" name="name375" uri="http://www.oxygenxml.com/">
+                        </db_xref>
+                        <comment source="source755" accession="accession755" uri="http://www.oxygenxml.com/" term="term377">
+                        </comment>
+                    </protocol_id>
+                    <db_xref source="source757" accession="accession757" name="name377" uri="http://www.oxygenxml.com/">
+                        <db_xref source="source759" accession="accession759" name="name379" uri="http://www.oxygenxml.com/">
+                        </db_xref>
+                        <comment source="source761" accession="accession761" uri="http://www.oxygenxml.com/" term="term379">
+                        </comment>
+                    </db_xref>
+                    <comment source="source763" accession="accession763" uri="http://www.oxygenxml.com/" term="term381">
+                        <text>text44</text>
+                        <evidence_code source="source765" accession="accession765" uri="http://www.oxygenxml.com/" term="term383">
+                        </evidence_code>
+                        <protocol_id source="source767" accession="accession767" name="name381" uri="http://www.oxygenxml.com/">
+                        </protocol_id>
+                        <db_xref source="source769" accession="accession769" name="name383" uri="http://www.oxygenxml.com/">
+                        </db_xref>
+                        <comment source="source771" accession="accession771" uri="http://www.oxygenxml.com/" term="term385">
+                        </comment>
+                    </comment>
+                </phenotype>
+                
+                <description>description22</description>                
+                <evidence_code source="source705" accession="accession705" uri="http://www.oxygenxml.com/" term="term351">
+                    <description>description23</description>
+                    <db_xref source="source707" accession="accession707" name="name353" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source709" accession="accession709" uri="http://www.oxygenxml.com/" term="term353">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source711" accession="accession711" name="name355" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source713" accession="accession713" name="name357" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source715" accession="accession715" uri="http://www.oxygenxml.com/" term="term355">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source717" accession="accession717" name="name359" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source719" accession="accession719" name="name361" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source721" accession="accession721" uri="http://www.oxygenxml.com/" term="term357">
+                    </comment>
+                </db_xref>
+                <comment source="source723" accession="accession723" uri="http://www.oxygenxml.com/" term="term359">
+                    <text>text43</text>
+                    <evidence_code source="source725" accession="accession725" uri="http://www.oxygenxml.com/" term="term361">
+                    </evidence_code>
+                    <protocol_id source="source727" accession="accession727" name="name363" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source729" accession="accession729" name="name365" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source731" accession="accession731" uri="http://www.oxygenxml.com/" term="term363">
+                    </comment>
+                </comment>
+                
+            </pathogenicity>
+            <variant_detection template="DNA" technique="technique1">
+                <protocol_id source="source773" accession="accession773" name="name385" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source775" accession="accession775" name="name387" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source777" accession="accession777" uri="http://www.oxygenxml.com/" term="term387">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source779" accession="accession779" name="name389" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source781" accession="accession781" name="name391" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source783" accession="accession783" uri="http://www.oxygenxml.com/" term="term389">
+                    </comment>
+                </db_xref>
+                <comment source="source785" accession="accession785" uri="http://www.oxygenxml.com/" term="term391">
+                    <text>text45</text>
+                    <evidence_code source="source787" accession="accession787" uri="http://www.oxygenxml.com/" term="term393">
+                    </evidence_code>
+                    <protocol_id source="source789" accession="accession789" name="name393" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source791" accession="accession791" name="name395" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source793" accession="accession793" uri="http://www.oxygenxml.com/" term="term395">
+                    </comment>
+                </comment>
+            </variant_detection>
+            <restriction_site source="source795" accession="accession795" uri="http://www.oxygenxml.com/" term="term397">
+                <description>description27</description>
+                <db_xref source="source797" accession="accession797" name="name397" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source799" accession="accession799" name="name399" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source801" accession="accession801" uri="http://www.oxygenxml.com/" term="term399">
+                    </comment>
+                </db_xref>
+                <comment source="source803" accession="accession803" uri="http://www.oxygenxml.com/" term="term401">
+                    <text>text46</text>
+                    <evidence_code source="source805" accession="accession805" uri="http://www.oxygenxml.com/" term="term403">
+                    </evidence_code>
+                    <protocol_id source="source807" accession="accession807" name="name401" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source809" accession="accession809" name="name403" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source811" accession="accession811" uri="http://www.oxygenxml.com/" term="term405">
+                    </comment>
+                </comment>
+            </restriction_site>
+            <tissue_distribution source="source813" accession="accession813" uri="http://www.oxygenxml.com/" term="term407">
+                <description>description28</description>
+                <db_xref source="source815" accession="accession815" name="name405" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source817" accession="accession817" name="name407" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source819" accession="accession819" uri="http://www.oxygenxml.com/" term="term409">
+                    </comment>
+                </db_xref>
+                <comment source="source821" accession="accession821" uri="http://www.oxygenxml.com/" term="term411">
+                    <text>text47</text>
+                    <evidence_code source="source823" accession="accession823" uri="http://www.oxygenxml.com/" term="term413">
+                    </evidence_code>
+                    <protocol_id source="source825" accession="accession825" name="name409" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source827" accession="accession827" name="name411" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source829" accession="accession829" uri="http://www.oxygenxml.com/" term="term415">
+                    </comment>
+                </comment>
+            </tissue_distribution>
+            <genetic_origin source="source831" accession="accession831" uri="http://www.oxygenxml.com/" term="term417">
+                <source source="source833" accession="accession833" uri="http://www.oxygenxml.com/" term="term419">
+                    <population type="region" source="source835" accession="accession835" uri="http://www.oxygenxml.com/" term="term421">
+                    </population>
+                    <description>description29</description>
+                    <evidence_code source="source837" accession="accession837" uri="http://www.oxygenxml.com/" term="term423">
+                    </evidence_code>
+                    <protocol_id source="source839" accession="accession839" name="name413" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source841" accession="accession841" name="name415" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source843" accession="accession843" uri="http://www.oxygenxml.com/" term="term425">
+                    </comment>
+                </source>
+                <description>description30</description>
+                <evidence_code source="source845" accession="accession845" uri="http://www.oxygenxml.com/" term="term427">
+                    <description>description31</description>
+                    <db_xref source="source847" accession="accession847" name="name417" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source849" accession="accession849" uri="http://www.oxygenxml.com/" term="term429">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source851" accession="accession851" name="name419" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source853" accession="accession853" name="name421" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source855" accession="accession855" uri="http://www.oxygenxml.com/" term="term431">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source857" accession="accession857" name="name423" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source859" accession="accession859" name="name425" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source861" accession="accession861" uri="http://www.oxygenxml.com/" term="term433">
+                    </comment>
+                </db_xref>
+                <comment source="source863" accession="accession863" uri="http://www.oxygenxml.com/" term="term435">
+                    <text>text48</text>
+                    <evidence_code source="source865" accession="accession865" uri="http://www.oxygenxml.com/" term="term437">
+                    </evidence_code>
+                    <protocol_id source="source867" accession="accession867" name="name427" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source869" accession="accession869" name="name429" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source871" accession="accession871" uri="http://www.oxygenxml.com/" term="term439">
+                    </comment>
+                </comment>
+            </genetic_origin>
+            <frequency samples="0" type="allele">
+                <population type="region" source="source873" accession="accession873" uri="http://www.oxygenxml.com/" term="term441">
+                    <description>description32</description>
+                    <evidence_code source="source875" accession="accession875" uri="http://www.oxygenxml.com/" term="term443">
+                    </evidence_code>
+                    <protocol_id source="source877" accession="accession877" name="name431" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source879" accession="accession879" name="name433" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source881" accession="accession881" uri="http://www.oxygenxml.com/" term="term445">
+                    </comment>
+                </population>
+                <category source="source883" accession="accession883" uri="http://www.oxygenxml.com/" term="term447">
+                </category>
+                <evidence_code source="source885" accession="accession885" uri="http://www.oxygenxml.com/" term="term449">
+                    <description>description33</description>
+                    <db_xref source="source887" accession="accession887" name="name435" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source889" accession="accession889" uri="http://www.oxygenxml.com/" term="term451">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source891" accession="accession891" name="name437" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source893" accession="accession893" name="name439" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source895" accession="accession895" uri="http://www.oxygenxml.com/" term="term453">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source897" accession="accession897" name="name441" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source899" accession="accession899" name="name443" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source901" accession="accession901" uri="http://www.oxygenxml.com/" term="term455">
+                    </comment>
+                </db_xref>
+                <comment source="source903" accession="accession903" uri="http://www.oxygenxml.com/" term="term457">
+                    <text>text49</text>
+                    <evidence_code source="source905" accession="accession905" uri="http://www.oxygenxml.com/" term="term459">
+                    </evidence_code>
+                    <protocol_id source="source907" accession="accession907" name="name445" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source909" accession="accession909" name="name447" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source911" accession="accession911" uri="http://www.oxygenxml.com/" term="term461">
+                    </comment>
+                </comment>
+            </frequency>
+            <seq_changes>
+                <variant id="id9" uri="http://www.oxygenxml.com/" type="cDNA">
+                    <ref_seq source="source913" accession="accession913" name="name449" uri="http://www.oxygenxml.com/">
+                    </ref_seq>
+                    <name scheme="scheme3">
+                    </name>
+                    <variant_type source="source915" accession="accession915" uri="http://www.oxygenxml.com/" term="term463">
+                    </variant_type>
+                    <original_id source="source917" accession="accession917" name="name451" uri="http://www.oxygenxml.com/">
+                    </original_id>
+                    <sequence>
+                        <reference>reference1</reference>
+                        <variant>variant1</variant>
+                    </sequence>
+                    <genotype>
+                        <call>call1</call>
+                    </genotype>
+                    <consequence source="source919" accession="accession919" uri="http://www.oxygenxml.com/" term="term465">
+                    </consequence>
+                    <pathogenicity scope="individual" source="source921" accession="accession921" uri="http://www.oxygenxml.com/" term="term467">
+                    </pathogenicity>
+                    <phenotype source="source923" accession="accession923" uri="http://www.oxygenxml.com/" term="term469">
+                    </phenotype>
+                    <variant_detection template="DNA" technique="technique3">
+                    </variant_detection>
+                    <tissue_distribution source="source925" accession="accession925" uri="http://www.oxygenxml.com/" term="term471">
+                    </tissue_distribution>
+                    <seq_changes>
+                        <variant id="id11" uri="http://www.oxygenxml.com/" type="cDNA">
+                            <name scheme="scheme5">
+                            </name>
+                        </variant>
+                    </seq_changes>
+                    <aliases>
+                        <variant id="id13" uri="http://www.oxygenxml.com/" type="DNA" genotypic="true" subcellular_part="nucleus" copy_count="0">
+                            <ref_seq source="source927" accession="accession927" name="name453" uri="http://www.oxygenxml.com/">
+                            </ref_seq>
+                            <name scheme="scheme7">
+                            </name>
+                            <source id="id15" uri="http://www.oxygenxml.com/" version="version3" date="2006-05-04">
+                                <name>name3</name>
+                            </source>
+                        </variant>
+                    </aliases>
+                    <location>
+                        <ref_seq source="source929" accession="accession929" name="name455" uri="http://www.oxygenxml.com/">
+                        </ref_seq>
+                        <start>0</start>
+                    </location>
+                    <evidence_code source="source931" accession="accession931" uri="http://www.oxygenxml.com/" term="term473">
+                    </evidence_code>
+                    <protocol_id source="source933" accession="accession933" name="name457" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source935" accession="accession935" name="name459" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source937" accession="accession937" uri="http://www.oxygenxml.com/" term="term475">
+                    </comment>
+                </variant>
+                <evidence_code source="source939" accession="accession939" uri="http://www.oxygenxml.com/" term="term477">
+                    <description>description34</description>
+                    <db_xref source="source941" accession="accession941" name="name461" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source943" accession="accession943" uri="http://www.oxygenxml.com/" term="term479">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source945" accession="accession945" name="name463" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source947" accession="accession947" name="name465" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source949" accession="accession949" uri="http://www.oxygenxml.com/" term="term481">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source951" accession="accession951" name="name467" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source953" accession="accession953" name="name469" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source955" accession="accession955" uri="http://www.oxygenxml.com/" term="term483">
+                    </comment>
+                </db_xref>
+                <comment source="source957" accession="accession957" uri="http://www.oxygenxml.com/" term="term485">
+                    <text>text50</text>
+                    <evidence_code source="source959" accession="accession959" uri="http://www.oxygenxml.com/" term="term487">
+                    </evidence_code>
+                    <protocol_id source="source961" accession="accession961" name="name471" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source963" accession="accession963" name="name473" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source965" accession="accession965" uri="http://www.oxygenxml.com/" term="term489">
+                    </comment>
+                </comment>
+            </seq_changes>
+            <aliases>
+                <variant id="id17" uri="http://www.oxygenxml.com/" type="DNA" genotypic="true" subcellular_part="nucleus" copy_count="0">
+                    <gene source="source967" accession="accession967" name="name475" uri="http://www.oxygenxml.com/">
+                    </gene>
+                    <ref_seq source="source969" accession="accession969" name="name477" uri="http://www.oxygenxml.com/">
+                    </ref_seq>
+                    <name scheme="scheme9">
+                    </name>
+                    <variant_type source="source971" accession="accession971" uri="http://www.oxygenxml.com/" term="term491">
+                    </variant_type>
+                    <original_id source="source973" accession="accession973" name="name479" uri="http://www.oxygenxml.com/">
+                    </original_id>
+                    <exon source="source975" accession="accession975" transcript_ref="transcript_ref3">
+                    </exon>
+                    <sequence>
+                        <reference>reference2</reference>
+                        <variant>variant2</variant>
+                    </sequence>
+                    <genotype>
+                        <call>call2</call>
+                    </genotype>
+                    <consequence source="source977" accession="accession977" uri="http://www.oxygenxml.com/" term="term493">
+                    </consequence>
+                    <pathogenicity scope="individual" source="source979" accession="accession979" uri="http://www.oxygenxml.com/" term="term495">
+                        <phenotype source="source981" accession="accession981" uri="http://www.oxygenxml.com/" term="term497">
+                        </phenotype>                        
+                    </pathogenicity>
+                    <variant_detection template="DNA" technique="technique5">
+                    </variant_detection>
+                    <restriction_site source="source983" accession="accession983" uri="http://www.oxygenxml.com/" term="term499">
+                    </restriction_site>
+                    <tissue_distribution source="source985" accession="accession985" uri="http://www.oxygenxml.com/" term="term501">
+                    </tissue_distribution>
+                    <genetic_origin source="source987" accession="accession987" uri="http://www.oxygenxml.com/" term="term503">
+                        <source source="source989" accession="accession989" uri="http://www.oxygenxml.com/" term="term505">
+                        </source>
+                    </genetic_origin>
+                    <frequency samples="0" type="allele">
+                        <counts>0</counts>
+                    </frequency>
+                    <seq_changes>
+                        <variant id="id19" uri="http://www.oxygenxml.com/" type="cDNA">
+                            <name scheme="scheme11">
+                            </name>
+                        </variant>
+                    </seq_changes>
+                    <aliases>
+                        <variant id="id21" uri="http://www.oxygenxml.com/" type="DNA" genotypic="true" subcellular_part="nucleus" copy_count="0">
+                            <ref_seq accession="ss"></ref_seq>
+                            <name>sss</name>
+                        </variant>
+                    </aliases>
+                    
+                    <source id="id23" uri="http://www.oxygenxml.com/" version="version5" date="2006-05-04">
+                        <name>name4</name>
+                    </source>
+                     
+                    <location>
+                        <ref_seq source="source991" accession="accession991" name="name481" uri="http://www.oxygenxml.com/">
+                        </ref_seq>
+                        <start>0</start>
+                    </location>
+                   
+                    <sharing_policy type="closedAccess">
+                    </sharing_policy>
+                    <creation_date>2006</creation_date>
+                    <modification_date>2006</modification_date>
+                    <evidence_code source="source993" accession="accession993" uri="http://www.oxygenxml.com/" term="term507">
+                    </evidence_code>
+                    <protocol_id source="source995" accession="accession995" name="name483" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source997" accession="accession997" name="name485" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source999" accession="accession999" uri="http://www.oxygenxml.com/" term="term509">
+                    </comment>
+                </variant>
+                <evidence_code source="source1001" accession="accession1001" uri="http://www.oxygenxml.com/" term="term511">
+                    <description>description35</description>
+                    <db_xref source="source1003" accession="accession1003" name="name487" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1005" accession="accession1005" uri="http://www.oxygenxml.com/" term="term513">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source1007" accession="accession1007" name="name489" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1009" accession="accession1009" name="name491" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1011" accession="accession1011" uri="http://www.oxygenxml.com/" term="term515">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source1013" accession="accession1013" name="name493" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1015" accession="accession1015" name="name495" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1017" accession="accession1017" uri="http://www.oxygenxml.com/" term="term517">
+                    </comment>
+                </db_xref>
+                <comment source="source1019" accession="accession1019" uri="http://www.oxygenxml.com/" term="term519">
+                    <text>text51</text>
+                    <evidence_code source="source1021" accession="accession1021" uri="http://www.oxygenxml.com/" term="term521">
+                    </evidence_code>
+                    <protocol_id source="source1023" accession="accession1023" name="name497" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1025" accession="accession1025" name="name499" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1027" accession="accession1027" uri="http://www.oxygenxml.com/" term="term523">
+                    </comment>
+                </comment>
+            </aliases>
+            <source id="id27" uri="http://www.oxygenxml.com/" version="version7" date="2006-05-04">
+                <name>name5</name>
+                <url>url2</url>
+                <contact>
+                    <name>name6</name>
+                    <url>url3</url>
+                    <address>address1</address>
+                    <phone>phone1</phone>
+                    <fax>fax1</fax>
+                    <email>email1</email>
+                    <db_xref source="source1029" accession="accession1029" name="name501" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1031" accession="accession1031" uri="http://www.oxygenxml.com/" term="term525">
+                    </comment>
+                </contact>
+                <acknowledgement>
+                    <name>name7</name>
+                    <grant_number source="source1033" accession="accession1033" name="name503" uri="http://www.oxygenxml.com/">
+                    </grant_number>
+                    <db_xref source="source1035" accession="accession1035" name="name505" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1037" accession="accession1037" uri="http://www.oxygenxml.com/" term="term527">
+                    </comment>
+                </acknowledgement>
+                <db_xref source="source1039" accession="accession1039" name="name507" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1041" accession="accession1041" name="name509" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1043" accession="accession1043" uri="http://www.oxygenxml.com/" term="term529">
+                    </comment>
+                </db_xref>
+                <comment source="source1045" accession="accession1045" uri="http://www.oxygenxml.com/" term="term531">
+                    <text>text52</text>
+                    <evidence_code source="source1047" accession="accession1047" uri="http://www.oxygenxml.com/" term="term533">
+                    </evidence_code>
+                    <protocol_id source="source1049" accession="accession1049" name="name511" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1051" accession="accession1051" name="name513" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1053" accession="accession1053" uri="http://www.oxygenxml.com/" term="term535">
+                    </comment>
+                </comment>
+            </source>
+            <location>
+                <ref_seq source="source1071" accession="accession1071" name="name523" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1073" accession="accession1073" name="name525" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1075" accession="accession1075" uri="http://www.oxygenxml.com/" term="term545">
+                    </comment>
+                </ref_seq>
+                <chr>chr0</chr>
+                <start>0</start>
+                <end>0</end>
+            </location>
+            <sharing_policy type="closedAccess">
+                <embargo_end_date is_undefined="true">2006-05-04</embargo_end_date>
+                <use_permission source="source1077" accession="accession1077" uri="http://www.oxygenxml.com/" term="term547">
+                    <description>description36</description>
+                    <db_xref source="source1079" accession="accession1079" name="name527" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1081" accession="accession1081" uri="http://www.oxygenxml.com/" term="term549">
+                    </comment>
+                </use_permission>
+                <db_xref source="source1083" accession="accession1083" name="name529" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1085" accession="accession1085" name="name531" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1087" accession="accession1087" uri="http://www.oxygenxml.com/" term="term551">
+                    </comment>
+                </db_xref>
+                <comment source="source1089" accession="accession1089" uri="http://www.oxygenxml.com/" term="term553">
+                    <text>text54</text>
+                    <evidence_code source="source1091" accession="accession1091" uri="http://www.oxygenxml.com/" term="term555">
+                    </evidence_code>
+                    <protocol_id source="source1093" accession="accession1093" name="name533" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1095" accession="accession1095" name="name535" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1097" accession="accession1097" uri="http://www.oxygenxml.com/" term="term557">
+                    </comment>
+                </comment>
+            </sharing_policy>
+            <creation_date>2006</creation_date>
+            <modification_date>2006</modification_date>
+            <evidence_code source="source1099" accession="accession1099" uri="http://www.oxygenxml.com/" term="term559">
+                <description>description37</description>
+                <db_xref source="source1101" accession="accession1101" name="name537" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1103" accession="accession1103" name="name539" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1105" accession="accession1105" uri="http://www.oxygenxml.com/" term="term561">
+                    </comment>
+                </db_xref>
+                <comment source="source1107" accession="accession1107" uri="http://www.oxygenxml.com/" term="term563">
+                    <text>text55</text>
+                    <evidence_code source="source1109" accession="accession1109" uri="http://www.oxygenxml.com/" term="term565">
+                    </evidence_code>
+                    <protocol_id source="source1111" accession="accession1111" name="name541" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1113" accession="accession1113" name="name543" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1115" accession="accession1115" uri="http://www.oxygenxml.com/" term="term567">
+                    </comment>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source1117" accession="accession1117" name="name545" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1119" accession="accession1119" name="name547" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1121" accession="accession1121" name="name549" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1123" accession="accession1123" uri="http://www.oxygenxml.com/" term="term569">
+                    </comment>
+                </db_xref>
+                <comment source="source1125" accession="accession1125" uri="http://www.oxygenxml.com/" term="term571">
+                    <text>text56</text>
+                    <evidence_code source="source1127" accession="accession1127" uri="http://www.oxygenxml.com/" term="term573">
+                    </evidence_code>
+                    <protocol_id source="source1129" accession="accession1129" name="name551" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1131" accession="accession1131" name="name553" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1133" accession="accession1133" uri="http://www.oxygenxml.com/" term="term575">
+                    </comment>
+                </comment>
+            </protocol_id>
+            <db_xref source="source1135" accession="accession1135" name="name555" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1137" accession="accession1137" name="name557" uri="http://www.oxygenxml.com/">
+                    <comment source="source1139" accession="accession1139" uri="http://www.oxygenxml.com/" term="term577">
+                    </comment>
+                </db_xref>
+                <comment source="source1141" accession="accession1141" uri="http://www.oxygenxml.com/" term="term579">
+                    <text>text57</text>
+                    <evidence_code source="source1143" accession="accession1143" uri="http://www.oxygenxml.com/" term="term581">
+                    </evidence_code>
+                    <protocol_id source="source1145" accession="accession1145" name="name559" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1147" accession="accession1147" name="name561" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1149" accession="accession1149" uri="http://www.oxygenxml.com/" term="term583">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source1151" accession="accession1151" uri="http://www.oxygenxml.com/" term="term585">
+                <text>text58</text>
+                <evidence_code source="source1153" accession="accession1153" uri="http://www.oxygenxml.com/" term="term587">
+                    <description>description38</description>
+                    <db_xref source="source1155" accession="accession1155" name="name563" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1157" accession="accession1157" uri="http://www.oxygenxml.com/" term="term589">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source1159" accession="accession1159" name="name565" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1161" accession="accession1161" name="name567" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1163" accession="accession1163" uri="http://www.oxygenxml.com/" term="term591">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source1165" accession="accession1165" name="name569" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1167" accession="accession1167" name="name571" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1169" accession="accession1169" uri="http://www.oxygenxml.com/" term="term593">
+                    </comment>
+                </db_xref>
+                <comment source="source1171" accession="accession1171" uri="http://www.oxygenxml.com/" term="term595">
+                    <text>text59</text>
+                    <evidence_code source="source1173" accession="accession1173" uri="http://www.oxygenxml.com/" term="term597">
+                    </evidence_code>
+                    <protocol_id source="source1175" accession="accession1175" name="name573" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1177" accession="accession1177" name="name575" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </variant>
+        <source id="id31" uri="http://www.oxygenxml.com/" version="version9" date="2006-05-04">
+            <name>name8</name>
+            <url>url4</url>
+            <contact>
+                <name>name9</name>
+                <url>url5</url>
+                <address>address2</address>
+                <phone>phone2</phone>
+                <fax>fax2</fax>
+                <email>email2</email>
+                <db_xref source="source1179" accession="accession1179" name="name577" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1181" accession="accession1181" name="name579" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1183" accession="accession1183" uri="http://www.oxygenxml.com/" term="term599">
+                    </comment>
+                </db_xref>
+                <comment source="source1185" accession="accession1185" uri="http://www.oxygenxml.com/" term="term601">
+                    <text>text60</text>
+                    <evidence_code source="source1187" accession="accession1187" uri="http://www.oxygenxml.com/" term="term603">
+                    </evidence_code>
+                    <protocol_id source="source1189" accession="accession1189" name="name581" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1191" accession="accession1191" name="name583" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1193" accession="accession1193" uri="http://www.oxygenxml.com/" term="term605">
+                    </comment>
+                </comment>
+            </contact>
+            <acknowledgement>
+                <name>name10</name>
+                <grant_number source="source1195" accession="accession1195" name="name585" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1197" accession="accession1197" name="name587" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1199" accession="accession1199" uri="http://www.oxygenxml.com/" term="term607">
+                    </comment>
+                </grant_number>
+                <db_xref source="source1201" accession="accession1201" name="name589" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1203" accession="accession1203" name="name591" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1205" accession="accession1205" uri="http://www.oxygenxml.com/" term="term609">
+                    </comment>
+                </db_xref>
+                <comment source="source1207" accession="accession1207" uri="http://www.oxygenxml.com/" term="term611">
+                    <text>text61</text>
+                    <evidence_code source="source1209" accession="accession1209" uri="http://www.oxygenxml.com/" term="term613">
+                    </evidence_code>
+                    <protocol_id source="source1211" accession="accession1211" name="name593" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1213" accession="accession1213" name="name595" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1215" accession="accession1215" uri="http://www.oxygenxml.com/" term="term615">
+                    </comment>
+                </comment>
+            </acknowledgement>
+            <db_xref source="source1217" accession="accession1217" name="name597" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1219" accession="accession1219" name="name599" uri="http://www.oxygenxml.com/">
+                    <comment source="source1221" accession="accession1221" uri="http://www.oxygenxml.com/" term="term617">
+                    </comment>
+                </db_xref>
+                <comment source="source1223" accession="accession1223" uri="http://www.oxygenxml.com/" term="term619">
+                    <text>text62</text>
+                    <evidence_code source="source1225" accession="accession1225" uri="http://www.oxygenxml.com/" term="term621">
+                    </evidence_code>
+                    <protocol_id source="source1227" accession="accession1227" name="name601" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1229" accession="accession1229" name="name603" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1231" accession="accession1231" uri="http://www.oxygenxml.com/" term="term623">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source1233" accession="accession1233" uri="http://www.oxygenxml.com/" term="term625">
+                <text>text63</text>
+                <evidence_code source="source1235" accession="accession1235" uri="http://www.oxygenxml.com/" term="term627">
+                    <description>description39</description>
+                    <db_xref source="source1237" accession="accession1237" name="name605" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1239" accession="accession1239" uri="http://www.oxygenxml.com/" term="term629">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source1241" accession="accession1241" name="name607" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1243" accession="accession1243" name="name609" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1245" accession="accession1245" uri="http://www.oxygenxml.com/" term="term631">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source1247" accession="accession1247" name="name611" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1249" accession="accession1249" name="name613" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1251" accession="accession1251" uri="http://www.oxygenxml.com/" term="term633">
+                    </comment>
+                </db_xref>
+                <comment source="source1253" accession="accession1253" uri="http://www.oxygenxml.com/" term="term635">
+                    <text>text64</text>
+                    <evidence_code source="source1255" accession="accession1255" uri="http://www.oxygenxml.com/" term="term637">
+                    </evidence_code>
+                    <protocol_id source="source1257" accession="accession1257" name="name615" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1259" accession="accession1259" name="name617" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </source>
+        <db_xref source="source1261" accession="accession1261" name="name619" uri="http://www.oxygenxml.com/">
+            <db_xref source="source1263" accession="accession1263" name="name621" uri="http://www.oxygenxml.com/">
+                <comment source="source1265" accession="accession1265" uri="http://www.oxygenxml.com/" term="term639">
+                    <text>text65</text>
+                    <evidence_code source="source1267" accession="accession1267" uri="http://www.oxygenxml.com/" term="term641">
+                    </evidence_code>
+                    <protocol_id source="source1269" accession="accession1269" name="name623" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <comment source="source1271" accession="accession1271" uri="http://www.oxygenxml.com/" term="term643">
+                    </comment>
+                </comment>
+            </db_xref>
+            <comment source="source1273" accession="accession1273" uri="http://www.oxygenxml.com/" term="term645">
+                <text>text66</text>
+                <evidence_code source="source1275" accession="accession1275" uri="http://www.oxygenxml.com/" term="term647">
+                    <description>description40</description>
+                    <db_xref source="source1277" accession="accession1277" name="name625" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1279" accession="accession1279" uri="http://www.oxygenxml.com/" term="term649">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source1281" accession="accession1281" name="name627" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1283" accession="accession1283" name="name629" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1285" accession="accession1285" uri="http://www.oxygenxml.com/" term="term651">
+                    </comment>
+                </protocol_id>
+                <db_xref source="source1287" accession="accession1287" name="name631" uri="http://www.oxygenxml.com/">
+                    <comment source="source1289" accession="accession1289" uri="http://www.oxygenxml.com/" term="term653">
+                    </comment>
+                </db_xref>
+                <comment source="source1291" accession="accession1291" uri="http://www.oxygenxml.com/" term="term655">
+                    <text>text67</text>
+                    <evidence_code source="source1293" accession="accession1293" uri="http://www.oxygenxml.com/" term="term657">
+                    </evidence_code>
+                    <protocol_id source="source1295" accession="accession1295" name="name633" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1297" accession="accession1297" name="name635" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </comment>
+        </db_xref>
+        <comment source="source1299" accession="accession1299" uri="http://www.oxygenxml.com/" term="term659">
+            <text>text68</text>
+            <evidence_code source="source1301" accession="accession1301" uri="http://www.oxygenxml.com/" term="term661">
+                <description>description41</description>
+                <db_xref source="source1303" accession="accession1303" name="name637" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1305" accession="accession1305" name="name639" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1307" accession="accession1307" uri="http://www.oxygenxml.com/" term="term663">
+                    </comment>
+                </db_xref>
+                <comment source="source1309" accession="accession1309" uri="http://www.oxygenxml.com/" term="term665">
+                    <text>text69</text>
+                    <evidence_code source="source1311" accession="accession1311" uri="http://www.oxygenxml.com/" term="term667">
+                    </evidence_code>
+                    <protocol_id source="source1313" accession="accession1313" name="name641" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1315" accession="accession1315" name="name643" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source1317" accession="accession1317" name="name645" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1319" accession="accession1319" name="name647" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1321" accession="accession1321" name="name649" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                    <comment source="source1323" accession="accession1323" uri="http://www.oxygenxml.com/" term="term669">
+                    </comment>
+                </db_xref>
+                <comment source="source1325" accession="accession1325" uri="http://www.oxygenxml.com/" term="term671">
+                    <text>text70</text>
+                    <evidence_code source="source1327" accession="accession1327" uri="http://www.oxygenxml.com/" term="term673">
+                    </evidence_code>
+                    <protocol_id source="source1329" accession="accession1329" name="name651" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1331" accession="accession1331" name="name653" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </protocol_id>
+            <db_xref source="source1333" accession="accession1333" name="name655" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1335" accession="accession1335" name="name657" uri="http://www.oxygenxml.com/">
+                    <comment source="source1337" accession="accession1337" uri="http://www.oxygenxml.com/" term="term675">
+                    </comment>
+                </db_xref>
+                <comment source="source1339" accession="accession1339" uri="http://www.oxygenxml.com/" term="term677">
+                    <text>text71</text>
+                    <evidence_code source="source1341" accession="accession1341" uri="http://www.oxygenxml.com/" term="term679">
+                    </evidence_code>
+                    <protocol_id source="source1343" accession="accession1343" name="name659" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1345" accession="accession1345" name="name661" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </db_xref>
+            <comment source="source1347" accession="accession1347" uri="http://www.oxygenxml.com/" term="term681">
+                <text>text72</text>
+                <evidence_code source="source1349" accession="accession1349" uri="http://www.oxygenxml.com/" term="term683">
+                    <description>description42</description>
+                    <db_xref source="source1351" accession="accession1351" name="name663" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source1353" accession="accession1353" name="name665" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1355" accession="accession1355" name="name667" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source1357" accession="accession1357" name="name669" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1359" accession="accession1359" name="name671" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </comment>
+        </comment>
+        <creation_date>2006</creation_date>
+        <modification_date>2006</modification_date>
+    </individual>
+    <db_xref source="source1361" accession="accession1361" name="name673" uri="http://www.oxygenxml.com/">
+        <db_xref source="source1363" accession="accession1363" name="name675" uri="http://www.oxygenxml.com/">
+            <comment source="source1365" accession="accession1365" uri="http://www.oxygenxml.com/" term="term685">
+                <text>text73</text>
+                <evidence_code source="source1367" accession="accession1367" uri="http://www.oxygenxml.com/" term="term687">
+                    <description>description43</description>
+                    <comment source="source1369" accession="accession1369" uri="http://www.oxygenxml.com/" term="term689">
+                    </comment>
+                </evidence_code>
+                <protocol_id source="source1371" accession="accession1371" name="name677" uri="http://www.oxygenxml.com/">
+                    <comment source="source1373" accession="accession1373" uri="http://www.oxygenxml.com/" term="term691">
+                    </comment>
+                </protocol_id>
+                <comment source="source1375" accession="accession1375" uri="http://www.oxygenxml.com/" term="term693">
+                    <text>text74</text>
+                    <evidence_code source="source1377" accession="accession1377" uri="http://www.oxygenxml.com/" term="term695">
+                    </evidence_code>
+                    <protocol_id source="source1379" accession="accession1379" name="name679" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                </comment>
+            </comment>
+        </db_xref>
+        <comment source="source1381" accession="accession1381" uri="http://www.oxygenxml.com/" term="term697">
+            <text>text75</text>
+            <evidence_code source="source1383" accession="accession1383" uri="http://www.oxygenxml.com/" term="term699">
+                <description>description44</description>
+                <db_xref source="source1385" accession="accession1385" name="name681" uri="http://www.oxygenxml.com/">
+                    <comment source="source1387" accession="accession1387" uri="http://www.oxygenxml.com/" term="term701">
+                    </comment>
+                </db_xref>
+                <comment source="source1389" accession="accession1389" uri="http://www.oxygenxml.com/" term="term703">
+                    <text>text76</text>
+                    <evidence_code source="source1391" accession="accession1391" uri="http://www.oxygenxml.com/" term="term705">
+                    </evidence_code>
+                    <protocol_id source="source1393" accession="accession1393" name="name683" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1395" accession="accession1395" name="name685" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </evidence_code>
+            <protocol_id source="source1397" accession="accession1397" name="name687" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1399" accession="accession1399" name="name689" uri="http://www.oxygenxml.com/">
+                    <comment source="source1401" accession="accession1401" uri="http://www.oxygenxml.com/" term="term707">
+                    </comment>
+                </db_xref>
+                <comment source="source1403" accession="accession1403" uri="http://www.oxygenxml.com/" term="term709">
+                    <text>text77</text>
+                    <evidence_code source="source1405" accession="accession1405" uri="http://www.oxygenxml.com/" term="term711">
+                    </evidence_code>
+                    <protocol_id source="source1407" accession="accession1407" name="name691" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1409" accession="accession1409" name="name693" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </protocol_id>
+            <db_xref source="source1411" accession="accession1411" name="name695" uri="http://www.oxygenxml.com/">
+                <comment source="source1413" accession="accession1413" uri="http://www.oxygenxml.com/" term="term713">
+                    <text>text78</text>
+                    <evidence_code source="source1415" accession="accession1415" uri="http://www.oxygenxml.com/" term="term715">
+                    </evidence_code>
+                    <protocol_id source="source1417" accession="accession1417" name="name697" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                </comment>
+            </db_xref>
+            <comment source="source1419" accession="accession1419" uri="http://www.oxygenxml.com/" term="term717">
+                <text>text79</text>
+                <evidence_code source="source1421" accession="accession1421" uri="http://www.oxygenxml.com/" term="term719">
+                    <description>description45</description>
+                    <db_xref source="source1423" accession="accession1423" name="name699" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source1425" accession="accession1425" name="name701" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1427" accession="accession1427" name="name703" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source1429" accession="accession1429" name="name705" uri="http://www.oxygenxml.com/">
+                </db_xref>
+            </comment>
+        </comment>
+    </db_xref>
+    <comment source="source1431" accession="accession1431" uri="http://www.oxygenxml.com/" term="term721">
+        <text>text80</text>
+        <evidence_code source="source1433" accession="accession1433" uri="http://www.oxygenxml.com/" term="term723">
+            <description>description46</description>
+            <db_xref source="source1435" accession="accession1435" name="name707" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1437" accession="accession1437" name="name709" uri="http://www.oxygenxml.com/">
+                    <comment source="source1439" accession="accession1439" uri="http://www.oxygenxml.com/" term="term725">
+                    </comment>
+                </db_xref>
+                <comment source="source1441" accession="accession1441" uri="http://www.oxygenxml.com/" term="term727">
+                    <text>text81</text>
+                    <evidence_code source="source1443" accession="accession1443" uri="http://www.oxygenxml.com/" term="term729">
+                    </evidence_code>
+                    <protocol_id source="source1445" accession="accession1445" name="name711" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1447" accession="accession1447" name="name713" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </db_xref>
+            <comment source="source1449" accession="accession1449" uri="http://www.oxygenxml.com/" term="term731">
+                <text>text82</text>
+                <evidence_code source="source1451" accession="accession1451" uri="http://www.oxygenxml.com/" term="term733">
+                    <description>description47</description>
+                    <db_xref source="source1453" accession="accession1453" name="name715" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source1455" accession="accession1455" name="name717" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1457" accession="accession1457" name="name719" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source1459" accession="accession1459" name="name721" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1461" accession="accession1461" name="name723" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </comment>
+        </evidence_code>
+        <protocol_id source="source1463" accession="accession1463" name="name725" uri="http://www.oxygenxml.com/">
+            <db_xref source="source1465" accession="accession1465" name="name727" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1467" accession="accession1467" name="name729" uri="http://www.oxygenxml.com/">
+                    <comment source="source1469" accession="accession1469" uri="http://www.oxygenxml.com/" term="term735">
+                    </comment>
+                </db_xref>
+                <comment source="source1471" accession="accession1471" uri="http://www.oxygenxml.com/" term="term737">
+                    <text>text83</text>
+                    <evidence_code source="source1473" accession="accession1473" uri="http://www.oxygenxml.com/" term="term739">
+                    </evidence_code>
+                    <protocol_id source="source1475" accession="accession1475" name="name731" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                    <db_xref source="source1477" accession="accession1477" name="name733" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </comment>
+            </db_xref>
+            <comment source="source1479" accession="accession1479" uri="http://www.oxygenxml.com/" term="term741">
+                <text>text84</text>
+                <evidence_code source="source1481" accession="accession1481" uri="http://www.oxygenxml.com/" term="term743">
+                    <description>description48</description>
+                    <db_xref source="source1483" accession="accession1483" name="name735" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source1485" accession="accession1485" name="name737" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1487" accession="accession1487" name="name739" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source1489" accession="accession1489" name="name741" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1491" accession="accession1491" name="name743" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </comment>
+        </protocol_id>
+        <db_xref source="source1493" accession="accession1493" name="name745" uri="http://www.oxygenxml.com/">
+            <db_xref source="source1495" accession="accession1495" name="name747" uri="http://www.oxygenxml.com/">
+                <comment source="source1497" accession="accession1497" uri="http://www.oxygenxml.com/" term="term745">
+                    <text>text85</text>
+                    <evidence_code source="source1499" accession="accession1499" uri="http://www.oxygenxml.com/" term="term747">
+                    </evidence_code>
+                    <protocol_id source="source1501" accession="accession1501" name="name749" uri="http://www.oxygenxml.com/">
+                    </protocol_id>
+                </comment>
+            </db_xref>
+            <comment source="source1503" accession="accession1503" uri="http://www.oxygenxml.com/" term="term749">
+                <text>text86</text>
+                <evidence_code source="source1505" accession="accession1505" uri="http://www.oxygenxml.com/" term="term751">
+                    <description>description49</description>
+                    <db_xref source="source1507" accession="accession1507" name="name751" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </evidence_code>
+                <protocol_id source="source1509" accession="accession1509" name="name753" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1511" accession="accession1511" name="name755" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </protocol_id>
+                <db_xref source="source1513" accession="accession1513" name="name757" uri="http://www.oxygenxml.com/">
+                </db_xref>
+            </comment>
+        </db_xref>
+        <comment source="source1515" accession="accession1515" uri="http://www.oxygenxml.com/" term="term753">
+            <text>text87</text>
+            <evidence_code source="source1517" accession="accession1517" uri="http://www.oxygenxml.com/" term="term755">
+                <description>description50</description>
+                <db_xref source="source1519" accession="accession1519" name="name759" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1521" accession="accession1521" name="name761" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </evidence_code>
+            <protocol_id source="source1523" accession="accession1523" name="name763" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1525" accession="accession1525" name="name765" uri="http://www.oxygenxml.com/">
+                    <db_xref source="source1527" accession="accession1527" name="name767" uri="http://www.oxygenxml.com/">
+                    </db_xref>
+                </db_xref>
+            </protocol_id>
+            <db_xref source="source1529" accession="accession1529" name="name769" uri="http://www.oxygenxml.com/">
+                <db_xref source="source1531" accession="accession1531" name="name771" uri="http://www.oxygenxml.com/">
+                </db_xref>
+            </db_xref>
+        </comment>
+    </comment>
+</lsdb>
