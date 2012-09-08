@@ -1,0 +1,3 @@
+
+Actual genotype call e.g. A/T
+
