@@ -1,0 +1,14 @@
+body{padding:2%;font:14px/18px Verdana,Ariel sans-serif}
+ul#val_rpt{list-style:square;}
+h1 {font:bold 150% Georgia, Times, serif;color:#666;}
+h2 {font:bold 120% Georgia, Times, serif;color:#666;}
+ 
+#nav li{display:inline;padding:5px;}
+#nav li a{border-bottom:3px solid #eee;text-decoration:none;color:#b00;}
+
+li.success{padding:5px;color:#666;}
+li.failure{padding:5px;color:Red; font:bold}
+
+.term {
+font:bold 120% Lucida Sans, Arial, Monaco, sans-serif;color:#b00;
+}

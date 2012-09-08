@@ -3,13 +3,13 @@
     xmlns="http://purl.oclc.org/dsdl/schematron"  
     xmlns:iso="http://purl.oclc.org/dsdl/schematron" 
     xmlns:vml="http://varioml.org/xml/1.0"
-    queryBinding='xslt2'
+    queryBinding='xslt1'
     schemaVersion='ISO19757-3'>                  
-    <iso:title>ISO schematron validation rules for the Cafe Variome data submissions</iso:title>
+    <iso:title>ISO schematron validation rules for Cafe Variome data submissions</iso:title>
     <iso:ns prefix='vml' uri='http://varioml.org/xml/1.0'/> 
     
     <!-- Cafe Variome constraints  -->            
-    <iso:let name="V2" value="number(//vml:cafe_variome/@schema_version) ge 2.0" />
+    <iso:let name="V2" value="number(//vml:cafe_variome/@schema_version)" />
     
     <iso:pattern id="cafe_variome.submission.checks">
         
@@ -34,10 +34,10 @@
         </iso:rule>
 
         <iso:rule context="vml:cafe_variome/vml:source/vml:comment">   
-            <iso:assert test="not(@term='wasDerivedFrom') or @source='opmv'" >'wasDefinedFrom' cannot exist without 'opmv' name space (source)</iso:assert> 
+            <iso:assert test="not(@term='wasDerivedFrom') or @source='opmv'" >'wasDerivedFrom' cannot exist without 'opmv' name space (source)</iso:assert> 
             <iso:assert test="not(@source='opmv') or @term='wasDerivedFrom'" >opmv (open provenance mode) must have at least one predicate defined (e.g. 'wasDerivedFrom')</iso:assert>  
-            <iso:assert test="not(@source='opmv' and @term='wasDerivedFrom') or not(@uri) or @uri='http://purl.org/net/opmv/ns#wasDerivedFrom'" >URI of wasDerivedFrom predicate was wrong</iso:assert>  
-            <iso:assert test="not(@source='opmv') or vml:db_xref">Database xref is misisng in provenace content (source/comment/@source='opmv') element)</iso:assert>
+            <iso:assert test="not(@source='opmv' and @term='wasDerivedFrom') or not(@uri) or @uri='http://purl.org/net/opmv/ns#wasDerivedFrom'" >URI of wasDerivedFrom predicate incorrect or not found</iso:assert>  
+            <iso:assert test="not(@source='opmv') or vml:db_xref">Database xref is missing in provenance content (source/comment/@source='opmv') element)</iso:assert>
             
             <iso:assert test="not(@term='disclaimer') or @source='g2p'" >'disclaimer cannot exist without 'g2p' name space (source)</iso:assert>             
             <iso:assert test="not(@term='disclaimer') or vml:text" >'disclaimer cannot exist without text element </iso:assert> 
@@ -59,8 +59,9 @@
                 test="vml:name">Name is missing</iso:assert> 
             <iso:assert 
                 test="vml:sharing_policy">Sharing policy of variant is missing</iso:assert> 
-            
-            <iso:assert test="not($V2) or vml:panel">Panel is missing. Need to identify observation target (individual or panel)</iso:assert>
+
+            <!--iso:assert test="not($V2) or vml:panel"-->         
+            <iso:assert test="vml:panel">Panel is missing. Need to identify observation target (individual or panel)</iso:assert>
         </iso:rule>
 
         <iso:rule context="vml:seq_changes/vml:variant">
@@ -70,23 +71,23 @@
             
             <iso:assert 
                 test="vml:name">Name is missing</iso:assert> 
-                       
+
         </iso:rule>
- 
-        <iso:rule context="vml:aliases/vml:variant">
-            <!-- legacy variants. Only name is needed -->            
-            <iso:assert 
-                test="vml:name">Name is missing</iso:assert> 
-            
-        </iso:rule>
-        
+
         <iso:rule context="vml:variant/vml:name">
             <iso:assert test="not(@scheme) or upper-case(@scheme)='HGVS'">HGVS naming scheme should be used. Found: <iso:value-of select="@scheme"/> </iso:assert>
             <!-- Should use HGVS names only...
             <iso:assert test="starts-with(normalize-space(text()),'g.') or starts-with(normalize-space(text()),'c.') or starts-with(normalize-space(text()),'p.') or starts-with(normalize-space(text()),'r.')"></iso:assert>
             -->
         </iso:rule>
-  
+   
+        <iso:rule context="vml:aliases/vml:variant">
+            <!-- legacy variants. Only name is needed -->            
+            <iso:assert 
+                test="vml:name">Name is missing</iso:assert> 
+            
+        </iso:rule>
+
         <iso:rule context="vml:location">
             <iso:assert test="vml:ref_seq">Location must have reference sequence</iso:assert>
             <iso:assert test="not(vml:chr)">Location entry should not have chromosome. Chromosome reference sequence should be used insead</iso:assert>

@@ -330,7 +330,7 @@
     </element>
   </define>
   <define name="VmlRoleType">
-    <a:documentation>[% INSERT subject_type.txt %]</a:documentation>
+    <a:documentation>[% INSERT role.txt %]</a:documentation>
     <ref name="VmlOntologyTerm"/>
   </define>
   <!--

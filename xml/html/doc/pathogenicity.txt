@@ -39,6 +39,4 @@ Class 4 - Certainly pathogenic
 
 *Note [1]: implementation of fixed vocabulary for this element is still pending.* See: [lsdb-controlled-vocabulary-terms](http://www.gen2phen.org/wiki/lsdb-controlled-vocabulary-terms")
 
-*Note [2]: The following controlled terms have been deprecated:
-
-Textual values will likely be changing to "Affects function" to cover non disease implications like Eye color. 
+*Note [2]: Textual values will likely be changing to "Affects function" to cover non-disease implications such as *Eye color*. 
