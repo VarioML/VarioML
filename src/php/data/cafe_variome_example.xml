@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
-<?xml-model href="../cafe_variome_validator.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <cafe_variome xmlns="http://varioml.org/xml/1.0">    
     <source id="leicester_lab">
         <name>leicester_lab</name>
@@ -36,9 +34,22 @@
             <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/"
                 term="Creative commons"/>
         </sharing_policy>
+        <db_xref source="xxxx" accession="xxxx"/>
         <comment>
             <text>Variant inherited from affected father</text>
         </comment>
+    </variant>
+    <variant type="cDNA">
+        <gene source="hgnc.symbol" accession="COL1A1 2 "/>
+        <ref_seq source="refseq" accession="NG_007400.1 2"/>
+        <name scheme="HGVS">c.579delT 2</name>
+        <db_xref source="yyy" accession="yyy"/>
+    </variant>
+    <variant type="cDNA">
+        <gene source="hgnc.symbol" accession="COL1A1 3 "/>
+        <ref_seq source="refseq" accession="NG_007400.1 3k"/>
+        <name scheme="HGVS">c.579delT 3</name>
+        <db_xref source="zzz" accession="zzz"/>
     </variant>
 
 </cafe_variome>

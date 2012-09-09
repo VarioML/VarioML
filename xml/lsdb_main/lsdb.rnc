@@ -1176,7 +1176,7 @@ VmlNameStr = xsd:string
 VmlDbXRef =   
       attribute source { text }? 
     , attribute accession { text}?
-    , attribute name { text}?
+    , attribute name { text}? # display name
     , attribute uri { VmlUri }? 
     , VmlAnnotatable
     
