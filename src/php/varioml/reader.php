@@ -171,7 +171,15 @@ abstract class Observable extends Referenceable {
 }
 
 class EvidenceCode extends Referenceable {
-
+    public $term;
+    public $string ; //we call text nodes as strings to maintain compatibility with the Java API
+    public function populateFromAttribs($node) {
+        $this->term = $node->getAttribute("term");
+        $this->string = $node->readString(); // only one text node
+    }
+    protected function populateFromElements($node) {
+        //no sub-elements (only text node)
+    }
 }
 
 class ProtocolId extends Referenceable {
@@ -196,6 +204,7 @@ class Text extends XOBJ {
     }
 
 }
+
 class Comment extends Observable {
     public $texts = array(); 
     protected function populateFromElements($node) {
@@ -226,7 +235,8 @@ class VariantEvent extends Annotatable {
     public $ref_seq;
     public $name;
     public $genes = array();
-    
+    public $pathogenicity;
+
     protected function populateFromAttribs($node) {
         
     }
@@ -241,10 +251,39 @@ class VariantEvent extends Annotatable {
         case "gene":
             array_push($this->genes, new DbXRef($node));
             break;
+        case "pathogenicity":
+            $this->pathogenicity =  new Pathogenicity($node);
+            break;
         default:
             parent::populateFromElements($node);
             break;
         }      
+    }
+}
+
+
+class Pathogenicity extends Observable {
+    public $phenotype;
+    public $evidence_code;
+    public $scope;
+    
+    protected function populateFromAttribs($node) {
+        $this->term = $node->getAttribute("term");
+        $this->scope = $node->getAttribute("scope");
+    }
+    
+    protected function populateFromElements($node) {
+        switch( $node->localName) {
+        case "phenotype":
+            $this->phenotype = new Phenotype($node);
+            break;
+        case "evidence_code":
+            $this->evidence_code =  new EvidenceCode($node);
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }  
     }
 }
 
@@ -257,6 +296,12 @@ class Variant extends VariantEvent {
 class ConsVariant extends VariantEvent {
 
 }
+
+class Phenotype extends EvidenceCode {
+
+}
+
+
 $reader = new XMLReader();
 $reader->open('../data/cafe_variome_example.xml');
 
@@ -266,6 +311,8 @@ while ($reader->read()) {
        switch ( $reader->localName ) {
        case "variant" : 
            $var = new Variant($reader);
+           print " ===============\n";
+
            print $var->name->scheme." ".$var->name->string." ACC=".$var->ref_seq->accession."\n";
            foreach ( $var->genes as $dbx ) {
                print "  GENE=".$dbx->accession."\n";
@@ -273,12 +320,21 @@ while ($reader->read()) {
            foreach ( $var->db_xrefs as $dbx ) {
                print "  DBXREF=".$dbx->accession."\n";
            }
+
+           foreach ( $var->pathogenicity as $patho ) {
+            print "  PATHOGENICITY=".$patho->term."\n";
+            print "  SCOPE=".$patho->scope."\n";
+            print "  PHENOTYPE=".$patho->phenotype->term."\n";
+           }
+
            foreach ( $var->comments as $comm ) {
                foreach ( $comm->texts as $txt) {
                    print "  COMMENT=".$txt->string."\n";           
                }
            }
-           break;
+
+        break;
+
        case "name":
            break;
        default: break;
