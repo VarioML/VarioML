@@ -140,7 +140,6 @@ abstract class OntologyTerm extends Referenceable {
             // we comment this out: parent::populateFromElements($node);
             //todo: improve
         }
-
     }
 }
 
@@ -235,7 +234,7 @@ class VariantEvent extends Annotatable {
     public $ref_seq;
     public $name;
     public $genes = array();
-    public $pathogenicity;
+    public $pathogenicities = array();
 
     protected function populateFromAttribs($node) {
         
@@ -252,7 +251,7 @@ class VariantEvent extends Annotatable {
             array_push($this->genes, new DbXRef($node));
             break;
         case "pathogenicity":
-            $this->pathogenicity =  new Pathogenicity($node);
+            array_push($this->pathogenicities, new Pathogenicity($node));
             break;
         default:
             parent::populateFromElements($node);
@@ -321,7 +320,7 @@ while ($reader->read()) {
                print "  DBXREF=".$dbx->accession."\n";
            }
 
-           foreach ( $var->pathogenicity as $patho ) {
+           foreach ( $var->pathogenicities as $patho ) {
             print "  PATHOGENICITY=".$patho->term."\n";
             print "  SCOPE=".$patho->scope."\n";
             print "  PHENOTYPE=".$patho->phenotype->term."\n";
