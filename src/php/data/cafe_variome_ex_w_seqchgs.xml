@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cafe_variome xmlns="http://varioml.org/xml/1.0">    
+    <source id="leicester_lab">
+        <name>leicester_lab</name>
+        <url>http://www.le.ac.uk/genetics</url>
+        <contact>
+            <name>Owen Lancaster</name>
+            <email>ol8@leicester.ac.uk</email>
+        </contact>
+    </source> 
+    <variant type="cDNA">
+        <gene source="hgnc.symbol" accession="COL1A1"/>
+        <ref_seq source="refseq" accession="NG_007400.1"/>
+        <name scheme="HGVS">c.579delT</name>
+        <panel>
+            <individual>
+                <gender code="1"></gender>                
+            </individual>
+        </panel>
+
+        <pathogenicity term="pathogenic" scope="family">
+            <phenotype term="Osteogenesis Imperfecta"/>            
+            <evidence_code term="curator inference" accession="ECO:0000205" source="obo.eco"/>            
+        </pathogenicity>
+        <variant_detection technique="CMC" template="DNA">            
+        </variant_detection> 
+
+
+                <seq_changes> 
+            <variant type="RNA"> 
+                <ref_seq source="example" accession="11111"/> 
+                <name scheme="HGVS">r.1a>u</name>                    
+                <!-- optional consequences of mutations.. 
+these should go into appropriate sequence "levels" --> 
+
+                <consequence term="possible consequence of mutation 
+on gene products(s)"/> 
+                <seq_changes> 
+                    <variant type="AA"> 
+                        <ref_seq accession="O43918" source="uniport"/> 
+                        <name scheme="HGVS">p.Met1Leu</name> 
+                    </variant> 
+                </seq_changes> 
+            </variant> 
+        </seq_changes> 
+
+
+        
+        <genetic_origin term="paternal">
+            <evidence_code term="inferred"/>
+        </genetic_origin>
+
+        <sharing_policy type="embargoedAccess">
+            <embargo_end_date>2012-12-12</embargo_end_date>
+            <use_permission accession="CC0" uri="http://creativecommons.org/publicdomain/zero/1.0/"
+                term="Creative commons"/>
+        </sharing_policy>
+        <db_xref source="xxxx" accession="xxxx"/>
+        <comment>
+            <text>Variant inherited from affected father</text>
+        </comment>
+    </variant>
+    <variant type="cDNA">
+        <gene source="hgnc.symbol" accession="COL1A1 2 "/>
+        <ref_seq source="refseq" accession="NG_007400.1 2"/>
+        <name scheme="HGVS">c.579delT 2</name>
+        <db_xref source="yyy" accession="yyy"/>
+    </variant>
+    <variant type="cDNA">
+        <gene source="hgnc.symbol" accession="COL1A1 3 "/>
+        <ref_seq source="refseq" accession="NG_007400.1 3k"/>
+        <name scheme="HGVS">c.579delT 3</name>
+        <db_xref source="zzz" accession="zzz"/>
+    </variant>
+
+</cafe_variome>

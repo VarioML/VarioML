@@ -235,6 +235,7 @@ class VariantEvent extends Annotatable {
     public $name;
     public $genes = array();
     public $pathogenicities = array();
+    public $seq_changes = array();
 
     protected function populateFromAttribs($node) {
         
@@ -252,6 +253,9 @@ class VariantEvent extends Annotatable {
             break;
         case "pathogenicity":
             array_push($this->pathogenicities, new Pathogenicity($node));
+            break;
+        case "seq_changes":
+            array_push($this->seq_changes , new SeqChg($node));
             break;
         default:
             parent::populateFromElements($node);
@@ -291,9 +295,20 @@ class Variant extends VariantEvent {
 
 }
 
-//todo: implement. Variant consequences (RNA and AA) as implemented in seq_chages element
-class ConsVariant extends VariantEvent {
 
+class SeqChg extends VariantEvent {
+    public $consequence;
+
+    protected function populateFromElements($node) {
+        switch( $node->localName) {
+        case "consequence":
+            $this->consequence = new EvidenceCode($node);
+            break;
+        default:break;
+            //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
+            parent::populateFromElements($node);
+        }
+    }
 }
 
 class Phenotype extends EvidenceCode {
@@ -324,6 +339,15 @@ while ($reader->read()) {
             print "  PATHOGENICITY=".$patho->term."\n";
             print "  SCOPE=".$patho->scope."\n";
             print "  PHENOTYPE=".$patho->phenotype->term."\n";
+            print "  EVIDENCE CODE=".$patho->evidence_code->term."\n";
+           }
+
+           foreach ( $var->seq_changes as $seqch ) {
+            print "  CONSEQUENCES:\n";
+            print "    ".$seqch->name->scheme." ".$seqch->name->string."\n";
+            print "      VARIANT TYPE=".$seqch->variant->type."\n";
+            print "      ACC=".$seqch->ref_seq->accession."\n";
+            print "      CONSEQUENCE=".$seqch->consequence->term."\n";
            }
 
            foreach ( $var->comments as $comm ) {
