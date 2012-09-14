@@ -238,8 +238,9 @@ class VariantEvent extends Annotatable {
     public $seq_changes = array();
 
     protected function populateFromAttribs($node) {
-        
+        $this->type = $node->getAttribute("type");
     }
+
     protected function populateFromElements( $node) {
         switch( $node->localName) {
         case "name":
@@ -294,12 +295,15 @@ class Pathogenicity extends Observable {
 //todo: implement. The main variant
 class Variant extends VariantEvent {
 
+    protected function populateFromAttribs($node) {
+        $this->type = $node->getAttribute("type");
+    }
+
 }
 
 
 class SeqChg extends Observable {
     public $consequence;
-    public $variant;
 
     protected function populateFromAttribs($node) {
         
@@ -341,8 +345,9 @@ while ($reader->read()) {
        case "variant" : 
            $var = new Variant($reader);
            print " ===============\n";
-
-           print $var->name->scheme." ".$var->name->string." ACC=".$var->ref_seq->accession."\n";
+           print "      VARIANT TYPE=".$var->type."\n";
+           print $var->name->scheme." ".$var->name->string." 
+           ACC=".$var->ref_seq->accession."\n";
            foreach ( $var->genes as $dbx ) {
                print "  GENE=".$dbx->accession."\n";
            }
@@ -360,7 +365,7 @@ while ($reader->read()) {
            foreach ( $var->seq_changes as $seqch ) {
             print "  CONSEQUENCES:\n";
             print "    ".$seqch->name->scheme." ".$seqch->name->string."\n";
-            print "      VARIANT TYPE=".$seqch->variantB->type."\n";
+            print "      VARIANT TYPE=".$seqch->variant->type."\n";
             print "      ACC=".$seqch->ref_seq->accession."\n";
             print "      CONSEQUENCE=".$seqch->consequence->term."\n";
            }
