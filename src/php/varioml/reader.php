@@ -295,10 +295,6 @@ class Pathogenicity extends Observable {
 //todo: implement. The main variant
 class Variant extends VariantEvent {
 
-    protected function populateFromAttribs($node) {
-        $this->type = $node->getAttribute("type");
-    }
-
 }
 
 
