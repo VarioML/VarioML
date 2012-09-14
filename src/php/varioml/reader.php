@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 // (Currenly experimental) PHP code for parsing VarioML data
 // 
 // Contact: Juha M.
@@ -366,8 +368,6 @@ while ($reader->read()) {
             print "  PHENOTYPE=".$patho->phenotype->term."\n";
             print "  EVIDENCE CODE=".$patho->evidence_code->term."\n";
            }
-
-            print "  S_CONS=".$var->seq_changes->consequence->term."\n";
 
            foreach ( $var->seq_changes as $seqch ) {
             print "  CONSEQUENCES:\n";
