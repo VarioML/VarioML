@@ -23,7 +23,28 @@
             <evidence_code term="curator inference" accession="ECO:0000205" source="obo.eco"/>            
         </pathogenicity>
         <variant_detection technique="CMC" template="DNA">            
-        </variant_detection>        
+        </variant_detection> 
+
+
+                <seq_changes> 
+            <variant type="RNA"> 
+                <ref_seq source="example" accession="11111"/> 
+                <name scheme="HGVS">r.1a>u</name>                    
+                <!-- optional consequences of mutations.. 
+these should go into appropriate sequence "levels" --> 
+
+                <consequence term="possible consequence of mutation 
+on gene products(s)"/> 
+                <seq_changes> 
+                    <variant type="AA"> 
+                        <ref_seq accession="O43918" source="uniport"/> 
+                        <name scheme="HGVS">p.Met1Leu</name> 
+                    </variant> 
+                </seq_changes> 
+            </variant> 
+        </seq_changes> 
+
+
         
         <genetic_origin term="paternal">
             <evidence_code term="inferred"/>
