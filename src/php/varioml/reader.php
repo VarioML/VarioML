@@ -238,7 +238,7 @@ class VariantEvent extends Annotatable {
     public $seq_changes = array();
 
     protected function populateFromAttribs($node) {
-        $this->type = $node->getAttribute("type");
+
     }
 
     protected function populateFromElements( $node) {
@@ -256,7 +256,7 @@ class VariantEvent extends Annotatable {
             array_push($this->pathogenicities, new Pathogenicity($node));
             break;
         case "seq_changes":
-            array_push($this->seq_changes , new SeqChg($node));
+            array_push($this->seq_changes , new ConsVariant($node));
             break;
         default:
             parent::populateFromElements($node);
@@ -297,26 +297,15 @@ class Variant extends VariantEvent {
 
 }
 
-
-class SeqChg extends Observable {
-    public $consequence;
-    public $variants;
+ class SeqChg extends Observable {
+    public $variants = array();
 
     protected function populateFromAttribs($node) {
-        
+
     }
 
     protected function populateFromElements($node) {
         switch( $node->localName) {
-        case "name":
-            $this->name = new Name($node);
-            break;
-        case "ref_seq":
-            $this->ref_seq =  new DbXRef($node);
-            break;
-        case "consequence":
-            $this->consequence = new EvidenceCode($node);
-            break;
         case "variant":
             array_push($this->variants , new ConsVariant($node));
             break;
@@ -325,6 +314,26 @@ class SeqChg extends Observable {
             parent::populateFromElements($node);
             break;
         }
+    }
+}
+
+
+class ConsVariant extends VariantEvent {
+    public $consequence;
+
+    protected function populateFromAttribs($node) {
+        $this->type = $node->getAttribute("type");
+    }
+
+    protected function populateFromElements($node) {
+        switch( $node->localName) {
+        case "consequence":
+            $this->consequence = new EvidenceCode($node);
+        break;
+        default:
+            //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
+            parent::populateFromElements($node);
+         break;            }
     }
 }
 
@@ -343,9 +352,7 @@ while ($reader->read()) {
        case "variant" : 
            $var = new Variant($reader);
            print " ===============\n";
-           print "      VARIANT TYPE=".$var->type."\n";
-           print $var->name->scheme." ".$var->name->string." 
-           ACC=".$var->ref_seq->accession."\n";
+           print $var->name->scheme." ".$var->name->string."  ACC=".$var->ref_seq->accession."\n";
            foreach ( $var->genes as $dbx ) {
                print "  GENE=".$dbx->accession."\n";
            }
@@ -360,13 +367,17 @@ while ($reader->read()) {
             print "  EVIDENCE CODE=".$patho->evidence_code->term."\n";
            }
 
+            print "  S_CONS=".$var->seq_changes->consequence->term."\n";
+
            foreach ( $var->seq_changes as $seqch ) {
             print "  CONSEQUENCES:\n";
             print "    ".$seqch->name->scheme." ".$seqch->name->string."\n";
-            print "      VARIANT TYPE=".$seqch->variant->type."\n";
+            print "      VARIANT TYPE=".$seqch->type."\n";
             print "      ACC=".$seqch->ref_seq->accession."\n";
             print "      CONSEQUENCE=".$seqch->consequence->term."\n";
            }
+
+
 
            foreach ( $var->comments as $comm ) {
                foreach ( $comm->texts as $txt) {
