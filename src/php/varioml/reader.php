@@ -304,6 +304,7 @@ class Variant extends VariantEvent {
 
 class SeqChg extends Observable {
     public $consequence;
+    public $variants;
 
     protected function populateFromAttribs($node) {
         
@@ -320,12 +321,13 @@ class SeqChg extends Observable {
         case "consequence":
             $this->consequence = new EvidenceCode($node);
             break;
-        case "seq_changes":
-            array_push($this->seq_changes , new SeqChg($node));
+        case "variant":
+            array_push($this->variants , new ConsVariant($node));
             break;
-        default:break;
+        default:
             //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
             parent::populateFromElements($node);
+            break;
         }
     }
 }
