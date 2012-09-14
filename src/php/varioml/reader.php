@@ -277,6 +277,7 @@ class Pathogenicity extends Observable {
     
     protected function populateFromElements($node) {
         switch( $node->localName) {
+
         case "phenotype":
             $this->phenotype = new Phenotype($node);
             break;
@@ -296,13 +297,27 @@ class Variant extends VariantEvent {
 }
 
 
-class SeqChg extends VariantEvent {
+class SeqChg extends Observable {
     public $consequence;
+    public $variant;
+
+    protected function populateFromAttribs($node) {
+        
+    }
 
     protected function populateFromElements($node) {
         switch( $node->localName) {
+        case "name":
+            $this->name = new Name($node);
+            break;
+        case "ref_seq":
+            $this->ref_seq =  new DbXRef($node);
+            break;
         case "consequence":
             $this->consequence = new EvidenceCode($node);
+            break;
+        case "seq_changes":
+            array_push($this->seq_changes , new SeqChg($node));
             break;
         default:break;
             //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
@@ -345,7 +360,7 @@ while ($reader->read()) {
            foreach ( $var->seq_changes as $seqch ) {
             print "  CONSEQUENCES:\n";
             print "    ".$seqch->name->scheme." ".$seqch->name->string."\n";
-            print "      VARIANT TYPE=".$seqch->variant->type."\n";
+            print "      VARIANT TYPE=".$seqch->variantB->type."\n";
             print "      ACC=".$seqch->ref_seq->accession."\n";
             print "      CONSEQUENCE=".$seqch->consequence->term."\n";
            }

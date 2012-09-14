@@ -40,9 +40,10 @@ on gene products(s)"/>
                         <ref_seq accession="O43918" source="uniport"/> 
                         <name scheme="HGVS">p.Met1Leu</name> 
                     </variant> 
-                </seq_changes> 
+                </seq_changes>
             </variant> 
         </seq_changes> 
+
 
 
         
