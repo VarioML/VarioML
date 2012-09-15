@@ -366,7 +366,7 @@ class ConsVariant extends VariantCharacteristic {
     }
 }
 
-class Phenotype extends Observation {
+class Phenotype extends Observation { 
 }
 
 
