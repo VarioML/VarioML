@@ -1,4 +1,4 @@
-<?php
+defaul<?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 // (Currenly experimental) PHP code for parsing VarioML data
@@ -95,13 +95,13 @@ abstract class Annotatable extends XOBJ {
         case "comment":
             array_push($this->comments , new Comment($node));
             break;
-        default: break;
+        default: 
+            break;
             // no need to forward properties...
         }
         
-    }
+    }   
 }
-
 
 abstract class Referenceable extends Annotatable {
     public $accession="";
@@ -145,12 +145,12 @@ abstract class OntologyTerm extends Referenceable {
     }
 }
 
-abstract class Observable extends Referenceable {
+abstract class Observation extends Referenceable {
     public $values = array();
     public $evidence_codes = array();
     public $protocol_ids = array();
     public $observation_date;
-    public $term ; // CV term (Observable is-a OntologyTerm, but methods implemented here since otherwise multiple inheritance is needed)
+    public $term ; // CV term (Observation is-a OntologyTerm, but methods implemented here since otherwise multiple inheritance is needed)
     public $description;
     protected function populateFromAttribs($node) {
         $this->term = $node->getAttribute("term");
@@ -161,27 +161,55 @@ abstract class Observable extends Referenceable {
         case "protocol_id":
             array_push($this->protocol_ids , new ProtocolId($node));          
             break;
+        case "evidence_code":
+            array_push($this->evidence_codes , new EvidenceCode($node));          
+            break;
         case "description":
             $this->description = new Description($node);          
             break;
-        default:break;
+        default:
             //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
             parent::populateFromElements($node);
+            break;
         }
     }
 }
 
-class EvidenceCode extends Referenceable {
-    public $term;
-    public $string ; //we call text nodes as strings to maintain compatibility with the Java API
+class EvidenceCode extends OntologyTerm {
+    public $scores = array();
     public function populateFromAttribs($node) {
-        $this->term = $node->getAttribute("term");
-        $this->string = $node->readString(); // only one text node
+        parent::populateFromAttribs($node);
     }
     protected function populateFromElements($node) {
-        //no sub-elements (only text node)
+       switch( $node->localName) {
+        case "score":
+            array_push($this->scores , new Score($node));          
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }
     }
 }
+
+class Score extends OntologyTerm {
+    public $value ;
+    public function populateFromAttribs($node) {
+        parent::populateFromAttribs($node);
+    }
+    protected function populateFromElements($node) {
+       switch( $node->localName) {
+        case "value":
+            //http://php.net/manual/en/xmlreader.readstring.php
+            $this->value  = floatval($node->readString());          
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }
+    }
+}
+
 
 class ProtocolId extends Referenceable {
     
@@ -206,7 +234,7 @@ class Text extends XOBJ {
 
 }
 
-class Comment extends Observable {
+class Comment extends Observation {
     public $texts = array(); 
     protected function populateFromElements($node) {
         switch( $node->localName) {
@@ -232,15 +260,15 @@ class Name extends XOBJ {
     }
 }
 
-class VariantEvent extends Annotatable {
+class VariantCharacteristic extends Annotatable {
     public $ref_seq;
     public $name;
     public $genes = array();
     public $pathogenicities = array();
-    public $seq_changes = array();
+    public $seq_changes ;
 
     protected function populateFromAttribs($node) {
-
+        
     }
 
     protected function populateFromElements( $node) {
@@ -258,7 +286,7 @@ class VariantEvent extends Annotatable {
             array_push($this->pathogenicities, new Pathogenicity($node));
             break;
         case "seq_changes":
-            array_push($this->seq_changes , new ConsVariant($node));
+            $this->seq_changes = new SeqChg($node);
             break;
         default:
             parent::populateFromElements($node);
@@ -268,9 +296,8 @@ class VariantEvent extends Annotatable {
 }
 
 
-class Pathogenicity extends Observable {
+class Pathogenicity extends Observation {
     public $phenotype;
-    public $evidence_code;
     public $scope;
     
     protected function populateFromAttribs($node) {
@@ -280,12 +307,8 @@ class Pathogenicity extends Observable {
     
     protected function populateFromElements($node) {
         switch( $node->localName) {
-
         case "phenotype":
             $this->phenotype = new Phenotype($node);
-            break;
-        case "evidence_code":
-            $this->evidence_code =  new EvidenceCode($node);
             break;
         default:
             parent::populateFromElements($node);
@@ -295,21 +318,24 @@ class Pathogenicity extends Observable {
 }
 
 //todo: implement. The main variant
-class Variant extends VariantEvent {
+class Variant extends VariantCharacteristic {
+    public $type;
+    protected function populateFromAttribs($node) {
+        $this->type = $node->getAttribute("type");
+        parent::populateFromAttribs($node);
+    }
 
 }
 
- class SeqChg extends Observable {
-    public $variants = array();
+class SeqChg extends Observation {
+    public $variants = array() ;
 
-    protected function populateFromAttribs($node) {
-
+    protected function populateFromAttribs($node) {        
     }
-
     protected function populateFromElements($node) {
         switch( $node->localName) {
         case "variant":
-            array_push($this->variants , new ConsVariant($node));
+            array_push($this->variants,new ConsVariant($node));
             break;
         default:
             //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
@@ -320,13 +346,13 @@ class Variant extends VariantEvent {
 }
 
 
-class ConsVariant extends VariantEvent {
+class ConsVariant extends VariantCharacteristic {
     public $consequence;
-
+    public $type;
     protected function populateFromAttribs($node) {
         $this->type = $node->getAttribute("type");
+        parent::populateFromAttribs($node);
     }
-
     protected function populateFromElements($node) {
         switch( $node->localName) {
         case "consequence":
@@ -335,12 +361,12 @@ class ConsVariant extends VariantEvent {
         default:
             //comment can have annotations and observation stuff like other comments, db_xrefs, protocols
             parent::populateFromElements($node);
-         break;            }
+         break;            
+        }
     }
 }
 
-class Phenotype extends EvidenceCode {
-
+class Phenotype extends Observation {
 }
 
 
@@ -366,30 +392,48 @@ while ($reader->read()) {
             print "  PATHOGENICITY=".$patho->term."\n";
             print "  SCOPE=".$patho->scope."\n";
             print "  PHENOTYPE=".$patho->phenotype->term."\n";
-            print "  EVIDENCE CODE=".$patho->evidence_code->term."\n";
-           }
 
-           foreach ( $var->seq_changes as $seqch ) {
-            print "  CONSEQUENCES:\n";
-            print "    ".$seqch->name->scheme." ".$seqch->name->string."\n";
-            print "      VARIANT TYPE=".$seqch->type."\n";
-            print "      ACC=".$seqch->ref_seq->accession."\n";
-            print "      CONSEQUENCE=".$seqch->consequence->term."\n";
-           }
+            foreach ( $patho->evidence_codes as $evic ) {
+                print "  EVIDENCE CODE=".$evic->term."\n";
+            }
+            
+            
+            if ( $var->seq_changes) { 
+                foreach ( $var->seq_changes->variants as $rvar ) {
+                    print "  RNA Sequence changes:\n";
+                    print "    ".$rvar->name->scheme." ".$rvar->name->string."\n";
+                    print "      VARIANT TYPE=".$rvar->type."\n";
+                    print "      ACC=".$rvar->ref_seq->accession."\n";
+                    print "      CONSEQUENCE=".$rvar->consequence->term."\n";       
 
+                    if ($rvar->seq_changes) {
+                        foreach ( $rvar->seq_changes->variants as $avar ) {
+                            print "      AA Sequence changes:\n";
+                            print "        ".$avar->name->scheme." ".$avar->name->string."\n";
+                            print "        VARIANT TYPE=".$avar->type."\n";
+                            
+                        }
 
-
-           foreach ( $var->comments as $comm ) {
-               foreach ( $comm->texts as $txt) {
+                    }
+                }
+            }
+            
+            
+            
+            
+            foreach ( $var->comments as $comm ) {
+                foreach ( $comm->texts as $txt) {
                    print "  COMMENT=".$txt->string."\n";           
-               }
+                }
+            }
            }
-
-        break;
-
-       case "name":
            break;
-       default: break;
+           
+       case "source":
+           //todo: Source 
+           break;
+       default: 
+           break;
        }
    }
 }
