@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../cafe_variome.rnc" type="compact"?> 
+<?xml-model href="../validator/cafe_variome_validator.sct" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<cafe_variome xmlns="http://varioml.org/xml/1.0">
+        <source id="example_lab">
+            <name>Example Diagnostic Laboratory</name>
+            <contact>
+                <name>Fred Bloggs</name>
+                <email>fred@gmail.com</email>
+            </contact>
+        </source>
+        <variant type="DNA">
+            <gene source="HGNC" accession="FLNC"/>
+            <ref_seq source="refseq" accession="NM_001458.4"/>
+            <name scheme="HGVS">c.4404C&gt;G</name>
+            <panel id="p9999">
+                <individual>
+                    <gender code="2"/>
+                </individual>
+                <phenotype term="myopathy myofibrillar filamin C-related" source="OMIM" accession="609524"/>
+            </panel>
+            <seq_changes>
+                <variant type="AA">
+                    <ref_seq source="refseq" accession="NP_001449.3"/>                    
+                    <name scheme="HGVS">p.(Asp1468Glu)</name>
+                </variant>
+            </seq_changes>
+            <location>
+                <ref_seq source="refseq" accession="NC_000018.9"/>
+               <chr>18</chr>
+                <start>128275077</start>
+                <end>128275127</end>
+            </location>	            
+            <sharing_policy type="openAccess" />            
+        </variant>
+        <comment>
+            <text>Variant submitted from Gensearch tool during Cafe RouGE pilot</text>
+        </comment>
+</cafe_variome>
