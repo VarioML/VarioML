@@ -90,8 +90,8 @@
 
         <iso:rule context="vml:location">
             <iso:assert test="vml:ref_seq">Location must have reference sequence</iso:assert>
-            <iso:assert test="not(vml:chr)">Location entry should not have chromosome. Chromosome reference sequence should be used insead</iso:assert>
-            <iso:assert test="normalize-space(vml:end) ge normalize-space(vml:start) ">Incorrect location. End shoud be larger or equal than start position</iso:assert>
+            <!-- iso:assert test="not(vml:chr)">Location entry should not have chromosome. Chromosome reference sequence should be used insead</iso:assert>
+            <iso:assert test="normalize-space(vml:end) ge normalize-space(vml:start) ">Incorrect location. End shoud be larger or equal than start position</iso:assert -->
             <!-- start position is given in the relax schema-->
         </iso:rule>
         
