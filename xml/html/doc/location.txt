@@ -13,6 +13,7 @@ Location of variant on a reference sequence/genomic build.
 
      <location>
         <ref_seq source="refseq" accession="NC_000001.10"/>
+        <chr>1</chr>
         <start>100315752</ns2:start>
         <end>100315752</ns2:end>
      </location>
