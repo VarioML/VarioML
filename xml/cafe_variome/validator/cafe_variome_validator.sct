@@ -3,7 +3,7 @@
     xmlns="http://purl.oclc.org/dsdl/schematron"  
     xmlns:iso="http://purl.oclc.org/dsdl/schematron" 
     xmlns:vml="http://varioml.org/xml/1.0"
-    queryBinding='xslt1'
+    queryBinding='xslt2'
     schemaVersion='ISO19757-3'>                  
     <iso:title>ISO schematron validation rules for Cafe Variome data submissions</iso:title>
     <iso:ns prefix='vml' uri='http://varioml.org/xml/1.0'/> 
