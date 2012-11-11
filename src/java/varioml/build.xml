@@ -28,6 +28,16 @@
         </jar>
     </target>
 
+    <target name="makejar_lite" description="Create a jar for the project" depends="compile">
+        
+        <jar jarfile="VarioML_lite.jar" basedir="bin" excludes="**/generator/**">
+            <fileset dir="bin">                
+                <include name="*.class"/>
+                <exclude name="**/generator/**"/>
+            </fileset>            
+        </jar>
+    </target>
+    
     <target name="run" depends="makejar">
         <java jar="VarioML.jar" fork="true">
             <arg file="lsdb.rng"/>

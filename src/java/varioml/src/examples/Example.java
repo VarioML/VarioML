@@ -7,8 +7,6 @@ import java.net.URL;
 import org.varioml.jaxb.CafeVariome;
 import org.varioml.util.Util;
 
-import scala.actors.threadpool.helpers.Utils;
-
 public class Example {
 	
 	
@@ -23,6 +21,7 @@ public class Example {
 		u.writeJSON("alamut_example.json", cv1);
 		CafeVariome cv2 = (CafeVariome) u.readXML("schema/cafe_variome.xsd", url2.openStream(), CafeVariome.class);
 		u.writeJSON("cafe_variome_example.json", cv2);
+		u.writeEXI("schema/cafe_variome.xsd","cafe_variome_example.exi", cv2);
 		
 ;	}
 

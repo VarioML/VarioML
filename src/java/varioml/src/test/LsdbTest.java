@@ -52,7 +52,7 @@ public class LsdbTest extends TestCase  {
 		util.writeXML("schema/lsdb.xsd","lsdb_exi_test.xml", o);
 		o =  (org.varioml.jaxb.Lsdb)util.readXML("schema/lsdb.xsd", "lsdb_exi_test.xml",org.varioml.jaxb.Lsdb.class);
 		util.writeEXI("schema/lsdb.xsd","lsdb_exi_test2.exi", o);
-		
+		//todo: chk file sizes etc..
 
 		
 	}

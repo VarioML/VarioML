@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import org.simpleframework.xml.stream.Style;
 

@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 import org.varioml.jaxb.Age;
 import org.varioml.jaxb.Gender;
+import org.varioml.util.Util;
 
 
 

@@ -3,6 +3,7 @@ package org.varioml.util;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
+import org.varioml.generator.DateTransform;
 
 public class VMLDateTime extends VMLDate{
 

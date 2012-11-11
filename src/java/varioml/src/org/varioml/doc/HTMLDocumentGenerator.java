@@ -13,9 +13,9 @@ import java.util.Collections;
 
 import javax.xml.soap.Node;
 
-import org.varioml.util.RNGMetadataAPI;
+import org.varioml.generator.RNGMetadataAPI;
+import org.varioml.generator.RNGMetadataAPI.MetaData;
 import org.varioml.util.Util;
-import org.varioml.util.RNGMetadataAPI.MetaData;
 import org.w3c.dom.NodeList;
 
 public class HTMLDocumentGenerator {

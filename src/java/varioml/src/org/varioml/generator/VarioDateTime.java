@@ -1,8 +1,9 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
+import org.varioml.util.Util;
 
 public class VarioDateTime extends VarioDate{
 

@@ -1,9 +1,10 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import org.joda.time.*;
 import org.joda.time.format.*;
 
 import org.simpleframework.xml.transform.Transform;
+import org.varioml.util.Util;
 
 public class DateTimeTransform implements Transform<VarioDateTime> {
 

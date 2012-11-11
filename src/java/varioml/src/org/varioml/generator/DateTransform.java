@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -7,6 +7,7 @@ import org.joda.time.*;
 import org.joda.time.format.*;
 
 import org.simpleframework.xml.transform.Transform;
+import org.varioml.util.Util;
 
 public class DateTransform implements Transform<VarioDate>	 {
 

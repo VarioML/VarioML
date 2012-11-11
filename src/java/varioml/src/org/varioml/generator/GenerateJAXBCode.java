@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,8 @@ import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 import org.simpleframework.xml.stream.CamelCaseStyle;
-import org.varioml.util.GenerateSimpleXMLCode.Counter;
+import org.varioml.generator.GenerateSimpleXMLCode.Counter;
+import org.varioml.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

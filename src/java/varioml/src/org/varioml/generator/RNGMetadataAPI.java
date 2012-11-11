@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,7 +14,8 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.varioml.util.RNGMetadataAPI.MetaData.NodeType;
+import org.varioml.generator.RNGMetadataAPI.MetaData.NodeType;
+import org.varioml.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

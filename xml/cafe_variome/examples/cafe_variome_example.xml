@@ -10,7 +10,7 @@
             <email>ol8@leicester.ac.uk</email>
         </contact>
     </source> 
-    <variant type="cDNA">
+    <variant type="DNA">
         <gene source="hgnc.symbol" accession="COL1A1"/>
         <ref_seq source="refseq" accession="NG_007400.1"/>
         <name scheme="HGVS">c.579delT</name>

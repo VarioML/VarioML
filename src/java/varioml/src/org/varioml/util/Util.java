@@ -229,7 +229,7 @@ public class Util {
 
 	}
 
-	public Object readBSON(String file, Class clz) {
+	public Object readBSON(final String file, final Class clz) {
 		// todo: fix cut and paste
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
@@ -258,10 +258,11 @@ public class Util {
 		return o;
 	}
 
-	public Object readBSON(InputStream in, Class clz) {
+	 
+	public Object readBSON(final InputStream in, final Class clz) {
 		// todo: fix cut and paste
 
-		// org.codehaus.jackson.map.DeserializationConfig.Feature.¤
+		// org.codehaus.jackson.map.DeserializationConfig.Feature.???
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -288,10 +289,10 @@ public class Util {
 		return o;
 	}
 
-	public Object readBSON(InputStream in, Class clz, Class mixIn) {
+	public Object readBSON(final InputStream in, final Class clz, final Class mixIn) {
 		// todo: fix cut and paste
 
-		// org.codehaus.jackson.map.DeserializationConfig.Feature.¤
+		// org.codehaus.jackson.map.DeserializationConfig.Feature.???
 		AnnotationIntrospector primary = new JacksonAnnotationIntrospector();
 		AnnotationIntrospector secondary = new JaxbAnnotationIntrospector();
 		AnnotationIntrospector pair = new AnnotationIntrospector.Pair(primary,
@@ -414,8 +415,19 @@ public class Util {
 		}
 		return o;
 	}
-
+ 
 	public Object readXML(String schemaFile, String xmlFile, Class clz) {
+		try {
+			// todo: make this configuravle.. .now using JAXB as a default
+			File file = findFile(xmlFile);
+			return readXML( schemaFile,new FileInputStream(file),clz);
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+			return null;
+		}
+	}
+  
+	public Object readXML(String schemaFile, InputStream iStream, Class clz) {
 		try {
 			// todo: make this configuravle.. .now using JAXB as a default
 
@@ -424,18 +436,17 @@ public class Util {
 			Schema schema = sf.newSchema(new File(schemaFile));
 			JAXBContext context = JAXBContext.newInstance(clz);
 			// Marshaller m = context.createMarshaller();
-			File file = findFile(xmlFile);
 			Unmarshaller um = context.createUnmarshaller();
 			um.setEventHandler(new MyValidationEventHandler());
 			um.setSchema(schema);
-			Object o = um.unmarshal(file);
+			Object o = um.unmarshal(iStream);
 			return o;
 		} catch (Exception e) {
 			Util.fatal(Util.class, e);
 			return null;
 		}
 	}
-
+ 
 	public Object readEXI(String schemaFile, String xmlFile, Class clz) {
 		try {
 			// todo: fix this quick hack

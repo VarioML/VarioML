@@ -24,7 +24,7 @@
 
     <!-- Variant
         id = local unique ID for variant observation
-        type = reference template used for naming the variant (DNA,cDNA, RNA and AA)
+        type = reference template used for naming the variant (DNA, RNA and AA)
         copy_count = number of observed copies. 1 = one autosomal sister chromosome (or one male nonautosomal X/Y), 2 = both autosomal sister chromosomes.  
     -->
     <variant type="DNA" id="Variant ID" copy_count="1"> 

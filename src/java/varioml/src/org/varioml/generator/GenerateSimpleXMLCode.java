@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -19,6 +19,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.simpleframework.xml.stream.Style;
+import org.varioml.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

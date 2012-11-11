@@ -1,4 +1,4 @@
-package org.varioml.util;
+package org.varioml.generator;
 
 public class VarioDate {
 
