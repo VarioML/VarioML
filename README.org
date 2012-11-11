@@ -45,6 +45,8 @@ This same process can be used to create a new schema for a specific research or 
 VarioML has received funding from the European Community's Seventh Framework Programme (FP7/2007-2013) 
 under grant agreement number 200754 - the GEN2PHEN project.
 
+** Apps
+Demo applications can be found here https://github.com/VarioML/Apps
 ** News
 - 19.8.2012 Population changed to singleton in frequency. Do not have impact in existing XML implementations (property not used)
 - 8.8.2012 Gene has changed to list of genes. One mutation may have impact on more than one genes
