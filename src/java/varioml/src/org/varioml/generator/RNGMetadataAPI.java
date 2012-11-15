@@ -46,8 +46,8 @@ public class RNGMetadataAPI {
 		final public static int UNDEFINED = -9999;
 		final public static NodeType XML_ELEMENT = new NodeType("ELEMENT");
 		final public static NodeType XML_ATTRIBUTE = new NodeType("ATTRIBUTE");
-
 		final public static NodeType XML_UNKNOWN = new NodeType("UNKNOWN_node");
+		final public static NodeType XML_DEFINE = new NodeType("DEFINE");//new
 
 		public String name;
 		public int min = 0;
@@ -137,6 +137,7 @@ public class RNGMetadataAPI {
 		XPath xpath = xfac.newXPath();
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		List<Document> docs = new ArrayList();
+		
 		// dbf.setNamespaceAware(true);
 		for (String fileName : file) {
 			//System.err.println(fileName);
@@ -435,6 +436,10 @@ public class RNGMetadataAPI {
 
 			type = MetaData.XML_ELEMENT;
 
+		} else if (node.getNodeName().equals("define")) {
+
+			type = MetaData.XML_DEFINE;
+
 		} else if (node.getNodeName().equals("choice")) {
 
 			type = MetaData.XML_ELEMENT;
@@ -454,12 +459,13 @@ public class RNGMetadataAPI {
 				}
 
 			}
-			return _meta;
+			return _meta; //fix: bad code
 		} else {
 			Util.fatal(RNGMetadataAPI.class, "cannot create node for " + node.getNodeName() + " node " + nodeToString(node)
 					+ " parent=" + nodeToString(node.getParentNode()));
 		}
 
+		//fix: code is really bad
 		List<Node> kids = getAllNonTextChildElements(node);
 
 		Node aName = node.getAttributes().getNamedItem("name");
@@ -749,22 +755,6 @@ public class RNGMetadataAPI {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-
-		RNGMetadataAPI app = createInstance( new String[]{"lsdb.rng"});
-
-		MetaData data = app.parseAndCreateMetadata("grammar/define/element[@name='frequency']");
-		app.printMetaData(data);
-		List<Node> nodes = app.findAllXMLNodesOrDie("grammar/define/element");
-		for (int i = 0; i < nodes.size(); i++) {
-			System.out.println("  ");
-			app.printMetaData(app.createMetaDataObject(nodes.get(i), true));
-			System.out.println("  ");
-			System.out.println("  ");
-		}
-
-		app.printDocumentationGrammaPatterns();
-	}
 
 	public static String propertiesToString(MetaData d) {
 
@@ -778,6 +768,24 @@ public class RNGMetadataAPI {
 		}
 		return s;
 
+	}
+
+	public static void main(String[] args) throws Exception {
+
+		RNGMetadataAPI app = createInstance( new String[]{"lsdb.rng"});
+
+		//MetaData data = app.parseAndCreateMetadata("grammar/define[@name='VmlPopulation']");
+		MetaData data = app.parseAndCreateMetadata("grammar/define/element[@name='frequency']");
+		app.printMetaData(data);
+		List<Node> nodes = app.findAllXMLNodesOrDie("grammar/define/element");
+		for (int i = 0; i < nodes.size(); i++) {
+			//System.out.println("  ");
+			//app.printMetaData(app.createMetaDataObject(nodes.get(i), true));
+			//System.out.println("  ");
+			//System.out.println("  ");
+		}
+
+		//app.printDocumentationGrammaPatterns();
 	}
 
 }
