@@ -89,7 +89,7 @@ public class HTMLDocumentGenerator {
 				+ "</h2>");
 		if ( data.hasTextNode ) {
 			//todo: improve this... type etc.
-			p("</p><div class='text'><h3>text node of type " +data.dataType+ " </h3></div>") ;
+			p("</p><div class='text'><h3>text node of type " +data.primitiveType+ " </h3></div>") ;
 		}
 		p("     </p><div class='doc'>" + data.documentation + "</div>");
 		List<MetaData> props = data.properties;
@@ -106,7 +106,7 @@ public class HTMLDocumentGenerator {
 			p("         <tr><th>name</th><th>type</th><th>cardinality</th><th>value</th></tr>");
 			for (MetaData d : props) {
 				if (d.nodeType == MetaData.XML_ATTRIBUTE) {
-					p("         <tr><td>" + d.name + "</td><td>" + d.dataType + "</td><td>"
+					p("         <tr><td>" + d.name + "</td><td>" + d.primitiveType + "</td><td>"
 							+ RNGMetadataAPI.cardinToString(d.min, d.max) + "</td><td>"
 							+ RNGMetadataAPI.listToString(d.choiceList) + "</td></tr>");
 				}
@@ -155,7 +155,7 @@ public class HTMLDocumentGenerator {
 	static private String getType(List<String> patternList) {
 		if ( patternList.size() == 0) return "";
 				// sort element Names by alpha
-		return patternList.get(0);
+		return patternList.get(0); 
 	}
 
 	public static void main(String[] args) throws Exception {

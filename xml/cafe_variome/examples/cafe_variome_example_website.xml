@@ -27,7 +27,7 @@
             </seq_changes>
             <location>
                 <ref_seq source="refseq" accession="NC_000018.9"/>
-               <chr>18</chr>
+                <chr>18</chr>
                 <start>128275077</start>
                 <end>128275127</end>
             </location>	            

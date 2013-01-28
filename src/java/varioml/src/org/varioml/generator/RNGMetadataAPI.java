@@ -20,7 +20,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+//
+// todo: clean the code
 public class RNGMetadataAPI {
 
 	final private List<Document> documents;
@@ -56,51 +57,77 @@ public class RNGMetadataAPI {
 		public boolean hasTextNode = false;
 		public NodeType nodeType = XML_UNKNOWN;
 		public List<String> choiceList = new ArrayList<String>();
-		public List<String> choiceGroupList = new ArrayList<String>();
+		//public List<String> choiceGroupList = new ArrayList<String>();
 		public List<String> patternList = new ArrayList<String>();
-		public String dataType = "string"; // fix: guess for a default
+		public String primitiveType = "string"; // fix: guess for a default
 		public String documentation = "";
 		public List<MetaData> properties = new ArrayList<RNGMetadataAPI.MetaData>();
 		public boolean isEmpty = false; // text node todo: chekc implementation
 										// of text nodex (non empty element)
 		public boolean isChoiceGroup = false;
 		public String pathName;
-
+		public Node xmlNode;
+		
 		public MetaData(String name) {
 			this.name = name;
 			this.isRootNode = true;
 		}
 
-		public MetaData(String name, NodeType nodeType, int min, int max) {
+		public MetaData(Node node, NodeType nodeType, int min, int max) {
 			super();
+
+			//todo: put all modifying methods into same place
+			Node aName = node.getAttributes().getNamedItem("name");
+			String name;
+			if (aName == null) {
+
+				name = "ANYNAME";
+
+			} else {
+
+				name = getAttrValue("name", node);
+			}
+
+			
+			this.xmlNode = node;
 			this.name = name;
 			this.nodeType = nodeType;
 			this.min = min;
 			this.max = max;
 		}
 
-		public String getName() {
-			return name;
+		public String getNameOfParent() {
+			Node aName = xmlNode.getParentNode().getAttributes().getNamedItem("name");
+			if ( aName != null) {
+				return aName.getNodeValue();
+			}
+			return "N/A";
 		}
-
-		public void addProperty(MetaData property) {
-			if (property == null)
-				Util.fatal(RNGMetadataAPI.class, "property is null");
-			properties.add(property);
-		}
+//		public void addProperty(MetaData property) {
+//			if (property == null)
+//				Util.fatal(RNGMetadataAPI.class, "property is null");
+//			properties.add(property);
+//		}
 
 		public void addChoice(String choice) {
 			choiceList.add(choice);
 		}
 
-		public void addChoiceGroup(String choice) {
-			choiceGroupList.add(choice);
-		}
+//		public void addChoiceGroup(String choice) {
+//			choiceGroupList.add(choice);
+//		}
 
 		public void addPattern(String choice) {
 			patternList.add(choice);
 		}
 
+		public String resolveType()  {
+			if ( patternList.size() > 0) {
+				return patternList.get(0);
+			} else {
+				return primitiveType;
+			}
+		}
 		public String toString() {
 			String patterns = "";
 			for (String type : patternList) {
@@ -110,7 +137,7 @@ public class RNGMetadataAPI {
 			for (String c : choiceList) {
 				choice = choice + " " + c;
 			}
-			return "Name: " + name + " Type: " + nodeType + " Multp: (" + min + "-" + max + ") Data type: " + dataType
+			return "Name: " + name + " Type: " + nodeType + " Multp: (" + min + "-" + max + ") Data type: " + primitiveType
 					+ " Values: " + choice + " Has-text_node: " + hasTextNode + " Doc: " + documentation + " Gramma patterns: "
 					+ patterns;
 		}
@@ -162,6 +189,7 @@ public class RNGMetadataAPI {
 
 	}
 
+	
 	public Node findXMLNode(String expression) {
 
 		NodeList result = null;
@@ -255,14 +283,14 @@ public class RNGMetadataAPI {
 	 * Get all child elements (non text/comment) with expanding also gramma
 	 * patterns Note: text nodes should be empty (todo: add check)
 	 * 
-	 * @param node
+	 * @param parentNode
 	 *            node
 	 * @return list of nodes
 	 */
 
-	public List<Node> getAllNonTextChildElements(final Node node) {
+	public List<Node> getAllNonTextChildElements(final Node parentNode) {
 		List<Node> nodes = new ArrayList<Node>();
-		final NodeList nodeList = node.getChildNodes();
+		final NodeList nodeList = parentNode.getChildNodes();
 
 		for (int i = 0; i < nodeList.getLength(); i++) {
 
@@ -295,6 +323,7 @@ public class RNGMetadataAPI {
 						// we do not add these into node list
 					} else {
 
+						//String pname = getAttrValue("name", parentNode) ;
 						nodes.add(nod);
 
 					}
@@ -411,6 +440,7 @@ public class RNGMetadataAPI {
 			// node is a reference.. need to get actual node
 			List<Node> newNodes = getAllNonTextChildElements(findDefinitionNode(node));
 			if (newNodes.size() != 1) {
+				//error:
 				String _str = "";
 				for (Node tmp : newNodes) {
 					_str = _str + " " + tmp.getNodeName(); // getAttrValue("name",
@@ -424,6 +454,7 @@ public class RNGMetadataAPI {
 			return createMetaDataObject(newNodes.get(0), recurse);
 		}
 
+		//todo: move to...
 		MetaData.NodeType type = null;
 		boolean isChoiceGroup = false;
 
@@ -453,9 +484,8 @@ public class RNGMetadataAPI {
 			for (Node k : kids) {
 				//System.err.println(" ==== " + nodeToString(k));
 				if (k.getNodeName().equals("element")) {
-					List<MetaData> prop = createProperty(k);
-
-					_meta.addAllProperty(prop);
+					List<MetaData> prop = createProperty(k);					
+					_meta.addAllProperty(prop); 
 				}
 
 			}
@@ -468,21 +498,10 @@ public class RNGMetadataAPI {
 		//fix: code is really bad
 		List<Node> kids = getAllNonTextChildElements(node);
 
-		Node aName = node.getAttributes().getNamedItem("name");
-		MetaData mdata;
 
-		if (aName == null) {
-
-			mdata = new MetaData("ANYNAME", type, 0, 1);// optional.. anonymous
-														// choice
-
-		} else {
-
-			mdata = new MetaData(getAttrValue("name", node), type, 0, 1);
-		}
-
+		MetaData mdata = new MetaData(node, type, 0, 1);
 		mdata.isChoiceGroup = isChoiceGroup;
-		List<Node> propertyKids = assignDataDefinitionsAndFileterOutProperties(mdata, kids, node, type);
+		List<Node> propertyKids = assignDataDefinitionsAndFilterOutProperties(mdata, kids);
 
 		if (recurse) {
 
@@ -501,7 +520,7 @@ public class RNGMetadataAPI {
 	 * 
 	 */
 
-	public String getAttrValue(String name, Node node) {
+	public static String getAttrValue(String name, Node node) {
 		
 		Node aName = node.getAttributes().getNamedItem(name);
 		if (aName == null || aName.getNodeValue() == null || aName.getNodeValue().length() == 0)
@@ -517,7 +536,7 @@ public class RNGMetadataAPI {
 		return getTheOnlyChildNode(n, Node.TEXT_NODE);
 	}
 
-	public String nodeToString(Node node) {
+	public static String nodeToString(Node node) {
 		String str = "";
 		NamedNodeMap attrs = node.getAttributes();
 		for (int i = 0; i < attrs.getLength(); i++) {
@@ -612,13 +631,13 @@ public class RNGMetadataAPI {
 	 *            Type of MetaData node (ie. attribute or element)
 	 * @return
 	 */
-	private List<Node> assignDataDefinitionsAndFileterOutProperties(MetaData data, List<Node> kids, Node node,
-			MetaData.NodeType type) {
+	private List<Node> assignDataDefinitionsAndFilterOutProperties(MetaData data, List<Node> kids) {
 
 		List<Node> propList = new ArrayList<Node>();
 
 		for (Node nd : kids) {
 
+				
 			if (nd.getNodeType() == Node.ELEMENT_NODE) {
 				// System.err.println(nd.getNodeName());
 
@@ -633,13 +652,13 @@ public class RNGMetadataAPI {
 
 					String name = getAttrValue("name", nd);
 					data.addPattern(name);
-
+ 
 				} else if (nd.getNodeName().equals("data")) {
 
 					String datType = getAttrValue("type", nd);
-					data.dataType = datType;
-					if ( findTypeOfParentNode(nd)== MetaData.XML_ELEMENT) { 
-						System.err.println(">> TEST "+nodeToString( nd));
+					data.primitiveType = datType;
+					if ( findTypeOfParentNode(nd) == MetaData.XML_ELEMENT) { 
+						//System.err.println(">> TEST "+nodeToString( nd));
 						data.hasTextNode = true; //todo: check this and change name
 					}
 
