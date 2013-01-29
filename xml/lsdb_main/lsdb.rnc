@@ -1,5 +1,5 @@
 # - File: $Id: $
-# - Version 2.0.1
+# - Version 2.0
 # - Made with Trang: http://www.thaiopensource.com/relaxng/trang.html
 # - notes: http://books.xmlschemata.org/relaxng/relax-CHP-13-SECT-1.html
 #
@@ -9,8 +9,10 @@
 #
 # new name space http://varioml.org/xml/1.0
 #
-# - 2.0.1 28.1.2013 - in population nationality changed to country (of origin) 
-#
+# unit added into location has values feature (e.g. num. of exons) and residue
+# seq_region annotation taken into use , age added into observation target
+# FIXES  put seq_region sub element before annotatable, add gender into the panel (i.e. observation target)
+
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 default namespace vml = "http://varioml.org/xml/1.0"
 namespace local = ""
@@ -957,7 +959,7 @@ element population {
 ## [% INSERT population.txt %]
 VmlPopulation = 
     ## type of population
-    attribute type {'region' |'country'|'ethnic'| 'race'|'organism'|'group'|'primary_language'|'language_family'|'other'|'unknown'},
+    attribute type {'region' |'nationality'|'ethnic'| 'race'|'organism'|'group'|'primary_language'|'language_family'|'other'|'unknown'},
     ## population defined as ontology term
     VmlObservation 
 

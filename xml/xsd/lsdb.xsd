@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   - File: $Id: $
-  - Version 2.0.1
+  - Version 2.0
   - Made with Trang: http://www.thaiopensource.com/relaxng/trang.html
   - notes: http://books.xmlschemata.org/relaxng/relax-CHP-13-SECT-1.html
   
@@ -11,8 +11,9 @@
   
   new name space http://varioml.org/xml/1.0
   
-  - 2.0.1 28.1.2013 - in population nationality changed to country (of origin) 
-  
+  unit added into location has values feature (e.g. num. of exons) and residue
+  seq_region annotation taken into use , age added into observation target
+  FIXES  put seq_region sub element before annotatable, add gender into the panel (i.e. observation target)
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://varioml.org/xml/1.0" xmlns:vml="http://varioml.org/xml/1.0">
   <!--
@@ -338,7 +339,7 @@
   </xs:element>
   <xs:complexType name="VmlRoleType">
     <xs:annotation>
-      <xs:documentation>[% INSERT role.txt %]</xs:documentation>
+      <xs:documentation>[% INSERT subject_type.txt %]</xs:documentation>
     </xs:annotation>
     <xs:group ref="vml:VmlOntologyTerm"/>
     <xs:attributeGroup ref="vml:VmlOntologyTerm"/>
@@ -1706,7 +1707,7 @@
       <xs:simpleType>
         <xs:restriction base="xs:token">
           <xs:enumeration value="region"/>
-          <xs:enumeration value="country"/>
+          <xs:enumeration value="nationality"/>
           <xs:enumeration value="ethnic"/>
           <xs:enumeration value="race"/>
           <xs:enumeration value="organism"/>
