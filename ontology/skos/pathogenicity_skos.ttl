@@ -74,7 +74,7 @@ vml:p_0005
       rdf:type skos:Concept ;
       skos:broader vml:p_9991 ;
       skos:inScheme vml:cmgs_vgl_5 ;
-      skos:closeMatch vml:p_1006, vml:p_1002; # unclassified and not-known
+      skos:closeMatch vml:p_1006, vml:p_1002, vml:p_3001,vml:p3_3002; # unclassified and not-known
       skos:prefLabel "Unknown"@en .
 
 
@@ -205,3 +205,73 @@ vml:acmg_2007_list
       rdf:type skos:OrderedCollection ;
       skos:memberList (vml:p_2001 vml:p_2002 vml:p_2003 vml:p_2004 vml:p_2005 vml:p_2006) .
       
+
+vml:dbsnp
+      rdf:type skos:ConceptScheme ;
+      dc:creator "Juha Muilu <juha.muilu@helsinki.fi>" ;
+      dc:description "Clinical significance terms defined in dbSNP" ;
+      dc:url "http://www.ncbi.nlm.nih.gov/projects/SNP/docs/rs_attributes.html";
+      dc:bibliographicCitation "doi:10.1097/GIM.0b013e31816b5cae" ;
+      dc:title "dbSNP - Clinical significance terms" .
+
+vml:p_3001
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:prefLabel "unknown"@en .
+
+vml:p_3002
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:prefLabel "untested"@en .
+
+vml:p_3003
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:exactMatch vml:p_1001; # g2p non pathogenic
+      skos:prefLabel "non-pathogenic"@en .
+
+vml:p_3004
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:exactMatch vml:p_1004  ; # g2p probably not pathogenic     
+      skos:prefLabel "probable-non-pathogenic"@en .
+
+vml:p_3005
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:exactMatch vml:p_1005; # probably pathogenic
+      skos:prefLabel "probable-pathogenic"@en .
+
+vml:p_3006
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:exactMatch vml:p_1003; # pathogenic
+      skos:prefLabel "pathogenic"@en .
+
+vml:p_3007
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:prefLabel "drug-response"@en .
+
+vml:p_3008
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:prefLabel "histocompatibility"@en .
+
+vml:p_3009
+      rdf:type skos:Concept ;
+      skos:broader vml:p_9991 ;
+      skos:inScheme vml:dbsnp ;
+      skos:prefLabel "other"@en .
+
+vml:dbsnp_list
+      rdf:type skos:OrderedCollection ;
+      skos:memberList (vml:p_3001 vml:p_3002 vml:p_3003 vml:p_3004 vml:p_3005 vml:p_3006 vml:p_3007 vml:p_3008 vml:p_3009) .
