@@ -542,7 +542,7 @@ public class Util {
 		}
 	}
 
-	public void writeXMLUsingNS(String ns,String schemaFile, String xmlFile,
+	public void writeXMLUsingNS(String ns, String schemaFile, String xmlFile,
 			Object obj) {
 		try {
 			// todo: make this configurable.. .now using JAXB as a default
@@ -556,20 +556,20 @@ public class Util {
 
 			PrintWriter out = new PrintWriter(file);
 
-
-// Investigate also			
-//			XMLOutputFactory fac = XMLOutputFactory.newInstance();
-//			fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
-//			XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
-//			 xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
-//			 xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
+			// Investigate also
+			// XMLOutputFactory fac = XMLOutputFactory.newInstance();
+			// fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
+			// XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
+			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+			// xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
 
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-			MyNamespaceMapper mp = new MyNamespaceMapper(ns, 
+			MyNamespaceMapper mp = new MyNamespaceMapper(ns,
 					"http://varioml.org/xml/1.0");
-			// see http://blog.bdoughan.com/2011/11/jaxb-and-namespace-prefixes.html
+			// see
+			// http://blog.bdoughan.com/2011/11/jaxb-and-namespace-prefixes.html
 			try {
 				m.setProperty(
 						"com.sun.xml.internal.bind.namespacePrefixMapper", mp);
@@ -584,7 +584,7 @@ public class Util {
 				// m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION,
 				// "http://varioml.org/xml/1.0 "+schemaFile);
 			}
-//			m.marshal(obj, xmlStreamWriter);
+			// m.marshal(obj, xmlStreamWriter);
 			m.marshal(obj, out);
 			out.close();
 
@@ -603,18 +603,26 @@ public class Util {
 			File file = new File(xmlFile);
 
 			PrintWriter out = new PrintWriter(file);
+//			XMLOutputFactory fac = XMLOutputFactory.newInstance();
+//			fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
+//			XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
+//			xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+//			xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
+			
 			NamespaceFilter outFilter = new NamespaceFilter(
-					"http://varioml.org/xml/1.0", true);
+					"http://varioml.org/xml/1.0", false); // remove name spaces
 			XMLWriter writer = new XMLWriter(out);
 			outFilter.setContentHandler(writer);
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+			//m.setProperty(Marshaller.JAXB_FRAGMENT, true);
 			m.setEventHandler(new MyValidationEventHandler());
 			if (schemaFile != null) {
 				Schema schema = sf.newSchema(new File(schemaFile));
 				m.setSchema(schema);
 			}
 			m.marshal(obj, outFilter);
+			
 			writer.flush();
 			out.close();
 
@@ -740,7 +748,9 @@ public class Util {
 		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util
 				.readXML("schema/cafe_variome.xsd", "1KG.xml",
 						org.varioml.jaxb.CafeVariome.class);
-		util.writeXMLUsingNS("vml","schema/cafe_variome.xsd", "test.xml", o);
+//		util.writeXMLWithoutNS("schema/cafe_variome.xsd", "test.xml", o);
+
+		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
 
 		// util.writeEXI("schema/cafe_variome.xsd", "1KG.exi", o);
 		//
