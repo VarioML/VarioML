@@ -24,13 +24,15 @@
             <iso:assert 
                 test="@id">Source identifier is missing</iso:assert>             
             <iso:assert 
-                test="vml:name">Name of source is missing</iso:assert>             
+                test="vml:name">Name of source is missing</iso:assert>   
+            <iso:assert test="not($V2) or vml:contact">Contact is missing</iso:assert>
         </iso:rule>
 
         <!-- contact is optional, but if we have then either name or email should be present-->
         <iso:rule context="vml:cafe_variome/vml:source/vml:contact">                                  
             <iso:assert 
                 test="vml:name or vml:email">Contact name or email is missing</iso:assert> 
+            <iso:assert test="not(@role) or @role='curator' or @role='producer' or @role='submittor'">Role of contact is not recognized</iso:assert>
         </iso:rule>
 
         <iso:rule context="vml:cafe_variome/vml:source/vml:comment">   
@@ -143,7 +145,7 @@
         
         <iso:rule context="vml:ref_seq" >
             <iso:assert test="@accession" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
-            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
+            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='UCSC' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
         </iso:rule>
         
     </iso:pattern>
