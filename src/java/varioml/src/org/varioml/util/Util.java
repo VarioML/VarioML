@@ -1,6 +1,5 @@
 package org.varioml.util;
 
-import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -11,16 +10,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.ValidationEvent;
 import javax.xml.bind.ValidationEventHandler;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamWriter;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -40,6 +41,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
+import com.megginson.sax.XMLWriter;
 import com.siemens.ct.exi.EXIFactory;
 import com.siemens.ct.exi.GrammarFactory;
 import com.siemens.ct.exi.api.sax.EXIResult;
@@ -47,12 +49,40 @@ import com.siemens.ct.exi.api.sax.EXISource;
 import com.siemens.ct.exi.exceptions.EXIException;
 import com.siemens.ct.exi.grammars.Grammars;
 import com.siemens.ct.exi.helpers.DefaultEXIFactory;
+import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
 
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonGenerator.Feature;
 import de.undercouch.bson4jackson.BsonParser;
 
 public class Util {
+
+	public static class MyNamespaceMapper extends NamespacePrefixMapper {
+
+		private String PREFIX = ""; // DEFAULT NAMESPACE
+		private String URI = "http://www.example.com/FOO";
+
+		public MyNamespaceMapper(String pREFIX, String uRI) {
+			super();
+			PREFIX = pREFIX;
+			URI = uRI;
+		}
+
+		@Override
+		public String getPreferredPrefix(String namespaceUri,
+				String suggestion, boolean requirePrefix) {
+			if (URI.equals(namespaceUri)) {
+				return PREFIX;
+			}
+			return suggestion;
+		}
+
+		@Override
+		public String[] getPreDeclaredNamespaceUris() {
+			return new String[] { URI };
+		}
+
+	}
 
 	@JsonIgnoreProperties({ "_id" })
 	public static abstract class IgnoreMongoIDMixIn {
@@ -258,7 +288,6 @@ public class Util {
 		return o;
 	}
 
-	 
 	public Object readBSON(final InputStream in, final Class clz) {
 		// todo: fix cut and paste
 
@@ -289,7 +318,8 @@ public class Util {
 		return o;
 	}
 
-	public Object readBSON(final InputStream in, final Class clz, final Class mixIn) {
+	public Object readBSON(final InputStream in, final Class clz,
+			final Class mixIn) {
 		// todo: fix cut and paste
 
 		// org.codehaus.jackson.map.DeserializationConfig.Feature.???
@@ -415,18 +445,18 @@ public class Util {
 		}
 		return o;
 	}
- 
+
 	public Object readXML(String schemaFile, String xmlFile, Class clz) {
 		try {
 			// todo: make this configuravle.. .now using JAXB as a default
 			File file = findFile(xmlFile);
-			return readXML( schemaFile,new FileInputStream(file),clz);
+			return readXML(schemaFile, new FileInputStream(file), clz);
 		} catch (Exception e) {
 			Util.fatal(Util.class, e);
 			return null;
 		}
 	}
-  
+
 	public Object readXML(String schemaFile, InputStream iStream, Class clz) {
 		try {
 			// todo: make this configuravle.. .now using JAXB as a default
@@ -446,7 +476,7 @@ public class Util {
 			return null;
 		}
 	}
- 
+
 	public Object readEXI(String schemaFile, String xmlFile, Class clz) {
 		try {
 			// todo: fix this quick hack
@@ -488,7 +518,7 @@ public class Util {
 
 	public void writeXML(String schemaFile, String xmlFile, Object obj) {
 		try {
-			// todo: make this configuravle.. .now using JAXB as a default
+			// todo: make this configurable.. .now using JAXB as a default
 
 			SchemaFactory sf = SchemaFactory
 					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -496,11 +526,6 @@ public class Util {
 			File file = new File(xmlFile);
 
 			PrintWriter out = new PrintWriter(file);
-
-			// XMLStreamWriter xmlStreamWriter = XMLOutputFactory.newInstance()
-			// .createXMLStreamWriter(out);
-			// xmlStreamWriter.setPrefix("vm", "http://varioml.org/xml/1.0");
-			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
@@ -510,6 +535,95 @@ public class Util {
 				m.setSchema(schema);
 			}
 			m.marshal(obj, out);
+			out.close();
+
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+	}
+
+	public void writeXMLUsingNS(String ns, String schemaFile, String xmlFile,
+			Object obj) {
+		try {
+			// todo: make this configurable.. .now using JAXB as a default
+			// todo: fix copy paste code
+			// likely works only with MOXy
+
+			SchemaFactory sf = SchemaFactory
+					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+			JAXBContext context = JAXBContext.newInstance(obj.getClass());
+			File file = new File(xmlFile);
+
+			PrintWriter out = new PrintWriter(file);
+
+			// Investigate also
+			// XMLOutputFactory fac = XMLOutputFactory.newInstance();
+			// fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
+			// XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
+			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+			// xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
+
+			Marshaller m = context.createMarshaller();
+			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+			MyNamespaceMapper mp = new MyNamespaceMapper(ns,
+					"http://varioml.org/xml/1.0");
+			// see
+			// http://blog.bdoughan.com/2011/11/jaxb-and-namespace-prefixes.html
+			try {
+				m.setProperty(
+						"com.sun.xml.internal.bind.namespacePrefixMapper", mp);
+				// m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new
+			} catch (PropertyException e) {
+				// In case another JAXB implementation is used
+			}
+			m.setEventHandler(new MyValidationEventHandler());
+			if (schemaFile != null) {
+				Schema schema = sf.newSchema(new File(schemaFile));
+				m.setSchema(schema);
+				// m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION,
+				// "http://varioml.org/xml/1.0 "+schemaFile);
+			}
+			// m.marshal(obj, xmlStreamWriter);
+			m.marshal(obj, out);
+			out.close();
+
+		} catch (Exception e) {
+			Util.fatal(Util.class, e);
+		}
+	}
+
+	public void writeXMLWithoutNS(String schemaFile, String xmlFile, Object obj) {
+		try {
+			// todo: make this configuravle.. .now using JAXB as a default
+			// todo: copy and paste code
+			SchemaFactory sf = SchemaFactory
+					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+			JAXBContext context = JAXBContext.newInstance(obj.getClass());
+			File file = new File(xmlFile);
+
+			PrintWriter out = new PrintWriter(file);
+//			XMLOutputFactory fac = XMLOutputFactory.newInstance();
+//			fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
+//			XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
+//			xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+//			xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
+			
+			NamespaceFilter outFilter = new NamespaceFilter(
+					"http://varioml.org/xml/1.0", false); // remove name spaces
+			XMLWriter writer = new XMLWriter(out);
+			outFilter.setContentHandler(writer);
+			Marshaller m = context.createMarshaller();
+			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+			//m.setProperty(Marshaller.JAXB_FRAGMENT, true);
+			m.setEventHandler(new MyValidationEventHandler());
+			if (schemaFile != null) {
+				Schema schema = sf.newSchema(new File(schemaFile));
+				m.setSchema(schema);
+			}
+			m.marshal(obj, outFilter);
+			
+			writer.flush();
 			out.close();
 
 		} catch (Exception e) {
@@ -615,19 +729,14 @@ public class Util {
 			XMLReader xmlReader = saxSource.getXMLReader();
 			decode(xmlReader, compressedXml, "tmp.xml");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (EXIException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -639,26 +748,31 @@ public class Util {
 		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util
 				.readXML("schema/cafe_variome.xsd", "1KG.xml",
 						org.varioml.jaxb.CafeVariome.class);
-		util.writeEXI("schema/cafe_variome.xsd", "1KG.exi", o);
+//		util.writeXMLWithoutNS("schema/cafe_variome.xsd", "test.xml", o);
 
-		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
-				.readEXI("schema/cafe_variome.xsd", "1KG.exi",
-						org.varioml.jaxb.CafeVariome.class);
+		util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
 
-		// util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
-		util.writeBSON4MONGO("test.bson", o2);
+		// util.writeEXI("schema/cafe_variome.xsd", "1KG.exi", o);
 		//
 		// org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
-		// .readXML("schema/cafe_variome.xsd", "test.xml",
+		// .readEXI("schema/cafe_variome.xsd", "1KG.exi",
 		// org.varioml.jaxb.CafeVariome.class);
 		//
-		org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util
-				.readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
-		//
-		util.writeJSON("tmp.json", o);
-		util.writeJSON("tmp2.json", o3);
-		// Object x = util.readJSON("tmp.json", org.varioml.jaxb.Panel.class);
-		// //util.writeXML("lsdb.xsd", "tmp.xml", x);
+		// // util.writeXML("schema/cafe_variome.xsd", "test.xml", o);
+		// util.writeBSON4MONGO("test.bson", o2);
+		// //
+		org.varioml.jaxb.CafeVariome o2 = (org.varioml.jaxb.CafeVariome) util
+				.readXML("schema/cafe_variome.xsd", "test.xml",
+						org.varioml.jaxb.CafeVariome.class);
 
+		// org.varioml.jaxb.CafeVariome o3 = (org.varioml.jaxb.CafeVariome) util
+		// .readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
+		// //
+		// util.writeJSON("tmp.json", o);
+		// util.writeJSON("tmp2.json", o3);
+		// // Object x = util.readJSON("tmp.json",
+		// org.varioml.jaxb.Panel.class);
+		// // //util.writeXML("lsdb.xsd", "tmp.xml", x);
+		//
 	}
 }
