@@ -109,7 +109,7 @@
             <iso:assert test="vml:phenotype or vml:individual" >Panel should have at least phenotype or individual</iso:assert>
             -->
             <!-- need to delimit use of panel to avoid misuses. We can have only following elements in panel -->
-            <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
+            <iso:assert test="(count(vml:dbx_ref)+count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:comment)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
             <iso:assert test="not($V2) or @id"></iso:assert>
         </iso:rule>
         
