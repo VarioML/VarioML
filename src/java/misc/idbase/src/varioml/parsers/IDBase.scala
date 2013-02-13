@@ -800,18 +800,18 @@ object IDBase {
 
     var counter = counterStart //counter used to get feature table entries like Feature  dna; 1
 
-    if (variantList.length > 1) {
+    if (variantList.length > 0 && cDNAvariantList.length > 0) {
       var ix = 0;
       variantList foreach (l => {
-        println(l.getName().getString())
+        //println(l.getName().getString())
 
-        getAliases(l).addVariant(cDNAvariantList(ix))
+        if ( cDNAvariantList.length > ix) getAliases(l).addVariant(cDNAvariantList(ix))
         ix = ix + 1
       })
     }
-    if (cDNAvariantList.length > 1) {
-      cDNAvariantList foreach (l => println(l.getName().getString()))
-    }
+//    if (cDNAvariantList.length > 0) {
+//      cDNAvariantList foreach (l => println(l.getName().getString()))
+//    }
     //we need to figure how DNA, RNA ja AA sequence are related
     if (variantList.length == RNAvariantList.length &&
       variantList.length == AAvariantList.length) {
@@ -1062,6 +1062,7 @@ object IDBase {
         if (sysName == null) {
 
           noSystematicName += 1
+          Console.err.println("NO SYS NAME: " + inv.getId())
 
         } else {
 
@@ -1127,6 +1128,8 @@ object IDBase {
 
             case _ => {
 
+              Console.err.println("UNKNOWN : " + inv.getId())
+
               throw new Exception("Unknown systematic name " + sysName + " " + inv.getId())
             }
           }
@@ -1159,6 +1162,7 @@ object IDBase {
                   }
                   val hap2 = new Haplotype()
                   hap2.setAllele(2)
+                  
                   v2 foreach ((va) => {
                     hap2.addVariant(createEventInstance(va))
                   })
@@ -1169,6 +1173,12 @@ object IDBase {
 
                   thisVariant.addHaplotype(hap2)
 
+                  if ( hap1.getVariantList() == null ||  hap1.getVariantList().size() ==0 ) {
+                    Console.err.println(" CHECK PATIENT.. Hap1 =" + inv.getId())
+                  }
+                  if ( hap2.getVariantList() ==null ||  hap2.getVariantList().size() ==0 ) {
+                    Console.err.println(" CHECK PATIENT.. Hap2 =" + inv.getId())
+                  }
                 } else if (homozygVariant) {
 
                   //dipoid
@@ -1283,25 +1293,49 @@ object IDBase {
   }
   def writeTab(lsdb: Lsdb) = {
 
-    var map = scala.collection.mutable.HashMap[String, Int]()
+    var map = scala.collection.mutable.HashMap[String, List[Individual]]()
+    
     printToFile(new File("idbase.tab"))(p => {
       lsdb.getIndividualList() foreach (l => {
         l.getVariantList() foreach (v => {
           v.getHaplotypeList() foreach (h => {
             if (h.getVariantList() == null) {
-              Console.err.println("empty: " + l.getId())
+              Console.err.println("empty: " + l.getId() + " ")
+              val ali = h.getAliases()
+              if (ali != null) {
+                ali.getVariantList() foreach (a => {
+                  Console.err.println(a.getName().getString())
+                })
+              }
             } else {
+              
               h.getVariantList() foreach (a => {
                 val ali = a.getAliases()
                 if (ali == null) {
                   Console.err.println("cgheck: " + l.getId())
-
+                } else {
+                  assert( ali.getVariantList().size() == 1," not supported..." )
+                  val a = ali.getVariantList()(0)
+                  if (map.contains(a.getName().getString())){
+                    map.put(a.getName().getString(),
+                        map.get(a.getName().getString()).get ::: List(l))
+                  } else {
+                    map.put(a.getName().getString(),List(l))
+                  }
                 }
               })
             }
           })
         })
       })
+    })
+    
+    map.keySet foreach (k=>{
+      Console.err.print(k+" ")
+      map.get(k).get foreach (l=>{
+        Console.err.print(l.getId()+" ")
+      })
+      Console.err.println()
     })
   }
 
