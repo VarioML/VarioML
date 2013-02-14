@@ -22,6 +22,16 @@
             <phenotype term="Osteogenesis Imperfecta"/>            
             <evidence_code term="curator inference" accession="ECO:0000205" source="obo.eco"/>            
         </pathogenicity>
+
+  <frequency type="allele" samples="2184">
+            <population type="group" term="All samples"/>
+            <freq>0.0060</freq>
+        </frequency>
+        <frequency type="allele" samples="492">
+            <population type="ethnic" term="African" accession="AFR"/>
+            <freq>0.0183</freq>
+    </frequency>
+
         <variant_detection technique="CMC" template="DNA">            
         </variant_detection> 
 
@@ -45,7 +55,12 @@ on gene products(s)"/>
         </seq_changes> 
 
 
-
+ <location>
+      <ref_seq accession="hg19"/>
+      <chr>chr3</chr>
+      <start>33155979</start>
+      <end>33155979</end>
+    </location>
         
         <genetic_origin term="paternal">
             <evidence_code term="inferred"/>
