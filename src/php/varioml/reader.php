@@ -265,12 +265,15 @@ class VariantCharacteristic extends Annotatable {
     public $name;
     public $genes = array();
     public $pathogenicities = array();
+    public $frequencies = array();
     public $seq_changes ;
+    public $type;
+    public $locations;
 
     protected function populateFromAttribs($node) {
-        
+        $this->type = $node->getAttribute("type");
     }
-
+    
     protected function populateFromElements( $node) {
         switch( $node->localName) {
         case "name":
@@ -285,8 +288,14 @@ class VariantCharacteristic extends Annotatable {
         case "pathogenicity":
             array_push($this->pathogenicities, new Pathogenicity($node));
             break;
+        case "frequency":
+            array_push($this->frequencies, new Frequency($node));
+            break;
         case "seq_changes":
             $this->seq_changes = new SeqChg($node);
+            break;
+        case "location":
+            $this->locations = new Location($node);
             break;
         default:
             parent::populateFromElements($node);
@@ -309,6 +318,31 @@ class Pathogenicity extends Observation {
         switch( $node->localName) {
         case "phenotype":
             $this->phenotype = new Phenotype($node);
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }  
+    }
+}
+
+class Frequency extends Observation {
+    public $population;
+    public $freq;
+    public $samples;
+    
+    protected function populateFromAttribs($node) {
+        $this->type = $node->getAttribute("type");
+        $this->samples = $node->getAttribute("samples");
+    }
+    
+    protected function populateFromElements($node) {
+        switch( $node->localName) {
+        case "population":
+            $this->population = new Population($node);
+            break;
+        case "freq":
+            $this->freq = new Text($node);
             break;
         default:
             parent::populateFromElements($node);
@@ -346,6 +380,7 @@ class SeqChg extends Observation {
 }
 
 
+
 class ConsVariant extends VariantCharacteristic {
     public $consequence;
     public $type;
@@ -367,6 +402,80 @@ class ConsVariant extends VariantCharacteristic {
 }
 
 class Phenotype extends Observation { 
+}
+
+class Population extends Observation { 
+        protected function populateFromAttribs($node) {
+        $this->term = $node->getAttribute("term");
+        $this->type = $node->getAttribute("type");
+        $this->accession = $node->getAttribute("accession");
+
+    }
+}
+
+class Location extends Observation {
+    public $l_ref_seq;
+    public $start;
+    public $end;
+    public $chr;
+
+    protected function populateFromAttribs($node) {        
+    }
+    protected function populateFromElements($node) {
+        switch( $node->localName) {
+        case "ref_seq":
+            $this->l_ref_seq =  new DbXRef($node);
+            break;
+        case "chr":
+            $this->chr = new Text($node);
+            break;
+        case "start":
+            $this->start = new Text($node);
+            break;
+        case "end":
+            $this->end = new Text($node);
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }  
+    }
+}
+
+
+class Source extends Annotatable {
+    public $source;
+    public $sname;
+    public $uri;
+    public $pathogenicities = array();
+    public $frequencies = array();
+    public $seq_changes ;
+
+    protected function populateFromAttribs($node) {
+        $this->type = $node->getAttribute("type");
+        parent::populateFromAttribs($node);
+    }
+
+    protected function populateFromElements( $node) {
+        switch( $node->localName) {
+        case "name":
+            $this->sname = new Name($node);
+            break;
+        case "ref_seq":
+            $this->ref_seq =  new DbXRef($node);
+            break;
+        case "url":
+            $this->uri =  new DbXRef($node);            
+            break;
+        case "contact":
+            $this->name = new Name($node);
+            $this->email = new Text($node);
+            break;
+        default:
+            parent::populateFromElements($node);
+            break;
+        }      
+    }
 }
 
 
@@ -396,8 +505,17 @@ while ($reader->read()) {
             foreach ( $patho->evidence_codes as $evic ) {
                 print "  EVIDENCE CODE=".$evic->term."\n";
             }
-            
-            
+
+            print "  START=".$var->locations->start->string."\n";
+            print "  END=".$var->locations->end->string."\n";
+
+           foreach ( $var->frequencies as $frequ ) {
+            print "  FREQUENCY TYPE=".$frequ->type."\n";
+            print "  POP.TERM=".$frequ->population->type."\n";
+            print "  FREQ=".$frequ->freq->string."\n";
+            }
+
+
             if ( $var->seq_changes) { 
                 foreach ( $var->seq_changes->variants as $rvar ) {
                     print "  RNA Sequence changes:\n";
@@ -429,11 +547,15 @@ while ($reader->read()) {
            }
            break;
            
+       /* 
        case "source":
-           //todo: Source 
+           $var = new Source($reader);
+           print " ===============\n";
+           
            break;
        default: 
            break;
+        */
        }
    }
 }
