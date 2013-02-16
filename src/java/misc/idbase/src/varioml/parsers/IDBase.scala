@@ -805,13 +805,13 @@ object IDBase {
       variantList foreach (l => {
         //println(l.getName().getString())
 
-        if ( cDNAvariantList.length > ix) getAliases(l).addVariant(cDNAvariantList(ix))
+        if (cDNAvariantList.length > ix) getAliases(l).addVariant(cDNAvariantList(ix))
         ix = ix + 1
       })
     }
-//    if (cDNAvariantList.length > 0) {
-//      cDNAvariantList foreach (l => println(l.getName().getString()))
-//    }
+    //    if (cDNAvariantList.length > 0) {
+    //      cDNAvariantList foreach (l => println(l.getName().getString()))
+    //    }
     //we need to figure how DNA, RNA ja AA sequence are related
     if (variantList.length == RNAvariantList.length &&
       variantList.length == AAvariantList.length) {
@@ -1162,7 +1162,7 @@ object IDBase {
                   }
                   val hap2 = new Haplotype()
                   hap2.setAllele(2)
-                  
+
                   v2 foreach ((va) => {
                     hap2.addVariant(createEventInstance(va))
                   })
@@ -1173,10 +1173,10 @@ object IDBase {
 
                   thisVariant.addHaplotype(hap2)
 
-                  if ( hap1.getVariantList() == null ||  hap1.getVariantList().size() ==0 ) {
+                  if (hap1.getVariantList() == null || hap1.getVariantList().size() == 0) {
                     Console.err.println(" CHECK PATIENT.. Hap1 =" + inv.getId())
                   }
-                  if ( hap2.getVariantList() ==null ||  hap2.getVariantList().size() ==0 ) {
+                  if (hap2.getVariantList() == null || hap2.getVariantList().size() == 0) {
                     Console.err.println(" CHECK PATIENT.. Hap2 =" + inv.getId())
                   }
                 } else if (homozygVariant) {
@@ -1294,8 +1294,8 @@ object IDBase {
   def writeTab(lsdb: Lsdb) = {
 
     var map = scala.collection.mutable.HashMap[String, List[Individual]]()
-    
-    printToFile(new File("idbase.tab"))(p => {
+
+    printToFile(new File("idbase.tab"))(prt => {
       lsdb.getIndividualList() foreach (l => {
         l.getVariantList() foreach (v => {
           v.getHaplotypeList() foreach (h => {
@@ -1308,19 +1308,19 @@ object IDBase {
                 })
               }
             } else {
-              
+
               h.getVariantList() foreach (a => {
                 val ali = a.getAliases()
                 if (ali == null) {
                   Console.err.println("cgheck: " + l.getId())
                 } else {
-                  assert( ali.getVariantList().size() == 1," not supported..." )
+                  assert(ali.getVariantList().size() == 1, " not supported...")
                   val a = ali.getVariantList()(0)
-                  if (map.contains(a.getName().getString())){
+                  if (map.contains(a.getName().getString())) {
                     map.put(a.getName().getString(),
-                        map.get(a.getName().getString()).get ::: List(l))
+                      map.get(a.getName().getString()).get ::: List(l))
                   } else {
-                    map.put(a.getName().getString(),List(l))
+                    map.put(a.getName().getString(), List(l))
                   }
                 }
               })
@@ -1328,15 +1328,71 @@ object IDBase {
           })
         })
       })
-    })
-    
-    map.keySet foreach (k=>{
-      Console.err.print(k+" ")
-      map.get(k).get foreach (l=>{
-        Console.err.print(l.getId()+" ")
+
+      val cMap = HashMap("Norway" -> "Norwegian",
+        "Slovenia" -> "Slovenian", "Russia" -> "Russian", "Italy" -> "Italian",
+        "Hungary" -> "Hungarian", "Egypt" -> "Egyptian", "USA" -> "American", "Korea" -> "Korean",
+        "Japan" -> "Japanise", "Sicily" -> "Sicilian", "India" -> "Indian",
+        "Britain" -> "British", "Poland" -> "Polish", "Allele 1:Korea; Allele 2:Japan" -> "Korean/Japanise")
+      map.keySet foreach (k => {
+        prt.print(k + "\t")
+
+        val indivs = map.get(k).get
+        val distincts = indivs.distinct
+        val homo = indivs.size - distincts.size
+        val pops1 = (distincts flatMap ((i: Individual) => {
+          val popList = i.getPopulationList()
+          if (popList != null) {
+            i.getPopulationList().map(_.getTerm().replaceAll("Mongoloid\\s*;\\s*", "")
+              .replaceAll("Caucasoid\\s*;\\s*", ""))
+          } else {
+            ""
+          }
+        })).distinct
+        val pops = pops1.map(p => if (cMap.get(p) != null) { cMap.get(p) } else { p })
+        prt.print(homo + "\t" + (indivs.size - homo) + "\t" + pops.mkString(";"))
+
+        var test = List[VmlVariantEvent]()
+        distincts foreach (l => {
+          l.getVariantList() foreach ((v) => {
+            v.getHaplotypeList() foreach ((h) => {
+              if (h.getVariantList() != null) {
+                h.getVariantList() foreach ((v) => {
+                  assert(v.getAliases().getVariantList().size() == 1)
+                  val x = v.getAliases().getVariantList().get(0)
+                  if (x.getName().getString() == k) {
+                    test = test ::: List(v)
+                  }
+                })
+              } else {
+                Console.err.println("CHEK " + l.getId())
+              }
+            })
+          })
+          assert(test.size > 0, " Alias mismatch " + k + " " + test.size)
+          val head = test.head
+          val tail = test.tail
+          if (head.getSeqChanges() != null && head.getSeqChanges().getVariantList() != null) {
+            val sq1 = head.getSeqChanges().getVariantList().get(0)
+            tail foreach ((x) => {
+              if (head.getName().getString() != x.getName().getString()) {
+                Console.err.println("ERROR " + head.getName() + " " + x.getName().getString)
+              }
+              val sq = x.getSeqChanges()
+              val sq2 = x.getSeqChanges().getVariantList().get(0)
+              if (sq2.getName().getString() != sq1.getName().getString()) {
+                Console.err.println("ERROR " + head.getName() + " " + x.getName().getString)
+              }
+
+            })
+          } else {
+            Console.err.println("CHK HIS " + l.getId())
+          }
+        })
+        prt.println()
       })
-      Console.err.println()
     })
+
   }
 
   def main(args: Array[String]) {
