@@ -6,8 +6,8 @@ h2 {font:bold 120% Georgia, Times, serif;color:#666;}
 #nav li{display:inline;padding:5px;}
 #nav li a{border-bottom:3px solid #eee;text-decoration:none;color:#b00;}
 
-li.success{padding:5px;color:#666;}
-li.failure{padding:5px;color:Red; font:bold}
+li.success{padding:5px;color:#4CC417; text-style:bold}
+li.failure{padding:5px;color:Red; text-style:bold}
 
 .term {
 font:bold 120% Lucida Sans, Arial, Monaco, sans-serif;color:#b00;
