@@ -967,6 +967,9 @@ object IDBase {
   }
   def toXML(batch: DataBatch): Lsdb = {
 
+    val hOut  = new java.io.PrintWriter(new File("test.tab"))
+    hOut.println("")
+    
     val lsdb = new Lsdb()
     val source = new org.varioml.jaxb.Source()
     val contact = new Contact()
@@ -1004,6 +1007,7 @@ object IDBase {
         val sexStr = rec.get(Sex)
         val gender = new Gender()
 
+        
         if (sexStr != null) {
           if (sexStr.equals("XX")) {
             gender.setCode(2)
@@ -1045,6 +1049,9 @@ object IDBase {
 
           }
 
+
+        }
+
           val pop = rec.get(EthnicOrigin)
           if (pop != null) {
             val population = new Population()
@@ -1053,8 +1060,6 @@ object IDBase {
             population.setType("ethnic")
             inv.addPopulation(population)
           }
-
-        }
 
         val sysName = rec.get(SystematicName)
         //get systematic names and try to find corresonding feature table entry
@@ -1233,6 +1238,29 @@ object IDBase {
           gene.setAccession(batch.getHeader(Gene))
           vari.setGene(gene)
           lsdb.addIndividual(inv)
+          
+          var ix = 7
+          systematicNames._1.sorted.foreach ((n)=>{
+            ix = ix - 1
+            assert(ix>0)
+            hOut.print(n.replaceAll("\\s*;\\s*$","").trim()+"\t")
+          })
+          for( i <- ix to 0 by  -1) {
+            hOut.print("\t")
+          }
+          ix = 7
+          systematicNames._2.sorted.foreach ((n)=>{
+            ix = ix - 1
+            assert(ix>0)
+            hOut.print(n.replaceAll("\\s*;\\s*$","").trim()+"\t")
+          })
+          for( i <- ix to 0 by  -1) {
+            hOut.print("\t")
+          }
+          
+          hOut.println(rec.get(Accession)+"\t"+sexStr+"\t"+rec.get(Diagnosis)+
+              "\t"+rec.get(EthnicOrigin)+"\t"+rec.get(Relative)+"\t"+rec.get(RefCrossRef)+
+              "\t"+rec.get(RefAuthors)+"\t"+rec.get(RefTitle))
 
         }
 
@@ -1329,11 +1357,13 @@ object IDBase {
         })
       })
 
-      val cMap = HashMap("Norway" -> "Norwegian",
+      val cMap = HashMap("Norway" -> "Norwegian","Finland"->"Finnish",
         "Slovenia" -> "Slovenian", "Russia" -> "Russian", "Italy" -> "Italian",
         "Hungary" -> "Hungarian", "Egypt" -> "Egyptian", "USA" -> "American", "Korea" -> "Korean",
         "Japan" -> "Japanise", "Sicily" -> "Sicilian", "India" -> "Indian",
         "Britain" -> "British", "Poland" -> "Polish", "Allele 1:Korea; Allele 2:Japan" -> "Korean/Japanise")
+
+      prt.println("mutation\thomozyg\tpopulation\tcombined\tgenome\tRNA\tAA\tdisease")
       map.keySet foreach (k => {
         prt.print(k + "\t")
 
@@ -1349,8 +1379,19 @@ object IDBase {
             ""
           }
         })).distinct
+
+
+         val disease = (distincts flatMap ((i: Individual) => {
+          val phenoList = i.getPhenotypeList()
+          if (phenoList != null) {
+            phenoList.filter(_.getType() == "diagnose").map(_.getTerm())
+          } else {
+            ""
+          }
+        })).distinct
+
         val pops = pops1.map(p => if (cMap.get(p) != null) { cMap.get(p) } else { p })
-        prt.print(homo + "\t" + (indivs.size - homo) + "\t" + pops.mkString(";"))
+        prt.print(homo + "\t" + (indivs.size - homo) + "\t" + pops.mkString(";")+"\t")
 
         var test = List[VmlVariantEvent]()
         distincts foreach (l => {
@@ -1369,6 +1410,7 @@ object IDBase {
               }
             })
           })
+          
           assert(test.size > 0, " Alias mismatch " + k + " " + test.size)
           val head = test.head
           val tail = test.tail
@@ -1389,6 +1431,23 @@ object IDBase {
             Console.err.println("CHK HIS " + l.getId())
           }
         })
+        val ge = test.head.getName().getString()
+        val sq1 = test.head.getSeqChanges()
+        var rna=""
+        var aa = ""
+        if ( sq1 != null  && sq1.getVariantList() != null) {
+          rna = sq1.getVariantList().get(0).getName().getString()
+          val sq2 = sq1.getVariantList().get(0).getSeqChanges()
+          if ( sq2 != null  && sq2.getVariantList() != null) {
+        	  aa = sq2.getVariantList().get(0).getName().getString()            
+          }
+        }
+        if ( rna.startsWith("p.")) {
+          assert(aa.isEmpty(),"check name "+rna)
+        	prt.print(ge+"\t"+""+"\t"+rna+"\t"+disease.mkString(";"))          
+        } else {
+        	prt.print(ge+"\t"+rna+"\t"+aa+"\t"+disease.mkString(";"))          
+        }
         prt.println()
       })
     })

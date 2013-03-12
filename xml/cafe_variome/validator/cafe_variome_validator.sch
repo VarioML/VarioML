@@ -3,7 +3,7 @@
     xmlns="http://purl.oclc.org/dsdl/schematron"  
     xmlns:iso="http://purl.oclc.org/dsdl/schematron" 
     xmlns:vml="http://varioml.org/xml/1.0"
-    queryBinding='xslt1'
+    queryBinding='xslt2'
     schemaVersion='ISO19757-3'>                  
     <iso:title>ISO schematron validation rules for the Cafe Variome data submissions</iso:title>
     <iso:ns prefix='vml' uri='http://varioml.org/xml/1.0'/> 
@@ -37,6 +37,7 @@
         <iso:rule context="vml:cafe_variome/vml:source/vml:contact">                                  
             <iso:assert 
                 test="vml:name or vml:email">Contact name or email is missing</iso:assert> 
+            <iso:assert test="not(@role) or @role='curator' or @role='producer' or @role='submitter'">Role of contact is not recognized</iso:assert>
             <iso:report 
                 test="vml:name or vml:email">Contact ok</iso:report> 
         </iso:rule>
