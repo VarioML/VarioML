@@ -120,7 +120,9 @@
   
         <iso:rule context="vml:location">
             <iso:assert test="vml:ref_seq">Location must have reference sequence</iso:assert>
+<!--
             <iso:assert test="not(vml:chr)">Location entry should not have chromosome. Chromosome reference sequence should be used instead</iso:assert>
+-->
             <iso:assert test="normalize-space(vml:end) ge normalize-space(vml:start) ">Incorrect location. End should be larger or equal than start position</iso:assert>
 
 
@@ -148,7 +150,7 @@
         </iso:rule>
 
         <iso:rule context="vml:variant/vml:panel" >
-            <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)) = count(child::*)" >Element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
+            <iso:assert test="(count(vml:phenotype)+count(vml:individual)+count(vml:organism)+count(vml:population)+count(vml:comment)) = count(child::*)" >This element contains VarioML terms which are not part of the Cafe Variome spec</iso:assert>
             <iso:assert test="not($V2) or @id"></iso:assert>
         </iso:rule>
         
@@ -188,9 +190,9 @@
         
         <iso:rule context="vml:ref_seq" >
             <iso:assert test="@accession" >Accession number is missing in database xref (gene or ref_seq)</iso:assert>
-            <iso:assert test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL'" >Source of ref sequence is wrong</iso:assert>            
+            <iso:assert test="not($V2) or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL' or upper-case(@source)='UCSC'" >Source of ref sequence is wrong</iso:assert>            
             <iso:report test="@accession" >Database xref (gene or ref_seq) contains required accession number.</iso:report>
-            <iso:report test="not($V2)  or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL'" >Ref sequence Source is correctly formatted.</iso:report>  
+            <iso:report test="not($V2) or upper-case(@source)='GENBANK' or upper-case(@source)='REFSEQ' or upper-case(@source)='ENSEMBL' or upper-case(@source)='UCSC'" >Ref sequence Source is correctly formatted.</iso:report>  
         </iso:rule>
         
     </iso:pattern>

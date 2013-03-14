@@ -12,10 +12,16 @@ use="generate-id(preceding-sibling::svrl:fired-rule[1])"/>
 <xsl:template match="/">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="val_rpt.css" />
-<style type="text/css" media="screen">@import "val_rpt.css";</style>					
+<link rel="stylesheet" type="text/css" href="http://varioml.org/val/val_rpt.css" />
+<style type="text/css" media="screen">@import "http://varioml.org/val/val_rpt.css";</style>					
 <style type="text/css" media="screen">@import "http://twitter.github.com/bootstrap/assets/css/bootstrap.css";</style>
 <style type="text/css" media="screen">@import "http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css;</style>
+
+<style>
+#input {
+position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;
+}
+</style>
 
 			<title>VarioML Schema Validation Report</title>
 		</head>
