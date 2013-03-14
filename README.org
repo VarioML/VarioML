@@ -10,7 +10,8 @@
 
 *VarioML is currently implemented in Café Variome ([[http://cafevariome.org]]).*
 - The specification for this implementation is here: [[http://varioml.org/cafevariome_minspec.htm]].   
-- A Schematron implementation is here: [[https://raw.github.com/VarioML/VarioML/master/xml/cafe_variome/cafe_variome_validator.sch]]
+- A Schematron implementation is here: [[https://github.com/VarioML/VarioML/tree/master/xml/cafe_variome/validator]]
+- An online tool that performs client-side (secure) validation of XML against the Café Variome schema is here: [[http:varioml.org/validator.htm]] 
 
 ** Background
 This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of LSDB Data ([[http://varioml.org/]]).
@@ -46,7 +47,8 @@ VarioML has received funding from the European Community's Seventh Framework Pro
 under grant agreement number 200754 - the GEN2PHEN project.
 
 ** Apps
-Demo applications can be found here https://github.com/VarioML/Apps
+Demo applications can be found here https://github.com/VarioML/Apps.
+Also see validation tools here: [[https://github.com/VarioML/VarioML/tree/master/xml/cafe_variome/validator]], and here: [[http:varioml.org/validator.htm]]
 ** News
 - 19.8.2012 Population changed to singleton in frequency. Do not have impact in existing XML implementations (property not used)
 - 8.8.2012 Gene has changed to list of genes. One mutation may have impact on more than one genes
