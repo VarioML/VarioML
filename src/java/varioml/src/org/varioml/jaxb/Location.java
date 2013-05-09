@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="location")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_refSeq","_chr","_start","_end"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_unit","_refSeq","_chr","_start","_end"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_unit","_refSeq","_chr","_start","_end"})
 
 
 public class Location /**/ /**/ {

@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="frequency")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_population","_counts","_category","_freq","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_samples","_attr_type","_population","_counts","_category","_freq","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_samples","_attr_type","_population","_counts","_category","_freq","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
 public class Frequency /**/implements VmlAnnotatable /**/ {
@@ -37,7 +37,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- population --===========
-   @org.codehaus.jackson.annotate.JsonProperty("populations")
+   @com.fasterxml.jackson.annotation.JsonProperty("populations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="population",type=Population.class,namespace="http://varioml.org/xml/1.0")
 	private Population _population ;
 	public void setPopulation( Population population) { 
@@ -97,7 +97,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- value --===========
-   @org.codehaus.jackson.annotate.JsonProperty("values")
+   @com.fasterxml.jackson.annotation.JsonProperty("values")
    @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
@@ -114,7 +114,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- evidence_code --===========
-   @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
+   @com.fasterxml.jackson.annotation.JsonProperty("evidence_codes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
@@ -131,7 +131,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- protocol_id --===========
-   @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
+   @com.fasterxml.jackson.annotation.JsonProperty("protocol_ids")
    @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
@@ -158,7 +158,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -175,7 +175,7 @@ public class Frequency /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 

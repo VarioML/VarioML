@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="seq_region")
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_seqRegion","_location","_description","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_uri","_attr_xmlns","_attr_xmlnsXsi","_attr_xsiSchemaLocation","_seqRegion","_location","_description","_dbXref","_comment"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_uri","_attr_xmlns","_attr_xmlnsXsi","_attr_xsiSchemaLocation","_seqRegion","_location","_description","_dbXref","_comment"})
 
 
 public class SeqRegion /**/implements VmlOntologyTerm /**/ {
@@ -87,7 +87,7 @@ public class SeqRegion /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- seq_region --===========
-   @org.codehaus.jackson.annotate.JsonProperty("seq_regions")
+   @com.fasterxml.jackson.annotation.JsonProperty("seq_regions")
    @javax.xml.bind.annotation.XmlElement(required=false,name="seq_region",type=SeqRegion.class,namespace="http://varioml.org/xml/1.0")
 	private List<SeqRegion> _seqRegion ;
 	public void setSeqRegionList( List<SeqRegion> seqRegion) { 
@@ -104,7 +104,7 @@ public class SeqRegion /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- location --===========
-   @org.codehaus.jackson.annotate.JsonProperty("locations")
+   @com.fasterxml.jackson.annotation.JsonProperty("locations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="location",type=Location.class,namespace="http://varioml.org/xml/1.0")
 	private List<Location> _location ;
 	public void setLocationList( List<Location> location) { 
@@ -131,7 +131,7 @@ public class SeqRegion /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -148,7 +148,7 @@ public class SeqRegion /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 

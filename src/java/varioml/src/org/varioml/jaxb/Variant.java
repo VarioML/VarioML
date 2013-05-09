@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.varioml.util.Util;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="variant")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_gene","_refSeq","_name","_haplotype","_panel","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_genotype","_consequence","_pathogenicity","_sample","_tissue","_variantDetection","_restrictionSite","_tissueDistribution","_geneticOrigin","_frequency","_seqChanges","_aliases","_source","_location","_sharingPolicy","_creationDate","_modificationDate","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_copyCount","_attr_genotypic","_attr_id","_attr_subcellularPart","_attr_type","_attr_uri","_gene","_refSeq","_name","_haplotype","_panel","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_genotype","_consequence","_pathogenicity","_sample","_tissue","_variantDetection","_restrictionSite","_tissueDistribution","_geneticOrigin","_frequency","_seqChanges","_aliases","_source","_location","_sharingPolicy","_creationDate","_modificationDate","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_copyCount","_attr_genotypic","_attr_id","_attr_subcellularPart","_attr_type","_attr_uri","_gene","_refSeq","_name","_haplotype","_panel","_seqRegion","_variantType","_variantClass","_originalId","_exon","_sequence","_genotype","_consequence","_pathogenicity","_sample","_tissue","_variantDetection","_restrictionSite","_tissueDistribution","_geneticOrigin","_frequency","_seqChanges","_aliases","_source","_location","_sharingPolicy","_creationDate","_modificationDate","_value","_evidenceCode","_protocolId","_observationDate","_dbXref","_comment"})
 
 
 public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
@@ -79,7 +79,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- gene --===========
-   @org.codehaus.jackson.annotate.JsonProperty("genes")
+   @com.fasterxml.jackson.annotation.JsonProperty("genes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="gene",type=Gene.class,namespace="http://varioml.org/xml/1.0")
 	private List<Gene> _gene ;
 	public void setGeneList( List<Gene> gene) { 
@@ -124,7 +124,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- haplotype --===========
-   @org.codehaus.jackson.annotate.JsonProperty("haplotypes")
+   @com.fasterxml.jackson.annotation.JsonProperty("haplotypes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="haplotype",type=Haplotype.class,namespace="http://varioml.org/xml/1.0")
 	private List<Haplotype> _haplotype ;
 	public void setHaplotypeList( List<Haplotype> haplotype) { 
@@ -141,7 +141,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- panel --===========
-   @org.codehaus.jackson.annotate.JsonProperty("panels")
+   @com.fasterxml.jackson.annotation.JsonProperty("panels")
    @javax.xml.bind.annotation.XmlElement(required=false,name="panel",type=Panel.class,namespace="http://varioml.org/xml/1.0")
 	private List<Panel> _panel ;
 	public void setPanelList( List<Panel> panel) { 
@@ -158,7 +158,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- seq_region --===========
-   @org.codehaus.jackson.annotate.JsonProperty("seq_regions")
+   @com.fasterxml.jackson.annotation.JsonProperty("seq_regions")
    @javax.xml.bind.annotation.XmlElement(required=false,name="seq_region",type=SeqRegion.class,namespace="http://varioml.org/xml/1.0")
 	private List<SeqRegion> _seqRegion ;
 	public void setSeqRegionList( List<SeqRegion> seqRegion) { 
@@ -175,7 +175,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- variant_type --===========
-   @org.codehaus.jackson.annotate.JsonProperty("variant_types")
+   @com.fasterxml.jackson.annotation.JsonProperty("variant_types")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant_type",type=VariantType.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantType> _variantType ;
 	public void setVariantTypeList( List<VariantType> variantType) { 
@@ -192,7 +192,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- variant_class --===========
-   @org.codehaus.jackson.annotate.JsonProperty("variant_classs")
+   @com.fasterxml.jackson.annotation.JsonProperty("variant_classs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant_class",type=VariantClass.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantClass> _variantClass ;
 	public void setVariantClassList( List<VariantClass> variantClass) { 
@@ -219,7 +219,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- exon --===========
-   @org.codehaus.jackson.annotate.JsonProperty("exons")
+   @com.fasterxml.jackson.annotation.JsonProperty("exons")
    @javax.xml.bind.annotation.XmlElement(required=false,name="exon",type=Exon.class,namespace="http://varioml.org/xml/1.0")
 	private List<Exon> _exon ;
 	public void setExonList( List<Exon> exon) { 
@@ -256,7 +256,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- consequence --===========
-   @org.codehaus.jackson.annotate.JsonProperty("consequences")
+   @com.fasterxml.jackson.annotation.JsonProperty("consequences")
    @javax.xml.bind.annotation.XmlElement(required=false,name="consequence",type=Consequence.class,namespace="http://varioml.org/xml/1.0")
 	private List<Consequence> _consequence ;
 	public void setConsequenceList( List<Consequence> consequence) { 
@@ -273,7 +273,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- pathogenicity --===========
-   @org.codehaus.jackson.annotate.JsonProperty("pathogenicities")
+   @com.fasterxml.jackson.annotation.JsonProperty("pathogenicities")
    @javax.xml.bind.annotation.XmlElement(required=false,name="pathogenicity",type=Pathogenicity.class,namespace="http://varioml.org/xml/1.0")
 	private List<Pathogenicity> _pathogenicity ;
 	public void setPathogenicityList( List<Pathogenicity> pathogenicity) { 
@@ -340,7 +340,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- genetic_origin --===========
-   @org.codehaus.jackson.annotate.JsonProperty("genetic_origins")
+   @com.fasterxml.jackson.annotation.JsonProperty("genetic_origins")
    @javax.xml.bind.annotation.XmlElement(required=false,name="genetic_origin",type=GeneticOrigin.class,namespace="http://varioml.org/xml/1.0")
 	private List<GeneticOrigin> _geneticOrigin ;
 	public void setGeneticOriginList( List<GeneticOrigin> geneticOrigin) { 
@@ -357,7 +357,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- frequency --===========
-   @org.codehaus.jackson.annotate.JsonProperty("frequencies")
+   @com.fasterxml.jackson.annotation.JsonProperty("frequencies")
    @javax.xml.bind.annotation.XmlElement(required=false,name="frequency",type=Frequency.class,namespace="http://varioml.org/xml/1.0")
 	private List<Frequency> _frequency ;
 	public void setFrequencyList( List<Frequency> frequency) { 
@@ -404,7 +404,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- location --===========
-   @org.codehaus.jackson.annotate.JsonProperty("locations")
+   @com.fasterxml.jackson.annotation.JsonProperty("locations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="location",type=Location.class,namespace="http://varioml.org/xml/1.0")
 	private List<Location> _location ;
 	public void setLocationList( List<Location> location) { 
@@ -451,7 +451,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- value --===========
-   @org.codehaus.jackson.annotate.JsonProperty("values")
+   @com.fasterxml.jackson.annotation.JsonProperty("values")
    @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
@@ -468,7 +468,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- evidence_code --===========
-   @org.codehaus.jackson.annotate.JsonProperty("evidence_codes")
+   @com.fasterxml.jackson.annotation.JsonProperty("evidence_codes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="evidence_code",type=EvidenceCode.class,namespace="http://varioml.org/xml/1.0")
 	private List<EvidenceCode> _evidenceCode ;
 	public void setEvidenceCodeList( List<EvidenceCode> evidenceCode) { 
@@ -485,7 +485,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- protocol_id --===========
-   @org.codehaus.jackson.annotate.JsonProperty("protocol_ids")
+   @com.fasterxml.jackson.annotation.JsonProperty("protocol_ids")
    @javax.xml.bind.annotation.XmlElement(required=false,name="protocol_id",type=ProtocolId.class,namespace="http://varioml.org/xml/1.0")
 	private List<ProtocolId> _protocolId ;
 	public void setProtocolIdList( List<ProtocolId> protocolId) { 
@@ -512,7 +512,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -529,7 +529,7 @@ public class Variant /**/implements VmlReportingVariant,VmlShareable /**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 

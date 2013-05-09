@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="individual")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_gender","_dob","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_gender","_dob","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_id","_attr_uri","_gender","_dob","_age","_originalId","_role","_relationship","_organism","_strain","_cultivar","_phenotype","_observation","_population","_variant","_variantGroup","_source","_dbXref","_comment","_sharingPolicy","_creationDate","_modificationDate"})
 
 
 public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
@@ -87,7 +87,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- relationship --===========
-   @org.codehaus.jackson.annotate.JsonProperty("relationships")
+   @com.fasterxml.jackson.annotation.JsonProperty("relationships")
    @javax.xml.bind.annotation.XmlElement(required=false,name="relationship",type=Relationship.class,namespace="http://varioml.org/xml/1.0")
 	private List<Relationship> _relationship ;
 	public void setRelationshipList( List<Relationship> relationship) { 
@@ -134,7 +134,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- phenotype --===========
-   @org.codehaus.jackson.annotate.JsonProperty("phenotypes")
+   @com.fasterxml.jackson.annotation.JsonProperty("phenotypes")
    @javax.xml.bind.annotation.XmlElement(required=false,name="phenotype",type=Phenotype.class,namespace="http://varioml.org/xml/1.0")
 	private List<Phenotype> _phenotype ;
 	public void setPhenotypeList( List<Phenotype> phenotype) { 
@@ -151,7 +151,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- observation --===========
-   @org.codehaus.jackson.annotate.JsonProperty("observations")
+   @com.fasterxml.jackson.annotation.JsonProperty("observations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="observation",type=Observation.class,namespace="http://varioml.org/xml/1.0")
 	private List<Observation> _observation ;
 	public void setObservationList( List<Observation> observation) { 
@@ -168,7 +168,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- population --===========
-   @org.codehaus.jackson.annotate.JsonProperty("populations")
+   @com.fasterxml.jackson.annotation.JsonProperty("populations")
    @javax.xml.bind.annotation.XmlElement(required=false,name="population",type=Population.class,namespace="http://varioml.org/xml/1.0")
 	private List<Population> _population ;
 	public void setPopulationList( List<Population> population) { 
@@ -185,7 +185,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- variant --===========
-   @org.codehaus.jackson.annotate.JsonProperty("variants")
+   @com.fasterxml.jackson.annotation.JsonProperty("variants")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant",type=Variant.class,namespace="http://varioml.org/xml/1.0")
 	private List<Variant> _variant ;
 	public void setVariantList( List<Variant> variant) { 
@@ -202,7 +202,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- variant_group --===========
-   @org.codehaus.jackson.annotate.JsonProperty("variant_groups")
+   @com.fasterxml.jackson.annotation.JsonProperty("variant_groups")
    @javax.xml.bind.annotation.XmlElement(required=false,name="variant_group",type=VariantGroup.class,namespace="http://varioml.org/xml/1.0")
 	private List<VariantGroup> _variantGroup ;
 	public void setVariantGroupList( List<VariantGroup> variantGroup) { 
@@ -229,7 +229,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -246,7 +246,7 @@ public class Individual /**/implements VmlObservationTarget,VmlShareable/**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 

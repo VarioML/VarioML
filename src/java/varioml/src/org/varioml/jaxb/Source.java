@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="source")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_name","_url","_contact","_acknowledgement","_dbXref","_comment"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_date","_attr_id","_attr_uri","_attr_version","_name","_url","_contact","_acknowledgement","_dbXref","_comment"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_date","_attr_id","_attr_uri","_attr_version","_name","_url","_contact","_acknowledgement","_dbXref","_comment"})
 
 
 public class Source /**/implements VmlAnnotatable /**/ {
@@ -67,7 +67,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- url --===========
-   @org.codehaus.jackson.annotate.JsonProperty("urls")
+   @com.fasterxml.jackson.annotation.JsonProperty("urls")
    @javax.xml.bind.annotation.XmlElement(required=false,name="url",type=String.class,namespace="http://varioml.org/xml/1.0")
 	private List<String> _url ;
 	public void setUrlList( List<String> url) { 
@@ -84,7 +84,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- contact --===========
-   @org.codehaus.jackson.annotate.JsonProperty("contacts")
+   @com.fasterxml.jackson.annotation.JsonProperty("contacts")
    @javax.xml.bind.annotation.XmlElement(required=false,name="contact",type=Contact.class,namespace="http://varioml.org/xml/1.0")
 	private List<Contact> _contact ;
 	public void setContactList( List<Contact> contact) { 
@@ -101,7 +101,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- acknowledgement --===========
-   @org.codehaus.jackson.annotate.JsonProperty("acknowledgements")
+   @com.fasterxml.jackson.annotation.JsonProperty("acknowledgements")
    @javax.xml.bind.annotation.XmlElement(required=false,name="acknowledgement",type=Acknowledgement.class,namespace="http://varioml.org/xml/1.0")
 	private List<Acknowledgement> _acknowledgement ;
 	public void setAcknowledgementList( List<Acknowledgement> acknowledgement) { 
@@ -118,7 +118,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -135,7 +135,7 @@ public class Source /**/implements VmlAnnotatable /**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 

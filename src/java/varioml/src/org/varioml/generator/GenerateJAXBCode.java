@@ -14,9 +14,6 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
 
-import org.codehaus.jackson.annotate.JsonAutoDetect;
-import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility;
-import org.codehaus.jackson.annotate.JsonPropertyOrder;
 import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.varioml.generator.GenerateSimpleXMLCode.Counter;
 import org.varioml.util.Util;

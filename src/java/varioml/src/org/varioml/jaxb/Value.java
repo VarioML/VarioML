@@ -2,12 +2,12 @@ package org.varioml.jaxb;
 import java.util.ArrayList;
 import java.util.List;
 
-@org.codehaus.jackson.annotate.JsonAutoDetect( fieldVisibility =  org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE, getterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE,setterVisibility= org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.NONE)
-@org.codehaus.jackson.map.annotate.JsonSerialize(include = org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL)
+@com.fasterxml.jackson.annotation.JsonAutoDetect( fieldVisibility =  com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE, getterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE,setterVisibility= com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.NONE)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(include = com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL)
 @javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.FIELD)
 @javax.xml.bind.annotation.XmlRootElement(namespace="http://varioml.org/xml/1.0",name="value")
 @javax.xml.bind.annotation.XmlType(propOrder = {  "_description","_dbXref","_comment","_value"})
-@org.codehaus.jackson.annotate.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_type","_attr_unit","_attr_uri","_attr_val","_attr_nval","_description","_dbXref","_comment","_value"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder(value={  "_attr_accession","_attr_source","_attr_term","_attr_type","_attr_unit","_attr_uri","_attr_val","_attr_nval","_description","_dbXref","_comment","_value"})
 
 
 public class Value /**/implements VmlOntologyTerm /**/ {
@@ -107,7 +107,7 @@ public class Value /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- db_xref --===========
-   @org.codehaus.jackson.annotate.JsonProperty("db_xrefs")
+   @com.fasterxml.jackson.annotation.JsonProperty("db_xrefs")
    @javax.xml.bind.annotation.XmlElement(required=false,name="db_xref",type=DbXref.class,namespace="http://varioml.org/xml/1.0")
 	private List<DbXref> _dbXref ;
 	public void setDbXrefList( List<DbXref> dbXref) { 
@@ -124,7 +124,7 @@ public class Value /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- comment --===========
-   @org.codehaus.jackson.annotate.JsonProperty("comments")
+   @com.fasterxml.jackson.annotation.JsonProperty("comments")
    @javax.xml.bind.annotation.XmlElement(required=false,name="comment",type=Comment.class,namespace="http://varioml.org/xml/1.0")
 	private List<Comment> _comment ;
 	public void setCommentList( List<Comment> comment) { 
@@ -141,7 +141,7 @@ public class Value /**/implements VmlOntologyTerm /**/ {
 	}
  
 	// ===========-- value --===========
-   @org.codehaus.jackson.annotate.JsonProperty("values")
+   @com.fasterxml.jackson.annotation.JsonProperty("values")
    @javax.xml.bind.annotation.XmlElement(required=false,name="value",type=Value.class,namespace="http://varioml.org/xml/1.0")
 	private List<Value> _value ;
 	public void setValueList( List<Value> value) { 
