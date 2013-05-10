@@ -49,7 +49,7 @@ import com.siemens.ct.exi.api.sax.EXISource;
 import com.siemens.ct.exi.exceptions.EXIException;
 import com.siemens.ct.exi.grammars.Grammars;
 import com.siemens.ct.exi.helpers.DefaultEXIFactory;
-import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
+//import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
 
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonGenerator.Feature;
@@ -57,32 +57,32 @@ import de.undercouch.bson4jackson.BsonParser;
 
 public class Util {
 
-	public static class MyNamespaceMapper extends NamespacePrefixMapper {
-
-		private String PREFIX = ""; // DEFAULT NAMESPACE
-		private String URI = "http://www.example.com/FOO";
-
-		public MyNamespaceMapper(String pREFIX, String uRI) {
-			super();
-			PREFIX = pREFIX;
-			URI = uRI;
-		}
-
-		@Override
-		public String getPreferredPrefix(String namespaceUri,
-				String suggestion, boolean requirePrefix) {
-			if (URI.equals(namespaceUri)) {
-				return PREFIX;
-			}
-			return suggestion;
-		}
-
-		@Override
-		public String[] getPreDeclaredNamespaceUris() {
-			return new String[] { URI };
-		}
-
-	}
+//	public static class MyNamespaceMapper extends NamespacePrefixMapper {
+//
+////		private String PREFIX = ""; // DEFAULT NAMESPACE
+//		private String URI = "http://www.example.com/FOO";
+//
+//		public MyNamespaceMapper(String pREFIX, String uRI) {
+//			super();
+//			PREFIX = pREFIX;
+//			URI = uRI;
+//		}
+//
+//		@Override
+//		public String getPreferredPrefix(String namespaceUri,
+//				String suggestion, boolean requirePrefix) {
+//			if (URI.equals(namespaceUri)) {
+//				return PREFIX;
+//			}
+//			return suggestion;
+//		}
+//
+//		@Override
+//		public String[] getPreDeclaredNamespaceUris() {
+//			return new String[] { URI };
+//		}
+//
+//	}
 
 	@JsonIgnoreProperties({ "_id" })
 	public static abstract class IgnoreMongoIDMixIn {
@@ -429,56 +429,6 @@ public class Util {
 		}
 	}
 
-	public void writeXMLUsingNS(String ns, String schemaFile, String xmlFile,
-			Object obj) {
-		try {
-			// todo: make this configurable.. .now using JAXB as a default
-			// todo: fix copy paste code
-			// likely works only with MOXy
-
-			SchemaFactory sf = SchemaFactory
-					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-			JAXBContext context = JAXBContext.newInstance(obj.getClass());
-			File file = new File(xmlFile);
-
-			PrintWriter out = new PrintWriter(file);
-
-			// Investigate also
-			// XMLOutputFactory fac = XMLOutputFactory.newInstance();
-			// fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
-			// XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
-			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
-			// xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
-
-			Marshaller m = context.createMarshaller();
-			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-			MyNamespaceMapper mp = new MyNamespaceMapper(ns,
-					"http://varioml.org/xml/1.0");
-			// see
-			// http://blog.bdoughan.com/2011/11/jaxb-and-namespace-prefixes.html
-			try {
-				m.setProperty(
-						"com.sun.xml.internal.bind.namespacePrefixMapper", mp);
-				// m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new
-			} catch (PropertyException e) {
-				// In case another JAXB implementation is used
-			}
-			m.setEventHandler(new MyValidationEventHandler());
-			if (schemaFile != null) {
-				Schema schema = sf.newSchema(new File(schemaFile));
-				m.setSchema(schema);
-				// m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION,
-				// "http://varioml.org/xml/1.0 "+schemaFile);
-			}
-			// m.marshal(obj, xmlStreamWriter);
-			m.marshal(obj, out);
-			out.close();
-
-		} catch (Exception e) {
-			Util.fatal(Util.class, e);
-		}
-	}
 
 	public void writeXMLWithoutNS(String schemaFile, String xmlFile, Object obj) {
 		try {
