@@ -38,7 +38,7 @@
         </jar>
     </target>
     
-    <target name="run" depends="makejar">
+    <target name="makedoc" depends="makejar">
         <java jar="VarioML.jar" fork="true">
             <arg file="lsdb.rng"/>
             <arg file="lsdb.html"/>
@@ -47,6 +47,17 @@
             <arg file="cafe_variome.rng"/>
             <arg file="lsdb.rng"/>
             <arg file="cafe_variome.html"/>
+        </java>
+    </target>
+    <target name="run_example" >
+        <java classname="examples.Example" fork="true">
+            <classpath >
+                <pathelement location="bin"/>         
+                <fileset dir="lib">
+                    <include name="*.jar"/>
+                </fileset>                
+            </classpath>
+            
         </java>
     </target>
 </project>
