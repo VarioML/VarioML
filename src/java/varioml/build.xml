@@ -49,7 +49,7 @@
             <arg file="cafe_variome.html"/>
         </java>
     </target>
-    <target name="run_example" >
+    <target name="run_example"  depends="compile">
         <java classname="examples.Example" fork="true">
             <classpath >
                 <pathelement location="bin"/>         
