@@ -1,0 +1,83 @@
+mutation	homozyg	population	combined	genome	RNA	AA	disease
+c.405T>G	0	2	French Canadian	g.5402T>G		p.L93R	Autoimmune polyglandular syndrome type 1
+c.931delT	1	2	Italian;Polish	g.9846delT	r.931delu	p.Cys311fsX67	Autoimmune polyglandular syndrome type 1
+c.892G>A	0	1	Serbian	g.9807G>A	r.892g>a	p.Glu298Lys	Autoimmune polyglandular syndrome type 1
+c.1400+1G>A	0	1	Japanise	g.IVS11+1G>A	r.1400+1g>a		Autoimmune polyglandular syndrome type 1
+c.1064_1068dup	0	1	Slovenian	g.11070_11074dup	r.1064_1068dup	p.Gln358fsX22	Autoimmune polyglandular syndrome type 1
+c.43C>T	0	1	Japanise	g.4749C>T	r.43c>u	p.Arg15Cys	Autoimmune polyglandular syndrome type 1
+c.879G>A	2	2	Norwegian	g.8768G>A	r.879g>a	p.Gln293Gln	Autoimmune polyglandular syndrome type 1
+c.396A>G	0	2	British	g.5393A>G		p.Y90C	Autoimmune polyglandular syndrome type 1
+c.47C>T	0	2	Slovenian	g.4753C>T	r.47c>u	p.Thr16Met	Autoimmune polyglandular syndrome type 1
+c.	0	1	North America	g.		p.A432fsX503	
+c.967>	0	1	Dutch	g.9882>	r.967>	p.Leu323Leu	Autoimmune polyglandular syndrome type 1
+c.682G>T	0	6	Italian	g.8386G>T	r.682g>u	p.Gly228Trp	Hypothyroid autoimmune thyroiditis (hAT);Autoimmune polyglandular syndrome type 1
+c.896C>T	30	62	German;Russian;Serbia;Croatia;Slovenian;Hungarian;Czech;France;North America;Norwegian;American;New Zealand;British;Italian;Finnish;Switzerland;Austria	g.8473C>T		p.R257X	Autoimmune polyglandular syndrome type 1
+c.93_94insT	5	5	Saudi Arab	g.4799_4800insT	r.93_94insu	p.Leu32fsX3	Autoimmune polyglandular syndrome type 1
+c.22C>T	0	2	Norwegian	g.4728C>T	r.22c>u	p.Arg8Cys	Autoimmune polyglandular syndrome type 1
+c.174C>T	0	1	Russian	g.4753C>T		p.T16M	Autoimmune polyglandular syndrome type 1
+c.359T>A	0	1	Czech	g.5356T>A		p.W78R	Autoimmune polyglandular syndrome type 1
+c.1249dupC	1	4	Norwegian	g.11846dupC	r.1249dupc	p.Leu417fsX7	Autoimmune polyglandular syndrome type 1
+c.908G>C	0	1	Polish	g.9823G>C	r.908g>c	p.Arg303Pro	Autoimmune polyglandular syndrome type 1
+c.1369_1370insA	0	3	Norwegian	g.11839_11840insA		p.H415fsX423	Autoimmune polyglandular syndrome type 1
+c.1640delG	0	2	Korean/Japanise	g.15091delG		p.A505fsX520	Autoimmune polyglandular syndrome type 1
+c.462A>T	0	1	Serbian	g.5832A>T	r.462a>u	p.Pro154Pro	Autoimmune polyglandular syndrome type 1
+c.542C>T	13	15	Egyptian;Italy, Sardinia	g.5785C>T		p.R139X	Autoimmune polyglandular syndrome type 1
+c.62C>T	0	1	Dutch	g.4768C>T	r.62c>u	p.Ala21Val	Autoimmune polyglandular syndrome type 1
+c.1072C>T	0	6	Italian	g.11078C>T	r.1072c>u	p.Gln358X	Autoimmune polyglandular syndrome type 1
+c.1096_1097insCCTG	1	1	Italian	g.9884_9885insCCTG		p.S324fsX372	
+c.1336T>G	0	1	Norwegian	g.12546T>G	r.1336u>g	p.Cys446Gly	Autoimmune polyglandular syndrome type 1
+c.1765A>T	0	2	Finnish	g.16426A>T		p.546	
+c.734C>T	0	1	Italian	g.7113C>T		p.R203X	
+c.1_2UNKNOWN	0	1	Hispanic	g.IVS9-1G>A			
+c.64_69delGTGGAC	0	1	Italian	g.4770_4775delGTGGAC	r.64_69delguggac	p.Val22_Ser24del	Autoimmune polyglandular syndrome type 1
+c.1421_1422insAC	0	1	American	g.12504_12505insAC		p.A432fsX480	Autoimmune polyglandular syndrome type 1
+c.232T>C	6	9	Italian	g.5356T>C	r.232u>c	p.Trp78Arg	Autoimmune polyglandular syndrome type 1
+c.43_44insACGCCGGCTTCTGAGGCTGCACC	0	1	Slovenian	g.4749_4750insACGCCGGCTTCTGAGGCTGCACC	r.43_44insacgccggcuucugaggcugcacc	p.Arg15fsX5	Autoimmune polyglandular syndrome type 1
+c.1344delC	0	2	Hungarian	g.12554delC	r.1344delc	p.Cys449fsX31	Autoimmune polyglandular syndrome type 1
+c.239T>G	2	2	Indian	g.5363T>G	r.239u>g	p.Val80Gly	Autoimmune polyrndocrinopathy-candidiasis-ectodermal dystrophy (APECED)
+c.1096-1G>C	0	2	Japanise	g.IVS9-1G>C	r.1096-1g>c		Autoimmune polyglandular syndrome type 1
+c.230T>C	0	1	Sicilian	g.5354T>C	r.230u>c	p.Phe77Ser	Autoimmune polyglandular syndrome type 1
+c.644C>T	0	1	Hispanic	g.6270C>T		p.Q173X	
+c.274C>T	0	2	Slovakia	g.5398C>T	r.274c>u	p.Arg92Trp	Autoimmune polyglandular syndrome type 1;Addison's Disease
+c.755C>T	0	1	Italian	g.8459C>T	r.755c>u	p.Pro252Leu	Autoimmune polyglandular syndrome type 1
+c.965_977delGCCTGTCCCCTCC	0	1	Hungarian	g.9880_9892delGCCTGTCCCCTCC	r.965_977delgccuguccccucc	p.Leu323fsX51	Autoimmune polyglandular syndrome type 1
+c.171G>T	0	1	British	g.4750G>T		p.R15L	Autoimmune polyglandular syndrome type 1
+c.1104C>T	0	3	France	g.9892C>T		p.P326L	Autoimmune polyglandular syndrome type 1
+c.1163_1164insA	0	1	Norwegian	g.11760_11761insA	r.1163_1164insa	p.Met388fsX36	Autoimmune polyglandular syndrome type 1
+c.906T>A	1	1	Indian	g.9821T>A	r.906u>a	p.Cys302X	Autoimmune polyrndocrinopathy-candidiasis-ectodermal dystrophy (APECED)
+c.1094_1106del	31	51	German;Azerbaijan;Hungarian;Asian;North America;American;British;Italian;New Zealand;Finnish;Italy, Sardinia;French Canadian	g.9882_9894del		p.L323fsX373	Autoimmune polyglandular syndrome type 1
+c.653-7CTC>	0	1	Slovenian	g.IVS5-7CTC>			Autoimmune polyglandular syndrome type 1
+c.20_21insACGCCGGCTTCTGAGGCTGCACC	1	1	Slovene	g.4726_4727insACGCCGGCTTCTGAGGCTGCACC	r.20_21insacgccggcuucugaggcugcacc	p.Arg15fsX5	Autoimmune polyglandular syndrome type 1
+c.335_336insCAGG	1	1	Arabian	g.5332_5333insCAGG		p.D70fsX217	
+c.540delG	0	1	Slovenian	g.7046delG	r.540delg	p.Ile181fsX197	Autoimmune polyglandular syndrome type 1
+c.132+1G>C	1	2	Italian;Polish	g.IVS1+1G>C	r.132+1g>c;		Autoimmune polyglandular syndrome type 1
+c.1391delC	0	3	North America;British	g.11861delC		p.P422fsX479	Autoimmune polyglandular syndrome type 1
+c.769C>T	27	62	Serbian;Hungarian;Indian;Italian;Norwegian;Polish;Slovenian;Slovakia	g.8473C>T	r.769c>u	p.Arg257X	Autoimmune polyglandular syndrome type 1;Autoimmune polyrndocrinopathy-candidiasis-ectodermal dystrophy (APECED);Addison's Disease
+c.1A>T	0	2	Polish	g.4707A>T	r.1a>u	p.Met1Leu	Autoimmune polyglandular syndrome type 1
+c.1376delC	0	1	British	g.11846delC		p.L417fsX479	Autoimmune polyglandular syndrome type 1
+c.967_979delCTGTCCCCTCCGC	18	33	Dutch;Indian;Italian;Norwegian;Polish;Slovakia	g.9882_9894delCTGTCCCCTCCGC	r.967_979delcuguccccuccgc	p.Leu323fsX51	Autoimmune polyglandular syndrome type 1;Autoimmune polyrndocrinopathy-candidiasis-ectodermal dystrophy (APECED);Addison's Disease
+c.1230_1231insC	0	2	Korean/Japanise	g.11700_11701insC		p.P368fsX371	Autoimmune polyglandular syndrome type 1
+c.21_43dup	0	1	Hungarian	g.4727_4749dup	r.21_43dup	p.Arg15fsX5	Autoimmune polyglandular syndrome type 1
+c.(?_68)_(1567-14_?)del	0	1	Dutch	g.0_1UNKNOWN			Autoimmune polyglandular syndrome type 1
+c.205_208dup	2	2	Saudi Arab	g.5329_5332dup	r.205_208dup	p.Asp70fsX148	Autoimmune polyglandular syndrome type 1
+c.374A>G	0	1	Finnish	g.5371A>G		p.K83E	
+c.1344delinsTT	0	1	Japanise	g.12554delinsTT	r.1344delinsuu	p.Cys449fsX55	Autoimmune polyglandular syndrome type 1
+c.170_171ins	0	2	Austria;Hungarian	g.4749_4750ins		p.R15fsX19	Autoimmune polyglandular syndrome type 1
+c.1616C>T	1	1	Italian	g.16404C>T	r.1616c>u	p.Pro539Leu	Autoimmune polyglandular syndrome type 1
+c.86T>C	0	2	Japanise	g.4792T>C	r.86u>c	p.Leu29Pro	Autoimmune polyglandular syndrome type 1
+c.318_353del	0	1	North America	g.5315_5350del		p.S64del	
+c.995+5G>T	0	1	Sicilian	g.IVS8+5G>T	r.995+5g>u		Autoimmune polyglandular syndrome type 1
+c.1028G>A	0	1	Norwegian	g.9816G>A		p.V301M	Autoimmune polyglandular syndrome type 1
+c.132+5G>	1	2	Italian;Polish	g.IVS1+5G>	r.132+5g>		Autoimmune polyglandular syndrome type 1
+c.415C>T	3	3	Indian;Egyptian	g.5785C>T	r.415c>u	p.Arg139X	Autoimmune polyrndocrinopathy-candidiasis-ectodermal dystrophy (APECED);Autoimmune polyglandular syndrome type 1
+c.905_906delGT	0	1	Italian	g.9820_9821delGT	r.905_906delgu	p.Cys302fsX10	Autoimmune polyglandular syndrome type 1
+c.1A>G	1	1	Saudi Arab	g.4707A>G	r.1a>g	p.Met1Val	Autoimmune polyglandular syndrome type 1
+c.847dupC	1	1	Saudi Arab	g.8736dupC	r.847dupc	p.Leu283fsX6	Autoimmune polyglandular syndrome type 1
+c.290T>C	0	1	Norwegian	g.5414T>C	r.290u>c	p.Leu97Pro	Autoimmune polyglandular syndrome type 1
+c.1314_1326delinsGT	1	1	Italian	g.12524_12536delinsGT	r.1314_1326delinsgu	p.Asp439fsX61	Autoimmune polyglandular syndrome type 1
+c.607C>T	1	5	Italian	g.7113C>T	r.607c>u	p.Arg203X	Autoimmune polyglandular syndrome type 1
+c.1242_1243insA	0	3	Norwegian	g.11839_11840insA	r.1242_1243insa	p.His415fsX9	Autoimmune polyglandular syndrome type 1
+c.402delC	0	1	Norwegian	g.5772delC	r.402delc	p.Ser135fsX12	Autoimmune polyglandular syndrome type 1
+c.210T>C	0	2	North America;British	g.4789T>C		p.L28P	Autoimmune polyglandular syndrome type 1
+c.232T>A	0	5	Italian	g.5356T>A	r.232u>a	p.Trp78Arg	Autoimmune polyglandular syndrome type 1
+c.1236_1237insGCCG	2	2	Saudi Arab	g.11833_11834insGCCG	r.1236_1237insgccg	p.Leu414fsX11	Autoimmune polyglandular syndrome type 1

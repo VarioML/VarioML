@@ -1,0 +1,32 @@
+.settings
+*.class
+*.log
+*.xlsx
+*private*
+genotype.txt
+# sbt specific
+tmp/*
+junk/
+dist/*
+target/
+lib_managed/
+src_managed/
+src_generated/
+project/boot/
+project/plugins/project/
+TestSheet.scala
+
+*.conf
+*.tsv
+
+# Scala-IDE specific
+.scala_dependencies
+
+# Eclipse specific
+.project
+.classpath
+.cache
+.DS_Store
+.swp
+.worksheet
+/bin/

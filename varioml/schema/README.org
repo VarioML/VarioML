@@ -1,0 +1,5 @@
+* VarioML - XSD schemas
+
+XSD schemas are generated from Rleax NG schemas, which are fround here: 
+https://github.com/VarioML/VarioML/tree/master/xml/lsdb_main
+https://github.com/VarioML/VarioML/tree/master/xml/cafe_variome
