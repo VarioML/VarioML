@@ -15,7 +15,7 @@
 
 ** Background
 This project collects the source schema and validation tools for VarioML, a biomedical data standard supporting the integration, federation, and exchange of LSDB Data ([[http://varioml.org/]]).
-VarioML is desinged for curated LSDB data submissions and application integeration and is *focused on individual variant entries*. Format may not be suitable for handling bulk high throughput data, for which  VCF format ([[http://www.1000genomes.org/wiki/Analysis/variant-call-format/]]) is recommened .
+VarioML is desinged for curated LSDB data submissions and application integeration and is *focused on individual variant entries*. Format may not be suitable for handling bulk high throughput data, for which the VCF format ([[http://www.1000genomes.org/wiki/Analysis/variant-call-format/]]) is recommended.
 
 These are shared here so biomedical researchers, clinicians, and bioinformaticians can:
 - always have the current and canonical version of the data standard schemas and tools
