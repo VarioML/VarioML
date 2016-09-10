@@ -10,7 +10,7 @@
             <gene accession="CYP3A5"/> 
             <ref_seq accession="NM_000777"/> 
             
-            <name>g.6986AG</name>       
+            <name>g.6986A>G</name>       
             
             <frequency type="allele"> 
                 <category term="Less than 100"  source="g2p" accession="nemdb_9991"></category>
