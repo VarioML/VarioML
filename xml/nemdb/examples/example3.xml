@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:../vreports.rnc" type="application/relax-ng-compact-syntax"?>
+<vreport xmlns="http://varioml.org/xml/1.0">
+    <panel>
+        <population type="group" term="Yorubans" /> 
+        <population type="region" term="Nigeria"/> 
+        
+        <variant> 
+            
+            <gene accession="CYP3A5"/> 
+            <ref_seq accession="NM_000777"/> 
+            
+            <name>g.6986AG</name>       
+            
+            <frequency type="allele"> 
+                <category term="Less than 100"  source="g2p" accession="nemdb_9991"></category>
+            </frequency>    
+            
+            <db_xref source="dbsnp" accession="rs776746"/> 
+            
+            <comment term="name"><text>CYP3A5*3</text></comment> 
+            
+        </variant>  
+    </panel>
+</vreport>

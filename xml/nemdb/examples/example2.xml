@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/Users/muilu/repos/others/VarioML/xml/nemdb/vreports.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="file:../vreports.rnc" type="application/relax-ng-compact-syntax"?>
 <vreport xmlns="http://varioml.org/xml/1.0">
     <source> 
         <name>FINDbase-PGx</name> 
