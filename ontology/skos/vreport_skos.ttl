@@ -42,3 +42,9 @@ vml:nemdb_0002
       skos:broader vml:nemdb_9991 ;
       skos:inScheme vml:nemdb ;
       skos:prefLabel "More than 100"@en .
+
+vml:nemdb_0100
+      rdf:type skos:Concept ;
+      skos:broader vml:nemdb_9991 ;
+      skos:inScheme vml:nemdb ;
+      skos:prefLabel "exists"@en .
