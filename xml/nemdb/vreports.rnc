@@ -1,0 +1,27 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+default namespace vml = "http://varioml.org/xml/1.0"
+
+namespace local = ""
+
+include "../lsdb_main/lsdb.rnc" { start |= notAllowed }
+
+## Relax NGC schema for Variation report data transfer
+## Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+start = vreport 
+
+# (=)	===============================
+#  X	VariantReport
+# (=)	===============================
+vreport = 
+## [% INSERT vreport.txt %]
+element vreport { 
+    VmlSubmission
+    , NEMDB.vreport.fields
+    , VmlAnnotatable
+    , VmlForeignNodes
+}
+
+NEMDB.vreport.fields  &=
+    # Frequency reports of population groups.
+    panel+
+    

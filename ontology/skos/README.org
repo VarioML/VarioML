@@ -1,4 +1,5 @@
-SKOS terms for some VarioML ontology terms. Use full URI  name source and name accession pairs. Source is here always "g2p".
+SKOS terms for some VarioML ontology elements. Use full URIs  or source /  accession id pairs.  Accession id should be prefixed using
+e.g. the id scheme defined in http://identifiers.org/. Source is reserved for identifying the authority responsible for the id scheme
 
 
 ** Example:

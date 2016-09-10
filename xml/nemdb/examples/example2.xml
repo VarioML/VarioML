@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/Users/muilu/repos/others/VarioML/xml/nemdb/vreports.rnc" type="application/relax-ng-compact-syntax"?>
+<vreport xmlns="http://varioml.org/xml/1.0">
+    <source> 
+        <name>FINDbase-PGx</name> 
+        <contact> 
+            <name>George Patrinos</name> 
+        </contact> 
+    </source> 
+    <panel> 
+        <population type="ethnic" term="Yorubans"/> 
+        <population type="region" term="Nigeria"/> 
+        <variant> 
+            <gene accession="CYP3A5"/> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="50" type="allele"> 
+                <freq>0.06</freq> 
+            </frequency> 
+            <db_xref source="dbsnp" accession="rs776746"/> 
+            <comment term="name"> 
+                <text>CYP3A5*3</text> 
+            </comment> 
+        </variant> 
+    </panel> 
+    <panel> 
+        <population type="ethnic" term="Yorubans"/> 
+        <population type="region" term="Nigeria"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="50" type="allele"> 
+                <freq>0.06</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    
+    <panel> 
+        <population type="race" term="Baka Pygmies"/> 
+        <population type="region" term="Central African Republic"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="66" type="allele"> 
+                <freq>0.11</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    <panel> 
+        <population type="ethnic" term="South Africans"/> 
+        <population type="region" term="Transkei area of Eastern and Western Cape"/> 
+        <population type="language_family" term="Xhosa"/> 
+        <population type="race" term="Black"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="640" type="allele"> 
+                <freq>0.145</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    <panel > 
+        <population type="group" term="Malays"/> 
+        <population type="region" term="Malay Archipelago"> 
+            <comment> 
+                <text>mainly from Malay Archipelago</text> 
+            </comment> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="196" type="allele"> 
+                <freq>0.145</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    <panel> 
+        <population type="ethnic" term="Brazilians"/> 
+        <population type="ethnic" term="'Pardo'"> 
+            <comment> 
+                <text>brown/intermediate</text> 
+            </comment> 
+        </population> 
+        <population type="region" term="Rio de Janeiro"/> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="222" type="allele"> 
+                <freq>0.64</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    <panel> 
+        <population type="ethnic" term="El Salvadorans"/> 
+        <population type="race" term="Mestizo"> 
+            <comment> 
+                <text>Amerindian and European descent</text> 
+            </comment> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="224" type="allele"> 
+                <freq>0.763</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    <panel> 
+        <population type="ethnic" term="Yakuts"/> 
+        <population type="region" term="Village of Cheriktei in the Sakha (Yakutia) Republic"> 
+        </population> 
+        <variant> 
+            <ref_seq accession="NM_000777"/> 
+            <name>g.6986A>G</name> 
+            <frequency samples="176" type="allele"> 
+                <freq>0.926</freq> 
+            </frequency> 
+        </variant> 
+    </panel> 
+    
+    
+    <!-- haplotype groups  --> 
+    <panel> 
+        <population type="ethnic" term="Yakuts"/> 
+        <population type="region" term="Village of Cheriktei in the Sakha (Yakutia) Republic"> 
+        </population> 
+        <variant_group orientation='cis'> 
+            <group_type term="haplotype"/> 
+            <variant> 
+                <ref_seq accession="NM_000777"/> 
+                <name>g.6986A>G</name> 
+            </variant>            
+            <variant> 
+                <ref_seq accession="NM_000777"/> 
+                <name>g.12345A>G</name> 
+            </variant>            
+            <frequency samples="176" type="allele"> 
+                <freq>0.926</freq> 
+            </frequency> 
+        </variant_group> 
+    </panel> 
+</vreport>
