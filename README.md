@@ -6,7 +6,7 @@ for JSON and EXI are supported using [Jackson](https://github.com/FasterXML/jack
 [Excificient](http://exificient.github.io/). VarioML is flexible and provides common building blocks for different
 implementations, which should be fixed further using appropriate schema definition languages like Schematron.
 VarioML is developed in [GEN2PHEN](http://www.gen2phen.org/) program and it based on an observation
-model developed there. Simplified UML is [here](https://raw.github.com/VarioML/VarioML/master/xml/lsdb_main/uml/varioml.jpg)
+model developed there. Simplified UML mode is [here](https://raw.github.com/VarioML/VarioML/master/xml/lsdb_main/uml/varioml.jpg)
 
 
 __VarioML is a collaborative, community-driven specification in active development.__
