@@ -34,10 +34,15 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule.Priority;
+import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
+import com.fasterxml.jackson.module.jsonSchema.factories.JsonSchemaFactory;
+import com.fasterxml.jackson.module.jsonSchema.factories.SchemaFactoryWrapper;
 import com.megginson.sax.XMLWriter;
 import com.siemens.ct.exi.EXIFactory;
 import com.siemens.ct.exi.GrammarFactory;
@@ -59,27 +64,22 @@ public class Util {
 		public IgnoreMongoIDMixIn() {
 		}
 	}
-	public final Class IGNORE_ID_FIELD = IgnoreMongoIDMixIn.class;
 
-	public static class MyValidationEventHandler implements
-			ValidationEventHandler {
+	public final Class<?> IGNORE_ID_FIELD = IgnoreMongoIDMixIn.class;
+
+	public static class MyValidationEventHandler implements ValidationEventHandler {
 
 		@Override
 		public boolean handleEvent(ValidationEvent event) {
 			System.out.println("\nEVENT");
 			System.out.println("SEVERITY:  " + event.getSeverity());
 			System.out.println("MESSAGE:  " + event.getMessage());
-			System.out.println("LINKED EXCEPTION:  "
-					+ event.getLinkedException());
+			System.out.println("LINKED EXCEPTION:  " + event.getLinkedException());
 			System.out.println("LOCATOR");
-			System.out.println("    LINE NUMBER:  "
-					+ event.getLocator().getLineNumber());
-			System.out.println("    COLUMN NUMBER:  "
-					+ event.getLocator().getColumnNumber());
-			System.out
-					.println("    OFFSET:  " + event.getLocator().getOffset());
-			System.out
-					.println("    OBJECT:  " + event.getLocator().getObject());
+			System.out.println("    LINE NUMBER:  " + event.getLocator().getLineNumber());
+			System.out.println("    COLUMN NUMBER:  " + event.getLocator().getColumnNumber());
+			System.out.println("    OFFSET:  " + event.getLocator().getOffset());
+			System.out.println("    OBJECT:  " + event.getLocator().getObject());
 			System.out.println("    NODE:  " + event.getLocator().getNode());
 			System.out.println("    URL:  " + event.getLocator().getURL());
 			return true;
@@ -87,16 +87,19 @@ public class Util {
 
 	}
 
-	public static void fatal(Class cls, String message) {
-		System.err.println("Fatal error in : " + cls.getName() + " message: "
-				+ message);
+	public static void log(Class<?> cls, String message) {
+		System.err.println("LOG : " + cls.getName() + " message: " + message);
+		System.err.flush();
+	}
+
+	public static void fatal(Class<?> cls, String message) {
+		System.err.println("Fatal error in : " + cls.getName() + " message: " + message);
 		System.err.flush();
 		throw new RuntimeException(message);
 	}
 
-	public static void fatal(Class cls, Throwable e) {
-		System.err.println("Fatal error in : " + cls.getName() + " message: "
-				+ e.getMessage());
+	public static void fatal(Class<?> cls, Throwable e) {
+		System.err.println("Fatal error in : " + cls.getName() + " message: " + e.getMessage());
 		System.err.flush();
 		throw new RuntimeException(e);
 	}
@@ -125,7 +128,6 @@ public class Util {
 		return f;
 	}
 
-	
 	public void writeBSON(String file, Object obj) {
 		ObjectMapper mapper = createObjectMapperForBson();
 		ObjectWriter writer = mapper.writer();
@@ -154,14 +156,12 @@ public class Util {
 	}
 
 	public ByteArrayOutputStream toBSON4MONGOByteStream(Object obj) {
-		String _res = null;
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		writeBSON4MONGO(bos, obj);
 		return bos;
 	}
 
 	public byte[] toBSON4MONGO(Object obj) {
-		String _res = null;
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		writeBSON4MONGO(bos, obj);
 		return bos.toByteArray();
@@ -182,7 +182,7 @@ public class Util {
 
 	}
 
-	public Object readBSON(final String file, final Class clz) {
+	public Object readBSON(final String file, final Class<?> clz) {
 		Object o = null;
 		try {
 			FileInputStream in = new FileInputStream(file);
@@ -194,7 +194,7 @@ public class Util {
 		return o;
 	}
 
-	public Object readBSON(final InputStream in, final Class clz) {
+	public Object readBSON(final InputStream in, final Class<?> clz) {
 		Object o = null;
 		try {
 			o = createObjectMapperForBson().readValue(in, clz);
@@ -205,8 +205,8 @@ public class Util {
 		return o;
 	}
 
-	public Object readBSON(final InputStream in, final Class clz,
-			final Class mixIn) {
+	@SuppressWarnings("deprecation")
+	public Object readBSON(final InputStream in, final Class<?> clz, final Class<?> mixIn) {
 		ObjectMapper mapper = createObjectMapperForBson();
 		if (mixIn != null) {
 			mapper.addMixInAnnotations(clz, mixIn);
@@ -221,14 +221,14 @@ public class Util {
 		return o;
 	}
 
-	public Object toVarioML(byte[] bytes, Class clz, Class mixIn) {
+	public Object toVarioML(byte[] bytes, Class<?> clz, Class<?> mixIn) {
 
 		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
 		return readBSON(in, clz, mixIn);
 
 	}
 
-	public Object toVarioML(byte[] bytes, Class clz) {
+	public Object toVarioML(byte[] bytes, Class<?> clz) {
 
 		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
 		return readBSON(in, clz, null);
@@ -251,22 +251,21 @@ public class Util {
 		fac.enable(Feature.ENABLE_STREAMING);
 		return createObjectMapper(fac);
 	}
-	
-	protected ObjectMapper createObjectMapper( ) {
+
+	protected ObjectMapper createObjectMapper() {
 		return createObjectMapper(null);
 	}
-	
-	protected ObjectMapper createObjectMapper( JsonFactory fac) {
+
+	protected ObjectMapper createObjectMapper(JsonFactory fac) {
 		JaxbAnnotationModule module = new JaxbAnnotationModule();
-		ObjectMapper mapper = new ObjectMapper();						
+		ObjectMapper mapper = new ObjectMapper();
 		module.setPriority(Priority.SECONDARY);
 		mapper.registerModule(module);
 		return mapper;
 	}
 
-	
 	public void writeJSON(OutputStream out, Object obj) {
-		ObjectMapper mapper = createObjectMapper(); 
+		ObjectMapper mapper = createObjectMapper();
 		try {
 			mapper.writeValue(out, obj);
 		} catch (Exception e) {
@@ -281,7 +280,7 @@ public class Util {
 		return new String(bos.toByteArray());
 	}
 
-	public Object readJSON(String file, Class clz) {
+	public Object readJSON(String file, Class<?> clz) {
 
 		ObjectMapper mapper = createObjectMapper();
 		Object o = null;
@@ -295,9 +294,10 @@ public class Util {
 		return o;
 	}
 
-	public Object readXML(String schemaFile, String xmlFile, Class clz) {
+
+	public Object readXML(String schemaFile, String xmlFile, Class<?> clz) {
 		try {
-			// todo: make this configuravle.. .now using JAXB as a default
+			// todo: make this configurable.. .now using JAXB as a default
 			File file = findFile(xmlFile);
 			return readXML(schemaFile, new FileInputStream(file), clz);
 		} catch (Exception e) {
@@ -306,12 +306,11 @@ public class Util {
 		}
 	}
 
-	public Object readXML(String schemaFile, InputStream iStream, Class clz) {
+	public Object readXML(String schemaFile, InputStream iStream, Class<?> clz) {
 		try {
-			// todo: make this configuravle.. .now using JAXB as a default
+			// todo: make this configurable.. .now using JAXB as a default
 
-			SchemaFactory sf = SchemaFactory
-					.newInstance("http://www.w3.org/2001/XMLSchema");
+			SchemaFactory sf = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
 			Schema schema = sf.newSchema(new File(schemaFile));
 			JAXBContext context = JAXBContext.newInstance(clz);
 			// Marshaller m = context.createMarshaller();
@@ -326,7 +325,7 @@ public class Util {
 		}
 	}
 
-	public Object readEXI(String schemaFile, String xmlFile, Class clz) {
+	public Object readEXI(String schemaFile, String xmlFile, Class<?> clz) {
 		try {
 			// todo: fix this quick hack
 
@@ -369,8 +368,7 @@ public class Util {
 		try {
 			// todo: make this configurable.. .now using JAXB as a default
 
-			SchemaFactory sf = SchemaFactory
-					.newInstance("http://www.w3.org/2001/XMLSchema");
+			SchemaFactory sf = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
 			JAXBContext context = JAXBContext.newInstance(obj.getClass());
 			File file = new File(xmlFile);
 
@@ -391,37 +389,36 @@ public class Util {
 		}
 	}
 
-
 	public void writeXMLWithoutNS(String schemaFile, String xmlFile, Object obj) {
 		try {
 			// todo: make this configuravle.. .now using JAXB as a default
 			// todo: copy and paste code
-			SchemaFactory sf = SchemaFactory
-					.newInstance("http://www.w3.org/2001/XMLSchema");
+			SchemaFactory sf = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
 			JAXBContext context = JAXBContext.newInstance(obj.getClass());
 			File file = new File(xmlFile);
 
 			PrintWriter out = new PrintWriter(file);
-//			XMLOutputFactory fac = XMLOutputFactory.newInstance();
-//			fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
-//			XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
-//			xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
-//			xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
-			
-			NamespaceFilter outFilter = new NamespaceFilter(
-					"http://varioml.org/xml/1.0", false); // remove name spaces
+			// XMLOutputFactory fac = XMLOutputFactory.newInstance();
+			// fac.setProperty(XMLOutputFactory.IS_REPAIRING_NAMESPACES, true);
+			// XMLStreamWriter xmlStreamWriter = fac.createXMLStreamWriter(out);
+			// xmlStreamWriter.setDefaultNamespace("http://varioml.org/xml/1.0");
+			// xmlStreamWriter.setPrefix("", "http://varioml.org/xml/1.0");
+
+			NamespaceFilter outFilter = new NamespaceFilter("http://varioml.org/xml/1.0", false); // remove
+																									// name
+																									// spaces
 			XMLWriter writer = new XMLWriter(out);
 			outFilter.setContentHandler(writer);
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-			//m.setProperty(Marshaller.JAXB_FRAGMENT, true);
+			// m.setProperty(Marshaller.JAXB_FRAGMENT, true);
 			m.setEventHandler(new MyValidationEventHandler());
 			if (schemaFile != null) {
 				Schema schema = sf.newSchema(new File(schemaFile));
 				m.setSchema(schema);
 			}
 			m.marshal(obj, outFilter);
-			
+
 			writer.flush();
 			out.close();
 
@@ -476,15 +473,7 @@ public class Util {
 		}
 	}
 
-	public static void log(Class cls, String message) {
-
-		System.err.println("LOG : " + cls.getName() + " message: " + message);
-		System.err.flush();
-
-	}
-
-	public static void encode(org.xml.sax.ContentHandler ch, String xmlLocation)
-			throws SAXException, IOException {
+	public static void encode(org.xml.sax.ContentHandler ch, String xmlLocation) throws SAXException, IOException {
 		XMLReader xmlReader = XMLReaderFactory.createXMLReader();
 		xmlReader.setContentHandler(ch);
 
@@ -492,9 +481,8 @@ public class Util {
 		xmlReader.parse(new InputSource(xmlLocation));
 	}
 
-	public static void decode(XMLReader exiReader, String exiLocation,
-			String xmlOutLocation) throws SAXException, IOException,
-			TransformerException {
+	public static void decode(XMLReader exiReader, String exiLocation, String xmlOutLocation)
+			throws SAXException, IOException, TransformerException {
 
 		TransformerFactory tf = TransformerFactory.newInstance();
 		Transformer transformer = tf.newTransformer();
@@ -508,8 +496,7 @@ public class Util {
 		os.close();
 	}
 
-	public static void compressTest(String xsdLocation, String sourceXml,
-			String compressedXml) {
+	public static void compressTest(String xsdLocation, String sourceXml, String compressedXml) {
 
 		try {
 			EXIFactory exiFactory = DefaultEXIFactory.newInstance();
@@ -541,23 +528,45 @@ public class Util {
 
 	}
 
+	public  void toJSONSchema( String fileName, final Class<?> klaz) throws FileNotFoundException, IOException {
+		File file = new File(fileName);
+		try (FileOutputStream out = new FileOutputStream(file)) {
+			toJSONSchema( out, klaz);		
+		}
+	}
+	
+	public  void toJSONSchema(OutputStream outStream, final Class<?> klaz) {
+		PrintWriter out = new PrintWriter(outStream);
+		final SchemaFactoryWrapper visitor = new SchemaFactoryWrapper();
+		final ObjectMapper mapper = new ObjectMapper();
+		try {
+			mapper.acceptJsonFormatVisitor(mapper.constructType(klaz), visitor);
+			final com.fasterxml.jackson.module.jsonSchema.JsonSchema jsonSchema = visitor.finalSchema();
+			out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonSchema));
+			out.flush();
+		} catch (JsonMappingException jsonEx) {
+			fatal(Util.class, "Unable to map JSON: " + jsonEx);
+		} catch (JsonProcessingException jsonEx) {
+			fatal(Util.class, "Unable to map JSON: " + jsonEx);
+		}
+	}
+
 	public static void main(String[] args) throws Exception {
 
 		Util util = new Util();
-		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util
-				.readXML("schema/cafe_variome.xsd", "findis.xml",
-						org.varioml.jaxb.CafeVariome.class);
+		org.varioml.jaxb.CafeVariome o = (org.varioml.jaxb.CafeVariome) util.readXML("schema/cafe_variome.xsd",
+				"findis.xml", org.varioml.jaxb.CafeVariome.class);
 
 		util.writeXML("schema/cafe_variome.xsd", "test_xml.xml", o);
 		util.writeJSON("test.json", o);
 		util.writeBSON("test.bson", o);
 		util.writeEXI("schema/cafe_variome.xsd", "test.exi", o);
 		util.writeBSON4MONGO("test.mongo", o);
-		o = (CafeVariome)util.readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
+		o = (CafeVariome) util.readBSON("test.bson", org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("test_bson.xml", o);
-		o = (CafeVariome)util.readJSON("test.json", org.varioml.jaxb.CafeVariome.class);
+		o = (CafeVariome) util.readJSON("test.json", org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("test_json.xml", o);
-		o = (CafeVariome)util.readEXI("schema/cafe_variome.xsd", "test.exi", org.varioml.jaxb.CafeVariome.class);
+		o = (CafeVariome) util.readEXI("schema/cafe_variome.xsd", "test.exi", org.varioml.jaxb.CafeVariome.class);
 		util.writeXML("test_exi.xml", o);
 
 	}

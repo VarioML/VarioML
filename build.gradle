@@ -12,6 +12,8 @@ dependencies {
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.2'
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.2'
  compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: '2.8.2'
+ compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.8.2'
+ compile group: 'xml-apis', name: 'xml-apis', version: '1.4.01'
  compile group: 'org.simpleframework', name: 'simple-xml', version: '2.7.1'
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.2'
  compile group: 'com.siemens.ct.exi', name: 'exificient', version: '0.9.6'
@@ -20,7 +22,5 @@ dependencies {
  compile group: 'xerces', name: 'xercesImpl', version: '2.11.0'
  compile group: 'com.megginson.sax', name: 'xml-writer', version: '0.2'
  compile group: 'de.undercouch', name: 'bson4jackson', version: '2.7.0'
-
- compile group: 'xml-apis', name: 'xml-apis', version: '1.4.01'
 }
 
