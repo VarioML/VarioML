@@ -1,4 +1,0 @@
-perl -pi.bak -e "s/org.codehaus.jackson.annotate/com.fasterxml.jackson.annotation/g" *.java
-perl -pi.bak -e "s/org.codehaus.jackson.map.annotate/com.fasterxml.jackson.databind.annotation/g" *.java
-  
-
