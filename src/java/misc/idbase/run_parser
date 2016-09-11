@@ -1,5 +1,0 @@
-#!/bin/sh
-cp=lib/VarioML.jar:IDBase.jar
-exec scala -classpath $cp -J-Xmx1g "$0"  "$@"
-!#
-varioml.parsers.IDBase.main(args)
