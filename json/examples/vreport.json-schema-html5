@@ -1,0 +1,4388 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "Vreport",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "id" : {
+      "propertyOrder" : 1,
+      "type" : "string",
+      "title" : "Id"
+    },
+    "schema_version" : {
+      "propertyOrder" : 2,
+      "type" : "number",
+      "title" : "Schema _version"
+    },
+    "submissionid_type" : {
+      "propertyOrder" : 3,
+      "type" : "string",
+      "title" : "Submissionid _type"
+    },
+    "uri" : {
+      "propertyOrder" : 4,
+      "type" : "string",
+      "title" : "Uri"
+    },
+    "xmlns" : {
+      "propertyOrder" : 5,
+      "type" : "string",
+      "title" : "Xmlns"
+    },
+    "xmlns:xsi" : {
+      "propertyOrder" : 6,
+      "type" : "string",
+      "title" : "Xmlns :xsi"
+    },
+    "xsi:schemaLocation" : {
+      "propertyOrder" : 7,
+      "type" : "string",
+      "title" : "Xsi :schema Location"
+    },
+    "created" : {
+      "propertyOrder" : 8,
+      "$ref" : "#/definitions/VMLDateTime",
+      "title" : "Created"
+    },
+    "sources" : {
+      "propertyOrder" : 9,
+      "type" : "array",
+      "format" : "table",
+      "items" : {
+        "$ref" : "#/definitions/Source"
+      },
+      "title" : "Sources"
+    },
+    "panels" : {
+      "propertyOrder" : 10,
+      "type" : "array",
+      "format" : "table",
+      "items" : {
+        "$ref" : "#/definitions/Panel"
+      },
+      "title" : "Panels"
+    },
+    "db_xrefs" : {
+      "propertyOrder" : 11,
+      "type" : "array",
+      "format" : "table",
+      "items" : {
+        "$ref" : "#/definitions/DbXref"
+      },
+      "title" : "Db _xrefs"
+    },
+    "comments" : {
+      "propertyOrder" : 12,
+      "type" : "array",
+      "format" : "table",
+      "items" : {
+        "$ref" : "#/definitions/Comment"
+      },
+      "title" : "Comments"
+    }
+  },
+  "definitions" : {
+    "VMLDateTime" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "value" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Value"
+        },
+        "dateTime" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/DateTime",
+          "title" : "Date Time"
+        }
+      }
+    },
+    "DateTime" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "weekOfWeekyear" : {
+          "propertyOrder" : 1,
+          "type" : "integer",
+          "title" : "Week Of Weekyear"
+        },
+        "millisOfDay" : {
+          "propertyOrder" : 2,
+          "type" : "integer",
+          "title" : "Millis Of Day"
+        },
+        "monthOfYear" : {
+          "propertyOrder" : 3,
+          "type" : "integer",
+          "title" : "Month Of Year"
+        },
+        "hourOfDay" : {
+          "propertyOrder" : 4,
+          "type" : "integer",
+          "title" : "Hour Of Day"
+        },
+        "minuteOfHour" : {
+          "propertyOrder" : 5,
+          "type" : "integer",
+          "title" : "Minute Of Hour"
+        },
+        "secondOfMinute" : {
+          "propertyOrder" : 6,
+          "type" : "integer",
+          "title" : "Second Of Minute"
+        },
+        "millisOfSecond" : {
+          "propertyOrder" : 7,
+          "type" : "integer",
+          "title" : "Millis Of Second"
+        },
+        "weekyear" : {
+          "propertyOrder" : 8,
+          "type" : "integer",
+          "title" : "Weekyear"
+        },
+        "yearOfEra" : {
+          "propertyOrder" : 9,
+          "type" : "integer",
+          "title" : "Year Of Era"
+        },
+        "yearOfCentury" : {
+          "propertyOrder" : 10,
+          "type" : "integer",
+          "title" : "Year Of Century"
+        },
+        "centuryOfEra" : {
+          "propertyOrder" : 11,
+          "type" : "integer",
+          "title" : "Century Of Era"
+        },
+        "secondOfDay" : {
+          "propertyOrder" : 12,
+          "type" : "integer",
+          "title" : "Second Of Day"
+        },
+        "minuteOfDay" : {
+          "propertyOrder" : 13,
+          "type" : "integer",
+          "title" : "Minute Of Day"
+        },
+        "year" : {
+          "propertyOrder" : 14,
+          "type" : "integer",
+          "title" : "Year"
+        },
+        "dayOfMonth" : {
+          "propertyOrder" : 15,
+          "type" : "integer",
+          "title" : "Day Of Month"
+        },
+        "dayOfWeek" : {
+          "propertyOrder" : 16,
+          "type" : "integer",
+          "title" : "Day Of Week"
+        },
+        "era" : {
+          "propertyOrder" : 17,
+          "type" : "integer",
+          "title" : "Era"
+        },
+        "dayOfYear" : {
+          "propertyOrder" : 18,
+          "type" : "integer",
+          "title" : "Day Of Year"
+        },
+        "chronology" : {
+          "propertyOrder" : 19,
+          "$ref" : "#/definitions/Chronology",
+          "title" : "Chronology"
+        },
+        "zone" : {
+          "propertyOrder" : 20,
+          "$ref" : "#/definitions/DateTimeZone",
+          "title" : "Zone"
+        },
+        "millis" : {
+          "propertyOrder" : 21,
+          "type" : "integer",
+          "title" : "Millis"
+        },
+        "afterNow" : {
+          "propertyOrder" : 22,
+          "type" : "boolean",
+          "title" : "After Now"
+        },
+        "beforeNow" : {
+          "propertyOrder" : 23,
+          "type" : "boolean",
+          "title" : "Before Now"
+        },
+        "equalNow" : {
+          "propertyOrder" : 24,
+          "type" : "boolean",
+          "title" : "Equal Now"
+        }
+      },
+      "required" : [ "weekOfWeekyear", "millisOfDay", "monthOfYear", "hourOfDay", "minuteOfHour", "secondOfMinute", "millisOfSecond", "weekyear", "yearOfEra", "yearOfCentury", "centuryOfEra", "secondOfDay", "minuteOfDay", "year", "dayOfMonth", "dayOfWeek", "era", "dayOfYear", "millis", "afterNow", "beforeNow", "equalNow" ]
+    },
+    "Chronology" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "zone" : {
+          "propertyOrder" : 1,
+          "$ref" : "#/definitions/DateTimeZone",
+          "title" : "Zone"
+        }
+      }
+    },
+    "DateTimeZone" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "fixed" : {
+          "propertyOrder" : 2,
+          "type" : "boolean",
+          "title" : "Fixed"
+        }
+      },
+      "required" : [ "fixed" ]
+    },
+    "Source" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "date" : {
+          "propertyOrder" : 1,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Date"
+        },
+        "id" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "uri" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "version" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Version"
+        },
+        "name" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "urls" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "type" : "string"
+          },
+          "title" : "Urls"
+        },
+        "contacts" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Contact"
+          },
+          "title" : "Contacts"
+        },
+        "acknowledgements" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Acknowledgement"
+          },
+          "title" : "Acknowledgements"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VMLDate" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "value" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Value"
+        }
+      }
+    },
+    "Contact" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "role" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Role"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "urls" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "type" : "string"
+          },
+          "title" : "Urls"
+        },
+        "address" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Address"
+        },
+        "phone" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Phone"
+        },
+        "fax" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Fax"
+        },
+        "email" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Email"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "DbXref" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Comment" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "texts" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/CommentText"
+          },
+          "title" : "Texts"
+        },
+        "values" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "CommentText" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "content_type" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Content _type"
+        },
+        "encoding" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Encoding"
+        },
+        "lang" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Lang"
+        },
+        "string" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "String"
+        }
+      }
+    },
+    "Value" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "type" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "unit" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Unit"
+        },
+        "uri" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "val" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Val"
+        },
+        "nval" : {
+          "propertyOrder" : 8,
+          "type" : "number",
+          "title" : "Nval"
+        },
+        "description" : {
+          "propertyOrder" : 9,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        },
+        "values" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        }
+      }
+    },
+    "EvidenceCode" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "scores" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Score"
+          },
+          "title" : "Scores"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Score" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "value" : {
+          "propertyOrder" : 5,
+          "type" : "number",
+          "title" : "Value"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "ProtocolId" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "ObservationDate" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "age" : {
+          "propertyOrder" : 1,
+          "type" : "number",
+          "title" : "Age"
+        },
+        "date" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        },
+        "coded" : {
+          "propertyOrder" : 5,
+          "type" : "boolean",
+          "title" : "Coded"
+        }
+      }
+    },
+    "Acknowledgement" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "grant_number" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/GrantNumber",
+          "title" : "Grant _number"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "GrantNumber" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Panel" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "size" : {
+          "propertyOrder" : 2,
+          "type" : "integer",
+          "title" : "Size"
+        },
+        "type" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "xmlns" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Xmlns"
+        },
+        "xmlns:xsi" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Xmlns :xsi"
+        },
+        "xsi:schemaLocation" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Xsi :schema Location"
+        },
+        "individuals" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Individual"
+          },
+          "title" : "Individuals"
+        },
+        "gender" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/Gender",
+          "title" : "Gender"
+        },
+        "dob" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Dob"
+        },
+        "age" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/Age",
+          "title" : "Age"
+        },
+        "original_id" : {
+          "propertyOrder" : 12,
+          "$ref" : "#/definitions/OriginalId",
+          "title" : "Original _id"
+        },
+        "role" : {
+          "propertyOrder" : 13,
+          "$ref" : "#/definitions/Role",
+          "title" : "Role"
+        },
+        "relationships" : {
+          "propertyOrder" : 14,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Relationship"
+          },
+          "title" : "Relationships"
+        },
+        "organism" : {
+          "propertyOrder" : 15,
+          "$ref" : "#/definitions/Organism",
+          "title" : "Organism"
+        },
+        "strain" : {
+          "propertyOrder" : 16,
+          "$ref" : "#/definitions/Strain",
+          "title" : "Strain"
+        },
+        "cultivar" : {
+          "propertyOrder" : 17,
+          "$ref" : "#/definitions/Cultivar",
+          "title" : "Cultivar"
+        },
+        "phenotypes" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          },
+          "title" : "Phenotypes"
+        },
+        "observations" : {
+          "propertyOrder" : 19,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Observation"
+          },
+          "title" : "Observations"
+        },
+        "populations" : {
+          "propertyOrder" : 20,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          },
+          "title" : "Populations"
+        },
+        "variants" : {
+          "propertyOrder" : 21,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          },
+          "title" : "Variants"
+        },
+        "variant_groups" : {
+          "propertyOrder" : 22,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantGroup"
+          },
+          "title" : "Variant _groups"
+        },
+        "source" : {
+          "propertyOrder" : 23,
+          "$ref" : "#/definitions/Source",
+          "title" : "Source"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 24,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 25,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        },
+        "sharing_policy" : {
+          "propertyOrder" : 26,
+          "$ref" : "#/definitions/SharingPolicy",
+          "title" : "Sharing _policy"
+        },
+        "creation_date" : {
+          "propertyOrder" : 27,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Creation _date"
+        },
+        "modification_date" : {
+          "propertyOrder" : 28,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Modification _date"
+        }
+      }
+    },
+    "Individual" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "uri" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "gender" : {
+          "propertyOrder" : 3,
+          "$ref" : "#/definitions/Gender",
+          "title" : "Gender"
+        },
+        "dob" : {
+          "propertyOrder" : 4,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Dob"
+        },
+        "age" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/Age",
+          "title" : "Age"
+        },
+        "original_id" : {
+          "propertyOrder" : 6,
+          "$ref" : "#/definitions/OriginalId",
+          "title" : "Original _id"
+        },
+        "role" : {
+          "propertyOrder" : 7,
+          "$ref" : "#/definitions/Role",
+          "title" : "Role"
+        },
+        "relationships" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Relationship"
+          },
+          "title" : "Relationships"
+        },
+        "organism" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/Organism",
+          "title" : "Organism"
+        },
+        "strain" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/Strain",
+          "title" : "Strain"
+        },
+        "cultivar" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/Cultivar",
+          "title" : "Cultivar"
+        },
+        "phenotypes" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          },
+          "title" : "Phenotypes"
+        },
+        "observations" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Observation"
+          },
+          "title" : "Observations"
+        },
+        "populations" : {
+          "propertyOrder" : 14,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          },
+          "title" : "Populations"
+        },
+        "variants" : {
+          "propertyOrder" : 15,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          },
+          "title" : "Variants"
+        },
+        "variant_groups" : {
+          "propertyOrder" : 16,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantGroup"
+          },
+          "title" : "Variant _groups"
+        },
+        "source" : {
+          "propertyOrder" : 17,
+          "$ref" : "#/definitions/Source",
+          "title" : "Source"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 19,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        },
+        "sharing_policy" : {
+          "propertyOrder" : 20,
+          "$ref" : "#/definitions/SharingPolicy",
+          "title" : "Sharing _policy"
+        },
+        "creation_date" : {
+          "propertyOrder" : 21,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Creation _date"
+        },
+        "modification_date" : {
+          "propertyOrder" : 22,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Modification _date"
+        }
+      }
+    },
+    "Gender" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "code" : {
+          "propertyOrder" : 1,
+          "type" : "integer",
+          "title" : "Code"
+        },
+        "description" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/GenderDescription",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "GenderDescription" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Age" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "coded" : {
+          "propertyOrder" : 1,
+          "type" : "boolean",
+          "title" : "Coded"
+        },
+        "float" : {
+          "propertyOrder" : 2,
+          "type" : "number",
+          "title" : "Float"
+        }
+      }
+    },
+    "OriginalId" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Role" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Relationship" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "individuals" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Individual"
+          },
+          "title" : "Individuals"
+        },
+        "panels" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Panel"
+          },
+          "title" : "Panels"
+        },
+        "description" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Organism" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Strain" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Cultivar" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Phenotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "type" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "inheritance_pattern" : {
+          "propertyOrder" : 6,
+          "$ref" : "#/definitions/InheritancePattern",
+          "title" : "Inheritance _pattern"
+        },
+        "description" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "InheritancePattern" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Observation" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "type" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Population" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "type" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Variant" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "copy_count" : {
+          "propertyOrder" : 1,
+          "type" : "number",
+          "title" : "Copy _count"
+        },
+        "id" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "subcellular_part" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Subcellular _part"
+        },
+        "type" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "genes" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Gene"
+          },
+          "title" : "Genes"
+        },
+        "ref_seq" : {
+          "propertyOrder" : 7,
+          "$ref" : "#/definitions/RefSeq",
+          "title" : "Ref _seq"
+        },
+        "name" : {
+          "propertyOrder" : 8,
+          "$ref" : "#/definitions/VariantName",
+          "title" : "Name"
+        },
+        "haplotypes" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Haplotype"
+          },
+          "title" : "Haplotypes"
+        },
+        "panels" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Panel"
+          },
+          "title" : "Panels"
+        },
+        "seq_regions" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          },
+          "title" : "Seq _regions"
+        },
+        "variant_types" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          },
+          "title" : "Variant _types"
+        },
+        "variant_classs" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          },
+          "title" : "Variant _classs"
+        },
+        "original_id" : {
+          "propertyOrder" : 14,
+          "$ref" : "#/definitions/OriginalId",
+          "title" : "Original _id"
+        },
+        "exons" : {
+          "propertyOrder" : 15,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Exon"
+          },
+          "title" : "Exons"
+        },
+        "sequence" : {
+          "propertyOrder" : 16,
+          "$ref" : "#/definitions/Sequence",
+          "title" : "Sequence"
+        },
+        "genotype" : {
+          "propertyOrder" : 17,
+          "$ref" : "#/definitions/Genotype",
+          "title" : "Genotype"
+        },
+        "consequences" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          },
+          "title" : "Consequences"
+        },
+        "pathogenicities" : {
+          "propertyOrder" : 19,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          },
+          "title" : "Pathogenicities"
+        },
+        "sample" : {
+          "propertyOrder" : 20,
+          "$ref" : "#/definitions/Sample",
+          "title" : "Sample"
+        },
+        "tissue" : {
+          "propertyOrder" : 21,
+          "$ref" : "#/definitions/Tissue",
+          "title" : "Tissue"
+        },
+        "variant_detection" : {
+          "propertyOrder" : 22,
+          "$ref" : "#/definitions/VariantDetection",
+          "title" : "Variant _detection"
+        },
+        "restriction_site" : {
+          "propertyOrder" : 23,
+          "$ref" : "#/definitions/RestrictionSite",
+          "title" : "Restriction _site"
+        },
+        "tissue_distribution" : {
+          "propertyOrder" : 24,
+          "$ref" : "#/definitions/TissueDistribution",
+          "title" : "Tissue _distribution"
+        },
+        "genetic_origins" : {
+          "propertyOrder" : 25,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/GeneticOrigin"
+          },
+          "title" : "Genetic _origins"
+        },
+        "frequencies" : {
+          "propertyOrder" : 26,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          },
+          "title" : "Frequencies"
+        },
+        "seq_changes" : {
+          "propertyOrder" : 27,
+          "$ref" : "#/definitions/SeqChanges",
+          "title" : "Seq _changes"
+        },
+        "aliases" : {
+          "propertyOrder" : 28,
+          "$ref" : "#/definitions/Aliases",
+          "title" : "Aliases"
+        },
+        "source" : {
+          "propertyOrder" : 29,
+          "$ref" : "#/definitions/Source",
+          "title" : "Source"
+        },
+        "locations" : {
+          "propertyOrder" : 30,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          },
+          "title" : "Locations"
+        },
+        "sharing_policy" : {
+          "propertyOrder" : 31,
+          "$ref" : "#/definitions/SharingPolicy",
+          "title" : "Sharing _policy"
+        },
+        "creation_date" : {
+          "propertyOrder" : 32,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Creation _date"
+        },
+        "modification_date" : {
+          "propertyOrder" : 33,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Modification _date"
+        },
+        "values" : {
+          "propertyOrder" : 34,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 35,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 36,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 37,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 38,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 39,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        },
+        "genotypic" : {
+          "propertyOrder" : 40,
+          "type" : "boolean",
+          "title" : "Genotypic"
+        }
+      }
+    },
+    "Gene" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "RefSeq" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VariantName" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "scheme" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Scheme"
+        },
+        "string" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "String"
+        }
+      }
+    },
+    "Haplotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "allele" : {
+          "propertyOrder" : 1,
+          "type" : "integer",
+          "title" : "Allele"
+        },
+        "id" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "uri" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "name" : {
+          "propertyOrder" : 4,
+          "$ref" : "#/definitions/VariantName",
+          "title" : "Name"
+        },
+        "variants" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VmlVariantEvent"
+          },
+          "title" : "Variants"
+        },
+        "sequence" : {
+          "propertyOrder" : 6,
+          "$ref" : "#/definitions/Sequence",
+          "title" : "Sequence"
+        },
+        "consequences" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          },
+          "title" : "Consequences"
+        },
+        "pathogenicities" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          },
+          "title" : "Pathogenicities"
+        },
+        "frequencies" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          },
+          "title" : "Frequencies"
+        },
+        "seq_changes" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/SeqChanges",
+          "title" : "Seq _changes"
+        },
+        "aliases" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/Aliases",
+          "title" : "Aliases"
+        },
+        "source" : {
+          "propertyOrder" : 12,
+          "$ref" : "#/definitions/Source",
+          "title" : "Source"
+        },
+        "locations" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          },
+          "title" : "Locations"
+        },
+        "values" : {
+          "propertyOrder" : 14,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 15,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 16,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 17,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 19,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VmlVariantEvent" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "propertyOrder" : 1,
+          "$ref" : "#/definitions/VariantName",
+          "title" : "Name"
+        },
+        "sequence" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/Sequence",
+          "title" : "Sequence"
+        },
+        "consequenceList" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          },
+          "title" : "Consequence List"
+        },
+        "pathogenicityList" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          },
+          "title" : "Pathogenicity List"
+        },
+        "seqChanges" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/SeqChanges",
+          "title" : "Seq Changes"
+        },
+        "aliases" : {
+          "propertyOrder" : 6,
+          "$ref" : "#/definitions/Aliases",
+          "title" : "Aliases"
+        },
+        "locationList" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          },
+          "title" : "Location List"
+        },
+        "dbXrefList" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db Xref List"
+        },
+        "commentList" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comment List"
+        },
+        "valueList" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Value List"
+        },
+        "evidenceCodeList" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence Code List"
+        },
+        "protocolIdList" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol Id List"
+        },
+        "observationDate" : {
+          "propertyOrder" : 13,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation Date"
+        },
+        "id" : {
+          "propertyOrder" : 14,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "uri" : {
+          "propertyOrder" : 15,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "seqRegionList" : {
+          "propertyOrder" : 16,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          },
+          "title" : "Seq Region List"
+        },
+        "variantTypeList" : {
+          "propertyOrder" : 17,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          },
+          "title" : "Variant Type List"
+        },
+        "variantClassList" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          },
+          "title" : "Variant Class List"
+        },
+        "originalId" : {
+          "propertyOrder" : 19,
+          "$ref" : "#/definitions/OriginalId",
+          "title" : "Original Id"
+        },
+        "variantDetection" : {
+          "propertyOrder" : 20,
+          "$ref" : "#/definitions/VariantDetection",
+          "title" : "Variant Detection"
+        },
+        "exonList" : {
+          "propertyOrder" : 21,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Exon"
+          },
+          "title" : "Exon List"
+        },
+        "restrictionSite" : {
+          "propertyOrder" : 22,
+          "$ref" : "#/definitions/RestrictionSite",
+          "title" : "Restriction Site"
+        },
+        "geneticOriginList" : {
+          "propertyOrder" : 23,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/GeneticOrigin"
+          },
+          "title" : "Genetic Origin List"
+        },
+        "frequencyList" : {
+          "propertyOrder" : 24,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          },
+          "title" : "Frequency List"
+        }
+      }
+    },
+    "Sequence" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "reference" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Reference"
+        },
+        "variant" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Variant"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Consequence" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Pathogenicity" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "panel_ref" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Panel _ref"
+        },
+        "scope" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Scope"
+        },
+        "source" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "xmlns" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Xmlns"
+        },
+        "xmlns:xsi" : {
+          "propertyOrder" : 8,
+          "type" : "string",
+          "title" : "Xmlns :xsi"
+        },
+        "xsi:schemaLocation" : {
+          "propertyOrder" : 9,
+          "type" : "string",
+          "title" : "Xsi :schema Location"
+        },
+        "phenotypes" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          },
+          "title" : "Phenotypes"
+        },
+        "factors" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Factor"
+          },
+          "title" : "Factors"
+        },
+        "description" : {
+          "propertyOrder" : 12,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 14,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 15,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 16,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 17,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Factor" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "SeqChanges" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "variants" : {
+          "propertyOrder" : 1,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ConsVariant"
+          },
+          "title" : "Variants"
+        },
+        "values" : {
+          "propertyOrder" : 2,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "ConsVariant" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "type" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "uri" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "ref_seq" : {
+          "propertyOrder" : 4,
+          "$ref" : "#/definitions/RefSeq",
+          "title" : "Ref _seq"
+        },
+        "name" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/VariantName",
+          "title" : "Name"
+        },
+        "seq_regions" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          },
+          "title" : "Seq _regions"
+        },
+        "variant_types" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          },
+          "title" : "Variant _types"
+        },
+        "variant_classs" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          },
+          "title" : "Variant _classs"
+        },
+        "original_id" : {
+          "propertyOrder" : 9,
+          "$ref" : "#/definitions/OriginalId",
+          "title" : "Original _id"
+        },
+        "sequence" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/Sequence",
+          "title" : "Sequence"
+        },
+        "genotype" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/Genotype",
+          "title" : "Genotype"
+        },
+        "consequences" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          },
+          "title" : "Consequences"
+        },
+        "pathogenicities" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          },
+          "title" : "Pathogenicities"
+        },
+        "variant_detection" : {
+          "propertyOrder" : 14,
+          "$ref" : "#/definitions/VariantDetection",
+          "title" : "Variant _detection"
+        },
+        "tissue_distribution" : {
+          "propertyOrder" : 15,
+          "$ref" : "#/definitions/TissueDistribution",
+          "title" : "Tissue _distribution"
+        },
+        "seq_changes" : {
+          "propertyOrder" : 16,
+          "$ref" : "#/definitions/SeqChanges",
+          "title" : "Seq _changes"
+        },
+        "aliases" : {
+          "propertyOrder" : 17,
+          "$ref" : "#/definitions/Aliases",
+          "title" : "Aliases"
+        },
+        "locations" : {
+          "propertyOrder" : 18,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          },
+          "title" : "Locations"
+        },
+        "values" : {
+          "propertyOrder" : 19,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 20,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 21,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 22,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 23,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 24,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "SeqRegion" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "xmlns" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Xmlns"
+        },
+        "xmlns:xsi" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Xmlns :xsi"
+        },
+        "xsi:schemaLocation" : {
+          "propertyOrder" : 7,
+          "type" : "string",
+          "title" : "Xsi :schema Location"
+        },
+        "seq_regions" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          },
+          "title" : "Seq _regions"
+        },
+        "locations" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          },
+          "title" : "Locations"
+        },
+        "description" : {
+          "propertyOrder" : 10,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Location" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "unit" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Unit"
+        },
+        "ref_seq" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/RefSeq",
+          "title" : "Ref _seq"
+        },
+        "chr" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Chr"
+        },
+        "start" : {
+          "propertyOrder" : 4,
+          "type" : "integer",
+          "title" : "Start"
+        },
+        "end" : {
+          "propertyOrder" : 5,
+          "type" : "integer",
+          "title" : "End"
+        }
+      }
+    },
+    "VariantType" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VariantClass" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Genotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "call" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Call"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 2,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VariantDetection" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "technique" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Technique"
+        },
+        "template" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Template"
+        },
+        "protocol_id" : {
+          "propertyOrder" : 3,
+          "$ref" : "#/definitions/ProtocolId",
+          "title" : "Protocol _id"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "TissueDistribution" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Aliases" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "variants" : {
+          "propertyOrder" : 1,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          },
+          "title" : "Variants"
+        },
+        "values" : {
+          "propertyOrder" : 2,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 3,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Exon" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "transcript_ref" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Transcript _ref"
+        }
+      }
+    },
+    "RestrictionSite" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "GeneticOrigin" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "genetic_source" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/GeneticSource",
+          "title" : "Genetic _source"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "GeneticSource" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "populations" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          },
+          "title" : "Populations"
+        },
+        "description" : {
+          "propertyOrder" : 6,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "values" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Frequency" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "samples" : {
+          "propertyOrder" : 1,
+          "type" : "integer",
+          "title" : "Samples"
+        },
+        "type" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "populations" : {
+          "propertyOrder" : 3,
+          "$ref" : "#/definitions/Population",
+          "title" : "Populations"
+        },
+        "counts" : {
+          "propertyOrder" : 4,
+          "type" : "integer",
+          "title" : "Counts"
+        },
+        "category" : {
+          "propertyOrder" : 5,
+          "$ref" : "#/definitions/FreqCategory",
+          "title" : "Category"
+        },
+        "freq" : {
+          "propertyOrder" : 6,
+          "type" : "number",
+          "title" : "Freq"
+        },
+        "values" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 10,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 11,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "FreqCategory" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Sample" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "name" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Name"
+        },
+        "source" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "Tissue" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "SharingPolicy" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "type" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Type"
+        },
+        "embargo_end_date" : {
+          "propertyOrder" : 2,
+          "$ref" : "#/definitions/VMLDate",
+          "title" : "Embargo _end _date"
+        },
+        "use_permission" : {
+          "propertyOrder" : 3,
+          "$ref" : "#/definitions/UsePermission",
+          "title" : "Use _permission"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 4,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "UsePermission" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "VariantGroup" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Id"
+        },
+        "orientation" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Orientation"
+        },
+        "uri" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "group_type" : {
+          "propertyOrder" : 4,
+          "$ref" : "#/definitions/GroupType",
+          "title" : "Group _type"
+        },
+        "variants" : {
+          "propertyOrder" : 5,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          },
+          "title" : "Variants"
+        },
+        "frequencies" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          },
+          "title" : "Frequencies"
+        },
+        "pathogenicities" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          },
+          "title" : "Pathogenicities"
+        },
+        "values" : {
+          "propertyOrder" : 8,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          },
+          "title" : "Values"
+        },
+        "evidence_codes" : {
+          "propertyOrder" : 9,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          },
+          "title" : "Evidence _codes"
+        },
+        "protocol_ids" : {
+          "propertyOrder" : 10,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          },
+          "title" : "Protocol _ids"
+        },
+        "observation_date" : {
+          "propertyOrder" : 11,
+          "$ref" : "#/definitions/ObservationDate",
+          "title" : "Observation _date"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 12,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 13,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    },
+    "GroupType" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "propertyOrder" : 1,
+          "type" : "string",
+          "title" : "Accession"
+        },
+        "source" : {
+          "propertyOrder" : 2,
+          "type" : "string",
+          "title" : "Source"
+        },
+        "term" : {
+          "propertyOrder" : 3,
+          "type" : "string",
+          "title" : "Term"
+        },
+        "uri" : {
+          "propertyOrder" : 4,
+          "type" : "string",
+          "title" : "Uri"
+        },
+        "description" : {
+          "propertyOrder" : 5,
+          "type" : "string",
+          "title" : "Description"
+        },
+        "db_xrefs" : {
+          "propertyOrder" : 6,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          },
+          "title" : "Db _xrefs"
+        },
+        "comments" : {
+          "propertyOrder" : 7,
+          "type" : "array",
+          "format" : "table",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          },
+          "title" : "Comments"
+        }
+      }
+    }
+  }
+}
