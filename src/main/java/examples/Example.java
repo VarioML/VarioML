@@ -3,6 +3,7 @@ package examples;
 import java.net.URL;
 
 import org.varioml.jaxb.CafeVariome;
+import org.varioml.jaxb.Frequency;
 import org.varioml.jaxb.Vreport;
 import org.varioml.util.Util;
 
@@ -38,6 +39,10 @@ public class Example {
 
 		/* Generate JSON schema from the Java class */
 		u.toJSONSchema("vreport.json-schema", Vreport.class);
+
+		/* Generate JSON schema for the json editor. https://github.com/jdorn/json-editor*/
+		u.toJSONSchemaHtml5Enabled("vreport.json-schema-html5", Vreport.class);
 		
+
 	}
 }

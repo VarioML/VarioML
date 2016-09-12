@@ -12,7 +12,10 @@ dependencies {
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.2'
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.2'
  compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: '2.8.2'
- compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.8.2'
+
+ //compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.8.2'
+ compile group: 'com.kjetland', name: 'mbknor-jackson-jsonschema_2.11', version: '1.0.6'
+
  compile group: 'xml-apis', name: 'xml-apis', version: '1.4.01'
  compile group: 'org.simpleframework', name: 'simple-xml', version: '2.7.1'
  compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.2'

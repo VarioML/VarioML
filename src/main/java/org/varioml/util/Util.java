@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Optional;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -36,13 +37,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule.Priority;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
+import com.fasterxml.jackson.module.jsonSchema.JsonSchemaGenerator;
 import com.fasterxml.jackson.module.jsonSchema.factories.JsonSchemaFactory;
 import com.fasterxml.jackson.module.jsonSchema.factories.SchemaFactoryWrapper;
+import com.kjetland.jackson.jsonSchema.JsonSchemaConfig;
 import com.megginson.sax.XMLWriter;
 import com.siemens.ct.exi.EXIFactory;
 import com.siemens.ct.exi.GrammarFactory;
@@ -56,6 +60,7 @@ import com.siemens.ct.exi.helpers.DefaultEXIFactory;
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonGenerator.Feature;
 import de.undercouch.bson4jackson.BsonParser;
+import scala.Option;
 
 public class Util {
 
@@ -528,20 +533,53 @@ public class Util {
 
 	}
 
-	public  void toJSONSchema( String fileName, final Class<?> klaz) throws FileNotFoundException, IOException {
+	public  void toJSONSchemaJackson( String fileName, final Class<?> klaz) throws FileNotFoundException, IOException {
 		File file = new File(fileName);
 		try (FileOutputStream out = new FileOutputStream(file)) {
-			toJSONSchema( out, klaz);		
+			toJSONSchemaJackson( out, klaz);		
 		}
 	}
 	
-	public  void toJSONSchema(OutputStream outStream, final Class<?> klaz) {
+	public  void toJSONSchemaJackson(OutputStream outStream, final Class<?> klaz) {
 		PrintWriter out = new PrintWriter(outStream);
 		final SchemaFactoryWrapper visitor = new SchemaFactoryWrapper();
 		final ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.acceptJsonFormatVisitor(mapper.constructType(klaz), visitor);
 			final com.fasterxml.jackson.module.jsonSchema.JsonSchema jsonSchema = visitor.finalSchema();
+			out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonSchema));
+			out.flush();
+		} catch (JsonMappingException jsonEx) {
+			fatal(Util.class, "Unable to map JSON: " + jsonEx);
+		} catch (JsonProcessingException jsonEx) {
+			fatal(Util.class, "Unable to map JSON: " + jsonEx);
+		}
+	}
+
+	public  void toJSONSchemaHtml5Enabled( String fileName, final Class<?> klaz) throws FileNotFoundException, IOException {
+		File file = new File(fileName);
+		try (FileOutputStream out = new FileOutputStream(file)) {
+			final JsonSchemaConfig conf =  JsonSchemaConfig.html5EnabledSchema();
+			toJSONSchema( out, conf, klaz);		
+		}
+	}
+	public  void toJSONSchema( String fileName, final Class<?> klaz) throws FileNotFoundException, IOException {
+		File file = new File(fileName);
+		try (FileOutputStream out = new FileOutputStream(file)) {
+			final JsonSchemaConfig conf =  JsonSchemaConfig.vanillaJsonSchemaDraft4();
+			toJSONSchema( out, conf, klaz);		
+		}
+	}
+
+	public  void toJSONSchema(OutputStream outStream, JsonSchemaConfig conf, final Class<?> klaz) throws JsonMappingException {
+		PrintWriter out = new PrintWriter(outStream);
+		JaxbAnnotationModule module = new JaxbAnnotationModule();
+		module.setPriority(Priority.SECONDARY);
+		final ObjectMapper mapper = new ObjectMapper();
+		mapper.registerModule(module);
+		final com.kjetland.jackson.jsonSchema.JsonSchemaGenerator generator = new com.kjetland.jackson.jsonSchema.JsonSchemaGenerator(mapper,conf);
+		final JsonNode jsonSchema = generator.generateJsonSchema( klaz,Option.empty(),Option.empty());
+		try {
 			out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonSchema));
 			out.flush();
 		} catch (JsonMappingException jsonEx) {
