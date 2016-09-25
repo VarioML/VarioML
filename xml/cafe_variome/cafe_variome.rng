@@ -7,7 +7,7 @@
   </include>
   <start>
     <a:documentation>Relax NGC schema for Cafe variome
-Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+Contact: Juha.Muilu admin@varioml.org.
 </a:documentation>
     <ref name="cafe_variome"/>
   </start>

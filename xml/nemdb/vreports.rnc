@@ -6,7 +6,7 @@ namespace local = ""
 include "../lsdb_main/lsdb.rnc" { start |= notAllowed }
 
 ## Relax NGC schema for Variation report data transfer
-## Contact: Juha.Muilu (juha.muilu@helsinki.fi)
+## Contact: admin@varioml.org
 start = vreport 
 
 # (=)	===============================
