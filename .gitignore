@@ -39,3 +39,5 @@ Icon?
 Thumbs.db
 .history
 /bin/
+/.gradle/
+/build/
