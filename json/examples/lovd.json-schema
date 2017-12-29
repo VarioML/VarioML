@@ -1,0 +1,2943 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "Lsdb",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "id" : {
+      "type" : "string"
+    },
+    "schema_version" : {
+      "type" : "number"
+    },
+    "submissionid_type" : {
+      "type" : "string"
+    },
+    "uri" : {
+      "type" : "string"
+    },
+    "xmlns" : {
+      "type" : "string"
+    },
+    "xmlns:xsi" : {
+      "type" : "string"
+    },
+    "xsi:schemaLocation" : {
+      "type" : "string"
+    },
+    "created" : {
+      "$ref" : "#/definitions/VMLDateTime"
+    },
+    "sources" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Source"
+      }
+    },
+    "individuals" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Individual"
+      }
+    },
+    "panels" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Panel"
+      }
+    },
+    "variants" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Variant"
+      }
+    },
+    "db_xrefs" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/DbXref"
+      }
+    },
+    "comments" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Comment"
+      }
+    }
+  },
+  "definitions" : {
+    "VMLDateTime" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        },
+        "dateTime" : {
+          "$ref" : "#/definitions/DateTime"
+        }
+      }
+    },
+    "DateTime" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "millisOfDay" : {
+          "type" : "integer"
+        },
+        "monthOfYear" : {
+          "type" : "integer"
+        },
+        "hourOfDay" : {
+          "type" : "integer"
+        },
+        "minuteOfHour" : {
+          "type" : "integer"
+        },
+        "secondOfMinute" : {
+          "type" : "integer"
+        },
+        "millisOfSecond" : {
+          "type" : "integer"
+        },
+        "weekOfWeekyear" : {
+          "type" : "integer"
+        },
+        "weekyear" : {
+          "type" : "integer"
+        },
+        "yearOfEra" : {
+          "type" : "integer"
+        },
+        "yearOfCentury" : {
+          "type" : "integer"
+        },
+        "centuryOfEra" : {
+          "type" : "integer"
+        },
+        "secondOfDay" : {
+          "type" : "integer"
+        },
+        "minuteOfDay" : {
+          "type" : "integer"
+        },
+        "year" : {
+          "type" : "integer"
+        },
+        "dayOfMonth" : {
+          "type" : "integer"
+        },
+        "dayOfWeek" : {
+          "type" : "integer"
+        },
+        "dayOfYear" : {
+          "type" : "integer"
+        },
+        "era" : {
+          "type" : "integer"
+        },
+        "chronology" : {
+          "$ref" : "#/definitions/Chronology"
+        },
+        "zone" : {
+          "$ref" : "#/definitions/DateTimeZone"
+        },
+        "millis" : {
+          "type" : "integer"
+        },
+        "afterNow" : {
+          "type" : "boolean"
+        },
+        "beforeNow" : {
+          "type" : "boolean"
+        },
+        "equalNow" : {
+          "type" : "boolean"
+        }
+      },
+      "required" : [ "millisOfDay", "monthOfYear", "hourOfDay", "minuteOfHour", "secondOfMinute", "millisOfSecond", "weekOfWeekyear", "weekyear", "yearOfEra", "yearOfCentury", "centuryOfEra", "secondOfDay", "minuteOfDay", "year", "dayOfMonth", "dayOfWeek", "dayOfYear", "era", "millis", "afterNow", "beforeNow", "equalNow" ]
+    },
+    "Chronology" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "zone" : {
+          "$ref" : "#/definitions/DateTimeZone"
+        }
+      }
+    },
+    "DateTimeZone" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "fixed" : {
+          "type" : "boolean"
+        }
+      },
+      "required" : [ "fixed" ]
+    },
+    "Source" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "urls" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "contacts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Contact"
+          }
+        },
+        "acknowledgements" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Acknowledgement"
+          }
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VMLDate" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "value" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Contact" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "role" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "urls" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "fax" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "DbXref" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Comment" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "texts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/CommentText"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "CommentText" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "content_type" : {
+          "type" : "string"
+        },
+        "encoding" : {
+          "type" : "string"
+        },
+        "lang" : {
+          "type" : "string"
+        },
+        "string" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Value" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "unit" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "val" : {
+          "type" : "string"
+        },
+        "nval" : {
+          "type" : "number"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        }
+      }
+    },
+    "EvidenceCode" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "scores" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Score"
+          }
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Score" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "number"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "ProtocolId" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "ObservationDate" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "age" : {
+          "type" : "number"
+        },
+        "date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "coded" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Acknowledgement" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "grant_number" : {
+          "$ref" : "#/definitions/GrantNumber"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "GrantNumber" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Individual" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "$ref" : "#/definitions/Gender"
+        },
+        "dob" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "age" : {
+          "$ref" : "#/definitions/Age"
+        },
+        "original_id" : {
+          "$ref" : "#/definitions/OriginalId"
+        },
+        "role" : {
+          "$ref" : "#/definitions/Role"
+        },
+        "relationships" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Relationship"
+          }
+        },
+        "organism" : {
+          "$ref" : "#/definitions/Organism"
+        },
+        "strain" : {
+          "$ref" : "#/definitions/Strain"
+        },
+        "cultivar" : {
+          "$ref" : "#/definitions/Cultivar"
+        },
+        "phenotypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          }
+        },
+        "observations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Observation"
+          }
+        },
+        "populations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          }
+        },
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          }
+        },
+        "variant_groups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantGroup"
+          }
+        },
+        "source" : {
+          "$ref" : "#/definitions/Source"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "sharing_policy" : {
+          "$ref" : "#/definitions/SharingPolicy"
+        },
+        "creation_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "modification_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        }
+      }
+    },
+    "Gender" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "code" : {
+          "type" : "integer"
+        },
+        "description" : {
+          "$ref" : "#/definitions/GenderDescription"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "GenderDescription" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Age" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "coded" : {
+          "type" : "boolean"
+        },
+        "float" : {
+          "type" : "number"
+        }
+      }
+    },
+    "OriginalId" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Role" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Relationship" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "individuals" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Individual"
+          }
+        },
+        "panels" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Panel"
+          }
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Panel" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "xmlns" : {
+          "type" : "string"
+        },
+        "xmlns:xsi" : {
+          "type" : "string"
+        },
+        "xsi:schemaLocation" : {
+          "type" : "string"
+        },
+        "individuals" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Individual"
+          }
+        },
+        "gender" : {
+          "$ref" : "#/definitions/Gender"
+        },
+        "dob" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "age" : {
+          "$ref" : "#/definitions/Age"
+        },
+        "original_id" : {
+          "$ref" : "#/definitions/OriginalId"
+        },
+        "role" : {
+          "$ref" : "#/definitions/Role"
+        },
+        "relationships" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Relationship"
+          }
+        },
+        "organism" : {
+          "$ref" : "#/definitions/Organism"
+        },
+        "strain" : {
+          "$ref" : "#/definitions/Strain"
+        },
+        "cultivar" : {
+          "$ref" : "#/definitions/Cultivar"
+        },
+        "phenotypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          }
+        },
+        "observations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Observation"
+          }
+        },
+        "populations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          }
+        },
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          }
+        },
+        "variant_groups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantGroup"
+          }
+        },
+        "source" : {
+          "$ref" : "#/definitions/Source"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "sharing_policy" : {
+          "$ref" : "#/definitions/SharingPolicy"
+        },
+        "creation_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "modification_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        }
+      }
+    },
+    "Organism" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Strain" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Cultivar" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Phenotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "inheritance_pattern" : {
+          "$ref" : "#/definitions/InheritancePattern"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "InheritancePattern" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Observation" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Population" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Variant" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "copy_count" : {
+          "type" : "number"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "subcellular_part" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "genes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Gene"
+          }
+        },
+        "ref_seq" : {
+          "$ref" : "#/definitions/RefSeq"
+        },
+        "name" : {
+          "$ref" : "#/definitions/VariantName"
+        },
+        "haplotypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Haplotype"
+          }
+        },
+        "panels" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Panel"
+          }
+        },
+        "seq_regions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          }
+        },
+        "variant_types" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          }
+        },
+        "variant_classs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          }
+        },
+        "original_id" : {
+          "$ref" : "#/definitions/OriginalId"
+        },
+        "exons" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Exon"
+          }
+        },
+        "sequence" : {
+          "$ref" : "#/definitions/Sequence"
+        },
+        "genotype" : {
+          "$ref" : "#/definitions/Genotype"
+        },
+        "consequences" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          }
+        },
+        "pathogenicities" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          }
+        },
+        "sample" : {
+          "$ref" : "#/definitions/Sample"
+        },
+        "tissue" : {
+          "$ref" : "#/definitions/Tissue"
+        },
+        "variant_detection" : {
+          "$ref" : "#/definitions/VariantDetection"
+        },
+        "restriction_site" : {
+          "$ref" : "#/definitions/RestrictionSite"
+        },
+        "tissue_distribution" : {
+          "$ref" : "#/definitions/TissueDistribution"
+        },
+        "genetic_origins" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GeneticOrigin"
+          }
+        },
+        "frequencies" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          }
+        },
+        "seq_changes" : {
+          "$ref" : "#/definitions/SeqChanges"
+        },
+        "aliases" : {
+          "$ref" : "#/definitions/Aliases"
+        },
+        "source" : {
+          "$ref" : "#/definitions/Source"
+        },
+        "locations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          }
+        },
+        "sharing_policy" : {
+          "$ref" : "#/definitions/SharingPolicy"
+        },
+        "creation_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "modification_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "genotypic" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Gene" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "RefSeq" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VariantName" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "scheme" : {
+          "type" : "string"
+        },
+        "string" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Haplotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "allele" : {
+          "type" : "integer"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "name" : {
+          "$ref" : "#/definitions/VariantName"
+        },
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VmlVariantEvent"
+          }
+        },
+        "sequence" : {
+          "$ref" : "#/definitions/Sequence"
+        },
+        "consequences" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          }
+        },
+        "pathogenicities" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          }
+        },
+        "frequencies" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          }
+        },
+        "seq_changes" : {
+          "$ref" : "#/definitions/SeqChanges"
+        },
+        "aliases" : {
+          "$ref" : "#/definitions/Aliases"
+        },
+        "source" : {
+          "$ref" : "#/definitions/Source"
+        },
+        "locations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VmlVariantEvent" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "$ref" : "#/definitions/VariantName"
+        },
+        "sequence" : {
+          "$ref" : "#/definitions/Sequence"
+        },
+        "consequenceList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          }
+        },
+        "pathogenicityList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          }
+        },
+        "seqChanges" : {
+          "$ref" : "#/definitions/SeqChanges"
+        },
+        "aliases" : {
+          "$ref" : "#/definitions/Aliases"
+        },
+        "locationList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          }
+        },
+        "dbXrefList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "commentList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        },
+        "valueList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidenceCodeList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocolIdList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observationDate" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "seqRegionList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          }
+        },
+        "variantTypeList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          }
+        },
+        "variantClassList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          }
+        },
+        "variantDetection" : {
+          "$ref" : "#/definitions/VariantDetection"
+        },
+        "originalId" : {
+          "$ref" : "#/definitions/OriginalId"
+        },
+        "exonList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Exon"
+          }
+        },
+        "restrictionSite" : {
+          "$ref" : "#/definitions/RestrictionSite"
+        },
+        "geneticOriginList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GeneticOrigin"
+          }
+        },
+        "frequencyList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          }
+        }
+      }
+    },
+    "Sequence" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "reference" : {
+          "type" : "string"
+        },
+        "variant" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Consequence" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Pathogenicity" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "panel_ref" : {
+          "type" : "string"
+        },
+        "scope" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "xmlns" : {
+          "type" : "string"
+        },
+        "xmlns:xsi" : {
+          "type" : "string"
+        },
+        "xsi:schemaLocation" : {
+          "type" : "string"
+        },
+        "phenotypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Phenotype"
+          }
+        },
+        "factors" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Factor"
+          }
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Factor" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "SeqChanges" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ConsVariant"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "ConsVariant" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "ref_seq" : {
+          "$ref" : "#/definitions/RefSeq"
+        },
+        "name" : {
+          "$ref" : "#/definitions/VariantName"
+        },
+        "seq_regions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          }
+        },
+        "variant_types" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantType"
+          }
+        },
+        "variant_classs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/VariantClass"
+          }
+        },
+        "original_id" : {
+          "$ref" : "#/definitions/OriginalId"
+        },
+        "sequence" : {
+          "$ref" : "#/definitions/Sequence"
+        },
+        "genotype" : {
+          "$ref" : "#/definitions/Genotype"
+        },
+        "consequences" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Consequence"
+          }
+        },
+        "pathogenicities" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          }
+        },
+        "variant_detection" : {
+          "$ref" : "#/definitions/VariantDetection"
+        },
+        "tissue_distribution" : {
+          "$ref" : "#/definitions/TissueDistribution"
+        },
+        "seq_changes" : {
+          "$ref" : "#/definitions/SeqChanges"
+        },
+        "aliases" : {
+          "$ref" : "#/definitions/Aliases"
+        },
+        "locations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "SeqRegion" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "xmlns" : {
+          "type" : "string"
+        },
+        "xmlns:xsi" : {
+          "type" : "string"
+        },
+        "xsi:schemaLocation" : {
+          "type" : "string"
+        },
+        "seq_regions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SeqRegion"
+          }
+        },
+        "locations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Location"
+          }
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Location" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "unit" : {
+          "type" : "string"
+        },
+        "ref_seq" : {
+          "$ref" : "#/definitions/RefSeq"
+        },
+        "chr" : {
+          "type" : "string"
+        },
+        "start" : {
+          "type" : "integer"
+        },
+        "end" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "VariantType" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VariantClass" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Genotype" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "call" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VariantDetection" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "technique" : {
+          "type" : "string"
+        },
+        "template" : {
+          "type" : "string"
+        },
+        "protocol_id" : {
+          "$ref" : "#/definitions/ProtocolId"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "TissueDistribution" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Aliases" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Exon" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "transcript_ref" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RestrictionSite" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "GeneticOrigin" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "genetic_source" : {
+          "$ref" : "#/definitions/GeneticSource"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "GeneticSource" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "populations" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Population"
+          }
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Frequency" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "samples" : {
+          "type" : "integer"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "populations" : {
+          "$ref" : "#/definitions/Population"
+        },
+        "counts" : {
+          "type" : "integer"
+        },
+        "category" : {
+          "$ref" : "#/definitions/FreqCategory"
+        },
+        "freq" : {
+          "type" : "number"
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "FreqCategory" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Sample" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "Tissue" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "SharingPolicy" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "embargo_end_date" : {
+          "$ref" : "#/definitions/VMLDate"
+        },
+        "use_permission" : {
+          "$ref" : "#/definitions/UsePermission"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "UsePermission" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "VariantGroup" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orientation" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "group_type" : {
+          "$ref" : "#/definitions/GroupType"
+        },
+        "variants" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Variant"
+          }
+        },
+        "frequencies" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Frequency"
+          }
+        },
+        "pathogenicities" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pathogenicity"
+          }
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Value"
+          }
+        },
+        "evidence_codes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EvidenceCode"
+          }
+        },
+        "protocol_ids" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ProtocolId"
+          }
+        },
+        "observation_date" : {
+          "$ref" : "#/definitions/ObservationDate"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    },
+    "GroupType" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "accession" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "term" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "db_xrefs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DbXref"
+          }
+        },
+        "comments" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Comment"
+          }
+        }
+      }
+    }
+  }
+}
