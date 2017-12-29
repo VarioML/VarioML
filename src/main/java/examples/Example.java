@@ -1,18 +1,11 @@
 package examples;
 
-import java.io.FileInputStream;
 import java.net.URL;
 
 import org.varioml.jaxb.CafeVariome;
-import org.varioml.jaxb.Frequency;
 import org.varioml.jaxb.Lsdb;
 import org.varioml.jaxb.Vreport;
 import org.varioml.util.Util;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.module.jsonSchema.factories.SchemaFactoryWrapper;
 
 public class Example {
 
