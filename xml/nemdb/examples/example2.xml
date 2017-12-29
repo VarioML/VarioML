@@ -10,23 +10,20 @@
     <panel> 
         <population type="ethnic" term="Yorubans"/> 
         <population type="region" term="Nigeria"/> 
-        <variant> 
-            <gene accession="CYP3A5"/> 
-            <ref_seq accession="NM_000777"/> 
-            <name>g.6986A>G</name> 
-            <frequency samples="50" type="allele"> 
-                <freq>0.06</freq> 
-            </frequency> 
-            <db_xref source="dbsnp" accession="rs776746"/> 
-            <comment term="name"> 
-                <text>CYP3A5*3</text> 
-            </comment> 
-        </variant> 
+        <variant_group orientation="cis">
+            <variant> 
+                <name>g.12355A>G</name>
+            </variant>
+            <variant> 
+                <name>g.12311A>G</name>
+            </variant>
+            
+        </variant_group>
     </panel> 
     <panel> 
         <population type="ethnic" term="Yorubans"/> 
         <population type="region" term="Nigeria"/> 
-        <variant> 
+        <variant > 
             <ref_seq accession="NM_000777"/> 
             <name>g.6986A>G</name> 
             <frequency samples="50" type="allele"> 

@@ -1,5 +1,6 @@
 VarioML
 =======
+
 VarioML is a XML/RelaxNG based framework which can be used as a template for developing serialization
 formats for variation data focusing on the LSDB (Locus Specific Mutation Database) use cases. Translations
 for JSON and EXI are supported using [Jackson](https://github.com/FasterXML/jackson) and
