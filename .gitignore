@@ -30,7 +30,7 @@
 ######################
 .DS_Store
 .DS_Store?
-.DS_Store
+.idea
 ehthumbs.db
 ._*
 .Spotlight-V100
@@ -43,4 +43,3 @@ Thumbs.db
 /build/
 .project
 .settings
-.DS_Store
