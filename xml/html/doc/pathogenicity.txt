@@ -6,10 +6,10 @@ Controlled vocabulary for pathogenicity is sourced from the GEN2PHEN project. Se
 SKOS terms are preferred: http://purl.org/varioml/pathogenicity/skos/1.0/
 
 <pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0#p_0003">
-</pathigenicity>
+</pathogenicity>
 
 <pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" >
-</pathigenicity>
+</pathogenicity>
 
 Note that g2p is always used as a source
 
