@@ -24,21 +24,6 @@
       "type" : "string",
       "title" : "Uri"
     },
-    "xmlns" : {
-      "propertyOrder" : 5,
-      "type" : "string",
-      "title" : "Xmlns"
-    },
-    "xmlns:xsi" : {
-      "propertyOrder" : 6,
-      "type" : "string",
-      "title" : "Xmlns :xsi"
-    },
-    "xsi:schemaLocation" : {
-      "propertyOrder" : 7,
-      "type" : "string",
-      "title" : "Xsi :schema Location"
-    },
     "created" : {
       "propertyOrder" : 8,
       "$ref" : "#/definitions/VMLDateTime",
@@ -1389,21 +1374,6 @@
           "propertyOrder" : 4,
           "type" : "string",
           "title" : "Uri"
-        },
-        "xmlns" : {
-          "propertyOrder" : 5,
-          "type" : "string",
-          "title" : "Xmlns"
-        },
-        "xmlns:xsi" : {
-          "propertyOrder" : 6,
-          "type" : "string",
-          "title" : "Xmlns :xsi"
-        },
-        "xsi:schemaLocation" : {
-          "propertyOrder" : 7,
-          "type" : "string",
-          "title" : "Xsi :schema Location"
         },
         "individuals" : {
           "propertyOrder" : 8,
@@ -2889,21 +2859,6 @@
           "type" : "string",
           "title" : "Uri"
         },
-        "xmlns" : {
-          "propertyOrder" : 7,
-          "type" : "string",
-          "title" : "Xmlns"
-        },
-        "xmlns:xsi" : {
-          "propertyOrder" : 8,
-          "type" : "string",
-          "title" : "Xmlns :xsi"
-        },
-        "xsi:schemaLocation" : {
-          "propertyOrder" : 9,
-          "type" : "string",
-          "title" : "Xsi :schema Location"
-        },
         "phenotypes" : {
           "propertyOrder" : 10,
           "type" : "array",
@@ -3318,21 +3273,6 @@
           "propertyOrder" : 4,
           "type" : "string",
           "title" : "Uri"
-        },
-        "xmlns" : {
-          "propertyOrder" : 5,
-          "type" : "string",
-          "title" : "Xmlns"
-        },
-        "xmlns:xsi" : {
-          "propertyOrder" : 6,
-          "type" : "string",
-          "title" : "Xmlns :xsi"
-        },
-        "xsi:schemaLocation" : {
-          "propertyOrder" : 7,
-          "type" : "string",
-          "title" : "Xsi :schema Location"
         },
         "seq_regions" : {
           "propertyOrder" : 8,

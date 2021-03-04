@@ -16,15 +16,6 @@
     "uri" : {
       "type" : "string"
     },
-    "xmlns" : {
-      "type" : "string"
-    },
-    "xmlns:xsi" : {
-      "type" : "string"
-    },
-    "xsi:schemaLocation" : {
-      "type" : "string"
-    },
     "created" : {
       "$ref" : "#/definitions/VMLDateTime"
     },
@@ -931,15 +922,6 @@
           "type" : "string"
         },
         "uri" : {
-          "type" : "string"
-        },
-        "xmlns" : {
-          "type" : "string"
-        },
-        "xmlns:xsi" : {
-          "type" : "string"
-        },
-        "xsi:schemaLocation" : {
           "type" : "string"
         },
         "individuals" : {
@@ -1923,15 +1905,6 @@
         "uri" : {
           "type" : "string"
         },
-        "xmlns" : {
-          "type" : "string"
-        },
-        "xmlns:xsi" : {
-          "type" : "string"
-        },
-        "xsi:schemaLocation" : {
-          "type" : "string"
-        },
         "phenotypes" : {
           "type" : "array",
           "items" : {
@@ -2206,15 +2179,6 @@
           "type" : "string"
         },
         "uri" : {
-          "type" : "string"
-        },
-        "xmlns" : {
-          "type" : "string"
-        },
-        "xmlns:xsi" : {
-          "type" : "string"
-        },
-        "xsi:schemaLocation" : {
           "type" : "string"
         },
         "seq_regions" : {
