@@ -5,9 +5,9 @@ e.g. the id scheme defined in http://identifiers.org/. Source is reserved for id
 ** Example:
 
   <pathogenicity term="Likely pathogenic"  uri="http://purl.org/varioml/pathogenicity/skos/1.0/#p_0003">
-  </pathigenicity>
+  </pathogenicity>
 
 or
 
   <pathogenicity term="Likely pathogenic"  source="g2p" accession="p_0003" >
-  </pathigenicity>
+  </pathogenicity>
