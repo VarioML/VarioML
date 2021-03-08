@@ -33,10 +33,53 @@
         "email": {
           "description": "The email address of the contact person.",
           "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
         }
       },
       "required": [
         "name"
+      ]
+    },
+    "DbXRef": {
+      "description": "Database cross reference.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of the external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of the relevant entry in the external resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to display for this reference.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to the relevant entry in the external resource.",
+          "type": "string"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "source",
+            "accession"
+          ]
+        },
+        {
+          "required": [
+            "name",
+            "uri"
+          ]
+        }
       ]
     },
     "Source": {
