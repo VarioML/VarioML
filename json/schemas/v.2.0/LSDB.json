@@ -128,6 +128,41 @@
         "term"
       ]
     },
+    "Gender": {
+      "description": "The gender of an individual.",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "ISO 5218 gender codes; 0, 1, 2, or 9 ('unknown', 'male', 'female', or 'not applicable').",
+          "type": "string",
+          "enum": ["0", "1", "2", "9"]
+        },
+        "description": {
+          "$ref": "#/definitions/Description"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "examples": [
+        {
+          "code": "1"
+        },
+        {
+          "code": "9",
+          "description": {
+            "term": "XX-male"
+          }
+        }
+      ]
+    },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type" : "object",
