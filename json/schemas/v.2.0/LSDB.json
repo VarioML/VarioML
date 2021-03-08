@@ -198,6 +198,63 @@
         }
       ]
     },
+    "Phenotype": {
+      "description": "A phenotype of an individual.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "anyOf": [
+        {
+          "not": {
+            "required": ["accession"]
+          }
+        },
+        {
+          "required": [
+            "source"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "term": "isovaleric acidemia (IVA)",
+          "source": "OMIM",
+          "accession": "243500"
+        },
+        {
+          "term": "Metabolic acidosis",
+          "source": "HPO",
+          "accession": "0001942"
+        }
+      ]
+    },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type" : "object",
