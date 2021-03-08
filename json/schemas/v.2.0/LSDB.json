@@ -51,11 +51,11 @@
       "type": "object",
       "properties": {
         "source": {
-          "description": "Name of the external resource.",
+          "description": "Name of an external resource.",
           "type": "string"
         },
         "accession": {
-          "description": "The ID of the relevant entry in the external resource.",
+          "description": "The ID of a relevant entry in an external resource.",
           "type": "string"
         },
         "name": {
@@ -63,7 +63,7 @@
           "type": "string"
         },
         "uri": {
-          "description": "URI to the relevant entry in the external resource.",
+          "description": "URI to a relevant entry in an external resource.",
           "type": "string"
         }
       },
@@ -90,6 +90,42 @@
           "name": "Byrne et al (2012)",
           "uri": "https://pubmed.ncbi.nlm.nih.gov/23031277/"
         }
+      ]
+    },
+    "Description": {
+      "description": "A description more closely explaining another value.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element that a Description has been added to.",
+          "type": "string"
+        },
+        "description": {
+          "description": "A longer description of the term.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "required": [
+        "term"
       ]
     },
     "Source": {
