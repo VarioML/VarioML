@@ -80,6 +80,16 @@
             "uri"
           ]
         }
+      ],
+      "examples": [
+        {
+          "source": "pubmed",
+          "accession": "23031277"
+        },
+        {
+          "name": "Byrne et al (2012)",
+          "uri": "https://pubmed.ncbi.nlm.nih.gov/23031277/"
+        }
       ]
     },
     "Source": {
@@ -110,6 +120,25 @@
           "required": [
             "contacts"
           ]
+        }
+      ],
+      "examples": [
+        {
+          "source": {
+            "contacts": [
+              {
+                "role": "submitter",
+                "name": "Ivo F.A.C. Fokkema",
+                "email": "I.F.A.C.Fokkema@LUMC.nl",
+                "db_xrefs": [
+                  {
+                    "source": "orcid",
+                    "accession": "0000-0002-1368-1939"
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     }
