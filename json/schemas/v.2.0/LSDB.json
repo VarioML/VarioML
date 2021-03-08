@@ -9,6 +9,7 @@
       "$ref" : "#/definitions/Source"
     }
   },
+  "additionalProperties": false,
   "definitions": {
     "Contact": {
       "description": "A contact person, containing a name and other contact information.",
@@ -42,6 +43,7 @@
           }
         }
       },
+      "additionalProperties": false,
       "required": [
         "name"
       ]
@@ -67,6 +69,7 @@
           "type": "string"
         }
       },
+      "additionalProperties": false,
       "anyOf": [
         {
           "required": [
@@ -124,6 +127,7 @@
           }
         }
       },
+      "additionalProperties": false,
       "required": [
         "term"
       ]
@@ -148,6 +152,7 @@
           }
         }
       },
+      "additionalProperties": false,
       "required": [
         "code"
       ],
@@ -181,6 +186,7 @@
           "uniqueItems": true
         }
       },
+      "additionalProperties": false,
       "anyOf": [
         {
           "required": [
