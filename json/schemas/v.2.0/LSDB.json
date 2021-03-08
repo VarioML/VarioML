@@ -3,5 +3,47 @@
   "$id": "https://github.com/VarioML/VarioML/json/schemas/v.2.0/LSDB.json",
   "title": "Locus Specific Database (LSDB)",
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
-  "type": "object"
+  "type": "object",
+  "properties": {
+    "source" : {
+      "$ref" : "#/definitions/Source"
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "description": "A contact person, containing a name and other contact information.",
+      "type": "object"
+    },
+    "Source": {
+      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
+      "type" : "object",
+      "properties": {
+        "name": {
+          "description": "The name of the data source.",
+          "type": "string"
+        },
+        "contacts": {
+          "description": "List of contact persons.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Contact"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "required": [
+            "contacts"
+          ]
+        }
+      ]
+    }
+  }
 }
