@@ -12,7 +12,32 @@
   "definitions": {
     "Contact": {
       "description": "A contact person, containing a name and other contact information.",
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "role": {
+          "description": "The role of this contact person, like submitter or data owner.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the contact person.",
+          "type": "string"
+        },
+        "address": {
+          "description": "The address of the contact person.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "The phone number of the contact person.",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of the contact person.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
     },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
