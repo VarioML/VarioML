@@ -57,7 +57,7 @@
           "type": "string"
         },
         "accession": {
-          "description": "The ID of a relevant entry in an external resource.",
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
           "type": "string"
         },
         "name": {
@@ -70,17 +70,35 @@
         }
       },
       "additionalProperties": false,
-      "anyOf": [
+      "allOf": [
         {
-          "required": [
-            "source",
-            "accession"
+          "anyOf": [
+            {
+              "required": [
+                "source",
+                "accession"
+              ]
+            },
+            {
+              "required": [
+                "name",
+                "uri"
+              ]
+            }
           ]
         },
         {
-          "required": [
-            "name",
-            "uri"
+          "anyOf": [
+            {
+              "not": {
+                "required": ["accession"]
+              }
+            },
+            {
+              "required": [
+                "source"
+              ]
+            }
           ]
         }
       ],
@@ -112,7 +130,7 @@
           "type": "string"
         },
         "accession": {
-          "description": "The ID of a relevant entry in an external resource.",
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
           "type": "string"
         },
         "uri": {
@@ -130,6 +148,18 @@
       "additionalProperties": false,
       "required": [
         "term"
+      ],
+      "anyOf": [
+        {
+          "not": {
+            "required": ["accession"]
+          }
+        },
+        {
+          "required": [
+            "source"
+          ]
+        }
       ]
     },
     "Gender": {
