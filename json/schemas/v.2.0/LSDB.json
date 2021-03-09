@@ -333,16 +333,34 @@
         }
       },
       "additionalProperties": false,
-      "anyOf": [
+      "allOf": [
         {
-          "required": [
-            "source",
-            "accession"
+          "anyOf": [
+            {
+              "required": [
+                "source",
+                "accession"
+              ]
+            },
+            {
+              "required": [
+                "uri"
+              ]
+            }
           ]
         },
         {
-          "required": [
-            "uri"
+          "anyOf": [
+            {
+              "not": {
+                "required": ["accession"]
+              }
+            },
+            {
+              "required": [
+                "source"
+              ]
+            }
           ]
         }
       ]
