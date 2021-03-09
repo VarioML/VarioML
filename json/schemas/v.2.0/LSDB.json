@@ -198,6 +198,56 @@
         }
       ]
     },
+    "Gene": {
+      "description": "A representation of a gene, identified by its HGNC symbol or ID.\n\nCan include other database cross-references and annotations.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string",
+          "enum": ["HGNC"]
+        },
+        "accession": {
+          "description": "The ID or symbol of the gene in the HGNC database.",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          ]
+        },
+        "name": {
+          "description": "Gene name",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "source": "HGNC",
+          "accession": "BRCA1"
+        },
+        {
+          "source": "HGNC",
+          "accession": "1100",
+          "name": "BRCA1 DNA repair associated"
+        }
+      ]
+    },
     "InheritancePattern": {
       "description": "The inheritance pattern of a phenotype.",
       "type": "object",
