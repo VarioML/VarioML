@@ -505,6 +505,26 @@
           ]
         }
       ]
+    },
+    "VariantName": {
+      "description": "The variant description, typically in HGVS.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "description": "The naming scheme of the variant; HGVS or ISCN.",
+          "type": "string",
+          "enum": ["HGVS", "ISCN"]
+        },
+        "value": {
+          "description": "The actual variant description.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ]
     }
   }
 }
