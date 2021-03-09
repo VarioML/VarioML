@@ -263,6 +263,9 @@
           "description": "URI to a relevant entry in an external resource.",
           "type": "string"
         },
+        "inheritance_pattern": {
+          "$ref": "#/definitions/InheritancePattern"
+        },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
@@ -291,7 +294,12 @@
         {
           "term": "isovaleric acidemia (IVA)",
           "source": "OMIM",
-          "accession": "243500"
+          "accession": "243500",
+          "inheritance_pattern": {
+            "term": "familial, autosomal recessive",
+            "source": "HPO",
+            "accession": "0000007"
+          }
         },
         {
           "term": "Metabolic acidosis",
