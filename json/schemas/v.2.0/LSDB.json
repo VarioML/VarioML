@@ -198,6 +198,51 @@
         }
       ]
     },
+    "InheritancePattern": {
+      "description": "The inheritance pattern of a phenotype.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "anyOf": [
+        {
+          "not": {
+            "required": ["accession"]
+          }
+        },
+        {
+          "required": [
+            "source"
+          ]
+        }
+      ]
+    },
     "Phenotype": {
       "description": "A phenotype of an individual.",
       "type": "object",
