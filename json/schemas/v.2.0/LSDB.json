@@ -5,8 +5,8 @@
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
   "type": "object",
   "properties": {
-    "source" : {
-      "$ref" : "#/definitions/Source"
+    "source": {
+      "$ref": "#/definitions/Source"
     }
   },
   "additionalProperties": false,
@@ -257,7 +257,7 @@
     },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
-      "type" : "object",
+      "type": "object",
       "properties": {
         "name": {
           "description": "The name of the data source.",
@@ -303,6 +303,51 @@
               }
             ]
           }
+        }
+      ]
+    },
+    "UsePermission": {
+      "description": "Licensing information.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The name of the license.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "anyOf": [
+        {
+          "not": {
+            "required": ["accession"]
+          }
+        },
+        {
+          "required": [
+            "source"
+          ]
         }
       ]
     }
