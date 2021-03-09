@@ -308,6 +308,45 @@
         }
       ]
     },
+    "RefSeq": {
+      "description": "Database cross reference for reference sequence, can include other database cross-references and annotations.\n\nUse Genbank to source reference sequences.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "source",
+            "accession"
+          ]
+        },
+        {
+          "required": [
+            "uri"
+          ]
+        }
+      ]
+    },
     "SharingPolicy": {
       "description": "Data sharing policy and licensing.",
       "type": "object",
