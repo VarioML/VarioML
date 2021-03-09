@@ -293,6 +293,111 @@
         }
       ]
     },
+    "Pathogenicity": {
+      "description": "The pathogenicity of a variant, optionally related to certain phenotypes.",
+      "type": "object",
+      "properties": {
+        "scope": {
+          "description": "The scope in which the pathogenicity was determined.",
+          "type": "string",
+          "enum": ["individual", "family", "population"]
+        },
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "phenotypes": {
+          "description": "List of phenotypes related to this pathogenicity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Phenotype"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "not": {
+                "required": ["accession"]
+              }
+            },
+            {
+              "required": [
+                "source"
+              ]
+            }
+          ]
+        },
+        {
+          "oneOf": [
+            {
+              "not": {
+                "required": ["source"]
+              },
+              "properties": {
+                "term": {
+                  "enum": ["unclassified", "benign", "likely benign", "VUS", "likely pathogenic", "pathogenic", "association"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "source": {
+                  "enum": ["G2P"]
+                },
+                "term": {
+                  "enum": ["Unclassified", "Non-pathogenic", "Probably not pathogenic", "Not known", "Probably pathogenic", "Pathogenic"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "source": {
+                  "enum": ["ACMG"]
+                },
+                "term": {
+                  "enum": ["benign", "likely benign", "uncertain significance", "likely pathogenic", "pathogenic"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "source": {
+                  "enum": ["ENIGMA"]
+                },
+                "term": {
+                  "enum": ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
     "Phenotype": {
       "description": "A phenotype of an individual.",
       "type": "object",
