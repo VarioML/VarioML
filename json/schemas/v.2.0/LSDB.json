@@ -255,6 +255,51 @@
         }
       ]
     },
+    "SharingPolicy": {
+      "description": "Data sharing policy and licensing.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The access policy type. Options are taken from: http://purl.org/eprint/accessRights/",
+          "type": "string",
+          "enum": ["OpenAccess", "RestrictedAccess", "ClosedAccess"]
+        },
+        "use_permission": {
+          "$ref": "#/definitions/UsePermission"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "examples": [
+        {
+          "type": "OpenAccess",
+          "use_permission": {
+            "term": "Creative Commons Attribution 4.0 International",
+            "source": "CC",
+            "accession": "cc_by_4.0",
+            "uri": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        },
+        {
+          "type": "RestrictedAccess",
+          "use_permission": {
+            "term": "Creative Commons Attribution-ShareAlike 4.0 International",
+            "source": "CC",
+            "accession": "cc_by-sa_4.0",
+            "uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+          }
+        }
+      ]
+    },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type": "object",
