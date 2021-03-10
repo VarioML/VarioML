@@ -405,6 +405,29 @@
             }
           ]
         }
+      ],
+      "examples": [
+        {
+          "scope": "individual",
+          "term": "likely pathogenic",
+          "phenotypes": [
+            {
+              "term": "isovaleric acidemia (IVA)",
+              "source": "OMIM",
+              "accession": "243500"
+            }
+          ]
+        },
+        {
+          "scope": "individual",
+          "source": "ACMG",
+          "term": "pathogenic"
+        },
+        {
+          "scope": "family",
+          "source": "ENIGMA",
+          "term": "Class 4"
+        }
       ]
     },
     "Phenotype": {
