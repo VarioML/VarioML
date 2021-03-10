@@ -365,6 +365,9 @@
               }
             },
             {
+              "required": [
+                "source"
+              ],
               "properties": {
                 "source": {
                   "enum": ["G2P"]
@@ -375,6 +378,9 @@
               }
             },
             {
+              "required": [
+                "source"
+              ],
               "properties": {
                 "source": {
                   "enum": ["ACMG"]
@@ -385,6 +391,9 @@
               }
             },
             {
+              "required": [
+                "source"
+              ],
               "properties": {
                 "source": {
                   "enum": ["ENIGMA"]
