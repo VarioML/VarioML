@@ -11,6 +11,61 @@
   },
   "additionalProperties": false,
   "definitions": {
+    "Comment": {
+      "description": "A comment, which optionally can contain other comments.",
+      "type": "object",
+      "properties": {
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "texts": {
+          "description": "List of texts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Text"
+          }
+        },
+        "comments": {
+          "default": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "texts": [
+            {
+              "value": "Shows residual enzyme activity"
+            }
+          ]
+        },
+        {
+          "texts": [
+            {
+              "content_type": "text/plain",
+              "lang": "en",
+              "value": "7 heterozygous, no homozygous found in gnomAD v.2.1.1."
+            },
+            {
+              "content_type": "text/html",
+              "lang": "en",
+              "value": "7 heterozygous, no homozygous found in <A href=\"https://gnomad.broadinstitute.org/region/15-40702898-40702898?dataset=gnomad_r2_1\">gnomAD v.2.1.1</A>."
+            }
+          ]
+        }
+      ]
+    },
     "Contact": {
       "description": "A contact person, containing a name and other contact information.",
       "type": "object",
