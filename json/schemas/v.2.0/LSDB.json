@@ -648,6 +648,37 @@
         }
       ]
     },
+    "Text": {
+      "description": "Object to represent a piece of text.",
+      "type": "object",
+      "properties": {
+        "content_type": {
+          "description": "The content-type of this text.",
+          "type": "string",
+          "enum": ["text/plain", "text/html"],
+          "default": "text/plain"
+        },
+        "encoding": {
+          "description": "Character encoding of this text.",
+          "type": "string",
+          "enum": ["ISO-8859-1", "UTF-8"],
+          "default": "UTF-8"
+        },
+        "lang": {
+          "description": "Language used in this text, using ISO 639-1 values.",
+          "type": "string",
+          "default": "en"
+        },
+        "value": {
+          "description": "The actual value of the text.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ]
+    },
     "UsePermission": {
       "description": "Licensing information.",
       "type": "object",
