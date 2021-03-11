@@ -96,6 +96,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -122,6 +129,13 @@
         "uri": {
           "description": "URI to a relevant entry in an external resource.",
           "type": "string"
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -198,6 +212,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -234,6 +255,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
           }
         }
       },
@@ -288,6 +316,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -328,6 +363,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
           }
         }
       },
@@ -378,6 +420,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
           }
         },
         "phenotypes": {
@@ -514,6 +563,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -572,6 +628,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -625,6 +688,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -668,6 +738,13 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -760,6 +837,13 @@
           "items": {
             "$ref": "#/definitions/DbXRef"
           }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
         }
       },
       "additionalProperties": false,
@@ -797,6 +881,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
           }
         }
       },
