@@ -34,7 +34,7 @@
           }
         },
         "comments": {
-          "default": "List of comments.",
+          "description": "List of comments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Comment"
