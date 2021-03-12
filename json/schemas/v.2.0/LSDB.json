@@ -793,6 +793,38 @@
         }
       ]
     },
+    "SeqChanges": {
+      "description": "Object describing a recursive list of related sequence changes on overlapping sequence levels and features.",
+      "type": "object",
+      "properties": {
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "variants": {
+          "description": "List of related sequence changes.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConsVariant"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "variants"
+      ]
+    },
     "Source": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type": "object",
