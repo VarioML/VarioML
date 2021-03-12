@@ -66,6 +66,77 @@
         }
       ]
     },
+    "ConsVariant": {
+      "description": "A related sequence change on an overlapping sequence level.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Type of variant (cDNA, RNA, AA).",
+          "type": "string",
+          "enum": ["cDNA", "RNA", "AA"]
+        },
+        "ref_seq": {
+          "$ref": "#/definitions/RefSeq"
+        },
+        "name": {
+          "$ref": "#/definitions/VariantName"
+        },
+        "gene": {
+          "$ref": "#/definitions/Gene"
+        },
+        "pathogenicities": {
+          "description": "List of variant classifications.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Pathogenicity"
+          }
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "variant_detection": {
+          "$ref": "#/definitions/VariantDetection"
+        },
+        "seq_changes": {
+          "$ref": "#/definitions/SeqChanges"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "name"
+      ],
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": ["cDNA"]
+            }
+          },
+          "required": [
+            "ref_seq"
+          ]
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": ["RNA", "AA"]
+            }
+          }
+        }
+      ]
+    },
     "Contact": {
       "description": "A contact person, containing a name and other contact information.",
       "type": "object",
