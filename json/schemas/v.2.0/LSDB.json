@@ -966,6 +966,165 @@
         }
       ]
     },
+    "Variant": {
+      "description": "A genomic variant.",
+      "type": "object",
+      "properties": {
+        "copy_count": {
+          "description": "Copy count of this variant, 2 for homozygous, 1 for heterozygous, decimals allowed for somatic variants.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "type": {
+          "description": "Type of variant (DNA, cDNA, RNA, AA). For genomic variants, only 'DNA' is allowed.",
+          "type": "string",
+          "enum": ["DNA"]
+        },
+        "ref_seq": {
+          "$ref": "#/definitions/RefSeq"
+        },
+        "name": {
+          "$ref": "#/definitions/VariantName"
+        },
+        "genes": {
+          "description": "List of genes overlapping with this variant.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          }
+        },
+        "pathogenicities": {
+          "description": "List of variant classifications.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Pathogenicity"
+          }
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "variant_detection": {
+          "description": "List of assays used to screen the individual for variants.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VariantDetection"
+          },
+          "minItems": 1
+        },
+        "seq_changes": {
+          "$ref": "#/definitions/SeqChanges"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/definitions/SharingPolicy"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "name"
+      ],
+      "examples": [
+        {
+          "copy_count": 1,
+          "type": "DNA",
+          "ref_seq": {
+            "source": "genbank",
+            "accession": "NC_000015.9"
+          },
+          "name": {
+            "scheme": "HGVS",
+            "value": "g.40707653C>T"
+          },
+          "pathogenicities": [
+            {
+              "scope": "individual",
+              "term": "likely pathogenic"
+            }
+          ],
+          "comments": [
+            {
+              "texts": [
+                {
+                  "value": "Shows residual enzyme activity"
+                }
+              ]
+            }
+          ],
+          "db_xrefs": [
+            {
+              "source": "dbsnp",
+              "accession": "rs28940889"
+            }
+          ],
+          "variant_detection": [
+            {
+              "template": "DNA",
+              "technique": "SEQ"
+            },
+            {
+              "template": "RNA",
+              "technique": "RT-PCR"
+            }
+          ],
+          "seq_changes": {
+            "variants": [
+              {
+                "type": "cDNA",
+                "gene": {
+                  "source": "HGNC",
+                  "accession": "IVD"
+                },
+                "ref_seq": {
+                  "source": "genbank",
+                  "accession": "NM_002225.3"
+                },
+                "name": {
+                  "scheme": "HGVS",
+                  "value": "c.941C>T"
+                },
+                "seq_changes": {
+                  "variants": [
+                    {
+                      "type": "RNA",
+                      "name": {
+                        "scheme": "HGVS",
+                        "value": "r.941c>u"
+                      },
+                      "seq_changes": {
+                        "variants": [
+                          {
+                            "type": "AA",
+                            "name": {
+                              "scheme": "HGVS",
+                              "value": "p.Ala314Val"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "VariantDetection": {
       "description": "The technique(s) that were used to detect the variant.",
       "type": "object",
