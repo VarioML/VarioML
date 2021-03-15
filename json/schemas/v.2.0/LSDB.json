@@ -509,6 +509,71 @@
         }
       ]
     },
+    "Panel": {
+      "description": "An unspecified group of individuals.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "size": {
+          "description": "The number of individuals in this panel.",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "type": {
+          "description": "The type of panel; family, extended family, or a population.",
+          "type": "string",
+          "enum": ["family", "extended family", "population"]
+        },
+        "gender": {
+          "$ref": "#/definitions/Gender"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "individuals": {
+          "description": "List of individuals in this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "phenotypes": {
+          "description": "List of phenotypes for this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Phenotype"
+          }
+        },
+        "variants": {
+          "description": "List of variants detected in this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Variant"
+          }
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/definitions/SharingPolicy"
+        }
+      },
+      "additionalProperties": false
+    },
     "Pathogenicity": {
       "description": "The pathogenicity of a variant, optionally related to certain phenotypes.",
       "type": "object",
