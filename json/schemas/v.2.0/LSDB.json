@@ -409,6 +409,54 @@
         }
       ]
     },
+    "Individual": {
+      "description": "A patient or other individual.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "gender": {
+          "$ref": "#/definitions/Gender"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DbXRef"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "phenotypes": {
+          "description": "List of phenotypes for this individual.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Phenotype"
+          }
+        },
+        "variants": {
+          "description": "List of variants detected in this individual.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Variant"
+          }
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/definitions/SharingPolicy"
+        }
+      },
+      "additionalProperties": false
+    },
     "InheritancePattern": {
       "description": "The inheritance pattern of a phenotype.",
       "type": "object",
