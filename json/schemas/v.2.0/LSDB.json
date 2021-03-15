@@ -9,7 +9,7 @@
       "description": "List of database cross references.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/DbXRef"
+        "$ref": "#/$defs/DbXRef"
       },
       "uniqueItems": true
     },
@@ -17,14 +17,14 @@
       "description": "List of comments.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Comment"
+        "$ref": "#/$defs/Comment"
       }
     },
     "individuals": {
       "description": "List of individuals.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Individual"
+        "$ref": "#/$defs/Individual"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -33,7 +33,7 @@
       "description": "List of panels.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Panel"
+        "$ref": "#/$defs/Panel"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -42,13 +42,13 @@
       "description": "List of variants.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Variant"
+        "$ref": "#/$defs/Variant"
       },
       "minItems": 1,
       "uniqueItems": true
     },
     "source": {
-      "$ref": "#/definitions/Source"
+      "$ref": "#/$defs/Source"
     }
   },
   "additionalProperties": false,
@@ -76,7 +76,7 @@
       ]
     }
   ],
-  "definitions": {
+  "$defs": {
     "Comment": {
       "description": "A comment, which optionally can contain other comments.",
       "type": "object",
@@ -89,7 +89,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -97,14 +97,14 @@
           "description": "List of texts.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Text"
+            "$ref": "#/$defs/Text"
           }
         },
         "comments": {
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -143,26 +143,26 @@
           "enum": ["cDNA", "RNA", "AA"]
         },
         "ref_seq": {
-          "$ref": "#/definitions/RefSeq"
+          "$ref": "#/$defs/RefSeq"
         },
         "name": {
-          "$ref": "#/definitions/VariantName"
+          "$ref": "#/$defs/VariantName"
         },
         "gene": {
-          "$ref": "#/definitions/Gene"
+          "$ref": "#/$defs/Gene"
         },
         "pathogenicities": {
           "description": "List of variant classifications.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Pathogenicity"
+            "$ref": "#/$defs/Pathogenicity"
           }
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -170,14 +170,14 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "variant_detection": {
-          "$ref": "#/definitions/VariantDetection"
+          "$ref": "#/$defs/VariantDetection"
         },
         "seq_changes": {
-          "$ref": "#/definitions/SeqChanges"
+          "$ref": "#/$defs/SeqChanges"
         }
       },
       "additionalProperties": false,
@@ -233,7 +233,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -241,7 +241,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -274,7 +274,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -350,7 +350,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -358,7 +358,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -389,13 +389,13 @@
           "enum": ["0", "1", "2", "9"]
         },
         "description": {
-          "$ref": "#/definitions/Description"
+          "$ref": "#/$defs/Description"
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -403,7 +403,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -456,7 +456,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -464,7 +464,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -490,13 +490,13 @@
           "type": "string"
         },
         "gender": {
-          "$ref": "#/definitions/Gender"
+          "$ref": "#/$defs/Gender"
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -504,14 +504,14 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "phenotypes": {
           "description": "List of phenotypes for this individual.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Phenotype"
+            "$ref": "#/$defs/Phenotype"
           },
           "uniqueItems": true
         },
@@ -519,16 +519,16 @@
           "description": "List of variants detected in this individual.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Variant"
+            "$ref": "#/$defs/Variant"
           },
           "minItems": 1,
           "uniqueItems": true
         },
         "source": {
-          "$ref": "#/definitions/Source"
+          "$ref": "#/$defs/Source"
         },
         "sharing_policy": {
-          "$ref": "#/definitions/SharingPolicy"
+          "$ref": "#/$defs/SharingPolicy"
         }
       },
       "additionalProperties": false
@@ -557,7 +557,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -565,7 +565,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -605,13 +605,13 @@
           "enum": ["family", "extended family", "population"]
         },
         "gender": {
-          "$ref": "#/definitions/Gender"
+          "$ref": "#/$defs/Gender"
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -619,14 +619,14 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "individuals": {
           "description": "List of individuals in this panel.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Individual"
+            "$ref": "#/$defs/Individual"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -635,7 +635,7 @@
           "description": "List of phenotypes for this panel.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Phenotype"
+            "$ref": "#/$defs/Phenotype"
           },
           "uniqueItems": true
         },
@@ -643,16 +643,16 @@
           "description": "List of variants detected in this panel.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Variant"
+            "$ref": "#/$defs/Variant"
           },
           "minItems": 1,
           "uniqueItems": true
         },
         "source": {
-          "$ref": "#/definitions/Source"
+          "$ref": "#/$defs/Source"
         },
         "sharing_policy": {
-          "$ref": "#/definitions/SharingPolicy"
+          "$ref": "#/$defs/SharingPolicy"
         }
       },
       "additionalProperties": false
@@ -686,7 +686,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -694,14 +694,14 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "phenotypes": {
           "description": "List of phenotypes related to this pathogenicity.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Phenotype"
+            "$ref": "#/$defs/Phenotype"
           },
           "uniqueItems": true
         }
@@ -824,13 +824,13 @@
           "type": "string"
         },
         "inheritance_pattern": {
-          "$ref": "#/definitions/InheritancePattern"
+          "$ref": "#/$defs/InheritancePattern"
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -838,7 +838,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -896,7 +896,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -904,7 +904,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -951,13 +951,13 @@
           "enum": ["OpenAccess", "RestrictedAccess", "ClosedAccess"]
         },
         "use_permission": {
-          "$ref": "#/definitions/UsePermission"
+          "$ref": "#/$defs/UsePermission"
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -965,7 +965,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -1002,7 +1002,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -1010,14 +1010,14 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "variants": {
           "description": "List of related sequence changes.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ConsVariant"
+            "$ref": "#/$defs/ConsVariant"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -1040,7 +1040,7 @@
           "description": "List of contact persons.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Contact"
+            "$ref": "#/$defs/Contact"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -1049,7 +1049,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -1141,7 +1141,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -1149,7 +1149,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
@@ -1186,16 +1186,16 @@
           "enum": ["DNA"]
         },
         "ref_seq": {
-          "$ref": "#/definitions/RefSeq"
+          "$ref": "#/$defs/RefSeq"
         },
         "name": {
-          "$ref": "#/definitions/VariantName"
+          "$ref": "#/$defs/VariantName"
         },
         "genes": {
           "description": "List of genes overlapping with this variant.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Gene"
+            "$ref": "#/$defs/Gene"
           },
           "uniqueItems": true
         },
@@ -1203,14 +1203,14 @@
           "description": "List of variant classifications.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Pathogenicity"
+            "$ref": "#/$defs/Pathogenicity"
           }
         },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -1218,26 +1218,26 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         },
         "variant_detection": {
           "description": "List of assays used to screen the individual for variants.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/VariantDetection"
+            "$ref": "#/$defs/VariantDetection"
           },
           "minItems": 1,
           "uniqueItems": true
         },
         "seq_changes": {
-          "$ref": "#/definitions/SeqChanges"
+          "$ref": "#/$defs/SeqChanges"
         },
         "source": {
-          "$ref": "#/definitions/Source"
+          "$ref": "#/$defs/Source"
         },
         "sharing_policy": {
-          "$ref": "#/definitions/SharingPolicy"
+          "$ref": "#/$defs/SharingPolicy"
         }
       },
       "additionalProperties": false,
@@ -1349,7 +1349,7 @@
           "description": "List of database cross references.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbXRef"
+            "$ref": "#/$defs/DbXRef"
           },
           "uniqueItems": true
         },
@@ -1357,7 +1357,7 @@
           "description": "List of comments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Comment"
+            "$ref": "#/$defs/Comment"
           }
         }
       },
