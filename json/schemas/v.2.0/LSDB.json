@@ -5,11 +5,73 @@
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
   "type": "object",
   "properties": {
+    "db_xrefs": {
+      "description": "List of database cross references.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DbXRef"
+      }
+    },
+    "comments": {
+      "description": "List of comments.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Comment"
+      }
+    },
+    "individuals": {
+      "description": "List of individuals.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Individual"
+      },
+      "minItems": 1
+    },
+    "panels": {
+      "description": "List of panels.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Panel"
+      },
+      "minItems": 1
+    },
+    "variants": {
+      "description": "List of variants.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Variant"
+      },
+      "minItems": 1
+    },
     "source": {
       "$ref": "#/definitions/Source"
     }
   },
   "additionalProperties": false,
+  "required": [
+    "source"
+  ],
+  "oneOf": [
+    {
+      "anyOf": [
+        {
+          "required": [
+            "individuals"
+          ]
+        },
+        {
+          "required": [
+            "panels"
+          ]
+        }
+      ]
+    },
+    {
+      "required": [
+        "variants"
+      ]
+    }
+  ],
   "definitions": {
     "Comment": {
       "description": "A comment, which optionally can contain other comments.",
