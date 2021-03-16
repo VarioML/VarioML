@@ -1,0 +1,1323 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/VarioML/VarioML/json/schemas/v.2.0/LSDB.json",
+  "title": "Locus Specific Database (LSDB)",
+  "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
+  "type": "object",
+  "properties": {
+    "db_xrefs": {
+      "description": "List of database cross references.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DbXRef"
+      },
+      "uniqueItems": true
+    },
+    "comments": {
+      "description": "List of comments.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Comment"
+      }
+    },
+    "individuals": {
+      "description": "List of individuals.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Individual"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "panels": {
+      "description": "List of panels.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Panel"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "variants": {
+      "description": "List of variants.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Variant"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "source"
+  ],
+  "oneOf": [
+    {
+      "anyOf": [
+        {
+          "required": [
+            "individuals"
+          ]
+        },
+        {
+          "required": [
+            "panels"
+          ]
+        }
+      ]
+    },
+    {
+      "required": [
+        "variants"
+      ]
+    }
+  ],
+  "$defs": {
+    "Comment": {
+      "description": "A comment, which optionally can contain other comments.",
+      "type": "object",
+      "properties": {
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "texts": {
+          "description": "List of texts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Text"
+          }
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "texts": [
+            {
+              "value": "Shows residual enzyme activity"
+            }
+          ]
+        },
+        {
+          "texts": [
+            {
+              "content_type": "text/plain",
+              "lang": "en",
+              "value": "7 heterozygous, no homozygous found in gnomAD v.2.1.1."
+            },
+            {
+              "content_type": "text/html",
+              "lang": "en",
+              "value": "7 heterozygous, no homozygous found in <A href=\"https://gnomad.broadinstitute.org/region/15-40702898-40702898?dataset=gnomad_r2_1\">gnomAD v.2.1.1</A>."
+            }
+          ]
+        }
+      ]
+    },
+    "ConsVariant": {
+      "description": "A related sequence change on an overlapping sequence level.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Type of variant (cDNA, RNA, AA).",
+          "type": "string",
+          "enum": ["cDNA", "RNA", "AA"]
+        },
+        "ref_seq": {
+          "$ref": "#/$defs/RefSeq"
+        },
+        "name": {
+          "$ref": "#/$defs/VariantName"
+        },
+        "gene": {
+          "$ref": "#/$defs/Gene"
+        },
+        "pathogenicities": {
+          "description": "List of variant classifications.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pathogenicity"
+          }
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "variant_detection": {
+          "$ref": "#/$defs/VariantDetection"
+        },
+        "seq_changes": {
+          "$ref": "#/$defs/SeqChanges"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "name"
+      ],
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": ["cDNA"]
+            }
+          },
+          "required": [
+            "ref_seq"
+          ]
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": ["RNA", "AA"]
+            }
+          }
+        }
+      ]
+    },
+    "Contact": {
+      "description": "A contact person, containing a name and other contact information.",
+      "type": "object",
+      "properties": {
+        "role": {
+          "description": "The role of this contact person, like submitter or data owner.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the contact person.",
+          "type": "string"
+        },
+        "address": {
+          "description": "The address of the contact person.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "The phone number of the contact person.",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of the contact person.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ]
+    },
+    "DbXRef": {
+      "description": "Database cross reference.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name to display for this reference.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "dependencies": {
+        "accession": "source"
+      },
+      "anyOf": [
+        {
+          "required": [
+            "source",
+            "accession"
+          ]
+        },
+        {
+          "required": [
+            "name",
+            "uri"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "source": "pubmed",
+          "accession": "23031277"
+        },
+        {
+          "name": "Byrne et al (2012)",
+          "uri": "https://pubmed.ncbi.nlm.nih.gov/23031277/"
+        }
+      ]
+    },
+    "Description": {
+      "description": "A description more closely explaining another value.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element that a Description has been added to.",
+          "type": "string"
+        },
+        "description": {
+          "description": "A longer description of the term.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      }
+    },
+    "Gender": {
+      "description": "The gender of an individual.",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "ISO 5218 gender codes; 0, 1, 2, or 9 ('unknown', 'male', 'female', or 'not applicable').",
+          "type": "string",
+          "enum": ["0", "1", "2", "9"]
+        },
+        "description": {
+          "$ref": "#/$defs/Description"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "code"
+      ],
+      "examples": [
+        {
+          "code": "1"
+        },
+        {
+          "code": "9",
+          "description": {
+            "term": "XX-male"
+          }
+        }
+      ]
+    },
+    "Gene": {
+      "description": "A representation of a gene, identified by its HGNC symbol or ID.\n\nCan include other database cross-references and annotations.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string",
+          "enum": ["HGNC"]
+        },
+        "accession": {
+          "description": "The ID or symbol of the gene in the HGNC database.",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          ]
+        },
+        "name": {
+          "description": "Gene name",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "dependencies": {
+        "accession": "source"
+      },
+      "examples": [
+        {
+          "source": "HGNC",
+          "accession": "BRCA1"
+        },
+        {
+          "source": "HGNC",
+          "accession": "1100",
+          "name": "BRCA1 DNA repair associated"
+        }
+      ]
+    },
+    "Individual": {
+      "description": "A patient or other individual.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "gender": {
+          "$ref": "#/$defs/Gender"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "phenotypes": {
+          "description": "List of phenotypes for this individual.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phenotype"
+          },
+          "uniqueItems": true
+        },
+        "variants": {
+          "description": "List of variants detected in this individual.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Variant"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/$defs/SharingPolicy"
+        }
+      },
+      "additionalProperties": false
+    },
+    "InheritancePattern": {
+      "description": "The inheritance pattern of a phenotype.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      }
+    },
+    "Panel": {
+      "description": "An unspecified group of individuals.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "size": {
+          "description": "The number of individuals in this panel.",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "type": {
+          "description": "The type of panel; family, extended family, or a population.",
+          "type": "string",
+          "enum": ["family", "extended family", "population"]
+        },
+        "gender": {
+          "$ref": "#/$defs/Gender"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "individuals": {
+          "description": "List of individuals in this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Individual"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "phenotypes": {
+          "description": "List of phenotypes for this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phenotype"
+          },
+          "uniqueItems": true
+        },
+        "variants": {
+          "description": "List of variants detected in this panel.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Variant"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/$defs/SharingPolicy"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Pathogenicity": {
+      "description": "The pathogenicity of a variant, optionally related to certain phenotypes.",
+      "type": "object",
+      "properties": {
+        "scope": {
+          "description": "The scope in which the pathogenicity was determined.",
+          "type": "string",
+          "enum": ["individual", "family", "population"]
+        },
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "phenotypes": {
+          "description": "List of phenotypes related to this pathogenicity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phenotype"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      },
+      "oneOf": [
+        {
+          "not": {
+            "required": ["source"]
+          },
+          "properties": {
+            "term": {
+              "enum": ["unclassified", "benign", "likely benign", "VUS", "likely pathogenic", "pathogenic", "association"]
+            }
+          }
+        },
+        {
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["G2P"]
+            },
+            "term": {
+              "enum": ["Unclassified", "Non-pathogenic", "Probably not pathogenic", "Not known", "Probably pathogenic", "Pathogenic"]
+            }
+          }
+        },
+        {
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["ACMG"]
+            },
+            "term": {
+              "enum": ["benign", "likely benign", "uncertain significance", "likely pathogenic", "pathogenic"]
+            }
+          }
+        },
+        {
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["ENIGMA"]
+            },
+            "term": {
+              "enum": ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"]
+            }
+          }
+        }
+      ],
+      "examples": [
+        {
+          "scope": "individual",
+          "term": "likely pathogenic",
+          "phenotypes": [
+            {
+              "term": "isovaleric acidemia (IVA)",
+              "source": "OMIM",
+              "accession": "243500"
+            }
+          ]
+        },
+        {
+          "scope": "individual",
+          "source": "ACMG",
+          "term": "pathogenic"
+        },
+        {
+          "scope": "family",
+          "source": "ENIGMA",
+          "term": "Class 4"
+        }
+      ]
+    },
+    "Phenotype": {
+      "description": "A phenotype of an individual.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "inheritance_pattern": {
+          "$ref": "#/$defs/InheritancePattern"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      },
+      "examples": [
+        {
+          "term": "isovaleric acidemia (IVA)",
+          "source": "OMIM",
+          "accession": "243500",
+          "inheritance_pattern": {
+            "term": "familial, autosomal recessive",
+            "source": "HPO",
+            "accession": "0000007"
+          }
+        },
+        {
+          "term": "Metabolic acidosis",
+          "source": "HPO",
+          "accession": "0001942"
+        }
+      ]
+    },
+    "RefSeq": {
+      "description": "Database cross reference for reference sequence, can include other database cross-references and annotations.\n\nUse Genbank to source reference sequences.",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "dependencies": {
+        "accession": "source"
+      },
+      "anyOf": [
+        {
+          "required": [
+            "source",
+            "accession"
+          ]
+        },
+        {
+          "required": [
+            "uri"
+          ]
+        }
+      ]
+    },
+    "SharingPolicy": {
+      "description": "Data sharing policy and licensing.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The access policy type. Options are taken from: http://purl.org/eprint/accessRights/",
+          "type": "string",
+          "enum": ["OpenAccess", "RestrictedAccess", "ClosedAccess"]
+        },
+        "use_permission": {
+          "$ref": "#/$defs/UsePermission"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "examples": [
+        {
+          "type": "OpenAccess",
+          "use_permission": {
+            "term": "Creative Commons Attribution 4.0 International",
+            "source": "CC",
+            "accession": "cc_by_4.0",
+            "uri": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        },
+        {
+          "type": "RestrictedAccess",
+          "use_permission": {
+            "term": "Creative Commons Attribution-ShareAlike 4.0 International",
+            "source": "CC",
+            "accession": "cc_by-sa_4.0",
+            "uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+          }
+        }
+      ]
+    },
+    "SeqChanges": {
+      "description": "Object describing a recursive list of related sequence changes on overlapping sequence levels and features.",
+      "type": "object",
+      "properties": {
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "variants": {
+          "description": "List of related sequence changes.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ConsVariant"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "variants"
+      ]
+    },
+    "Source": {
+      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "The name of the data source.",
+          "type": "string"
+        },
+        "contacts": {
+          "description": "List of contact persons.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Contact"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "required": [
+            "contacts"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "source": {
+            "contacts": [
+              {
+                "role": "submitter",
+                "name": "Ivo F.A.C. Fokkema",
+                "email": "I.F.A.C.Fokkema@LUMC.nl",
+                "db_xrefs": [
+                  {
+                    "source": "orcid",
+                    "accession": "0000-0002-1368-1939"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Text": {
+      "description": "Object to represent a piece of text.",
+      "type": "object",
+      "properties": {
+        "content_type": {
+          "description": "The content-type of this text.",
+          "type": "string",
+          "enum": ["text/plain", "text/html"],
+          "default": "text/plain"
+        },
+        "encoding": {
+          "description": "Character encoding of this text.",
+          "type": "string",
+          "enum": ["ISO-8859-1", "UTF-8"],
+          "default": "UTF-8"
+        },
+        "lang": {
+          "description": "Language used in this text, using ISO 639-1 values.",
+          "type": "string",
+          "default": "en"
+        },
+        "value": {
+          "description": "The actual value of the text.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ]
+    },
+    "UsePermission": {
+      "description": "Licensing information.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The name of the license.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      }
+    },
+    "Variant": {
+      "description": "A genomic variant.",
+      "type": "object",
+      "properties": {
+        "copy_count": {
+          "description": "Copy count of this variant, 2 for homozygous, 1 for heterozygous, decimals allowed for somatic variants.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "type": {
+          "description": "Type of variant (DNA, cDNA, RNA, AA). For genomic variants, only 'DNA' is allowed.",
+          "type": "string",
+          "enum": ["DNA"]
+        },
+        "ref_seq": {
+          "$ref": "#/$defs/RefSeq"
+        },
+        "name": {
+          "$ref": "#/$defs/VariantName"
+        },
+        "genes": {
+          "description": "List of genes overlapping with this variant.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Gene"
+          },
+          "uniqueItems": true
+        },
+        "pathogenicities": {
+          "description": "List of variant classifications.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pathogenicity"
+          }
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        },
+        "variant_detection": {
+          "description": "List of assays used to screen the individual for variants.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VariantDetection"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "seq_changes": {
+          "$ref": "#/$defs/SeqChanges"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "sharing_policy": {
+          "$ref": "#/$defs/SharingPolicy"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "name"
+      ],
+      "examples": [
+        {
+          "copy_count": 1,
+          "type": "DNA",
+          "ref_seq": {
+            "source": "genbank",
+            "accession": "NC_000015.9"
+          },
+          "name": {
+            "scheme": "HGVS",
+            "value": "g.40707653C>T"
+          },
+          "pathogenicities": [
+            {
+              "scope": "individual",
+              "term": "likely pathogenic"
+            }
+          ],
+          "comments": [
+            {
+              "texts": [
+                {
+                  "value": "Shows residual enzyme activity"
+                }
+              ]
+            }
+          ],
+          "db_xrefs": [
+            {
+              "source": "dbsnp",
+              "accession": "rs28940889"
+            }
+          ],
+          "variant_detection": [
+            {
+              "template": "DNA",
+              "technique": "SEQ"
+            },
+            {
+              "template": "RNA",
+              "technique": "RT-PCR"
+            }
+          ],
+          "seq_changes": {
+            "variants": [
+              {
+                "type": "cDNA",
+                "gene": {
+                  "source": "HGNC",
+                  "accession": "IVD"
+                },
+                "ref_seq": {
+                  "source": "genbank",
+                  "accession": "NM_002225.3"
+                },
+                "name": {
+                  "scheme": "HGVS",
+                  "value": "c.941C>T"
+                },
+                "seq_changes": {
+                  "variants": [
+                    {
+                      "type": "RNA",
+                      "name": {
+                        "scheme": "HGVS",
+                        "value": "r.941c>u"
+                      },
+                      "seq_changes": {
+                        "variants": [
+                          {
+                            "type": "AA",
+                            "name": {
+                              "scheme": "HGVS",
+                              "value": "p.Ala314Val"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "VariantDetection": {
+      "description": "The technique(s) that were used to detect the variant.",
+      "type": "object",
+      "properties": {
+        "template": {
+          "description": "The template on which the variant was detected.",
+          "type": "string",
+          "enum": ["DNA", "RNA", "protein"]
+        },
+        "technique": {
+          "description": "The detection method.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "template",
+        "technique"
+      ],
+      "examples": [
+        {
+          "template": "DNA",
+          "technique": "SEQ"
+        },
+        {
+          "template": "RNA",
+          "technique": "RT-PCR"
+        }
+      ]
+    },
+    "VariantName": {
+      "description": "The variant description, typically in HGVS.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "description": "The naming scheme of the variant; HGVS or ISCN.",
+          "type": "string",
+          "enum": ["HGVS", "ISCN"]
+        },
+        "value": {
+          "description": "The actual variant description.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ]
+    }
+  }
+}
