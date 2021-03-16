@@ -279,35 +279,20 @@
         }
       },
       "additionalProperties": false,
-      "allOf": [
+      "dependencies": {
+        "accession": "source"
+      },
+      "anyOf": [
         {
-          "anyOf": [
-            {
-              "required": [
-                "source",
-                "accession"
-              ]
-            },
-            {
-              "required": [
-                "name",
-                "uri"
-              ]
-            }
+          "required": [
+            "source",
+            "accession"
           ]
         },
         {
-          "anyOf": [
-            {
-              "not": {
-                "required": ["accession"]
-              }
-            },
-            {
-              "required": [
-                "source"
-              ]
-            }
+          "required": [
+            "name",
+            "uri"
           ]
         }
       ],
@@ -366,18 +351,9 @@
       "required": [
         "term"
       ],
-      "anyOf": [
-        {
-          "not": {
-            "required": ["accession"]
-          }
-        },
-        {
-          "required": [
-            "source"
-          ]
-        }
-      ]
+      "dependencies": {
+        "accession": "source"
+      }
     },
     "Gender": {
       "description": "The gender of an individual.",
@@ -469,6 +445,9 @@
         }
       },
       "additionalProperties": false,
+      "dependencies": {
+        "accession": "source"
+      },
       "examples": [
         {
           "source": "HGNC",
@@ -573,18 +552,9 @@
       "required": [
         "term"
       ],
-      "anyOf": [
-        {
-          "not": {
-            "required": ["accession"]
-          }
-        },
-        {
-          "required": [
-            "source"
-          ]
-        }
-      ]
+      "dependencies": {
+        "accession": "source"
+      }
     },
     "Panel": {
       "description": "An unspecified group of individuals.",
@@ -710,73 +680,58 @@
       "required": [
         "term"
       ],
-      "allOf": [
+      "dependencies": {
+        "accession": "source"
+      },
+      "oneOf": [
         {
-          "anyOf": [
-            {
-              "not": {
-                "required": ["accession"]
-              }
-            },
-            {
-              "required": [
-                "source"
-              ]
+          "not": {
+            "required": ["source"]
+          },
+          "properties": {
+            "term": {
+              "enum": ["unclassified", "benign", "likely benign", "VUS", "likely pathogenic", "pathogenic", "association"]
             }
-          ]
+          }
         },
         {
-          "oneOf": [
-            {
-              "not": {
-                "required": ["source"]
-              },
-              "properties": {
-                "term": {
-                  "enum": ["unclassified", "benign", "likely benign", "VUS", "likely pathogenic", "pathogenic", "association"]
-                }
-              }
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["G2P"]
             },
-            {
-              "required": [
-                "source"
-              ],
-              "properties": {
-                "source": {
-                  "enum": ["G2P"]
-                },
-                "term": {
-                  "enum": ["Unclassified", "Non-pathogenic", "Probably not pathogenic", "Not known", "Probably pathogenic", "Pathogenic"]
-                }
-              }
-            },
-            {
-              "required": [
-                "source"
-              ],
-              "properties": {
-                "source": {
-                  "enum": ["ACMG"]
-                },
-                "term": {
-                  "enum": ["benign", "likely benign", "uncertain significance", "likely pathogenic", "pathogenic"]
-                }
-              }
-            },
-            {
-              "required": [
-                "source"
-              ],
-              "properties": {
-                "source": {
-                  "enum": ["ENIGMA"]
-                },
-                "term": {
-                  "enum": ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"]
-                }
-              }
+            "term": {
+              "enum": ["Unclassified", "Non-pathogenic", "Probably not pathogenic", "Not known", "Probably pathogenic", "Pathogenic"]
             }
-          ]
+          }
+        },
+        {
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["ACMG"]
+            },
+            "term": {
+              "enum": ["benign", "likely benign", "uncertain significance", "likely pathogenic", "pathogenic"]
+            }
+          }
+        },
+        {
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "enum": ["ENIGMA"]
+            },
+            "term": {
+              "enum": ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"]
+            }
+          }
         }
       ],
       "examples": [
@@ -846,18 +801,9 @@
       "required": [
         "term"
       ],
-      "anyOf": [
-        {
-          "not": {
-            "required": ["accession"]
-          }
-        },
-        {
-          "required": [
-            "source"
-          ]
-        }
-      ],
+      "dependencies": {
+        "accession": "source"
+      },
       "examples": [
         {
           "term": "isovaleric acidemia (IVA)",
@@ -909,34 +855,19 @@
         }
       },
       "additionalProperties": false,
-      "allOf": [
+      "dependencies": {
+        "accession": "source"
+      },
+      "anyOf": [
         {
-          "anyOf": [
-            {
-              "required": [
-                "source",
-                "accession"
-              ]
-            },
-            {
-              "required": [
-                "uri"
-              ]
-            }
+          "required": [
+            "source",
+            "accession"
           ]
         },
         {
-          "anyOf": [
-            {
-              "not": {
-                "required": ["accession"]
-              }
-            },
-            {
-              "required": [
-                "source"
-              ]
-            }
+          "required": [
+            "uri"
           ]
         }
       ]
@@ -1157,18 +1088,9 @@
       "required": [
         "term"
       ],
-      "anyOf": [
-        {
-          "not": {
-            "required": ["accession"]
-          }
-        },
-        {
-          "required": [
-            "source"
-          ]
-        }
-      ]
+      "dependencies": {
+        "accession": "source"
+      }
     },
     "Variant": {
       "description": "A genomic variant.",
