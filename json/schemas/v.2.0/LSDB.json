@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/VarioML/VarioML/json/schemas/v.2.0/LSDB.json",
+  "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/LSDB.json",
   "title": "Locus Specific Database (LSDB)",
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
   "type": "object",
