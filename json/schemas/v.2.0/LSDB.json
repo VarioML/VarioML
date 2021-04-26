@@ -1263,6 +1263,37 @@
         }
       ]
     },
+    "VariantAlias": {
+      "type": "object",
+      "properties": {
+        "ref_seq": {
+          "$ref": "#/$defs/RefSeq"
+        },
+        "name": {
+          "$ref": "#/$defs/VariantName"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "ref_seq",
+        "name"
+      ]
+    },
     "VariantDetection": {
       "description": "The technique(s) that were used to detect the variant.",
       "type": "object",
