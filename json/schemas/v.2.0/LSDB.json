@@ -609,6 +609,15 @@
           },
           "uniqueItems": true
         },
+        "panels": {
+          "description": "List of panels.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Panel"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "variants": {
           "description": "List of variants detected in this panel.",
           "type": "array",
