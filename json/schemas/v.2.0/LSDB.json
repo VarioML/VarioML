@@ -1183,6 +1183,7 @@
       "additionalProperties": false,
       "required": [
         "type",
+        "ref_seq",
         "name"
       ],
       "examples": [
