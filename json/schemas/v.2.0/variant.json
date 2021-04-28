@@ -3,5 +3,63 @@
   "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/variant.json",
   "title": "Variant",
   "description": "A genomic variant, as an aggregated entry for multiple observations. Observations can either be full submissions with an individual, or reports only containing the variant.",
-  "type": "object"
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Type of variant (DNA, cDNA, RNA, AA). For genomic variants, only 'DNA' is allowed.",
+      "type": "string",
+      "enum": ["DNA"]
+    },
+    "ref_seq": {
+      "$ref": "LSDB.json#/$defs/RefSeq"
+    },
+    "name": {
+      "$ref": "LSDB.json#/$defs/VariantName"
+    },
+    "aliases": {
+      "description": "List of variant aliases.",
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/VariantAlias"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "genes": {
+      "description": "List of genes overlapping with this variant.",
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/Gene"
+      },
+      "uniqueItems": true
+    },
+    "pathogenicities": {
+      "description": "List of variant classifications.",
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/Pathogenicity"
+      }
+    },
+    "db_xrefs": {
+      "description": "List of database cross references.",
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/DbXRef"
+      },
+      "uniqueItems": true
+    },
+    "comments": {
+      "description": "List of comments.",
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/Comment"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "ref_seq",
+    "name"
+  ]
 }
