@@ -40,6 +40,9 @@
         "$ref": "LSDB.json#/$defs/Pathogenicity"
       }
     },
+    "panel": {
+      "$ref": "LSDB.json#/$defs/Panel"
+    },
     "db_xrefs": {
       "description": "List of database cross references.",
       "type": "array",
