@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/VarioML/VarioML/json/schemas/v.2.0/LSDB.json",
+  "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/LSDB.json",
   "title": "Locus Specific Database (LSDB)",
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
   "type": "object",
@@ -609,6 +609,15 @@
           },
           "uniqueItems": true
         },
+        "panels": {
+          "description": "List of panels.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Panel"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "variants": {
           "description": "List of variants detected in this panel.",
           "type": "array",
@@ -1113,6 +1122,15 @@
         "name": {
           "$ref": "#/$defs/VariantName"
         },
+        "aliases": {
+          "description": "List of variant aliases.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VariantAlias"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "genes": {
           "description": "List of genes overlapping with this variant.",
           "type": "array",
@@ -1165,6 +1183,7 @@
       "additionalProperties": false,
       "required": [
         "type",
+        "ref_seq",
         "name"
       ],
       "examples": [
@@ -1252,6 +1271,37 @@
             ]
           }
         }
+      ]
+    },
+    "VariantAlias": {
+      "type": "object",
+      "properties": {
+        "ref_seq": {
+          "$ref": "#/$defs/RefSeq"
+        },
+        "name": {
+          "$ref": "#/$defs/VariantName"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "ref_seq",
+        "name"
       ]
     },
     "VariantDetection": {
