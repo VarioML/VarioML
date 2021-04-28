@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/variant.json",
+  "title": "Variant",
+  "description": "A genomic variant, as an aggregated entry for multiple observations. Observations can either be full submissions with an individual, or reports only containing the variant.",
+  "type": "object"
+}
