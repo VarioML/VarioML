@@ -1320,6 +1320,9 @@
           "minItems": 1,
           "uniqueItems": true
         },
+        "genetic_origin": {
+          "$ref": "#/$defs/GeneticOrigin"
+        },
         "genes": {
           "description": "List of genes overlapping with this variant.",
           "type": "array",
