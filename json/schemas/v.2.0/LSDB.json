@@ -365,6 +365,55 @@
         "accession": "source"
       }
     },
+    "EvidenceCode": {
+      "description": "An ontology term (i.e. has optional source and accession attributes), which provides information related to the validity or the quality of an observation.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string",
+          "enum": ["confirmed", "inferred"]
+        },
+        "description": {
+          "description": "A longer description of the term.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      }
+    },
     "Gender": {
       "description": "The gender of an individual.",
       "type": "object",
