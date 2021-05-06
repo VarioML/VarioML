@@ -227,7 +227,17 @@
         },
         "email": {
           "description": "The email address of the contact person.",
-          "type": "string"
+          "oneOf": [
+            {
+              "type" : "string"
+            },
+            {
+              "type" : "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
         },
         "db_xrefs": {
           "description": "List of database cross references.",
