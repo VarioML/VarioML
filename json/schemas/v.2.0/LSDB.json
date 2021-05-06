@@ -519,6 +519,84 @@
         }
       ]
     },
+    "GeneticOrigin": {
+      "description": "The genetic origin of a variant (inherited, de novo, etc), together with GeneticSource corresponding with the Sequence Ontology's variant_origin.",
+      "type": "object",
+      "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string",
+          "enum": ["de novo", "inherited", "somatic"]
+        },
+        "description": {
+          "description": "A longer description of the term.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Name of an external resource.",
+          "type": "string"
+        },
+        "accession": {
+          "description": "The ID of a relevant entry in an external resource. If given, 'source' is mandatory.",
+          "type": "string"
+        },
+        "uri": {
+          "description": "URI to a relevant entry in an external resource.",
+          "type": "string"
+        },
+        "genetic_source": {
+          "$ref": "#/$defs/GeneticSource"
+        },
+        "evidence_code": {
+          "$ref": "#/$defs/EvidenceCode"
+        },
+        "db_xrefs": {
+          "description": "List of database cross references.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DbXRef"
+          },
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "dependencies": {
+        "accession": "source"
+      },
+      "examples": [
+        {
+          "term": "inherited",
+          "genetic_source": {
+            "term": "paternal",
+            "evidence_code": {
+              "term": "inferred"
+            }
+          }
+        },
+        {
+          "term": "inherited",
+          "genetic_source": {
+            "term": "maternal",
+            "evidence_code": {
+              "term": "confirmed"
+            }
+          }
+        },
+        {
+          "term": "de novo"
+        }
+      ]
+    },
     "GeneticSource": {
       "description": "Source of variant (paternal, maternal), together with GeneticOrigin corresponding with the Sequence Ontology's variant_origin.",
       "type": "object",
