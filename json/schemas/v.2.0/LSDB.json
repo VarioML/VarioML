@@ -5,6 +5,10 @@
   "description": "An LSDB object holds one or more data submissions based around either individuals, their phenotypes, and their variants, or a summary submission of just variant data.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "Identifier for this entry.",
+      "type": "string"
+    },
     "db_xrefs": {
       "description": "List of database cross references.",
       "type": "array",
@@ -1161,6 +1165,10 @@
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type": "object",
       "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
         "name": {
           "description": "The name of the data source.",
           "type": "string"
@@ -1294,6 +1302,10 @@
       "description": "A genomic variant.",
       "type": "object",
       "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
         "copy_count": {
           "description": "Copy count of this variant, 2 for homozygous, 1 for heterozygous, decimals allowed for somatic variants.",
           "type": "number",
