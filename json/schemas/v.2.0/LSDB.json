@@ -876,6 +876,9 @@
             "$ref": "#/$defs/Phenotype"
           },
           "uniqueItems": true
+        },
+        "data_source": {
+          "$ref": "#/$defs/DataSource"
         }
       },
       "additionalProperties": false,
