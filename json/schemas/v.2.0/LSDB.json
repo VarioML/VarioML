@@ -51,13 +51,13 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "source": {
-      "$ref": "#/$defs/Source"
+    "data_source": {
+      "$ref": "#/$defs/DataSource"
     }
   },
   "additionalProperties": false,
   "required": [
-    "source"
+    "data_source"
   ],
   "oneOf": [
     {
@@ -696,8 +696,8 @@
           "minItems": 1,
           "uniqueItems": true
         },
-        "source": {
-          "$ref": "#/$defs/Source"
+        "data_source": {
+          "$ref": "#/$defs/DataSource"
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
@@ -820,8 +820,8 @@
           "minItems": 1,
           "uniqueItems": true
         },
-        "source": {
-          "$ref": "#/$defs/Source"
+        "data_source": {
+          "$ref": "#/$defs/DataSource"
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
@@ -876,6 +876,9 @@
             "$ref": "#/$defs/Phenotype"
           },
           "uniqueItems": true
+        },
+        "data_source": {
+          "$ref": "#/$defs/DataSource"
         }
       },
       "additionalProperties": false,
@@ -1161,7 +1164,7 @@
         "variants"
       ]
     },
-    "Source": {
+    "DataSource": {
       "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
       "type": "object",
       "properties": {
@@ -1205,7 +1208,7 @@
       ],
       "examples": [
         {
-          "source": {
+          "data_source": {
             "contacts": [
               {
                 "role": "submitter",
@@ -1377,8 +1380,8 @@
         "seq_changes": {
           "$ref": "#/$defs/SeqChanges"
         },
-        "source": {
-          "$ref": "#/$defs/Source"
+        "data_source": {
+          "$ref": "#/$defs/DataSource"
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
