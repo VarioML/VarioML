@@ -264,6 +264,17 @@
         "name"
       ]
     },
+    "Date": {
+      "description": "A date value.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        }
+      },
+      "additionalProperties": false
+    },
     "DbXRef": {
       "description": "Database cross reference.",
       "type": "object",
