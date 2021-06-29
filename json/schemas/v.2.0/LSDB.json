@@ -1,3 +1,6 @@
+// OMIM gene ID
+// HGNC numeric ID
+// NCBI protein ID (NP_...)
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/LSDB.json",
@@ -8,6 +11,9 @@
     "id": {
       "description": "Identifier for this entry.",
       "type": "string"
+    },
+    "created": {
+      "$ref": "#/$defs/DateTime"
     },
     "db_xrefs": {
       "description": "List of database cross references.",
@@ -263,6 +269,90 @@
       "required": [
         "name"
       ]
+    },
+    "DataSource": {
+      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the data source.",
+          "type": "string"
+        },
+        "contacts": {
+          "description": "List of contact persons.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Contact"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "required": [
+            "contacts"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "data_source": {
+            "contacts": [
+              {
+                "role": "submitter",
+                "name": "Ivo F.A.C. Fokkema",
+                "email": "I.F.A.C.Fokkema@LUMC.nl",
+                "db_xrefs": [
+                  {
+                    "source": "orcid",
+                    "accession": "0000-0002-1368-1939"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Date": {
+      "description": "A date value.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DateTime": {
+      "description": "A date and time value.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-9]{2}$"
+        }
+      },
+      "additionalProperties": false
     },
     "DbXRef": {
       "description": "Database cross reference.",
@@ -701,6 +791,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false
@@ -825,6 +921,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false
@@ -1164,68 +1266,6 @@
         "variants"
       ]
     },
-    "DataSource": {
-      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Identifier for this entry.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The name of the data source.",
-          "type": "string"
-        },
-        "contacts": {
-          "description": "List of contact persons.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Contact"
-          },
-          "minItems": 1,
-          "uniqueItems": true
-        },
-        "comments": {
-          "description": "List of comments.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Comment"
-          }
-        }
-      },
-      "additionalProperties": false,
-      "anyOf": [
-        {
-          "required": [
-            "name"
-          ]
-        },
-        {
-          "required": [
-            "contacts"
-          ]
-        }
-      ],
-      "examples": [
-        {
-          "data_source": {
-            "contacts": [
-              {
-                "role": "submitter",
-                "name": "Ivo F.A.C. Fokkema",
-                "email": "I.F.A.C.Fokkema@LUMC.nl",
-                "db_xrefs": [
-                  {
-                    "source": "orcid",
-                    "accession": "0000-0002-1368-1939"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
     "Text": {
       "description": "Object to represent a piece of text.",
       "type": "object",
@@ -1385,6 +1425,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false,
