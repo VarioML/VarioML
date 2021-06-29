@@ -1,3 +1,6 @@
+// OMIM gene ID
+// HGNC numeric ID
+// NCBI protein ID (NP_...)
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/LSDB.json",
@@ -265,6 +268,68 @@
       "additionalProperties": false,
       "required": [
         "name"
+      ]
+    },
+    "DataSource": {
+      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for this entry.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the data source.",
+          "type": "string"
+        },
+        "contacts": {
+          "description": "List of contact persons.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Contact"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "comments": {
+          "description": "List of comments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comment"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "required": [
+            "contacts"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "data_source": {
+            "contacts": [
+              {
+                "role": "submitter",
+                "name": "Ivo F.A.C. Fokkema",
+                "email": "I.F.A.C.Fokkema@LUMC.nl",
+                "db_xrefs": [
+                  {
+                    "source": "orcid",
+                    "accession": "0000-0002-1368-1939"
+                  }
+                ]
+              }
+            ]
+          }
+        }
       ]
     },
     "Date": {
@@ -1199,68 +1264,6 @@
       "additionalProperties": false,
       "required": [
         "variants"
-      ]
-    },
-    "DataSource": {
-      "description": "Contains information on the data source. Typically specifies the source database, although the system, organization, or institution from which the data has been exported can also be used.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Identifier for this entry.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The name of the data source.",
-          "type": "string"
-        },
-        "contacts": {
-          "description": "List of contact persons.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Contact"
-          },
-          "minItems": 1,
-          "uniqueItems": true
-        },
-        "comments": {
-          "description": "List of comments.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Comment"
-          }
-        }
-      },
-      "additionalProperties": false,
-      "anyOf": [
-        {
-          "required": [
-            "name"
-          ]
-        },
-        {
-          "required": [
-            "contacts"
-          ]
-        }
-      ],
-      "examples": [
-        {
-          "data_source": {
-            "contacts": [
-              {
-                "role": "submitter",
-                "name": "Ivo F.A.C. Fokkema",
-                "email": "I.F.A.C.Fokkema@LUMC.nl",
-                "db_xrefs": [
-                  {
-                    "source": "orcid",
-                    "accession": "0000-0002-1368-1939"
-                  }
-                ]
-              }
-            ]
-          }
-        }
       ]
     },
     "Text": {
