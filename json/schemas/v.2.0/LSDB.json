@@ -9,6 +9,9 @@
       "description": "Identifier for this entry.",
       "type": "string"
     },
+    "created": {
+      "$ref": "#/$defs/DateTime"
+    },
     "db_xrefs": {
       "description": "List of database cross references.",
       "type": "array",
