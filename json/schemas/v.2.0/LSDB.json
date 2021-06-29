@@ -726,6 +726,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false
@@ -850,6 +856,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false
@@ -1410,6 +1422,12 @@
         },
         "sharing_policy": {
           "$ref": "#/$defs/SharingPolicy"
+        },
+        "creation_date": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "modification_date": {
+          "$ref": "#/$defs/DateTime"
         }
       },
       "additionalProperties": false,
