@@ -88,6 +88,10 @@
       "description": "A comment, which optionally can contain other comments.",
       "type": "object",
       "properties": {
+        "term": {
+          "description": "The term that can be considered as the value of the element.",
+          "type": "string"
+        },
         "uri": {
           "description": "URI to a relevant entry in an external resource.",
           "type": "string"
