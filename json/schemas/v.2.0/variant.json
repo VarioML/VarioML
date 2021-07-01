@@ -57,6 +57,12 @@
       "items": {
         "$ref": "LSDB.json#/$defs/Comment"
       }
+    },
+    "creation_date": {
+      "$ref": "LSDB.json#/$defs/DateTime"
+    },
+    "modification_date": {
+      "$ref": "LSDB.json#/$defs/DateTime"
     }
   },
   "additionalProperties": false,
