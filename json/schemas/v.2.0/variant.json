@@ -25,6 +25,14 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "locations": {
+      "type": "array",
+      "items": {
+        "$ref": "LSDB.json#/$defs/Location"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "genes": {
       "description": "List of genes overlapping with this variant.",
       "type": "array",
