@@ -159,6 +159,14 @@
         "name": {
           "$ref": "#/$defs/VariantName"
         },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Location"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "gene": {
           "$ref": "#/$defs/Gene"
         },
@@ -1420,6 +1428,14 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/VariantAlias"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Location"
           },
           "minItems": 1,
           "uniqueItems": true
