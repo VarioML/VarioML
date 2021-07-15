@@ -159,6 +159,15 @@
         "name": {
           "$ref": "#/$defs/VariantName"
         },
+        "aliases": {
+          "description": "List of variant aliases.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VariantAlias"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "locations": {
           "type": "array",
           "items": {
