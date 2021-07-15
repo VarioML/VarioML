@@ -846,6 +846,41 @@
         "accession": "source"
       }
     },
+    "Location": {
+      "description": "A location of a variant or sequence feature.",
+      "type": "object",
+      "properties": {
+        "ref_seq": {
+          "$ref": "#/$defs/RefSeq"
+        },
+        "chr": {
+          "description": "Chromosome on which this variant or sequence feature is located.",
+          "oneOf": [
+            {
+              "type": "int"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "start": {
+          "description": "Start position of this variant or sequence feature, 1-based (HGVS).",
+          "type": "integer"
+        },
+        "end": {
+          "description": "End position of this variant or sequence feature, 1-based (HGVS).",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "start"
+      ],
+      "dependencies": {
+        "end": "start"
+      }
+    },
     "Panel": {
       "description": "An unspecified group of individuals.",
       "type": "object",
