@@ -874,7 +874,7 @@
           "description": "Chromosome on which this variant or sequence feature is located.",
           "oneOf": [
             {
-              "type": "int"
+              "type": "integer"
             },
             {
               "type": "string"
