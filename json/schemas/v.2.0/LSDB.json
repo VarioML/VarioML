@@ -596,6 +596,14 @@
           "description": "URI to a relevant entry in an external resource.",
           "type": "string"
         },
+        "phenotypes": {
+          "description": "List of phenotypes associated to this gene.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phenotype"
+          },
+          "uniqueItems": true
+        },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
