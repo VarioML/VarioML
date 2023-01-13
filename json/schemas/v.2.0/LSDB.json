@@ -33,7 +33,6 @@
       "items": {
         "$ref": "#/$defs/Individual"
       },
-      "minItems": 1,
       "uniqueItems": true
     },
     "panels": {
@@ -42,7 +41,6 @@
       "items": {
         "$ref": "#/$defs/Panel"
       },
-      "minItems": 1,
       "uniqueItems": true
     },
     "variants": {
@@ -51,7 +49,6 @@
       "items": {
         "$ref": "#/$defs/Variant"
       },
-      "minItems": 1,
       "uniqueItems": true
     },
     "data_source": {
@@ -599,6 +596,14 @@
           "description": "URI to a relevant entry in an external resource.",
           "type": "string"
         },
+        "phenotypes": {
+          "description": "List of phenotypes associated to this gene.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phenotype"
+          },
+          "uniqueItems": true
+        },
         "db_xrefs": {
           "description": "List of database cross references.",
           "type": "array",
@@ -801,7 +806,6 @@
           "items": {
             "$ref": "#/$defs/Variant"
           },
-          "minItems": 1,
           "uniqueItems": true
         },
         "data_source": {
@@ -940,7 +944,6 @@
           "items": {
             "$ref": "#/$defs/Individual"
           },
-          "minItems": 1,
           "uniqueItems": true
         },
         "phenotypes": {
@@ -957,7 +960,6 @@
           "items": {
             "$ref": "#/$defs/Panel"
           },
-          "minItems": 1,
           "uniqueItems": true
         },
         "variants": {
@@ -966,7 +968,6 @@
           "items": {
             "$ref": "#/$defs/Variant"
           },
-          "minItems": 1,
           "uniqueItems": true
         },
         "data_source": {
