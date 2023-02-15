@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/GA4GH.json",
+  "title": "GA4GH Data Connect API",
+  "description": "Paginated output of the GA4GH Data Connect API, bearing data formatted in VarioML.",
+  "type": "object",
+  "properties": {
+    "data_model": {
+      "$ref": "http://json-schema.org/draft-07/schema#"
+    },
+    "data": {
+      "description": "Page of JSON objects, each adhering to the schema given in the `data_model` property.",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "pagination": {
+      "description": "Object allowing linking to the next page of JSON objects. This object is absent on the last page.",
+      "type": "object",
+      "properties": {
+        "next_page_url": {
+          "description": "URL pointing to the next page of data.",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "additionalProperties": false
+    },
+    "errors": {
+      "description": "List of errors encountered.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "title": {
+            "description": "A short, human-readable description of the error. The value should not change from occurrence to occurrence of an error, except for purposes of localization.",
+            "type": "string",
+            "examples": [
+              "Internal server error"
+            ]
+          },
+          "detail": {
+            "description": "A human-readable explanation specific to this occurrence of the error.",
+            "type": "string",
+            "examples": [
+              "Internal server error"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "title"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "data_model",
+    "data"
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "data_model": {
+          "type": "object",
+          "properties": {
+            "$ref": {
+              "type": "string",
+              "const": "https://raw.githubusercontent.com/VarioML/VarioML/master/json/schemas/v.2.0/variant.json"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "variant.json"
+          }
+        }
+      }
+    }
+  ]
+}
+
