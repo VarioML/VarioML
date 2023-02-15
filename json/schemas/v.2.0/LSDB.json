@@ -1639,7 +1639,7 @@
         "template": {
           "description": "The template on which the variant was detected.",
           "type": "string",
-          "enum": ["DNA", "RNA", "protein"]
+          "enum": ["DNA", "RNA", "protein", "?"]
         },
         "technique": {
           "description": "The detection method.",
