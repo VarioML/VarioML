@@ -584,7 +584,7 @@
             },
             {
               "type": "integer",
-              "exclusiveMinimum": 0
+              "minimum": 1
             }
           ]
         },
@@ -913,7 +913,7 @@
         "size": {
           "description": "The number of individuals in this panel.",
           "type": "integer",
-          "exclusiveMinimum": 0
+          "minimum": 1
         },
         "type": {
           "description": "The type of panel; family, extended family, or a population.",
