@@ -480,8 +480,7 @@
       "properties": {
         "term": {
           "description": "The term that can be considered as the value of the element.",
-          "type": "string",
-          "enum": ["confirmed", "inferred"]
+          "type": "string"
         },
         "description": {
           "description": "A longer description of the term.",
@@ -665,7 +664,18 @@
           "$ref": "#/$defs/GeneticSource"
         },
         "evidence_code": {
-          "$ref": "#/$defs/EvidenceCode"
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["confirmed", "inferred"]
+                }
+              }
+            }
+          ]
         },
         "db_xrefs": {
           "description": "List of database cross references.",
@@ -740,7 +750,18 @@
           "type": "string"
         },
         "evidence_code": {
-          "$ref": "#/$defs/EvidenceCode"
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["confirmed", "inferred"]
+                }
+              }
+            }
+          ]
         },
         "db_xrefs": {
           "description": "List of database cross references.",
@@ -1506,6 +1527,20 @@
         },
         "modification_date": {
           "$ref": "#/$defs/DateTime"
+        },
+        "evidence_code": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["classification_record", "in_silico", "in_vitro", "summary_record"]
+                }
+              }
+            }
+          ]
         }
       },
       "additionalProperties": false,
@@ -1514,6 +1549,27 @@
         "ref_seq",
         "name"
       ],
+      "if": {
+        "properties": {
+          "evidence_code": {
+            "properties": {
+              "term": {
+                "enum": ["classification_record", "in_silico", "in_vitro", "summary_record"]
+              }
+            }
+          }
+        },
+        "required": [
+          "evidence_code"
+        ]
+      },
+      "then": {
+        "not": {
+          "required": [
+            "genetic_origin"
+          ]
+        }
+      },
       "examples": [
         {
           "copy_count": 1,
