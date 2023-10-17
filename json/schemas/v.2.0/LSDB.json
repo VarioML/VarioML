@@ -1536,7 +1536,7 @@
             {
               "properties": {
                 "term": {
-                  "enum": ["classification_record", "in_vitro", "summary_record"]
+                  "enum": ["classification_record", "in_silico", "in_vitro", "summary_record"]
                 }
               }
             }
@@ -1554,7 +1554,7 @@
           "evidence_code": {
             "properties": {
               "term": {
-                "enum": ["classification_record", "in_vitro", "summary_record"]
+                "enum": ["classification_record", "in_silico", "in_vitro", "summary_record"]
               }
             }
           }
