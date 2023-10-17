@@ -1549,6 +1549,27 @@
         "ref_seq",
         "name"
       ],
+      "if": {
+        "properties": {
+          "evidence_code": {
+            "properties": {
+              "term": {
+                "enum": ["classification_record", "in_vitro", "summary_record"]
+              }
+            }
+          }
+        },
+        "required": [
+          "evidence_code"
+        ]
+      },
+      "then": {
+        "not": {
+          "required": [
+            "genetic_origin"
+          ]
+        }
+      },
       "examples": [
         {
           "copy_count": 1,
