@@ -480,8 +480,7 @@
       "properties": {
         "term": {
           "description": "The term that can be considered as the value of the element.",
-          "type": "string",
-          "enum": ["confirmed", "inferred"]
+          "type": "string"
         },
         "description": {
           "description": "A longer description of the term.",
@@ -665,7 +664,18 @@
           "$ref": "#/$defs/GeneticSource"
         },
         "evidence_code": {
-          "$ref": "#/$defs/EvidenceCode"
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["confirmed", "inferred"]
+                }
+              }
+            }
+          ]
         },
         "db_xrefs": {
           "description": "List of database cross references.",
@@ -740,7 +750,18 @@
           "type": "string"
         },
         "evidence_code": {
-          "$ref": "#/$defs/EvidenceCode"
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["confirmed", "inferred"]
+                }
+              }
+            }
+          ]
         },
         "db_xrefs": {
           "description": "List of database cross references.",
