@@ -1527,6 +1527,20 @@
         },
         "modification_date": {
           "$ref": "#/$defs/DateTime"
+        },
+        "evidence_code": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/EvidenceCode"
+            },
+            {
+              "properties": {
+                "term": {
+                  "enum": ["classification_record", "in_vitro", "summary_record"]
+                }
+              }
+            }
+          ]
         }
       },
       "additionalProperties": false,
